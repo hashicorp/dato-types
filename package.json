@@ -1,0 +1,30 @@
+{
+  "name": "dato-types",
+  "version": "0.0.0",
+  "description": "hashicorp types from datocms graphql api",
+  "main": "index.d.ts",
+  "dependencies": {
+    "@graphql-codegen/core": "^1.8.3",
+    "@graphql-codegen/typescript": "^1.8.3",
+    "@hashicorp/nextjs-scripts": "^5.1.0",
+    "fs-extra": "^8.1.0",
+    "graphql": "^14.5.8",
+    "graphql-toolkit": "^0.6.8",
+    "prettier": "^1.18.2",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashicorp/dato-types.git"
+  },
+  "author": "Jeff Escalante",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/hashicorp/dato-types/issues"
+  },
+  "homepage": "https://github.com/hashicorp/dato-types#readme"
+}
