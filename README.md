@@ -4,7 +4,7 @@ This repo serves one purpose: to always contain, at `index.d.ts`, an up to date 
 
 ### Usage
 
-Install this package with `npm i hashicorp/dato-types`, then add its location to the `typeRoots` config in your `tsconfig.json` file, as such:
+Install this package with `npm i @hashicorp/dato-types`, then add its location to the `typeRoots` config in your `tsconfig.json` file, as such:
 
 ```json
 {
