@@ -9,7 +9,7 @@ Install this package with `npm i hashicorp/dato-types`, then add its location to
 ```json
 {
   "compilerOptions": {
-    /* other options */
+    "otherOptions": "xxx",
     "typeRoots": ["node_modules/@types", "node_modules/@hashicorp/dato-types"]
   }
 }
