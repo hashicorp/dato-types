@@ -1,5 +1,5 @@
 {
-  "name": "dato-types",
+  "name": "@hashicorp/dato-types",
   "version": "0.0.0",
   "description": "hashicorp types from datocms graphql api",
   "main": "index.d.ts",
@@ -14,9 +14,6 @@
     "signale": "^1.4.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "jest"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hashicorp/dato-types.git"
