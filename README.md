@@ -21,6 +21,8 @@ Now you should be able to require typings directly from this package, as such:
 import { ButtonRecord } from '@hashicorp/dato-types'
 ```
 
+> **NOTE**: The installation command is `hashicorp/dato-types` without an `@` on purpose, as this package is intended to be installed directly from github. When requiring it internally however, use `@hashicorp/dato-types` as this is the npm package name.
+
 ### Updating
 
 Each time DatoCMS changes are made, a script will trigger to cause this repo to update its types. If you made a change in DatoCMS and would like for it to be reflected in your local project, just run `npm i` again and it will update to the latest version. The key here is that the installation references the github repo, so its not an npm module nor does it use semver.
