@@ -901,6 +901,7 @@ export type CertificationPageRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   intro?: Maybe<Scalars["String"]>
+  previewUrl?: Maybe<Scalars["String"]>
   seoTags?: Maybe<SeoField>
   signupFormHeading?: Maybe<Scalars["String"]>
   signupFormIntro?: Maybe<Scalars["String"]>
@@ -7777,10 +7778,11 @@ export type NavPromoModelFilter = {
   title?: Maybe<StringFilter>
   image?: Maybe<FileFilter>
   eyebrow?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
-  showCalloutPlayIcon?: Maybe<BooleanFilter>
   secondaryLink?: Maybe<LinkFilter>
   primaryLink?: Maybe<LinkFilter>
+  showCalloutPlayIcon?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
+  link?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<NavPromoModelFilter>>>
 }
 
@@ -7836,6 +7838,7 @@ export type NavPromoRecord = {
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   layout?: Maybe<Scalars["String"]>
+  link?: Maybe<LinkRecord>
   primaryLink?: Maybe<LinkRecord>
   secondaryLink?: Maybe<LinkRecord>
   showCalloutPlayIcon?: Maybe<Scalars["BooleanType"]>
@@ -19591,7 +19594,7 @@ export type TmpmodelVaultOverviewPageRecord = {
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howVaultWorksSection?: Maybe<
-    TmpmodelVaultOverviewPageModelHowVaultWorksSectionField
+    Array<Maybe<TmpmodelVaultOverviewPageModelHowVaultWorksSectionField>>
   >
   howVaultWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]

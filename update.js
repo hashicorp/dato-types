@@ -1,6 +1,5 @@
 const signale = require('signale')
 const fs = require('fs-extra')
-const path = require('path')
 const prettier = require('prettier')
 const { loadSchema } = require('graphql-toolkit')
 const { codegen } = require('@graphql-codegen/core')
@@ -11,8 +10,7 @@ const datoApiConfig = require('@hashicorp/nextjs-scripts/dato/config')
 async function main() {
   signale.await('Fetching graphql schema from DatoCMS...')
   const schema = await loadSchema(datoApiConfig.url, {
-    headers: datoApiConfig.headers,
-    method: 'POST' // patch until this is resolved: https://github.com/ardatan/graphql-toolkit/pull/318
+    headers: datoApiConfig.headers
   })
   signale.await('Creating Typescipt file...')
   const outputFile = 'index.d.ts'
