@@ -7773,12 +7773,12 @@ export type NavPromoModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  theme?: Maybe<StringFilter>
   layout?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   image?: Maybe<FileFilter>
   eyebrow?: Maybe<StringFilter>
   secondaryLink?: Maybe<LinkFilter>
+  theme?: Maybe<StringFilter>
   primaryLink?: Maybe<LinkFilter>
   showCalloutPlayIcon?: Maybe<BooleanFilter>
   description?: Maybe<TextFilter>
@@ -7807,14 +7807,14 @@ export enum NavPromoModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
   LayoutAsc = "layout_ASC",
   LayoutDesc = "layout_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   EyebrowAsc = "eyebrow_ASC",
   EyebrowDesc = "eyebrow_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
   ShowCalloutPlayIconAsc = "showCalloutPlayIcon_ASC",
   ShowCalloutPlayIconDesc = "showCalloutPlayIcon_DESC"
 }
@@ -10671,6 +10671,8 @@ export type Query = {
   tmpmodelConsulServiceOnAzurePage?: Maybe<
     TmpmodelConsulServiceOnAzurePageRecord
   >
+  /** Returns the single instance record */
+  tmpmodelEcosystemLandingPage?: Maybe<TmpmodelEcosystemLandingPageRecord>
   /** Returns the single instance record */
   tmpmodelNomadOverviewPage?: Maybe<TmpmodelNomadOverviewPageRecord>
   /** Returns the single instance record */
@@ -14440,6 +14442,11 @@ export type QueryTmpmodelConsulServiceOnAzurePageArgs = {
 }
 
 /** The query root for this schema */
+export type QueryTmpmodelEcosystemLandingPageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
 export type QueryTmpmodelNomadOverviewPageArgs = {
   locale?: Maybe<SiteLocale>
 }
@@ -15393,10 +15400,10 @@ export type SbcBeforeAfterDiagramModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  theme?: Maybe<StringFilter>
   beforeContent?: Maybe<TextFilter>
   afterImage?: Maybe<FileFilter>
   afterHeadline?: Maybe<StringFilter>
+  theme?: Maybe<StringFilter>
   beforeImage?: Maybe<FileFilter>
   beforeHeadline?: Maybe<StringFilter>
   afterContent?: Maybe<TextFilter>
@@ -15424,10 +15431,10 @@ export enum SbcBeforeAfterDiagramModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
   AfterHeadlineAsc = "afterHeadline_ASC",
   AfterHeadlineDesc = "afterHeadline_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
   BeforeHeadlineAsc = "beforeHeadline_ASC",
   BeforeHeadlineDesc = "beforeHeadline_DESC"
 }
@@ -19405,6 +19412,35 @@ export type TmpmodelConsulServiceOnAzurePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type TMP: Ecosystem - Landing Page (tmpmodel_ecosystem_landing_page) */
+export type TmpmodelEcosystemLandingPageRecord = {
+  __typename?: "TmpmodelEcosystemLandingPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  createdAt: Scalars["DateTime"]
+  ctaSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  hero?: Maybe<HeroSectionRecord>
+  id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Ecosystem - Landing Page (tmpmodel_ecosystem_landing_page) */
+export type TmpmodelEcosystemLandingPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type TMP: Nomad Overview Page (tmpmodel_nomad_overview_page) */
 export type TmpmodelNomadOverviewPageRecord = {
   __typename?: "TmpmodelNomadOverviewPageRecord"
@@ -19570,7 +19606,6 @@ export type TmpmodelUserResearchPageRecord_SeoMetaTagsArgs = {
 export type TmpmodelVaultOverviewPageModelHowVaultWorksSectionField =
   | SbcTextRecord
   | SbcImageRecord
-  | SbcTextAndContentRecord
 
 /** Record of type TMP: Vault Overview Page (tmpmodel_vault_overview_page) */
 export type TmpmodelVaultOverviewPageRecord = {

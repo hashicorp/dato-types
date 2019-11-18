@@ -16,7 +16,9 @@
     "prettier": "^1.19.1",
     "signale": "^1.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "probot": "^9.6.4"
+  },
   "homepage": "https://github.com/hashicorp/dato-types#readme",
   "license": "MPL-2.0",
   "main": "index.d.ts",
@@ -25,6 +27,7 @@
     "url": "git+https://github.com/hashicorp/dato-types.git"
   },
   "scripts": {
-    "start": "node update.js"
+    "start": "probot run ./webhook/index.js",
+    "update": "node run-update.js"
   }
 }

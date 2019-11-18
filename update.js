@@ -7,7 +7,7 @@ const { printSchema, parse } = require('graphql')
 const { plugin: typescriptPlugin } = require('@graphql-codegen/typescript')
 const datoApiConfig = require('@hashicorp/nextjs-scripts/dato/config')
 
-async function main() {
+module.exports = async function updateTypes() {
   signale.await('Fetching graphql schema from DatoCMS...')
   const schema = await loadSchema(datoApiConfig.url, {
     headers: datoApiConfig.headers
@@ -37,7 +37,6 @@ async function main() {
   }
   const output = prettier.format(await codegen(config), prettierOptions)
   fs.writeFileSync(outputFile, output)
-  signale.success('done!')
+  signale.success('Types updated from DatoCMS!')
+  return output
 }
-
-main()

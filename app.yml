@@ -1,0 +1,3 @@
+default_permissions:
+  contents: write
+  metadata: read
