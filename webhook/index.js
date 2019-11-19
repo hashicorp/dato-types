@@ -2,7 +2,7 @@ const update = require('../update')
 const signale = require('signale')
 
 module.exports = async app => {
-  app.route('/dato').get('/', (_, res) => {
+  app.route('/dato').post('/', (_, res) => {
     signale.await('Dato changes detected...')
     updateTypesFile(app).then(
       () => res.json({ success: true }),
