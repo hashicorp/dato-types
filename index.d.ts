@@ -533,6 +533,29 @@ export type BooleanFilter = {
   eq?: Maybe<Scalars["BooleanType"]>
 }
 
+/** Record of type Brand Page (brand_page) */
+export type BrandPageRecord = {
+  __typename?: "BrandPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Brand Page (brand_page) */
+export type BrandPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type Button2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -10301,6 +10324,8 @@ export type Query = {
   blogPost?: Maybe<BlogPostRecord>
   /** Returns a specific record */
   blogPostCategory?: Maybe<BlogPostCategoryRecord>
+  /** Returns the single instance record */
+  brandPage?: Maybe<BrandPageRecord>
   /** Returns a specific record */
   button2?: Maybe<Button2Record>
   /** Returns a specific record */
@@ -13232,6 +13257,11 @@ export type QueryBlogPostCategoryArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<BlogPostCategoryModelFilter>
   orderBy?: Maybe<Array<Maybe<BlogPostCategoryModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryBrandPageArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
