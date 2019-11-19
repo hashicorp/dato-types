@@ -547,6 +547,7 @@ export type BrandPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
@@ -7899,6 +7900,7 @@ export type NavRecord = {
   learnPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
   partnersPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
   productsPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
+  supportPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
   updatedAt: Scalars["DateTime"]
 }
 
