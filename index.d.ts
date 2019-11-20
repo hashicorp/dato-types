@@ -19499,11 +19499,12 @@ export type TmpmodelNomadEnterprisePageRecord = {
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
-  enterpriseFeaturesSection?: Maybe<SbcProductPricingRecord>
-  featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  enterpriseFeaturesSection?: Maybe<SbcProductFeatureTableRecord>
+  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
+  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
