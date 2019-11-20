@@ -19484,11 +19484,6 @@ export type TmpmodelEcosystemLandingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type TmpmodelNomadEnterprisePageModelHowTerraformWorksSectionField =
-  | SbcTextRecord
-  | SbcImageRecord
-  | SbcTextAndContentRecord
-
 /** Record of type TMP: Nomad Enterprise Page (tmpmodel_nomad_enterprise_page) */
 export type TmpmodelNomadEnterprisePageRecord = {
   __typename?: "TmpmodelNomadEnterprisePageRecord"
@@ -19503,28 +19498,15 @@ export type TmpmodelNomadEnterprisePageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
-  caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  enterpriseFeaturesSection?: Maybe<SbcProductPricingRecord>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  heroSection?: Maybe<HeroSectionRecord>
-  howTerraformWorksSection?: Maybe<
-    TmpmodelNomadEnterprisePageModelHowTerraformWorksSectionField
-  >
-  howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
-  infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
-  principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasesSection?: Maybe<SbcUseCasesSectionRecord>
-  useCasesSectionHeader?: Maybe<SbcSectionHeaderRecord>
 }
 
 /** Record of type TMP: Nomad Enterprise Page (tmpmodel_nomad_enterprise_page) */
