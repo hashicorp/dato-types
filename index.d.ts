@@ -19505,6 +19505,8 @@ export type TmpmodelNomadEnterprisePageRecord = {
   enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
+  openSourceVsEnterpriseSection?: Maybe<SbcTextAndContentRecord>
+  openSourceVsEnterpriseSectionHeader?: Maybe<SbcSectionHeaderRecord>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
