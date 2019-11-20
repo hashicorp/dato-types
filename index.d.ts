@@ -18489,6 +18489,7 @@ export type TerraformOfferingModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
+  link?: Maybe<StringFilter>
   description?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TerraformOfferingModelFilter>>>
 }
@@ -18518,6 +18519,8 @@ export enum TerraformOfferingModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
+  LinkAsc = "link_ASC",
+  LinkDesc = "link_DESC",
   DescriptionAsc = "description_ASC",
   DescriptionDesc = "description_DESC"
 }
@@ -18538,6 +18541,7 @@ export type TerraformOfferingRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  link?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
