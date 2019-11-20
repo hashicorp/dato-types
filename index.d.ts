@@ -10705,6 +10705,10 @@ export type Query = {
   /** Returns the single instance record */
   tmpmodelTerraformOverviewPage?: Maybe<TmpmodelTerraformOverviewPageRecord>
   /** Returns the single instance record */
+  tmpmodelTerraformOverviewPageCopy1?: Maybe<
+    TmpmodelTerraformOverviewPageCopy1Record
+  >
+  /** Returns the single instance record */
   tmpmodelTrainingPage?: Maybe<TmpmodelTrainingPageRecord>
   /** Returns the single instance record */
   tmpmodelUserResearchPage?: Maybe<TmpmodelUserResearchPageRecord>
@@ -14485,6 +14489,11 @@ export type QueryTmpmodelNomadOverviewPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpmodelTerraformOverviewPageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryTmpmodelTerraformOverviewPageCopy1Args = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19516,6 +19525,55 @@ export type TmpmodelNomadOverviewPageRecord = {
 
 /** Record of type TMP: Nomad Overview Page (tmpmodel_nomad_overview_page) */
 export type TmpmodelNomadOverviewPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type TmpmodelTerraformOverviewPageCopy1ModelHowTerraformWorksSectionField =
+  | SbcTextRecord
+  | SbcImageRecord
+  | SbcTextAndContentRecord
+
+/** Record of type TMP: Terraform Overview Page (copy #1) (tmpmodel_terraform_overview_page_copy_1) */
+export type TmpmodelTerraformOverviewPageCopy1Record = {
+  __typename?: "TmpmodelTerraformOverviewPageCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  alertBanner?: Maybe<AlertBannerRecord>
+  caseStudiesSection?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
+  caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  companiesSection?: Maybe<SbcLogoGridRecord>
+  createdAt: Scalars["DateTime"]
+  featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  heroSection?: Maybe<HeroSectionRecord>
+  howTerraformWorksSection?: Maybe<
+    TmpmodelTerraformOverviewPageCopy1ModelHowTerraformWorksSectionField
+  >
+  howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  id: Scalars["ItemId"]
+  infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
+  metadata?: Maybe<SeoField>
+  principlesSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  subnav?: Maybe<ProductSubnavRecord>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  useCasesSection?: Maybe<SbcUseCasesSectionRecord>
+  useCasesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+}
+
+/** Record of type TMP: Terraform Overview Page (copy #1) (tmpmodel_terraform_overview_page_copy_1) */
+export type TmpmodelTerraformOverviewPageCopy1Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
