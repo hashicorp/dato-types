@@ -19623,7 +19623,7 @@ export type TmpmodelTerraformPricingPageRecord = {
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
-  enterpriseFeaturesSection?: Maybe<SbcProductPricingRecord>
+  enterpriseFeaturesSection?: Maybe<TerraformOfferingTableRecord>
   enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
   enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
