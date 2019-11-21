@@ -19586,7 +19586,9 @@ export type TmpmodelTerraformOverviewPageRecord = {
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howTerraformWorksSection?: Maybe<
-    TmpmodelTerraformOverviewPageModelHowTerraformWorksSectionField
+    Array<
+      Maybe<TmpmodelTerraformOverviewPageModelHowTerraformWorksSectionField>
+    >
   >
   howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
