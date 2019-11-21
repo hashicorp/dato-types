@@ -19559,11 +19559,6 @@ export type TmpmodelNomadOverviewPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type TmpmodelTerraformOverviewPageModelHowTerraformWorksSectionField =
-  | SbcTextRecord
-  | SbcImageRecord
-  | SbcTextAndContentRecord
-
 /** Record of type TMP: Terraform Overview Page (tmpmodel_terraform_overview_page) */
 export type TmpmodelTerraformOverviewPageRecord = {
   __typename?: "TmpmodelTerraformOverviewPageRecord"
@@ -19585,11 +19580,7 @@ export type TmpmodelTerraformOverviewPageRecord = {
   featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
-  howTerraformWorksSection?: Maybe<
-    Array<
-      Maybe<TmpmodelTerraformOverviewPageModelHowTerraformWorksSectionField>
-    >
-  >
+  howTerraformWorksSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
   howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
