@@ -19488,11 +19488,13 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  integratorsGold?: Maybe<Array<Maybe<CompanyRecord>>>
   integratorsSilver?: Maybe<Array<Maybe<CompanyRecord>>>
-  integratorsTooltip?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
+  resellersIntegratorsCompaniesHyperSpecialized?: Maybe<
+    Array<Maybe<CompanyRecord>>
+  >
   resellersIntegratorsLabel?: Maybe<Scalars["String"]>
+  resellersIntegratorsTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainers?: Maybe<Array<Maybe<CompanyRecord>>>
   trainingPartnersLabel?: Maybe<Scalars["String"]>
@@ -19511,7 +19513,7 @@ export type TmpmodelEcosystemFindAPartnerPageRecordDescriptionArgs = {
 }
 
 /** Record of type TMP: Ecosystem - Find a Partner Page (tmpmodel_ecosystem_find_a_partner_page) */
-export type TmpmodelEcosystemFindAPartnerPageRecordIntegratorsTooltipArgs = {
+export type TmpmodelEcosystemFindAPartnerPageRecordResellersIntegratorsTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
