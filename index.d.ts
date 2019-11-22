@@ -19489,10 +19489,10 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   integratorsGold?: Maybe<Array<Maybe<CompanyRecord>>>
-  integratorsLabel?: Maybe<Scalars["String"]>
   integratorsSilver?: Maybe<Array<Maybe<CompanyRecord>>>
   integratorsTooltip?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
+  resellersIntegratorsLabel?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainers?: Maybe<Array<Maybe<CompanyRecord>>>
   trainingPartnersLabel?: Maybe<Scalars["String"]>
