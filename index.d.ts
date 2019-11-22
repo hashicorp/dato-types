@@ -19493,14 +19493,10 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   integratorsSilver?: Maybe<Array<Maybe<CompanyRecord>>>
   integratorsTooltip?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  resellersBronze?: Maybe<Array<Maybe<CompanyRecord>>>
-  resellersGold?: Maybe<Array<Maybe<CompanyRecord>>>
-  resellersSilver?: Maybe<Array<Maybe<CompanyRecord>>>
-  resellersTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainers?: Maybe<Array<Maybe<CompanyRecord>>>
-  trainersLabel?: Maybe<Scalars["String"]>
   trainersTooltip?: Maybe<Scalars["String"]>
+  trainingLabel?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -19516,11 +19512,6 @@ export type TmpmodelEcosystemFindAPartnerPageRecordDescriptionArgs = {
 
 /** Record of type TMP: Ecosystem - Find a Partner Page (tmpmodel_ecosystem_find_a_partner_page) */
 export type TmpmodelEcosystemFindAPartnerPageRecordIntegratorsTooltipArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type TMP: Ecosystem - Find a Partner Page (tmpmodel_ecosystem_find_a_partner_page) */
-export type TmpmodelEcosystemFindAPartnerPageRecordResellersTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
