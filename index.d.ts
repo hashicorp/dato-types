@@ -19495,7 +19495,7 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   metadata?: Maybe<SeoField>
   title?: Maybe<Scalars["String"]>
   trainers?: Maybe<Array<Maybe<CompanyRecord>>>
-  trainingLabel?: Maybe<Scalars["String"]>
+  trainingPartnersLabel?: Maybe<Scalars["String"]>
   trainingTooltip?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
