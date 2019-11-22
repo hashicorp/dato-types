@@ -19484,8 +19484,8 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<SectionBlockV2Record>>>
   createdAt: Scalars["DateTime"]
+  ctaSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
