@@ -1735,9 +1735,9 @@ export type DropdownLinkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (copy #1) (ecosystem_find_a_partner_page_copy_1) */
-export type EcosystemFindAPartnerPageCopy1Record = {
-  __typename?: "EcosystemFindAPartnerPageCopy1Record"
+/** Record of type Ecosystem - Find a Partner Page (copy #2) (ecosystem_find_a_partner_page_copy_2) */
+export type EcosystemFindAPartnerPageCopy2Record = {
+  __typename?: "EcosystemFindAPartnerPageCopy2Record"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -1770,28 +1770,28 @@ export type EcosystemFindAPartnerPageCopy1Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Ecosystem - Find a Partner Page (copy #1) (ecosystem_find_a_partner_page_copy_1) */
-export type EcosystemFindAPartnerPageCopy1Record_SeoMetaTagsArgs = {
+/** Record of type Ecosystem - Find a Partner Page (copy #2) (ecosystem_find_a_partner_page_copy_2) */
+export type EcosystemFindAPartnerPageCopy2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (copy #1) (ecosystem_find_a_partner_page_copy_1) */
-export type EcosystemFindAPartnerPageCopy1RecordDescriptionArgs = {
+/** Record of type Ecosystem - Find a Partner Page (copy #2) (ecosystem_find_a_partner_page_copy_2) */
+export type EcosystemFindAPartnerPageCopy2RecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (copy #1) (ecosystem_find_a_partner_page_copy_1) */
-export type EcosystemFindAPartnerPageCopy1RecordIntegratorsTooltipArgs = {
+/** Record of type Ecosystem - Find a Partner Page (copy #2) (ecosystem_find_a_partner_page_copy_2) */
+export type EcosystemFindAPartnerPageCopy2RecordIntegratorsTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (copy #1) (ecosystem_find_a_partner_page_copy_1) */
-export type EcosystemFindAPartnerPageCopy1RecordResellersTooltipArgs = {
+/** Record of type Ecosystem - Find a Partner Page (copy #2) (ecosystem_find_a_partner_page_copy_2) */
+export type EcosystemFindAPartnerPageCopy2RecordResellersTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (copy #1) (ecosystem_find_a_partner_page_copy_1) */
-export type EcosystemFindAPartnerPageCopy1RecordTrainersTooltipArgs = {
+/** Record of type Ecosystem - Find a Partner Page (copy #2) (ecosystem_find_a_partner_page_copy_2) */
+export type EcosystemFindAPartnerPageCopy2RecordTrainersTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
@@ -10423,7 +10423,7 @@ export type Query = {
   /** Returns the single instance record */
   ecosystemFindAPartnerPage?: Maybe<EcosystemFindAPartnerPageRecord>
   /** Returns the single instance record */
-  ecosystemFindAPartnerPageCopy1?: Maybe<EcosystemFindAPartnerPageCopy1Record>
+  ecosystemFindAPartnerPageCopy2?: Maybe<EcosystemFindAPartnerPageCopy2Record>
   /** Returns the single instance record */
   ecosystemLandingPage?: Maybe<EcosystemLandingPageRecord>
   /** Returns a specific record */
@@ -10759,6 +10759,10 @@ export type Query = {
   /** Returns the single instance record */
   tmpmodelConsulServiceOnAzurePage?: Maybe<
     TmpmodelConsulServiceOnAzurePageRecord
+  >
+  /** Returns the single instance record */
+  tmpmodelEcosystemFindAPartnerPage?: Maybe<
+    TmpmodelEcosystemFindAPartnerPageRecord
   >
   /** Returns the single instance record */
   tmpmodelEcosystemLandingPage?: Maybe<TmpmodelEcosystemLandingPageRecord>
@@ -13440,7 +13444,7 @@ export type QueryEcosystemFindAPartnerPageArgs = {
 }
 
 /** The query root for this schema */
-export type QueryEcosystemFindAPartnerPageCopy1Args = {
+export type QueryEcosystemFindAPartnerPageCopy2Args = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -14541,6 +14545,11 @@ export type QueryTmpmodelConsulOverviewPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpmodelConsulServiceOnAzurePageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryTmpmodelEcosystemFindAPartnerPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19527,6 +19536,66 @@ export type TmpmodelConsulServiceOnAzurePageRecord = {
 /** Record of type TMP: Consul Service on Azure (tmpmodel_consul_service_on_azure_page) */
 export type TmpmodelConsulServiceOnAzurePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Ecosystem - Find a Partner Page (copy #1) (tmpmodel_ecosystem_find_a_partner_page) */
+export type TmpmodelEcosystemFindAPartnerPageRecord = {
+  __typename?: "TmpmodelEcosystemFindAPartnerPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Array<Maybe<SectionBlockV2Record>>>
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  integratorsBronze?: Maybe<Array<Maybe<CompanyRecord>>>
+  integratorsGold?: Maybe<Array<Maybe<CompanyRecord>>>
+  integratorsLabel?: Maybe<Scalars["String"]>
+  integratorsSilver?: Maybe<Array<Maybe<CompanyRecord>>>
+  integratorsTooltip?: Maybe<Scalars["String"]>
+  metadata?: Maybe<SeoField>
+  resellersBronze?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellersGold?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellersLabel?: Maybe<Scalars["String"]>
+  resellersSilver?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellersTooltip?: Maybe<Scalars["String"]>
+  title?: Maybe<Scalars["String"]>
+  trainers?: Maybe<Array<Maybe<CompanyRecord>>>
+  trainersLabel?: Maybe<Scalars["String"]>
+  trainersTooltip?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Ecosystem - Find a Partner Page (copy #1) (tmpmodel_ecosystem_find_a_partner_page) */
+export type TmpmodelEcosystemFindAPartnerPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Ecosystem - Find a Partner Page (copy #1) (tmpmodel_ecosystem_find_a_partner_page) */
+export type TmpmodelEcosystemFindAPartnerPageRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Ecosystem - Find a Partner Page (copy #1) (tmpmodel_ecosystem_find_a_partner_page) */
+export type TmpmodelEcosystemFindAPartnerPageRecordIntegratorsTooltipArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Ecosystem - Find a Partner Page (copy #1) (tmpmodel_ecosystem_find_a_partner_page) */
+export type TmpmodelEcosystemFindAPartnerPageRecordResellersTooltipArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Ecosystem - Find a Partner Page (copy #1) (tmpmodel_ecosystem_find_a_partner_page) */
+export type TmpmodelEcosystemFindAPartnerPageRecordTrainersTooltipArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Ecosystem - Landing Page (tmpmodel_ecosystem_landing_page) */
