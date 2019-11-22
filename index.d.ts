@@ -19498,7 +19498,7 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   title?: Maybe<Scalars["String"]>
   trainers?: Maybe<Array<Maybe<CompanyRecord>>>
   trainingPartnersLabel?: Maybe<Scalars["String"]>
-  trainingTooltip?: Maybe<Scalars["String"]>
+  trainingPartnersTooltip?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -19518,7 +19518,7 @@ export type TmpmodelEcosystemFindAPartnerPageRecordResellersIntegratorsTooltipAr
 }
 
 /** Record of type TMP: Ecosystem - Find a Partner Page (tmpmodel_ecosystem_find_a_partner_page) */
-export type TmpmodelEcosystemFindAPartnerPageRecordTrainingTooltipArgs = {
+export type TmpmodelEcosystemFindAPartnerPageRecordTrainingPartnersTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
