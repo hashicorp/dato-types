@@ -19488,7 +19488,6 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  integratorsBronze?: Maybe<Array<Maybe<CompanyRecord>>>
   integratorsGold?: Maybe<Array<Maybe<CompanyRecord>>>
   integratorsLabel?: Maybe<Scalars["String"]>
   integratorsSilver?: Maybe<Array<Maybe<CompanyRecord>>>
