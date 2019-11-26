@@ -10707,6 +10707,10 @@ export type Query = {
   /** Returns the single instance record */
   tmpmodelNomadEnterprisePage?: Maybe<TmpmodelNomadEnterprisePageRecord>
   /** Returns the single instance record */
+  tmpmodelNomadEnterprisePageCopy1?: Maybe<
+    TmpmodelNomadEnterprisePageCopy1Record
+  >
+  /** Returns the single instance record */
   tmpmodelNomadOverviewPage?: Maybe<TmpmodelNomadOverviewPageRecord>
   /** Returns the single instance record */
   tmpmodelTerraformOverviewPage?: Maybe<TmpmodelTerraformOverviewPageRecord>
@@ -14493,6 +14497,11 @@ export type QueryTmpmodelEcosystemLandingPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpmodelNomadEnterprisePageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryTmpmodelNomadEnterprisePageCopy1Args = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19549,6 +19558,39 @@ export type TmpmodelEcosystemLandingPageRecord = {
 
 /** Record of type TMP: Ecosystem - Landing Page (tmpmodel_ecosystem_landing_page) */
 export type TmpmodelEcosystemLandingPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type TMP: Nomad Enterprise Page (copy #1) (tmpmodel_nomad_enterprise_page_copy_1) */
+export type TmpmodelNomadEnterprisePageCopy1Record = {
+  __typename?: "TmpmodelNomadEnterprisePageCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  alertBanner?: Maybe<AlertBannerRecord>
+  createdAt: Scalars["DateTime"]
+  enterpriseFeaturesSection?: Maybe<SbcProductFeatureTableRecord>
+  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
+  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
+  openSourceVsEnterpriseSection?: Maybe<SbcTextAndContentRecord>
+  openSourceVsEnterpriseSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  subnav?: Maybe<ProductSubnavRecord>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Nomad Enterprise Page (copy #1) (tmpmodel_nomad_enterprise_page_copy_1) */
+export type TmpmodelNomadEnterprisePageCopy1Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
