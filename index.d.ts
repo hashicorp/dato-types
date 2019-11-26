@@ -6233,7 +6233,7 @@ export enum HtmlSectionModelOrderBy {
   IsValidDesc = "_isValid_DESC"
 }
 
-/** Record of type HTML Section (html_section) */
+/** Record of type HTML Section (Deprecated) (html_section) */
 export type HtmlSectionRecord = {
   __typename?: "HtmlSectionRecord"
   _createdAt: Scalars["DateTime"]
@@ -6252,12 +6252,12 @@ export type HtmlSectionRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type HTML Section (html_section) */
+/** Record of type HTML Section (Deprecated) (html_section) */
 export type HtmlSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type HTML Section (html_section) */
+/** Record of type HTML Section (Deprecated) (html_section) */
 export type HtmlSectionRecordHtmlArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
