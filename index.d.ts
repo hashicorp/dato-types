@@ -10693,6 +10693,8 @@ export type Query = {
   /** Returns a specific record */
   tmpmodelButton?: Maybe<TmpmodelButtonRecord>
   /** Returns the single instance record */
+  tmpmodelConsulEnterprisePage?: Maybe<TmpmodelConsulEnterprisePageRecord>
+  /** Returns the single instance record */
   tmpmodelConsulOverviewPage?: Maybe<TmpmodelConsulOverviewPageRecord>
   /** Returns the single instance record */
   tmpmodelConsulServiceOnAzurePage?: Maybe<
@@ -10718,10 +10720,6 @@ export type Query = {
   tmpmodelUserResearchPage?: Maybe<TmpmodelUserResearchPageRecord>
   /** Returns the single instance record */
   tmpmodelVaultEnterprisePage?: Maybe<TmpmodelVaultEnterprisePageRecord>
-  /** Returns the single instance record */
-  tmpmodelVaultEnterprisePageCopy1?: Maybe<
-    TmpmodelVaultEnterprisePageCopy1Record
-  >
   /** Returns the single instance record */
   tmpmodelVaultOverviewPage?: Maybe<TmpmodelVaultOverviewPageRecord>
   /** Returns a specific record */
@@ -14478,6 +14476,11 @@ export type QueryTmpmodelButtonArgs = {
 }
 
 /** The query root for this schema */
+export type QueryTmpmodelConsulEnterprisePageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
 export type QueryTmpmodelConsulOverviewPageArgs = {
   locale?: Maybe<SiteLocale>
 }
@@ -14529,11 +14532,6 @@ export type QueryTmpmodelUserResearchPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpmodelVaultEnterprisePageArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryTmpmodelVaultEnterprisePageCopy1Args = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19411,6 +19409,39 @@ export type TmpmodelButtonRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type TMP: Consul Enterprise Page (tmpmodel_consul_enterprise_page) */
+export type TmpmodelConsulEnterprisePageRecord = {
+  __typename?: "TmpmodelConsulEnterprisePageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  alertBanner?: Maybe<AlertBannerRecord>
+  createdAt: Scalars["DateTime"]
+  enterpriseFeaturesSection?: Maybe<SbcProductFeatureTableRecord>
+  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
+  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
+  openSourceVsEnterpriseSection?: Maybe<SbcTextAndContentRecord>
+  openSourceVsEnterpriseSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  subnav?: Maybe<ProductSubnavRecord>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Consul Enterprise Page (tmpmodel_consul_enterprise_page) */
+export type TmpmodelConsulEnterprisePageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type TmpmodelConsulOverviewPageModelUseCasesSectionField =
   | CalloutSectionRecord
   | SbcUseCasesSectionRecord
@@ -19784,39 +19815,6 @@ export type TmpmodelUserResearchPageRecord = {
 
 /** Record of type TMP: User Research Page (tmpmodel_user_research_page) */
 export type TmpmodelUserResearchPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: Vault Enterprise Page (copy #1) (tmpmodel_vault_enterprise_page_copy_1) */
-export type TmpmodelVaultEnterprisePageCopy1Record = {
-  __typename?: "TmpmodelVaultEnterprisePageCopy1Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  alertBanner?: Maybe<AlertBannerRecord>
-  createdAt: Scalars["DateTime"]
-  enterpriseFeaturesSection?: Maybe<SbcProductFeatureTableRecord>
-  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
-  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  openSourceVsEnterpriseSection?: Maybe<SbcTextAndContentRecord>
-  openSourceVsEnterpriseSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  subnav?: Maybe<ProductSubnavRecord>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type TMP: Vault Enterprise Page (copy #1) (tmpmodel_vault_enterprise_page_copy_1) */
-export type TmpmodelVaultEnterprisePageCopy1Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
