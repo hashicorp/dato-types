@@ -18297,13 +18297,13 @@ export type TemplatePageModelFilter = {
   showDemoRequest?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
-  draft?: Maybe<BooleanFilter>
   hero?: Maybe<LinkFilter>
   content?: Maybe<LinksFilter>
   preFooterCta?: Maybe<LinkFilter>
   subnav?: Maybe<StringFilter>
   darkSubnav?: Maybe<BooleanFilter>
   metadata?: Maybe<SeoFilter>
+  draft?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<TemplatePageModelFilter>>>
 }
 
@@ -18336,12 +18336,12 @@ export enum TemplatePageModelOrderBy {
   ShowDemoRequestDesc = "showDemoRequest_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
   SubnavAsc = "subnav_ASC",
   SubnavDesc = "subnav_DESC",
   DarkSubnavAsc = "darkSubnav_ASC",
-  DarkSubnavDesc = "darkSubnav_DESC"
+  DarkSubnavDesc = "darkSubnav_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC"
 }
 
 /** Record of type Template Page (template_page) */
