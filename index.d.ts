@@ -19735,6 +19735,7 @@ export type TmpmodelTerraformPricingPageRecord = {
   enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
   enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  faq?: Maybe<FaqCategoryRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   subnav?: Maybe<ProductSubnavRecord>
