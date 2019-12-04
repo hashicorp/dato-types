@@ -22122,14 +22122,12 @@ export type VaultOssPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  documentationHeadline?: Maybe<SbcSectionHeaderRecord>
-  featuresButtons?: Maybe<SbcMultiButtonRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   infrastructureDiagram?: Maybe<SbcBeforeAfterDiagramRecord>
   infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
-  ossEnterpriseCtas?: Maybe<SplitCtaSectionRecord>
+  openSourceHeadline?: Maybe<SbcSectionHeaderRecord>
   principles: Array<SbcTextAndContentRecord>
   principlesHeadline?: Maybe<SbcSectionHeaderRecord>
   updatedAt: Scalars["DateTime"]
