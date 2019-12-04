@@ -22124,7 +22124,6 @@ export type VaultOssPageRecord = {
   createdAt: Scalars["DateTime"]
   documentationHeadline?: Maybe<SbcSectionHeaderRecord>
   featuresButtons?: Maybe<SbcMultiButtonRecord>
-  featuresHeadline?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   infrastructureDiagram?: Maybe<SbcBeforeAfterDiagramRecord>
