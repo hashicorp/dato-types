@@ -22131,7 +22131,8 @@ export type VaultOssPageRecord = {
   infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
   ossEnterpriseCtas?: Maybe<SplitCtaSectionRecord>
-  principlesHeader?: Maybe<SbcSectionHeaderRecord>
+  principles: Array<SbcTextAndContentRecord>
+  principlesHeadline?: Maybe<SbcSectionHeaderRecord>
   updatedAt: Scalars["DateTime"]
   useCases?: Maybe<SbcUseCasesSectionRecord>
 }
