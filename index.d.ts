@@ -22127,6 +22127,7 @@ export type VaultOssPageRecord = {
   infrastructureDiagram?: Maybe<SbcBeforeAfterDiagramRecord>
   infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
+  openSourceCta?: Maybe<TmpmodelButtonRecord>
   openSourceHeadline?: Maybe<SbcSectionHeaderRecord>
   principles: Array<SbcTextAndContentRecord>
   principlesHeadline?: Maybe<SbcSectionHeaderRecord>
