@@ -22178,8 +22178,6 @@ export type VaultOssPageRecord = {
   ossEnterpriseCtas?: Maybe<SplitCtaSectionRecord>
   updatedAt: Scalars["DateTime"]
   useCases?: Maybe<SbcUseCasesSectionRecord>
-  useCasesCallouts?: Maybe<Array<SbcCalloutSectionRecord>>
-  useCasesHeadline?: Maybe<SbcSectionHeaderRecord>
 }
 
 /** Record of type Vault OSS Page (vault_oss_page) */
