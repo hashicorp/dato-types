@@ -48,7 +48,7 @@ export type AboutPageRecord = {
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   name?: Maybe<Scalars["String"]>
-  pageContent?: Maybe<Array<Maybe<AboutPageModelPageContentField>>>
+  pageContent: Array<AboutPageModelPageContentField>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -70,7 +70,7 @@ export type AboutPageRecordNameArgs = {
 export type AlertBannerModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -154,7 +154,7 @@ export type AlertBannerRecord_SeoMetaTagsArgs = {
 export type AlertModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -234,7 +234,7 @@ export type AlertRecord_SeoMetaTagsArgs = {
 export type BasicTableModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -314,7 +314,7 @@ export type BecomeAPartnerPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<BecomeAPartnerPageModelContentField>>>
+  content: Array<BecomeAPartnerPageModelContentField>
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -356,7 +356,7 @@ export type BlogIndexPageRecord_SeoMetaTagsArgs = {
 export type BlogPostCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -422,7 +422,7 @@ export type BlogPostCategoryRecord_SeoMetaTagsArgs = {
 export type BlogPostModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -495,7 +495,7 @@ export type BlogPostRecord = {
   _updatedAt: Scalars["DateTime"]
   author?: Maybe<PersonRecord>
   body?: Maybe<Scalars["String"]>
-  categories?: Maybe<Array<Maybe<BlogPostCategoryRecord>>>
+  categories?: Maybe<Array<BlogPostCategoryRecord>>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   dateTime?: Maybe<Scalars["DateTime"]>
@@ -560,7 +560,7 @@ export type BrandPageRecord_SeoMetaTagsArgs = {
 export type Button2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -661,7 +661,7 @@ export type ButtonRecord_SeoMetaTagsArgs = {
 export type ButtonThemeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -731,7 +731,7 @@ export type ButtonThemeRecord_SeoMetaTagsArgs = {
 export type CalloutItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -806,7 +806,7 @@ export type CalloutItemRecordDescriptionArgs = {
 export type CalloutSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -861,12 +861,12 @@ export type CalloutSectionRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   calloutImage?: Maybe<FileField>
-  companies?: Maybe<Array<Maybe<CompanyRecord>>>
+  companies?: Maybe<Array<CompanyRecord>>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  items?: Maybe<Array<Maybe<CalloutItemRecord>>>
+  items?: Maybe<Array<CalloutItemRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -895,7 +895,7 @@ export type CalloutsSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<Maybe<CalloutItemRecord>>>
+  items?: Maybe<Array<CalloutItemRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -921,7 +921,7 @@ export type CertificationPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<CertificationPageModelContentField>>>
+  content: Array<CertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   intro?: Maybe<Scalars["String"]>
@@ -951,7 +951,7 @@ export type CertificationPageRecordSignupFormIntroArgs = {
 export type CodeblockLanguageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -1021,7 +1021,7 @@ export type CodeblockLanguageRecord_SeoMetaTagsArgs = {
 export type CodeSampleModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1097,6 +1097,21 @@ export type CollectionMetadata = {
   count: Scalars["IntType"]
 }
 
+export enum ColorBucketType {
+  Red = "red",
+  Orange = "orange",
+  Pink = "pink",
+  Cyan = "cyan",
+  Purple = "purple",
+  Blue = "blue",
+  Yellow = "yellow",
+  Green = "green",
+  Brown = "brown",
+  Grey = "grey",
+  White = "white",
+  Black = "black"
+}
+
 export type ColorField = {
   __typename?: "ColorField"
   alpha?: Maybe<Scalars["IntType"]>
@@ -1129,15 +1144,15 @@ export type CommunityLandingPageRecord = {
   conversationSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
   eventsButton?: Maybe<SbcMultiButtonRecord>
-  eventsFeatured?: Maybe<Array<Maybe<HashiconfRecord>>>
+  eventsFeatured?: Maybe<Array<HashiconfRecord>>
   eventsSectionHeader?: Maybe<SbcSectionHeaderRecord>
   findYourUserGroupButtons?: Maybe<SbcMultiButtonRecord>
   findYourUserGroupSectionHeader?: Maybe<SbcSectionHeaderRecord>
   gettingStartedSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  gettingStartedTools?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  gettingStartedTools?: Maybe<Array<OpenSourceToolRecord>>
   headerAlert?: Maybe<SbcAlertRecord>
   headerButtonCollection?: Maybe<SbcMultiButtonRecord>
-  headerCommunityImageRow?: Maybe<Array<Maybe<FileField>>>
+  headerCommunityImageRow: Array<FileField>
   headerSectionHeader?: Maybe<SbcSectionHeaderRecord>
   hugCountries?: Maybe<Scalars["IntType"]>
   hugGroups?: Maybe<Scalars["IntType"]>
@@ -1159,7 +1174,7 @@ export type CommunityLandingPageRecord_SeoMetaTagsArgs = {
 export type CompanyModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1237,7 +1252,7 @@ export type CompanyRecord = {
   logo?: Maybe<FileField>
   monochromeLogo?: Maybe<FileField>
   name?: Maybe<Scalars["String"]>
-  productIntegrations?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  productIntegrations?: Maybe<Array<OpenSourceToolRecord>>
   productIntegrationsV2?: Maybe<Array<Maybe<ProductIntegrationRecord>>>
   slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -1299,7 +1314,7 @@ export type ConsulFieldDayLiveRecordSidebarBodyArgs = {
 export type ConsulGraphicSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1393,7 +1408,7 @@ export type ConsulProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<Maybe<SectionBlockPageRecord>>>
+  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
   useCasesSection?: Maybe<SectionBlockV2Record>
 }
 
@@ -1405,7 +1420,7 @@ export type ConsulProductPageRecord_SeoMetaTagsArgs = {
 export type ContactCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1484,7 +1499,7 @@ export type ContactCategoryRecordDescriptionArgs = {
 export type ContactFormPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1577,7 +1592,7 @@ export type ContactPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  categories?: Maybe<Array<Maybe<ContactCategoryRecord>>>
+  categories?: Maybe<Array<ContactCategoryRecord>>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
@@ -1611,7 +1626,7 @@ export type ContentSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  imageGrid?: Maybe<Array<Maybe<FileField>>>
+  imageGrid: Array<FileField>
   lead?: Maybe<Scalars["String"]>
   text?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
@@ -1672,7 +1687,7 @@ export type DateTimeFilter = {
 export type DropdownLinkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1725,7 +1740,7 @@ export type DropdownLinkRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  links?: Maybe<Array<Maybe<LinkRecord>>>
+  links?: Maybe<Array<LinkRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -1748,23 +1763,23 @@ export type EcosystemFindAPartnerPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<SectionBlockV2Record>>>
+  content?: Maybe<Array<SectionBlockV2Record>>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  integratorsBronze?: Maybe<Array<Maybe<CompanyRecord>>>
-  integratorsGold?: Maybe<Array<Maybe<CompanyRecord>>>
+  integratorsBronze?: Maybe<Array<CompanyRecord>>
+  integratorsGold?: Maybe<Array<CompanyRecord>>
   integratorsLabel?: Maybe<Scalars["String"]>
-  integratorsSilver?: Maybe<Array<Maybe<CompanyRecord>>>
+  integratorsSilver?: Maybe<Array<CompanyRecord>>
   integratorsTooltip?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  resellersBronze?: Maybe<Array<Maybe<CompanyRecord>>>
-  resellersGold?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellersBronze?: Maybe<Array<CompanyRecord>>
+  resellersGold?: Maybe<Array<CompanyRecord>>
   resellersLabel?: Maybe<Scalars["String"]>
-  resellersSilver?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellersSilver?: Maybe<Array<CompanyRecord>>
   resellersTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
-  trainers?: Maybe<Array<Maybe<CompanyRecord>>>
+  trainers?: Maybe<Array<CompanyRecord>>
   trainersLabel?: Maybe<Scalars["String"]>
   trainersTooltip?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -1808,9 +1823,9 @@ export type EcosystemLandingPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<SectionBlockV2Record>>>
+  content?: Maybe<Array<SectionBlockV2Record>>
   createdAt: Scalars["DateTime"]
-  ctaButtonsTest?: Maybe<Array<Maybe<SbcButtonRecord>>>
+  ctaButtonsTest?: Maybe<Array<SbcButtonRecord>>
   ctaHeadlineTest?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -1830,7 +1845,7 @@ export type EcosystemLandingPageRecord_SeoMetaTagsArgs = {
 export type EmbeddedPodcastSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -1914,7 +1929,7 @@ export type EmbeddedPodcastSectionRecord_SeoMetaTagsArgs = {
 export type EmbeddedSlidesSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2005,7 +2020,7 @@ export type EmployeeNavLinkRecord_SeoMetaTagsArgs = {
 export type EmployeePageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2061,7 +2076,7 @@ export type EmployeePageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<HashiconfSectionBlockRecord>>>
+  content?: Maybe<Array<HashiconfSectionBlockRecord>>
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -2085,7 +2100,7 @@ export type EmployeePageRecordMiniHeroDescriptionArgs = {
 export type EnterpriseFeaturesCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2150,7 +2165,7 @@ export type EnterpriseFeaturesCategoryRecord_SeoMetaTagsArgs = {
 export type EnterprisePricingSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2204,7 +2219,7 @@ export type EnterprisePricingSectionRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   internalName?: Maybe<Scalars["String"]>
-  packageOptions?: Maybe<Array<Maybe<ProductPricingPlanRecord>>>
+  packageOptions?: Maybe<Array<ProductPricingPlanRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -2222,7 +2237,7 @@ export type EnterpriseProductModelEnterpriseProductPageField =
 export type EnterpriseProductModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -2284,7 +2299,7 @@ export enum EnterpriseProductModelOrderBy {
 export type EnterpriseProductPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -2368,18 +2383,18 @@ export type EnterpriseProductPageRecord = {
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
   draft?: Maybe<Scalars["BooleanType"]>
-  faqs?: Maybe<Array<Maybe<FaqCategoryRecord>>>
+  faqs?: Maybe<Array<FaqCategoryRecord>>
   faqsPreFooterCta?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   name?: Maybe<Scalars["String"]>
-  pageContent?: Maybe<Array<Maybe<EnterpriseProductPageModelPageContentField>>>
+  pageContent: Array<EnterpriseProductPageModelPageContentField>
   position?: Maybe<Scalars["IntType"]>
   product?: Maybe<EnterpriseProductRecord>
   subnav?: Maybe<EnterpriseProductSubnavRecord>
   trialForm?: Maybe<TrialFormPageRecord>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<Maybe<EnterpriseProductUseCasePageRecord>>>
+  useCasePages?: Maybe<Array<EnterpriseProductUseCasePageRecord>>
 }
 
 /** Record of type Enterprise Product Page (deprecated) (enterprise_product_page) */
@@ -2437,7 +2452,7 @@ export type EnterpriseProductSubnavModelEnterpriseLinksField =
 export type EnterpriseProductSubnavModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2496,14 +2511,10 @@ export type EnterpriseProductSubnavRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  enterpriseLinks?: Maybe<
-    Array<Maybe<EnterpriseProductSubnavModelEnterpriseLinksField>>
-  >
+  enterpriseLinks: Array<EnterpriseProductSubnavModelEnterpriseLinksField>
   id: Scalars["ItemId"]
-  links?: Maybe<Array<Maybe<EnterpriseProductSubnavModelLinksField>>>
-  productLinks?: Maybe<
-    Array<Maybe<EnterpriseProductSubnavModelProductLinksField>>
-  >
+  links: Array<EnterpriseProductSubnavModelLinksField>
+  productLinks: Array<EnterpriseProductSubnavModelProductLinksField>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -2519,7 +2530,7 @@ export type EnterpriseProductUseCasePageModelContentField =
 export type EnterpriseProductUseCasePageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2572,7 +2583,7 @@ export type EnterpriseProductUseCasePageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<EnterpriseProductUseCasePageModelContentField>>>
+  content: Array<EnterpriseProductUseCasePageModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
@@ -2622,7 +2633,7 @@ export type EventCtasItemRecordDescriptionArgs = {
 export type EventModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2685,7 +2696,7 @@ export type EventRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
-  eventType?: Maybe<Array<Maybe<EventTypeRecord>>>
+  eventType?: Maybe<Array<EventTypeRecord>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   location?: Maybe<Scalars["String"]>
@@ -2715,7 +2726,7 @@ export type EventsPageRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   eventCtas?: Maybe<Array<Maybe<EventCtasItemRecord>>>
-  events?: Maybe<Array<Maybe<EventRecord>>>
+  events?: Maybe<Array<EventRecord>>
   featuredEvents?: Maybe<Array<Maybe<FeaturedEventRecord>>>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -2738,7 +2749,7 @@ export type EventsPageRecordDescriptionArgs = {
 export type EventTypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -2874,7 +2885,7 @@ export type ExpandableTextWithPhotoRecordTextArgs = {
 export type ExperienceLevelModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -2938,7 +2949,7 @@ export type ExperienceLevelRecord_SeoMetaTagsArgs = {
 export type ExternalResourceModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3017,19 +3028,17 @@ export type ExternalResourceRecord = {
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<Maybe<EventRecord>>>
+  events?: Maybe<Array<EventRecord>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  industry?: Maybe<Array<Maybe<ResourceIndustryRecord>>>
-  infrastructureProvider?: Maybe<
-    Array<Maybe<ResourceInfrastructureProviderRecord>>
-  >
+  industry?: Maybe<Array<ResourceIndustryRecord>>
+  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
   link?: Maybe<Scalars["String"]>
   mediaType?: Maybe<ResourceMediaTypeRecord>
   metadata?: Maybe<SeoField>
-  organizations?: Maybe<Array<Maybe<CompanyRecord>>>
-  people?: Maybe<Array<Maybe<PersonRecord>>>
-  product?: Maybe<Array<Maybe<ExternalResourceModelProductField>>>
+  organizations?: Maybe<Array<CompanyRecord>>
+  people?: Maybe<Array<PersonRecord>>
+  product: Array<ExternalResourceModelProductField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3047,7 +3056,7 @@ export type ExternalResourceRecordDescriptionArgs = {
 export type FaqCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3228,8 +3237,8 @@ export type FeatureRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  isAnUpgradeIn?: Maybe<Array<Maybe<ProductPricingPlanRecord>>>
-  offeredIn?: Maybe<Array<Maybe<ProductPricingPlanRecord>>>
+  isAnUpgradeIn?: Maybe<Array<ProductPricingPlanRecord>>
+  offeredIn?: Maybe<Array<ProductPricingPlanRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3247,7 +3256,7 @@ export type FeatureRecordDescriptionArgs = {
 export type FeatureTableColumnModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3311,7 +3320,7 @@ export type FeatureTableColumnRecord_SeoMetaTagsArgs = {
 export type FeatureTableModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3366,7 +3375,7 @@ export type FeatureTableRecord = {
   applyLink?: Maybe<LinkRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  tabs?: Maybe<Array<Maybe<FeatureTableTabRecord>>>
+  tabs?: Maybe<Array<FeatureTableTabRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3379,7 +3388,7 @@ export type FeatureTableRecord_SeoMetaTagsArgs = {
 export type FeatureTableRowModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3431,7 +3440,7 @@ export type FeatureTableRowRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  columnValues?: Maybe<Array<Maybe<FeatureTableRowValueRecord>>>
+  columnValues?: Maybe<Array<FeatureTableRowValueRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
@@ -3452,7 +3461,7 @@ export type FeatureTableRowRecordTooltipArgs = {
 export type FeatureTableRowValueModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3518,7 +3527,7 @@ export type FeatureTableRowValueRecord_SeoMetaTagsArgs = {
 export type FeatureTableTabModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3570,10 +3579,10 @@ export type FeatureTableTabRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  columns?: Maybe<Array<Maybe<FeatureTableColumnRecord>>>
+  columns?: Maybe<Array<FeatureTableColumnRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  rows?: Maybe<Array<Maybe<FeatureTableRowRecord>>>
+  rows?: Maybe<Array<FeatureTableRowRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3585,18 +3594,47 @@ export type FeatureTableTabRecord_SeoMetaTagsArgs = {
 
 export type FileField = {
   __typename?: "FileField"
+  _createdAt: Scalars["DateTime"]
+  _updatedAt: Scalars["DateTime"]
   alt?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
+  basename: Scalars["String"]
+  blurUpThumb?: Maybe<Scalars["String"]>
+  blurhash?: Maybe<Scalars["String"]>
+  colors: Array<Maybe<ColorField>>
   copyright?: Maybe<Scalars["String"]>
   customData?: Maybe<Scalars["CustomData"]>
+  exifInfo?: Maybe<Scalars["CustomData"]>
+  filename: Scalars["String"]
   format: Scalars["String"]
   height?: Maybe<Scalars["IntType"]>
   id: Scalars["UploadId"]
+  mimeType: Scalars["String"]
   notes?: Maybe<Scalars["String"]>
+  responsiveImage?: Maybe<ResponsiveImage>
   size: Scalars["IntType"]
+  smartTags: Array<Maybe<Scalars["String"]>>
+  tags: Array<Maybe<Scalars["String"]>>
   title?: Maybe<Scalars["String"]>
-  url?: Maybe<Scalars["String"]>
+  url: Scalars["String"]
+  video?: Maybe<UploadVideoField>
   width?: Maybe<Scalars["IntType"]>
+}
+
+export type FileFieldBlurUpThumbArgs = {
+  punch?: Maybe<Scalars["Float"]>
+  size?: Maybe<Scalars["Int"]>
+  quality?: Maybe<Scalars["Int"]>
+  imgixParams?: Maybe<ImgixParams>
+}
+
+export type FileFieldResponsiveImageArgs = {
+  imgixParams?: Maybe<ImgixParams>
+  sizes?: Maybe<Scalars["String"]>
+}
+
+export type FileFieldUrlArgs = {
+  imgixParams?: Maybe<ImgixParams>
 }
 
 /** Specifies how to filter Single-file/image fields */
@@ -3660,7 +3698,7 @@ export type FormCheckboxFieldRecord_SeoMetaTagsArgs = {
 export type FormContactTypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3796,7 +3834,7 @@ export type FormMultiSelectFieldRecord = {
   id: Scalars["ItemId"]
   label?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
-  options?: Maybe<Array<Maybe<FormMultiSelectOptionRecord>>>
+  options?: Maybe<Array<FormMultiSelectOptionRecord>>
   required?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3809,7 +3847,7 @@ export type FormMultiSelectFieldRecord_SeoMetaTagsArgs = {
 export type FormMultiSelectOptionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -3961,6 +3999,8 @@ export type GalleryFilter = {
   allIn?: Maybe<Array<Maybe<Scalars["UploadId"]>>>
   /** Filter records that have one of the specified uploads. The specified values must be Upload IDs */
   anyIn?: Maybe<Array<Maybe<Scalars["UploadId"]>>>
+  /** Filter records that do not have any of the specified uploads. The specified values must be Upload IDs */
+  notIn?: Maybe<Array<Maybe<Scalars["UploadId"]>>>
   /** Filter records with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
 }
@@ -4004,7 +4044,7 @@ export type GlobalFooterBasicRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  links?: Maybe<Array<Maybe<LinkRecord>>>
+  links?: Maybe<Array<LinkRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -4026,22 +4066,22 @@ export type GlobalFooterRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  allProductLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  allProductLinks?: Maybe<Array<LinkRecord>>
   company?: Maybe<Scalars["String"]>
-  companyLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  companyLinks?: Maybe<Array<LinkRecord>>
   copyrightText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
-  disclaimerLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  disclaimerLinks?: Maybe<Array<LinkRecord>>
   id: Scalars["ItemId"]
-  openSourceLinks?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
-  partnerLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  openSourceLinks?: Maybe<Array<OpenSourceToolRecord>>
+  partnerLinks?: Maybe<Array<LinkRecord>>
   partners?: Maybe<Scalars["String"]>
   primaryLogo?: Maybe<FileField>
-  productLinks?: Maybe<Array<Maybe<EnterpriseProductRecord>>>
+  productLinks?: Maybe<Array<EnterpriseProductRecord>>
   products?: Maybe<Scalars["String"]>
   resources?: Maybe<Scalars["String"]>
-  resourcesLinks?: Maybe<Array<Maybe<LinkRecord>>>
-  socialLinks?: Maybe<Array<Maybe<SocialNetworkRecord>>>
+  resourcesLinks?: Maybe<Array<LinkRecord>>
+  socialLinks?: Maybe<Array<SocialNetworkRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -4064,19 +4104,19 @@ export type GlobalNavigationRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companyImageLockup?: Maybe<ImageLockupRecord>
-  companyLinks?: Maybe<Array<Maybe<IconLinkRecord>>>
+  companyLinks?: Maybe<Array<IconLinkRecord>>
   createdAt: Scalars["DateTime"]
   ctaButton?: Maybe<Button2Record>
-  enterpriseProducts?: Maybe<Array<Maybe<EnterpriseProductRecord>>>
+  enterpriseProducts?: Maybe<Array<EnterpriseProductRecord>>
   id: Scalars["ItemId"]
-  navigationLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  navigationLinks?: Maybe<Array<LinkRecord>>
   openSourceImageLockup?: Maybe<ImageLockupRecord>
-  openSourceTools?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  openSourceTools?: Maybe<Array<OpenSourceToolRecord>>
   partnerImageLockup?: Maybe<ImageLockupRecord>
-  partnerLinks?: Maybe<Array<Maybe<IconLinkRecord>>>
+  partnerLinks?: Maybe<Array<IconLinkRecord>>
   primaryLogo?: Maybe<FileField>
   productsImageLockup?: Maybe<ImageLockupRecord>
-  resourceLinks?: Maybe<Array<Maybe<IconLinkRecord>>>
+  resourceLinks?: Maybe<Array<IconLinkRecord>>
   resourcesImageLockup?: Maybe<ImageLockupRecord>
   updatedAt: Scalars["DateTime"]
 }
@@ -4127,7 +4167,7 @@ export type GuestBlogTextRecordTextArgs = {
 export type HashiconfBasicPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4222,7 +4262,7 @@ export type HashiconfBasicPageRecordSidebarContentArgs = {
 export type HashiconfFeaturedSpeakersSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4275,7 +4315,7 @@ export type HashiconfFeaturedSpeakersSectionRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   secondaryText?: Maybe<Scalars["String"]>
-  speakers?: Maybe<Array<Maybe<HashiconfSpeakerRecord>>>
+  speakers?: Maybe<Array<HashiconfSpeakerRecord>>
   text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -4298,7 +4338,7 @@ export type HashiconfFeaturedSpeakersSectionRecordTextArgs = {
 export type HashiconfLandingPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4377,15 +4417,15 @@ export type HashiconfLandingPageRecord = {
   aboutImage2?: Maybe<FileField>
   aboutImage3?: Maybe<FileField>
   aboutLink?: Maybe<LinkRecord>
-  content?: Maybe<Array<Maybe<HashiconfSectionBlockRecord>>>
+  content?: Maybe<Array<HashiconfSectionBlockRecord>>
   createdAt: Scalars["DateTime"]
   heroDescription?: Maybe<Scalars["String"]>
   heroHelpText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  nav?: Maybe<Array<Maybe<LinkRecord>>>
-  preFooterNav?: Maybe<Array<Maybe<LinkRecord>>>
-  subPages?: Maybe<Array<Maybe<HashiconfLandingPageModelSubPagesField>>>
+  nav?: Maybe<Array<LinkRecord>>
+  preFooterNav?: Maybe<Array<LinkRecord>>
+  subPages: Array<HashiconfLandingPageModelSubPagesField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -4408,7 +4448,7 @@ export type HashiconfLandingPageRecordHeroDescriptionArgs = {
 export type HashiconfLiveStreamPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4481,7 +4521,7 @@ export type HashiconfLiveStreamPageRecordHeadlineContentArgs = {
 export type HashiconfModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -4575,11 +4615,11 @@ export type HashiconfRecord = {
   logo?: Maybe<FileField>
   logoWhite?: Maybe<FileField>
   position?: Maybe<Scalars["IntType"]>
-  scheduleItems?: Maybe<Array<Maybe<HashiconfModelScheduleItemsField>>>
+  scheduleItems: Array<HashiconfModelScheduleItemsField>
   schedulePage?: Maybe<HashiconfSchedulePageRecord>
   speakersPage?: Maybe<HashiconfSpeakersPageRecord>
   title?: Maybe<Scalars["String"]>
-  trainingCalloutButtons?: Maybe<Array<Maybe<SbcButtonRecord>>>
+  trainingCalloutButtons?: Maybe<Array<SbcButtonRecord>>
   trainingCalloutText?: Maybe<Scalars["String"]>
   trainingDayPage?: Maybe<HashiconfTrainingDayRecord>
   twitterHandle?: Maybe<Scalars["String"]>
@@ -4600,7 +4640,7 @@ export type HashiconfRecordTrainingCalloutTextArgs = {
 export type HashiconfScheduleDayModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4707,7 +4747,7 @@ export type HashiconfScheduleEventRecordDescriptionArgs = {
 export type HashiconfScheduleItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4793,7 +4833,7 @@ export type HashiconfScheduleItemRecordNoteArgs = {
 export type HashiconfScheduleLiteSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4858,7 +4898,7 @@ export type HashiconfScheduleLiteSectionRecord_SeoMetaTagsArgs = {
 export type HashiconfSchedulePageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4911,7 +4951,7 @@ export type HashiconfSchedulePageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  days?: Maybe<Array<Maybe<HashiconfScheduleDayRecord>>>
+  days?: Maybe<Array<HashiconfScheduleDayRecord>>
   header?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
@@ -4938,7 +4978,7 @@ export type HashiconfSectionBlockModelContentField =
 export type HashiconfSectionBlockModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -4985,7 +5025,7 @@ export enum HashiconfSectionBlockModelOrderBy {
 export type HashiconfSectionBlockPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5040,7 +5080,7 @@ export type HashiconfSectionBlockPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<HashiconfSectionBlockRecord>>>
+  content?: Maybe<Array<HashiconfSectionBlockRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
@@ -5067,7 +5107,7 @@ export type HashiconfSectionBlockRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<HashiconfSectionBlockModelContentField>>>
+  content: Array<HashiconfSectionBlockModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
@@ -5084,7 +5124,7 @@ export type HashiconfSectionBlockRecord_SeoMetaTagsArgs = {
 export type HashiconfSessionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5167,16 +5207,16 @@ export type HashiconfSessionRecord = {
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   endTime?: Maybe<Scalars["String"]>
-  experienceLevels?: Maybe<Array<Maybe<ExperienceLevelRecord>>>
+  experienceLevels?: Maybe<Array<ExperienceLevelRecord>>
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
   location?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  productTypes?: Maybe<Array<Maybe<ProductTypeRecord>>>
-  products?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  productTypes?: Maybe<Array<ProductTypeRecord>>
+  products?: Maybe<Array<OpenSourceToolRecord>>
   room?: Maybe<LocationRoomRecord>
   slug?: Maybe<Scalars["String"]>
-  speakers?: Maybe<Array<Maybe<HashiconfSpeakerRecord>>>
+  speakers?: Maybe<Array<HashiconfSpeakerRecord>>
   startTime?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainer?: Maybe<Scalars["String"]>
@@ -5197,7 +5237,7 @@ export type HashiconfSessionRecordContentArgs = {
 export type HashiconfSpeakerModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5302,7 +5342,7 @@ export type HashiconfSpeakerRecordBioArgs = {
 export type HashiconfSpeakersPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5370,7 +5410,7 @@ export type HashiconfSpeakersPageRecord_SeoMetaTagsArgs = {
 export type HashiconfSponsorSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5422,12 +5462,12 @@ export type HashiconfSponsorSectionRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<Maybe<SbcButtonRecord>>>
+  buttons?: Maybe<Array<SbcButtonRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  platinumSponsors?: Maybe<Array<Maybe<CompanyRecord>>>
+  platinumSponsors?: Maybe<Array<CompanyRecord>>
   secondaryText?: Maybe<Scalars["String"]>
-  sponsors?: Maybe<Array<Maybe<CompanyRecord>>>
+  sponsors?: Maybe<Array<CompanyRecord>>
   text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -5450,7 +5490,7 @@ export type HashiconfSponsorSectionRecordTextArgs = {
 export type HashiconfTextAndFullImageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5503,7 +5543,7 @@ export type HashiconfTextAndFullImageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<Maybe<SbcButtonRecord>>>
+  buttons?: Maybe<Array<SbcButtonRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
@@ -5525,7 +5565,7 @@ export type HashiconfTextAndFullImageRecordTextArgs = {
 export type HashiconfTrainingDayModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5589,7 +5629,7 @@ export type HashiconfTrainingDayRecord = {
   internalTitle?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
-  trainings?: Maybe<Array<Maybe<HashiconfTrainingRecord>>>
+  trainings?: Maybe<Array<HashiconfTrainingRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -5606,7 +5646,7 @@ export type HashiconfTrainingDayRecordHeadlineArgs = {
 export type HashiconfTrainingModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5693,18 +5733,18 @@ export type HashiconfTrainingRecord = {
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   endTime?: Maybe<Scalars["String"]>
-  experienceLevels?: Maybe<Array<Maybe<ExperienceLevelRecord>>>
+  experienceLevels?: Maybe<Array<ExperienceLevelRecord>>
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
   location?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
   productLogo?: Maybe<FileField>
-  productTypes?: Maybe<Array<Maybe<ProductTypeRecord>>>
-  products?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  productTypes?: Maybe<Array<ProductTypeRecord>>
+  products?: Maybe<Array<OpenSourceToolRecord>>
   room?: Maybe<LocationRoomRecord>
   shortDescription?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
-  speakers?: Maybe<Array<Maybe<HashiconfSpeakerRecord>>>
+  speakers?: Maybe<Array<HashiconfSpeakerRecord>>
   startTime?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainer?: Maybe<Scalars["String"]>
@@ -5725,7 +5765,7 @@ export type HashiconfTrainingRecordContentArgs = {
 export type HashicorpProductModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5789,7 +5829,7 @@ export type HashicorpProductRecord_SeoMetaTagsArgs = {
 export type HeroFormLeadModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5868,7 +5908,7 @@ export type HeroRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
-  buttons?: Maybe<Array<Maybe<LinkRecord>>>
+  buttons?: Maybe<Array<LinkRecord>>
   centered?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -5896,7 +5936,7 @@ export type HeroRecordHelpTextArgs = {
 export type HeroSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -5973,7 +6013,7 @@ export type HeroSectionRecord = {
   alert?: Maybe<AlertRecord>
   backgroundImage?: Maybe<FileField>
   backgroundTheme?: Maybe<Scalars["String"]>
-  buttons?: Maybe<Array<Maybe<LinkRecord>>>
+  buttons?: Maybe<Array<LinkRecord>>
   centered?: Maybe<Scalars["BooleanType"]>
   conditionalTesting?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
@@ -5987,7 +6027,7 @@ export type HeroSectionRecord = {
   title?: Maybe<Scalars["String"]>
   titleLogo?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
-  videos?: Maybe<Array<Maybe<HeroVideoCarouselItemRecord>>>
+  videos?: Maybe<Array<HeroVideoCarouselItemRecord>>
 }
 
 /** Record of type Hero Section (hero_section) */
@@ -6008,7 +6048,7 @@ export type HeroSectionRecordHelpTextArgs = {
 export type HeroVideoCarouselItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6066,7 +6106,7 @@ export type HeroVideoCarouselItemRecord = {
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
   playbackRate?: Maybe<Scalars["FloatType"]>
-  src?: Maybe<Array<Maybe<VideoSourceRecord>>>
+  src?: Maybe<Array<VideoSourceRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -6078,7 +6118,7 @@ export type HeroVideoCarouselItemRecord_SeoMetaTagsArgs = {
 export type HomepageProductTabModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6139,7 +6179,7 @@ export type HomepageProductTabRecord = {
   buttonText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
-  features?: Maybe<Array<Maybe<PackageFeatureRecord>>>
+  features?: Maybe<Array<PackageFeatureRecord>>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   product?: Maybe<EnterpriseProductRecord>
@@ -6176,17 +6216,17 @@ export type HomePageRecord = {
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  newsItems?: Maybe<Array<Maybe<NewsItemRecord>>>
+  newsItems?: Maybe<Array<NewsItemRecord>>
   prefooter?: Maybe<HeroSectionRecord>
-  productSuite?: Maybe<Array<Maybe<EnterpriseProductRecord>>>
+  productSuite?: Maybe<Array<EnterpriseProductRecord>>
   productSuiteHeader?: Maybe<TextHeadlineSectionRecord>
-  productTabs?: Maybe<Array<Maybe<HomepageProductTabRecord>>>
+  productTabs?: Maybe<Array<HomepageProductTabRecord>>
   salesForm?: Maybe<SalesFormRecord>
-  technologyPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  technologyPartners?: Maybe<Array<CompanyRecord>>
   technologyPartnersCopy?: Maybe<TextHeadlineSectionRecord>
-  testimonials?: Maybe<Array<Maybe<TestimonialRecord>>>
+  testimonials?: Maybe<Array<TestimonialRecord>>
   testimonialsHeader?: Maybe<TextHeadlineSectionRecord>
-  trustedByCompanies?: Maybe<Array<Maybe<CompanyRecord>>>
+  trustedByCompanies?: Maybe<Array<CompanyRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -6198,7 +6238,7 @@ export type HomePageRecord_SeoMetaTagsArgs = {
 export type HtmlSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6265,7 +6305,7 @@ export type HtmlSectionRecordHtmlArgs = {
 export type IconLinkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6338,22 +6378,10 @@ export type IconLinkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Specifies how to filter by ID */
-export type IdFilter = {
-  /** Search the record with the specified ID */
-  eq?: Maybe<Scalars["ItemId"]>
-  /** Exclude the record with the specified ID */
-  neq?: Maybe<Scalars["ItemId"]>
-  /** Search records with the specified IDs */
-  in?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
-  /** Search records that do not have the specified IDs */
-  notIn?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
-}
-
 export type ImageLockupModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6453,7 +6481,7 @@ export type ImageRecord_SeoMetaTagsArgs = {
 export type ImageSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6563,7 +6591,7 @@ export type ImageTextCarouselItemRecordDescriptionArgs = {
 export type ImageTextCarouselModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6621,6 +6649,1197 @@ export type ImageTextCarouselRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type ImgixParams = {
+  /**
+   * Aspect Ratio
+   *
+   * Specifies an aspect ratio to maintain when resizing and cropping the image
+   *
+   * Depends on: `fit=crop`
+   **/
+  ar?: Maybe<Scalars["String"]>
+  /**
+   * Automatic
+   *
+   * Applies automatic enhancements to images.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/auto)
+   **/
+  auto?: Maybe<Array<ImgixParamsAuto>>
+  /**
+   * Background Color
+   *
+   * Colors the background of padded and partially-transparent images.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/bg)
+   **/
+  bg?: Maybe<Scalars["String"]>
+  /**
+   * Blend Align
+   *
+   * Changes the blend alignment relative to the parent image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-align)
+   **/
+  blendAlign?: Maybe<Array<ImgixParamsBlendAlign>>
+  /**
+   * Blend Alpha
+   *
+   * Changes the alpha of the blend image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-alpha)
+   **/
+  blendAlpha?: Maybe<Scalars["IntType"]>
+  /**
+   * Blend Crop
+   *
+   * Specifies the type of crop for blend images.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-crop)
+   **/
+  blendCrop?: Maybe<Array<ImgixParamsBlendCrop>>
+  /**
+   * Blend Fit
+   *
+   * Specifies the fit mode for blend images.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-fit)
+   **/
+  blendFit?: Maybe<ImgixParamsBlendFit>
+  /**
+   * Blend Height
+   *
+   * Adjusts the height of the blend image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-h)
+   **/
+  blendH?: Maybe<Scalars["FloatType"]>
+  /**
+   * Blend Mode
+   *
+   * Sets the blend mode for a blend image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-mode)
+   **/
+  blendMode?: Maybe<ImgixParamsBlendMode>
+  /**
+   * Blend Padding
+   *
+   * Applies padding to the blend image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-pad)
+   **/
+  blendPad?: Maybe<Scalars["IntType"]>
+  /**
+   * Blend Size
+   *
+   * Adjusts the size of the blend image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-size)
+   **/
+  blendSize?: Maybe<ImgixParamsBlendSize>
+  /**
+   * Blend Width
+   *
+   * Adjusts the width of the blend image.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-w)
+   **/
+  blendW?: Maybe<Scalars["FloatType"]>
+  /**
+   * Blend X Position
+   *
+   * Adjusts the x-offset of the blend image relative to its parent.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-x)
+   **/
+  blendX?: Maybe<Scalars["IntType"]>
+  /**
+   * Blend Y Position
+   *
+   * Adjusts the y-offset of the blend image relative to its parent.
+   *
+   * Depends on: `blend`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-y)
+   **/
+  blendY?: Maybe<Scalars["IntType"]>
+  /**
+   * Blend
+   *
+   * Specifies the location of the blend image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend)
+   **/
+  blend?: Maybe<Scalars["String"]>
+  /**
+   * Gaussian Blur
+   *
+   * Applies a gaussian blur to an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/blur)
+   **/
+  blur?: Maybe<Scalars["IntType"]>
+  /**
+   * Inner Border Radius
+   *
+   * Sets the inner radius of the image's border in pixels.
+   *
+   * Depends on: `border`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius-inner)
+   **/
+  borderRadiusInner?: Maybe<Scalars["String"]>
+  /**
+   * Outer Border Radius
+   *
+   * Sets the outer radius of the image's border in pixels.
+   *
+   * Depends on: `border`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius)
+   **/
+  borderRadius?: Maybe<Scalars["String"]>
+  /**
+   * Border Size & Color
+   *
+   * Applies a border to an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border)
+   **/
+  border?: Maybe<Scalars["String"]>
+  /**
+   * Brightness
+   *
+   * Adjusts the brightness of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/bri)
+   **/
+  bri?: Maybe<Scalars["IntType"]>
+  /**
+   * Client Hints
+   *
+   * Sets one or more Client-Hints headers
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/ch)
+   **/
+  ch?: Maybe<Array<ImgixParamsCh>>
+  /**
+   * Chroma Subsampling
+   *
+   * Specifies the output chroma subsampling rate.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/chromasub)
+   **/
+  chromasub?: Maybe<Scalars["IntType"]>
+  /**
+   * Color Quantization
+   *
+   * Limits the number of unique colors in an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/colorquant)
+   **/
+  colorquant?: Maybe<Scalars["IntType"]>
+  /**
+   * Palette Color Count
+   *
+   * Specifies how many colors to include in a palette-extraction response.
+   *
+   * Depends on: `palette`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/colors)
+   **/
+  colors?: Maybe<Scalars["IntType"]>
+  /**
+   * Contrast
+   *
+   * Adjusts the contrast of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/con)
+   **/
+  con?: Maybe<Scalars["IntType"]>
+  /**
+   * Mask Corner Radius
+   *
+   * Specifies the radius value for a rounded corner mask.
+   *
+   * Depends on: `mask=corners`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask/corner-radius)
+   **/
+  cornerRadius?: Maybe<Scalars["String"]>
+  /**
+   * Crop Mode
+   *
+   * Specifies how to crop an image.
+   *
+   * Depends on: `fit=crop`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/crop)
+   **/
+  crop?: Maybe<Array<ImgixParamsCrop>>
+  /**
+   * Color Space
+   *
+   * Specifies the color space of the output image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/cs)
+   **/
+  cs?: Maybe<ImgixParamsCs>
+  /**
+   * Download
+   *
+   * Forces a URL to use send-file in its response.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/dl)
+   **/
+  dl?: Maybe<Scalars["String"]>
+  /**
+   * Dots Per Inch
+   *
+   * Sets the DPI value in the EXIF header.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/dpi)
+   **/
+  dpi?: Maybe<Scalars["IntType"]>
+  /**
+   * Device Pixel Ratio
+   *
+   * Adjusts the device-pixel ratio of the output image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/dpr)
+   **/
+  dpr?: Maybe<Scalars["FloatType"]>
+  /**
+   * Duotone Alpha
+   *
+   * Changes the alpha of the duotone effect atop the source image.
+   *
+   * Depends on: `duotone`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/duotone-alpha)
+   **/
+  duotoneAlpha?: Maybe<Scalars["IntType"]>
+  /**
+   * Duotone
+   *
+   * Applies a duotone effect to the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/duotone)
+   **/
+  duotone?: Maybe<Scalars["String"]>
+  /**
+   * Exposure
+   *
+   * Adjusts the exposure of the output image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/exp)
+   **/
+  exp?: Maybe<Scalars["IntType"]>
+  /**
+   * Url Expiration Timestamp
+   *
+   * A Unix timestamp specifying a UTC time. Requests made to this URL after that time will output a 404 status code.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/expires)
+   **/
+  expires?: Maybe<Scalars["IntType"]>
+  /**
+   * Face Index
+   *
+   * Selects a face to crop to.
+   *
+   * Depends on: `fit=facearea`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/faceindex)
+   **/
+  faceindex?: Maybe<Scalars["IntType"]>
+  /**
+   * Face Padding
+   *
+   * Adjusts padding around a selected face.
+   *
+   * Depends on: `fit=facearea`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/facepad)
+   **/
+  facepad?: Maybe<Scalars["FloatType"]>
+  /**
+   * Json Face Data
+   *
+   * Specifies that face data should be included in output when combined with `fm=json`.
+   *
+   * Depends on: `fm=json`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/faces)
+   **/
+  faces?: Maybe<Scalars["IntType"]>
+  /**
+   * Fill Color
+   *
+   * Sets the fill color for images with additional space created by the fit setting
+   *
+   * Depends on: `fill=solid`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-color)
+   **/
+  fillColor?: Maybe<Scalars["String"]>
+  /**
+   * Fill Mode
+   *
+   * Determines how to fill in additional space created by the fit setting
+   *
+   * Depends on: `fit`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill)
+   **/
+  fill?: Maybe<ImgixParamsFill>
+  /**
+   * Resize Fit Mode
+   *
+   * Specifies how to map the source image to the output image dimensions.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/fit)
+   **/
+  fit?: Maybe<ImgixParamsFit>
+  /**
+   * Flip Axis
+   *
+   * Flips an image on a specified axis.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/flip)
+   **/
+  flip?: Maybe<ImgixParamsFlip>
+  /**
+   * Output Format
+   *
+   * Changes the format of the output image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/fm)
+   **/
+  fm?: Maybe<ImgixParamsFm>
+  /**
+   * Focal Point Debug
+   *
+   * Displays crosshairs identifying the location of the set focal point
+   *
+   * Depends on: `fit=crop`, `crop=focalpoint`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-debug)
+   **/
+  fpDebug?: Maybe<Scalars["BooleanType"]>
+  /**
+   * Focal Point X Position
+   *
+   * Sets the relative horizontal value for the focal point of an image
+   *
+   * Depends on: `fit=crop`, `crop=focalpoint`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-x)
+   **/
+  fpX?: Maybe<Scalars["FloatType"]>
+  /**
+   * Focal Point Y Position
+   *
+   * Sets the relative vertical value for the focal point of an image
+   *
+   * Depends on: `fit=crop`, `crop=focalpoint`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-y)
+   **/
+  fpY?: Maybe<Scalars["FloatType"]>
+  /**
+   * Focal Point Zoom
+   *
+   * Sets the relative zoom value for the focal point of an image
+   *
+   * Depends on: `fit=crop`, `crop=focalpoint`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-z)
+   **/
+  fpZ?: Maybe<Scalars["IntType"]>
+  /**
+   * Gamma
+   *
+   * Adjusts the gamma of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/gam)
+   **/
+  gam?: Maybe<Scalars["IntType"]>
+  /**
+   * Image Height
+   *
+   * Adjusts the height of the output image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/h)
+   **/
+  h?: Maybe<Scalars["FloatType"]>
+  /**
+   * Highlight
+   *
+   * Adjusts the highlights of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/high)
+   **/
+  high?: Maybe<Scalars["IntType"]>
+  /**
+   * Halftone
+   *
+   * Applies a half-tone effect to the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/htn)
+   **/
+  htn?: Maybe<Scalars["IntType"]>
+  /**
+   * Hue Shift
+   *
+   * Adjusts the hue of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/hue)
+   **/
+  hue?: Maybe<Scalars["IntType"]>
+  /**
+   * Invert
+   *
+   * Inverts the colors on the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/invert)
+   **/
+  invert?: Maybe<Scalars["BooleanType"]>
+  /**
+   * Lossless Compression
+   *
+   * Specifies that the output image should be a lossless variant.
+   *
+   * Depends on: `fm=webp`, `fm=jxr`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/lossless)
+   **/
+  lossless?: Maybe<Scalars["BooleanType"]>
+  /**
+   * Watermark Alignment Mode
+   *
+   * Changes the watermark alignment relative to the parent image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-align)
+   **/
+  markAlign?: Maybe<Array<ImgixParamsMarkAlign>>
+  /**
+   * Watermark Alpha
+   *
+   * Changes the alpha of the watermark image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-alpha)
+   **/
+  markAlpha?: Maybe<Scalars["IntType"]>
+  /**
+   * Watermark Base Url
+   *
+   * Changes base URL of the watermark image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-base)
+   **/
+  markBase?: Maybe<Scalars["String"]>
+  /**
+   * Watermark Fit Mode
+   *
+   * Specifies the fit mode for watermark images.
+   *
+   * Depends on: `mark`, `markw`, `markh`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-fit)
+   **/
+  markFit?: Maybe<ImgixParamsMarkFit>
+  /**
+   * Watermark Height
+   *
+   * Adjusts the height of the watermark image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-h)
+   **/
+  markH?: Maybe<Scalars["FloatType"]>
+  /**
+   * Watermark Padding
+   *
+   * Applies padding to the watermark image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-pad)
+   **/
+  markPad?: Maybe<Scalars["IntType"]>
+  /**
+   * Watermark Scale
+   *
+   * Adjusts the scale of the watermark image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-scale)
+   **/
+  markScale?: Maybe<Scalars["IntType"]>
+  /**
+   * Watermark Width
+   *
+   * Adjusts the width of the watermark image.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-w)
+   **/
+  markW?: Maybe<Scalars["FloatType"]>
+  /**
+   * Watermark X Position
+   *
+   * Adjusts the x-offset of the watermark image relative to its parent.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-x)
+   **/
+  markX?: Maybe<Scalars["IntType"]>
+  /**
+   * Watermark Y Position
+   *
+   * Adjusts the y-offset of the watermark image relative to its parent.
+   *
+   * Depends on: `mark`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-y)
+   **/
+  markY?: Maybe<Scalars["IntType"]>
+  /**
+   * Watermark Image Url
+   *
+   * Specifies the location of the watermark image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark)
+   **/
+  mark?: Maybe<Scalars["String"]>
+  /**
+   * Mask Type
+   *
+   * Defines the type of mask and specifies the URL if that type is selected.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask)
+   **/
+  mask?: Maybe<Scalars["String"]>
+  /**
+   * Mask Background Color
+   *
+   * Colors the background of the transparent mask area of images
+   *
+   * Depends on: `mask`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask/mask-bg)
+   **/
+  maskbg?: Maybe<Scalars["String"]>
+  /**
+   * Maximum Height
+   *
+   * Specifies the maximum height of the output image in pixels.
+   *
+   * Depends on: `fit=crop`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/max-height)
+   **/
+  maxH?: Maybe<Scalars["IntType"]>
+  /**
+   * Maximum Width
+   *
+   * Specifies the maximum width of the output image in pixels.
+   *
+   * Depends on: `fit=crop`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/max-width)
+   **/
+  maxW?: Maybe<Scalars["IntType"]>
+  /**
+   * Minimum Height
+   *
+   * Specifies the minimum height of the output image in pixels.
+   *
+   * Depends on: `fit=crop`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/min-height)
+   **/
+  minH?: Maybe<Scalars["IntType"]>
+  /**
+   * Minimum Width
+   *
+   * Specifies the minimum width of the output image in pixels.
+   *
+   * Depends on: `fit=crop`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/min-width)
+   **/
+  minW?: Maybe<Scalars["IntType"]>
+  /**
+   * Monochrome
+   *
+   * Applies a monochrome effect to the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/monochrome)
+   **/
+  monochrome?: Maybe<Scalars["String"]>
+  /**
+   * Noise Reduction Bound
+   *
+   * Reduces the noise in an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/noise-reduction/nr)
+   **/
+  nr?: Maybe<Scalars["IntType"]>
+  /**
+   * Noise Reduction Sharpen
+   *
+   * Provides a threshold by which to sharpen an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/noise-reduction/nrs)
+   **/
+  nrs?: Maybe<Scalars["IntType"]>
+  /**
+   * Orientation
+   *
+   * Changes the image orientation.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/orient)
+   **/
+  orient?: Maybe<Scalars["IntType"]>
+  /**
+   * Padding
+   *
+   * Pads an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad)
+   **/
+  pad?: Maybe<Scalars["IntType"]>
+  /**
+   * Pdf Page Number
+   *
+   * Selects a page from a PDF for display.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/pdf-page-number)
+   **/
+  page?: Maybe<Scalars["IntType"]>
+  /**
+   * Color Palette Extraction
+   *
+   * Specifies an output format for palette-extraction.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/palette)
+   **/
+  palette?: Maybe<ImgixParamsPalette>
+  /**
+   * Css Prefix
+   *
+   * Specifies a CSS prefix for all classes in palette-extraction.
+   *
+   * Depends on: `palette=css`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/prefix)
+   **/
+  prefix?: Maybe<Scalars["String"]>
+  /**
+   * Pixellate
+   *
+   * Applies a pixelation effect to an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/px)
+   **/
+  px?: Maybe<Scalars["IntType"]>
+  /**
+   * Output Quality
+   *
+   * Adjusts the quality of an output image.
+   *
+   * Depends on: `fm=jpg`, `fm=pjpg`, `fm=webp`, `fm=jxr`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/q)
+   **/
+  q?: Maybe<Scalars["IntType"]>
+  /**
+   * Source Rectangle Region
+   *
+   * Crops an image to a specified rectangle.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/rect)
+   **/
+  rect?: Maybe<Scalars["String"]>
+  /**
+   * Rotation
+   *
+   * Rotates an image by a specified number of degrees.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/rot)
+   **/
+  rot?: Maybe<Scalars["FloatType"]>
+  /**
+   * Saturation
+   *
+   * Adjusts the saturation of an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sat)
+   **/
+  sat?: Maybe<Scalars["IntType"]>
+  /**
+   * Sepia Tone
+   *
+   * Applies a sepia effect to an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/sepia)
+   **/
+  sepia?: Maybe<Scalars["IntType"]>
+  /**
+   * Shadow
+   *
+   * Adjusts the highlights of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/shad)
+   **/
+  shad?: Maybe<Scalars["FloatType"]>
+  /**
+   * Sharpen
+   *
+   * Adjusts the sharpness of the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sharp)
+   **/
+  sharp?: Maybe<Scalars["FloatType"]>
+  /**
+   * Trim Color
+   *
+   * Specifies a trim color on a trim operation.
+   *
+   * Depends on: `trim=color`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-color)
+   **/
+  trimColor?: Maybe<Scalars["String"]>
+  /**
+   * Trim Mean Difference
+   *
+   * Specifies the mean difference on a trim operation.
+   *
+   * Depends on: `trim=auto`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-md)
+   **/
+  trimMd?: Maybe<Scalars["FloatType"]>
+  /**
+   * Trim Padding
+   *
+   * Pads the area of the source image before trimming.
+   *
+   * Depends on: `trim`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-pad)
+   **/
+  trimPad?: Maybe<Scalars["IntType"]>
+  /**
+   * Trim Standard Deviation
+   *
+   * Specifies the standard deviation on a trim operation.
+   *
+   * Depends on: `trim=auto`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-sd)
+   **/
+  trimSd?: Maybe<Scalars["FloatType"]>
+  /**
+   * Trim Tolerance
+   *
+   * Specifies the tolerance on a trim operation.
+   *
+   * Depends on: `trim=color`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-tol)
+   **/
+  trimTol?: Maybe<Scalars["FloatType"]>
+  /**
+   * Trim Image
+   *
+   * Trims the source image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim)
+   **/
+  trim?: Maybe<ImgixParamsTrim>
+  /**
+   * Text Align
+   *
+   * Sets the vertical and horizontal alignment of rendered text relative to the base image.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-align)
+   **/
+  txtAlign?: Maybe<Array<ImgixParamsTxtAlign>>
+  /**
+   * Text Clipping Mode
+   *
+   * Sets the clipping properties of rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-clip)
+   **/
+  txtClip?: Maybe<Array<ImgixParamsTxtClip>>
+  /**
+   * Text Color
+   *
+   * Specifies the color of rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-color)
+   **/
+  txtColor?: Maybe<Scalars["String"]>
+  /**
+   * Text Fit Mode
+   *
+   * Specifies the fit approach for rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-fit)
+   **/
+  txtFit?: Maybe<ImgixParamsTxtFit>
+  /**
+   * Text Font
+   *
+   * Selects a font for rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-font)
+   **/
+  txtFont?: Maybe<Scalars["String"]>
+  /**
+   * Text Leading
+   *
+   * Sets the leading (line spacing) for rendered text. Only works on the multi-line text endpoint.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/typesetting/txt-lead)
+   **/
+  txtLead?: Maybe<Scalars["IntType"]>
+  /**
+   * Text Ligatures
+   *
+   * Controls the level of ligature substitution
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-lig)
+   **/
+  txtLig?: Maybe<Scalars["IntType"]>
+  /**
+   * Text Outline Color
+   *
+   * Specifies a text outline color.
+   *
+   * Depends on: `txt`, `txtline`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-line-color)
+   **/
+  txtLineColor?: Maybe<Scalars["String"]>
+  /**
+   * Text Outline
+   *
+   * Outlines the rendered text with a specified color.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-line)
+   **/
+  txtLine?: Maybe<Scalars["IntType"]>
+  /**
+   * Text Padding
+   *
+   * Specifies the padding (in device-independent pixels) between a textbox and the edges of the base image.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-pad)
+   **/
+  txtPad?: Maybe<Scalars["IntType"]>
+  /**
+   * Text Shadow
+   *
+   * Applies a shadow to rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-shad)
+   **/
+  txtShad?: Maybe<Scalars["FloatType"]>
+  /**
+   * Text Font Size
+   *
+   * Sets the font size of rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-size)
+   **/
+  txtSize?: Maybe<Scalars["IntType"]>
+  /**
+   * Text Tracking
+   *
+   * Sets the tracking (letter spacing) for rendered text. Only works on the multi-line text endpoint.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/typesetting/txt-track)
+   **/
+  txtTrack?: Maybe<Scalars["IntType"]>
+  /**
+   * Text Width
+   *
+   * Sets the width of rendered text.
+   *
+   * Depends on: `txt`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-width)
+   **/
+  txtWidth?: Maybe<Scalars["IntType"]>
+  /**
+   * Text String
+   *
+   * Sets the text string to render.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt)
+   **/
+  txt?: Maybe<Scalars["String"]>
+  /**
+   * Unsharp Mask
+   *
+   * Sharpens the source image using an unsharp mask.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/usm)
+   **/
+  usm?: Maybe<Scalars["IntType"]>
+  /**
+   * Unsharp Mask Radius
+   *
+   * Specifies the radius for an unsharp mask operation.
+   *
+   * Depends on: `usm`
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/usmrad)
+   **/
+  usmrad?: Maybe<Scalars["FloatType"]>
+  /**
+   * Vibrance
+   *
+   * Adjusts the vibrance of an image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/vib)
+   **/
+  vib?: Maybe<Scalars["IntType"]>
+  /**
+   * Image Width
+   *
+   * Adjusts the width of the output image.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/w)
+   **/
+  w?: Maybe<Scalars["FloatType"]>
+}
+
+export enum ImgixParamsAuto {
+  Enhance = "enhance",
+  Format = "format",
+  Redeye = "redeye",
+  Compress = "compress"
+}
+
+export enum ImgixParamsBlendAlign {
+  Top = "top",
+  Bottom = "bottom",
+  Middle = "middle",
+  Left = "left",
+  Right = "right",
+  Center = "center"
+}
+
+export enum ImgixParamsBlendCrop {
+  Top = "top",
+  Bottom = "bottom",
+  Left = "left",
+  Right = "right",
+  Faces = "faces"
+}
+
+export enum ImgixParamsBlendFit {
+  Clamp = "clamp",
+  Clip = "clip",
+  Crop = "crop",
+  Scale = "scale",
+  Max = "max"
+}
+
+export enum ImgixParamsBlendMode {
+  Color = "color",
+  Burn = "burn",
+  Dodge = "dodge",
+  Darken = "darken",
+  Difference = "difference",
+  Exclusion = "exclusion",
+  Hardlight = "hardlight",
+  Hue = "hue",
+  Lighten = "lighten",
+  Luminosity = "luminosity",
+  Multiply = "multiply",
+  Overlay = "overlay",
+  Saturation = "saturation",
+  Screen = "screen",
+  Softlight = "softlight",
+  Normal = "normal"
+}
+
+export enum ImgixParamsBlendSize {
+  Inherit = "inherit"
+}
+
+export enum ImgixParamsCh {
+  Width = "width",
+  Dpr = "dpr",
+  SaveData = "saveData"
+}
+
+export enum ImgixParamsCrop {
+  Top = "top",
+  Bottom = "bottom",
+  Left = "left",
+  Right = "right",
+  Faces = "faces",
+  Entropy = "entropy",
+  Edges = "edges",
+  Focalpoint = "focalpoint"
+}
+
+export enum ImgixParamsCs {
+  Srgb = "srgb",
+  Adobergb1998 = "adobergb1998",
+  Tinysrgb = "tinysrgb",
+  Strip = "strip"
+}
+
+export enum ImgixParamsFill {
+  Solid = "solid",
+  Blur = "blur"
+}
+
+export enum ImgixParamsFit {
+  Clamp = "clamp",
+  Clip = "clip",
+  Crop = "crop",
+  Facearea = "facearea",
+  Fill = "fill",
+  Fillmax = "fillmax",
+  Max = "max",
+  Min = "min",
+  Scale = "scale"
+}
+
+export enum ImgixParamsFlip {
+  H = "h",
+  V = "v",
+  Hv = "hv"
+}
+
+export enum ImgixParamsFm {
+  Gif = "gif",
+  Jpg = "jpg",
+  Jp2 = "jp2",
+  Json = "json",
+  Jxr = "jxr",
+  Pjpg = "pjpg",
+  Mp4 = "mp4",
+  Png = "png",
+  Png8 = "png8",
+  Png32 = "png32",
+  Webp = "webp",
+  Webm = "webm"
+}
+
+export enum ImgixParamsMarkAlign {
+  Top = "top",
+  Middle = "middle",
+  Bottom = "bottom",
+  Left = "left",
+  Center = "center",
+  Right = "right"
+}
+
+export enum ImgixParamsMarkFit {
+  Clip = "clip",
+  Crop = "crop",
+  Fill = "fill",
+  Max = "max",
+  Scale = "scale"
+}
+
+export enum ImgixParamsPalette {
+  Css = "css",
+  Json = "json"
+}
+
+export enum ImgixParamsTrim {
+  Auto = "auto",
+  Color = "color"
+}
+
+export enum ImgixParamsTxtAlign {
+  Top = "top",
+  Middle = "middle",
+  Bottom = "bottom",
+  Left = "left",
+  Center = "center",
+  Right = "right"
+}
+
+export enum ImgixParamsTxtClip {
+  Start = "start",
+  Middle = "middle",
+  End = "end",
+  Ellipsis = "ellipsis"
+}
+
+export enum ImgixParamsTxtFit {
+  Max = "max"
+}
+
 /** Specifies how to filter Integer fields */
 export type IntegerFilter = {
   /** Filter records with a value that's strictly greater than the one specified */
@@ -6642,7 +7861,7 @@ export type IntegerFilter = {
 export type IntegrationDetailPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -6701,7 +7920,7 @@ export type IntegrationDetailPageRecord = {
   integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
   introText?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  resourcesOverride?: Maybe<Array<Maybe<ResourceRecord>>>
+  resourcesOverride?: Maybe<Array<ResourceRecord>>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -6767,9 +7986,7 @@ export type IntegrationPageFooterRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  defaultResources?: Maybe<
-    Array<Maybe<IntegrationPageFooterModelDefaultResourcesField>>
-  >
+  defaultResources: Array<IntegrationPageFooterModelDefaultResourcesField>
   footer?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   indexLink?: Maybe<LinkRecord>
@@ -6798,7 +8015,7 @@ export type IntegrationsPageRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  technologyPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  technologyPartners?: Maybe<Array<CompanyRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -6816,7 +8033,7 @@ export type IntegrationsPageRecordDescriptionArgs = {
 export type IntegrationTypeCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -6888,7 +8105,7 @@ export type IntegrationTypeCategoryRecord_SeoMetaTagsArgs = {
 export type IntegrationTypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -6957,6 +8174,24 @@ export type IntegrationTypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Specifies how to filter by usage */
+export type InUseFilter = {
+  /** Search uploads that are currently used by some record or not */
+  eq?: Maybe<Scalars["BooleanType"]>
+}
+
+/** Specifies how to filter by ID */
+export type ItemIdFilter = {
+  /** Search the record with the specified ID */
+  eq?: Maybe<Scalars["ItemId"]>
+  /** Exclude the record with the specified ID */
+  neq?: Maybe<Scalars["ItemId"]>
+  /** Search records with the specified IDs */
+  in?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
+  /** Search records that do not have the specified IDs */
+  notIn?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
+}
+
 /** Record of type Item (item) */
 export type ItemRecord = {
   __typename?: "ItemRecord"
@@ -7014,7 +8249,7 @@ export type JobsPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<JobsPageModelContentField>>>
+  content: Array<JobsPageModelContentField>
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
@@ -7036,7 +8271,7 @@ export type JsonFilter = {
 export type LargeLogoGridSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7088,7 +8323,7 @@ export type LargeLogoGridSectionRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<Maybe<CompanyRecord>>>
+  companies?: Maybe<Array<CompanyRecord>>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
@@ -7124,7 +8359,7 @@ export type LearnLandingPageRecord = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  items?: Maybe<Array<Maybe<VerticalTextBlockListItemRecord>>>
+  items?: Maybe<Array<VerticalTextBlockListItemRecord>>
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
 }
@@ -7156,7 +8391,7 @@ export type LinkFilter = {
 export type LinkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -7237,6 +8472,8 @@ export type LinksFilter = {
   allIn?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
   /** Filter records linked to at least one of the specified records. The specified values must be Record IDs */
   anyIn?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
+  /** Filter records not linked to any of the specified records. The specified values must be Record IDs */
+  notIn?: Maybe<Array<Maybe<Scalars["ItemId"]>>>
   /** Filter records with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
 }
@@ -7244,7 +8481,7 @@ export type LinksFilter = {
 export type ListItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7308,7 +8545,7 @@ export type ListItemRecord_SeoMetaTagsArgs = {
 export type LocalPageMetadataSetModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7374,7 +8611,7 @@ export type LocalPageMetadataSetRecord_SeoMetaTagsArgs = {
 export type LocationRoomModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7438,7 +8675,7 @@ export type LocationRoomRecord_SeoMetaTagsArgs = {
 export type LocationVenueModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7512,7 +8749,7 @@ export type LogoGridRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<Maybe<CompanyRecord>>>
+  companies?: Maybe<Array<CompanyRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   size?: Maybe<Scalars["String"]>
@@ -7527,7 +8764,7 @@ export type LogoGridRecord_SeoMetaTagsArgs = {
 export type MajorHeadlineSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7608,17 +8845,17 @@ export type MegaNavRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   callout?: Maybe<NavCalloutRecord>
-  companyLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  companyLinks?: Maybe<Array<LinkRecord>>
   createdAt: Scalars["DateTime"]
-  docsLinks?: Maybe<Array<Maybe<LinkRecord>>>
-  footerLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  docsLinks?: Maybe<Array<LinkRecord>>
+  footerLinks?: Maybe<Array<LinkRecord>>
   id: Scalars["ItemId"]
-  partnersLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  partnersLinks?: Maybe<Array<LinkRecord>>
   primaryLogo?: Maybe<FileField>
   primaryLogoWhite?: Maybe<FileField>
-  productsLinks?: Maybe<Array<Maybe<EnterpriseProductRecord>>>
-  resourcesLinks?: Maybe<Array<Maybe<LinkRecord>>>
-  socialLinks?: Maybe<Array<Maybe<SocialNetworkRecord>>>
+  productsLinks?: Maybe<Array<EnterpriseProductRecord>>
+  resourcesLinks?: Maybe<Array<LinkRecord>>
+  socialLinks?: Maybe<Array<SocialNetworkRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -7630,7 +8867,7 @@ export type MegaNavRecord_SeoMetaTagsArgs = {
 export type MiniCalloutModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7680,7 +8917,7 @@ export type MiniCalloutRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  item?: Maybe<Array<Maybe<CalloutItemRecord>>>
+  item?: Maybe<Array<CalloutItemRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -7702,7 +8939,7 @@ export type MultiButtonRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<Maybe<Button2Record>>>
+  buttons?: Maybe<Array<Button2Record>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -7713,10 +8950,16 @@ export type MultiButtonRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export enum MuxThumbnailFormatType {
+  Jpg = "jpg",
+  Png = "png",
+  Gif = "gif"
+}
+
 export type NavCalloutModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7789,7 +9032,7 @@ export type NavCalloutRecordBodyArgs = {
 export type NavPromoModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -7894,13 +9137,13 @@ export type NavRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companyPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
+  companyPromos?: Maybe<Array<NavPromoRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  learnPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
-  partnersPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
-  productsPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
-  supportPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
+  learnPromos?: Maybe<Array<NavPromoRecord>>
+  partnersPromos?: Maybe<Array<NavPromoRecord>>
+  productsPromos?: Maybe<Array<NavPromoRecord>>
+  supportPromos?: Maybe<Array<NavPromoRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -7912,7 +9155,7 @@ export type NavRecord_SeoMetaTagsArgs = {
 export type NewsItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8004,7 +9247,7 @@ export type NomadProductPageRecord = {
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection?: Maybe<SectionBlockV2Record>
-  companiesUsingNomad?: Maybe<Array<Maybe<CompanyRecord>>>
+  companiesUsingNomad?: Maybe<Array<CompanyRecord>>
   createdAt: Scalars["DateTime"]
   ctaSection?: Maybe<SectionBlockV2Record>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -8022,7 +9265,7 @@ export type NomadProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<Maybe<SectionBlockPageRecord>>>
+  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
   useCases?: Maybe<SbcUseCasesSectionRecord>
 }
 
@@ -8034,7 +9277,7 @@ export type NomadProductPageRecord_SeoMetaTagsArgs = {
 export type OfficeHoursSessionCopy1ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8117,7 +9360,7 @@ export type OfficeHoursSessionCopy1RecordDescriptionArgs = {
 export type OfficeHoursSessionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8205,7 +9448,7 @@ export type OnDemandResourceModelBodyContentField =
 export type OnDemandResourceModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8306,24 +9549,22 @@ export type OnDemandResourceRecord = {
   _updatedAt: Scalars["DateTime"]
   awsCampaign?: Maybe<Scalars["BooleanType"]>
   backgroundImage?: Maybe<FileField>
-  bodyContent?: Maybe<Array<Maybe<OnDemandResourceModelBodyContentField>>>
+  bodyContent: Array<OnDemandResourceModelBodyContentField>
   buttonCtaText?: Maybe<Scalars["String"]>
   contentLength?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<Maybe<EventRecord>>>
+  events?: Maybe<Array<EventRecord>>
   formTitle?: Maybe<Scalars["String"]>
-  heroContent?: Maybe<Array<Maybe<OnDemandResourceModelHeroContentField>>>
+  heroContent: Array<OnDemandResourceModelHeroContentField>
   id: Scalars["ItemId"]
-  industry?: Maybe<Array<Maybe<ResourceIndustryRecord>>>
-  infrastructureProvider?: Maybe<
-    Array<Maybe<ResourceInfrastructureProviderRecord>>
-  >
-  organizations?: Maybe<Array<Maybe<CompanyRecord>>>
-  people?: Maybe<Array<Maybe<PersonRecord>>>
+  industry?: Maybe<Array<ResourceIndustryRecord>>
+  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
+  organizations?: Maybe<Array<CompanyRecord>>
+  people?: Maybe<Array<PersonRecord>>
   primaryProduct?: Maybe<OpenSourceToolRecord>
-  product?: Maybe<Array<Maybe<OnDemandResourceModelProductField>>>
+  product: Array<OnDemandResourceModelProductField>
   sfdcDescription?: Maybe<Scalars["String"]>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   slug?: Maybe<Scalars["String"]>
@@ -8345,7 +9586,7 @@ export type OnDemandResourceRecordDescriptionArgs = {
 export type OpenSourceToolCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8409,7 +9650,7 @@ export type OpenSourceToolCategoryRecord_SeoMetaTagsArgs = {
 export type OpenSourceToolModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -8497,10 +9738,18 @@ export type OpenSourceToolRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Specifies how to filter by image orientation */
+export type OrientationFilter = {
+  /** Search uploads with the specified orientation */
+  eq?: Maybe<UploadOrientation>
+  /** Exclude uploads with the specified orientation */
+  neq?: Maybe<UploadOrientation>
+}
+
 export type PackageFeatureModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8572,7 +9821,7 @@ export type PackageFeatureRecord_SeoMetaTagsArgs = {
 export type PackageOptionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8639,7 +9888,7 @@ export type PackageOptionRecord = {
   enterprise?: Maybe<Scalars["BooleanType"]>
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  packageFeatures?: Maybe<Array<Maybe<PackageFeatureRecord>>>
+  packageFeatures?: Maybe<Array<PackageFeatureRecord>>
   product?: Maybe<EnterpriseProductRecord>
   slug?: Maybe<Scalars["String"]>
   subheading?: Maybe<Scalars["String"]>
@@ -8666,7 +9915,7 @@ export type PackageSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  packageOptions?: Maybe<Array<Maybe<PackageOptionRecord>>>
+  packageOptions?: Maybe<Array<PackageOptionRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -8692,35 +9941,35 @@ export type PartnersPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  cloudPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  cloudPartners?: Maybe<Array<CompanyRecord>>
   cloudPartnersDescription?: Maybe<Scalars["String"]>
-  content?: Maybe<Array<Maybe<PartnersPageModelContentField>>>
+  content: Array<PartnersPageModelContentField>
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  resellerPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellerPartners?: Maybe<Array<CompanyRecord>>
   resellerPartnersDescription?: Maybe<Scalars["String"]>
-  resellerPartnersOpen?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellerPartnersOpen?: Maybe<Array<CompanyRecord>>
   resellerPartnersOpenSize?: Maybe<Scalars["String"]>
   resellerPartnersOpenTitle?: Maybe<Scalars["String"]>
-  resellerPartnersPremier?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellerPartnersPremier?: Maybe<Array<CompanyRecord>>
   resellerPartnersPremierSize?: Maybe<Scalars["String"]>
   resellerPartnersPremierTitle?: Maybe<Scalars["String"]>
-  systemIntegratorPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  systemIntegratorPartners?: Maybe<Array<CompanyRecord>>
   systemIntegratorPartnersDescription?: Maybe<Scalars["String"]>
-  systemIntegratorPartnersMember?: Maybe<Array<Maybe<CompanyRecord>>>
+  systemIntegratorPartnersMember?: Maybe<Array<CompanyRecord>>
   systemIntegratorPartnersMemberSize?: Maybe<Scalars["String"]>
   systemIntegratorPartnersMemberTitle?: Maybe<Scalars["String"]>
-  systemIntegratorPartnersOpen?: Maybe<Array<Maybe<CompanyRecord>>>
+  systemIntegratorPartnersOpen?: Maybe<Array<CompanyRecord>>
   systemIntegratorPartnersOpenSize?: Maybe<Scalars["String"]>
   systemIntegratorPartnersOpenTitle?: Maybe<Scalars["String"]>
-  systemIntegratorPartnersPremier?: Maybe<Array<Maybe<CompanyRecord>>>
+  systemIntegratorPartnersPremier?: Maybe<Array<CompanyRecord>>
   systemIntegratorPartnersPremierSize?: Maybe<Scalars["String"]>
   systemIntegratorPartnersPremierTitle?: Maybe<Scalars["String"]>
-  technologyPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  technologyPartners?: Maybe<Array<CompanyRecord>>
   technologyPartnersDescription?: Maybe<Scalars["String"]>
-  trainingPartners?: Maybe<Array<Maybe<CompanyRecord>>>
+  trainingPartners?: Maybe<Array<CompanyRecord>>
   trainingPartnersDescription?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -8758,7 +10007,7 @@ export type PartnersPageRecordTrainingPartnersDescriptionArgs = {
 export type PersonListModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -8812,7 +10061,7 @@ export type PersonListRecord = {
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  people?: Maybe<Array<Maybe<PersonRecord>>>
+  people?: Maybe<Array<PersonRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -8824,7 +10073,7 @@ export type PersonListRecord_SeoMetaTagsArgs = {
 export type PersonModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -8892,7 +10141,7 @@ export type PersonRecord = {
   name?: Maybe<Scalars["String"]>
   photo?: Maybe<FileField>
   position?: Maybe<Scalars["IntType"]>
-  socialProfiles?: Maybe<Array<Maybe<SocialNetworkRecord>>>
+  socialProfiles?: Maybe<Array<SocialNetworkRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -8925,7 +10174,7 @@ export type PositionFilter = {
 export type PressLinkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9016,12 +10265,12 @@ export type PressPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  events?: Maybe<Array<Maybe<PressLinkRecord>>>
+  events?: Maybe<Array<PressLinkRecord>>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  mediaAnalystCoverage?: Maybe<Array<Maybe<PressLinkRecord>>>
+  mediaAnalystCoverage?: Maybe<Array<PressLinkRecord>>
   metadata?: Maybe<SeoField>
-  pressReleases?: Maybe<Array<Maybe<PressLinkRecord>>>
+  pressReleases?: Maybe<Array<PressLinkRecord>>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -9034,7 +10283,7 @@ export type PressPageRecord_SeoMetaTagsArgs = {
 export type PricingPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9088,7 +10337,7 @@ export type PricingPageRecord = {
   id: Scalars["ItemId"]
   packages?: Maybe<ProductPackageSectionRecord>
   product?: Maybe<HashicorpProductRecord>
-  productOfferings?: Maybe<Array<Maybe<ProductOfferingRecord>>>
+  productOfferings?: Maybe<Array<ProductOfferingRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -9115,7 +10364,7 @@ export type PrinciplesPageRecord = {
   footerHero?: Maybe<HeroSectionRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
-  mainImageGrid?: Maybe<Array<Maybe<FileField>>>
+  mainImageGrid: Array<FileField>
   metadata?: Maybe<SeoField>
   name?: Maybe<Scalars["String"]>
   pageContent?: Maybe<Array<Maybe<ExpandableTextWithPhotoRecord>>>
@@ -9156,7 +10405,7 @@ export type ProductIntegrationRecord_SeoMetaTagsArgs = {
 export type ProductOfferingModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9240,7 +10489,7 @@ export type ProductOfferingRecord_SeoMetaTagsArgs = {
 export type ProductPackageSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9294,7 +10543,7 @@ export type ProductPackageSectionRecord = {
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  packageOptions?: Maybe<Array<Maybe<PackageOptionRecord>>>
+  packageOptions?: Maybe<Array<PackageOptionRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -9306,7 +10555,7 @@ export type ProductPackageSectionRecord_SeoMetaTagsArgs = {
 export type ProductPricingPlanModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9401,7 +10650,7 @@ export type ProductPricingPlanRecordDescriptionArgs = {
 export type ProductSubnavModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9465,11 +10714,11 @@ export type ProductSubnavRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
-  practitionerFocusedLinks?: Maybe<
-    Array<Maybe<ProductSubnavModelPractitionerFocusedLinksField>>
+  practitionerFocusedLinks: Array<
+    ProductSubnavModelPractitionerFocusedLinksField
   >
   product?: Maybe<EnterpriseProductRecord>
-  tdmFocusedLinks?: Maybe<Array<Maybe<ProductSubnavModelTdmFocusedLinksField>>>
+  tdmFocusedLinks: Array<ProductSubnavModelTdmFocusedLinksField>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -9481,7 +10730,7 @@ export type ProductSubnavRecord_SeoMetaTagsArgs = {
 export type ProductTabFeatureModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9548,7 +10797,7 @@ export type ProductTabFeatureRecordTextArgs = {
 export type ProductTypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -9613,333 +10862,335 @@ export type ProductTypeRecord_SeoMetaTagsArgs = {
 export type Query = {
   __typename?: "Query"
   /** Returns meta information regarding a record collection */
-  _allAlertBannersMeta?: Maybe<CollectionMetadata>
+  _allAlertBannersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allAlertsMeta?: Maybe<CollectionMetadata>
+  _allAlertsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allBasicTablesMeta?: Maybe<CollectionMetadata>
+  _allBasicTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allBlogPostCategoriesMeta?: Maybe<CollectionMetadata>
+  _allBlogPostCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allBlogPostsMeta?: Maybe<CollectionMetadata>
+  _allBlogPostsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allButton2sMeta?: Maybe<CollectionMetadata>
+  _allButton2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allButtonThemesMeta?: Maybe<CollectionMetadata>
+  _allButtonThemesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allCalloutItemsMeta?: Maybe<CollectionMetadata>
+  _allCalloutItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allCalloutSectionsMeta?: Maybe<CollectionMetadata>
+  _allCalloutSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allCodeSamplesMeta?: Maybe<CollectionMetadata>
+  _allCodeSamplesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allCodeblockLanguagesMeta?: Maybe<CollectionMetadata>
+  _allCodeblockLanguagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allCompaniesMeta?: Maybe<CollectionMetadata>
+  _allCompaniesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allConsulGraphicSectionsMeta?: Maybe<CollectionMetadata>
+  _allConsulGraphicSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allContactCategoriesMeta?: Maybe<CollectionMetadata>
+  _allContactCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allContactFormPagesMeta?: Maybe<CollectionMetadata>
+  _allContactFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allDropdownLinksMeta?: Maybe<CollectionMetadata>
+  _allDropdownLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEmbeddedPodcastSectionsMeta?: Maybe<CollectionMetadata>
+  _allEmbeddedPodcastSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEmbeddedSlidesSectionsMeta?: Maybe<CollectionMetadata>
+  _allEmbeddedSlidesSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEmployeePagesMeta?: Maybe<CollectionMetadata>
+  _allEmployeePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEnterpriseFeaturesCategoriesMeta?: Maybe<CollectionMetadata>
+  _allEnterpriseFeaturesCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEnterprisePricingSectionsMeta?: Maybe<CollectionMetadata>
+  _allEnterprisePricingSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEnterpriseProductPagesMeta?: Maybe<CollectionMetadata>
+  _allEnterpriseProductPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEnterpriseProductSubnavsMeta?: Maybe<CollectionMetadata>
+  _allEnterpriseProductSubnavsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEnterpriseProductUseCasePagesMeta?: Maybe<CollectionMetadata>
+  _allEnterpriseProductUseCasePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEnterpriseProductsMeta?: Maybe<CollectionMetadata>
+  _allEnterpriseProductsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEventTypesMeta?: Maybe<CollectionMetadata>
+  _allEventTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allEventsMeta?: Maybe<CollectionMetadata>
+  _allEventsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allExperienceLevelsMeta?: Maybe<CollectionMetadata>
+  _allExperienceLevelsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allExternalResourcesMeta?: Maybe<CollectionMetadata>
+  _allExternalResourcesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFaqCategoriesMeta?: Maybe<CollectionMetadata>
+  _allFaqCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFeatureTableColumnsMeta?: Maybe<CollectionMetadata>
+  _allFeatureTableColumnsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFeatureTableRowValuesMeta?: Maybe<CollectionMetadata>
+  _allFeatureTableRowValuesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFeatureTableRowsMeta?: Maybe<CollectionMetadata>
+  _allFeatureTableRowsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFeatureTableTabsMeta?: Maybe<CollectionMetadata>
+  _allFeatureTableTabsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFeatureTablesMeta?: Maybe<CollectionMetadata>
+  _allFeatureTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFormContactTypesMeta?: Maybe<CollectionMetadata>
+  _allFormContactTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allFormMultiSelectOptionsMeta?: Maybe<CollectionMetadata>
+  _allFormMultiSelectOptionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfBasicPagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfBasicPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfFeaturedSpeakersSectionsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfFeaturedSpeakersSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfLandingPagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfLandingPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfLiveStreamPagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfLiveStreamPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfScheduleDaysMeta?: Maybe<CollectionMetadata>
+  _allHashiconfScheduleDaysMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfScheduleItemsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfScheduleItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfScheduleLiteSectionsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfScheduleLiteSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSchedulePagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSchedulePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSectionBlockPagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSectionBlockPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSectionBlocksMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSectionBlocksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSessionsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSessionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSpeakersMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSpeakersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSpeakersPagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSpeakersPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfSponsorSectionsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfSponsorSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfTextAndFullImagesMeta?: Maybe<CollectionMetadata>
+  _allHashiconfTextAndFullImagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfTrainingDaysMeta?: Maybe<CollectionMetadata>
+  _allHashiconfTrainingDaysMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfTrainingsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfTrainingsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashiconfsMeta?: Maybe<CollectionMetadata>
+  _allHashiconfsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHashicorpProductsMeta?: Maybe<CollectionMetadata>
+  _allHashicorpProductsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHeroFormLeadsMeta?: Maybe<CollectionMetadata>
+  _allHeroFormLeadsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHeroSectionsMeta?: Maybe<CollectionMetadata>
+  _allHeroSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHeroVideoCarouselItemsMeta?: Maybe<CollectionMetadata>
+  _allHeroVideoCarouselItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHomepageProductTabsMeta?: Maybe<CollectionMetadata>
+  _allHomepageProductTabsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allHtmlSectionsMeta?: Maybe<CollectionMetadata>
+  _allHtmlSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allIconLinksMeta?: Maybe<CollectionMetadata>
+  _allIconLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allImageLockupsMeta?: Maybe<CollectionMetadata>
+  _allImageLockupsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allImageSectionsMeta?: Maybe<CollectionMetadata>
+  _allImageSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allImageTextCarouselsMeta?: Maybe<CollectionMetadata>
+  _allImageTextCarouselsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allIntegrationDetailPagesMeta?: Maybe<CollectionMetadata>
+  _allIntegrationDetailPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allIntegrationTypeCategoriesMeta?: Maybe<CollectionMetadata>
+  _allIntegrationTypeCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allIntegrationTypesMeta?: Maybe<CollectionMetadata>
+  _allIntegrationTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allLargeLogoGridSectionsMeta?: Maybe<CollectionMetadata>
+  _allLargeLogoGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allLinksMeta?: Maybe<CollectionMetadata>
+  _allLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allListItemsMeta?: Maybe<CollectionMetadata>
+  _allListItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allLocalPageMetadataSetsMeta?: Maybe<CollectionMetadata>
+  _allLocalPageMetadataSetsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allLocationRoomsMeta?: Maybe<CollectionMetadata>
+  _allLocationRoomsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allLocationVenuesMeta?: Maybe<CollectionMetadata>
+  _allLocationVenuesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allMajorHeadlineSectionsMeta?: Maybe<CollectionMetadata>
+  _allMajorHeadlineSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allMiniCalloutsMeta?: Maybe<CollectionMetadata>
+  _allMiniCalloutsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allNavCalloutsMeta?: Maybe<CollectionMetadata>
+  _allNavCalloutsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allNavPromosMeta?: Maybe<CollectionMetadata>
+  _allNavPromosMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allNewsItemsMeta?: Maybe<CollectionMetadata>
+  _allNewsItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allOfficeHoursSessionCopy1sMeta?: Maybe<CollectionMetadata>
+  _allOfficeHoursSessionCopy1sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allOfficeHoursSessionsMeta?: Maybe<CollectionMetadata>
+  _allOfficeHoursSessionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allOnDemandResourcesMeta?: Maybe<CollectionMetadata>
+  _allOnDemandResourcesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allOpenSourceToolCategoriesMeta?: Maybe<CollectionMetadata>
+  _allOpenSourceToolCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allOpenSourceToolsMeta?: Maybe<CollectionMetadata>
+  _allOpenSourceToolsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPackageFeaturesMeta?: Maybe<CollectionMetadata>
+  _allPackageFeaturesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPackageOptionsMeta?: Maybe<CollectionMetadata>
+  _allPackageOptionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPeopleMeta?: Maybe<CollectionMetadata>
+  _allPeopleMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPersonListsMeta?: Maybe<CollectionMetadata>
+  _allPersonListsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPressLinksMeta?: Maybe<CollectionMetadata>
+  _allPressLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPricingPagesMeta?: Maybe<CollectionMetadata>
+  _allPricingPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allProductOfferingsMeta?: Maybe<CollectionMetadata>
+  _allProductOfferingsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allProductPackageSectionsMeta?: Maybe<CollectionMetadata>
+  _allProductPackageSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allProductPricingPlansMeta?: Maybe<CollectionMetadata>
+  _allProductPricingPlansMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allProductSubnavsMeta?: Maybe<CollectionMetadata>
+  _allProductSubnavsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allProductTabFeaturesMeta?: Maybe<CollectionMetadata>
+  _allProductTabFeaturesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allProductTypesMeta?: Maybe<CollectionMetadata>
+  _allProductTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allRelatedItemsSectionsMeta?: Maybe<CollectionMetadata>
+  _allRelatedItemsSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allResourceContentTypesMeta?: Maybe<CollectionMetadata>
+  _allResourceContentTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allResourceIndustriesMeta?: Maybe<CollectionMetadata>
+  _allResourceIndustriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allResourceInfrastructureProvidersMeta?: Maybe<CollectionMetadata>
+  _allResourceInfrastructureProvidersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allResourceMediaTypesMeta?: Maybe<CollectionMetadata>
+  _allResourceMediaTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allResourcesMeta?: Maybe<CollectionMetadata>
+  _allResourcesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSalesFormPagesMeta?: Maybe<CollectionMetadata>
+  _allSalesFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSalesFormsMeta?: Maybe<CollectionMetadata>
+  _allSalesFormsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcAlertsMeta?: Maybe<CollectionMetadata>
+  _allSbcAlertsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcBeforeAfterDiagramsMeta?: Maybe<CollectionMetadata>
+  _allSbcBeforeAfterDiagramsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcButtonV2sMeta?: Maybe<CollectionMetadata>
+  _allSbcButtonV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcButtonsMeta?: Maybe<CollectionMetadata>
+  _allSbcButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcCalloutSectionsMeta?: Maybe<CollectionMetadata>
+  _allSbcCalloutSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcCalloutsMeta?: Maybe<CollectionMetadata>
+  _allSbcCalloutsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcCaseStudiesMeta?: Maybe<CollectionMetadata>
+  _allSbcCaseStudiesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcCaseStudySlidersMeta?: Maybe<CollectionMetadata>
+  _allSbcCaseStudySlidersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcCodeBlocksMeta?: Maybe<CollectionMetadata>
+  _allSbcCodeBlocksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcImagesMeta?: Maybe<CollectionMetadata>
+  _allSbcImagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcLinkedTextSummaryListsMeta?: Maybe<CollectionMetadata>
+  _allSbcLinkedTextSummaryListsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcLogoGridsMeta?: Maybe<CollectionMetadata>
+  _allSbcLogoGridsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcMultiButtonsMeta?: Maybe<CollectionMetadata>
+  _allSbcMultiButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcProductFeatureTablesMeta?: Maybe<CollectionMetadata>
+  _allSbcProductFeatureTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcProductPricingsMeta?: Maybe<CollectionMetadata>
+  _allSbcProductPricingsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcResourcesSlidersMeta?: Maybe<CollectionMetadata>
+  _allSbcResourcesSlidersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcSectionHeadersMeta?: Maybe<CollectionMetadata>
+  _allSbcSectionHeadersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcTextAndContentsMeta?: Maybe<CollectionMetadata>
+  _allSbcTextAndContentsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcTextsMeta?: Maybe<CollectionMetadata>
+  _allSbcTextsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcUseCasesMeta?: Maybe<CollectionMetadata>
+  _allSbcUseCasesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSbcUseCasesSectionsMeta?: Maybe<CollectionMetadata>
+  _allSbcUseCasesSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSblHorizontalsMeta?: Maybe<CollectionMetadata>
+  _allSblHorizontalsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSblVerticalsMeta?: Maybe<CollectionMetadata>
+  _allSblVerticalsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSectionBlockPagesMeta?: Maybe<CollectionMetadata>
+  _allSectionBlockPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSectionBlockV2sMeta?: Maybe<CollectionMetadata>
+  _allSectionBlockV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSectionBlocksMeta?: Maybe<CollectionMetadata>
+  _allSectionBlocksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSectionDividersMeta?: Maybe<CollectionMetadata>
+  _allSectionDividersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSectionThemesMeta?: Maybe<CollectionMetadata>
+  _allSectionThemesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSentinelProductTabsMeta?: Maybe<CollectionMetadata>
+  _allSentinelProductTabsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSocialNetworkIconsMeta?: Maybe<CollectionMetadata>
+  _allSocialNetworkIconsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSocialNetworksMeta?: Maybe<CollectionMetadata>
+  _allSocialNetworksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSpeakersSectionsMeta?: Maybe<CollectionMetadata>
+  _allSpeakersSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSplitCtaItemsMeta?: Maybe<CollectionMetadata>
+  _allSplitCtaItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSplitCtaSectionsMeta?: Maybe<CollectionMetadata>
+  _allSplitCtaSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allStaticDynamicSectionsMeta?: Maybe<CollectionMetadata>
+  _allStaticDynamicSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTemplatePagesMeta?: Maybe<CollectionMetadata>
+  _allTemplatePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformGraphSectionsMeta?: Maybe<CollectionMetadata>
+  _allTerraformGraphSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformOfferingCategoriesMeta?: Maybe<CollectionMetadata>
+  _allTerraformOfferingCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformOfferingTablesMeta?: Maybe<CollectionMetadata>
+  _allTerraformOfferingTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformOfferingTiersMeta?: Maybe<CollectionMetadata>
+  _allTerraformOfferingTiersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformOfferingsMeta?: Maybe<CollectionMetadata>
+  _allTerraformOfferingsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTestimonialsMeta?: Maybe<CollectionMetadata>
+  _allTestimonialsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTextHeadlineAndGridSectionsMeta?: Maybe<CollectionMetadata>
+  _allTextHeadlineAndGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTextHeadlineSectionsMeta?: Maybe<CollectionMetadata>
+  _allTextHeadlineSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTextImageSectionsMeta?: Maybe<CollectionMetadata>
+  _allTextImageSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTextSectionsMeta?: Maybe<CollectionMetadata>
+  _allTextSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTmpmodelButtonsMeta?: Maybe<CollectionMetadata>
+  _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTrainingCoursesMeta?: Maybe<CollectionMetadata>
+  _allTrainingCoursesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTrainingPartnerSectionsMeta?: Maybe<CollectionMetadata>
+  _allTrainingPartnerSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTrialFormPagesMeta?: Maybe<CollectionMetadata>
+  _allTrialFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTwoColumnTextSectionsMeta?: Maybe<CollectionMetadata>
+  _allTwoColumnTextSectionsMeta: CollectionMetadata
+  /** Returns meta information regarding an assets collection */
+  _allUploadsMeta?: Maybe<CollectionMetadata>
   /** Returns meta information regarding a record collection */
-  _allUseCasePageDropdownsMeta?: Maybe<CollectionMetadata>
+  _allUseCasePageDropdownsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allVaultIntegrationSectionsMeta?: Maybe<CollectionMetadata>
+  _allVaultIntegrationSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allVerticalTextBlockListItemsMeta?: Maybe<CollectionMetadata>
+  _allVerticalTextBlockListItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allVerticalTextBlockListSectionsMeta?: Maybe<CollectionMetadata>
+  _allVerticalTextBlockListSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allVideoSectionsMeta?: Maybe<CollectionMetadata>
+  _allVideoSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allVideoSourcesMeta?: Maybe<CollectionMetadata>
+  _allVideoSourcesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allWebinarsMeta?: Maybe<CollectionMetadata>
+  _allWebinarsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allWhitePapersMeta?: Maybe<CollectionMetadata>
+  _allWhitePapersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allWistiaSectionsMeta?: Maybe<CollectionMetadata>
+  _allWistiaSectionsMeta: CollectionMetadata
   /** Returns the single instance record */
   _site?: Maybe<Site>
   /** Returns the single instance record */
@@ -9949,373 +11200,339 @@ export type Query = {
   /** Returns a specific record */
   alertBanner?: Maybe<AlertBannerRecord>
   /** Returns a collection of records */
-  allAlertBanners?: Maybe<Array<Maybe<AlertBannerRecord>>>
+  allAlertBanners: Array<AlertBannerRecord>
   /** Returns a collection of records */
-  allAlerts?: Maybe<Array<Maybe<AlertRecord>>>
+  allAlerts: Array<AlertRecord>
   /** Returns a collection of records */
-  allBasicTables?: Maybe<Array<Maybe<BasicTableRecord>>>
+  allBasicTables: Array<BasicTableRecord>
   /** Returns a collection of records */
-  allBlogPostCategories?: Maybe<Array<Maybe<BlogPostCategoryRecord>>>
+  allBlogPostCategories: Array<BlogPostCategoryRecord>
   /** Returns a collection of records */
-  allBlogPosts?: Maybe<Array<Maybe<BlogPostRecord>>>
+  allBlogPosts: Array<BlogPostRecord>
   /** Returns a collection of records */
-  allButton2s?: Maybe<Array<Maybe<Button2Record>>>
+  allButton2s: Array<Button2Record>
   /** Returns a collection of records */
-  allButtonThemes?: Maybe<Array<Maybe<ButtonThemeRecord>>>
+  allButtonThemes: Array<ButtonThemeRecord>
   /** Returns a collection of records */
-  allCalloutItems?: Maybe<Array<Maybe<CalloutItemRecord>>>
+  allCalloutItems: Array<CalloutItemRecord>
   /** Returns a collection of records */
-  allCalloutSections?: Maybe<Array<Maybe<CalloutSectionRecord>>>
+  allCalloutSections: Array<CalloutSectionRecord>
   /** Returns a collection of records */
-  allCodeSamples?: Maybe<Array<Maybe<CodeSampleRecord>>>
+  allCodeSamples: Array<CodeSampleRecord>
   /** Returns a collection of records */
-  allCodeblockLanguages?: Maybe<Array<Maybe<CodeblockLanguageRecord>>>
+  allCodeblockLanguages: Array<CodeblockLanguageRecord>
   /** Returns a collection of records */
-  allCompanies?: Maybe<Array<Maybe<CompanyRecord>>>
+  allCompanies: Array<CompanyRecord>
   /** Returns a collection of records */
-  allConsulGraphicSections?: Maybe<Array<Maybe<ConsulGraphicSectionRecord>>>
+  allConsulGraphicSections: Array<ConsulGraphicSectionRecord>
   /** Returns a collection of records */
-  allContactCategories?: Maybe<Array<Maybe<ContactCategoryRecord>>>
+  allContactCategories: Array<ContactCategoryRecord>
   /** Returns a collection of records */
-  allContactFormPages?: Maybe<Array<Maybe<ContactFormPageRecord>>>
+  allContactFormPages: Array<ContactFormPageRecord>
   /** Returns a collection of records */
-  allDropdownLinks?: Maybe<Array<Maybe<DropdownLinkRecord>>>
+  allDropdownLinks: Array<DropdownLinkRecord>
   /** Returns a collection of records */
-  allEmbeddedPodcastSections?: Maybe<Array<Maybe<EmbeddedPodcastSectionRecord>>>
+  allEmbeddedPodcastSections: Array<EmbeddedPodcastSectionRecord>
   /** Returns a collection of records */
-  allEmbeddedSlidesSections?: Maybe<Array<Maybe<EmbeddedSlidesSectionRecord>>>
+  allEmbeddedSlidesSections: Array<EmbeddedSlidesSectionRecord>
   /** Returns a collection of records */
-  allEmployeePages?: Maybe<Array<Maybe<EmployeePageRecord>>>
+  allEmployeePages: Array<EmployeePageRecord>
   /** Returns a collection of records */
-  allEnterpriseFeaturesCategories?: Maybe<
-    Array<Maybe<EnterpriseFeaturesCategoryRecord>>
+  allEnterpriseFeaturesCategories: Array<EnterpriseFeaturesCategoryRecord>
+  /** Returns a collection of records */
+  allEnterprisePricingSections: Array<EnterprisePricingSectionRecord>
+  /** Returns a collection of records */
+  allEnterpriseProductPages: Array<EnterpriseProductPageRecord>
+  /** Returns a collection of records */
+  allEnterpriseProductSubnavs: Array<EnterpriseProductSubnavRecord>
+  /** Returns a collection of records */
+  allEnterpriseProductUseCasePages: Array<EnterpriseProductUseCasePageRecord>
+  /** Returns a collection of records */
+  allEnterpriseProducts: Array<EnterpriseProductRecord>
+  /** Returns a collection of records */
+  allEventTypes: Array<EventTypeRecord>
+  /** Returns a collection of records */
+  allEvents: Array<EventRecord>
+  /** Returns a collection of records */
+  allExperienceLevels: Array<ExperienceLevelRecord>
+  /** Returns a collection of records */
+  allExternalResources: Array<ExternalResourceRecord>
+  /** Returns a collection of records */
+  allFaqCategories: Array<FaqCategoryRecord>
+  /** Returns a collection of records */
+  allFeatureTableColumns: Array<FeatureTableColumnRecord>
+  /** Returns a collection of records */
+  allFeatureTableRowValues: Array<FeatureTableRowValueRecord>
+  /** Returns a collection of records */
+  allFeatureTableRows: Array<FeatureTableRowRecord>
+  /** Returns a collection of records */
+  allFeatureTableTabs: Array<FeatureTableTabRecord>
+  /** Returns a collection of records */
+  allFeatureTables: Array<FeatureTableRecord>
+  /** Returns a collection of records */
+  allFormContactTypes: Array<FormContactTypeRecord>
+  /** Returns a collection of records */
+  allFormMultiSelectOptions: Array<FormMultiSelectOptionRecord>
+  /** Returns a collection of records */
+  allHashiconfBasicPages: Array<HashiconfBasicPageRecord>
+  /** Returns a collection of records */
+  allHashiconfFeaturedSpeakersSections: Array<
+    HashiconfFeaturedSpeakersSectionRecord
   >
   /** Returns a collection of records */
-  allEnterprisePricingSections?: Maybe<
-    Array<Maybe<EnterprisePricingSectionRecord>>
+  allHashiconfLandingPages: Array<HashiconfLandingPageRecord>
+  /** Returns a collection of records */
+  allHashiconfLiveStreamPages: Array<HashiconfLiveStreamPageRecord>
+  /** Returns a collection of records */
+  allHashiconfScheduleDays: Array<HashiconfScheduleDayRecord>
+  /** Returns a collection of records */
+  allHashiconfScheduleItems: Array<HashiconfScheduleItemRecord>
+  /** Returns a collection of records */
+  allHashiconfScheduleLiteSections: Array<HashiconfScheduleLiteSectionRecord>
+  /** Returns a collection of records */
+  allHashiconfSchedulePages: Array<HashiconfSchedulePageRecord>
+  /** Returns a collection of records */
+  allHashiconfSectionBlockPages: Array<HashiconfSectionBlockPageRecord>
+  /** Returns a collection of records */
+  allHashiconfSectionBlocks: Array<HashiconfSectionBlockRecord>
+  /** Returns a collection of records */
+  allHashiconfSessions: Array<HashiconfSessionRecord>
+  /** Returns a collection of records */
+  allHashiconfSpeakers: Array<HashiconfSpeakerRecord>
+  /** Returns a collection of records */
+  allHashiconfSpeakersPages: Array<HashiconfSpeakersPageRecord>
+  /** Returns a collection of records */
+  allHashiconfSponsorSections: Array<HashiconfSponsorSectionRecord>
+  /** Returns a collection of records */
+  allHashiconfTextAndFullImages: Array<HashiconfTextAndFullImageRecord>
+  /** Returns a collection of records */
+  allHashiconfTrainingDays: Array<HashiconfTrainingDayRecord>
+  /** Returns a collection of records */
+  allHashiconfTrainings: Array<HashiconfTrainingRecord>
+  /** Returns a collection of records */
+  allHashiconfs: Array<HashiconfRecord>
+  /** Returns a collection of records */
+  allHashicorpProducts: Array<HashicorpProductRecord>
+  /** Returns a collection of records */
+  allHeroFormLeads: Array<HeroFormLeadRecord>
+  /** Returns a collection of records */
+  allHeroSections: Array<HeroSectionRecord>
+  /** Returns a collection of records */
+  allHeroVideoCarouselItems: Array<HeroVideoCarouselItemRecord>
+  /** Returns a collection of records */
+  allHomepageProductTabs: Array<HomepageProductTabRecord>
+  /** Returns a collection of records */
+  allHtmlSections: Array<HtmlSectionRecord>
+  /** Returns a collection of records */
+  allIconLinks: Array<IconLinkRecord>
+  /** Returns a collection of records */
+  allImageLockups: Array<ImageLockupRecord>
+  /** Returns a collection of records */
+  allImageSections: Array<ImageSectionRecord>
+  /** Returns a collection of records */
+  allImageTextCarousels: Array<ImageTextCarouselRecord>
+  /** Returns a collection of records */
+  allIntegrationDetailPages: Array<IntegrationDetailPageRecord>
+  /** Returns a collection of records */
+  allIntegrationTypeCategories: Array<IntegrationTypeCategoryRecord>
+  /** Returns a collection of records */
+  allIntegrationTypes: Array<IntegrationTypeRecord>
+  /** Returns a collection of records */
+  allLargeLogoGridSections: Array<LargeLogoGridSectionRecord>
+  /** Returns a collection of records */
+  allLinks: Array<LinkRecord>
+  /** Returns a collection of records */
+  allListItems: Array<ListItemRecord>
+  /** Returns a collection of records */
+  allLocalPageMetadataSets: Array<LocalPageMetadataSetRecord>
+  /** Returns a collection of records */
+  allLocationRooms: Array<LocationRoomRecord>
+  /** Returns a collection of records */
+  allLocationVenues: Array<LocationVenueRecord>
+  /** Returns a collection of records */
+  allMajorHeadlineSections: Array<MajorHeadlineSectionRecord>
+  /** Returns a collection of records */
+  allMiniCallouts: Array<MiniCalloutRecord>
+  /** Returns a collection of records */
+  allNavCallouts: Array<NavCalloutRecord>
+  /** Returns a collection of records */
+  allNavPromos: Array<NavPromoRecord>
+  /** Returns a collection of records */
+  allNewsItems: Array<NewsItemRecord>
+  /** Returns a collection of records */
+  allOfficeHoursSessionCopy1s: Array<OfficeHoursSessionCopy1Record>
+  /** Returns a collection of records */
+  allOfficeHoursSessions: Array<OfficeHoursSessionRecord>
+  /** Returns a collection of records */
+  allOnDemandResources: Array<OnDemandResourceRecord>
+  /** Returns a collection of records */
+  allOpenSourceToolCategories: Array<OpenSourceToolCategoryRecord>
+  /** Returns a collection of records */
+  allOpenSourceTools: Array<OpenSourceToolRecord>
+  /** Returns a collection of records */
+  allPackageFeatures: Array<PackageFeatureRecord>
+  /** Returns a collection of records */
+  allPackageOptions: Array<PackageOptionRecord>
+  /** Returns a collection of records */
+  allPeople: Array<PersonRecord>
+  /** Returns a collection of records */
+  allPersonLists: Array<PersonListRecord>
+  /** Returns a collection of records */
+  allPressLinks: Array<PressLinkRecord>
+  /** Returns a collection of records */
+  allPricingPages: Array<PricingPageRecord>
+  /** Returns a collection of records */
+  allProductOfferings: Array<ProductOfferingRecord>
+  /** Returns a collection of records */
+  allProductPackageSections: Array<ProductPackageSectionRecord>
+  /** Returns a collection of records */
+  allProductPricingPlans: Array<ProductPricingPlanRecord>
+  /** Returns a collection of records */
+  allProductSubnavs: Array<ProductSubnavRecord>
+  /** Returns a collection of records */
+  allProductTabFeatures: Array<ProductTabFeatureRecord>
+  /** Returns a collection of records */
+  allProductTypes: Array<ProductTypeRecord>
+  /** Returns a collection of records */
+  allRelatedItemsSections: Array<RelatedItemsSectionRecord>
+  /** Returns a collection of records */
+  allResourceContentTypes: Array<ResourceContentTypeRecord>
+  /** Returns a collection of records */
+  allResourceIndustries: Array<ResourceIndustryRecord>
+  /** Returns a collection of records */
+  allResourceInfrastructureProviders: Array<
+    ResourceInfrastructureProviderRecord
   >
   /** Returns a collection of records */
-  allEnterpriseProductPages?: Maybe<Array<Maybe<EnterpriseProductPageRecord>>>
+  allResourceMediaTypes: Array<ResourceMediaTypeRecord>
   /** Returns a collection of records */
-  allEnterpriseProductSubnavs?: Maybe<
-    Array<Maybe<EnterpriseProductSubnavRecord>>
-  >
+  allResources: Array<ResourceRecord>
   /** Returns a collection of records */
-  allEnterpriseProductUseCasePages?: Maybe<
-    Array<Maybe<EnterpriseProductUseCasePageRecord>>
-  >
+  allSalesFormPages: Array<SalesFormPageRecord>
   /** Returns a collection of records */
-  allEnterpriseProducts?: Maybe<Array<Maybe<EnterpriseProductRecord>>>
+  allSalesForms: Array<SalesFormRecord>
   /** Returns a collection of records */
-  allEventTypes?: Maybe<Array<Maybe<EventTypeRecord>>>
+  allSbcAlerts: Array<SbcAlertRecord>
   /** Returns a collection of records */
-  allEvents?: Maybe<Array<Maybe<EventRecord>>>
+  allSbcBeforeAfterDiagrams: Array<SbcBeforeAfterDiagramRecord>
   /** Returns a collection of records */
-  allExperienceLevels?: Maybe<Array<Maybe<ExperienceLevelRecord>>>
+  allSbcButtonV2s: Array<SbcButtonV2Record>
   /** Returns a collection of records */
-  allExternalResources?: Maybe<Array<Maybe<ExternalResourceRecord>>>
+  allSbcButtons: Array<SbcButtonRecord>
   /** Returns a collection of records */
-  allFaqCategories?: Maybe<Array<Maybe<FaqCategoryRecord>>>
+  allSbcCalloutSections: Array<SbcCalloutSectionRecord>
   /** Returns a collection of records */
-  allFeatureTableColumns?: Maybe<Array<Maybe<FeatureTableColumnRecord>>>
+  allSbcCallouts: Array<SbcCalloutRecord>
   /** Returns a collection of records */
-  allFeatureTableRowValues?: Maybe<Array<Maybe<FeatureTableRowValueRecord>>>
+  allSbcCaseStudies: Array<SbcCaseStudyRecord>
   /** Returns a collection of records */
-  allFeatureTableRows?: Maybe<Array<Maybe<FeatureTableRowRecord>>>
+  allSbcCaseStudySliders: Array<SbcCaseStudySliderRecord>
   /** Returns a collection of records */
-  allFeatureTableTabs?: Maybe<Array<Maybe<FeatureTableTabRecord>>>
+  allSbcCodeBlocks: Array<SbcCodeBlockRecord>
   /** Returns a collection of records */
-  allFeatureTables?: Maybe<Array<Maybe<FeatureTableRecord>>>
+  allSbcImages: Array<SbcImageRecord>
   /** Returns a collection of records */
-  allFormContactTypes?: Maybe<Array<Maybe<FormContactTypeRecord>>>
+  allSbcLinkedTextSummaryLists: Array<SbcLinkedTextSummaryListRecord>
   /** Returns a collection of records */
-  allFormMultiSelectOptions?: Maybe<Array<Maybe<FormMultiSelectOptionRecord>>>
+  allSbcLogoGrids: Array<SbcLogoGridRecord>
   /** Returns a collection of records */
-  allHashiconfBasicPages?: Maybe<Array<Maybe<HashiconfBasicPageRecord>>>
+  allSbcMultiButtons: Array<SbcMultiButtonRecord>
   /** Returns a collection of records */
-  allHashiconfFeaturedSpeakersSections?: Maybe<
-    Array<Maybe<HashiconfFeaturedSpeakersSectionRecord>>
-  >
+  allSbcProductFeatureTables: Array<SbcProductFeatureTableRecord>
   /** Returns a collection of records */
-  allHashiconfLandingPages?: Maybe<Array<Maybe<HashiconfLandingPageRecord>>>
+  allSbcProductPricings: Array<SbcProductPricingRecord>
   /** Returns a collection of records */
-  allHashiconfLiveStreamPages?: Maybe<
-    Array<Maybe<HashiconfLiveStreamPageRecord>>
-  >
+  allSbcResourcesSliders: Array<SbcResourcesSliderRecord>
   /** Returns a collection of records */
-  allHashiconfScheduleDays?: Maybe<Array<Maybe<HashiconfScheduleDayRecord>>>
+  allSbcSectionHeaders: Array<SbcSectionHeaderRecord>
   /** Returns a collection of records */
-  allHashiconfScheduleItems?: Maybe<Array<Maybe<HashiconfScheduleItemRecord>>>
+  allSbcTextAndContents: Array<SbcTextAndContentRecord>
   /** Returns a collection of records */
-  allHashiconfScheduleLiteSections?: Maybe<
-    Array<Maybe<HashiconfScheduleLiteSectionRecord>>
-  >
+  allSbcTexts: Array<SbcTextRecord>
   /** Returns a collection of records */
-  allHashiconfSchedulePages?: Maybe<Array<Maybe<HashiconfSchedulePageRecord>>>
+  allSbcUseCases: Array<SbcUseCaseRecord>
   /** Returns a collection of records */
-  allHashiconfSectionBlockPages?: Maybe<
-    Array<Maybe<HashiconfSectionBlockPageRecord>>
-  >
+  allSbcUseCasesSections: Array<SbcUseCasesSectionRecord>
   /** Returns a collection of records */
-  allHashiconfSectionBlocks?: Maybe<Array<Maybe<HashiconfSectionBlockRecord>>>
+  allSblHorizontals: Array<SblHorizontalRecord>
   /** Returns a collection of records */
-  allHashiconfSessions?: Maybe<Array<Maybe<HashiconfSessionRecord>>>
+  allSblVerticals: Array<SblVerticalRecord>
   /** Returns a collection of records */
-  allHashiconfSpeakers?: Maybe<Array<Maybe<HashiconfSpeakerRecord>>>
+  allSectionBlockPages: Array<SectionBlockPageRecord>
   /** Returns a collection of records */
-  allHashiconfSpeakersPages?: Maybe<Array<Maybe<HashiconfSpeakersPageRecord>>>
+  allSectionBlockV2s: Array<SectionBlockV2Record>
   /** Returns a collection of records */
-  allHashiconfSponsorSections?: Maybe<
-    Array<Maybe<HashiconfSponsorSectionRecord>>
-  >
+  allSectionBlocks: Array<SectionBlockRecord>
   /** Returns a collection of records */
-  allHashiconfTextAndFullImages?: Maybe<
-    Array<Maybe<HashiconfTextAndFullImageRecord>>
-  >
+  allSectionDividers: Array<SectionDividerRecord>
   /** Returns a collection of records */
-  allHashiconfTrainingDays?: Maybe<Array<Maybe<HashiconfTrainingDayRecord>>>
+  allSectionThemes: Array<SectionThemeRecord>
   /** Returns a collection of records */
-  allHashiconfTrainings?: Maybe<Array<Maybe<HashiconfTrainingRecord>>>
+  allSentinelProductTabs: Array<SentinelProductTabRecord>
   /** Returns a collection of records */
-  allHashiconfs?: Maybe<Array<Maybe<HashiconfRecord>>>
+  allSocialNetworkIcons: Array<SocialNetworkIconRecord>
   /** Returns a collection of records */
-  allHashicorpProducts?: Maybe<Array<Maybe<HashicorpProductRecord>>>
+  allSocialNetworks: Array<SocialNetworkRecord>
   /** Returns a collection of records */
-  allHeroFormLeads?: Maybe<Array<Maybe<HeroFormLeadRecord>>>
+  allSpeakersSections: Array<SpeakersSectionRecord>
   /** Returns a collection of records */
-  allHeroSections?: Maybe<Array<Maybe<HeroSectionRecord>>>
+  allSplitCtaItems: Array<SplitCtaItemRecord>
   /** Returns a collection of records */
-  allHeroVideoCarouselItems?: Maybe<Array<Maybe<HeroVideoCarouselItemRecord>>>
+  allSplitCtaSections: Array<SplitCtaSectionRecord>
   /** Returns a collection of records */
-  allHomepageProductTabs?: Maybe<Array<Maybe<HomepageProductTabRecord>>>
+  allStaticDynamicSections: Array<StaticDynamicSectionRecord>
   /** Returns a collection of records */
-  allHtmlSections?: Maybe<Array<Maybe<HtmlSectionRecord>>>
+  allTemplatePages: Array<TemplatePageRecord>
   /** Returns a collection of records */
-  allIconLinks?: Maybe<Array<Maybe<IconLinkRecord>>>
+  allTerraformGraphSections: Array<TerraformGraphSectionRecord>
   /** Returns a collection of records */
-  allImageLockups?: Maybe<Array<Maybe<ImageLockupRecord>>>
+  allTerraformOfferingCategories: Array<TerraformOfferingCategoryRecord>
   /** Returns a collection of records */
-  allImageSections?: Maybe<Array<Maybe<ImageSectionRecord>>>
+  allTerraformOfferingTables: Array<TerraformOfferingTableRecord>
   /** Returns a collection of records */
-  allImageTextCarousels?: Maybe<Array<Maybe<ImageTextCarouselRecord>>>
+  allTerraformOfferingTiers: Array<TerraformOfferingTierRecord>
   /** Returns a collection of records */
-  allIntegrationDetailPages?: Maybe<Array<Maybe<IntegrationDetailPageRecord>>>
+  allTerraformOfferings: Array<TerraformOfferingRecord>
   /** Returns a collection of records */
-  allIntegrationTypeCategories?: Maybe<
-    Array<Maybe<IntegrationTypeCategoryRecord>>
-  >
+  allTestimonials: Array<TestimonialRecord>
   /** Returns a collection of records */
-  allIntegrationTypes?: Maybe<Array<Maybe<IntegrationTypeRecord>>>
+  allTextHeadlineAndGridSections: Array<TextHeadlineAndGridSectionRecord>
   /** Returns a collection of records */
-  allLargeLogoGridSections?: Maybe<Array<Maybe<LargeLogoGridSectionRecord>>>
+  allTextHeadlineSections: Array<TextHeadlineSectionRecord>
   /** Returns a collection of records */
-  allLinks?: Maybe<Array<Maybe<LinkRecord>>>
+  allTextImageSections: Array<TextImageSectionRecord>
   /** Returns a collection of records */
-  allListItems?: Maybe<Array<Maybe<ListItemRecord>>>
+  allTextSections: Array<TextSectionRecord>
   /** Returns a collection of records */
-  allLocalPageMetadataSets?: Maybe<Array<Maybe<LocalPageMetadataSetRecord>>>
+  allTmpmodelButtons: Array<TmpmodelButtonRecord>
   /** Returns a collection of records */
-  allLocationRooms?: Maybe<Array<Maybe<LocationRoomRecord>>>
+  allTrainingCourses: Array<TrainingCourseRecord>
   /** Returns a collection of records */
-  allLocationVenues?: Maybe<Array<Maybe<LocationVenueRecord>>>
+  allTrainingPartnerSections: Array<TrainingPartnerSectionRecord>
   /** Returns a collection of records */
-  allMajorHeadlineSections?: Maybe<Array<Maybe<MajorHeadlineSectionRecord>>>
+  allTrialFormPages: Array<TrialFormPageRecord>
   /** Returns a collection of records */
-  allMiniCallouts?: Maybe<Array<Maybe<MiniCalloutRecord>>>
+  allTwoColumnTextSections: Array<TwoColumnTextSectionRecord>
+  /** Returns a collection of assets */
+  allUploads?: Maybe<Array<Maybe<Upload>>>
   /** Returns a collection of records */
-  allNavCallouts?: Maybe<Array<Maybe<NavCalloutRecord>>>
+  allUseCasePageDropdowns: Array<UseCasePageDropdownRecord>
   /** Returns a collection of records */
-  allNavPromos?: Maybe<Array<Maybe<NavPromoRecord>>>
+  allVaultIntegrationSections: Array<VaultIntegrationSectionRecord>
   /** Returns a collection of records */
-  allNewsItems?: Maybe<Array<Maybe<NewsItemRecord>>>
+  allVerticalTextBlockListItems: Array<VerticalTextBlockListItemRecord>
   /** Returns a collection of records */
-  allOfficeHoursSessionCopy1s?: Maybe<
-    Array<Maybe<OfficeHoursSessionCopy1Record>>
-  >
+  allVerticalTextBlockListSections: Array<VerticalTextBlockListSectionRecord>
   /** Returns a collection of records */
-  allOfficeHoursSessions?: Maybe<Array<Maybe<OfficeHoursSessionRecord>>>
+  allVideoSections: Array<VideoSectionRecord>
   /** Returns a collection of records */
-  allOnDemandResources?: Maybe<Array<Maybe<OnDemandResourceRecord>>>
+  allVideoSources: Array<VideoSourceRecord>
   /** Returns a collection of records */
-  allOpenSourceToolCategories?: Maybe<
-    Array<Maybe<OpenSourceToolCategoryRecord>>
-  >
+  allWebinars: Array<WebinarRecord>
   /** Returns a collection of records */
-  allOpenSourceTools?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  allWhitePapers: Array<WhitePaperRecord>
   /** Returns a collection of records */
-  allPackageFeatures?: Maybe<Array<Maybe<PackageFeatureRecord>>>
-  /** Returns a collection of records */
-  allPackageOptions?: Maybe<Array<Maybe<PackageOptionRecord>>>
-  /** Returns a collection of records */
-  allPeople?: Maybe<Array<Maybe<PersonRecord>>>
-  /** Returns a collection of records */
-  allPersonLists?: Maybe<Array<Maybe<PersonListRecord>>>
-  /** Returns a collection of records */
-  allPressLinks?: Maybe<Array<Maybe<PressLinkRecord>>>
-  /** Returns a collection of records */
-  allPricingPages?: Maybe<Array<Maybe<PricingPageRecord>>>
-  /** Returns a collection of records */
-  allProductOfferings?: Maybe<Array<Maybe<ProductOfferingRecord>>>
-  /** Returns a collection of records */
-  allProductPackageSections?: Maybe<Array<Maybe<ProductPackageSectionRecord>>>
-  /** Returns a collection of records */
-  allProductPricingPlans?: Maybe<Array<Maybe<ProductPricingPlanRecord>>>
-  /** Returns a collection of records */
-  allProductSubnavs?: Maybe<Array<Maybe<ProductSubnavRecord>>>
-  /** Returns a collection of records */
-  allProductTabFeatures?: Maybe<Array<Maybe<ProductTabFeatureRecord>>>
-  /** Returns a collection of records */
-  allProductTypes?: Maybe<Array<Maybe<ProductTypeRecord>>>
-  /** Returns a collection of records */
-  allRelatedItemsSections?: Maybe<Array<Maybe<RelatedItemsSectionRecord>>>
-  /** Returns a collection of records */
-  allResourceContentTypes?: Maybe<Array<Maybe<ResourceContentTypeRecord>>>
-  /** Returns a collection of records */
-  allResourceIndustries?: Maybe<Array<Maybe<ResourceIndustryRecord>>>
-  /** Returns a collection of records */
-  allResourceInfrastructureProviders?: Maybe<
-    Array<Maybe<ResourceInfrastructureProviderRecord>>
-  >
-  /** Returns a collection of records */
-  allResourceMediaTypes?: Maybe<Array<Maybe<ResourceMediaTypeRecord>>>
-  /** Returns a collection of records */
-  allResources?: Maybe<Array<Maybe<ResourceRecord>>>
-  /** Returns a collection of records */
-  allSalesFormPages?: Maybe<Array<Maybe<SalesFormPageRecord>>>
-  /** Returns a collection of records */
-  allSalesForms?: Maybe<Array<Maybe<SalesFormRecord>>>
-  /** Returns a collection of records */
-  allSbcAlerts?: Maybe<Array<Maybe<SbcAlertRecord>>>
-  /** Returns a collection of records */
-  allSbcBeforeAfterDiagrams?: Maybe<Array<Maybe<SbcBeforeAfterDiagramRecord>>>
-  /** Returns a collection of records */
-  allSbcButtonV2s?: Maybe<Array<Maybe<SbcButtonV2Record>>>
-  /** Returns a collection of records */
-  allSbcButtons?: Maybe<Array<Maybe<SbcButtonRecord>>>
-  /** Returns a collection of records */
-  allSbcCalloutSections?: Maybe<Array<Maybe<SbcCalloutSectionRecord>>>
-  /** Returns a collection of records */
-  allSbcCallouts?: Maybe<Array<Maybe<SbcCalloutRecord>>>
-  /** Returns a collection of records */
-  allSbcCaseStudies?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
-  /** Returns a collection of records */
-  allSbcCaseStudySliders?: Maybe<Array<Maybe<SbcCaseStudySliderRecord>>>
-  /** Returns a collection of records */
-  allSbcCodeBlocks?: Maybe<Array<Maybe<SbcCodeBlockRecord>>>
-  /** Returns a collection of records */
-  allSbcImages?: Maybe<Array<Maybe<SbcImageRecord>>>
-  /** Returns a collection of records */
-  allSbcLinkedTextSummaryLists?: Maybe<
-    Array<Maybe<SbcLinkedTextSummaryListRecord>>
-  >
-  /** Returns a collection of records */
-  allSbcLogoGrids?: Maybe<Array<Maybe<SbcLogoGridRecord>>>
-  /** Returns a collection of records */
-  allSbcMultiButtons?: Maybe<Array<Maybe<SbcMultiButtonRecord>>>
-  /** Returns a collection of records */
-  allSbcProductFeatureTables?: Maybe<Array<Maybe<SbcProductFeatureTableRecord>>>
-  /** Returns a collection of records */
-  allSbcProductPricings?: Maybe<Array<Maybe<SbcProductPricingRecord>>>
-  /** Returns a collection of records */
-  allSbcResourcesSliders?: Maybe<Array<Maybe<SbcResourcesSliderRecord>>>
-  /** Returns a collection of records */
-  allSbcSectionHeaders?: Maybe<Array<Maybe<SbcSectionHeaderRecord>>>
-  /** Returns a collection of records */
-  allSbcTextAndContents?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
-  /** Returns a collection of records */
-  allSbcTexts?: Maybe<Array<Maybe<SbcTextRecord>>>
-  /** Returns a collection of records */
-  allSbcUseCases?: Maybe<Array<Maybe<SbcUseCaseRecord>>>
-  /** Returns a collection of records */
-  allSbcUseCasesSections?: Maybe<Array<Maybe<SbcUseCasesSectionRecord>>>
-  /** Returns a collection of records */
-  allSblHorizontals?: Maybe<Array<Maybe<SblHorizontalRecord>>>
-  /** Returns a collection of records */
-  allSblVerticals?: Maybe<Array<Maybe<SblVerticalRecord>>>
-  /** Returns a collection of records */
-  allSectionBlockPages?: Maybe<Array<Maybe<SectionBlockPageRecord>>>
-  /** Returns a collection of records */
-  allSectionBlockV2s?: Maybe<Array<Maybe<SectionBlockV2Record>>>
-  /** Returns a collection of records */
-  allSectionBlocks?: Maybe<Array<Maybe<SectionBlockRecord>>>
-  /** Returns a collection of records */
-  allSectionDividers?: Maybe<Array<Maybe<SectionDividerRecord>>>
-  /** Returns a collection of records */
-  allSectionThemes?: Maybe<Array<Maybe<SectionThemeRecord>>>
-  /** Returns a collection of records */
-  allSentinelProductTabs?: Maybe<Array<Maybe<SentinelProductTabRecord>>>
-  /** Returns a collection of records */
-  allSocialNetworkIcons?: Maybe<Array<Maybe<SocialNetworkIconRecord>>>
-  /** Returns a collection of records */
-  allSocialNetworks?: Maybe<Array<Maybe<SocialNetworkRecord>>>
-  /** Returns a collection of records */
-  allSpeakersSections?: Maybe<Array<Maybe<SpeakersSectionRecord>>>
-  /** Returns a collection of records */
-  allSplitCtaItems?: Maybe<Array<Maybe<SplitCtaItemRecord>>>
-  /** Returns a collection of records */
-  allSplitCtaSections?: Maybe<Array<Maybe<SplitCtaSectionRecord>>>
-  /** Returns a collection of records */
-  allStaticDynamicSections?: Maybe<Array<Maybe<StaticDynamicSectionRecord>>>
-  /** Returns a collection of records */
-  allTemplatePages?: Maybe<Array<Maybe<TemplatePageRecord>>>
-  /** Returns a collection of records */
-  allTerraformGraphSections?: Maybe<Array<Maybe<TerraformGraphSectionRecord>>>
-  /** Returns a collection of records */
-  allTerraformOfferingCategories?: Maybe<
-    Array<Maybe<TerraformOfferingCategoryRecord>>
-  >
-  /** Returns a collection of records */
-  allTerraformOfferingTables?: Maybe<Array<Maybe<TerraformOfferingTableRecord>>>
-  /** Returns a collection of records */
-  allTerraformOfferingTiers?: Maybe<Array<Maybe<TerraformOfferingTierRecord>>>
-  /** Returns a collection of records */
-  allTerraformOfferings?: Maybe<Array<Maybe<TerraformOfferingRecord>>>
-  /** Returns a collection of records */
-  allTestimonials?: Maybe<Array<Maybe<TestimonialRecord>>>
-  /** Returns a collection of records */
-  allTextHeadlineAndGridSections?: Maybe<
-    Array<Maybe<TextHeadlineAndGridSectionRecord>>
-  >
-  /** Returns a collection of records */
-  allTextHeadlineSections?: Maybe<Array<Maybe<TextHeadlineSectionRecord>>>
-  /** Returns a collection of records */
-  allTextImageSections?: Maybe<Array<Maybe<TextImageSectionRecord>>>
-  /** Returns a collection of records */
-  allTextSections?: Maybe<Array<Maybe<TextSectionRecord>>>
-  /** Returns a collection of records */
-  allTmpmodelButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
-  /** Returns a collection of records */
-  allTrainingCourses?: Maybe<Array<Maybe<TrainingCourseRecord>>>
-  /** Returns a collection of records */
-  allTrainingPartnerSections?: Maybe<Array<Maybe<TrainingPartnerSectionRecord>>>
-  /** Returns a collection of records */
-  allTrialFormPages?: Maybe<Array<Maybe<TrialFormPageRecord>>>
-  /** Returns a collection of records */
-  allTwoColumnTextSections?: Maybe<Array<Maybe<TwoColumnTextSectionRecord>>>
-  /** Returns a collection of records */
-  allUseCasePageDropdowns?: Maybe<Array<Maybe<UseCasePageDropdownRecord>>>
-  /** Returns a collection of records */
-  allVaultIntegrationSections?: Maybe<
-    Array<Maybe<VaultIntegrationSectionRecord>>
-  >
-  /** Returns a collection of records */
-  allVerticalTextBlockListItems?: Maybe<
-    Array<Maybe<VerticalTextBlockListItemRecord>>
-  >
-  /** Returns a collection of records */
-  allVerticalTextBlockListSections?: Maybe<
-    Array<Maybe<VerticalTextBlockListSectionRecord>>
-  >
-  /** Returns a collection of records */
-  allVideoSections?: Maybe<Array<Maybe<VideoSectionRecord>>>
-  /** Returns a collection of records */
-  allVideoSources?: Maybe<Array<Maybe<VideoSourceRecord>>>
-  /** Returns a collection of records */
-  allWebinars?: Maybe<Array<Maybe<WebinarRecord>>>
-  /** Returns a collection of records */
-  allWhitePapers?: Maybe<Array<Maybe<WhitePaperRecord>>>
-  /** Returns a collection of records */
-  allWistiaSections?: Maybe<Array<Maybe<WistiaSectionRecord>>>
+  allWistiaSections: Array<WistiaSectionRecord>
   /** Returns a specific record */
   basicTable?: Maybe<BasicTableRecord>
   /** Returns the single instance record */
@@ -10732,6 +11949,8 @@ export type Query = {
   trialFormPage?: Maybe<TrialFormPageRecord>
   /** Returns a specific record */
   twoColumnTextSection?: Maybe<TwoColumnTextSectionRecord>
+  /** Returns a specific asset */
+  upload?: Maybe<Upload>
   /** Returns a specific record */
   useCasePageDropdown?: Maybe<UseCasePageDropdownRecord>
   /** Returns the single instance record */
@@ -11686,6 +12905,12 @@ export type Query_AllTrialFormPagesMetaArgs = {
 export type Query_AllTwoColumnTextSectionsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TwoColumnTextSectionModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllUploadsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<UploadFilter>
 }
 
 /** The query root for this schema */
@@ -13162,6 +14387,15 @@ export type QueryAllTwoColumnTextSectionsArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllUploadsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<UploadFilter>
+  orderBy?: Maybe<Array<Maybe<UploadOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllUseCasePageDropdownsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -14574,6 +15808,13 @@ export type QueryTwoColumnTextSectionArgs = {
 }
 
 /** The query root for this schema */
+export type QueryUploadArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<UploadFilter>
+  orderBy?: Maybe<Array<Maybe<UploadOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryUseCasePageDropdownArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<UseCasePageDropdownModelFilter>
@@ -14679,7 +15920,7 @@ export type ReasonRecord_SeoMetaTagsArgs = {
 export type RelatedItemsSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -14748,10 +15989,29 @@ export type RelatedItemsSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Specifies how to filter by upload type */
+export type ResolutionFilter = {
+  /** Search uploads with the specified type */
+  eq?: Maybe<ResolutionType>
+  /** Exclude uploads with the specified type */
+  neq?: Maybe<ResolutionType>
+  /** Search uploads with the specified types */
+  in?: Maybe<Array<Maybe<ResolutionType>>>
+  /** Search uploads without the specified types */
+  notIn?: Maybe<Array<Maybe<ResolutionType>>>
+}
+
+export enum ResolutionType {
+  Icon = "icon",
+  Small = "small",
+  Medium = "medium",
+  Large = "large"
+}
+
 export type ResourceContentTypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -14815,7 +16075,7 @@ export type ResourceContentTypeRecord_SeoMetaTagsArgs = {
 export type ResourceIndustryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -14879,7 +16139,7 @@ export type ResourceIndustryRecord_SeoMetaTagsArgs = {
 export type ResourceInfrastructureProviderModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -14945,7 +16205,7 @@ export type ResourceInfrastructureProviderRecord_SeoMetaTagsArgs = {
 export type ResourceMediaTypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15023,7 +16283,7 @@ export type ResourceModelContentField =
 export type ResourceModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15099,24 +16359,22 @@ export type ResourceRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<ResourceModelContentField>>>
+  content: Array<ResourceModelContentField>
   contentType?: Maybe<ResourceContentTypeRecord>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<Maybe<EventRecord>>>
+  events?: Maybe<Array<EventRecord>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  industry?: Maybe<Array<Maybe<ResourceIndustryRecord>>>
-  infrastructureProvider?: Maybe<
-    Array<Maybe<ResourceInfrastructureProviderRecord>>
-  >
+  industry?: Maybe<Array<ResourceIndustryRecord>>
+  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
   mediaType?: Maybe<ResourceMediaTypeRecord>
   metadata?: Maybe<SeoField>
-  organizations?: Maybe<Array<Maybe<CompanyRecord>>>
-  people?: Maybe<Array<Maybe<PersonRecord>>>
-  product?: Maybe<Array<Maybe<ResourceModelProductField>>>
+  organizations?: Maybe<Array<CompanyRecord>>
+  people?: Maybe<Array<PersonRecord>>
+  product: Array<ResourceModelProductField>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
@@ -15164,6 +16422,19 @@ export type ResourcesPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type ResponsiveImage = {
+  __typename?: "ResponsiveImage"
+  alt?: Maybe<Scalars["String"]>
+  aspectRatio: Scalars["FloatType"]
+  base64?: Maybe<Scalars["String"]>
+  height: Scalars["IntType"]
+  sizes: Scalars["String"]
+  src: Scalars["String"]
+  srcSet: Scalars["String"]
+  title?: Maybe<Scalars["String"]>
+  width: Scalars["IntType"]
+}
+
 /** Record of type Row (row) */
 export type RowRecord = {
   __typename?: "RowRecord"
@@ -15192,7 +16463,7 @@ export type RowRecord_SeoMetaTagsArgs = {
 export type SalesFormModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -15246,7 +16517,7 @@ export enum SalesFormModelOrderBy {
 export type SalesFormPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15381,7 +16652,7 @@ export type SalesFormRecordDescriptionArgs = {
 export type SbcAlertModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15461,7 +16732,7 @@ export type SbcAlertRecord_SeoMetaTagsArgs = {
 export type SbcBeforeAfterDiagramModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15551,7 +16822,7 @@ export type SbcBeforeAfterDiagramRecordBeforeContentArgs = {
 export type SbcButtonModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15625,7 +16896,7 @@ export type SbcButtonRecord_SeoMetaTagsArgs = {
 export type SbcButtonV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15701,7 +16972,7 @@ export type SbcButtonV2Record_SeoMetaTagsArgs = {
 export type SbcCalloutModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15776,7 +17047,7 @@ export type SbcCalloutRecordDescriptionArgs = {
 export type SbcCalloutSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15833,7 +17104,7 @@ export type SbcCalloutSectionRecord = {
   columnCount?: Maybe<Scalars["IntType"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<Maybe<SbcCalloutRecord>>>
+  items?: Maybe<Array<SbcCalloutRecord>>
   theme?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -15846,7 +17117,7 @@ export type SbcCalloutSectionRecord_SeoMetaTagsArgs = {
 export type SbcCaseStudyModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15927,7 +17198,7 @@ export type SbcCaseStudyRecordDescriptionArgs = {
 export type SbcCaseStudySliderModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -15975,7 +17246,7 @@ export type SbcCaseStudySliderRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  caseStudies?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
+  caseStudies?: Maybe<Array<SbcCaseStudyRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -15989,7 +17260,7 @@ export type SbcCaseStudySliderRecord_SeoMetaTagsArgs = {
 export type SbcCodeBlockModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16062,7 +17333,7 @@ export type SbcCodeBlockRecordCodeArgs = {
 export type SbcImageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16126,7 +17397,7 @@ export type SbcImageRecord_SeoMetaTagsArgs = {
 export type SbcLinkedTextSummaryListModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16191,7 +17462,7 @@ export type SbcLinkedTextSummaryListRecord_SeoMetaTagsArgs = {
 export type SbcLogoGridModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16245,7 +17516,7 @@ export type SbcLogoGridRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<Maybe<CompanyRecord>>>
+  companies?: Maybe<Array<CompanyRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   removeBorders?: Maybe<Scalars["BooleanType"]>
@@ -16261,7 +17532,7 @@ export type SbcLogoGridRecord_SeoMetaTagsArgs = {
 export type SbcMultiButtonModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16312,7 +17583,7 @@ export type SbcMultiButtonRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<Maybe<SbcButtonRecord>>>
+  buttons?: Maybe<Array<SbcButtonRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   internalName?: Maybe<Scalars["String"]>
@@ -16327,7 +17598,7 @@ export type SbcMultiButtonRecord_SeoMetaTagsArgs = {
 export type SbcProductFeatureTableModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16387,10 +17658,10 @@ export type SbcProductFeatureTableRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  featureCategories?: Maybe<Array<Maybe<EnterpriseFeaturesCategoryRecord>>>
+  featureCategories?: Maybe<Array<EnterpriseFeaturesCategoryRecord>>
   higherTierPlansIncludeLowerTierFeatures?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
-  offerings?: Maybe<Array<Maybe<ProductPricingPlanRecord>>>
+  offerings?: Maybe<Array<ProductPricingPlanRecord>>
   productLogo?: Maybe<FileField>
   productName?: Maybe<Scalars["String"]>
   themeBackground?: Maybe<Scalars["String"]>
@@ -16405,7 +17676,7 @@ export type SbcProductFeatureTableRecord_SeoMetaTagsArgs = {
 export type SbcProductPricingModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16458,7 +17729,7 @@ export type SbcProductPricingRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  plans?: Maybe<Array<Maybe<ProductPricingPlanRecord>>>
+  plans?: Maybe<Array<ProductPricingPlanRecord>>
   product?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -16471,7 +17742,7 @@ export type SbcProductPricingRecord_SeoMetaTagsArgs = {
 export type SbcResourcesSliderModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16531,7 +17802,7 @@ export type SbcResourcesSliderRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  filterBy?: Maybe<Array<Maybe<SbcResourcesSliderModelFilterByField>>>
+  filterBy: Array<SbcResourcesSliderModelFilterByField>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
@@ -16544,7 +17815,7 @@ export type SbcResourcesSliderRecord_SeoMetaTagsArgs = {
 export type SbcSectionHeaderModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16624,7 +17895,7 @@ export type SbcTextAndContentModelContentField =
 export type SbcTextAndContentModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16683,7 +17954,7 @@ export type SbcTextAndContentRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<Maybe<SbcButtonRecord>>>
+  buttons?: Maybe<Array<SbcButtonRecord>>
   content?: Maybe<SbcTextAndContentModelContentField>
   createdAt: Scalars["DateTime"]
   hasBorder?: Maybe<Scalars["BooleanType"]>
@@ -16707,7 +17978,7 @@ export type SbcTextAndContentRecordTextArgs = {
 export type SbcTextModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16774,7 +18045,7 @@ export type SbcTextRecordTextArgs = {
 export type SbcUseCaseModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16849,7 +18120,7 @@ export type SbcUseCaseRecordDescriptionArgs = {
 export type SbcUseCasesSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16906,7 +18177,7 @@ export type SbcUseCasesSectionRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
-  items?: Maybe<Array<Maybe<SbcUseCaseRecord>>>
+  items?: Maybe<Array<SbcUseCaseRecord>>
   theme?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -16934,7 +18205,7 @@ export type SblHorizontalModelContentField =
 export type SblHorizontalModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -16982,7 +18253,7 @@ export type SblHorizontalRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<SblHorizontalModelContentField>>>
+  content: Array<SblHorizontalModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -17016,7 +18287,7 @@ export type SblVerticalModelContentField =
 export type SblVerticalModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17064,7 +18335,7 @@ export type SblVerticalRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<SblVerticalModelContentField>>>
+  content: Array<SblVerticalModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -17090,7 +18361,7 @@ export type ScheduleLiteItemRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  scheduleItems?: Maybe<Array<Maybe<HashiconfScheduleItemRecord>>>
+  scheduleItems?: Maybe<Array<HashiconfScheduleItemRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -17120,7 +18391,7 @@ export type SectionBlockModelComponentsField =
 export type SectionBlockModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17165,7 +18436,7 @@ export enum SectionBlockModelOrderBy {
 export type SectionBlockPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17220,7 +18491,7 @@ export type SectionBlockPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  content?: Maybe<Array<Maybe<SectionBlockV2Record>>>
+  content?: Maybe<Array<SectionBlockV2Record>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   metatag?: Maybe<SeoField>
@@ -17265,7 +18536,7 @@ export type SectionBlockRecord_SeoMetaTagsArgs = {
 export type SectionBlockV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17343,7 +18614,7 @@ export type SectionBlockV2Record_SeoMetaTagsArgs = {
 export type SectionDividerModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17439,7 +18710,7 @@ export type SectionHeaderRecordDescriptionArgs = {
 export type SectionThemeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17524,11 +18795,11 @@ export type SentinelPageRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  pageContent?: Maybe<Array<Maybe<SentinelPageModelPageContentField>>>
+  pageContent: Array<SentinelPageModelPageContentField>
   policyAsCode?: Maybe<HeroSectionRecord>
   prefooter?: Maybe<HeroSectionRecord>
   productIntegrationsHeader?: Maybe<SbcSectionHeaderRecord>
-  productTabs?: Maybe<Array<Maybe<SentinelProductTabRecord>>>
+  productTabs?: Maybe<Array<SentinelProductTabRecord>>
   salesForm?: Maybe<SalesFormRecord>
   updatedAt: Scalars["DateTime"]
 }
@@ -17541,7 +18812,7 @@ export type SentinelPageRecord_SeoMetaTagsArgs = {
 export type SentinelProductTabModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17594,12 +18865,12 @@ export type SentinelProductTabRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  codeSamples?: Maybe<Array<Maybe<CodeSampleRecord>>>
+  codeSamples?: Maybe<Array<CodeSampleRecord>>
   colorLogo?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   docsLink?: Maybe<LinkRecord>
   enterpriseLogo?: Maybe<FileField>
-  features?: Maybe<Array<Maybe<ProductTabFeatureRecord>>>
+  features?: Maybe<Array<ProductTabFeatureRecord>>
   id: Scalars["ItemId"]
   product?: Maybe<EnterpriseProductRecord>
   updatedAt: Scalars["DateTime"]
@@ -17613,7 +18884,7 @@ export type SentinelProductTabRecord_SeoMetaTagsArgs = {
 export type SeoField = {
   __typename?: "SeoField"
   description?: Maybe<Scalars["String"]>
-  image?: Maybe<FileField>
+  image?: Maybe<Upload>
   title?: Maybe<Scalars["String"]>
   twitterCard?: Maybe<Scalars["String"]>
 }
@@ -17658,7 +18929,7 @@ export type ShopPageRecordIntroArgs = {
 
 export type Site = {
   __typename?: "Site"
-  favicon?: Maybe<FileField>
+  favicon?: Maybe<Upload>
   faviconMetaTags: Array<Maybe<Tag>>
   globalSeo?: Maybe<GlobalSeoField>
 }
@@ -17715,7 +18986,7 @@ export type SmallTextTagRecord_SeoMetaTagsArgs = {
 export type SocialNetworkIconModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17783,7 +19054,7 @@ export type SocialNetworkIconRecord_SeoMetaTagsArgs = {
 export type SocialNetworkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17849,7 +19120,7 @@ export type SocialNetworkRecord_SeoMetaTagsArgs = {
 export type SpeakersSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17902,7 +19173,7 @@ export type SpeakersSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  speakers?: Maybe<Array<Maybe<PersonRecord>>>
+  speakers?: Maybe<Array<PersonRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -17915,7 +19186,7 @@ export type SpeakersSectionRecord_SeoMetaTagsArgs = {
 export type SplitCtaItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -17993,7 +19264,7 @@ export type SplitCtaItemRecordDescriptionArgs = {
 export type SplitCtaSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18043,7 +19314,7 @@ export type SplitCtaSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<Maybe<SplitCtaItemRecord>>>
+  items?: Maybe<Array<SplitCtaItemRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -18055,7 +19326,7 @@ export type SplitCtaSectionRecord_SeoMetaTagsArgs = {
 export type StaticDynamicSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18163,6 +19434,7 @@ export type StringFilter = {
 export type StringMatchesFilter = {
   pattern: Scalars["String"]
   caseSensitive?: Maybe<Scalars["BooleanType"]>
+  regexp?: Maybe<Scalars["BooleanType"]>
 }
 
 export type StringMultiLocaleField = {
@@ -18262,7 +19534,7 @@ export type TaggedResourceRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  resourceFilters?: Maybe<Array<Maybe<TaggedResourceModelResourceFiltersField>>>
+  resourceFilters: Array<TaggedResourceModelResourceFiltersField>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -18284,7 +19556,7 @@ export type TemplatePageModelContentField =
 export type TemplatePageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -18357,7 +19629,7 @@ export type TemplatePageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<TemplatePageModelContentField>>>
+  content: Array<TemplatePageModelContentField>
   createdAt: Scalars["DateTime"]
   darkSubnav?: Maybe<Scalars["BooleanType"]>
   draft?: Maybe<Scalars["BooleanType"]>
@@ -18382,7 +19654,7 @@ export type TemplatePageRecord_SeoMetaTagsArgs = {
 export type TerraformGraphSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18437,8 +19709,8 @@ export type TerraformGraphSectionRecord = {
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  serviceImages?: Maybe<Array<Maybe<FileField>>>
-  stackImages?: Maybe<Array<Maybe<FileField>>>
+  serviceImages: Array<FileField>
+  stackImages: Array<FileField>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -18450,7 +19722,7 @@ export type TerraformGraphSectionRecord_SeoMetaTagsArgs = {
 export type TerraformOfferingCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18504,7 +19776,7 @@ export type TerraformOfferingCategoryRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
-  tier?: Maybe<Array<Maybe<TerraformOfferingTierRecord>>>
+  tier?: Maybe<Array<TerraformOfferingTierRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -18516,7 +19788,7 @@ export type TerraformOfferingCategoryRecord_SeoMetaTagsArgs = {
 export type TerraformOfferingModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
@@ -18592,7 +19864,7 @@ export type TerraformOfferingRecord_SeoMetaTagsArgs = {
 export type TerraformOfferingTableModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18640,7 +19912,7 @@ export type TerraformOfferingTableRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  categories?: Maybe<Array<Maybe<TerraformOfferingCategoryRecord>>>
+  categories?: Maybe<Array<TerraformOfferingCategoryRecord>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -18654,7 +19926,7 @@ export type TerraformOfferingTableRecord_SeoMetaTagsArgs = {
 export type TerraformOfferingTierModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18719,7 +19991,7 @@ export type TerraformOfferingTierRecord = {
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
-  offerings?: Maybe<Array<Maybe<TerraformOfferingRecord>>>
+  offerings?: Maybe<Array<TerraformOfferingRecord>>
   subheading?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -18764,7 +20036,7 @@ export type TerraformProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<Maybe<SectionBlockPageRecord>>>
+  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
   useCasesSection?: Maybe<SectionBlockV2Record>
 }
 
@@ -18776,7 +20048,7 @@ export type TerraformProductPageRecord_SeoMetaTagsArgs = {
 export type TestimonialModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18865,7 +20137,7 @@ export type TestimonialSliderRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  testimonials?: Maybe<Array<Maybe<TestimonialRecord>>>
+  testimonials?: Maybe<Array<TestimonialRecord>>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -18877,9 +20149,9 @@ export type TestimonialSliderRecord_SeoMetaTagsArgs = {
 /** Specifies how to filter text fields */
 export type TextFilter = {
   /** Filter records based on a regular expression */
-  matches?: Maybe<TextMatchesFilter>
+  matches?: Maybe<StringMatchesFilter>
   /** Exclude records based on a regular expression */
-  notMatches?: Maybe<TextMatchesFilter>
+  notMatches?: Maybe<StringMatchesFilter>
   /** Filter records with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
 }
@@ -18887,7 +20159,7 @@ export type TextFilter = {
 export type TextHeadlineAndGridSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -18942,7 +20214,7 @@ export type TextHeadlineAndGridSectionRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<Maybe<CompanyRecord>>>
+  companies?: Maybe<Array<CompanyRecord>>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
@@ -18964,7 +20236,7 @@ export type TextHeadlineAndGridSectionRecordDescriptionArgs = {
 export type TextHeadlineSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -19067,7 +20339,7 @@ export type TextImageRecordTextArgs = {
 export type TextImageSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -19145,15 +20417,10 @@ export type TextImageSectionRecordTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type TextMatchesFilter = {
-  pattern: Scalars["String"]
-  caseSensitive?: Maybe<Scalars["BooleanType"]>
-}
-
 export type TextSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -19288,7 +20555,7 @@ export type TmpHomepageRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   tmpHeadline?: Maybe<Scalars["String"]>
-  tmpHomepageNews?: Maybe<Array<Maybe<NewsItemRecord>>>
+  tmpHomepageNews?: Maybe<Array<NewsItemRecord>>
   tmpSeo?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
 }
@@ -19315,7 +20582,7 @@ export type TmpmodelAboutPageRecord = {
   heroSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  people?: Maybe<Array<Maybe<PersonRecord>>>
+  people?: Maybe<Array<PersonRecord>>
   peopleSectionHeader?: Maybe<SbcSectionHeaderRecord>
   preFooterButton?: Maybe<SbcButtonV2Record>
   preFooterSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -19340,7 +20607,7 @@ export type TmpmodelAboutPageRecordWhoWeAreDescriptionArgs = {
 export type TmpmodelButtonModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -19461,11 +20728,11 @@ export type TmpmodelConsulOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
+  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howConsulWorksSection?: Maybe<SbcTextAndContentRecord>
@@ -19473,7 +20740,7 @@ export type TmpmodelConsulOverviewPageRecord = {
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -19532,19 +20799,17 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  ctaSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  ctaSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  resellersIntegratorsCompaniesHyperSpecialized?: Maybe<
-    Array<Maybe<CompanyRecord>>
-  >
-  resellersIntegratorsCompaniesSpecialized?: Maybe<Array<Maybe<CompanyRecord>>>
+  resellersIntegratorsCompaniesHyperSpecialized?: Maybe<Array<CompanyRecord>>
+  resellersIntegratorsCompaniesSpecialized?: Maybe<Array<CompanyRecord>>
   resellersIntegratorsLabel?: Maybe<Scalars["String"]>
   resellersIntegratorsTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
-  trainingPartnersCompanies?: Maybe<Array<Maybe<CompanyRecord>>>
+  trainingPartnersCompanies?: Maybe<Array<CompanyRecord>>
   trainingPartnersLabel?: Maybe<Scalars["String"]>
   trainingPartnersTooltip?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -19583,9 +20848,9 @@ export type TmpmodelEcosystemLandingPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  content?: Maybe<Array<SbcTextAndContentRecord>>
   createdAt: Scalars["DateTime"]
-  ctaSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  ctaSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -19646,11 +20911,11 @@ export type TmpmodelNomadOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
+  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howNomadWorksSection?: Maybe<SbcTextAndContentRecord>
@@ -19658,7 +20923,7 @@ export type TmpmodelNomadOverviewPageRecord = {
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -19688,19 +20953,19 @@ export type TmpmodelTerraformOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
+  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
-  howTerraformWorksSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  howTerraformWorksSection?: Maybe<Array<SbcTextAndContentRecord>>
   howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -19766,7 +21031,7 @@ export type TmpmodelTrainingPageRecord = {
   id: Scalars["ItemId"]
   privateTrainingSection?: Maybe<SbcSectionHeaderRecord>
   publicTrainingSection?: Maybe<SbcSectionHeaderRecord>
-  trainingCourses?: Maybe<Array<Maybe<TrainingCourseRecord>>>
+  trainingCourses?: Maybe<Array<TrainingCourseRecord>>
   trainingDescription?: Maybe<Scalars["String"]>
   trainingHeadline?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -19870,21 +21135,21 @@ export type TmpmodelVaultOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<Maybe<SbcCaseStudyRecord>>>
+  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<Maybe<TmpmodelButtonRecord>>>
+  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
-  howVaultWorksSection?: Maybe<
-    Array<Maybe<TmpmodelVaultOverviewPageModelHowVaultWorksSectionField>>
+  howVaultWorksSection: Array<
+    TmpmodelVaultOverviewPageModelHowVaultWorksSectionField
   >
   howVaultWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<Maybe<SbcTextAndContentRecord>>>
+  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -19903,7 +21168,7 @@ export type TmpmodelVaultOverviewPageRecord_SeoMetaTagsArgs = {
 export type TrainingCourseModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -19994,12 +21259,12 @@ export type TrainingPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  extraContent?: Maybe<Array<Maybe<TrainingPageModelExtraContentField>>>
+  extraContent: Array<TrainingPageModelExtraContentField>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
-  trainingCourses?: Maybe<Array<Maybe<TrainingCourseRecord>>>
+  trainingCourses?: Maybe<Array<TrainingCourseRecord>>
   trainingDescription?: Maybe<Scalars["String"]>
   trainingHeadline?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -20018,7 +21283,7 @@ export type TrainingPageRecordTrainingDescriptionArgs = {
 export type TrainingPartnerSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20091,7 +21356,7 @@ export type TrainingPartnerSectionRecordDescriptionArgs = {
 export type TrialFormPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20171,7 +21436,7 @@ export type TrialFormPageRecord = {
   nextStepLink?: Maybe<Scalars["String"]>
   productId?: Maybe<Scalars["String"]>
   productVersion?: Maybe<Scalars["String"]>
-  sidebarCompanyLogos?: Maybe<Array<Maybe<CompanyRecord>>>
+  sidebarCompanyLogos?: Maybe<Array<CompanyRecord>>
   sidebarLogo?: Maybe<FileField>
   sidebarText?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
@@ -20261,7 +21526,7 @@ export type TwoColumnTextRecordRightColumnArgs = {
 export type TwoColumnTextSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20329,10 +21594,389 @@ export type TwoColumnTextSectionRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Specifies how to filter by upload type */
+export type TypeFilter = {
+  /** Search uploads with the specified type */
+  eq?: Maybe<UploadType>
+  /** Exclude uploads with the specified type */
+  neq?: Maybe<UploadType>
+  /** Search uploads with the specified types */
+  in?: Maybe<Array<Maybe<UploadType>>>
+  /** Search uploads without the specified types */
+  notIn?: Maybe<Array<Maybe<UploadType>>>
+}
+
+export type Upload = {
+  __typename?: "Upload"
+  _createdAt: Scalars["DateTime"]
+  _updatedAt: Scalars["DateTime"]
+  alt?: Maybe<Scalars["String"]>
+  author?: Maybe<Scalars["String"]>
+  basename: Scalars["String"]
+  blurUpThumb?: Maybe<Scalars["String"]>
+  blurhash?: Maybe<Scalars["String"]>
+  colors: Array<Maybe<ColorField>>
+  copyright?: Maybe<Scalars["String"]>
+  customData?: Maybe<Scalars["CustomData"]>
+  exifInfo?: Maybe<Scalars["CustomData"]>
+  filename: Scalars["String"]
+  format: Scalars["String"]
+  height?: Maybe<Scalars["IntType"]>
+  id: Scalars["UploadId"]
+  mimeType: Scalars["String"]
+  notes?: Maybe<Scalars["String"]>
+  responsiveImage?: Maybe<ResponsiveImage>
+  size: Scalars["IntType"]
+  smartTags: Array<Maybe<Scalars["String"]>>
+  tags: Array<Maybe<Scalars["String"]>>
+  title?: Maybe<Scalars["String"]>
+  url: Scalars["String"]
+  video?: Maybe<UploadVideoField>
+  width?: Maybe<Scalars["IntType"]>
+}
+
+export type UploadAltArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type UploadBlurUpThumbArgs = {
+  punch?: Maybe<Scalars["Float"]>
+  size?: Maybe<Scalars["Int"]>
+  quality?: Maybe<Scalars["Int"]>
+  imgixParams?: Maybe<ImgixParams>
+}
+
+export type UploadCustomDataArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type UploadResponsiveImageArgs = {
+  imgixParams?: Maybe<ImgixParams>
+  sizes?: Maybe<Scalars["String"]>
+}
+
+export type UploadTitleArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type UploadUrlArgs = {
+  imgixParams?: Maybe<ImgixParams>
+}
+
+/** Specifies how to filter by default alt */
+export type UploadAltFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Search the asset with the specified alt */
+  eq?: Maybe<Scalars["String"]>
+  /** Exclude the asset with the specified alt */
+  neq?: Maybe<Scalars["String"]>
+  /** Search assets with the specified values as default alt */
+  in?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Search assets that do not have the specified values as default alt */
+  notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+}
+
+/** Specifies how to filter by auhtor */
+export type UploadAuthorFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+}
+
+/** Specifies how to filter by basename */
+export type UploadBasenameFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+}
+
+/** Specifies how to filter by colors */
+export type UploadColorsFilter = {
+  /** Filter uploads that have the specified colors */
+  contains?: Maybe<ColorBucketType>
+  /** Filter uploads that have all of the specified colors */
+  allIn?: Maybe<Array<Maybe<ColorBucketType>>>
+  /** Filter uploads that have at least one of the specified colors */
+  anyIn?: Maybe<Array<Maybe<ColorBucketType>>>
+  /** Filter uploads that do not have any of the specified colors */
+  notIn?: Maybe<Array<Maybe<ColorBucketType>>>
+  /** Search for uploads with an exact match */
+  eq?: Maybe<Array<Maybe<ColorBucketType>>>
+}
+
+/** Specifies how to filter by copyright */
+export type UploadCopyrightFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+}
+
+/** Specifies how to filter for date of creation */
+export type UploadCreatedAtFilter = {
+  /** Search for uploads with an exact match */
+  eq?: Maybe<Scalars["DateTime"]>
+  /** Exclude uploads with an exact match */
+  neq?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's less than the one specified */
+  lt?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's less or equal than the one specified */
+  lte?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's strictly greater than the one specified */
+  gt?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's greater than or equal to the one specified */
+  gte?: Maybe<Scalars["DateTime"]>
+}
+
+/** Specifies how to filter by filename */
+export type UploadFilenameFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+}
+
+export type UploadFilter = {
+  type?: Maybe<TypeFilter>
+  inUse?: Maybe<InUseFilter>
+  resolution?: Maybe<ResolutionFilter>
+  size?: Maybe<UploadSizeFilter>
+  tags?: Maybe<UploadTagsFilter>
+  smartTags?: Maybe<UploadTagsFilter>
+  colors?: Maybe<UploadColorsFilter>
+  orientation?: Maybe<OrientationFilter>
+  id?: Maybe<UploadIdFilter>
+  mimeType?: Maybe<UploadMimeTypeFilter>
+  format?: Maybe<UploadFormatFilter>
+  height?: Maybe<UploadHeightFilter>
+  width?: Maybe<UploadWidthFilter>
+  alt?: Maybe<UploadAltFilter>
+  title?: Maybe<UploadTitleFilter>
+  notes?: Maybe<UploadNotesFilter>
+  author?: Maybe<UploadAuthorFilter>
+  copyright?: Maybe<UploadCopyrightFilter>
+  basename?: Maybe<UploadBasenameFilter>
+  filename?: Maybe<UploadFilenameFilter>
+  _createdAt?: Maybe<UploadCreatedAtFilter>
+  _updatedAt?: Maybe<UploadUpdatedAtFilter>
+  OR?: Maybe<Array<Maybe<UploadFilter>>>
+}
+
+/** Specifies how to filter by format */
+export type UploadFormatFilter = {
+  /** Search the asset with the specified format */
+  eq?: Maybe<Scalars["String"]>
+  /** Exclude the asset with the specified format */
+  neq?: Maybe<Scalars["String"]>
+  /** Search assets with the specified formats */
+  in?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Search assets that do not have the specified formats */
+  notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+}
+
+/** Specifies how to filter by height */
+export type UploadHeightFilter = {
+  /** Search all assets larger than the specified height */
+  gt?: Maybe<Scalars["IntType"]>
+  /** Search all assets smaller than the specified height */
+  lt?: Maybe<Scalars["IntType"]>
+  /** Search all assets larger or equal to the specified height */
+  gte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  /** Search all assets larger or equal to the specified height */
+  lte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  /** Search assets with the specified height */
+  eq?: Maybe<Scalars["IntType"]>
+  /** Search assets that do not have the specified height */
+  neq?: Maybe<Scalars["IntType"]>
+}
+
+/** Specifies how to filter by ID */
+export type UploadIdFilter = {
+  /** Search the asset with the specified ID */
+  eq?: Maybe<Scalars["UploadId"]>
+  /** Exclude the asset with the specified ID */
+  neq?: Maybe<Scalars["UploadId"]>
+  /** Search assets with the specified IDs */
+  in?: Maybe<Array<Maybe<Scalars["UploadId"]>>>
+  /** Search assets that do not have the specified IDs */
+  notIn?: Maybe<Array<Maybe<Scalars["UploadId"]>>>
+}
+
+/** Specifies how to filter by mime type */
+export type UploadMimeTypeFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Search the asset with the specified mime type */
+  eq?: Maybe<Scalars["String"]>
+  /** Exclude the asset with the specified mime type */
+  neq?: Maybe<Scalars["String"]>
+  /** Search assets with the specified mime types */
+  in?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Search assets that do not have the specified mime types */
+  notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+}
+
+/** Specifies how to filter by notes */
+export type UploadNotesFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+}
+
+export enum UploadOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  SizeAsc = "size_ASC",
+  SizeDesc = "size_DESC",
+  ResolutionAsc = "resolution_ASC",
+  ResolutionDesc = "resolution_DESC",
+  FilenameAsc = "filename_ASC",
+  FilenameDesc = "filename_DESC",
+  BasenameAsc = "basename_ASC",
+  BasenameDesc = "basename_DESC",
+  MimeTypeAsc = "mimeType_ASC",
+  MimeTypeDesc = "mimeType_DESC",
+  FormatAsc = "format_ASC",
+  FormatDesc = "format_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC"
+}
+
+export enum UploadOrientation {
+  Landscape = "landscape",
+  Portrait = "portrait",
+  Square = "square"
+}
+
+/** Specifies how to filter by size */
+export type UploadSizeFilter = {
+  /** Search all assets larger than the specified size */
+  gt?: Maybe<Scalars["IntType"]>
+  /** Search all assets smaller than the specified size */
+  lt?: Maybe<Scalars["IntType"]>
+  /** Search all assets larger or equal to the specified size */
+  gte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  /** Search all assets larger or equal to the specified size */
+  lte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  /** Search assets with the specified size */
+  eq?: Maybe<Scalars["IntType"]>
+  /** Search assets that do not have the specified size */
+  neq?: Maybe<Scalars["IntType"]>
+}
+
+/** Specifies how to filter by tags */
+export type UploadTagsFilter = {
+  /** Filter uploads linked to the specified tag */
+  contains?: Maybe<Scalars["String"]>
+  /** Filter uploads linked to all of the specified tags */
+  allIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Filter uploads linked to at least one of the specified tags */
+  anyIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Filter uploads not linked to any of the specified tags */
+  notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Search for uploads with an exact match */
+  eq?: Maybe<Array<Maybe<Scalars["String"]>>>
+}
+
+/** Specifies how to filter by default title */
+export type UploadTitleFilter = {
+  /** Filter uploads based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude uploads based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Search the asset with the specified title */
+  eq?: Maybe<Scalars["String"]>
+  /** Exclude the asset with the specified title */
+  neq?: Maybe<Scalars["String"]>
+  /** Search assets with the specified as default title */
+  in?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Search assets that do not have the specified as default title */
+  notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+}
+
+export enum UploadType {
+  Image = "image",
+  Audio = "audio",
+  Video = "video",
+  Richtext = "richtext",
+  Presentation = "presentation",
+  Spreadsheet = "spreadsheet",
+  Pdfdocument = "pdfdocument",
+  Archive = "archive"
+}
+
+/** Specifies how to filter for date of creation */
+export type UploadUpdatedAtFilter = {
+  /** Search for uploads with an exact match */
+  eq?: Maybe<Scalars["DateTime"]>
+  /** Exclude uploads with an exact match */
+  neq?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's less than the one specified */
+  lt?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's less or equal than the one specified */
+  lte?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's strictly greater than the one specified */
+  gt?: Maybe<Scalars["DateTime"]>
+  /** Filter uploads with a value that's greater than or equal to the one specified */
+  gte?: Maybe<Scalars["DateTime"]>
+}
+
+export type UploadVideoField = {
+  __typename?: "UploadVideoField"
+  duration: Scalars["Int"]
+  framerate: Scalars["Int"]
+  mp4Url?: Maybe<Scalars["String"]>
+  muxAssetId: Scalars["String"]
+  muxPlaybackId: Scalars["String"]
+  streamingUrl: Scalars["String"]
+  thumbnailUrl: Scalars["String"]
+}
+
+export type UploadVideoFieldMp4UrlArgs = {
+  res?: Maybe<VideoMp4Res>
+  exactRes?: Maybe<VideoMp4Res>
+}
+
+export type UploadVideoFieldThumbnailUrlArgs = {
+  format?: Maybe<MuxThumbnailFormatType>
+}
+
+/** Specifies how to filter by width */
+export type UploadWidthFilter = {
+  /** Search all assets larger than the specified width */
+  gt?: Maybe<Scalars["IntType"]>
+  /** Search all assets smaller than the specified width */
+  lt?: Maybe<Scalars["IntType"]>
+  /** Search all assets larger or equal to the specified width */
+  gte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  /** Search all assets larger or equal to the specified width */
+  lte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  /** Search assets with the specified width */
+  eq?: Maybe<Scalars["IntType"]>
+  /** Search assets that do not have the specified width */
+  neq?: Maybe<Scalars["IntType"]>
+}
+
 export type UseCasePageDropdownModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20440,7 +22084,7 @@ export type VaultAdvancedDataProtectionPageRecordDiagramTwoTextArgs = {
 export type VaultIntegrationSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20528,11 +22172,12 @@ export type VaultOssPageRecord = {
   featuresHeadline?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
+  infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
   ossEnterpriseCtas?: Maybe<SplitCtaSectionRecord>
   updatedAt: Scalars["DateTime"]
   useCases?: Maybe<SbcUseCasesSectionRecord>
-  useCasesCallouts?: Maybe<Array<Maybe<SbcCalloutSectionRecord>>>
+  useCasesCallouts?: Maybe<Array<SbcCalloutSectionRecord>>
   useCasesHeadline?: Maybe<SbcSectionHeaderRecord>
 }
 
@@ -20571,7 +22216,7 @@ export type VaultProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<Maybe<SectionBlockPageRecord>>>
+  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
   useCasesSection?: Maybe<SectionBlockV2Record>
 }
 
@@ -20583,7 +22228,7 @@ export type VaultProductPageRecord_SeoMetaTagsArgs = {
 export type VerticalTextBlockListItemModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20660,7 +22305,7 @@ export type VerticalTextBlockListItemRecordBodyArgs = {
 export type VerticalTextBlockListSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20717,7 +22362,7 @@ export type VerticalTextBlockListSectionRecord = {
   centerText?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<Maybe<VerticalTextBlockListItemRecord>>>
+  items?: Maybe<Array<VerticalTextBlockListItemRecord>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -20742,6 +22387,12 @@ export type VideoField = {
 export type VideoFilter = {
   /** Filter records with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
+}
+
+export enum VideoMp4Res {
+  Low = "low",
+  Medium = "medium",
+  High = "high"
 }
 
 /** Record of type Video (video) */
@@ -20772,7 +22423,7 @@ export type VideoRecord_SeoMetaTagsArgs = {
 export type VideoSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20834,7 +22485,7 @@ export type VideoSectionRecord_SeoMetaTagsArgs = {
 export type VideoSourceModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20907,7 +22558,7 @@ export type WebinarModelBodyContentField =
 export type WebinarModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -20992,24 +22643,22 @@ export type WebinarRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
-  bodyContent?: Maybe<Array<Maybe<WebinarModelBodyContentField>>>
+  bodyContent: Array<WebinarModelBodyContentField>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<Maybe<EventRecord>>>
-  heroContent?: Maybe<Array<Maybe<WebinarModelHeroContentField>>>
+  events?: Maybe<Array<EventRecord>>
+  heroContent: Array<WebinarModelHeroContentField>
   id: Scalars["ItemId"]
-  industry?: Maybe<Array<Maybe<ResourceIndustryRecord>>>
-  infrastructureProvider?: Maybe<
-    Array<Maybe<ResourceInfrastructureProviderRecord>>
-  >
+  industry?: Maybe<Array<ResourceIndustryRecord>>
+  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
   metadata?: Maybe<SeoField>
-  organizations?: Maybe<Array<Maybe<CompanyRecord>>>
-  people?: Maybe<Array<Maybe<PersonRecord>>>
+  organizations?: Maybe<Array<CompanyRecord>>
+  people?: Maybe<Array<PersonRecord>>
   primaryInfrastructureProvider?: Maybe<ResourceInfrastructureProviderRecord>
   primaryProduct?: Maybe<OpenSourceToolRecord>
-  product?: Maybe<Array<Maybe<WebinarModelProductField>>>
+  product: Array<WebinarModelProductField>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
@@ -21030,7 +22679,7 @@ export type WebinarRecordDescriptionArgs = {
 export type WhitePaperModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -21096,7 +22745,7 @@ export type WhitePaperRecord_SeoMetaTagsArgs = {
 export type WistiaSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<IdFilter>
+  id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
