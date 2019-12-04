@@ -495,7 +495,7 @@ export type BlogPostRecord = {
   _updatedAt: Scalars["DateTime"]
   author?: Maybe<PersonRecord>
   body?: Maybe<Scalars["String"]>
-  categories?: Maybe<Array<BlogPostCategoryRecord>>
+  categories: Array<BlogPostCategoryRecord>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   dateTime?: Maybe<Scalars["DateTime"]>
@@ -861,12 +861,12 @@ export type CalloutSectionRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   calloutImage?: Maybe<FileField>
-  companies?: Maybe<Array<CompanyRecord>>
+  companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  items?: Maybe<Array<CalloutItemRecord>>
+  items: Array<CalloutItemRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -895,7 +895,7 @@ export type CalloutsSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<CalloutItemRecord>>
+  items: Array<CalloutItemRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -1144,12 +1144,12 @@ export type CommunityLandingPageRecord = {
   conversationSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
   eventsButton?: Maybe<SbcMultiButtonRecord>
-  eventsFeatured?: Maybe<Array<HashiconfRecord>>
+  eventsFeatured: Array<HashiconfRecord>
   eventsSectionHeader?: Maybe<SbcSectionHeaderRecord>
   findYourUserGroupButtons?: Maybe<SbcMultiButtonRecord>
   findYourUserGroupSectionHeader?: Maybe<SbcSectionHeaderRecord>
   gettingStartedSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  gettingStartedTools?: Maybe<Array<OpenSourceToolRecord>>
+  gettingStartedTools: Array<OpenSourceToolRecord>
   headerAlert?: Maybe<SbcAlertRecord>
   headerButtonCollection?: Maybe<SbcMultiButtonRecord>
   headerCommunityImageRow: Array<FileField>
@@ -1252,7 +1252,7 @@ export type CompanyRecord = {
   logo?: Maybe<FileField>
   monochromeLogo?: Maybe<FileField>
   name?: Maybe<Scalars["String"]>
-  productIntegrations?: Maybe<Array<OpenSourceToolRecord>>
+  productIntegrations: Array<OpenSourceToolRecord>
   productIntegrationsV2?: Maybe<Array<Maybe<ProductIntegrationRecord>>>
   slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -1408,7 +1408,7 @@ export type ConsulProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
+  useCasePages: Array<SectionBlockPageRecord>
   useCasesSection?: Maybe<SectionBlockV2Record>
 }
 
@@ -1592,7 +1592,7 @@ export type ContactPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  categories?: Maybe<Array<ContactCategoryRecord>>
+  categories: Array<ContactCategoryRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
@@ -1740,7 +1740,7 @@ export type DropdownLinkRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  links?: Maybe<Array<LinkRecord>>
+  links: Array<LinkRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -1763,23 +1763,23 @@ export type EcosystemFindAPartnerPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<SectionBlockV2Record>>
+  content: Array<SectionBlockV2Record>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  integratorsBronze?: Maybe<Array<CompanyRecord>>
-  integratorsGold?: Maybe<Array<CompanyRecord>>
+  integratorsBronze: Array<CompanyRecord>
+  integratorsGold: Array<CompanyRecord>
   integratorsLabel?: Maybe<Scalars["String"]>
-  integratorsSilver?: Maybe<Array<CompanyRecord>>
+  integratorsSilver: Array<CompanyRecord>
   integratorsTooltip?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  resellersBronze?: Maybe<Array<CompanyRecord>>
-  resellersGold?: Maybe<Array<CompanyRecord>>
+  resellersBronze: Array<CompanyRecord>
+  resellersGold: Array<CompanyRecord>
   resellersLabel?: Maybe<Scalars["String"]>
-  resellersSilver?: Maybe<Array<CompanyRecord>>
+  resellersSilver: Array<CompanyRecord>
   resellersTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
-  trainers?: Maybe<Array<CompanyRecord>>
+  trainers: Array<CompanyRecord>
   trainersLabel?: Maybe<Scalars["String"]>
   trainersTooltip?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -1823,9 +1823,9 @@ export type EcosystemLandingPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<SectionBlockV2Record>>
+  content: Array<SectionBlockV2Record>
   createdAt: Scalars["DateTime"]
-  ctaButtonsTest?: Maybe<Array<SbcButtonRecord>>
+  ctaButtonsTest: Array<SbcButtonRecord>
   ctaHeadlineTest?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -2076,7 +2076,7 @@ export type EmployeePageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<HashiconfSectionBlockRecord>>
+  content: Array<HashiconfSectionBlockRecord>
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -2219,7 +2219,7 @@ export type EnterprisePricingSectionRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   internalName?: Maybe<Scalars["String"]>
-  packageOptions?: Maybe<Array<ProductPricingPlanRecord>>
+  packageOptions: Array<ProductPricingPlanRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -2383,7 +2383,7 @@ export type EnterpriseProductPageRecord = {
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
   draft?: Maybe<Scalars["BooleanType"]>
-  faqs?: Maybe<Array<FaqCategoryRecord>>
+  faqs: Array<FaqCategoryRecord>
   faqsPreFooterCta?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
@@ -2394,7 +2394,7 @@ export type EnterpriseProductPageRecord = {
   subnav?: Maybe<EnterpriseProductSubnavRecord>
   trialForm?: Maybe<TrialFormPageRecord>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<EnterpriseProductUseCasePageRecord>>
+  useCasePages: Array<EnterpriseProductUseCasePageRecord>
 }
 
 /** Record of type Enterprise Product Page (deprecated) (enterprise_product_page) */
@@ -2696,7 +2696,7 @@ export type EventRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
-  eventType?: Maybe<Array<EventTypeRecord>>
+  eventType: Array<EventTypeRecord>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   location?: Maybe<Scalars["String"]>
@@ -2726,7 +2726,7 @@ export type EventsPageRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   eventCtas?: Maybe<Array<Maybe<EventCtasItemRecord>>>
-  events?: Maybe<Array<EventRecord>>
+  events: Array<EventRecord>
   featuredEvents?: Maybe<Array<Maybe<FeaturedEventRecord>>>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -3028,16 +3028,16 @@ export type ExternalResourceRecord = {
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<EventRecord>>
+  events: Array<EventRecord>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  industry?: Maybe<Array<ResourceIndustryRecord>>
-  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
+  industry: Array<ResourceIndustryRecord>
+  infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   link?: Maybe<Scalars["String"]>
   mediaType?: Maybe<ResourceMediaTypeRecord>
   metadata?: Maybe<SeoField>
-  organizations?: Maybe<Array<CompanyRecord>>
-  people?: Maybe<Array<PersonRecord>>
+  organizations: Array<CompanyRecord>
+  people: Array<PersonRecord>
   product: Array<ExternalResourceModelProductField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -3237,8 +3237,8 @@ export type FeatureRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  isAnUpgradeIn?: Maybe<Array<ProductPricingPlanRecord>>
-  offeredIn?: Maybe<Array<ProductPricingPlanRecord>>
+  isAnUpgradeIn: Array<ProductPricingPlanRecord>
+  offeredIn: Array<ProductPricingPlanRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3375,7 +3375,7 @@ export type FeatureTableRecord = {
   applyLink?: Maybe<LinkRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  tabs?: Maybe<Array<FeatureTableTabRecord>>
+  tabs: Array<FeatureTableTabRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3440,7 +3440,7 @@ export type FeatureTableRowRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  columnValues?: Maybe<Array<FeatureTableRowValueRecord>>
+  columnValues: Array<FeatureTableRowValueRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
@@ -3579,10 +3579,10 @@ export type FeatureTableTabRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  columns?: Maybe<Array<FeatureTableColumnRecord>>
+  columns: Array<FeatureTableColumnRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  rows?: Maybe<Array<FeatureTableRowRecord>>
+  rows: Array<FeatureTableRowRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -3621,6 +3621,10 @@ export type FileField = {
   width?: Maybe<Scalars["IntType"]>
 }
 
+export type FileFieldAltArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type FileFieldBlurUpThumbArgs = {
   punch?: Maybe<Scalars["Float"]>
   size?: Maybe<Scalars["Int"]>
@@ -3628,9 +3632,17 @@ export type FileFieldBlurUpThumbArgs = {
   imgixParams?: Maybe<ImgixParams>
 }
 
+export type FileFieldCustomDataArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type FileFieldResponsiveImageArgs = {
   imgixParams?: Maybe<ImgixParams>
   sizes?: Maybe<Scalars["String"]>
+}
+
+export type FileFieldTitleArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type FileFieldUrlArgs = {
@@ -3834,7 +3846,7 @@ export type FormMultiSelectFieldRecord = {
   id: Scalars["ItemId"]
   label?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
-  options?: Maybe<Array<FormMultiSelectOptionRecord>>
+  options: Array<FormMultiSelectOptionRecord>
   required?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -4044,7 +4056,7 @@ export type GlobalFooterBasicRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  links?: Maybe<Array<LinkRecord>>
+  links: Array<LinkRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -4066,22 +4078,22 @@ export type GlobalFooterRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  allProductLinks?: Maybe<Array<LinkRecord>>
+  allProductLinks: Array<LinkRecord>
   company?: Maybe<Scalars["String"]>
-  companyLinks?: Maybe<Array<LinkRecord>>
+  companyLinks: Array<LinkRecord>
   copyrightText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
-  disclaimerLinks?: Maybe<Array<LinkRecord>>
+  disclaimerLinks: Array<LinkRecord>
   id: Scalars["ItemId"]
-  openSourceLinks?: Maybe<Array<OpenSourceToolRecord>>
-  partnerLinks?: Maybe<Array<LinkRecord>>
+  openSourceLinks: Array<OpenSourceToolRecord>
+  partnerLinks: Array<LinkRecord>
   partners?: Maybe<Scalars["String"]>
   primaryLogo?: Maybe<FileField>
-  productLinks?: Maybe<Array<EnterpriseProductRecord>>
+  productLinks: Array<EnterpriseProductRecord>
   products?: Maybe<Scalars["String"]>
   resources?: Maybe<Scalars["String"]>
-  resourcesLinks?: Maybe<Array<LinkRecord>>
-  socialLinks?: Maybe<Array<SocialNetworkRecord>>
+  resourcesLinks: Array<LinkRecord>
+  socialLinks: Array<SocialNetworkRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -4104,19 +4116,19 @@ export type GlobalNavigationRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companyImageLockup?: Maybe<ImageLockupRecord>
-  companyLinks?: Maybe<Array<IconLinkRecord>>
+  companyLinks: Array<IconLinkRecord>
   createdAt: Scalars["DateTime"]
   ctaButton?: Maybe<Button2Record>
-  enterpriseProducts?: Maybe<Array<EnterpriseProductRecord>>
+  enterpriseProducts: Array<EnterpriseProductRecord>
   id: Scalars["ItemId"]
-  navigationLinks?: Maybe<Array<LinkRecord>>
+  navigationLinks: Array<LinkRecord>
   openSourceImageLockup?: Maybe<ImageLockupRecord>
-  openSourceTools?: Maybe<Array<OpenSourceToolRecord>>
+  openSourceTools: Array<OpenSourceToolRecord>
   partnerImageLockup?: Maybe<ImageLockupRecord>
-  partnerLinks?: Maybe<Array<IconLinkRecord>>
+  partnerLinks: Array<IconLinkRecord>
   primaryLogo?: Maybe<FileField>
   productsImageLockup?: Maybe<ImageLockupRecord>
-  resourceLinks?: Maybe<Array<IconLinkRecord>>
+  resourceLinks: Array<IconLinkRecord>
   resourcesImageLockup?: Maybe<ImageLockupRecord>
   updatedAt: Scalars["DateTime"]
 }
@@ -4315,7 +4327,7 @@ export type HashiconfFeaturedSpeakersSectionRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   secondaryText?: Maybe<Scalars["String"]>
-  speakers?: Maybe<Array<HashiconfSpeakerRecord>>
+  speakers: Array<HashiconfSpeakerRecord>
   text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -4417,14 +4429,14 @@ export type HashiconfLandingPageRecord = {
   aboutImage2?: Maybe<FileField>
   aboutImage3?: Maybe<FileField>
   aboutLink?: Maybe<LinkRecord>
-  content?: Maybe<Array<HashiconfSectionBlockRecord>>
+  content: Array<HashiconfSectionBlockRecord>
   createdAt: Scalars["DateTime"]
   heroDescription?: Maybe<Scalars["String"]>
   heroHelpText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  nav?: Maybe<Array<LinkRecord>>
-  preFooterNav?: Maybe<Array<LinkRecord>>
+  nav: Array<LinkRecord>
+  preFooterNav: Array<LinkRecord>
   subPages: Array<HashiconfLandingPageModelSubPagesField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -4619,7 +4631,7 @@ export type HashiconfRecord = {
   schedulePage?: Maybe<HashiconfSchedulePageRecord>
   speakersPage?: Maybe<HashiconfSpeakersPageRecord>
   title?: Maybe<Scalars["String"]>
-  trainingCalloutButtons?: Maybe<Array<SbcButtonRecord>>
+  trainingCalloutButtons: Array<SbcButtonRecord>
   trainingCalloutText?: Maybe<Scalars["String"]>
   trainingDayPage?: Maybe<HashiconfTrainingDayRecord>
   twitterHandle?: Maybe<Scalars["String"]>
@@ -4951,7 +4963,7 @@ export type HashiconfSchedulePageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  days?: Maybe<Array<HashiconfScheduleDayRecord>>
+  days: Array<HashiconfScheduleDayRecord>
   header?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
@@ -5080,7 +5092,7 @@ export type HashiconfSectionBlockPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<HashiconfSectionBlockRecord>>
+  content: Array<HashiconfSectionBlockRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
@@ -5207,16 +5219,16 @@ export type HashiconfSessionRecord = {
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   endTime?: Maybe<Scalars["String"]>
-  experienceLevels?: Maybe<Array<ExperienceLevelRecord>>
+  experienceLevels: Array<ExperienceLevelRecord>
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
   location?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  productTypes?: Maybe<Array<ProductTypeRecord>>
-  products?: Maybe<Array<OpenSourceToolRecord>>
+  productTypes: Array<ProductTypeRecord>
+  products: Array<OpenSourceToolRecord>
   room?: Maybe<LocationRoomRecord>
   slug?: Maybe<Scalars["String"]>
-  speakers?: Maybe<Array<HashiconfSpeakerRecord>>
+  speakers: Array<HashiconfSpeakerRecord>
   startTime?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainer?: Maybe<Scalars["String"]>
@@ -5462,12 +5474,12 @@ export type HashiconfSponsorSectionRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<SbcButtonRecord>>
+  buttons: Array<SbcButtonRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  platinumSponsors?: Maybe<Array<CompanyRecord>>
+  platinumSponsors: Array<CompanyRecord>
   secondaryText?: Maybe<Scalars["String"]>
-  sponsors?: Maybe<Array<CompanyRecord>>
+  sponsors: Array<CompanyRecord>
   text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -5543,7 +5555,7 @@ export type HashiconfTextAndFullImageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<SbcButtonRecord>>
+  buttons: Array<SbcButtonRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
@@ -5629,7 +5641,7 @@ export type HashiconfTrainingDayRecord = {
   internalTitle?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
-  trainings?: Maybe<Array<HashiconfTrainingRecord>>
+  trainings: Array<HashiconfTrainingRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -5733,18 +5745,18 @@ export type HashiconfTrainingRecord = {
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   endTime?: Maybe<Scalars["String"]>
-  experienceLevels?: Maybe<Array<ExperienceLevelRecord>>
+  experienceLevels: Array<ExperienceLevelRecord>
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
   location?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
   productLogo?: Maybe<FileField>
-  productTypes?: Maybe<Array<ProductTypeRecord>>
-  products?: Maybe<Array<OpenSourceToolRecord>>
+  productTypes: Array<ProductTypeRecord>
+  products: Array<OpenSourceToolRecord>
   room?: Maybe<LocationRoomRecord>
   shortDescription?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
-  speakers?: Maybe<Array<HashiconfSpeakerRecord>>
+  speakers: Array<HashiconfSpeakerRecord>
   startTime?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   trainer?: Maybe<Scalars["String"]>
@@ -5908,7 +5920,7 @@ export type HeroRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
-  buttons?: Maybe<Array<LinkRecord>>
+  buttons: Array<LinkRecord>
   centered?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -6013,7 +6025,7 @@ export type HeroSectionRecord = {
   alert?: Maybe<AlertRecord>
   backgroundImage?: Maybe<FileField>
   backgroundTheme?: Maybe<Scalars["String"]>
-  buttons?: Maybe<Array<LinkRecord>>
+  buttons: Array<LinkRecord>
   centered?: Maybe<Scalars["BooleanType"]>
   conditionalTesting?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
@@ -6027,7 +6039,7 @@ export type HeroSectionRecord = {
   title?: Maybe<Scalars["String"]>
   titleLogo?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
-  videos?: Maybe<Array<HeroVideoCarouselItemRecord>>
+  videos: Array<HeroVideoCarouselItemRecord>
 }
 
 /** Record of type Hero Section (hero_section) */
@@ -6106,7 +6118,7 @@ export type HeroVideoCarouselItemRecord = {
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
   playbackRate?: Maybe<Scalars["FloatType"]>
-  src?: Maybe<Array<VideoSourceRecord>>
+  src: Array<VideoSourceRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -6179,7 +6191,7 @@ export type HomepageProductTabRecord = {
   buttonText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
-  features?: Maybe<Array<PackageFeatureRecord>>
+  features: Array<PackageFeatureRecord>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   product?: Maybe<EnterpriseProductRecord>
@@ -6216,17 +6228,17 @@ export type HomePageRecord = {
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  newsItems?: Maybe<Array<NewsItemRecord>>
+  newsItems: Array<NewsItemRecord>
   prefooter?: Maybe<HeroSectionRecord>
-  productSuite?: Maybe<Array<EnterpriseProductRecord>>
+  productSuite: Array<EnterpriseProductRecord>
   productSuiteHeader?: Maybe<TextHeadlineSectionRecord>
-  productTabs?: Maybe<Array<HomepageProductTabRecord>>
+  productTabs: Array<HomepageProductTabRecord>
   salesForm?: Maybe<SalesFormRecord>
-  technologyPartners?: Maybe<Array<CompanyRecord>>
+  technologyPartners: Array<CompanyRecord>
   technologyPartnersCopy?: Maybe<TextHeadlineSectionRecord>
-  testimonials?: Maybe<Array<TestimonialRecord>>
+  testimonials: Array<TestimonialRecord>
   testimonialsHeader?: Maybe<TextHeadlineSectionRecord>
-  trustedByCompanies?: Maybe<Array<CompanyRecord>>
+  trustedByCompanies: Array<CompanyRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -7920,7 +7932,7 @@ export type IntegrationDetailPageRecord = {
   integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
   introText?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
-  resourcesOverride?: Maybe<Array<ResourceRecord>>
+  resourcesOverride: Array<ResourceRecord>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -8015,7 +8027,7 @@ export type IntegrationsPageRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  technologyPartners?: Maybe<Array<CompanyRecord>>
+  technologyPartners: Array<CompanyRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -8323,7 +8335,7 @@ export type LargeLogoGridSectionRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<CompanyRecord>>
+  companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
@@ -8359,7 +8371,7 @@ export type LearnLandingPageRecord = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  items?: Maybe<Array<VerticalTextBlockListItemRecord>>
+  items: Array<VerticalTextBlockListItemRecord>
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
 }
@@ -8749,7 +8761,7 @@ export type LogoGridRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<CompanyRecord>>
+  companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   size?: Maybe<Scalars["String"]>
@@ -8845,17 +8857,17 @@ export type MegaNavRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   callout?: Maybe<NavCalloutRecord>
-  companyLinks?: Maybe<Array<LinkRecord>>
+  companyLinks: Array<LinkRecord>
   createdAt: Scalars["DateTime"]
-  docsLinks?: Maybe<Array<LinkRecord>>
-  footerLinks?: Maybe<Array<LinkRecord>>
+  docsLinks: Array<LinkRecord>
+  footerLinks: Array<LinkRecord>
   id: Scalars["ItemId"]
-  partnersLinks?: Maybe<Array<LinkRecord>>
+  partnersLinks: Array<LinkRecord>
   primaryLogo?: Maybe<FileField>
   primaryLogoWhite?: Maybe<FileField>
-  productsLinks?: Maybe<Array<EnterpriseProductRecord>>
-  resourcesLinks?: Maybe<Array<LinkRecord>>
-  socialLinks?: Maybe<Array<SocialNetworkRecord>>
+  productsLinks: Array<EnterpriseProductRecord>
+  resourcesLinks: Array<LinkRecord>
+  socialLinks: Array<SocialNetworkRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -8917,7 +8929,7 @@ export type MiniCalloutRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  item?: Maybe<Array<CalloutItemRecord>>
+  item: Array<CalloutItemRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -8939,7 +8951,7 @@ export type MultiButtonRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<Button2Record>>
+  buttons: Array<Button2Record>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -9137,13 +9149,13 @@ export type NavRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companyPromos?: Maybe<Array<NavPromoRecord>>
+  companyPromos: Array<NavPromoRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  learnPromos?: Maybe<Array<NavPromoRecord>>
-  partnersPromos?: Maybe<Array<NavPromoRecord>>
-  productsPromos?: Maybe<Array<NavPromoRecord>>
-  supportPromos?: Maybe<Array<NavPromoRecord>>
+  learnPromos: Array<NavPromoRecord>
+  partnersPromos: Array<NavPromoRecord>
+  productsPromos: Array<NavPromoRecord>
+  supportPromos: Array<NavPromoRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -9247,7 +9259,7 @@ export type NomadProductPageRecord = {
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection?: Maybe<SectionBlockV2Record>
-  companiesUsingNomad?: Maybe<Array<CompanyRecord>>
+  companiesUsingNomad: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
   ctaSection?: Maybe<SectionBlockV2Record>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -9265,7 +9277,7 @@ export type NomadProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
+  useCasePages: Array<SectionBlockPageRecord>
   useCases?: Maybe<SbcUseCasesSectionRecord>
 }
 
@@ -9555,14 +9567,14 @@ export type OnDemandResourceRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<EventRecord>>
+  events: Array<EventRecord>
   formTitle?: Maybe<Scalars["String"]>
   heroContent: Array<OnDemandResourceModelHeroContentField>
   id: Scalars["ItemId"]
-  industry?: Maybe<Array<ResourceIndustryRecord>>
-  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
-  organizations?: Maybe<Array<CompanyRecord>>
-  people?: Maybe<Array<PersonRecord>>
+  industry: Array<ResourceIndustryRecord>
+  infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
+  organizations: Array<CompanyRecord>
+  people: Array<PersonRecord>
   primaryProduct?: Maybe<OpenSourceToolRecord>
   product: Array<OnDemandResourceModelProductField>
   sfdcDescription?: Maybe<Scalars["String"]>
@@ -9888,7 +9900,7 @@ export type PackageOptionRecord = {
   enterprise?: Maybe<Scalars["BooleanType"]>
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  packageFeatures?: Maybe<Array<PackageFeatureRecord>>
+  packageFeatures: Array<PackageFeatureRecord>
   product?: Maybe<EnterpriseProductRecord>
   slug?: Maybe<Scalars["String"]>
   subheading?: Maybe<Scalars["String"]>
@@ -9915,7 +9927,7 @@ export type PackageSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  packageOptions?: Maybe<Array<PackageOptionRecord>>
+  packageOptions: Array<PackageOptionRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -9941,35 +9953,35 @@ export type PartnersPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  cloudPartners?: Maybe<Array<CompanyRecord>>
+  cloudPartners: Array<CompanyRecord>
   cloudPartnersDescription?: Maybe<Scalars["String"]>
   content: Array<PartnersPageModelContentField>
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  resellerPartners?: Maybe<Array<CompanyRecord>>
+  resellerPartners: Array<CompanyRecord>
   resellerPartnersDescription?: Maybe<Scalars["String"]>
-  resellerPartnersOpen?: Maybe<Array<CompanyRecord>>
+  resellerPartnersOpen: Array<CompanyRecord>
   resellerPartnersOpenSize?: Maybe<Scalars["String"]>
   resellerPartnersOpenTitle?: Maybe<Scalars["String"]>
-  resellerPartnersPremier?: Maybe<Array<CompanyRecord>>
+  resellerPartnersPremier: Array<CompanyRecord>
   resellerPartnersPremierSize?: Maybe<Scalars["String"]>
   resellerPartnersPremierTitle?: Maybe<Scalars["String"]>
-  systemIntegratorPartners?: Maybe<Array<CompanyRecord>>
+  systemIntegratorPartners: Array<CompanyRecord>
   systemIntegratorPartnersDescription?: Maybe<Scalars["String"]>
-  systemIntegratorPartnersMember?: Maybe<Array<CompanyRecord>>
+  systemIntegratorPartnersMember: Array<CompanyRecord>
   systemIntegratorPartnersMemberSize?: Maybe<Scalars["String"]>
   systemIntegratorPartnersMemberTitle?: Maybe<Scalars["String"]>
-  systemIntegratorPartnersOpen?: Maybe<Array<CompanyRecord>>
+  systemIntegratorPartnersOpen: Array<CompanyRecord>
   systemIntegratorPartnersOpenSize?: Maybe<Scalars["String"]>
   systemIntegratorPartnersOpenTitle?: Maybe<Scalars["String"]>
-  systemIntegratorPartnersPremier?: Maybe<Array<CompanyRecord>>
+  systemIntegratorPartnersPremier: Array<CompanyRecord>
   systemIntegratorPartnersPremierSize?: Maybe<Scalars["String"]>
   systemIntegratorPartnersPremierTitle?: Maybe<Scalars["String"]>
-  technologyPartners?: Maybe<Array<CompanyRecord>>
+  technologyPartners: Array<CompanyRecord>
   technologyPartnersDescription?: Maybe<Scalars["String"]>
-  trainingPartners?: Maybe<Array<CompanyRecord>>
+  trainingPartners: Array<CompanyRecord>
   trainingPartnersDescription?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -10061,7 +10073,7 @@ export type PersonListRecord = {
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  people?: Maybe<Array<PersonRecord>>
+  people: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -10141,7 +10153,7 @@ export type PersonRecord = {
   name?: Maybe<Scalars["String"]>
   photo?: Maybe<FileField>
   position?: Maybe<Scalars["IntType"]>
-  socialProfiles?: Maybe<Array<SocialNetworkRecord>>
+  socialProfiles: Array<SocialNetworkRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -10265,12 +10277,12 @@ export type PressPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  events?: Maybe<Array<PressLinkRecord>>
+  events: Array<PressLinkRecord>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  mediaAnalystCoverage?: Maybe<Array<PressLinkRecord>>
+  mediaAnalystCoverage: Array<PressLinkRecord>
   metadata?: Maybe<SeoField>
-  pressReleases?: Maybe<Array<PressLinkRecord>>
+  pressReleases: Array<PressLinkRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -10337,7 +10349,7 @@ export type PricingPageRecord = {
   id: Scalars["ItemId"]
   packages?: Maybe<ProductPackageSectionRecord>
   product?: Maybe<HashicorpProductRecord>
-  productOfferings?: Maybe<Array<ProductOfferingRecord>>
+  productOfferings: Array<ProductOfferingRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -10543,7 +10555,7 @@ export type ProductPackageSectionRecord = {
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  packageOptions?: Maybe<Array<PackageOptionRecord>>
+  packageOptions: Array<PackageOptionRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -11514,7 +11526,7 @@ export type Query = {
   /** Returns a collection of records */
   allTwoColumnTextSections: Array<TwoColumnTextSectionRecord>
   /** Returns a collection of assets */
-  allUploads?: Maybe<Array<Maybe<Upload>>>
+  allUploads: Array<FileField>
   /** Returns a collection of records */
   allUseCasePageDropdowns: Array<UseCasePageDropdownRecord>
   /** Returns a collection of records */
@@ -11950,7 +11962,7 @@ export type Query = {
   /** Returns a specific record */
   twoColumnTextSection?: Maybe<TwoColumnTextSectionRecord>
   /** Returns a specific asset */
-  upload?: Maybe<Upload>
+  upload?: Maybe<FileField>
   /** Returns a specific record */
   useCasePageDropdown?: Maybe<UseCasePageDropdownRecord>
   /** Returns the single instance record */
@@ -16365,15 +16377,15 @@ export type ResourceRecord = {
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<EventRecord>>
+  events: Array<EventRecord>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  industry?: Maybe<Array<ResourceIndustryRecord>>
-  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
+  industry: Array<ResourceIndustryRecord>
+  infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   mediaType?: Maybe<ResourceMediaTypeRecord>
   metadata?: Maybe<SeoField>
-  organizations?: Maybe<Array<CompanyRecord>>
-  people?: Maybe<Array<PersonRecord>>
+  organizations: Array<CompanyRecord>
+  people: Array<PersonRecord>
   product: Array<ResourceModelProductField>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   slug?: Maybe<Scalars["String"]>
@@ -17104,7 +17116,7 @@ export type SbcCalloutSectionRecord = {
   columnCount?: Maybe<Scalars["IntType"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<SbcCalloutRecord>>
+  items: Array<SbcCalloutRecord>
   theme?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -17246,7 +17258,7 @@ export type SbcCaseStudySliderRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  caseStudies?: Maybe<Array<SbcCaseStudyRecord>>
+  caseStudies: Array<SbcCaseStudyRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -17516,7 +17528,7 @@ export type SbcLogoGridRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<CompanyRecord>>
+  companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   removeBorders?: Maybe<Scalars["BooleanType"]>
@@ -17583,7 +17595,7 @@ export type SbcMultiButtonRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<SbcButtonRecord>>
+  buttons: Array<SbcButtonRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   internalName?: Maybe<Scalars["String"]>
@@ -17658,10 +17670,10 @@ export type SbcProductFeatureTableRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  featureCategories?: Maybe<Array<EnterpriseFeaturesCategoryRecord>>
+  featureCategories: Array<EnterpriseFeaturesCategoryRecord>
   higherTierPlansIncludeLowerTierFeatures?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
-  offerings?: Maybe<Array<ProductPricingPlanRecord>>
+  offerings: Array<ProductPricingPlanRecord>
   productLogo?: Maybe<FileField>
   productName?: Maybe<Scalars["String"]>
   themeBackground?: Maybe<Scalars["String"]>
@@ -17729,7 +17741,7 @@ export type SbcProductPricingRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  plans?: Maybe<Array<ProductPricingPlanRecord>>
+  plans: Array<ProductPricingPlanRecord>
   product?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -17954,7 +17966,7 @@ export type SbcTextAndContentRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  buttons?: Maybe<Array<SbcButtonRecord>>
+  buttons: Array<SbcButtonRecord>
   content?: Maybe<SbcTextAndContentModelContentField>
   createdAt: Scalars["DateTime"]
   hasBorder?: Maybe<Scalars["BooleanType"]>
@@ -18177,7 +18189,7 @@ export type SbcUseCasesSectionRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   internalTitle?: Maybe<Scalars["String"]>
-  items?: Maybe<Array<SbcUseCaseRecord>>
+  items: Array<SbcUseCaseRecord>
   theme?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -18361,7 +18373,7 @@ export type ScheduleLiteItemRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  scheduleItems?: Maybe<Array<HashiconfScheduleItemRecord>>
+  scheduleItems: Array<HashiconfScheduleItemRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -18491,7 +18503,7 @@ export type SectionBlockPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  content?: Maybe<Array<SectionBlockV2Record>>
+  content: Array<SectionBlockV2Record>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   metatag?: Maybe<SeoField>
@@ -18799,7 +18811,7 @@ export type SentinelPageRecord = {
   policyAsCode?: Maybe<HeroSectionRecord>
   prefooter?: Maybe<HeroSectionRecord>
   productIntegrationsHeader?: Maybe<SbcSectionHeaderRecord>
-  productTabs?: Maybe<Array<SentinelProductTabRecord>>
+  productTabs: Array<SentinelProductTabRecord>
   salesForm?: Maybe<SalesFormRecord>
   updatedAt: Scalars["DateTime"]
 }
@@ -18865,12 +18877,12 @@ export type SentinelProductTabRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  codeSamples?: Maybe<Array<CodeSampleRecord>>
+  codeSamples: Array<CodeSampleRecord>
   colorLogo?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   docsLink?: Maybe<LinkRecord>
   enterpriseLogo?: Maybe<FileField>
-  features?: Maybe<Array<ProductTabFeatureRecord>>
+  features: Array<ProductTabFeatureRecord>
   id: Scalars["ItemId"]
   product?: Maybe<EnterpriseProductRecord>
   updatedAt: Scalars["DateTime"]
@@ -18884,7 +18896,7 @@ export type SentinelProductTabRecord_SeoMetaTagsArgs = {
 export type SeoField = {
   __typename?: "SeoField"
   description?: Maybe<Scalars["String"]>
-  image?: Maybe<Upload>
+  image?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   twitterCard?: Maybe<Scalars["String"]>
 }
@@ -18929,7 +18941,7 @@ export type ShopPageRecordIntroArgs = {
 
 export type Site = {
   __typename?: "Site"
-  favicon?: Maybe<Upload>
+  favicon?: Maybe<FileField>
   faviconMetaTags: Array<Maybe<Tag>>
   globalSeo?: Maybe<GlobalSeoField>
 }
@@ -19173,7 +19185,7 @@ export type SpeakersSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  speakers?: Maybe<Array<PersonRecord>>
+  speakers: Array<PersonRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -19314,7 +19326,7 @@ export type SplitCtaSectionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<SplitCtaItemRecord>>
+  items: Array<SplitCtaItemRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -19776,7 +19788,7 @@ export type TerraformOfferingCategoryRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
-  tier?: Maybe<Array<TerraformOfferingTierRecord>>
+  tier: Array<TerraformOfferingTierRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -19912,7 +19924,7 @@ export type TerraformOfferingTableRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  categories?: Maybe<Array<TerraformOfferingCategoryRecord>>
+  categories: Array<TerraformOfferingCategoryRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -19991,7 +20003,7 @@ export type TerraformOfferingTierRecord = {
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
-  offerings?: Maybe<Array<TerraformOfferingRecord>>
+  offerings: Array<TerraformOfferingRecord>
   subheading?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -20036,7 +20048,7 @@ export type TerraformProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
+  useCasePages: Array<SectionBlockPageRecord>
   useCasesSection?: Maybe<SectionBlockV2Record>
 }
 
@@ -20137,7 +20149,7 @@ export type TestimonialSliderRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  testimonials?: Maybe<Array<TestimonialRecord>>
+  testimonials: Array<TestimonialRecord>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -20214,7 +20226,7 @@ export type TextHeadlineAndGridSectionRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  companies?: Maybe<Array<CompanyRecord>>
+  companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   headline?: Maybe<Scalars["String"]>
@@ -20555,7 +20567,7 @@ export type TmpHomepageRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   tmpHeadline?: Maybe<Scalars["String"]>
-  tmpHomepageNews?: Maybe<Array<NewsItemRecord>>
+  tmpHomepageNews: Array<NewsItemRecord>
   tmpSeo?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
 }
@@ -20582,7 +20594,7 @@ export type TmpmodelAboutPageRecord = {
   heroSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  people?: Maybe<Array<PersonRecord>>
+  people: Array<PersonRecord>
   peopleSectionHeader?: Maybe<SbcSectionHeaderRecord>
   preFooterButton?: Maybe<SbcButtonV2Record>
   preFooterSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -20728,11 +20740,11 @@ export type TmpmodelConsulOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
+  caseStudiesSection: Array<SbcCaseStudyRecord>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
+  featuresSectionButtons: Array<TmpmodelButtonRecord>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howConsulWorksSection?: Maybe<SbcTextAndContentRecord>
@@ -20740,7 +20752,7 @@ export type TmpmodelConsulOverviewPageRecord = {
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
+  principlesSection: Array<SbcTextAndContentRecord>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -20799,17 +20811,17 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  ctaSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
+  ctaSectionButtons: Array<TmpmodelButtonRecord>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  resellersIntegratorsCompaniesHyperSpecialized?: Maybe<Array<CompanyRecord>>
-  resellersIntegratorsCompaniesSpecialized?: Maybe<Array<CompanyRecord>>
+  resellersIntegratorsCompaniesHyperSpecialized: Array<CompanyRecord>
+  resellersIntegratorsCompaniesSpecialized: Array<CompanyRecord>
   resellersIntegratorsLabel?: Maybe<Scalars["String"]>
   resellersIntegratorsTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
-  trainingPartnersCompanies?: Maybe<Array<CompanyRecord>>
+  trainingPartnersCompanies: Array<CompanyRecord>
   trainingPartnersLabel?: Maybe<Scalars["String"]>
   trainingPartnersTooltip?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -20848,9 +20860,9 @@ export type TmpmodelEcosystemLandingPageRecord = {
   _seoMetaTags: Array<Maybe<Tag>>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<SbcTextAndContentRecord>>
+  content: Array<SbcTextAndContentRecord>
   createdAt: Scalars["DateTime"]
-  ctaSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
+  ctaSectionButtons: Array<TmpmodelButtonRecord>
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
@@ -20911,11 +20923,11 @@ export type TmpmodelNomadOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
+  caseStudiesSection: Array<SbcCaseStudyRecord>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
+  featuresSectionButtons: Array<TmpmodelButtonRecord>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howNomadWorksSection?: Maybe<SbcTextAndContentRecord>
@@ -20923,7 +20935,7 @@ export type TmpmodelNomadOverviewPageRecord = {
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
+  principlesSection: Array<SbcTextAndContentRecord>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -20953,19 +20965,19 @@ export type TmpmodelTerraformOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
+  caseStudiesSection: Array<SbcCaseStudyRecord>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
+  featuresSectionButtons: Array<TmpmodelButtonRecord>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
-  howTerraformWorksSection?: Maybe<Array<SbcTextAndContentRecord>>
+  howTerraformWorksSection: Array<SbcTextAndContentRecord>
   howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
+  principlesSection: Array<SbcTextAndContentRecord>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -21031,7 +21043,7 @@ export type TmpmodelTrainingPageRecord = {
   id: Scalars["ItemId"]
   privateTrainingSection?: Maybe<SbcSectionHeaderRecord>
   publicTrainingSection?: Maybe<SbcSectionHeaderRecord>
-  trainingCourses?: Maybe<Array<TrainingCourseRecord>>
+  trainingCourses: Array<TrainingCourseRecord>
   trainingDescription?: Maybe<Scalars["String"]>
   trainingHeadline?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -21135,11 +21147,11 @@ export type TmpmodelVaultOverviewPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<Array<SbcCaseStudyRecord>>
+  caseStudiesSection: Array<SbcCaseStudyRecord>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   companiesSection?: Maybe<SbcLogoGridRecord>
   createdAt: Scalars["DateTime"]
-  featuresSectionButtons?: Maybe<Array<TmpmodelButtonRecord>>
+  featuresSectionButtons: Array<TmpmodelButtonRecord>
   featuresSectionHeader?: Maybe<SbcSectionHeaderRecord>
   heroSection?: Maybe<HeroSectionRecord>
   howVaultWorksSection: Array<
@@ -21149,7 +21161,7 @@ export type TmpmodelVaultOverviewPageRecord = {
   id: Scalars["ItemId"]
   infrastructureSection?: Maybe<SbcBeforeAfterDiagramRecord>
   metadata?: Maybe<SeoField>
-  principlesSection?: Maybe<Array<SbcTextAndContentRecord>>
+  principlesSection: Array<SbcTextAndContentRecord>
   principlesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   staticDynamicSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -21264,7 +21276,7 @@ export type TrainingPageRecord = {
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
-  trainingCourses?: Maybe<Array<TrainingCourseRecord>>
+  trainingCourses: Array<TrainingCourseRecord>
   trainingDescription?: Maybe<Scalars["String"]>
   trainingHeadline?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -21436,7 +21448,7 @@ export type TrialFormPageRecord = {
   nextStepLink?: Maybe<Scalars["String"]>
   productId?: Maybe<Scalars["String"]>
   productVersion?: Maybe<Scalars["String"]>
-  sidebarCompanyLogos?: Maybe<Array<CompanyRecord>>
+  sidebarCompanyLogos: Array<CompanyRecord>
   sidebarLogo?: Maybe<FileField>
   sidebarText?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
@@ -21604,63 +21616,6 @@ export type TypeFilter = {
   in?: Maybe<Array<Maybe<UploadType>>>
   /** Search uploads without the specified types */
   notIn?: Maybe<Array<Maybe<UploadType>>>
-}
-
-export type Upload = {
-  __typename?: "Upload"
-  _createdAt: Scalars["DateTime"]
-  _updatedAt: Scalars["DateTime"]
-  alt?: Maybe<Scalars["String"]>
-  author?: Maybe<Scalars["String"]>
-  basename: Scalars["String"]
-  blurUpThumb?: Maybe<Scalars["String"]>
-  blurhash?: Maybe<Scalars["String"]>
-  colors: Array<Maybe<ColorField>>
-  copyright?: Maybe<Scalars["String"]>
-  customData?: Maybe<Scalars["CustomData"]>
-  exifInfo?: Maybe<Scalars["CustomData"]>
-  filename: Scalars["String"]
-  format: Scalars["String"]
-  height?: Maybe<Scalars["IntType"]>
-  id: Scalars["UploadId"]
-  mimeType: Scalars["String"]
-  notes?: Maybe<Scalars["String"]>
-  responsiveImage?: Maybe<ResponsiveImage>
-  size: Scalars["IntType"]
-  smartTags: Array<Maybe<Scalars["String"]>>
-  tags: Array<Maybe<Scalars["String"]>>
-  title?: Maybe<Scalars["String"]>
-  url: Scalars["String"]
-  video?: Maybe<UploadVideoField>
-  width?: Maybe<Scalars["IntType"]>
-}
-
-export type UploadAltArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-export type UploadBlurUpThumbArgs = {
-  punch?: Maybe<Scalars["Float"]>
-  size?: Maybe<Scalars["Int"]>
-  quality?: Maybe<Scalars["Int"]>
-  imgixParams?: Maybe<ImgixParams>
-}
-
-export type UploadCustomDataArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-export type UploadResponsiveImageArgs = {
-  imgixParams?: Maybe<ImgixParams>
-  sizes?: Maybe<Scalars["String"]>
-}
-
-export type UploadTitleArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-export type UploadUrlArgs = {
-  imgixParams?: Maybe<ImgixParams>
 }
 
 /** Specifies how to filter by default alt */
@@ -22176,6 +22131,7 @@ export type VaultOssPageRecord = {
   infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
   ossEnterpriseCtas?: Maybe<SplitCtaSectionRecord>
+  principlesHeader?: Maybe<SbcSectionHeaderRecord>
   updatedAt: Scalars["DateTime"]
   useCases?: Maybe<SbcUseCasesSectionRecord>
 }
@@ -22215,7 +22171,7 @@ export type VaultProductPageRecord = {
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  useCasePages?: Maybe<Array<SectionBlockPageRecord>>
+  useCasePages: Array<SectionBlockPageRecord>
   useCasesSection?: Maybe<SectionBlockV2Record>
 }
 
@@ -22361,7 +22317,7 @@ export type VerticalTextBlockListSectionRecord = {
   centerText?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  items?: Maybe<Array<VerticalTextBlockListItemRecord>>
+  items: Array<VerticalTextBlockListItemRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -22647,14 +22603,14 @@ export type WebinarRecord = {
   date?: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
-  events?: Maybe<Array<EventRecord>>
+  events: Array<EventRecord>
   heroContent: Array<WebinarModelHeroContentField>
   id: Scalars["ItemId"]
-  industry?: Maybe<Array<ResourceIndustryRecord>>
-  infrastructureProvider?: Maybe<Array<ResourceInfrastructureProviderRecord>>
+  industry: Array<ResourceIndustryRecord>
+  infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   metadata?: Maybe<SeoField>
-  organizations?: Maybe<Array<CompanyRecord>>
-  people?: Maybe<Array<PersonRecord>>
+  organizations: Array<CompanyRecord>
+  people: Array<PersonRecord>
   primaryInfrastructureProvider?: Maybe<ResourceInfrastructureProviderRecord>
   primaryProduct?: Maybe<OpenSourceToolRecord>
   product: Array<WebinarModelProductField>
