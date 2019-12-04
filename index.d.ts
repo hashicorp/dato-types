@@ -22172,6 +22172,7 @@ export type VaultOssPageRecord = {
   featuresHeadline?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
+  infrastructureDiagram?: Maybe<SbcBeforeAfterDiagramRecord>
   infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
   ossEnterpriseCtas?: Maybe<SplitCtaSectionRecord>
