@@ -30,7 +30,7 @@ export type AboutPageModelPageContentField =
   | PersonListRecord
   | TwoColumnTextSectionRecord
 
-/** Record of type About Page (about_page) */
+/** Record of type About Page (DEPRECATED) (about_page) */
 export type AboutPageRecord = {
   __typename?: "AboutPageRecord"
   _allNameLocales?: Maybe<Array<Maybe<StringMultiLocaleField>>>
@@ -52,17 +52,17 @@ export type AboutPageRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type About Page (about_page) */
+/** Record of type About Page (DEPRECATED) (about_page) */
 export type AboutPageRecord_AllNameLocalesArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type About Page (about_page) */
+/** Record of type About Page (DEPRECATED) (about_page) */
 export type AboutPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type About Page (about_page) */
+/** Record of type About Page (DEPRECATED) (about_page) */
 export type AboutPageRecordNameArgs = {
   locale?: Maybe<SiteLocale>
 }
