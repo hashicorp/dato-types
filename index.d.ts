@@ -20998,10 +20998,10 @@ export type TmpmodelProductUseCasePageModelFilter = {
   introSectionHeader?: Maybe<LinkFilter>
   ctaSectionHeader?: Maybe<LinkFilter>
   featuresSectionHeader?: Maybe<LinkFilter>
-  featuresSection?: Maybe<LinksFilter>
   caseStudiesSectionHeader?: Maybe<LinkFilter>
   challengeSolutionSectionHeader?: Maybe<LinkFilter>
   challengeSolutionSection?: Maybe<LinkFilter>
+  featuresSection?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
 
