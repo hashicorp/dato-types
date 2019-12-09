@@ -11176,6 +11176,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allTmpmodelProductUseCasePagesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allTrainingCoursesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTrainingPartnerSectionsMeta: CollectionMetadata
@@ -11517,6 +11519,8 @@ export type Query = {
   allTextSections: Array<TextSectionRecord>
   /** Returns a collection of records */
   allTmpmodelButtons: Array<TmpmodelButtonRecord>
+  /** Returns a collection of records */
+  allTmpmodelProductUseCasePages: Array<TmpmodelProductUseCasePageRecord>
   /** Returns a collection of records */
   allTrainingCourses: Array<TrainingCourseRecord>
   /** Returns a collection of records */
@@ -11939,14 +11943,12 @@ export type Query = {
   tmpmodelNomadEnterprisePage?: Maybe<TmpmodelNomadEnterprisePageRecord>
   /** Returns the single instance record */
   tmpmodelNomadOverviewPage?: Maybe<TmpmodelNomadOverviewPageRecord>
+  /** Returns a specific record */
+  tmpmodelProductUseCasePage?: Maybe<TmpmodelProductUseCasePageRecord>
   /** Returns the single instance record */
   tmpmodelTerraformOverviewPage?: Maybe<TmpmodelTerraformOverviewPageRecord>
   /** Returns the single instance record */
   tmpmodelTerraformPricingPage?: Maybe<TmpmodelTerraformPricingPageRecord>
-  /** Returns the single instance record */
-  tmpmodelTerraformUcpInfrastructureAsCode?: Maybe<
-    TmpmodelTerraformUcpInfrastructureAsCodeRecord
-  >
   /** Returns the single instance record */
   tmpmodelTrainingPage?: Maybe<TmpmodelTrainingPageRecord>
   /** Returns the single instance record */
@@ -12897,6 +12899,12 @@ export type Query_AllTextSectionsMetaArgs = {
 export type Query_AllTmpmodelButtonsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpmodelButtonModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllTmpmodelProductUseCasePagesMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpmodelProductUseCasePageModelFilter>
 }
 
 /** The query root for this schema */
@@ -14367,6 +14375,15 @@ export type QueryAllTmpmodelButtonsArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllTmpmodelProductUseCasePagesArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<TmpmodelProductUseCasePageModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllTrainingCoursesArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -15761,17 +15778,19 @@ export type QueryTmpmodelNomadOverviewPageArgs = {
 }
 
 /** The query root for this schema */
+export type QueryTmpmodelProductUseCasePageArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpmodelProductUseCasePageModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryTmpmodelTerraformOverviewPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
 export type QueryTmpmodelTerraformPricingPageArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryTmpmodelTerraformUcpInfrastructureAsCodeArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -16448,6 +16467,7 @@ export type ResponsiveImage = {
   alt?: Maybe<Scalars["String"]>
   aspectRatio: Scalars["FloatType"]
   base64?: Maybe<Scalars["String"]>
+  bgColor?: Maybe<Scalars["String"]>
   height: Scalars["IntType"]
   sizes: Scalars["String"]
   src: Scalars["String"]
@@ -20960,6 +20980,86 @@ export type TmpmodelNomadOverviewPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type TmpmodelProductUseCasePageModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  enterpriseFeaturesSection?: Maybe<LinkFilter>
+  enterprisePackagesSection?: Maybe<LinkFilter>
+  faqs?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
+  enterpriseFeaturesSectionHeader?: Maybe<LinkFilter>
+  title?: Maybe<StringFilter>
+  subnav?: Maybe<LinkFilter>
+  alertBanner?: Maybe<LinkFilter>
+  enterprisePackagesSectionHeader?: Maybe<LinkFilter>
+  OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
+}
+
+export enum TmpmodelProductUseCasePageModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
+}
+
+/** Record of type TMP: Product Use Case Page (tmpmodel_product_use_case_page) */
+export type TmpmodelProductUseCasePageRecord = {
+  __typename?: "TmpmodelProductUseCasePageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Maybe<Tag>>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  alertBanner?: Maybe<AlertBannerRecord>
+  createdAt: Scalars["DateTime"]
+  enterpriseFeaturesSection?: Maybe<TerraformOfferingTableRecord>
+  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
+  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  faqs?: Maybe<FaqCategoryRecord>
+  id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
+  subnav?: Maybe<ProductSubnavRecord>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Product Use Case Page (tmpmodel_product_use_case_page) */
+export type TmpmodelProductUseCasePageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type TMP: Terraform Overview Page (tmpmodel_terraform_overview_page) */
 export type TmpmodelTerraformOverviewPageRecord = {
   __typename?: "TmpmodelTerraformOverviewPageRecord"
@@ -21031,38 +21131,6 @@ export type TmpmodelTerraformPricingPageRecord = {
 
 /** Record of type TMP: Terraform Pricing Page (tmpmodel_terraform_pricing_page) */
 export type TmpmodelTerraformPricingPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: Terraform Use Case - Infrastructure as Code (tmpmodel_terraform_ucp_infrastructure_as_code) */
-export type TmpmodelTerraformUcpInfrastructureAsCodeRecord = {
-  __typename?: "TmpmodelTerraformUcpInfrastructureAsCodeRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  alertBanner?: Maybe<AlertBannerRecord>
-  createdAt: Scalars["DateTime"]
-  enterpriseFeaturesSection?: Maybe<TerraformOfferingTableRecord>
-  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
-  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  faqs?: Maybe<FaqCategoryRecord>
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  subnav?: Maybe<ProductSubnavRecord>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type TMP: Terraform Use Case - Infrastructure as Code (tmpmodel_terraform_ucp_infrastructure_as_code) */
-export type TmpmodelTerraformUcpInfrastructureAsCodeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
