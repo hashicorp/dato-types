@@ -20991,8 +20991,6 @@ export type TmpmodelProductUseCasePageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  enterprisePackagesSection?: Maybe<LinkFilter>
-  faqs?: Maybe<LinkFilter>
   metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   subnav?: Maybe<LinkFilter>
@@ -21043,8 +21041,6 @@ export type TmpmodelProductUseCasePageRecord = {
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
   ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
-  faqs?: Maybe<FaqCategoryRecord>
   id: Scalars["ItemId"]
   introSectionHeader?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
