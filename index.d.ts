@@ -20998,11 +20998,12 @@ export type TmpmodelProductUseCasePageModelFilter = {
   introSectionHeader?: Maybe<LinkFilter>
   ctaSectionHeader?: Maybe<LinkFilter>
   featuresSectionHeader?: Maybe<LinkFilter>
-  caseStudiesSection?: Maybe<LinkFilter>
   caseStudiesSectionHeader?: Maybe<LinkFilter>
   challengeSolutionSectionHeader?: Maybe<LinkFilter>
   challengeSolutionSection?: Maybe<LinkFilter>
   featuresSection?: Maybe<LinksFilter>
+  caseStudiesSection?: Maybe<LinkFilter>
+  product?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
 
@@ -21028,7 +21029,9 @@ export enum TmpmodelProductUseCasePageModelOrderBy {
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  ProductAsc = "product_ASC",
+  ProductDesc = "product_DESC"
 }
 
 /** Record of type TMP: Product Use Case Page (tmpmodel_product_use_case_page) */
@@ -21056,6 +21059,7 @@ export type TmpmodelProductUseCasePageRecord = {
   id: Scalars["ItemId"]
   introSectionHeader?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
+  product?: Maybe<Scalars["String"]>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
