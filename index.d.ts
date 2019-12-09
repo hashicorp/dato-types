@@ -20991,15 +20991,14 @@ export type TmpmodelProductUseCasePageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  enterpriseFeaturesSection?: Maybe<LinkFilter>
   enterprisePackagesSection?: Maybe<LinkFilter>
   faqs?: Maybe<LinkFilter>
   metadata?: Maybe<SeoFilter>
-  enterpriseFeaturesSectionHeader?: Maybe<LinkFilter>
   title?: Maybe<StringFilter>
   subnav?: Maybe<LinkFilter>
   alertBanner?: Maybe<LinkFilter>
   introSectionHeader?: Maybe<LinkFilter>
+  ctaSectionHeader?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
 
@@ -21043,8 +21042,7 @@ export type TmpmodelProductUseCasePageRecord = {
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
-  enterpriseFeaturesSection?: Maybe<TerraformOfferingTableRecord>
-  enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
   faqs?: Maybe<FaqCategoryRecord>
   id: Scalars["ItemId"]
