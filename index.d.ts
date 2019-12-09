@@ -20999,7 +20999,7 @@ export type TmpmodelProductUseCasePageModelFilter = {
   title?: Maybe<StringFilter>
   subnav?: Maybe<LinkFilter>
   alertBanner?: Maybe<LinkFilter>
-  enterprisePackagesSectionHeader?: Maybe<LinkFilter>
+  introSectionHeader?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
 
@@ -21046,9 +21046,9 @@ export type TmpmodelProductUseCasePageRecord = {
   enterpriseFeaturesSection?: Maybe<TerraformOfferingTableRecord>
   enterpriseFeaturesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   enterprisePackagesSection?: Maybe<SbcProductPricingRecord>
-  enterprisePackagesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   faqs?: Maybe<FaqCategoryRecord>
   id: Scalars["ItemId"]
+  introSectionHeader?: Maybe<SbcSectionHeaderRecord>
   metadata?: Maybe<SeoField>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
