@@ -21048,7 +21048,7 @@ export type TmpmodelProductUseCasePageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection: Array<SbcCaseStudySliderRecord>
+  caseStudiesSection: Array<SbcCaseStudyRecord>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   challengeSolutionSection?: Maybe<SbcBeforeAfterDiagramRecord>
   challengeSolutionSectionHeader?: Maybe<SbcSectionHeaderRecord>
