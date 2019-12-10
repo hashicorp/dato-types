@@ -41,7 +41,7 @@ export type AboutPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -132,7 +132,7 @@ export type AlertBannerRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -213,7 +213,7 @@ export type AlertRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -281,7 +281,7 @@ export type BasicTableRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -311,7 +311,7 @@ export type BecomeAPartnerPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<BecomeAPartnerPageModelContentField>
@@ -338,7 +338,7 @@ export type BlogIndexPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -404,7 +404,7 @@ export type BlogPostCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -490,7 +490,7 @@ export type BlogPostRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   author?: Maybe<PersonRecord>
@@ -543,7 +543,7 @@ export type BrandPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -614,7 +614,7 @@ export type Button2Record = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -641,7 +641,7 @@ export type ButtonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -712,7 +712,7 @@ export type ButtonThemeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -781,7 +781,7 @@ export type CalloutItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -857,7 +857,7 @@ export type CalloutSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   calloutImage?: Maybe<FileField>
@@ -890,7 +890,7 @@ export type CalloutsSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -918,7 +918,7 @@ export type CertificationPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<CertificationPageModelContentField>
@@ -1002,7 +1002,7 @@ export type CodeblockLanguageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1067,7 +1067,7 @@ export type CodeSampleRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   codeBlock?: Maybe<Scalars["String"]>
@@ -1137,7 +1137,7 @@ export type CommunityLandingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -1238,7 +1238,7 @@ export type CompanyRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   blogPostCategorys?: Maybe<BlogPostCategoryRecord>
@@ -1279,7 +1279,7 @@ export type ConsulFieldDayLiveRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1363,7 +1363,7 @@ export type ConsulGraphicSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1389,7 +1389,7 @@ export type ConsulProductPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -1473,7 +1473,7 @@ export type ContactCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1556,7 +1556,7 @@ export type ContactFormPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1589,7 +1589,7 @@ export type ContactPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   categories: Array<ContactCategoryRecord>
@@ -1621,7 +1621,7 @@ export type ContentSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1735,7 +1735,7 @@ export type DropdownLinkRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1760,7 +1760,7 @@ export type EcosystemFindAPartnerPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<SectionBlockV2Record>
@@ -1820,7 +1820,7 @@ export type EcosystemLandingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<SectionBlockV2Record>
@@ -1907,7 +1907,7 @@ export type EmbeddedPodcastSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -1976,7 +1976,7 @@ export type EmbeddedSlidesSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2000,7 +2000,7 @@ export type EmployeeNavLinkRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2073,7 +2073,7 @@ export type EmployeePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<HashiconfSectionBlockRecord>
@@ -2147,7 +2147,7 @@ export type EnterpriseFeaturesCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2213,7 +2213,7 @@ export type EnterprisePricingSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2377,7 +2377,7 @@ export type EnterpriseProductPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -2412,7 +2412,7 @@ export type EnterpriseProductRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   accentColor?: Maybe<ColorField>
@@ -2507,7 +2507,7 @@ export type EnterpriseProductSubnavRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2580,7 +2580,7 @@ export type EnterpriseProductUseCasePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<EnterpriseProductUseCasePageModelContentField>
@@ -2607,7 +2607,7 @@ export type EventCtasItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2691,7 +2691,7 @@ export type EventRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2720,7 +2720,7 @@ export type EventsPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2802,7 +2802,7 @@ export type EventTypeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2828,7 +2828,7 @@ export type ExampleRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2859,7 +2859,7 @@ export type ExpandableTextWithPhotoRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -2932,7 +2932,7 @@ export type ExperienceLevelRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3020,7 +3020,7 @@ export type ExternalResourceRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   contentType?: Maybe<ResourceContentTypeRecord>
@@ -3103,7 +3103,7 @@ export type FaqCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3128,7 +3128,7 @@ export type FaqItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   answer?: Maybe<Scalars["String"]>
@@ -3160,7 +3160,7 @@ export type FaqRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   answer?: Maybe<Scalars["String"]>
@@ -3196,7 +3196,7 @@ export type FeaturedEventRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttonLabel?: Maybe<Scalars["String"]>
@@ -3231,7 +3231,7 @@ export type FeatureRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3303,7 +3303,7 @@ export type FeatureTableColumnRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3369,7 +3369,7 @@ export type FeatureTableRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   applyLink?: Maybe<LinkRecord>
@@ -3437,7 +3437,7 @@ export type FeatureTableRowRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   columnValues: Array<FeatureTableRowValueRecord>
@@ -3509,7 +3509,7 @@ export type FeatureTableRowValueRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   column?: Maybe<FeatureTableColumnRecord>
@@ -3576,7 +3576,7 @@ export type FeatureTableTabRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   columns: Array<FeatureTableColumnRecord>
@@ -3691,7 +3691,7 @@ export type FormCheckboxFieldRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3757,7 +3757,7 @@ export type FormContactTypeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   contactType?: Maybe<Scalars["String"]>
@@ -3787,7 +3787,7 @@ export type FormEmailFieldRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3814,7 +3814,7 @@ export type FormHiddenFieldRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3839,7 +3839,7 @@ export type FormMultiSelectFieldRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3909,7 +3909,7 @@ export type FormMultiSelectOptionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3934,7 +3934,7 @@ export type FormTextAreaFieldRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3961,7 +3961,7 @@ export type FormTextFieldRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -3988,7 +3988,7 @@ export type FourohfourPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4027,7 +4027,7 @@ export type GlobalDemoFormRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4051,7 +4051,7 @@ export type GlobalFooterBasicRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4075,7 +4075,7 @@ export type GlobalFooterRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   allProductLinks: Array<LinkRecord>
@@ -4112,7 +4112,7 @@ export type GlobalNavigationRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companyImageLockup?: Maybe<ImageLockupRecord>
@@ -4157,7 +4157,7 @@ export type GuestBlogTextRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4236,7 +4236,7 @@ export type HashiconfBasicPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
@@ -4321,7 +4321,7 @@ export type HashiconfFeaturedSpeakersSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4419,7 +4419,7 @@ export type HashiconfLandingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   aboutContent?: Maybe<Scalars["String"]>
@@ -4509,7 +4509,7 @@ export type HashiconfLiveStreamPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4612,7 +4612,7 @@ export type HashiconfRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buyTicketsLink?: Maybe<LinkRecord>
@@ -4702,7 +4702,7 @@ export type HashiconfScheduleDayRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4732,7 +4732,7 @@ export type HashiconfScheduleEventRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4814,7 +4814,7 @@ export type HashiconfScheduleItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4892,7 +4892,7 @@ export type HashiconfScheduleLiteSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -4959,7 +4959,7 @@ export type HashiconfSchedulePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -5089,7 +5089,7 @@ export type HashiconfSectionBlockPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<HashiconfSectionBlockRecord>
@@ -5116,7 +5116,7 @@ export type HashiconfSectionBlockRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<HashiconfSectionBlockModelContentField>
@@ -5212,7 +5212,7 @@ export type HashiconfSessionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
@@ -5321,7 +5321,7 @@ export type HashiconfSpeakerRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   bio?: Maybe<Scalars["String"]>
@@ -5403,7 +5403,7 @@ export type HashiconfSpeakersPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -5471,7 +5471,7 @@ export type HashiconfSponsorSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
@@ -5552,7 +5552,7 @@ export type HashiconfTextAndFullImageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
@@ -5631,7 +5631,7 @@ export type HashiconfTrainingDayRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -5738,7 +5738,7 @@ export type HashiconfTrainingRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
@@ -5824,7 +5824,7 @@ export type HashicorpProductRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -5891,7 +5891,7 @@ export type HeroFormLeadRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttonText?: Maybe<Scalars["String"]>
@@ -5916,7 +5916,7 @@ export type HeroRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
@@ -6019,7 +6019,7 @@ export type HeroSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alert?: Maybe<AlertRecord>
@@ -6111,7 +6111,7 @@ export type HeroVideoCarouselItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -6184,7 +6184,7 @@ export type HomepageProductTabRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   badge?: Maybe<FileField>
@@ -6218,7 +6218,7 @@ export type HomePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -6295,7 +6295,7 @@ export type HtmlSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -6372,7 +6372,7 @@ export type IconLinkRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -6443,7 +6443,7 @@ export type ImageLockupRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Scalars["String"]>
@@ -6475,7 +6475,7 @@ export type ImageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -6545,7 +6545,7 @@ export type ImageSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alignment?: Maybe<Scalars["String"]>
@@ -6577,7 +6577,7 @@ export type ImageTextCarouselItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -6647,7 +6647,7 @@ export type ImageTextCarouselRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -7924,7 +7924,7 @@ export type IntegrationDetailPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -7958,7 +7958,7 @@ export type IntegrationDetailRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -7994,7 +7994,7 @@ export type IntegrationPageFooterRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8020,7 +8020,7 @@ export type IntegrationsPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8097,7 +8097,7 @@ export type IntegrationTypeCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8169,7 +8169,7 @@ export type IntegrationTypeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   category?: Maybe<IntegrationTypeCategoryRecord>
@@ -8214,7 +8214,7 @@ export type ItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8258,7 +8258,7 @@ export type JobsPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<JobsPageModelContentField>
@@ -8332,7 +8332,7 @@ export type LargeLogoGridSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
@@ -8363,7 +8363,7 @@ export type LearnLandingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -8459,7 +8459,7 @@ export type LinkRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8540,7 +8540,7 @@ export type ListItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
@@ -8605,7 +8605,7 @@ export type LocalPageMetadataSetRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8670,7 +8670,7 @@ export type LocationRoomRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8734,7 +8734,7 @@ export type LocationVenueRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8758,7 +8758,7 @@ export type LogoGridRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
@@ -8827,7 +8827,7 @@ export type MajorHeadlineSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8853,7 +8853,7 @@ export type MegaNavRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   callout?: Maybe<NavCalloutRecord>
@@ -8924,7 +8924,7 @@ export type MiniCalloutRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -8948,7 +8948,7 @@ export type MultiButtonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttons: Array<Button2Record>
@@ -9020,7 +9020,7 @@ export type NavCalloutRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Scalars["String"]>
@@ -9108,7 +9108,7 @@ export type NavPromoRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -9146,7 +9146,7 @@ export type NavRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companyPromos: Array<NavPromoRecord>
@@ -9226,7 +9226,7 @@ export type NewsItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   callout?: Maybe<Scalars["String"]>
@@ -9254,7 +9254,7 @@ export type NomadProductPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -9346,7 +9346,7 @@ export type OfficeHoursSessionCopy1Record = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -9429,7 +9429,7 @@ export type OfficeHoursSessionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -9556,7 +9556,7 @@ export type OnDemandResourceRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   awsCampaign?: Maybe<Scalars["BooleanType"]>
@@ -9645,7 +9645,7 @@ export type OpenSourceToolCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -9723,7 +9723,7 @@ export type OpenSourceToolRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   category?: Maybe<OpenSourceToolCategoryRecord>
@@ -9814,7 +9814,7 @@ export type PackageFeatureRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -9892,7 +9892,7 @@ export type PackageOptionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttonUrl?: Maybe<Scalars["String"]>
@@ -9922,7 +9922,7 @@ export type PackageSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -9950,7 +9950,7 @@ export type PartnersPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   cloudPartners: Array<CompanyRecord>
@@ -10067,7 +10067,7 @@ export type PersonListRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10142,7 +10142,7 @@ export type PersonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   bio?: Maybe<Scalars["String"]>
@@ -10245,7 +10245,7 @@ export type PressLinkRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10273,7 +10273,7 @@ export type PressPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10342,7 +10342,7 @@ export type PricingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10368,7 +10368,7 @@ export type PrinciplesPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Array<Maybe<ContentSectionRecord>>>
@@ -10398,7 +10398,7 @@ export type ProductIntegrationRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10479,7 +10479,7 @@ export type ProductOfferingRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   cost?: Maybe<Scalars["String"]>
@@ -10549,7 +10549,7 @@ export type ProductPackageSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10632,7 +10632,7 @@ export type ProductPricingPlanRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10720,7 +10720,7 @@ export type ProductSubnavRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10787,7 +10787,7 @@ export type ProductTabFeatureRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -10856,7 +10856,7 @@ export type ProductTypeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -11206,7 +11206,7 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allWistiaSectionsMeta: CollectionMetadata
   /** Returns the single instance record */
-  _site?: Maybe<Site>
+  _site: Site
   /** Returns the single instance record */
   aboutPage?: Maybe<AboutPageRecord>
   /** Returns a specific record */
@@ -15942,7 +15942,7 @@ export type ReasonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16013,7 +16013,7 @@ export type RelatedItemsSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16098,7 +16098,7 @@ export type ResourceContentTypeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16162,7 +16162,7 @@ export type ResourceIndustryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16227,7 +16227,7 @@ export type ResourceInfrastructureProviderRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   company?: Maybe<CompanyRecord>
@@ -16293,7 +16293,7 @@ export type ResourceMediaTypeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16396,7 +16396,7 @@ export type ResourceRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<ResourceModelContentField>
@@ -16441,7 +16441,7 @@ export type ResourcesPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16473,6 +16473,7 @@ export type ResponsiveImage = {
   src: Scalars["String"]
   srcSet: Scalars["String"]
   title?: Maybe<Scalars["String"]>
+  webpSrcSet: Scalars["String"]
   width: Scalars["IntType"]
 }
 
@@ -16486,7 +16487,7 @@ export type RowRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16617,7 +16618,7 @@ export type SalesFormPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   contactType?: Maybe<FormContactTypeRecord>
@@ -16655,7 +16656,7 @@ export type SalesFormRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   contactType?: Maybe<FormContactTypeRecord>
@@ -16752,7 +16753,7 @@ export type SbcAlertRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -16830,7 +16831,7 @@ export type SbcBeforeAfterDiagramRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   afterContent?: Maybe<Scalars["String"]>
@@ -16917,7 +16918,7 @@ export type SbcButtonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   appearance?: Maybe<ButtonThemeRecord>
@@ -16993,7 +16994,7 @@ export type SbcButtonV2Record = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   brand?: Maybe<Scalars["String"]>
@@ -17063,7 +17064,7 @@ export type SbcCalloutRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17139,7 +17140,7 @@ export type SbcCalloutSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   columnCount?: Maybe<Scalars["IntType"]>
@@ -17212,7 +17213,7 @@ export type SbcCaseStudyRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttonLabel?: Maybe<Scalars["String"]>
@@ -17284,7 +17285,7 @@ export type SbcCaseStudySliderRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   caseStudies: Array<SbcCaseStudyRecord>
@@ -17350,7 +17351,7 @@ export type SbcCodeBlockRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   chrome?: Maybe<Scalars["BooleanType"]>
@@ -17420,7 +17421,7 @@ export type SbcImageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17485,7 +17486,7 @@ export type SbcLinkedTextSummaryListRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17554,7 +17555,7 @@ export type SbcLogoGridRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
@@ -17621,7 +17622,7 @@ export type SbcMultiButtonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
@@ -17695,7 +17696,7 @@ export type SbcProductFeatureTableRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17765,7 +17766,7 @@ export type SbcProductPricingRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17839,7 +17840,7 @@ export type SbcResourcesSliderRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17907,7 +17908,7 @@ export type SbcSectionHeaderRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -17992,7 +17993,7 @@ export type SbcTextAndContentRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
@@ -18064,7 +18065,7 @@ export type SbcTextRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18136,7 +18137,7 @@ export type SbcUseCaseRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18212,7 +18213,7 @@ export type SbcUseCasesSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18291,7 +18292,7 @@ export type SblHorizontalRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<SblHorizontalModelContentField>
@@ -18373,7 +18374,7 @@ export type SblVerticalRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<SblVerticalModelContentField>
@@ -18397,7 +18398,7 @@ export type ScheduleLiteItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18528,7 +18529,7 @@ export type SectionBlockPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -18556,7 +18557,7 @@ export type SectionBlockRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   components?: Maybe<Array<Maybe<SectionBlockModelComponentsField>>>
@@ -18634,7 +18635,7 @@ export type SectionBlockV2Record = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18703,7 +18704,7 @@ export type SectionDividerRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18728,7 +18729,7 @@ export type SectionHeaderRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18799,7 +18800,7 @@ export type SectionThemeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -18828,7 +18829,7 @@ export type SentinelPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   calloutsSection?: Maybe<SbcCalloutSectionRecord>
@@ -18903,7 +18904,7 @@ export type SentinelProductTabRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   codeSamples: Array<CodeSampleRecord>
@@ -18946,7 +18947,7 @@ export type ShopPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   confirmation?: Maybe<Scalars["String"]>
@@ -18971,7 +18972,7 @@ export type ShopPageRecordIntroArgs = {
 export type Site = {
   __typename?: "Site"
   favicon?: Maybe<FileField>
-  faviconMetaTags: Array<Maybe<Tag>>
+  faviconMetaTags: Array<Tag>
   globalSeo?: Maybe<GlobalSeoField>
 }
 
@@ -19010,7 +19011,7 @@ export type SmallTextTagRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19076,7 +19077,7 @@ export type SocialNetworkIconRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19143,7 +19144,7 @@ export type SocialNetworkRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19209,7 +19210,7 @@ export type SpeakersSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19278,7 +19279,7 @@ export type SplitCtaItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   backgroundColor?: Maybe<ColorField>
@@ -19350,7 +19351,7 @@ export type SplitCtaSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19415,7 +19416,7 @@ export type StaticDynamicSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19494,7 +19495,7 @@ export type SubscriptionConfirmationPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19525,7 +19526,7 @@ export type SubscriptionOptOutSuccessPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19570,7 +19571,7 @@ export type TaggedResourceRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19613,9 +19614,9 @@ export type TemplatePageModelFilter = {
   hero?: Maybe<LinkFilter>
   content?: Maybe<LinksFilter>
   preFooterCta?: Maybe<LinkFilter>
-  subnav?: Maybe<StringFilter>
   darkSubnav?: Maybe<BooleanFilter>
   metadata?: Maybe<SeoFilter>
+  subnav?: Maybe<StringFilter>
   draft?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<TemplatePageModelFilter>>>
 }
@@ -19649,10 +19650,10 @@ export enum TemplatePageModelOrderBy {
   ShowDemoRequestDesc = "showDemoRequest_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
-  SubnavAsc = "subnav_ASC",
-  SubnavDesc = "subnav_DESC",
   DarkSubnavAsc = "darkSubnav_ASC",
   DarkSubnavDesc = "darkSubnav_DESC",
+  SubnavAsc = "subnav_ASC",
+  SubnavDesc = "subnav_DESC",
   DraftAsc = "draft_ASC",
   DraftDesc = "draft_DESC"
 }
@@ -19667,7 +19668,7 @@ export type TemplatePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<TemplatePageModelContentField>
@@ -19744,7 +19745,7 @@ export type TerraformGraphSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19811,7 +19812,7 @@ export type TerraformOfferingCategoryRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19885,7 +19886,7 @@ export type TerraformOfferingRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -19950,7 +19951,7 @@ export type TerraformOfferingTableRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   categories: Array<TerraformOfferingCategoryRecord>
@@ -20023,7 +20024,7 @@ export type TerraformOfferingTierRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   callouts?: Maybe<Scalars["String"]>
@@ -20057,7 +20058,7 @@ export type TerraformProductPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -20141,7 +20142,7 @@ export type TestimonialRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   author?: Maybe<Scalars["String"]>
@@ -20173,7 +20174,7 @@ export type TestimonialSliderRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20252,7 +20253,7 @@ export type TextHeadlineAndGridSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
@@ -20325,7 +20326,7 @@ export type TextHeadlineSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20355,7 +20356,7 @@ export type TextImageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20435,7 +20436,7 @@ export type TextImageSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   anchorLink?: Maybe<Scalars["BooleanType"]>
@@ -20506,7 +20507,7 @@ export type TextSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
@@ -20535,7 +20536,7 @@ export type ThankYouPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20566,7 +20567,7 @@ export type TmpConsolHomeRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20590,7 +20591,7 @@ export type TmpHomepageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20616,7 +20617,7 @@ export type TmpmodelAboutPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20701,7 +20702,7 @@ export type TmpmodelButtonRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttonText?: Maybe<Scalars["String"]>
@@ -20727,7 +20728,7 @@ export type TmpmodelConsulEnterprisePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -20765,7 +20766,7 @@ export type TmpmodelConsulOverviewPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -20807,7 +20808,7 @@ export type TmpmodelConsulServiceOnAzurePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20836,7 +20837,7 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -20886,7 +20887,7 @@ export type TmpmodelEcosystemLandingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content: Array<SbcTextAndContentRecord>
@@ -20915,7 +20916,7 @@ export type TmpmodelNomadEnterprisePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -20948,7 +20949,7 @@ export type TmpmodelNomadOverviewPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -21044,7 +21045,7 @@ export type TmpmodelProductUseCasePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -21080,7 +21081,7 @@ export type TmpmodelTerraformOverviewPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -21122,7 +21123,7 @@ export type TmpmodelTerraformPricingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -21154,7 +21155,7 @@ export type TmpmodelTrainingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21195,7 +21196,7 @@ export type TmpmodelUserResearchPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21225,7 +21226,7 @@ export type TmpmodelVaultEnterprisePageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -21262,7 +21263,7 @@ export type TmpmodelVaultOverviewPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -21355,7 +21356,7 @@ export type TrainingCourseRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21386,7 +21387,7 @@ export type TrainingPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21463,7 +21464,7 @@ export type TrainingPartnerSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   company?: Maybe<CompanyRecord>
@@ -21557,7 +21558,7 @@ export type TrialFormPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21594,7 +21595,7 @@ export type TwoColumnTextBlockRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21629,7 +21630,7 @@ export type TwoColumnTextRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -21705,7 +21706,7 @@ export type TwoColumnTextSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
@@ -22097,7 +22098,7 @@ export type UseCasePageDropdownRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -22121,7 +22122,7 @@ export type VaultAdvancedDataProtectionPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -22209,7 +22210,7 @@ export type VaultIntegrationSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   authBackends?: Maybe<LargeLogoGridSectionRecord>
@@ -22237,7 +22238,7 @@ export type VaultOssPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -22269,7 +22270,7 @@ export type VaultProductPageRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
@@ -22353,7 +22354,7 @@ export type VerticalTextBlockListItemRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Scalars["String"]>
@@ -22429,7 +22430,7 @@ export type VerticalTextBlockListSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   centerText?: Maybe<Scalars["BooleanType"]>
@@ -22478,7 +22479,7 @@ export type VideoRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -22541,7 +22542,7 @@ export type VideoSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -22608,7 +22609,7 @@ export type VideoSourceRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -22712,7 +22713,7 @@ export type WebinarRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
@@ -22800,7 +22801,7 @@ export type WhitePaperRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
@@ -22868,7 +22869,7 @@ export type WistiaSectionRecord = {
   _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
   _publishedAt?: Maybe<Scalars["DateTime"]>
   /** SEO meta tags */
-  _seoMetaTags: Array<Maybe<Tag>>
+  _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
