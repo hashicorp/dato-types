@@ -21002,7 +21002,7 @@ export type TmpmodelProductUseCasePageModelFilter = {
   challengeSolutionSectionHeader?: Maybe<LinkFilter>
   challengeSolutionSection?: Maybe<LinkFilter>
   featuresSection?: Maybe<LinksFilter>
-  caseStudiesSection?: Maybe<LinkFilter>
+  caseStudiesSection?: Maybe<LinksFilter>
   product?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
@@ -21048,7 +21048,7 @@ export type TmpmodelProductUseCasePageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
-  caseStudiesSection?: Maybe<SbcCaseStudySliderRecord>
+  caseStudiesSection: Array<SbcCaseStudySliderRecord>
   caseStudiesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   challengeSolutionSection?: Maybe<SbcBeforeAfterDiagramRecord>
   challengeSolutionSectionHeader?: Maybe<SbcSectionHeaderRecord>
