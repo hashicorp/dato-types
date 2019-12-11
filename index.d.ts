@@ -1194,7 +1194,6 @@ export type CompanyModelFilter = {
   blogPostCategorys?: Maybe<LinkFilter>
   companyType?: Maybe<StringFilter>
   integrationPage?: Maybe<LinkFilter>
-  relatedResources?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<CompanyModelFilter>>>
 }
 
@@ -1255,7 +1254,6 @@ export type CompanyRecord = {
   name?: Maybe<Scalars["String"]>
   productIntegrations: Array<OpenSourceToolRecord>
   productIntegrationsV2?: Maybe<Array<Maybe<ProductIntegrationRecord>>>
-  relatedResources: Array<LinkRecord>
   slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   whiteLogo?: Maybe<FileField>
