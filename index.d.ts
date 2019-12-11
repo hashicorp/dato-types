@@ -10406,6 +10406,7 @@ export type ProductIntegrationRecord = {
   gettingStartedText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   integrationType?: Maybe<IntegrationTypeRecord>
+  relatedResources: Array<LinkRecord>
   updatedAt: Scalars["DateTime"]
 }
 
