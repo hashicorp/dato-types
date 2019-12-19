@@ -1163,6 +1163,8 @@ export type CommunityLandingPageRecord = {
   resourcesSectionHeader?: Maybe<SbcSectionHeaderRecord>
   resourcesSlider?: Maybe<SbcResourcesSliderRecord>
   title?: Maybe<Scalars["String"]>
+  twitchButtonCollection?: Maybe<SbcMultiButtonRecord>
+  twitchImage?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -10406,6 +10408,7 @@ export type ProductIntegrationRecord = {
   gettingStartedText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   integrationType?: Maybe<IntegrationTypeRecord>
+  productDiagram?: Maybe<FileField>
   relatedResources: Array<LinkRecord>
   updatedAt: Scalars["DateTime"]
 }
