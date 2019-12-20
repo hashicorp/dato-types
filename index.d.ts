@@ -10404,6 +10404,7 @@ export type ProductIntegrationRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  diagramLogoPlacement?: Maybe<Scalars["String"]>
   docsLink?: Maybe<Scalars["String"]>
   gettingStartedText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
