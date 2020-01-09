@@ -17952,11 +17952,11 @@ export type SbcTextAndContentModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   text?: Maybe<TextFilter>
   buttons?: Maybe<LinksFilter>
-  content?: Maybe<LinkFilter>
-  reverseDirection?: Maybe<BooleanFilter>
-  hasBorder?: Maybe<BooleanFilter>
-  hasShadow?: Maybe<BooleanFilter>
   link?: Maybe<LinksFilter>
+  hasShadow?: Maybe<BooleanFilter>
+  hasBorder?: Maybe<BooleanFilter>
+  reverseDirection?: Maybe<BooleanFilter>
+  content?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<SbcTextAndContentModelFilter>>>
 }
 
@@ -17981,12 +17981,12 @@ export enum SbcTextAndContentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ReverseDirectionAsc = "reverseDirection_ASC",
-  ReverseDirectionDesc = "reverseDirection_DESC",
+  HasShadowAsc = "hasShadow_ASC",
+  HasShadowDesc = "hasShadow_DESC",
   HasBorderAsc = "hasBorder_ASC",
   HasBorderDesc = "hasBorder_DESC",
-  HasShadowAsc = "hasShadow_ASC",
-  HasShadowDesc = "hasShadow_DESC"
+  ReverseDirectionAsc = "reverseDirection_ASC",
+  ReverseDirectionDesc = "reverseDirection_DESC"
 }
 
 /** Record of type ༶ Text & Content (sbc_text_and_content) */
