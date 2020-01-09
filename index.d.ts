@@ -17952,7 +17952,7 @@ export type SbcTextAndContentModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   text?: Maybe<TextFilter>
   buttons?: Maybe<LinksFilter>
-  link?: Maybe<LinksFilter>
+  links?: Maybe<LinksFilter>
   hasShadow?: Maybe<BooleanFilter>
   hasBorder?: Maybe<BooleanFilter>
   reverseDirection?: Maybe<BooleanFilter>
@@ -18008,7 +18008,7 @@ export type SbcTextAndContentRecord = {
   hasBorder?: Maybe<Scalars["BooleanType"]>
   hasShadow?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
-  link: Array<LinkRecord>
+  links: Array<LinkRecord>
   reverseDirection?: Maybe<Scalars["BooleanType"]>
   text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
