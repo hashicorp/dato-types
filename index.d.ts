@@ -1686,6 +1686,66 @@ export type DateTimeFilter = {
   neq?: Maybe<Scalars["DateTime"]>
 }
 
+export type DepartmentModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<DepartmentModelFilter>>>
+}
+
+export enum DepartmentModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Department (department) */
+export type DepartmentRecord = {
+  __typename?: "DepartmentRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Department (department) */
+export type DepartmentRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type DropdownLinkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -10909,6 +10969,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allContactFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allDepartmentsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allDropdownLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allEmbeddedPodcastSectionsMeta: CollectionMetadata
@@ -11248,6 +11310,8 @@ export type Query = {
   allContactCategories: Array<ContactCategoryRecord>
   /** Returns a collection of records */
   allContactFormPages: Array<ContactFormPageRecord>
+  /** Returns a collection of records */
+  allDepartments: Array<DepartmentRecord>
   /** Returns a collection of records */
   allDropdownLinks: Array<DropdownLinkRecord>
   /** Returns a collection of records */
@@ -11596,6 +11660,8 @@ export type Query = {
   contactFormPage?: Maybe<ContactFormPageRecord>
   /** Returns the single instance record */
   contactPage?: Maybe<ContactPageRecord>
+  /** Returns a specific record */
+  department?: Maybe<DepartmentRecord>
   /** Returns a specific record */
   dropdownLink?: Maybe<DropdownLinkRecord>
   /** Returns the single instance record */
@@ -12090,6 +12156,12 @@ export type Query_AllContactCategoriesMetaArgs = {
 export type Query_AllContactFormPagesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ContactFormPageModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllDepartmentsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<DepartmentModelFilter>
 }
 
 /** The query root for this schema */
@@ -13155,6 +13227,15 @@ export type QueryAllContactFormPagesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<ContactFormPageModelFilter>
   orderBy?: Maybe<Array<Maybe<ContactFormPageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllDepartmentsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<DepartmentModelFilter>
+  orderBy?: Maybe<Array<Maybe<DepartmentModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -14645,6 +14726,13 @@ export type QueryContactFormPageArgs = {
 /** The query root for this schema */
 export type QueryContactPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryDepartmentArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<DepartmentModelFilter>
+  orderBy?: Maybe<Array<Maybe<DepartmentModelOrderBy>>>
 }
 
 /** The query root for this schema */
