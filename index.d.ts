@@ -1698,6 +1698,7 @@ export type DepartmentModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   summary?: Maybe<TextFilter>
+  backgroundImage?: Maybe<FileFilter>
   missionStatement?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<DepartmentModelFilter>>>
@@ -1741,6 +1742,7 @@ export type DepartmentRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  backgroundImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   missionStatement?: Maybe<Scalars["String"]>
