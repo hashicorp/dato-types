@@ -1698,6 +1698,7 @@ export type DepartmentModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   summary?: Maybe<TextFilter>
+  missionStatement?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<DepartmentModelFilter>>>
 }
@@ -1742,6 +1743,7 @@ export type DepartmentRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  missionStatement?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -1750,6 +1752,11 @@ export type DepartmentRecord = {
 /** Record of type Department (department) */
 export type DepartmentRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Department (department) */
+export type DepartmentRecordMissionStatementArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Department (department) */
