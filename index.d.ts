@@ -11181,8 +11181,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTmpmodelJobsPagesMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allTmpmodelProductUseCasePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTrainingCoursesMeta: CollectionMetadata
@@ -11526,8 +11524,6 @@ export type Query = {
   allTextSections: Array<TextSectionRecord>
   /** Returns a collection of records */
   allTmpmodelButtons: Array<TmpmodelButtonRecord>
-  /** Returns a collection of records */
-  allTmpmodelJobsPages: Array<TmpmodelJobsPageRecord>
   /** Returns a collection of records */
   allTmpmodelProductUseCasePages: Array<TmpmodelProductUseCasePageRecord>
   /** Returns a collection of records */
@@ -11948,7 +11944,7 @@ export type Query = {
   >
   /** Returns the single instance record */
   tmpmodelEcosystemLandingPage?: Maybe<TmpmodelEcosystemLandingPageRecord>
-  /** Returns a specific record */
+  /** Returns the single instance record */
   tmpmodelJobsPage?: Maybe<TmpmodelJobsPageRecord>
   /** Returns the single instance record */
   tmpmodelNomadEnterprisePage?: Maybe<TmpmodelNomadEnterprisePageRecord>
@@ -12910,12 +12906,6 @@ export type Query_AllTextSectionsMetaArgs = {
 export type Query_AllTmpmodelButtonsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpmodelButtonModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllTmpmodelJobsPagesMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpmodelJobsPageModelFilter>
 }
 
 /** The query root for this schema */
@@ -14392,15 +14382,6 @@ export type QueryAllTmpmodelButtonsArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllTmpmodelJobsPagesArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<TmpmodelJobsPageModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpmodelJobsPageModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllTmpmodelProductUseCasePagesArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -15796,8 +15777,6 @@ export type QueryTmpmodelEcosystemLandingPageArgs = {
 /** The query root for this schema */
 export type QueryTmpmodelJobsPageArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpmodelJobsPageModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpmodelJobsPageModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -20939,46 +20918,6 @@ export type TmpmodelEcosystemLandingPageRecord = {
 /** Record of type TMP: Ecosystem - Landing Page (tmpmodel_ecosystem_landing_page) */
 export type TmpmodelEcosystemLandingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-export type TmpmodelJobsPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
-  _isValid?: Maybe<BooleanFilter>
-  department?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<TmpmodelJobsPageModelFilter>>>
-}
-
-export enum TmpmodelJobsPageModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  DepartmentAsc = "department_ASC",
-  DepartmentDesc = "department_DESC"
 }
 
 /** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
