@@ -1698,6 +1698,7 @@ export type DepartmentModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   summary?: Maybe<TextFilter>
+  greenhouseId?: Maybe<IntegerFilter>
   backgroundImage?: Maybe<FileFilter>
   missionStatement?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
@@ -1725,6 +1726,8 @@ export enum DepartmentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  GreenhouseIdAsc = "greenhouseId_ASC",
+  GreenhouseIdDesc = "greenhouseId_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -1744,6 +1747,7 @@ export type DepartmentRecord = {
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
+  greenhouseId?: Maybe<Scalars["IntType"]>
   id: Scalars["ItemId"]
   missionStatement?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
