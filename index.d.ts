@@ -20952,6 +20952,7 @@ export type TmpmodelJobsPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  department?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelJobsPageModelFilter>>>
 }
 
@@ -20975,7 +20976,9 @@ export enum TmpmodelJobsPageModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  DepartmentAsc = "department_ASC",
+  DepartmentDesc = "department_DESC"
 }
 
 /** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
@@ -20992,6 +20995,7 @@ export type TmpmodelJobsPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  department?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
