@@ -21046,6 +21046,7 @@ export type TmpmodelJobsPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  departments: Array<DepartmentRecord>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
