@@ -21554,6 +21554,7 @@ export type TmpmodelJobsPageRecord = {
   benefits?: Maybe<TmpmodelJobsPageBenefitsV100Record>
   createdAt: Scalars["DateTime"]
   departments: Array<JobsDepartmentRecord>
+  faq?: Maybe<TmpJobsPageFaqV100Record>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
