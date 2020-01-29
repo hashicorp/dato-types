@@ -21212,6 +21212,7 @@ export type TmpmodelJobsPageBenefitsCalloutModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  icon?: Maybe<FileFilter>
   heading?: Maybe<StringFilter>
   summary?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsCalloutModelFilter>>>
@@ -21259,6 +21260,7 @@ export type TmpmodelJobsPageBenefitsCalloutRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
+  icon?: Maybe<FileField>
   id: Scalars["ItemId"]
   summary?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
