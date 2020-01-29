@@ -8359,7 +8359,7 @@ export enum JobsPageBenefitModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type Jobs Page: Benefit (jobs_page_benefit) */
+/** Record of type Jobs Page: Benefits (jobs_page_benefit) */
 export type JobsPageBenefitRecord = {
   __typename?: "JobsPageBenefitRecord"
   _createdAt: Scalars["DateTime"]
@@ -8380,12 +8380,12 @@ export type JobsPageBenefitRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Jobs Page: Benefit (jobs_page_benefit) */
+/** Record of type Jobs Page: Benefits (jobs_page_benefit) */
 export type JobsPageBenefitRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Jobs Page: Benefit (jobs_page_benefit) */
+/** Record of type Jobs Page: Benefits (jobs_page_benefit) */
 export type JobsPageBenefitRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
