@@ -8390,7 +8390,7 @@ export type JobsPageBenefitsCalloutRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type JobsPageBenefitSectionModelFilter = {
+export type JobsPageBenefitsSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
   id?: Maybe<ItemIdFilter>
@@ -8404,10 +8404,10 @@ export type JobsPageBenefitSectionModelFilter = {
   summary?: Maybe<TextFilter>
   callouts?: Maybe<LinksFilter>
   heading?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<JobsPageBenefitSectionModelFilter>>>
+  OR?: Maybe<Array<Maybe<JobsPageBenefitsSectionModelFilter>>>
 }
 
-export enum JobsPageBenefitSectionModelOrderBy {
+export enum JobsPageBenefitsSectionModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -8432,9 +8432,9 @@ export enum JobsPageBenefitSectionModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type Jobs Page: Benefits Section (jobs_page_benefit_section) */
-export type JobsPageBenefitSectionRecord = {
-  __typename?: "JobsPageBenefitSectionRecord"
+/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
+export type JobsPageBenefitsSectionRecord = {
+  __typename?: "JobsPageBenefitsSectionRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -8453,13 +8453,13 @@ export type JobsPageBenefitSectionRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Jobs Page: Benefits Section (jobs_page_benefit_section) */
-export type JobsPageBenefitSectionRecord_SeoMetaTagsArgs = {
+/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
+export type JobsPageBenefitsSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Jobs Page: Benefits Section (jobs_page_benefit_section) */
-export type JobsPageBenefitSectionRecordSummaryArgs = {
+/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
+export type JobsPageBenefitsSectionRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
@@ -11326,9 +11326,9 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allJobsEmployeeTestimonialsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allJobsPageBenefitSectionsMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allJobsPageBenefitsCalloutsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
+  _allJobsPageBenefitsSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allJobsPageDepartmentsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -11676,9 +11676,9 @@ export type Query = {
   /** Returns a collection of records */
   allJobsEmployeeTestimonials: Array<JobsEmployeeTestimonialRecord>
   /** Returns a collection of records */
-  allJobsPageBenefitSections: Array<JobsPageBenefitSectionRecord>
-  /** Returns a collection of records */
   allJobsPageBenefitsCallouts: Array<JobsPageBenefitsCalloutRecord>
+  /** Returns a collection of records */
+  allJobsPageBenefitsSections: Array<JobsPageBenefitsSectionRecord>
   /** Returns a collection of records */
   allJobsPageDepartments: Array<JobsPageDepartmentRecord>
   /** Returns a collection of records */
@@ -12058,9 +12058,9 @@ export type Query = {
   /** Returns the single instance record */
   jobsPage?: Maybe<JobsPageRecord>
   /** Returns a specific record */
-  jobsPageBenefitSection?: Maybe<JobsPageBenefitSectionRecord>
-  /** Returns a specific record */
   jobsPageBenefitsCallout?: Maybe<JobsPageBenefitsCalloutRecord>
+  /** Returns a specific record */
+  jobsPageBenefitsSection?: Maybe<JobsPageBenefitsSectionRecord>
   /** Returns a specific record */
   jobsPageDepartment?: Maybe<JobsPageDepartmentRecord>
   /** Returns a specific record */
@@ -12750,15 +12750,15 @@ export type Query_AllJobsEmployeeTestimonialsMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllJobsPageBenefitSectionsMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<JobsPageBenefitSectionModelFilter>
-}
-
-/** The query root for this schema */
 export type Query_AllJobsPageBenefitsCalloutsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsPageBenefitsCalloutModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllJobsPageBenefitsSectionsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsPageBenefitsSectionModelFilter>
 }
 
 /** The query root for this schema */
@@ -14001,21 +14001,21 @@ export type QueryAllJobsEmployeeTestimonialsArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllJobsPageBenefitSectionsArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<JobsPageBenefitSectionModelFilter>
-  orderBy?: Maybe<Array<Maybe<JobsPageBenefitSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllJobsPageBenefitsCalloutsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<JobsPageBenefitsCalloutModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsPageBenefitsCalloutModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllJobsPageBenefitsSectionsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<JobsPageBenefitsSectionModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsPageBenefitsSectionModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15484,17 +15484,17 @@ export type QueryJobsPageArgs = {
 }
 
 /** The query root for this schema */
-export type QueryJobsPageBenefitSectionArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<JobsPageBenefitSectionModelFilter>
-  orderBy?: Maybe<Array<Maybe<JobsPageBenefitSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryJobsPageBenefitsCalloutArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsPageBenefitsCalloutModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsPageBenefitsCalloutModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryJobsPageBenefitsSectionArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsPageBenefitsSectionModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsPageBenefitsSectionModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -21354,7 +21354,7 @@ export type TmpmodelJobsPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  benefits?: Maybe<JobsPageBenefitSectionRecord>
+  benefits?: Maybe<JobsPageBenefitsSectionRecord>
   createdAt: Scalars["DateTime"]
   departments: Array<JobsPageDepartmentRecord>
   faq?: Maybe<FaqCategoryRecord>
