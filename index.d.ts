@@ -8344,6 +8344,7 @@ export type JobsEmployeeTestimonialModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
+  testimonial?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelFilter>>>
 }
 
@@ -8388,12 +8389,18 @@ export type JobsEmployeeTestimonialRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  testimonial?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Jobs Employee Testimonial (jobs_employee_testimonial) */
 export type JobsEmployeeTestimonialRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Jobs Employee Testimonial (jobs_employee_testimonial) */
+export type JobsEmployeeTestimonialRecordTestimonialArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type JobsPageModelContentField =
