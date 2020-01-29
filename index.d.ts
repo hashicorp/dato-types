@@ -1686,90 +1686,6 @@ export type DateTimeFilter = {
   neq?: Maybe<Scalars["DateTime"]>
 }
 
-export type DepartmentModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
-  _isValid?: Maybe<BooleanFilter>
-  summary?: Maybe<TextFilter>
-  greenhouseId?: Maybe<IntegerFilter>
-  backgroundImage?: Maybe<FileFilter>
-  missionStatement?: Maybe<TextFilter>
-  title?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<DepartmentModelFilter>>>
-}
-
-export enum DepartmentModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  GreenhouseIdAsc = "greenhouseId_ASC",
-  GreenhouseIdDesc = "greenhouseId_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
-}
-
-/** Record of type Department (department) */
-export type DepartmentRecord = {
-  __typename?: "DepartmentRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  backgroundImage?: Maybe<FileField>
-  createdAt: Scalars["DateTime"]
-  greenhouseId?: Maybe<Scalars["IntType"]>
-  id: Scalars["ItemId"]
-  missionStatement?: Maybe<Scalars["String"]>
-  summary?: Maybe<Scalars["String"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Department (department) */
-export type DepartmentRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Department (department) */
-export type DepartmentRecordMissionStatementArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Department (department) */
-export type DepartmentRecordSummaryArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 export type DropdownLinkModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -8328,6 +8244,90 @@ export enum ItemStatus {
   Published = "published"
 }
 
+export type JobsDepartmentModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  summary?: Maybe<TextFilter>
+  greenhouseId?: Maybe<IntegerFilter>
+  backgroundImage?: Maybe<FileFilter>
+  missionStatement?: Maybe<TextFilter>
+  title?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<JobsDepartmentModelFilter>>>
+}
+
+export enum JobsDepartmentModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  GreenhouseIdAsc = "greenhouseId_ASC",
+  GreenhouseIdDesc = "greenhouseId_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
+}
+
+/** Record of type Jobs Department (jobs_department) */
+export type JobsDepartmentRecord = {
+  __typename?: "JobsDepartmentRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  backgroundImage?: Maybe<FileField>
+  createdAt: Scalars["DateTime"]
+  greenhouseId?: Maybe<Scalars["IntType"]>
+  id: Scalars["ItemId"]
+  missionStatement?: Maybe<Scalars["String"]>
+  summary?: Maybe<Scalars["String"]>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Jobs Department (jobs_department) */
+export type JobsDepartmentRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Jobs Department (jobs_department) */
+export type JobsDepartmentRecordMissionStatementArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Jobs Department (jobs_department) */
+export type JobsDepartmentRecordSummaryArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 export type JobsPageModelContentField =
   | CalloutSectionRecord
   | TextImageSectionRecord
@@ -10993,8 +10993,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allContactFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allDepartmentsMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allDropdownLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allEmbeddedPodcastSectionsMeta: CollectionMetadata
@@ -11100,6 +11098,8 @@ export type Query = {
   _allIntegrationTypeCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allIntegrationTypesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
+  _allJobsDepartmentsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allLargeLogoGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -11335,8 +11335,6 @@ export type Query = {
   /** Returns a collection of records */
   allContactFormPages: Array<ContactFormPageRecord>
   /** Returns a collection of records */
-  allDepartments: Array<DepartmentRecord>
-  /** Returns a collection of records */
   allDropdownLinks: Array<DropdownLinkRecord>
   /** Returns a collection of records */
   allEmbeddedPodcastSections: Array<EmbeddedPodcastSectionRecord>
@@ -11444,6 +11442,8 @@ export type Query = {
   allIntegrationTypeCategories: Array<IntegrationTypeCategoryRecord>
   /** Returns a collection of records */
   allIntegrationTypes: Array<IntegrationTypeRecord>
+  /** Returns a collection of records */
+  allJobsDepartments: Array<JobsDepartmentRecord>
   /** Returns a collection of records */
   allLargeLogoGridSections: Array<LargeLogoGridSectionRecord>
   /** Returns a collection of records */
@@ -11685,8 +11685,6 @@ export type Query = {
   /** Returns the single instance record */
   contactPage?: Maybe<ContactPageRecord>
   /** Returns a specific record */
-  department?: Maybe<DepartmentRecord>
-  /** Returns a specific record */
   dropdownLink?: Maybe<DropdownLinkRecord>
   /** Returns the single instance record */
   ecosystemFindAPartnerPage?: Maybe<EcosystemFindAPartnerPageRecord>
@@ -11818,6 +11816,8 @@ export type Query = {
   integrationTypeCategory?: Maybe<IntegrationTypeCategoryRecord>
   /** Returns the single instance record */
   integrationsPage?: Maybe<IntegrationsPageRecord>
+  /** Returns a specific record */
+  jobsDepartment?: Maybe<JobsDepartmentRecord>
   /** Returns the single instance record */
   jobsPage?: Maybe<JobsPageRecord>
   /** Returns a specific record */
@@ -12183,12 +12183,6 @@ export type Query_AllContactFormPagesMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllDepartmentsMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<DepartmentModelFilter>
-}
-
-/** The query root for this schema */
 export type Query_AllDropdownLinksMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<DropdownLinkModelFilter>
@@ -12504,6 +12498,12 @@ export type Query_AllIntegrationTypeCategoriesMetaArgs = {
 export type Query_AllIntegrationTypesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<IntegrationTypeModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllJobsDepartmentsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsDepartmentModelFilter>
 }
 
 /** The query root for this schema */
@@ -13254,15 +13254,6 @@ export type QueryAllContactFormPagesArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllDepartmentsArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<DepartmentModelFilter>
-  orderBy?: Maybe<Array<Maybe<DepartmentModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllDropdownLinksArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -13737,6 +13728,15 @@ export type QueryAllIntegrationTypesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<IntegrationTypeModelFilter>
   orderBy?: Maybe<Array<Maybe<IntegrationTypeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllJobsDepartmentsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<JobsDepartmentModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsDepartmentModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -14753,13 +14753,6 @@ export type QueryContactPageArgs = {
 }
 
 /** The query root for this schema */
-export type QueryDepartmentArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<DepartmentModelFilter>
-  orderBy?: Maybe<Array<Maybe<DepartmentModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryDropdownLinkArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<DropdownLinkModelFilter>
@@ -15188,6 +15181,13 @@ export type QueryIntegrationTypeCategoryArgs = {
 /** The query root for this schema */
 export type QueryIntegrationsPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryJobsDepartmentArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsDepartmentModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsDepartmentModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -21046,7 +21046,7 @@ export type TmpmodelJobsPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  departments: Array<DepartmentRecord>
+  departments: Array<JobsDepartmentRecord>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
