@@ -21038,6 +21038,7 @@ export type TmpJobsPageFaqV100ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  items?: Maybe<LinksFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpJobsPageFaqV100ModelFilter>>>
 }
@@ -21083,6 +21084,7 @@ export type TmpJobsPageFaqV100Record = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  items: Array<TmpJobsPageFaqItemV100Record>
   updatedAt: Scalars["DateTime"]
 }
 
