@@ -8407,6 +8407,72 @@ export type JobsEmployeeTestimonialRecordTestimonialArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type JobsPageFaqModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  items?: Maybe<LinksFilter>
+  heading?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<JobsPageFaqModelFilter>>>
+}
+
+export enum JobsPageFaqModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
+}
+
+/** Record of type TMP: Jobs Page: FAQ (jobs_page_faq) */
+export type JobsPageFaqRecord = {
+  __typename?: "JobsPageFaqRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  items: Array<TmpJobsPageFaqItemV100Record>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Jobs Page: FAQ (jobs_page_faq) */
+export type JobsPageFaqRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type JobsPageModelContentField =
   | CalloutSectionRecord
   | TextImageSectionRecord
@@ -11182,6 +11248,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allJobsEmployeeTestimonialsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allJobsPageFaqsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allLargeLogoGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allLinksMeta: CollectionMetadata
@@ -11347,8 +11415,6 @@ export type Query = {
   _allTextSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpJobsPageFaqItemV100sMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
-  _allTmpJobsPageFaqV100sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -11536,6 +11602,8 @@ export type Query = {
   /** Returns a collection of records */
   allJobsEmployeeTestimonials: Array<JobsEmployeeTestimonialRecord>
   /** Returns a collection of records */
+  allJobsPageFaqs: Array<JobsPageFaqRecord>
+  /** Returns a collection of records */
   allLargeLogoGridSections: Array<LargeLogoGridSectionRecord>
   /** Returns a collection of records */
   allLinks: Array<LinkRecord>
@@ -11703,8 +11771,6 @@ export type Query = {
   allTextSections: Array<TextSectionRecord>
   /** Returns a collection of records */
   allTmpJobsPageFaqItemV100s: Array<TmpJobsPageFaqItemV100Record>
-  /** Returns a collection of records */
-  allTmpJobsPageFaqV100s: Array<TmpJobsPageFaqV100Record>
   /** Returns a collection of records */
   allTmpmodelButtons: Array<TmpmodelButtonRecord>
   /** Returns a collection of records */
@@ -11924,6 +11990,8 @@ export type Query = {
   /** Returns the single instance record */
   jobsPage?: Maybe<JobsPageRecord>
   /** Returns a specific record */
+  jobsPageFaq?: Maybe<JobsPageFaqRecord>
+  /** Returns a specific record */
   largeLogoGridSection?: Maybe<LargeLogoGridSectionRecord>
   /** Returns the single instance record */
   learnLandingPage?: Maybe<LearnLandingPageRecord>
@@ -12121,8 +12189,6 @@ export type Query = {
   tmpHomepage?: Maybe<TmpHomepageRecord>
   /** Returns a specific record */
   tmpJobsPageFaqItemV100?: Maybe<TmpJobsPageFaqItemV100Record>
-  /** Returns a specific record */
-  tmpJobsPageFaqV100?: Maybe<TmpJobsPageFaqV100Record>
   /** Returns the single instance record */
   tmpmodelAboutPage?: Maybe<TmpmodelAboutPageRecord>
   /** Returns a specific record */
@@ -12626,6 +12692,12 @@ export type Query_AllJobsEmployeeTestimonialsMetaArgs = {
 }
 
 /** The query root for this schema */
+export type Query_AllJobsPageFaqsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsPageFaqModelFilter>
+}
+
+/** The query root for this schema */
 export type Query_AllLargeLogoGridSectionsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<LargeLogoGridSectionModelFilter>
@@ -13121,12 +13193,6 @@ export type Query_AllTextSectionsMetaArgs = {
 export type Query_AllTmpJobsPageFaqItemV100sMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpJobsPageFaqItemV100ModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllTmpJobsPageFaqV100sMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpJobsPageFaqV100ModelFilter>
 }
 
 /** The query root for this schema */
@@ -13892,6 +13958,15 @@ export type QueryAllJobsEmployeeTestimonialsArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllJobsPageFaqsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<JobsPageFaqModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsPageFaqModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllLargeLogoGridSectionsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -14639,15 +14714,6 @@ export type QueryAllTmpJobsPageFaqItemV100sArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllTmpJobsPageFaqV100sArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<TmpJobsPageFaqV100ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpJobsPageFaqV100ModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllTmpmodelButtonsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -15391,6 +15457,13 @@ export type QueryJobsPageArgs = {
 }
 
 /** The query root for this schema */
+export type QueryJobsPageFaqArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsPageFaqModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsPageFaqModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryLargeLogoGridSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<LargeLogoGridSectionModelFilter>
@@ -16049,13 +16122,6 @@ export type QueryTmpJobsPageFaqItemV100Args = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpJobsPageFaqItemV100ModelFilter>
   orderBy?: Maybe<Array<Maybe<TmpJobsPageFaqItemV100ModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryTmpJobsPageFaqV100Args = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpJobsPageFaqV100ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpJobsPageFaqV100ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -21027,72 +21093,6 @@ export type TmpJobsPageFaqItemV100RecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type TmpJobsPageFaqV100ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
-  _isValid?: Maybe<BooleanFilter>
-  items?: Maybe<LinksFilter>
-  heading?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<TmpJobsPageFaqV100ModelFilter>>>
-}
-
-export enum TmpJobsPageFaqV100ModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC"
-}
-
-/** Record of type TMP: Jobs Page: FAQ (tmp_jobs_page_faq_v1_0_0) */
-export type TmpJobsPageFaqV100Record = {
-  __typename?: "TmpJobsPageFaqV100Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  heading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  items: Array<TmpJobsPageFaqItemV100Record>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type TMP: Jobs Page: FAQ (tmp_jobs_page_faq_v1_0_0) */
-export type TmpJobsPageFaqV100Record_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type TMP: About Page (tmpmodel_about_page) */
 export type TmpmodelAboutPageRecord = {
   __typename?: "TmpmodelAboutPageRecord"
@@ -21554,7 +21554,7 @@ export type TmpmodelJobsPageRecord = {
   benefits?: Maybe<TmpmodelJobsPageBenefitsV100Record>
   createdAt: Scalars["DateTime"]
   departments: Array<JobsDepartmentRecord>
-  faq?: Maybe<TmpJobsPageFaqV100Record>
+  faq?: Maybe<JobsPageFaqRecord>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
