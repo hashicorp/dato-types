@@ -21182,6 +21182,7 @@ export type TmpmodelJobsPageBenefitsSectionV100ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  summary?: Maybe<TextFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsSectionV100ModelFilter>>>
 }
@@ -21227,12 +21228,18 @@ export type TmpmodelJobsPageBenefitsSectionV100Record = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  summary?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
 export type TmpmodelJobsPageBenefitsSectionV100Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
+export type TmpmodelJobsPageBenefitsSectionV100RecordSummaryArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
