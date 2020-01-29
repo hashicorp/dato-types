@@ -8332,6 +8332,66 @@ export type JobsDepartmentRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type JobsEmployeeTestimonialModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelFilter>>>
+}
+
+export enum JobsEmployeeTestimonialModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Jobs Employee Testimonial (jobs_employee_testimonial) */
+export type JobsEmployeeTestimonialRecord = {
+  __typename?: "JobsEmployeeTestimonialRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Jobs Employee Testimonial (jobs_employee_testimonial) */
+export type JobsEmployeeTestimonialRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type JobsPageModelContentField =
   | CalloutSectionRecord
   | TextImageSectionRecord
@@ -11105,6 +11165,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allJobsDepartmentsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allJobsEmployeeTestimonialsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allLargeLogoGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allLinksMeta: CollectionMetadata
@@ -11448,6 +11510,8 @@ export type Query = {
   allIntegrationTypes: Array<IntegrationTypeRecord>
   /** Returns a collection of records */
   allJobsDepartments: Array<JobsDepartmentRecord>
+  /** Returns a collection of records */
+  allJobsEmployeeTestimonials: Array<JobsEmployeeTestimonialRecord>
   /** Returns a collection of records */
   allLargeLogoGridSections: Array<LargeLogoGridSectionRecord>
   /** Returns a collection of records */
@@ -11822,6 +11886,8 @@ export type Query = {
   integrationsPage?: Maybe<IntegrationsPageRecord>
   /** Returns a specific record */
   jobsDepartment?: Maybe<JobsDepartmentRecord>
+  /** Returns a specific record */
+  jobsEmployeeTestimonial?: Maybe<JobsEmployeeTestimonialRecord>
   /** Returns the single instance record */
   jobsPage?: Maybe<JobsPageRecord>
   /** Returns a specific record */
@@ -12508,6 +12574,12 @@ export type Query_AllIntegrationTypesMetaArgs = {
 export type Query_AllJobsDepartmentsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsDepartmentModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllJobsEmployeeTestimonialsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsEmployeeTestimonialModelFilter>
 }
 
 /** The query root for this schema */
@@ -13741,6 +13813,15 @@ export type QueryAllJobsDepartmentsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<JobsDepartmentModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsDepartmentModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllJobsEmployeeTestimonialsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<JobsEmployeeTestimonialModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15192,6 +15273,13 @@ export type QueryJobsDepartmentArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsDepartmentModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsDepartmentModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryJobsEmployeeTestimonialArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<JobsEmployeeTestimonialModelFilter>
+  orderBy?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelOrderBy>>>
 }
 
 /** The query root for this schema */
