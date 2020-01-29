@@ -8624,72 +8624,6 @@ export type JobsPageFaqItemRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type JobsPageFaqModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
-  _isValid?: Maybe<BooleanFilter>
-  items?: Maybe<LinksFilter>
-  heading?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<JobsPageFaqModelFilter>>>
-}
-
-export enum JobsPageFaqModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC"
-}
-
-/** Record of type TMP: Jobs Page: FAQ (jobs_page_faq) */
-export type JobsPageFaqRecord = {
-  __typename?: "JobsPageFaqRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  heading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  items: Array<JobsPageFaqItemRecord>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type TMP: Jobs Page: FAQ (jobs_page_faq) */
-export type JobsPageFaqRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type JobsPageModelContentField =
   | CalloutSectionRecord
   | TextImageSectionRecord
@@ -11471,8 +11405,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allJobsPageFaqItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allJobsPageFaqsMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allLargeLogoGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allLinksMeta: CollectionMetadata
@@ -11824,8 +11756,6 @@ export type Query = {
   allJobsPageDepartments: Array<JobsPageDepartmentRecord>
   /** Returns a collection of records */
   allJobsPageFaqItems: Array<JobsPageFaqItemRecord>
-  /** Returns a collection of records */
-  allJobsPageFaqs: Array<JobsPageFaqRecord>
   /** Returns a collection of records */
   allLargeLogoGridSections: Array<LargeLogoGridSectionRecord>
   /** Returns a collection of records */
@@ -12208,8 +12138,6 @@ export type Query = {
   jobsPageBenefitsCallout?: Maybe<JobsPageBenefitsCalloutRecord>
   /** Returns a specific record */
   jobsPageDepartment?: Maybe<JobsPageDepartmentRecord>
-  /** Returns a specific record */
-  jobsPageFaq?: Maybe<JobsPageFaqRecord>
   /** Returns a specific record */
   jobsPageFaqItem?: Maybe<JobsPageFaqItemRecord>
   /** Returns a specific record */
@@ -12920,12 +12848,6 @@ export type Query_AllJobsPageDepartmentsMetaArgs = {
 export type Query_AllJobsPageFaqItemsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsPageFaqItemModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllJobsPageFaqsMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<JobsPageFaqModelFilter>
 }
 
 /** The query root for this schema */
@@ -14195,15 +14117,6 @@ export type QueryAllJobsPageFaqItemsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<JobsPageFaqItemModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsPageFaqItemModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryAllJobsPageFaqsArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<JobsPageFaqModelFilter>
-  orderBy?: Maybe<Array<Maybe<JobsPageFaqModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15681,13 +15594,6 @@ export type QueryJobsPageDepartmentArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsPageDepartmentModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsPageDepartmentModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryJobsPageFaqArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<JobsPageFaqModelFilter>
-  orderBy?: Maybe<Array<Maybe<JobsPageFaqModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -21550,7 +21456,7 @@ export type TmpmodelJobsPageRecord = {
   benefits?: Maybe<JobsPageBenefitRecord>
   createdAt: Scalars["DateTime"]
   departments: Array<JobsPageDepartmentRecord>
-  faq?: Maybe<JobsPageFaqRecord>
+  faq?: Maybe<OpenSourceToolRecord>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
