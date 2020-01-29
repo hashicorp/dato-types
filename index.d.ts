@@ -8426,7 +8426,6 @@ export type JobsPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  benefits?: Maybe<TmpmodelJobsPageBenefitsSectionV100Record>
   content: Array<JobsPageModelContentField>
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
