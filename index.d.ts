@@ -21213,6 +21213,7 @@ export type TmpmodelJobsPageBenefitsCalloutModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   heading?: Maybe<StringFilter>
+  summary?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsCalloutModelFilter>>>
 }
 
@@ -21238,7 +21239,9 @@ export enum TmpmodelJobsPageBenefitsCalloutModelOrderBy {
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
   HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC"
+  HeadingDesc = "heading_DESC",
+  SummaryAsc = "summary_ASC",
+  SummaryDesc = "summary_DESC"
 }
 
 /** Record of type Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
@@ -21257,6 +21260,7 @@ export type TmpmodelJobsPageBenefitsCalloutRecord = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  summary?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
