@@ -8313,7 +8313,6 @@ export type JobsDepartmentRecord = {
   missionStatement?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
   summary?: Maybe<Scalars["String"]>
-  testimonials?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
