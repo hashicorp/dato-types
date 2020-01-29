@@ -11350,7 +11350,7 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTmpmodelJobsPageBenefitsCalloutsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTmpmodelJobsPageBenefitsSectionV100sMeta: CollectionMetadata
+  _allTmpmodelJobsPageBenefitsV100sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpmodelProductUseCasePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -11704,9 +11704,7 @@ export type Query = {
     TmpmodelJobsPageBenefitsCalloutRecord
   >
   /** Returns a collection of records */
-  allTmpmodelJobsPageBenefitsSectionV100s: Array<
-    TmpmodelJobsPageBenefitsSectionV100Record
-  >
+  allTmpmodelJobsPageBenefitsV100s: Array<TmpmodelJobsPageBenefitsV100Record>
   /** Returns a collection of records */
   allTmpmodelProductUseCasePages: Array<TmpmodelProductUseCasePageRecord>
   /** Returns a collection of records */
@@ -12136,9 +12134,7 @@ export type Query = {
   /** Returns a specific record */
   tmpmodelJobsPageBenefitsCallout?: Maybe<TmpmodelJobsPageBenefitsCalloutRecord>
   /** Returns a specific record */
-  tmpmodelJobsPageBenefitsSectionV100?: Maybe<
-    TmpmodelJobsPageBenefitsSectionV100Record
-  >
+  tmpmodelJobsPageBenefitsV100?: Maybe<TmpmodelJobsPageBenefitsV100Record>
   /** Returns the single instance record */
   tmpmodelNomadEnterprisePage?: Maybe<TmpmodelNomadEnterprisePageRecord>
   /** Returns the single instance record */
@@ -13120,9 +13116,9 @@ export type Query_AllTmpmodelJobsPageBenefitsCalloutsMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllTmpmodelJobsPageBenefitsSectionV100sMetaArgs = {
+export type Query_AllTmpmodelJobsPageBenefitsV100sMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpmodelJobsPageBenefitsSectionV100ModelFilter>
+  filter?: Maybe<TmpmodelJobsPageBenefitsV100ModelFilter>
 }
 
 /** The query root for this schema */
@@ -14626,12 +14622,12 @@ export type QueryAllTmpmodelJobsPageBenefitsCalloutsArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllTmpmodelJobsPageBenefitsSectionV100sArgs = {
+export type QueryAllTmpmodelJobsPageBenefitsV100sArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<TmpmodelJobsPageBenefitsSectionV100ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsSectionV100ModelOrderBy>>>
+  filter?: Maybe<TmpmodelJobsPageBenefitsV100ModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsV100ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -16054,10 +16050,10 @@ export type QueryTmpmodelJobsPageBenefitsCalloutArgs = {
 }
 
 /** The query root for this schema */
-export type QueryTmpmodelJobsPageBenefitsSectionV100Args = {
+export type QueryTmpmodelJobsPageBenefitsV100Args = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpmodelJobsPageBenefitsSectionV100ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsSectionV100ModelOrderBy>>>
+  filter?: Maybe<TmpmodelJobsPageBenefitsV100ModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsV100ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -21243,7 +21239,7 @@ export enum TmpmodelJobsPageBenefitsCalloutModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type TMP: Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+/** Record of type TMP: Jobs Page: Benefits: Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecord = {
   __typename?: "TmpmodelJobsPageBenefitsCalloutRecord"
   _createdAt: Scalars["DateTime"]
@@ -21264,17 +21260,17 @@ export type TmpmodelJobsPageBenefitsCalloutRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+/** Record of type TMP: Jobs Page: Benefits: Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+/** Record of type TMP: Jobs Page: Benefits: Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type TmpmodelJobsPageBenefitsSectionV100ModelFilter = {
+export type TmpmodelJobsPageBenefitsV100ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
   id?: Maybe<ItemIdFilter>
@@ -21288,10 +21284,10 @@ export type TmpmodelJobsPageBenefitsSectionV100ModelFilter = {
   summary?: Maybe<TextFilter>
   callouts?: Maybe<LinksFilter>
   heading?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsSectionV100ModelFilter>>>
+  OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsV100ModelFilter>>>
 }
 
-export enum TmpmodelJobsPageBenefitsSectionV100ModelOrderBy {
+export enum TmpmodelJobsPageBenefitsV100ModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -21316,9 +21312,9 @@ export enum TmpmodelJobsPageBenefitsSectionV100ModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type TMP: Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
-export type TmpmodelJobsPageBenefitsSectionV100Record = {
-  __typename?: "TmpmodelJobsPageBenefitsSectionV100Record"
+/** Record of type TMP: Jobs Page: Benefits (tmpmodel_jobs_page_benefits_v1_0_0) */
+export type TmpmodelJobsPageBenefitsV100Record = {
+  __typename?: "TmpmodelJobsPageBenefitsV100Record"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -21337,13 +21333,13 @@ export type TmpmodelJobsPageBenefitsSectionV100Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
-export type TmpmodelJobsPageBenefitsSectionV100Record_SeoMetaTagsArgs = {
+/** Record of type TMP: Jobs Page: Benefits (tmpmodel_jobs_page_benefits_v1_0_0) */
+export type TmpmodelJobsPageBenefitsV100Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
-export type TmpmodelJobsPageBenefitsSectionV100RecordSummaryArgs = {
+/** Record of type TMP: Jobs Page: Benefits (tmpmodel_jobs_page_benefits_v1_0_0) */
+export type TmpmodelJobsPageBenefitsV100RecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
