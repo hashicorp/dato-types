@@ -21283,6 +21283,7 @@ export type TmpmodelJobsPageBenefitsSectionV100ModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   summary?: Maybe<TextFilter>
+  callouts?: Maybe<LinksFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsSectionV100ModelFilter>>>
 }
@@ -21325,6 +21326,7 @@ export type TmpmodelJobsPageBenefitsSectionV100Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  callouts: Array<TmpmodelJobsPageBenefitsCalloutRecord>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
