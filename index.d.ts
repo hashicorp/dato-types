@@ -21208,7 +21208,7 @@ export enum TmpmodelJobsPageBenefitsSectionV100ModelOrderBy {
   IsValidDesc = "_isValid_DESC"
 }
 
-/** Record of type tmpmodel_jobs_page_benefits_section_v1.0.0 (tmpmodel_jobs_page_benefits_section_v1_0_0) */
+/** Record of type Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
 export type TmpmodelJobsPageBenefitsSectionV100Record = {
   __typename?: "TmpmodelJobsPageBenefitsSectionV100Record"
   _createdAt: Scalars["DateTime"]
@@ -21226,7 +21226,7 @@ export type TmpmodelJobsPageBenefitsSectionV100Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type tmpmodel_jobs_page_benefits_section_v1.0.0 (tmpmodel_jobs_page_benefits_section_v1_0_0) */
+/** Record of type Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
 export type TmpmodelJobsPageBenefitsSectionV100Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
