@@ -21214,7 +21214,7 @@ export type TmpmodelJobsPageBenefitsCalloutModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   icon?: Maybe<FileFilter>
   heading?: Maybe<StringFilter>
-  summary?: Maybe<StringFilter>
+  summary?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<TmpmodelJobsPageBenefitsCalloutModelFilter>>>
 }
 
@@ -21240,9 +21240,7 @@ export enum TmpmodelJobsPageBenefitsCalloutModelOrderBy {
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
   HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC",
-  SummaryAsc = "summary_ASC",
-  SummaryDesc = "summary_DESC"
+  HeadingDesc = "heading_DESC"
 }
 
 /** Record of type Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
@@ -21269,6 +21267,11 @@ export type TmpmodelJobsPageBenefitsCalloutRecord = {
 /** Record of type Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+export type TmpmodelJobsPageBenefitsCalloutRecordSummaryArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type TmpmodelJobsPageBenefitsSectionV100ModelFilter = {
