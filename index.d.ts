@@ -8432,7 +8432,7 @@ export enum JobsPageBenefitsCalloutModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type TMP: Jobs Page: Benefits: Callout (jobs_page_benefits_callout) */
+/** Record of type Jobs Page: Benefits Callout (jobs_page_benefits_callout) */
 export type JobsPageBenefitsCalloutRecord = {
   __typename?: "JobsPageBenefitsCalloutRecord"
   _createdAt: Scalars["DateTime"]
@@ -8453,12 +8453,12 @@ export type JobsPageBenefitsCalloutRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Jobs Page: Benefits: Callout (jobs_page_benefits_callout) */
+/** Record of type Jobs Page: Benefits Callout (jobs_page_benefits_callout) */
 export type JobsPageBenefitsCalloutRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Jobs Page: Benefits: Callout (jobs_page_benefits_callout) */
+/** Record of type Jobs Page: Benefits Callout (jobs_page_benefits_callout) */
 export type JobsPageBenefitsCalloutRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
