@@ -8257,11 +8257,11 @@ export type JobsDepartmentModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   testimonials?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
   summary?: Maybe<TextFilter>
   greenhouseId?: Maybe<IntegerFilter>
   backgroundImage?: Maybe<FileFilter>
   missionStatement?: Maybe<TextFilter>
-  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<JobsDepartmentModelFilter>>>
 }
 
@@ -8288,10 +8288,10 @@ export enum JobsDepartmentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  GreenhouseIdAsc = "greenhouseId_ASC",
-  GreenhouseIdDesc = "greenhouseId_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  GreenhouseIdAsc = "greenhouseId_ASC",
+  GreenhouseIdDesc = "greenhouseId_DESC"
 }
 
 /** Record of type Jobs Department (jobs_department) */
