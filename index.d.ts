@@ -20967,6 +20967,8 @@ export type TmpJobsPageFaqItemV100ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  heading?: Maybe<StringFilter>
+  content?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<TmpJobsPageFaqItemV100ModelFilter>>>
 }
 
@@ -20990,7 +20992,9 @@ export enum TmpJobsPageFaqItemV100ModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
 }
 
 /** Record of type TMP: Jobs Page: FAQ: Item (tmp_jobs_page_faq_item_v1_0_0) */
@@ -21006,7 +21010,9 @@ export type TmpJobsPageFaqItemV100Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
@@ -21014,6 +21020,11 @@ export type TmpJobsPageFaqItemV100Record = {
 /** Record of type TMP: Jobs Page: FAQ: Item (tmp_jobs_page_faq_item_v1_0_0) */
 export type TmpJobsPageFaqItemV100Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type TMP: Jobs Page: FAQ: Item (tmp_jobs_page_faq_item_v1_0_0) */
+export type TmpJobsPageFaqItemV100RecordContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type TmpJobsPageFaqV100ModelFilter = {
