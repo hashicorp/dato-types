@@ -8256,6 +8256,7 @@ export type JobsDepartmentModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  testimonials?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
   greenhouseId?: Maybe<IntegerFilter>
   backgroundImage?: Maybe<FileFilter>
@@ -8313,6 +8314,7 @@ export type JobsDepartmentRecord = {
   missionStatement?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
   summary?: Maybe<Scalars["String"]>
+  testimonials: Array<JobsEmployeeTestimonialRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -8344,6 +8346,7 @@ export type JobsEmployeeTestimonialModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
+  avatar?: Maybe<FileFilter>
   testimonial?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelFilter>>>
 }
@@ -8386,6 +8389,7 @@ export type JobsEmployeeTestimonialRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  avatar?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
