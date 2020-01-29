@@ -21243,7 +21243,7 @@ export enum TmpmodelJobsPageBenefitsCalloutModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type TMP Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+/** Record of type TMP: Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecord = {
   __typename?: "TmpmodelJobsPageBenefitsCalloutRecord"
   _createdAt: Scalars["DateTime"]
@@ -21264,12 +21264,12 @@ export type TmpmodelJobsPageBenefitsCalloutRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+/** Record of type TMP: Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
+/** Record of type TMP: Jobs Page — Benefits Callout (tmpmodel_jobs_page_benefits_callout) */
 export type TmpmodelJobsPageBenefitsCalloutRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
@@ -21316,7 +21316,7 @@ export enum TmpmodelJobsPageBenefitsSectionV100ModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type TMP Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
+/** Record of type TMP: Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
 export type TmpmodelJobsPageBenefitsSectionV100Record = {
   __typename?: "TmpmodelJobsPageBenefitsSectionV100Record"
   _createdAt: Scalars["DateTime"]
@@ -21337,12 +21337,12 @@ export type TmpmodelJobsPageBenefitsSectionV100Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
+/** Record of type TMP: Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
 export type TmpmodelJobsPageBenefitsSectionV100Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
+/** Record of type TMP: Jobs Page — Benefits Section (tmpmodel_jobs_page_benefits_section_v1_0_0) */
 export type TmpmodelJobsPageBenefitsSectionV100RecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
