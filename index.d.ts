@@ -8432,7 +8432,7 @@ export enum JobsPageBenefitsSectionModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
+/** Record of type [DELETEME] Jobs Page: Benefits Section (jobs_page_benefits_section) */
 export type JobsPageBenefitsSectionRecord = {
   __typename?: "JobsPageBenefitsSectionRecord"
   _createdAt: Scalars["DateTime"]
@@ -8453,12 +8453,12 @@ export type JobsPageBenefitsSectionRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
+/** Record of type [DELETEME] Jobs Page: Benefits Section (jobs_page_benefits_section) */
 export type JobsPageBenefitsSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
+/** Record of type [DELETEME] Jobs Page: Benefits Section (jobs_page_benefits_section) */
 export type JobsPageBenefitsSectionRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
@@ -8513,7 +8513,7 @@ export enum JobsPageDepartmentModelOrderBy {
   GreenhouseIdDesc = "greenhouseId_DESC"
 }
 
-/** Record of type Jobs Page: Department (jobs_page_department) */
+/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecord = {
   __typename?: "JobsPageDepartmentRecord"
   _createdAt: Scalars["DateTime"]
@@ -8538,17 +8538,17 @@ export type JobsPageDepartmentRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Jobs Page: Department (jobs_page_department) */
+/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Jobs Page: Department (jobs_page_department) */
+/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecordMissionStatementArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Jobs Page: Department (jobs_page_department) */
+/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
