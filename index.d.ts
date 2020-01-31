@@ -21341,7 +21341,7 @@ export type TmpmodelEcosystemLandingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
+/** Record of type [DELETEME] TMP: Jobs Page (tmpmodel_jobs_page) */
 export type TmpmodelJobsPageRecord = {
   __typename?: "TmpmodelJobsPageRecord"
   _createdAt: Scalars["DateTime"]
@@ -21362,7 +21362,7 @@ export type TmpmodelJobsPageRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
+/** Record of type [DELETEME] TMP: Jobs Page (tmpmodel_jobs_page) */
 export type TmpmodelJobsPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
