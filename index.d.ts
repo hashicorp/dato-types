@@ -21702,6 +21702,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  integrations?: Maybe<SbcTextAndContentRecord>
   introSectionHeader?: Maybe<SbcSectionHeaderRecord>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
