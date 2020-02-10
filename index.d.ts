@@ -21726,6 +21726,11 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecordDiagramOneTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type TMP: Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
+export type TmpmodelVaultAdvancedDataProtectionPageRecordDiagramTwoTextArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 /** Record of type TMP: Vault Enterprise Page (tmpmodel_vault_enterprise_page) */
 export type TmpmodelVaultEnterprisePageRecord = {
   __typename?: "TmpmodelVaultEnterprisePageRecord"
