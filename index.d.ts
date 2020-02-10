@@ -21702,6 +21702,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   alertBanner?: Maybe<AlertBannerRecord>
   architectureDescription?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
+  diagramOneImage?: Maybe<FileField>
   diagramOneText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   integrations?: Maybe<SbcTextAndContentRecord>
