@@ -23253,6 +23253,7 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  webinarId?: Maybe<StringFilter>
   backgroundImage?: Maybe<FileFilter>
   product?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
@@ -23270,7 +23271,6 @@ export type WebinarModelFilter = {
   title?: Maybe<StringFilter>
   bodyContent?: Maybe<LinksFilter>
   heroContent?: Maybe<LinksFilter>
-  webinarId?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
   OR?: Maybe<Array<Maybe<WebinarModelFilter>>>
 }
@@ -23300,14 +23300,14 @@ export enum WebinarModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  WebinarIdAsc = "webinarId_ASC",
+  WebinarIdDesc = "webinarId_DESC",
   ShowDemoRequestAsc = "showDemoRequest_ASC",
   ShowDemoRequestDesc = "showDemoRequest_DESC",
   DraftAsc = "draft_ASC",
   DraftDesc = "draft_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  WebinarIdAsc = "webinarId_ASC",
-  WebinarIdDesc = "webinarId_DESC",
   DateAsc = "date_ASC",
   DateDesc = "date_DESC"
 }
