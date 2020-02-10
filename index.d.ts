@@ -21700,6 +21700,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
+  architectureDescription?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   integrations?: Maybe<SbcTextAndContentRecord>
