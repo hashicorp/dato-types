@@ -21710,6 +21710,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   id: Scalars["ItemId"]
   integrations?: Maybe<SbcTextAndContentRecord>
   introSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  metatag?: Maybe<SeoField>
   subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
