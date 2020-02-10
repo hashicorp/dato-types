@@ -21704,6 +21704,8 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   createdAt: Scalars["DateTime"]
   diagramOneImage?: Maybe<FileField>
   diagramOneText?: Maybe<Scalars["String"]>
+  diagramTwoImage?: Maybe<FileField>
+  diagramTwoText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   integrations?: Maybe<SbcTextAndContentRecord>
   introSectionHeader?: Maybe<SbcSectionHeaderRecord>
