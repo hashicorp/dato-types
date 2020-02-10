@@ -904,6 +904,66 @@ export type CalloutsSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type CallToActionModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<CallToActionModelFilter>>>
+}
+
+export enum CallToActionModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Call To Action (call_to_action) */
+export type CallToActionRecord = {
+  __typename?: "CallToActionRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Call To Action (call_to_action) */
+export type CallToActionRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type CertificationPageModelContentField =
   | MajorHeadlineSectionRecord
   | TextSectionRecord
@@ -11202,6 +11262,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allButtonThemesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allCallToActionsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allCalloutItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allCalloutSectionsMeta: CollectionMetadata
@@ -11550,6 +11612,8 @@ export type Query = {
   /** Returns a collection of records */
   allButtonThemes: Array<ButtonThemeRecord>
   /** Returns a collection of records */
+  allCallToActions: Array<CallToActionRecord>
+  /** Returns a collection of records */
   allCalloutItems: Array<CalloutItemRecord>
   /** Returns a collection of records */
   allCalloutSections: Array<CalloutSectionRecord>
@@ -11895,6 +11959,8 @@ export type Query = {
   button2?: Maybe<Button2Record>
   /** Returns a specific record */
   buttonTheme?: Maybe<ButtonThemeRecord>
+  /** Returns a specific record */
+  callToAction?: Maybe<CallToActionRecord>
   /** Returns a specific record */
   calloutItem?: Maybe<CalloutItemRecord>
   /** Returns a specific record */
@@ -12379,6 +12445,12 @@ export type Query_AllButton2sMetaArgs = {
 export type Query_AllButtonThemesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ButtonThemeModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllCallToActionsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<CallToActionModelFilter>
 }
 
 /** The query root for this schema */
@@ -13444,6 +13516,15 @@ export type QueryAllButtonThemesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<ButtonThemeModelFilter>
   orderBy?: Maybe<Array<Maybe<ButtonThemeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllCallToActionsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<CallToActionModelFilter>
+  orderBy?: Maybe<Array<Maybe<CallToActionModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -14961,6 +15042,13 @@ export type QueryButtonThemeArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ButtonThemeModelFilter>
   orderBy?: Maybe<Array<Maybe<ButtonThemeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryCallToActionArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<CallToActionModelFilter>
+  orderBy?: Maybe<Array<Maybe<CallToActionModelOrderBy>>>
 }
 
 /** The query root for this schema */
