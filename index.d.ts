@@ -21701,6 +21701,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  subnav?: Maybe<ProductSubnavRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
