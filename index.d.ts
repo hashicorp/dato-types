@@ -21699,6 +21699,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   subnav?: Maybe<ProductSubnavRecord>
