@@ -915,6 +915,8 @@ export type CallToActionModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  content?: Maybe<TextFilter>
+  heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CallToActionModelFilter>>>
 }
 
@@ -938,7 +940,9 @@ export enum CallToActionModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
 }
 
 /** Record of type Call To Action (call_to_action) */
@@ -954,7 +958,9 @@ export type CallToActionRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
@@ -962,6 +968,11 @@ export type CallToActionRecord = {
 /** Record of type Call To Action (call_to_action) */
 export type CallToActionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Call To Action (call_to_action) */
+export type CallToActionRecordContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CertificationPageModelContentField =
