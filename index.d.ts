@@ -9537,6 +9537,7 @@ export type NavRecord = {
   learnPromos: Array<NavPromoRecord>
   partnersPromos: Array<NavPromoRecord>
   productsPromos: Array<NavPromoRecord>
+  solutionsPromos: Array<NavPromoRecord>
   supportPromos: Array<NavPromoRecord>
   updatedAt: Scalars["DateTime"]
 }
