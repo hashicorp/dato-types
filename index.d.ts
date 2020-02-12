@@ -1019,6 +1019,84 @@ export type CertificationPageRecordSignupFormIntroArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type CloudPartnerPageModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
+  resourcesOverride?: Maybe<LinksFilter>
+  introText?: Maybe<TextFilter>
+  slug?: Maybe<SlugFilter>
+  title?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
+}
+
+export enum CloudPartnerPageModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
+}
+
+/** Record of type Cloud Partner Page (cloud_partner_page) */
+export type CloudPartnerPageRecord = {
+  __typename?: "CloudPartnerPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
+  introText?: Maybe<Scalars["String"]>
+  metadata?: Maybe<SeoField>
+  resourcesOverride: Array<ResourceRecord>
+  slug?: Maybe<Scalars["String"]>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Cloud Partner Page (cloud_partner_page) */
+export type CloudPartnerPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Cloud Partner Page (cloud_partner_page) */
+export type CloudPartnerPageRecordIntroTextArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 export type CodeblockLanguageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -1320,7 +1398,7 @@ export type CompanyRecord = {
   description?: Maybe<Scalars["String"]>
   enableProductIntegrations?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
-  integrationPage?: Maybe<IntegrationDetailPageRecord>
+  integrationPage?: Maybe<CloudPartnerPageRecord>
   link?: Maybe<Scalars["String"]>
   logo?: Maybe<FileField>
   monochromeLogo?: Maybe<FileField>
@@ -7943,84 +8021,6 @@ export type IntegerFilter = {
   neq?: Maybe<Scalars["IntType"]>
 }
 
-export type IntegrationDetailPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
-  _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  resourcesOverride?: Maybe<LinksFilter>
-  introText?: Maybe<TextFilter>
-  slug?: Maybe<SlugFilter>
-  title?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<IntegrationDetailPageModelFilter>>>
-}
-
-export enum IntegrationDetailPageModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
-}
-
-/** Record of type Integration Details Page (integration_detail_page) */
-export type IntegrationDetailPageRecord = {
-  __typename?: "IntegrationDetailPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
-  introText?: Maybe<Scalars["String"]>
-  metadata?: Maybe<SeoField>
-  resourcesOverride: Array<ResourceRecord>
-  slug?: Maybe<Scalars["String"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Integration Details Page (integration_detail_page) */
-export type IntegrationDetailPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Integration Details Page (integration_detail_page) */
-export type IntegrationDetailPageRecordIntroTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 /** Record of type Integration Detail (integration_detail) */
 export type IntegrationDetailRecord = {
   __typename?: "IntegrationDetailRecord"
@@ -11280,6 +11280,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allCalloutSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allCloudPartnerPagesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allCodeSamplesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allCodeblockLanguagesMeta: CollectionMetadata
@@ -11391,8 +11393,6 @@ export type Query = {
   _allImageSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allImageTextCarouselsMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
-  _allIntegrationDetailPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allIntegrationTypeCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -11630,6 +11630,8 @@ export type Query = {
   /** Returns a collection of records */
   allCalloutSections: Array<CalloutSectionRecord>
   /** Returns a collection of records */
+  allCloudPartnerPages: Array<CloudPartnerPageRecord>
+  /** Returns a collection of records */
   allCodeSamples: Array<CodeSampleRecord>
   /** Returns a collection of records */
   allCodeblockLanguages: Array<CodeblockLanguageRecord>
@@ -11743,8 +11745,6 @@ export type Query = {
   allImageSections: Array<ImageSectionRecord>
   /** Returns a collection of records */
   allImageTextCarousels: Array<ImageTextCarouselRecord>
-  /** Returns a collection of records */
-  allIntegrationDetailPages: Array<IntegrationDetailPageRecord>
   /** Returns a collection of records */
   allIntegrationTypeCategories: Array<IntegrationTypeCategoryRecord>
   /** Returns a collection of records */
@@ -11980,6 +11980,8 @@ export type Query = {
   /** Returns the single instance record */
   certificationPage?: Maybe<CertificationPageRecord>
   /** Returns a specific record */
+  cloudPartnerPage?: Maybe<CloudPartnerPageRecord>
+  /** Returns a specific record */
   codeSample?: Maybe<CodeSampleRecord>
   /** Returns a specific record */
   codeblockLanguage?: Maybe<CodeblockLanguageRecord>
@@ -12121,8 +12123,6 @@ export type Query = {
   imageSection?: Maybe<ImageSectionRecord>
   /** Returns a specific record */
   imageTextCarousel?: Maybe<ImageTextCarouselRecord>
-  /** Returns a specific record */
-  integrationDetailPage?: Maybe<IntegrationDetailPageRecord>
   /** Returns the single instance record */
   integrationPageFooter?: Maybe<IntegrationPageFooterRecord>
   /** Returns a specific record */
@@ -12478,6 +12478,12 @@ export type Query_AllCalloutSectionsMetaArgs = {
 }
 
 /** The query root for this schema */
+export type Query_AllCloudPartnerPagesMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<CloudPartnerPageModelFilter>
+}
+
+/** The query root for this schema */
 export type Query_AllCodeSamplesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<CodeSampleModelFilter>
@@ -12811,12 +12817,6 @@ export type Query_AllImageSectionsMetaArgs = {
 export type Query_AllImageTextCarouselsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ImageTextCarouselModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllIntegrationDetailPagesMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<IntegrationDetailPageModelFilter>
 }
 
 /** The query root for this schema */
@@ -13558,6 +13558,15 @@ export type QueryAllCalloutSectionsArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllCloudPartnerPagesArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<CloudPartnerPageModelFilter>
+  orderBy?: Maybe<Array<Maybe<CloudPartnerPageModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllCodeSamplesArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -14059,15 +14068,6 @@ export type QueryAllImageTextCarouselsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<ImageTextCarouselModelFilter>
   orderBy?: Maybe<Array<Maybe<ImageTextCarouselModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryAllIntegrationDetailPagesArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<IntegrationDetailPageModelFilter>
-  orderBy?: Maybe<Array<Maybe<IntegrationDetailPageModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15083,6 +15083,13 @@ export type QueryCertificationPageArgs = {
 }
 
 /** The query root for this schema */
+export type QueryCloudPartnerPageArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<CloudPartnerPageModelFilter>
+  orderBy?: Maybe<Array<Maybe<CloudPartnerPageModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryCodeSampleArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<CodeSampleModelFilter>
@@ -15542,13 +15549,6 @@ export type QueryImageTextCarouselArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ImageTextCarouselModelFilter>
   orderBy?: Maybe<Array<Maybe<ImageTextCarouselModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryIntegrationDetailPageArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<IntegrationDetailPageModelFilter>
-  orderBy?: Maybe<Array<Maybe<IntegrationDetailPageModelOrderBy>>>
 }
 
 /** The query root for this schema */
