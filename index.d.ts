@@ -1901,7 +1901,7 @@ export type DropdownLinkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
+/** Record of type [UNUSED] Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
 export type EcosystemFindAPartnerPageRecord = {
   __typename?: "EcosystemFindAPartnerPageRecord"
   _createdAt: Scalars["DateTime"]
@@ -1936,27 +1936,27 @@ export type EcosystemFindAPartnerPageRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
+/** Record of type [UNUSED] Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
 export type EcosystemFindAPartnerPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
+/** Record of type [UNUSED] Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
 export type EcosystemFindAPartnerPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
+/** Record of type [UNUSED] Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
 export type EcosystemFindAPartnerPageRecordIntegratorsTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
+/** Record of type [UNUSED] Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
 export type EcosystemFindAPartnerPageRecordResellersTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
+/** Record of type [UNUSED] Ecosystem - Find a Partner Page (ecosystem_find_a_partner_page) */
 export type EcosystemFindAPartnerPageRecordTrainersTooltipArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
