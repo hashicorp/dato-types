@@ -1033,7 +1033,6 @@ export type CloudPartnerPageModelFilter = {
   metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
-  resourcesOverride?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
 }
 
@@ -1079,7 +1078,6 @@ export type CloudPartnerPageRecord = {
   id: Scalars["ItemId"]
   integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
   metadata?: Maybe<SeoField>
-  resourcesOverride: Array<ResourceRecord>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -8046,36 +8044,6 @@ export type IntegrationDetailRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type IntegrationPageFooterModelDefaultResourcesField =
-  | ResourceRecord
-  | ExternalResourceRecord
-
-/** Record of type Integration Page Settings (integration_page_footer) */
-export type IntegrationPageFooterRecord = {
-  __typename?: "IntegrationPageFooterRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  defaultResources: Array<IntegrationPageFooterModelDefaultResourcesField>
-  footer?: Maybe<HeroSectionRecord>
-  id: Scalars["ItemId"]
-  indexLink?: Maybe<LinkRecord>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Integration Page Settings (integration_page_footer) */
-export type IntegrationPageFooterRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type Integrations Page (integrations_page) */
 export type IntegrationsPageRecord = {
   __typename?: "IntegrationsPageRecord"
@@ -12116,8 +12084,6 @@ export type Query = {
   imageSection?: Maybe<ImageSectionRecord>
   /** Returns a specific record */
   imageTextCarousel?: Maybe<ImageTextCarouselRecord>
-  /** Returns the single instance record */
-  integrationPageFooter?: Maybe<IntegrationPageFooterRecord>
   /** Returns a specific record */
   integrationType?: Maybe<IntegrationTypeRecord>
   /** Returns a specific record */
@@ -15542,11 +15508,6 @@ export type QueryImageTextCarouselArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ImageTextCarouselModelFilter>
   orderBy?: Maybe<Array<Maybe<ImageTextCarouselModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryIntegrationPageFooterArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
