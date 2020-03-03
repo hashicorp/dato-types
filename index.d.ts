@@ -1033,7 +1033,6 @@ export type CloudPartnerPageModelFilter = {
   metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
-  introText?: Maybe<TextFilter>
   resourcesOverride?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
 }
@@ -1079,7 +1078,6 @@ export type CloudPartnerPageRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
-  introText?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
   resourcesOverride: Array<ResourceRecord>
   slug?: Maybe<Scalars["String"]>
@@ -1090,11 +1088,6 @@ export type CloudPartnerPageRecord = {
 /** Record of type Cloud Partner Page (cloud_partner_page) */
 export type CloudPartnerPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Cloud Partner Page (cloud_partner_page) */
-export type CloudPartnerPageRecordIntroTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CodeblockLanguageModelFilter = {
