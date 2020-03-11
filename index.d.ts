@@ -430,6 +430,7 @@ export type BlogPostModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
   snippet?: Maybe<TextFilter>
   author?: Maybe<LinkFilter>
   dateTime?: Maybe<DateTimeFilter>
@@ -468,6 +469,8 @@ export enum BlogPostModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC",
   DateTimeAsc = "dateTime_ASC",
   DateTimeDesc = "dateTime_DESC",
   GuestBlogAsc = "guestBlog_ASC",
@@ -504,6 +507,7 @@ export type BlogPostRecord = {
   image?: Maybe<FileField>
   metadata?: Maybe<SeoField>
   previewUrl?: Maybe<Scalars["String"]>
+  showDemoRequest?: Maybe<Scalars["BooleanType"]>
   slug?: Maybe<Scalars["String"]>
   snippet?: Maybe<Scalars["String"]>
   thumbnail?: Maybe<FileField>
