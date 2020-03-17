@@ -8511,9 +8511,9 @@ export type JobsPageDepartmentModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
   name?: Maybe<StringFilter>
   testimonials?: Maybe<LinksFilter>
-  summary?: Maybe<TextFilter>
   greenhouseId?: Maybe<IntegerFilter>
   backgroundImage?: Maybe<FileFilter>
   missionStatement?: Maybe<TextFilter>
@@ -8564,12 +8564,12 @@ export type JobsPageDepartmentRecord = {
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   greenhouseId?: Maybe<Scalars["IntType"]>
   id: Scalars["ItemId"]
   missionStatement?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
-  summary?: Maybe<Scalars["String"]>
   testimonials: Array<JobsEmployeeTestimonialRecord>
   updatedAt: Scalars["DateTime"]
 }
@@ -8580,12 +8580,12 @@ export type JobsPageDepartmentRecord_SeoMetaTagsArgs = {
 }
 
 /** Record of type Jobs Page: Department (jobs_page_department) */
-export type JobsPageDepartmentRecordMissionStatementArgs = {
+export type JobsPageDepartmentRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Jobs Page: Department (jobs_page_department) */
-export type JobsPageDepartmentRecordSummaryArgs = {
+export type JobsPageDepartmentRecordMissionStatementArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
