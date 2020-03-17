@@ -8549,7 +8549,7 @@ export enum JobsPageDepartmentModelOrderBy {
   GreenhouseIdDesc = "greenhouseId_DESC"
 }
 
-/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
+/** Record of type Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecord = {
   __typename?: "JobsPageDepartmentRecord"
   _createdAt: Scalars["DateTime"]
@@ -8574,17 +8574,17 @@ export type JobsPageDepartmentRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
+/** Record of type Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
+/** Record of type Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecordMissionStatementArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type [DELETEME] Jobs Page: Department (jobs_page_department) */
+/** Record of type Jobs Page: Department (jobs_page_department) */
 export type JobsPageDepartmentRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
