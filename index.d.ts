@@ -8511,7 +8511,7 @@ export type JobsPageDepartmentModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  title?: Maybe<StringFilter>
+  name?: Maybe<StringFilter>
   testimonials?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
   greenhouseId?: Maybe<IntegerFilter>
@@ -8543,8 +8543,8 @@ export enum JobsPageDepartmentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC",
   GreenhouseIdAsc = "greenhouseId_ASC",
   GreenhouseIdDesc = "greenhouseId_DESC"
 }
@@ -8567,10 +8567,10 @@ export type JobsPageDepartmentRecord = {
   greenhouseId?: Maybe<Scalars["IntType"]>
   id: Scalars["ItemId"]
   missionStatement?: Maybe<Scalars["String"]>
+  name?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
   summary?: Maybe<Scalars["String"]>
   testimonials: Array<JobsEmployeeTestimonialRecord>
-  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
