@@ -8468,7 +8468,7 @@ export enum JobsPageBenefitsSectionModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type [DELETEME] Jobs Page: Benefits Section (jobs_page_benefits_section) */
+/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
 export type JobsPageBenefitsSectionRecord = {
   __typename?: "JobsPageBenefitsSectionRecord"
   _createdAt: Scalars["DateTime"]
@@ -8489,12 +8489,12 @@ export type JobsPageBenefitsSectionRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type [DELETEME] Jobs Page: Benefits Section (jobs_page_benefits_section) */
+/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
 export type JobsPageBenefitsSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type [DELETEME] Jobs Page: Benefits Section (jobs_page_benefits_section) */
+/** Record of type Jobs Page: Benefits Section (jobs_page_benefits_section) */
 export type JobsPageBenefitsSectionRecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
@@ -21426,6 +21426,7 @@ export type TmpmodelJobsPageRecord = {
   departments: Array<JobsPageDepartmentRecord>
   faq?: Maybe<FaqCategoryRecord>
   id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
 }
 
