@@ -8364,9 +8364,9 @@ export type JobsPageBenefitsCalloutModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  content?: Maybe<TextFilter>
   icon?: Maybe<FileFilter>
   heading?: Maybe<StringFilter>
-  summary?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<JobsPageBenefitsCalloutModelFilter>>>
 }
 
@@ -8408,11 +8408,11 @@ export type JobsPageBenefitsCalloutRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
-  summary?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -8422,7 +8422,7 @@ export type JobsPageBenefitsCalloutRecord_SeoMetaTagsArgs = {
 }
 
 /** Record of type Jobs Page: Benefits Callout (jobs_page_benefits_callout) */
-export type JobsPageBenefitsCalloutRecordSummaryArgs = {
+export type JobsPageBenefitsCalloutRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
