@@ -8291,6 +8291,7 @@ export type JobsEmployeeTestimonialModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  person?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
   avatar?: Maybe<FileFilter>
   testimonial?: Maybe<TextFilter>
@@ -8339,6 +8340,7 @@ export type JobsEmployeeTestimonialRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  person?: Maybe<PersonRecord>
   testimonial?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
