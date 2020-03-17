@@ -8511,7 +8511,7 @@ export type JobsPageDepartmentModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  greenhouseid?: Maybe<IntegerFilter>
+  greenhouseId?: Maybe<IntegerFilter>
   mission?: Maybe<TextFilter>
   description?: Maybe<TextFilter>
   name?: Maybe<StringFilter>
@@ -8543,8 +8543,8 @@ export enum JobsPageDepartmentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  GreenhouseidAsc = "greenhouseid_ASC",
-  GreenhouseidDesc = "greenhouseid_DESC",
+  GreenhouseIdAsc = "greenhouseId_ASC",
+  GreenhouseIdDesc = "greenhouseId_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC"
 }
@@ -8565,7 +8565,7 @@ export type JobsPageDepartmentRecord = {
   backgroundImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
-  greenhouseid?: Maybe<Scalars["IntType"]>
+  greenhouseId?: Maybe<Scalars["IntType"]>
   id: Scalars["ItemId"]
   mission?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
