@@ -21419,6 +21419,7 @@ export type TmpmodelJobsPageRecord = {
   _updatedAt: Scalars["DateTime"]
   benefits?: Maybe<JobsPageBenefitsSectionRecord>
   benefitsHeading?: Maybe<Scalars["String"]>
+  benefitsSummary?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   departments: Array<JobsPageDepartmentRecord>
   faqHeading?: Maybe<Scalars["String"]>
@@ -21431,6 +21432,11 @@ export type TmpmodelJobsPageRecord = {
 /** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
 export type TmpmodelJobsPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type TMP: Jobs Page (tmpmodel_jobs_page) */
+export type TmpmodelJobsPageRecordBenefitsSummaryArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Nomad Enterprise Page (tmpmodel_nomad_enterprise_page) */
