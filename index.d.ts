@@ -21418,6 +21418,7 @@ export type TmpmodelJobsPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   benefits?: Maybe<JobsPageBenefitsSectionRecord>
+  benefitsHeading?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   departments: Array<JobsPageDepartmentRecord>
   faqHeading?: Maybe<Scalars["String"]>
