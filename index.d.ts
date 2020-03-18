@@ -8507,8 +8507,8 @@ export type JobsPageDepartmentModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  greenhouseId?: Maybe<IntegerFilter>
   mission?: Maybe<TextFilter>
+  greenhouseId?: Maybe<IntegerFilter>
   description?: Maybe<TextFilter>
   name?: Maybe<StringFilter>
   testimonials?: Maybe<LinksFilter>
