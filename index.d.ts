@@ -807,6 +807,29 @@ export type CalloutItemRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Callout (callout) */
+export type CalloutRecord = {
+  __typename?: "CalloutRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Callout (callout) */
+export type CalloutRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type CalloutSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -21417,7 +21440,7 @@ export type TmpmodelJobsPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  benefitCallouts?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  benefitCallouts?: Maybe<Array<Maybe<CalloutRecord>>>
   benefits?: Maybe<JobsPageBenefitsSectionRecord>
   benefitsHeading?: Maybe<Scalars["String"]>
   benefitsSummary?: Maybe<Scalars["String"]>
