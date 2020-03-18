@@ -8292,8 +8292,6 @@ export type JobsEmployeeTestimonialModelFilter = {
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
   person?: Maybe<LinkFilter>
-  name?: Maybe<StringFilter>
-  avatar?: Maybe<FileFilter>
   testimonial?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelFilter>>>
 }
@@ -8318,9 +8316,7 @@ export enum JobsEmployeeTestimonialModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  IsValidDesc = "_isValid_DESC"
 }
 
 /** Record of type Jobs Employee Testimonial (jobs_employee_testimonial) */
@@ -8336,10 +8332,8 @@ export type JobsEmployeeTestimonialRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  avatar?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  name?: Maybe<Scalars["String"]>
   person?: Maybe<PersonRecord>
   testimonial?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
