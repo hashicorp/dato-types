@@ -21421,6 +21421,7 @@ export type TmpmodelJobsPageRecord = {
   createdAt: Scalars["DateTime"]
   departments: Array<JobsPageDepartmentRecord>
   faq?: Maybe<FaqCategoryRecord>
+  faqs?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
