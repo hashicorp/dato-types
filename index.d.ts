@@ -21417,6 +21417,7 @@ export type TmpmodelJobsPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  benefitCallouts?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   benefits?: Maybe<JobsPageBenefitsSectionRecord>
   benefitsHeading?: Maybe<Scalars["String"]>
   benefitsSummary?: Maybe<Scalars["String"]>
