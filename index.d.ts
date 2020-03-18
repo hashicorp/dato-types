@@ -823,6 +823,7 @@ export type CalloutRecord = {
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
+  icon?: Maybe<FileField>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
