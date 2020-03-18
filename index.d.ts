@@ -820,6 +820,7 @@ export type CalloutRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
@@ -829,6 +830,11 @@ export type CalloutRecord = {
 /** Record of type Callout (callout) */
 export type CalloutRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Callout (callout) */
+export type CalloutRecordContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CalloutSectionModelFilter = {
