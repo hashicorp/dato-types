@@ -821,6 +821,7 @@ export type CalloutRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
