@@ -17492,6 +17492,7 @@ export type SbcCaseStudyModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  caseStudyLink?: Maybe<StringFilter>
   buttonLabel?: Maybe<StringFilter>
   caseStudyImage?: Maybe<FileFilter>
   company?: Maybe<LinkFilter>
@@ -17522,6 +17523,8 @@ export enum SbcCaseStudyModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  CaseStudyLinkAsc = "caseStudyLink_ASC",
+  CaseStudyLinkDesc = "caseStudyLink_DESC",
   ButtonLabelAsc = "buttonLabel_ASC",
   ButtonLabelDesc = "buttonLabel_DESC",
   HeadlineAsc = "headline_ASC",
@@ -17543,6 +17546,7 @@ export type SbcCaseStudyRecord = {
   _updatedAt: Scalars["DateTime"]
   buttonLabel?: Maybe<Scalars["String"]>
   caseStudyImage?: Maybe<FileField>
+  caseStudyLink?: Maybe<Scalars["String"]>
   caseStudyResource?: Maybe<ResourceRecord>
   company?: Maybe<CompanyRecord>
   createdAt: Scalars["DateTime"]
