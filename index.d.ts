@@ -19511,7 +19511,9 @@ export type SolutionsInfrastructureRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  customerEyebrow?: Maybe<Scalars["String"]>
   heroEyebrow?: Maybe<Scalars["String"]>
+  heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
