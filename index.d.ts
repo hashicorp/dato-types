@@ -1840,6 +1840,7 @@ export type CustomerRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  link?: Maybe<Scalars["String"]>
   logo?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
 }
