@@ -19569,7 +19569,7 @@ export type SolutionsInfrastructureRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   businessImpactByline?: Maybe<Scalars["String"]>
-  businessImpactContentGroups?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  businessImpactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
@@ -19586,6 +19586,7 @@ export type SolutionsInfrastructureRecord = {
   pullQuote?: Maybe<Scalars["String"]>
   pullQuoteAttribution?: Maybe<Scalars["String"]>
   pullQuoteAttributionLink?: Maybe<Scalars["String"]>
+  split?: Maybe<TextImageSectionRecord>
   updatedAt: Scalars["DateTime"]
 }
 
