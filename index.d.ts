@@ -19599,6 +19599,7 @@ export type SolutionsTextLockupContentGroupRecord = {
   description?: Maybe<Scalars["String"]>
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
+  linkText?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
