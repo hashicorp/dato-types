@@ -19539,7 +19539,7 @@ export type SolutionsInfrastructureRecord = {
   businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesDiagram?: Maybe<FileField>
-  challengesSections?: Maybe<
+  challengesTextLockupContentSections?: Maybe<
     Array<Maybe<SolutionsTextLockupContentGroupRecord>>
   >
   createdAt: Scalars["DateTime"]
@@ -19600,6 +19600,7 @@ export type SolutionsTextLockupContentGroupRecord = {
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
   linkText?: Maybe<Scalars["String"]>
+  linkUrl?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
