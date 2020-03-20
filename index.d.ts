@@ -19536,6 +19536,7 @@ export type SolutionsInfrastructureRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   challengesByline?: Maybe<Scalars["String"]>
+  challengesDiagram?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
