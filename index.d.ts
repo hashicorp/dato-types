@@ -1054,6 +1054,30 @@ export type CertificationPageRecordSignupFormIntroArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Challenges Section (challenges_section) */
+export type ChallengesSectionRecord = {
+  __typename?: "ChallengesSectionRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  icon?: Maybe<FileField>
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Challenges Section (challenges_section) */
+export type ChallengesSectionRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type CloudPartnerPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -19537,7 +19561,7 @@ export type SolutionsInfrastructureRecord = {
   _updatedAt: Scalars["DateTime"]
   challengesByline?: Maybe<Scalars["String"]>
   challengesDiagram?: Maybe<FileField>
-  challengesSections?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  challengesSections?: Maybe<Array<Maybe<ChallengesSectionRecord>>>
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
