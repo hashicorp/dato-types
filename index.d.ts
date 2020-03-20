@@ -19567,6 +19567,7 @@ export type SolutionsInfrastructureRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   businessImpactByline?: Maybe<Scalars["String"]>
+  businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesDiagram?: Maybe<FileField>
   challengesSections?: Maybe<Array<Maybe<ChallengesSectionRecord>>>
@@ -19588,6 +19589,11 @@ export type SolutionsInfrastructureRecord = {
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Infrastructure (solutions_infrastructure) */
+export type SolutionsInfrastructureRecordBusinessImpactDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
