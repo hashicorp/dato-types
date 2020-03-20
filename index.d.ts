@@ -1068,6 +1068,7 @@ export type ChallengesSectionRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
@@ -1077,6 +1078,11 @@ export type ChallengesSectionRecord = {
 /** Record of type Challenges Section (challenges_section) */
 export type ChallengesSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Challenges Section (challenges_section) */
+export type ChallengesSectionRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CloudPartnerPageModelFilter = {
@@ -19566,6 +19572,7 @@ export type SolutionsInfrastructureRecord = {
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
+  enablingByline?: Maybe<Scalars["String"]>
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
