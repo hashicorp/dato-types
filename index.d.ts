@@ -19569,6 +19569,7 @@ export type SolutionsInfrastructureRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   businessImpactByline?: Maybe<Scalars["String"]>
+  businessImpactContentGroups?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
