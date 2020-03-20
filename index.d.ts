@@ -19541,12 +19541,18 @@ export type SolutionsInfrastructureRecord = {
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  pullQuote?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Infrastructure (solutions_infrastructure) */
+export type SolutionsInfrastructureRecordPullQuoteArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type SpeakersSectionModelFilter = {
