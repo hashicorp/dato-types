@@ -1054,37 +1054,6 @@ export type CertificationPageRecordSignupFormIntroArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Challenges Section (challenges_section) */
-export type ChallengesSectionRecord = {
-  __typename?: "ChallengesSectionRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  description?: Maybe<Scalars["String"]>
-  icon?: Maybe<FileField>
-  id: Scalars["ItemId"]
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Challenges Section (challenges_section) */
-export type ChallengesSectionRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Challenges Section (challenges_section) */
-export type ChallengesSectionRecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 export type CloudPartnerPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -19570,7 +19539,9 @@ export type SolutionsInfrastructureRecord = {
   businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesDiagram?: Maybe<FileField>
-  challengesSections?: Maybe<Array<Maybe<ChallengesSectionRecord>>>
+  challengesSections?: Maybe<
+    Array<Maybe<SolutionsTextLockupContentGroupRecord>>
+  >
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
@@ -19608,6 +19579,37 @@ export type SolutionsInfrastructureRecordOpeningDescriptionArgs = {
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecordPullQuoteArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Text Lockup Content Group (solutions_text_lockup_content_group) */
+export type SolutionsTextLockupContentGroupRecord = {
+  __typename?: "SolutionsTextLockupContentGroupRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  icon?: Maybe<FileField>
+  id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Solutions Text Lockup Content Group (solutions_text_lockup_content_group) */
+export type SolutionsTextLockupContentGroupRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Text Lockup Content Group (solutions_text_lockup_content_group) */
+export type SolutionsTextLockupContentGroupRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
