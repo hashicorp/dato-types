@@ -19542,6 +19542,7 @@ export type SolutionsInfrastructureRecord = {
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   pullQuote?: Maybe<Scalars["String"]>
+  pullQuoteAttribution?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
