@@ -19588,6 +19588,7 @@ export type SolutionsInfrastructureRecord = {
   pullQuoteAttributionLink?: Maybe<Scalars["String"]>
   textAndImageSplit?: Maybe<TextImageSectionRecord>
   updatedAt: Scalars["DateTime"]
+  whitepaperHeading?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
