@@ -19512,6 +19512,7 @@ export type SolutionsInfrastructureRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
+  customers?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
