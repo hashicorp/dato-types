@@ -12127,6 +12127,8 @@ export type Query = {
   socialNetwork?: Maybe<SocialNetworkRecord>
   /** Returns a specific record */
   socialNetworkIcon?: Maybe<SocialNetworkIconRecord>
+  /** Returns the single instance record */
+  solutionsInfrastructure?: Maybe<SolutionsInfrastructureRecord>
   /** Returns a specific record */
   speakersSection?: Maybe<SpeakersSectionRecord>
   /** Returns a specific record */
@@ -15911,6 +15913,11 @@ export type QuerySocialNetworkIconArgs = {
 }
 
 /** The query root for this schema */
+export type QuerySolutionsInfrastructureArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
 export type QuerySpeakersSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<SpeakersSectionModelFilter>
@@ -19487,6 +19494,29 @@ export type SocialNetworkRecord = {
 
 /** Record of type Social Network (social_network) */
 export type SocialNetworkRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Infrastructure (solutions_infrastructure) */
+export type SolutionsInfrastructureRecord = {
+  __typename?: "SolutionsInfrastructureRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Solutions Infrastructure (solutions_infrastructure) */
+export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
