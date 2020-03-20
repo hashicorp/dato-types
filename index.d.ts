@@ -19541,6 +19541,7 @@ export type SolutionsInfrastructureRecord = {
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  openingDescription?: Maybe<Scalars["String"]>
   pullQuote?: Maybe<Scalars["String"]>
   pullQuoteAttribution?: Maybe<Scalars["String"]>
   pullQuoteAttributionLink?: Maybe<Scalars["String"]>
@@ -19550,6 +19551,11 @@ export type SolutionsInfrastructureRecord = {
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Infrastructure (solutions_infrastructure) */
+export type SolutionsInfrastructureRecordOpeningDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
