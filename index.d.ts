@@ -1825,6 +1825,30 @@ export type ContentSectionRecordTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Customer (customer) */
+export type CustomerRecord = {
+  __typename?: "CustomerRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  logo?: Maybe<FileField>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Customer (customer) */
+export type CustomerRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Specifies how to filter Date fields */
 export type DateFilter = {
   /** Filter records with a value that's strictly greater than the one specified */
@@ -19512,7 +19536,7 @@ export type SolutionsInfrastructureRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
-  customers?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  customers?: Maybe<Array<Maybe<CustomerRecord>>>
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
