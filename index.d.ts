@@ -19566,6 +19566,7 @@ export type SolutionsInfrastructureRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  businessImpactByline?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesDiagram?: Maybe<FileField>
   challengesSections?: Maybe<Array<Maybe<ChallengesSectionRecord>>>
