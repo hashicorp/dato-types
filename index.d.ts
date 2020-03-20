@@ -19522,6 +19522,39 @@ export type SocialNetworkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Solutions Content Group (solutions_content_group) */
+export type SolutionsContentGroupRecord = {
+  __typename?: "SolutionsContentGroupRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  icon?: Maybe<FileField>
+  id: Scalars["ItemId"]
+  linkText?: Maybe<Scalars["String"]>
+  linkUrl?: Maybe<Scalars["String"]>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Solutions Content Group (solutions_content_group) */
+export type SolutionsContentGroupRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Content Group (solutions_content_group) */
+export type SolutionsContentGroupRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecord = {
   __typename?: "SolutionsInfrastructureRecord"
@@ -19538,9 +19571,7 @@ export type SolutionsInfrastructureRecord = {
   businessImpactByline?: Maybe<Scalars["String"]>
   businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
-  challengesContentGroups?: Maybe<
-    Array<Maybe<SolutionsTextLockupContentGroupRecord>>
-  >
+  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   challengesDiagram?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
@@ -19579,39 +19610,6 @@ export type SolutionsInfrastructureRecordOpeningDescriptionArgs = {
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecordPullQuoteArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Text Lockup Content Group (solutions_text_lockup_content_group) */
-export type SolutionsTextLockupContentGroupRecord = {
-  __typename?: "SolutionsTextLockupContentGroupRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  description?: Maybe<Scalars["String"]>
-  icon?: Maybe<FileField>
-  id: Scalars["ItemId"]
-  linkText?: Maybe<Scalars["String"]>
-  linkUrl?: Maybe<Scalars["String"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Solutions Text Lockup Content Group (solutions_text_lockup_content_group) */
-export type SolutionsTextLockupContentGroupRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Solutions Text Lockup Content Group (solutions_text_lockup_content_group) */
-export type SolutionsTextLockupContentGroupRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
