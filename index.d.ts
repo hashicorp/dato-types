@@ -16924,6 +16924,7 @@ export type SalesFormPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  thankYouPageText?: Maybe<TextFilter>
   contactType?: Maybe<LinkFilter>
   metadata?: Maybe<SeoFilter>
   product?: Maybe<LinkFilter>
@@ -16987,6 +16988,7 @@ export type SalesFormPageRecord = {
   metadata?: Maybe<SeoField>
   product?: Maybe<HashicorpProductRecord>
   slug?: Maybe<Scalars["String"]>
+  thankYouPageText?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -16997,6 +16999,11 @@ export type SalesFormPageRecord_SeoMetaTagsArgs = {
 
 /** Record of type Sales Form Page (sales_form_page) */
 export type SalesFormPageRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Sales Form Page (sales_form_page) */
+export type SalesFormPageRecordThankYouPageTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
