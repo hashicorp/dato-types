@@ -3255,29 +3255,6 @@ export type ExternalResourceRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Eyebrow (eyebrow) */
-export type EyebrowRecord = {
-  __typename?: "EyebrowRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Eyebrow (eyebrow) */
-export type EyebrowRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type FaqCategoryModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -19609,7 +19586,7 @@ export type SolutionsInfrastructureRecord = {
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
   enablingByline?: Maybe<Scalars["String"]>
   enablingContent?: Maybe<Scalars["String"]>
-  hero?: Maybe<Array<Maybe<EyebrowRecord>>>
+  hero?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
