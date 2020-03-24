@@ -19586,7 +19586,7 @@ export type SolutionsInfrastructureRecord = {
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
   enablingByline?: Maybe<Scalars["String"]>
   enablingContent?: Maybe<Scalars["String"]>
-  hero?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  hero?: Maybe<Array<Maybe<ItemRecord>>>
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
