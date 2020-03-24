@@ -19581,6 +19581,7 @@ export type SolutionsInfrastructureRecord = {
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   challengesDiagram?: Maybe<FileField>
+  challengesHeading?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
