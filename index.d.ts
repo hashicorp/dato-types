@@ -12153,7 +12153,7 @@ export type Query = {
   /** Returns a specific record */
   socialNetworkIcon?: Maybe<SocialNetworkIconRecord>
   /** Returns the single instance record */
-  solutionsInfrastructure?: Maybe<SolutionsInfrastructureRecord>
+  solutionsInfrastructurePage?: Maybe<SolutionsInfrastructurePageRecord>
   /** Returns the single instance record */
   solutionsNetworking?: Maybe<SolutionsNetworkingRecord>
   /** Returns the single instance record */
@@ -15942,7 +15942,7 @@ export type QuerySocialNetworkIconArgs = {
 }
 
 /** The query root for this schema */
-export type QuerySolutionsInfrastructureArgs = {
+export type QuerySolutionsInfrastructurePageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19576,9 +19576,9 @@ export type SolutionsContentGroupRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecord = {
-  __typename?: "SolutionsInfrastructureRecord"
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecord = {
+  __typename?: "SolutionsInfrastructurePageRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -19618,33 +19618,33 @@ export type SolutionsInfrastructureRecord = {
   whitepaperHeading?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordEcosystemContentArgs = {
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecordEcosystemContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordEnablingContentArgs = {
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecordEnablingContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordImpactDescriptionArgs = {
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecordImpactDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordOpeningDescriptionArgs = {
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecordOpeningDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordPullQuoteArgs = {
+/** Record of type Solutions Infrastructure Page (solutions_infrastructure_page) */
+export type SolutionsInfrastructurePageRecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
