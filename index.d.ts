@@ -244,9 +244,9 @@ export type AutomationBulletRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  bullet?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  item?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
