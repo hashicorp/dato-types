@@ -19688,6 +19688,7 @@ export type SolutionsNetworkingPageRecord = {
   automationBullets?: Maybe<Array<Maybe<BulletRecord>>>
   automationContent?: Maybe<Scalars["String"]>
   automationHeading?: Maybe<Scalars["String"]>
+  automationLogos?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   automationSubheading?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
