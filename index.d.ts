@@ -19661,7 +19661,6 @@ export type SolutionsNetworkingPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  automationBullets?: Maybe<Scalars["String"]>
   automationContent?: Maybe<Scalars["String"]>
   automationHeading?: Maybe<Scalars["String"]>
   automationSubheading?: Maybe<Scalars["String"]>
@@ -19697,11 +19696,6 @@ export type SolutionsNetworkingPageRecord = {
 /** Record of type Solutions Networking Page (solutions_networking_page) */
 export type SolutionsNetworkingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Solutions Networking Page (solutions_networking_page) */
-export type SolutionsNetworkingPageRecordAutomationBulletsArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Solutions Networking Page (solutions_networking_page) */
