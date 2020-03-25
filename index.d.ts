@@ -12155,7 +12155,9 @@ export type Query = {
   /** Returns the single instance record */
   solutionsInfrastructure?: Maybe<SolutionsInfrastructureRecord>
   /** Returns the single instance record */
-  solutionsInfrastructureCopy1?: Maybe<SolutionsInfrastructureCopy1Record>
+  solutionsSecurity?: Maybe<SolutionsSecurityRecord>
+  /** Returns the single instance record */
+  solutionsSecurityCopy1?: Maybe<SolutionsSecurityCopy1Record>
   /** Returns a specific record */
   speakersSection?: Maybe<SpeakersSectionRecord>
   /** Returns a specific record */
@@ -15945,7 +15947,12 @@ export type QuerySolutionsInfrastructureArgs = {
 }
 
 /** The query root for this schema */
-export type QuerySolutionsInfrastructureCopy1Args = {
+export type QuerySolutionsSecurityArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QuerySolutionsSecurityCopy1Args = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19569,78 +19576,6 @@ export type SolutionsContentGroupRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1Record = {
-  __typename?: "SolutionsInfrastructureCopy1Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  challengesByline?: Maybe<Scalars["String"]>
-  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
-  challengesDiagram?: Maybe<FileField>
-  challengesHeading?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  customerEyebrow?: Maybe<Scalars["String"]>
-  customers?: Maybe<Array<Maybe<CustomerRecord>>>
-  ecosystemContent?: Maybe<Scalars["String"]>
-  ecosystemDiagram?: Maybe<FileField>
-  ecosystemHeading?: Maybe<Scalars["String"]>
-  enablingByline?: Maybe<Scalars["String"]>
-  enablingContent?: Maybe<Scalars["String"]>
-  enablingHeading?: Maybe<Scalars["String"]>
-  heroEyebrow?: Maybe<Scalars["String"]>
-  heroHeading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  impactByline?: Maybe<Scalars["String"]>
-  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
-  impactDescription?: Maybe<Scalars["String"]>
-  impactHeading?: Maybe<Scalars["String"]>
-  metadata?: Maybe<SeoField>
-  openingDescription?: Maybe<Scalars["String"]>
-  pullQuote?: Maybe<Scalars["String"]>
-  pullQuoteAttribution?: Maybe<Scalars["String"]>
-  pullQuoteAttributionLink?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-  whitepaperHeading?: Maybe<Scalars["String"]>
-}
-
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1Record_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1RecordEcosystemContentArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1RecordEnablingContentArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1RecordImpactDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1RecordOpeningDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
-export type SolutionsInfrastructureCopy1RecordPullQuoteArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecord = {
   __typename?: "SolutionsInfrastructureRecord"
@@ -19710,6 +19645,150 @@ export type SolutionsInfrastructureRecordOpeningDescriptionArgs = {
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecordPullQuoteArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1Record = {
+  __typename?: "SolutionsSecurityCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  challengesByline?: Maybe<Scalars["String"]>
+  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  challengesDiagram?: Maybe<FileField>
+  challengesHeading?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  customerEyebrow?: Maybe<Scalars["String"]>
+  customers?: Maybe<Array<Maybe<CustomerRecord>>>
+  ecosystemContent?: Maybe<Scalars["String"]>
+  ecosystemDiagram?: Maybe<FileField>
+  ecosystemHeading?: Maybe<Scalars["String"]>
+  enablingByline?: Maybe<Scalars["String"]>
+  enablingContent?: Maybe<Scalars["String"]>
+  enablingHeading?: Maybe<Scalars["String"]>
+  heroEyebrow?: Maybe<Scalars["String"]>
+  heroHeading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  impactByline?: Maybe<Scalars["String"]>
+  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  impactDescription?: Maybe<Scalars["String"]>
+  impactHeading?: Maybe<Scalars["String"]>
+  metadata?: Maybe<SeoField>
+  openingDescription?: Maybe<Scalars["String"]>
+  pullQuote?: Maybe<Scalars["String"]>
+  pullQuoteAttribution?: Maybe<Scalars["String"]>
+  pullQuoteAttributionLink?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  whitepaperHeading?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1Record_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1RecordEcosystemContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1RecordEnablingContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1RecordImpactDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1RecordOpeningDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
+export type SolutionsSecurityCopy1RecordPullQuoteArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecord = {
+  __typename?: "SolutionsSecurityRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  challengesByline?: Maybe<Scalars["String"]>
+  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  challengesDiagram?: Maybe<FileField>
+  challengesHeading?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  customerEyebrow?: Maybe<Scalars["String"]>
+  customers?: Maybe<Array<Maybe<CustomerRecord>>>
+  ecosystemContent?: Maybe<Scalars["String"]>
+  ecosystemDiagram?: Maybe<FileField>
+  ecosystemHeading?: Maybe<Scalars["String"]>
+  enablingByline?: Maybe<Scalars["String"]>
+  enablingContent?: Maybe<Scalars["String"]>
+  enablingHeading?: Maybe<Scalars["String"]>
+  heroEyebrow?: Maybe<Scalars["String"]>
+  heroHeading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  impactByline?: Maybe<Scalars["String"]>
+  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  impactDescription?: Maybe<Scalars["String"]>
+  impactHeading?: Maybe<Scalars["String"]>
+  metadata?: Maybe<SeoField>
+  openingDescription?: Maybe<Scalars["String"]>
+  pullQuote?: Maybe<Scalars["String"]>
+  pullQuoteAttribution?: Maybe<Scalars["String"]>
+  pullQuoteAttributionLink?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  whitepaperHeading?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecordEcosystemContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecordEnablingContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecordImpactDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecordOpeningDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security (solutions_security) */
+export type SolutionsSecurityRecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
