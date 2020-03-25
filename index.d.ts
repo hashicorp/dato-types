@@ -12155,9 +12155,9 @@ export type Query = {
   /** Returns the single instance record */
   solutionsInfrastructure?: Maybe<SolutionsInfrastructureRecord>
   /** Returns the single instance record */
-  solutionsSecurity?: Maybe<SolutionsSecurityRecord>
+  solutionsNetworking?: Maybe<SolutionsNetworkingRecord>
   /** Returns the single instance record */
-  solutionsSecurityCopy1?: Maybe<SolutionsSecurityCopy1Record>
+  solutionsSecurity?: Maybe<SolutionsSecurityRecord>
   /** Returns a specific record */
   speakersSection?: Maybe<SpeakersSectionRecord>
   /** Returns a specific record */
@@ -15947,12 +15947,12 @@ export type QuerySolutionsInfrastructureArgs = {
 }
 
 /** The query root for this schema */
-export type QuerySolutionsSecurityArgs = {
+export type QuerySolutionsNetworkingArgs = {
   locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
-export type QuerySolutionsSecurityCopy1Args = {
+export type QuerySolutionsSecurityArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19648,9 +19648,9 @@ export type SolutionsInfrastructureRecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1Record = {
-  __typename?: "SolutionsSecurityCopy1Record"
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecord = {
+  __typename?: "SolutionsNetworkingRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -19690,33 +19690,33 @@ export type SolutionsSecurityCopy1Record = {
   whitepaperHeading?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1Record_SeoMetaTagsArgs = {
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1RecordEcosystemContentArgs = {
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecordEcosystemContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1RecordEnablingContentArgs = {
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecordEnablingContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1RecordImpactDescriptionArgs = {
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecordImpactDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1RecordOpeningDescriptionArgs = {
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecordOpeningDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Security (copy #1) (solutions_security_copy_1) */
-export type SolutionsSecurityCopy1RecordPullQuoteArgs = {
+/** Record of type Solutions Networking (solutions_networking) */
+export type SolutionsNetworkingRecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
