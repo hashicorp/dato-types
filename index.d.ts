@@ -12155,9 +12155,9 @@ export type Query = {
   /** Returns the single instance record */
   solutionsInfrastructurePage?: Maybe<SolutionsInfrastructurePageRecord>
   /** Returns the single instance record */
-  solutionsNetworking?: Maybe<SolutionsNetworkingRecord>
+  solutionsNetworkingPage?: Maybe<SolutionsNetworkingPageRecord>
   /** Returns the single instance record */
-  solutionsSecurity?: Maybe<SolutionsSecurityRecord>
+  solutionsSecurityPage?: Maybe<SolutionsSecurityPageRecord>
   /** Returns a specific record */
   speakersSection?: Maybe<SpeakersSectionRecord>
   /** Returns a specific record */
@@ -15947,12 +15947,12 @@ export type QuerySolutionsInfrastructurePageArgs = {
 }
 
 /** The query root for this schema */
-export type QuerySolutionsNetworkingArgs = {
+export type QuerySolutionsNetworkingPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
-export type QuerySolutionsSecurityArgs = {
+export type QuerySolutionsSecurityPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -19648,9 +19648,82 @@ export type SolutionsInfrastructurePageRecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecord = {
-  __typename?: "SolutionsNetworkingRecord"
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecord = {
+  __typename?: "SolutionsNetworkingPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  automationHeading?: Maybe<Scalars["String"]>
+  challengesByline?: Maybe<Scalars["String"]>
+  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  challengesDiagram?: Maybe<FileField>
+  challengesHeading?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  customerEyebrow?: Maybe<Scalars["String"]>
+  customers?: Maybe<Array<Maybe<CustomerRecord>>>
+  ecosystemContent?: Maybe<Scalars["String"]>
+  ecosystemDiagram?: Maybe<FileField>
+  ecosystemHeading?: Maybe<Scalars["String"]>
+  enablingByline?: Maybe<Scalars["String"]>
+  enablingContent?: Maybe<Scalars["String"]>
+  enablingHeading?: Maybe<Scalars["String"]>
+  heroEyebrow?: Maybe<Scalars["String"]>
+  heroHeading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  impactByline?: Maybe<Scalars["String"]>
+  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  impactDescription?: Maybe<Scalars["String"]>
+  impactHeading?: Maybe<Scalars["String"]>
+  metadata?: Maybe<SeoField>
+  openingDescription?: Maybe<Scalars["String"]>
+  pullQuote?: Maybe<Scalars["String"]>
+  pullQuoteAttribution?: Maybe<Scalars["String"]>
+  pullQuoteAttributionLink?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  whitepaperHeading?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecordEcosystemContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecordEnablingContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecordImpactDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecordOpeningDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Networking Page (solutions_networking_page) */
+export type SolutionsNetworkingPageRecordPullQuoteArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecord = {
+  __typename?: "SolutionsSecurityPageRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -19690,105 +19763,33 @@ export type SolutionsNetworkingRecord = {
   whitepaperHeading?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecord_SeoMetaTagsArgs = {
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecordEcosystemContentArgs = {
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecordEcosystemContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecordEnablingContentArgs = {
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecordEnablingContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecordImpactDescriptionArgs = {
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecordImpactDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecordOpeningDescriptionArgs = {
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecordOpeningDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Solutions Networking (solutions_networking) */
-export type SolutionsNetworkingRecordPullQuoteArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecord = {
-  __typename?: "SolutionsSecurityRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  challengesByline?: Maybe<Scalars["String"]>
-  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
-  challengesDiagram?: Maybe<FileField>
-  challengesHeading?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  customerEyebrow?: Maybe<Scalars["String"]>
-  customers?: Maybe<Array<Maybe<CustomerRecord>>>
-  ecosystemContent?: Maybe<Scalars["String"]>
-  ecosystemDiagram?: Maybe<FileField>
-  ecosystemHeading?: Maybe<Scalars["String"]>
-  enablingByline?: Maybe<Scalars["String"]>
-  enablingContent?: Maybe<Scalars["String"]>
-  enablingHeading?: Maybe<Scalars["String"]>
-  heroEyebrow?: Maybe<Scalars["String"]>
-  heroHeading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  impactByline?: Maybe<Scalars["String"]>
-  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
-  impactDescription?: Maybe<Scalars["String"]>
-  impactHeading?: Maybe<Scalars["String"]>
-  metadata?: Maybe<SeoField>
-  openingDescription?: Maybe<Scalars["String"]>
-  pullQuote?: Maybe<Scalars["String"]>
-  pullQuoteAttribution?: Maybe<Scalars["String"]>
-  pullQuoteAttributionLink?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-  whitepaperHeading?: Maybe<Scalars["String"]>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecordEcosystemContentArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecordEnablingContentArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecordImpactDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecordOpeningDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Solutions Security (solutions_security) */
-export type SolutionsSecurityRecordPullQuoteArgs = {
+/** Record of type Solutions Security Page (solutions_security_page) */
+export type SolutionsSecurityPageRecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
