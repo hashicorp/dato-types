@@ -19575,9 +19575,7 @@ export type SolutionsInfrastructureRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  businessImpactByline?: Maybe<Scalars["String"]>
   businessImpactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
-  businessImpactDescription?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   challengesDiagram?: Maybe<FileField>
@@ -19591,6 +19589,8 @@ export type SolutionsInfrastructureRecord = {
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  impactByline?: Maybe<Scalars["String"]>
+  impactDescription?: Maybe<Scalars["String"]>
   impactHeading?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
   openingDescription?: Maybe<Scalars["String"]>
@@ -19608,12 +19608,12 @@ export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordBusinessImpactDescriptionArgs = {
+export type SolutionsInfrastructureRecordEnablingContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
-export type SolutionsInfrastructureRecordEnablingContentArgs = {
+export type SolutionsInfrastructureRecordImpactDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
