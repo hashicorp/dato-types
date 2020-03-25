@@ -19582,7 +19582,6 @@ export type SolutionsInfrastructureRecord = {
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
-  ecosystem?: Maybe<TextImageSectionRecord>
   ecosystemContent?: Maybe<Scalars["String"]>
   ecosystemDiagram?: Maybe<FileField>
   ecosystemHeading?: Maybe<Scalars["String"]>
