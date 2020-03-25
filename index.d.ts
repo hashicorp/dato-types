@@ -12154,6 +12154,8 @@ export type Query = {
   socialNetworkIcon?: Maybe<SocialNetworkIconRecord>
   /** Returns the single instance record */
   solutionsInfrastructure?: Maybe<SolutionsInfrastructureRecord>
+  /** Returns the single instance record */
+  solutionsInfrastructureCopy1?: Maybe<SolutionsInfrastructureCopy1Record>
   /** Returns a specific record */
   speakersSection?: Maybe<SpeakersSectionRecord>
   /** Returns a specific record */
@@ -15943,6 +15945,11 @@ export type QuerySolutionsInfrastructureArgs = {
 }
 
 /** The query root for this schema */
+export type QuerySolutionsInfrastructureCopy1Args = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
 export type QuerySpeakersSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<SpeakersSectionModelFilter>
@@ -19559,6 +19566,78 @@ export type SolutionsContentGroupRecord_SeoMetaTagsArgs = {
 
 /** Record of type Solutions Content Group (solutions_content_group) */
 export type SolutionsContentGroupRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1Record = {
+  __typename?: "SolutionsInfrastructureCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  challengesByline?: Maybe<Scalars["String"]>
+  challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  challengesDiagram?: Maybe<FileField>
+  challengesHeading?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  customerEyebrow?: Maybe<Scalars["String"]>
+  customers?: Maybe<Array<Maybe<CustomerRecord>>>
+  ecosystemContent?: Maybe<Scalars["String"]>
+  ecosystemDiagram?: Maybe<FileField>
+  ecosystemHeading?: Maybe<Scalars["String"]>
+  enablingByline?: Maybe<Scalars["String"]>
+  enablingContent?: Maybe<Scalars["String"]>
+  enablingHeading?: Maybe<Scalars["String"]>
+  heroEyebrow?: Maybe<Scalars["String"]>
+  heroHeading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  impactByline?: Maybe<Scalars["String"]>
+  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
+  impactDescription?: Maybe<Scalars["String"]>
+  impactHeading?: Maybe<Scalars["String"]>
+  metadata?: Maybe<SeoField>
+  openingDescription?: Maybe<Scalars["String"]>
+  pullQuote?: Maybe<Scalars["String"]>
+  pullQuoteAttribution?: Maybe<Scalars["String"]>
+  pullQuoteAttributionLink?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  whitepaperHeading?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1Record_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1RecordEcosystemContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1RecordEnablingContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1RecordImpactDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1RecordOpeningDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Solutions Infrastructure (copy #1) (solutions_infrastructure_copy_1) */
+export type SolutionsInfrastructureCopy1RecordPullQuoteArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
