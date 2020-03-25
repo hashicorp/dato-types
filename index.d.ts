@@ -19591,6 +19591,7 @@ export type SolutionsInfrastructureRecord = {
   heroEyebrow?: Maybe<Scalars["String"]>
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  impactHeading?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
   openingDescription?: Maybe<Scalars["String"]>
   pullQuote?: Maybe<Scalars["String"]>
