@@ -23186,6 +23186,7 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  isAnnouncement?: Maybe<BooleanFilter>
   webinarId?: Maybe<StringFilter>
   primaryProduct?: Maybe<LinkFilter>
   backgroundImage?: Maybe<FileFilter>
@@ -23235,6 +23236,8 @@ export enum WebinarModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  IsAnnouncementAsc = "isAnnouncement_ASC",
+  IsAnnouncementDesc = "isAnnouncement_DESC",
   WebinarIdAsc = "webinarId_ASC",
   WebinarIdDesc = "webinarId_DESC",
   LanguageAsc = "language_ASC",
@@ -23280,6 +23283,7 @@ export type WebinarRecord = {
   id: Scalars["ItemId"]
   industry: Array<ResourceIndustryRecord>
   infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
+  isAnnouncement?: Maybe<Scalars["BooleanType"]>
   language?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
   organizations: Array<CompanyRecord>
