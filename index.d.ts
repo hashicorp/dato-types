@@ -19583,6 +19583,8 @@ export type SolutionsInfrastructureRecord = {
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
   ecosystem?: Maybe<TextImageSectionRecord>
+  ecosystemContent?: Maybe<Scalars["String"]>
+  ecosystemDiagram?: Maybe<FileField>
   ecosystemHeading?: Maybe<Scalars["String"]>
   enablingByline?: Maybe<Scalars["String"]>
   enablingContent?: Maybe<Scalars["String"]>
@@ -19606,6 +19608,11 @@ export type SolutionsInfrastructureRecord = {
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
 export type SolutionsInfrastructureRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Solutions Infrastructure (solutions_infrastructure) */
+export type SolutionsInfrastructureRecordEcosystemContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Solutions Infrastructure (solutions_infrastructure) */
