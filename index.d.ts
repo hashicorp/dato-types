@@ -19582,6 +19582,7 @@ export type SolutionsInfrastructureRecord = {
   createdAt: Scalars["DateTime"]
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
+  ecosystem?: Maybe<TextImageSectionRecord>
   enablingByline?: Maybe<Scalars["String"]>
   enablingContent?: Maybe<Scalars["String"]>
   enablingHeading?: Maybe<Scalars["String"]>
@@ -19597,7 +19598,6 @@ export type SolutionsInfrastructureRecord = {
   pullQuote?: Maybe<Scalars["String"]>
   pullQuoteAttribution?: Maybe<Scalars["String"]>
   pullQuoteAttributionLink?: Maybe<Scalars["String"]>
-  textAndImageSplit?: Maybe<TextImageSectionRecord>
   updatedAt: Scalars["DateTime"]
   whitepaperHeading?: Maybe<Scalars["String"]>
 }
