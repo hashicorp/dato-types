@@ -19583,6 +19583,7 @@ export type SolutionsInfrastructureRecord = {
   customerEyebrow?: Maybe<Scalars["String"]>
   customers?: Maybe<Array<Maybe<CustomerRecord>>>
   ecosystem?: Maybe<TextImageSectionRecord>
+  ecosystemHeading?: Maybe<Scalars["String"]>
   enablingByline?: Maybe<Scalars["String"]>
   enablingContent?: Maybe<Scalars["String"]>
   enablingHeading?: Maybe<Scalars["String"]>
