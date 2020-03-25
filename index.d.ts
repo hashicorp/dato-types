@@ -576,6 +576,7 @@ export type BulletRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  item?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
