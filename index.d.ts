@@ -19575,7 +19575,6 @@ export type SolutionsInfrastructureRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  businessImpactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   challengesDiagram?: Maybe<FileField>
@@ -19590,6 +19589,7 @@ export type SolutionsInfrastructureRecord = {
   heroHeading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   impactByline?: Maybe<Scalars["String"]>
+  impactContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
   impactDescription?: Maybe<Scalars["String"]>
   impactHeading?: Maybe<Scalars["String"]>
   metadata?: Maybe<SeoField>
@@ -23187,13 +23187,13 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  industry?: Maybe<LinksFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  product?: Maybe<LinksFilter>
+  backgroundImage?: Maybe<FileFilter>
+  primaryProduct?: Maybe<LinkFilter>
   isAnnouncement?: Maybe<BooleanFilter>
   webinarId?: Maybe<StringFilter>
-  primaryProduct?: Maybe<LinkFilter>
-  backgroundImage?: Maybe<FileFilter>
-  product?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
-  industry?: Maybe<LinksFilter>
   language?: Maybe<StringFilter>
   hidden?: Maybe<BooleanFilter>
   date?: Maybe<DateFilter>
