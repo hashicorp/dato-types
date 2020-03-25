@@ -9050,6 +9050,30 @@ export type LogoGridRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Logo (logo) */
+export type LogoRecord = {
+  __typename?: "LogoRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  logo?: Maybe<FileField>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Logo (logo) */
+export type LogoRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type MajorHeadlineSectionModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -19688,7 +19712,7 @@ export type SolutionsNetworkingPageRecord = {
   automationBullets?: Maybe<Array<Maybe<BulletRecord>>>
   automationContent?: Maybe<Scalars["String"]>
   automationHeading?: Maybe<Scalars["String"]>
-  automationLogos?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  automationLogos?: Maybe<Array<Maybe<LogoRecord>>>
   automationSubheading?: Maybe<Scalars["String"]>
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
