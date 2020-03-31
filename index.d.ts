@@ -16750,23 +16750,23 @@ export type ResourceModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  draft?: Maybe<BooleanFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
+  content?: Maybe<LinksFilter>
+  events?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  people?: Maybe<LinksFilter>
+  industry?: Maybe<LinksFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  contentType?: Maybe<LinkFilter>
+  image?: Maybe<FileFilter>
+  date?: Maybe<DateFilter>
   description?: Maybe<TextFilter>
   mediaType?: Maybe<LinkFilter>
   product?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
-  draft?: Maybe<BooleanFilter>
-  date?: Maybe<DateFilter>
-  image?: Maybe<FileFilter>
-  contentType?: Maybe<LinkFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
-  industry?: Maybe<LinksFilter>
-  people?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  events?: Maybe<LinksFilter>
-  content?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<ResourceModelFilter>>>
 }
 
@@ -16791,14 +16791,14 @@ export enum ResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
   DraftAsc = "draft_ASC",
   DraftDesc = "draft_DESC",
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC",
   DateAsc = "date_ASC",
   DateDesc = "date_DESC",
-  ShowDemoRequestAsc = "showDemoRequest_ASC",
-  ShowDemoRequestDesc = "showDemoRequest_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 export type ResourceModelProductField =
