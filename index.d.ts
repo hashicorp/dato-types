@@ -23410,11 +23410,11 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  primaryProduct?: Maybe<LinkFilter>
   industry?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
   product?: Maybe<LinksFilter>
   backgroundImage?: Maybe<FileFilter>
-  primaryProduct?: Maybe<LinkFilter>
   isAnnouncement?: Maybe<BooleanFilter>
   webinarId?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
