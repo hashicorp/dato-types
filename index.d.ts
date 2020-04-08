@@ -10238,14 +10238,6 @@ export type PackageSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Specifies how to filter by parent (tree-like collections only) */
-export type ParentFilter = {
-  /** Filter records children of the specified record. Value must be a Record ID */
-  eq?: Maybe<Scalars["ItemId"]>
-  /** Filter records with a parent record or not */
-  exists?: Maybe<Scalars["BooleanType"]>
-}
-
 export type PartnersPageModelContentField =
   | HeroSectionRecord
   | LargeLogoGridSectionRecord
@@ -10698,12 +10690,15 @@ export type PrinciplesPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type ProductCertificationPageModelContentField =
+  | MajorHeadlineSectionRecord
+  | TextSectionRecord
+
 export type ProductCertificationPageModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
-  parent?: Maybe<ParentFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
@@ -10711,6 +10706,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  content?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ProductCertificationPageModelFilter>>>
 }
@@ -10755,10 +10751,9 @@ export type ProductCertificationPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  children?: Maybe<Array<Maybe<ProductCertificationPageRecord>>>
+  content: Array<ProductCertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  parent?: Maybe<ProductCertificationPageRecord>
   position?: Maybe<Scalars["IntType"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
