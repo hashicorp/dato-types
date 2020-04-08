@@ -10706,8 +10706,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  slugified?: Maybe<SlugFilter>
-  slug?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   content?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ProductCertificationPageModelFilter>>>
@@ -10736,8 +10735,6 @@ export enum ProductCertificationPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SlugAsc = "slug_ASC",
-  SlugDesc = "slug_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -10760,7 +10757,6 @@ export type ProductCertificationPageRecord = {
   id: Scalars["ItemId"]
   position?: Maybe<Scalars["IntType"]>
   slug?: Maybe<Scalars["String"]>
-  slugified?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
