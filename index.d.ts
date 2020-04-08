@@ -10706,6 +10706,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  slugified?: Maybe<SlugFilter>
   slug?: Maybe<StringFilter>
   content?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
@@ -10759,6 +10760,7 @@ export type ProductCertificationPageRecord = {
   id: Scalars["ItemId"]
   position?: Maybe<Scalars["IntType"]>
   slug?: Maybe<Scalars["String"]>
+  slugified?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
