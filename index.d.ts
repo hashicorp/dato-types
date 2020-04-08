@@ -10238,6 +10238,14 @@ export type PackageSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Specifies how to filter by parent (tree-like collections only) */
+export type ParentFilter = {
+  /** Filter records children of the specified record. Value must be a Record ID */
+  eq?: Maybe<Scalars["ItemId"]>
+  /** Filter records with a parent record or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+}
+
 export type PartnersPageModelContentField =
   | HeroSectionRecord
   | LargeLogoGridSectionRecord
@@ -10687,6 +10695,73 @@ export type PrinciplesPageRecord = {
 
 /** Record of type Principles Page (principles_page) */
 export type PrinciplesPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type ProductCertificationPageModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  parent?: Maybe<ParentFilter>
+  position?: Maybe<PositionFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<ProductCertificationPageModelFilter>>>
+}
+
+export enum ProductCertificationPageModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Product Certification Page (product_certification_page) */
+export type ProductCertificationPageRecord = {
+  __typename?: "ProductCertificationPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  children?: Maybe<Array<Maybe<ProductCertificationPageRecord>>>
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  parent?: Maybe<ProductCertificationPageRecord>
+  position?: Maybe<Scalars["IntType"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Product Certification Page (product_certification_page) */
+export type ProductCertificationPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -11365,6 +11440,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allPricingPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allProductCertificationPagesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allProductOfferingsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allProductPackageSectionsMeta: CollectionMetadata
@@ -11714,6 +11791,8 @@ export type Query = {
   allPressLinks: Array<PressLinkRecord>
   /** Returns a collection of records */
   allPricingPages: Array<PricingPageRecord>
+  /** Returns a collection of records */
+  allProductCertificationPages: Array<ProductCertificationPageRecord>
   /** Returns a collection of records */
   allProductOfferings: Array<ProductOfferingRecord>
   /** Returns a collection of records */
@@ -12108,6 +12187,8 @@ export type Query = {
   pricingPage?: Maybe<PricingPageRecord>
   /** Returns the single instance record */
   principlesPage?: Maybe<PrinciplesPageRecord>
+  /** Returns a specific record */
+  productCertificationPage?: Maybe<ProductCertificationPageRecord>
   /** Returns a specific record */
   productOffering?: Maybe<ProductOfferingRecord>
   /** Returns a specific record */
@@ -12890,6 +12971,12 @@ export type Query_AllPressLinksMetaArgs = {
 export type Query_AllPricingPagesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PricingPageModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllProductCertificationPagesMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<ProductCertificationPageModelFilter>
 }
 
 /** The query root for this schema */
@@ -14213,6 +14300,15 @@ export type QueryAllPricingPagesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<PricingPageModelFilter>
   orderBy?: Maybe<Array<Maybe<PricingPageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllProductCertificationPagesArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<ProductCertificationPageModelFilter>
+  orderBy?: Maybe<Array<Maybe<ProductCertificationPageModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15678,6 +15774,13 @@ export type QueryPricingPageArgs = {
 /** The query root for this schema */
 export type QueryPrinciplesPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryProductCertificationPageArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<ProductCertificationPageModelFilter>
+  orderBy?: Maybe<Array<Maybe<ProductCertificationPageModelOrderBy>>>
 }
 
 /** The query root for this schema */
