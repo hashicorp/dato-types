@@ -21337,6 +21337,8 @@ export type TmpMikeTestModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  content?: Maybe<TextFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpMikeTestModelFilter>>>
 }
 
@@ -21360,7 +21362,9 @@ export enum TmpMikeTestModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type tmp Mike Test (tmp_mike_test) */
@@ -21376,14 +21380,21 @@ export type TmpMikeTestRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type tmp Mike Test (tmp_mike_test) */
 export type TmpMikeTestRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type tmp Mike Test (tmp_mike_test) */
+export type TmpMikeTestRecordContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: About Page (tmpmodel_about_page) */
