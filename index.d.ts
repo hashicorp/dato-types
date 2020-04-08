@@ -10756,6 +10756,7 @@ export type ProductCertificationPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   children?: Maybe<Array<Maybe<ProductCertificationPageRecord>>>
+  content?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   parent?: Maybe<ProductCertificationPageRecord>
