@@ -10706,9 +10706,9 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   product?: Maybe<LinkFilter>
   seoTags?: Maybe<SeoFilter>
-  slug?: Maybe<SlugFilter>
   content?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ProductCertificationPageModelFilter>>>
