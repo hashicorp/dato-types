@@ -10706,7 +10706,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  image?: Maybe<LinkFilter>
+  badge?: Maybe<LinkFilter>
   slug?: Maybe<SlugFilter>
   product?: Maybe<LinkFilter>
   seoTags?: Maybe<SeoFilter>
@@ -10755,10 +10755,10 @@ export type ProductCertificationPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  badge?: Maybe<SbcImageRecord>
   content: Array<ProductCertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  image?: Maybe<SbcImageRecord>
   position?: Maybe<Scalars["IntType"]>
   product?: Maybe<HashicorpProductRecord>
   seoTags?: Maybe<SeoField>
