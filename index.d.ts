@@ -10706,6 +10706,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  heading?: Maybe<StringFilter>
   badge?: Maybe<FileFilter>
   slug?: Maybe<SlugFilter>
   product?: Maybe<LinkFilter>
@@ -10738,6 +10739,8 @@ export enum ProductCertificationPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -10758,6 +10761,7 @@ export type ProductCertificationPageRecord = {
   badge?: Maybe<FileField>
   content: Array<ProductCertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   position?: Maybe<Scalars["IntType"]>
   product?: Maybe<HashicorpProductRecord>
