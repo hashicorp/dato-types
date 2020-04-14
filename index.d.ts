@@ -10706,9 +10706,10 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  overview?: Maybe<TextFilter>
   heading?: Maybe<StringFilter>
   badge?: Maybe<FileFilter>
-  slug?: Maybe<SlugFilter>
   product?: Maybe<LinkFilter>
   seoTags?: Maybe<SeoFilter>
   content?: Maybe<LinksFilter>
@@ -10763,6 +10764,7 @@ export type ProductCertificationPageRecord = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  overview?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
   product?: Maybe<HashicorpProductRecord>
   seoTags?: Maybe<SeoField>
@@ -10774,6 +10776,11 @@ export type ProductCertificationPageRecord = {
 /** Record of type Product Certification Page (product_certification_page) */
 export type ProductCertificationPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Product Certification Page (product_certification_page) */
+export type ProductCertificationPageRecordOverviewArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Product Integration (product_integration) */
