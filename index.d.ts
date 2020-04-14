@@ -16899,6 +16899,7 @@ export type ResourceModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  hidden?: Maybe<BooleanFilter>
   draft?: Maybe<BooleanFilter>
   showDemoRequest?: Maybe<BooleanFilter>
   metadata?: Maybe<SeoFilter>
@@ -16940,6 +16941,8 @@ export enum ResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  HiddenAsc = "hidden_ASC",
+  HiddenDesc = "hidden_DESC",
   DraftAsc = "draft_ASC",
   DraftDesc = "draft_DESC",
   ShowDemoRequestAsc = "showDemoRequest_ASC",
@@ -16974,6 +16977,7 @@ export type ResourceRecord = {
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
   events: Array<EventRecord>
+  hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   industry: Array<ResourceIndustryRecord>
