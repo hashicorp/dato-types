@@ -679,6 +679,7 @@ export type BlogPostV2ModelContentField =
   | BlogVideoRecord
   | LearnGuideRecord
   | CodeBlockRecord
+  | NewsletterSignupCtaRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
@@ -9879,6 +9880,30 @@ export type NewsItemRecord = {
 
 /** Record of type News Item (news_item) */
 export type NewsItemRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Newsletter Signup CTA (newsletter_signup_cta) */
+export type NewsletterSignupCtaRecord = {
+  __typename?: "NewsletterSignupCtaRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  ctaText?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Newsletter Signup CTA (newsletter_signup_cta) */
+export type NewsletterSignupCtaRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
