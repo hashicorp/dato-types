@@ -10706,6 +10706,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  learnUrl?: Maybe<StringFilter>
   registerUrl?: Maybe<StringFilter>
   heroIntro?: Maybe<TextFilter>
   signupFormIntro?: Maybe<TextFilter>
@@ -10744,6 +10745,8 @@ export enum ProductCertificationPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  LearnUrlAsc = "learnUrl_ASC",
+  LearnUrlDesc = "learnUrl_DESC",
   RegisterUrlAsc = "registerUrl_ASC",
   RegisterUrlDesc = "registerUrl_DESC",
   SignupFormHeadingAsc = "signupFormHeading_ASC",
@@ -10773,6 +10776,7 @@ export type ProductCertificationPageRecord = {
   heading?: Maybe<Scalars["String"]>
   heroIntro?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  learnUrl?: Maybe<Scalars["String"]>
   overview?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
   product?: Maybe<HashicorpProductRecord>
