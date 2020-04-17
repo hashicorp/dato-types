@@ -678,6 +678,7 @@ export type BlogPostV2ModelContentField =
   | BlogImageRecord
   | BlogVideoRecord
   | LearnGuideRecord
+  | CodeBlockRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
@@ -1454,6 +1455,29 @@ export type CodeblockLanguageRecord = {
 
 /** Record of type Code Block Language (codeblock_language) */
 export type CodeblockLanguageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Code Block (code_block) */
+export type CodeBlockRecord = {
+  __typename?: "CodeBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Code Block (code_block) */
+export type CodeBlockRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
