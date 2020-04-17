@@ -376,6 +376,29 @@ export type BecomeAPartnerPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Blog Image (blog_image) */
+export type BlogImageRecord = {
+  __typename?: "BlogImageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Blog Image (blog_image) */
+export type BlogImageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Blog Index Page (blog_index_page) */
 export type BlogIndexPageRecord = {
   __typename?: "BlogIndexPageRecord"
@@ -579,6 +602,8 @@ export type BlogPostRecordSnippetArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type BlogPostV2ModelContentField = TextRecord | BlogImageRecord
+
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -637,7 +662,7 @@ export type BlogPostV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<TextRecord>>>
+  content?: Maybe<Array<Maybe<BlogPostV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   publishDate?: Maybe<Scalars["DateTime"]>
@@ -21418,12 +21443,18 @@ export type TextRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Text (text) */
 export type TextRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Text (text) */
+export type TextRecordTextArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type TextSectionModelFilter = {
