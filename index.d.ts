@@ -677,6 +677,7 @@ export type BlogPostV2ModelContentField =
   | TextRecord
   | BlogImageRecord
   | BlogVideoRecord
+  | LearnGuideRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
@@ -8865,6 +8866,29 @@ export type LargeLogoGridSectionRecord_SeoMetaTagsArgs = {
 /** Record of type Large Logo Grid Section (large_logo_grid_section) */
 export type LargeLogoGridSectionRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Learn Guide (learn_guide) */
+export type LearnGuideRecord = {
+  __typename?: "LearnGuideRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Learn Guide (learn_guide) */
+export type LearnGuideRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** Record of type Learn Landing Page (learn_landing_page) */
