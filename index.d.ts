@@ -12,8 +12,8 @@ export type Scalars = {
   ItemId: any
   /** Represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. */
   IntType: any
-  Date: any
   UploadId: any
+  Date: any
   /**
    * Represents signed double-precision fractional values as specified by [IEEE
    * 754](http://en.wikipedia.org/wiki/IEEE_floating_point).
@@ -625,6 +625,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  mainImage?: Maybe<FileFilter>
   author?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
   publishDate?: Maybe<DateTimeFilter>
@@ -677,6 +678,7 @@ export type BlogPostV2Record = {
   content?: Maybe<Array<Maybe<BlogPostV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  mainImage?: Maybe<FileField>
   publishDate?: Maybe<Scalars["DateTime"]>
   slug?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
