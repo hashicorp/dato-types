@@ -391,6 +391,7 @@ export type BlogImageRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  image?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
 }
 
