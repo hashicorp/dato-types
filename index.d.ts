@@ -17528,6 +17528,7 @@ export type SalesCtaRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  ctaText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
@@ -17535,6 +17536,11 @@ export type SalesCtaRecord = {
 /** Record of type Sales CTA (sales_cta) */
 export type SalesCtaRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Sales CTA (sales_cta) */
+export type SalesCtaRecordCtaTextArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type SalesFormModelFilter = {
