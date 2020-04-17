@@ -10706,7 +10706,6 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  heroButtons?: Maybe<LinksFilter>
   heroIntro?: Maybe<TextFilter>
   signupFormIntro?: Maybe<TextFilter>
   signupFormHeading?: Maybe<StringFilter>
@@ -10769,7 +10768,6 @@ export type ProductCertificationPageRecord = {
   content: Array<ProductCertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
-  heroButtons: Array<TmpmodelButtonRecord>
   heroIntro?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   overview?: Maybe<Scalars["String"]>
