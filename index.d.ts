@@ -609,7 +609,10 @@ export type BlogPostRecordSnippetArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type BlogPostV2ModelContentField = TextRecord | BlogImageRecord
+export type BlogPostV2ModelContentField =
+  | TextRecord
+  | BlogImageRecord
+  | BlogVideoRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
@@ -687,6 +690,29 @@ export type BlogPostV2Record_SeoMetaTagsArgs = {
 /** Record of type Blog Post v2 (blog_post_v2) */
 export type BlogPostV2RecordSummaryArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Blog Video (blog_video) */
+export type BlogVideoRecord = {
+  __typename?: "BlogVideoRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Blog Video (blog_video) */
+export type BlogVideoRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** Specifies how to filter Boolean fields */
