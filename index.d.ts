@@ -579,7 +579,7 @@ export type BlogPostRecordSnippetArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type BlogV2ModelFilter = {
+export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
   id?: Maybe<ItemIdFilter>
@@ -592,10 +592,10 @@ export type BlogV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<BlogV2ModelFilter>>>
+  OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
 
-export enum BlogV2ModelOrderBy {
+export enum BlogPostV2ModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -620,9 +620,9 @@ export enum BlogV2ModelOrderBy {
   TitleDesc = "title_DESC"
 }
 
-/** Record of type Blog v2 (blog_v2) */
-export type BlogV2Record = {
-  __typename?: "BlogV2Record"
+/** Record of type Blog Post v2 (blog_post_v2) */
+export type BlogPostV2Record = {
+  __typename?: "BlogPostV2Record"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -640,8 +640,8 @@ export type BlogV2Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Blog v2 (blog_v2) */
-export type BlogV2Record_SeoMetaTagsArgs = {
+/** Record of type Blog Post v2 (blog_post_v2) */
+export type BlogPostV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -11372,9 +11372,9 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allBlogPostCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allBlogPostsMeta: CollectionMetadata
+  _allBlogPostV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allBlogV2sMeta: CollectionMetadata
+  _allBlogPostsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allButton2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -11722,9 +11722,9 @@ export type Query = {
   /** Returns a collection of records */
   allBlogPostCategories: Array<BlogPostCategoryRecord>
   /** Returns a collection of records */
-  allBlogPosts: Array<BlogPostRecord>
+  allBlogPostV2s: Array<BlogPostV2Record>
   /** Returns a collection of records */
-  allBlogV2s: Array<BlogV2Record>
+  allBlogPosts: Array<BlogPostRecord>
   /** Returns a collection of records */
   allButton2s: Array<Button2Record>
   /** Returns a collection of records */
@@ -12070,7 +12070,7 @@ export type Query = {
   /** Returns a specific record */
   blogPostCategory?: Maybe<BlogPostCategoryRecord>
   /** Returns a specific record */
-  blogV2?: Maybe<BlogV2Record>
+  blogPostV2?: Maybe<BlogPostV2Record>
   /** Returns the single instance record */
   brandPage?: Maybe<BrandPageRecord>
   /** Returns a specific record */
@@ -12550,15 +12550,15 @@ export type Query_AllBlogPostCategoriesMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllBlogPostsMetaArgs = {
+export type Query_AllBlogPostV2sMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<BlogPostModelFilter>
+  filter?: Maybe<BlogPostV2ModelFilter>
 }
 
 /** The query root for this schema */
-export type Query_AllBlogV2sMetaArgs = {
+export type Query_AllBlogPostsMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<BlogV2ModelFilter>
+  filter?: Maybe<BlogPostModelFilter>
 }
 
 /** The query root for this schema */
@@ -13612,21 +13612,21 @@ export type QueryAllBlogPostCategoriesArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllBlogPostV2sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<BlogPostV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<BlogPostV2ModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllBlogPostsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<BlogPostModelFilter>
   orderBy?: Maybe<Array<Maybe<BlogPostModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryAllBlogV2sArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<BlogV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<BlogV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15146,10 +15146,10 @@ export type QueryBlogPostCategoryArgs = {
 }
 
 /** The query root for this schema */
-export type QueryBlogV2Args = {
+export type QueryBlogPostV2Args = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<BlogV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<BlogV2ModelOrderBy>>>
+  filter?: Maybe<BlogPostV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<BlogPostV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
