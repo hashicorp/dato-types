@@ -590,6 +590,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  summary?: Maybe<TextFilter>
   publishDate?: Maybe<DateTimeFilter>
   slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
@@ -640,6 +641,7 @@ export type BlogPostV2Record = {
   id: Scalars["ItemId"]
   publishDate?: Maybe<Scalars["DateTime"]>
   slug?: Maybe<Scalars["String"]>
+  summary?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -647,6 +649,11 @@ export type BlogPostV2Record = {
 /** Record of type Blog Post v2 (blog_post_v2) */
 export type BlogPostV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Blog Post v2 (blog_post_v2) */
+export type BlogPostV2RecordSummaryArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Specifies how to filter Boolean fields */
