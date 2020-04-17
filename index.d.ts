@@ -637,7 +637,7 @@ export type BlogPostV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  content?: Maybe<Array<Maybe<TextRecord>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   publishDate?: Maybe<Scalars["DateTime"]>
@@ -21401,6 +21401,29 @@ export type TextImageSectionRecord_SeoMetaTagsArgs = {
 /** Record of type Text & Image Section (text_image_section) */
 export type TextImageSectionRecordTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Text (text) */
+export type TextRecord = {
+  __typename?: "TextRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Text (text) */
+export type TextRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type TextSectionModelFilter = {
