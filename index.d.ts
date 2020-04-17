@@ -708,11 +708,18 @@ export type BlogVideoRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
+  video?: Maybe<VideoField>
+  videoCaption?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Blog Video (blog_video) */
 export type BlogVideoRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Blog Video (blog_video) */
+export type BlogVideoRecordVideoCaptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Specifies how to filter Boolean fields */
