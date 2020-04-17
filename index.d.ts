@@ -637,6 +637,7 @@ export type BlogPostV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   publishDate?: Maybe<Scalars["DateTime"]>
