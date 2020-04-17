@@ -387,6 +387,7 @@ export type BlogCategoryV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogCategoryV2ModelFilter>>>
 }
 
@@ -410,7 +411,9 @@ export enum BlogCategoryV2ModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 /** Record of type Blog Category V2 (blog_category_v2) */
@@ -428,6 +431,7 @@ export type BlogCategoryV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
