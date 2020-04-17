@@ -1471,6 +1471,7 @@ export type CodeBlockRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  code?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -1479,6 +1480,11 @@ export type CodeBlockRecord = {
 /** Record of type Code Block (code_block) */
 export type CodeBlockRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Code Block (code_block) */
+export type CodeBlockRecordCodeArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CodeSampleModelFilter = {
