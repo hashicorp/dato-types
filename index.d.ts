@@ -691,6 +691,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  tags?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   category?: Maybe<LinkFilter>
   mainImage?: Maybe<FileFilter>
@@ -752,6 +753,7 @@ export type BlogPostV2Record = {
   publishDate?: Maybe<Scalars["DateTime"]>
   slug?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
+  tags: Array<BlogTagsV2Record>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -777,6 +779,7 @@ export type BlogTagsV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  tag?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogTagsV2ModelFilter>>>
 }
 
@@ -800,7 +803,9 @@ export enum BlogTagsV2ModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TagAsc = "tag_ASC",
+  TagDesc = "tag_DESC"
 }
 
 /** Record of type Blog Tags V2 (blog_tags_v2) */
@@ -818,6 +823,7 @@ export type BlogTagsV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  tag?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
