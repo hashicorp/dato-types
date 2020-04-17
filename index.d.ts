@@ -693,6 +693,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   category?: Maybe<LinkFilter>
@@ -700,7 +701,6 @@ export type BlogPostV2ModelFilter = {
   author?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
   publishDate?: Maybe<DateTimeFilter>
-  slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
