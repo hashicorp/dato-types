@@ -10706,6 +10706,8 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  heroButtons?: Maybe<LinksFilter>
+  heroIntro?: Maybe<TextFilter>
   signupFormIntro?: Maybe<TextFilter>
   signupFormHeading?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
@@ -10767,6 +10769,8 @@ export type ProductCertificationPageRecord = {
   content: Array<ProductCertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
+  heroButtons: Array<TmpmodelButtonRecord>
+  heroIntro?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   overview?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
@@ -10782,6 +10786,11 @@ export type ProductCertificationPageRecord = {
 /** Record of type Product Certification Page (product_certification_page) */
 export type ProductCertificationPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Product Certification Page (product_certification_page) */
+export type ProductCertificationPageRecordHeroIntroArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Product Certification Page (product_certification_page) */
