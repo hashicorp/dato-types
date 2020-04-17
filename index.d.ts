@@ -689,6 +689,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  category?: Maybe<LinkFilter>
   mainImage?: Maybe<FileFilter>
   author?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
@@ -739,6 +740,7 @@ export type BlogPostV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
+  category?: Maybe<BlogCategoryV2Record>
   content?: Maybe<Array<Maybe<BlogPostV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
