@@ -945,6 +945,8 @@ export type BrandDownloadFileModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  downloadFile?: Maybe<FileFilter>
+  category?: Maybe<LinkFilter>
   filetype?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadFileModelFilter>>>
@@ -988,7 +990,9 @@ export type BrandDownloadFileRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  category?: Maybe<BrandDownloadCategoryRecord>
   createdAt: Scalars["DateTime"]
+  downloadFile?: Maybe<FileField>
   filetype?: Maybe<BrandDownloadFiletypeRecord>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
