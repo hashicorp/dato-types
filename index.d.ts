@@ -881,8 +881,8 @@ export type BrandDownloadFiletypeModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  icon?: Maybe<FileFilter>
   name?: Maybe<StringFilter>
+  icon?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadFiletypeModelFilter>>>
 }
 
