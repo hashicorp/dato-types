@@ -881,6 +881,8 @@ export type BrandDownloadFiletypeModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  file?: Maybe<FileFilter>
+  name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadFiletypeModelFilter>>>
 }
 
@@ -904,7 +906,9 @@ export enum BrandDownloadFiletypeModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 /** Record of type Brand Download FileType (brand_download_filetype) */
@@ -921,7 +925,9 @@ export type BrandDownloadFiletypeRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  file?: Maybe<FileField>
   id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
