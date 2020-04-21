@@ -870,6 +870,70 @@ export type BooleanFilter = {
   eq?: Maybe<Scalars["BooleanType"]>
 }
 
+export type BrandDownloadCategoryModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  name?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<BrandDownloadCategoryModelFilter>>>
+}
+
+export enum BrandDownloadCategoryModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
+}
+
+/** Record of type Brand Download Category (brand_download_category) */
+export type BrandDownloadCategoryRecord = {
+  __typename?: "BrandDownloadCategoryRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Brand Download Category (brand_download_category) */
+export type BrandDownloadCategoryRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type BrandDownloadFiletypeModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -11743,6 +11807,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allBlogTagsV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allBrandDownloadCategoriesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allBrandDownloadFiletypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allButton2sMeta: CollectionMetadata
@@ -12099,6 +12165,8 @@ export type Query = {
   /** Returns a collection of records */
   allBlogTagsV2s: Array<BlogTagsV2Record>
   /** Returns a collection of records */
+  allBrandDownloadCategories: Array<BrandDownloadCategoryRecord>
+  /** Returns a collection of records */
   allBrandDownloadFiletypes: Array<BrandDownloadFiletypeRecord>
   /** Returns a collection of records */
   allButton2s: Array<Button2Record>
@@ -12450,6 +12518,8 @@ export type Query = {
   blogPostV2?: Maybe<BlogPostV2Record>
   /** Returns a specific record */
   blogTagsV2?: Maybe<BlogTagsV2Record>
+  /** Returns a specific record */
+  brandDownloadCategory?: Maybe<BrandDownloadCategoryRecord>
   /** Returns a specific record */
   brandDownloadFiletype?: Maybe<BrandDownloadFiletypeRecord>
   /** Returns the single instance record */
@@ -12952,6 +13022,12 @@ export type Query_AllBlogPostsMetaArgs = {
 export type Query_AllBlogTagsV2sMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<BlogTagsV2ModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllBrandDownloadCategoriesMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<BrandDownloadCategoryModelFilter>
 }
 
 /** The query root for this schema */
@@ -14044,6 +14120,15 @@ export type QueryAllBlogTagsV2sArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<BlogTagsV2ModelFilter>
   orderBy?: Maybe<Array<Maybe<BlogTagsV2ModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllBrandDownloadCategoriesArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<BrandDownloadCategoryModelFilter>
+  orderBy?: Maybe<Array<Maybe<BrandDownloadCategoryModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15590,6 +15675,13 @@ export type QueryBlogTagsV2Args = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<BlogTagsV2ModelFilter>
   orderBy?: Maybe<Array<Maybe<BlogTagsV2ModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryBrandDownloadCategoryArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<BrandDownloadCategoryModelFilter>
+  orderBy?: Maybe<Array<Maybe<BrandDownloadCategoryModelOrderBy>>>
 }
 
 /** The query root for this schema */
