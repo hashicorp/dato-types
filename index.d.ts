@@ -952,7 +952,6 @@ export type BrandDownloadFileModelFilter = {
   categories?: Maybe<LinksFilter>
   externalFileUrl?: Maybe<StringFilter>
   downloadFile?: Maybe<FileFilter>
-  category?: Maybe<LinkFilter>
   filetype?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadFileModelFilter>>>
@@ -999,7 +998,6 @@ export type BrandDownloadFileRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   categories: Array<BrandDownloadCategoryRecord>
-  category?: Maybe<BrandDownloadCategoryRecord>
   createdAt: Scalars["DateTime"]
   downloadFile?: Maybe<FileField>
   externalFileUrl?: Maybe<Scalars["String"]>
