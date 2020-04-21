@@ -949,6 +949,7 @@ export type BrandDownloadFileModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  categories?: Maybe<LinksFilter>
   externalFileUrl?: Maybe<StringFilter>
   downloadFile?: Maybe<FileFilter>
   category?: Maybe<LinkFilter>
@@ -997,6 +998,7 @@ export type BrandDownloadFileRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  categories: Array<BrandDownloadCategoryRecord>
   category?: Maybe<BrandDownloadCategoryRecord>
   createdAt: Scalars["DateTime"]
   downloadFile?: Maybe<FileField>
