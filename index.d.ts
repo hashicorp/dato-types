@@ -11277,6 +11277,7 @@ export type ProductCertificationPageModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  heroHeading?: Maybe<StringFilter>
   learnUrl?: Maybe<StringFilter>
   registerUrl?: Maybe<StringFilter>
   heroIntro?: Maybe<TextFilter>
@@ -11316,6 +11317,8 @@ export enum ProductCertificationPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  HeroHeadingAsc = "heroHeading_ASC",
+  HeroHeadingDesc = "heroHeading_DESC",
   LearnUrlAsc = "learnUrl_ASC",
   LearnUrlDesc = "learnUrl_DESC",
   RegisterUrlAsc = "registerUrl_ASC",
@@ -11345,6 +11348,7 @@ export type ProductCertificationPageRecord = {
   content: Array<ProductCertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
+  heroHeading?: Maybe<Scalars["String"]>
   heroIntro?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   learnUrl?: Maybe<Scalars["String"]>
