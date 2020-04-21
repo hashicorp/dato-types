@@ -881,7 +881,7 @@ export type BrandDownloadFiletypeModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  file?: Maybe<FileFilter>
+  icon?: Maybe<FileFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadFiletypeModelFilter>>>
 }
@@ -925,7 +925,7 @@ export type BrandDownloadFiletypeRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  file?: Maybe<FileField>
+  icon?: Maybe<FileField>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
