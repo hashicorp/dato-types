@@ -875,6 +875,7 @@ export type BrandDownloadCategoryModelFilter = {
   createdAt?: Maybe<DateTimeFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
+  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
   _status?: Maybe<StatusFilter>
@@ -894,6 +895,8 @@ export enum BrandDownloadCategoryModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -926,6 +929,7 @@ export type BrandDownloadCategoryRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  position?: Maybe<Scalars["IntType"]>
   updatedAt: Scalars["DateTime"]
 }
 
