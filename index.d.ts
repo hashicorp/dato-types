@@ -911,7 +911,7 @@ export enum BrandDownloadFiletypeModelOrderBy {
   NameDesc = "name_DESC"
 }
 
-/** Record of type Brand Download FileType (brand_download_filetype) */
+/** Record of type Brand Download File Type (brand_download_filetype) */
 export type BrandDownloadFiletypeRecord = {
   __typename?: "BrandDownloadFiletypeRecord"
   _createdAt: Scalars["DateTime"]
@@ -931,7 +931,7 @@ export type BrandDownloadFiletypeRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Brand Download FileType (brand_download_filetype) */
+/** Record of type Brand Download File Type (brand_download_filetype) */
 export type BrandDownloadFiletypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
