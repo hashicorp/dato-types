@@ -1930,6 +1930,8 @@ export type CommunityOfficeHourModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  youtubeLink?: Maybe<StringFilter>
+  slidoLink?: Maybe<StringFilter>
   dateTime?: Maybe<DateTimeFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CommunityOfficeHourModelFilter>>>
@@ -1958,6 +1960,10 @@ export enum CommunityOfficeHourModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  YoutubeLinkAsc = "youtubeLink_ASC",
+  YoutubeLinkDesc = "youtubeLink_DESC",
+  SlidoLinkAsc = "slidoLink_ASC",
+  SlidoLinkDesc = "slidoLink_DESC",
   DateTimeAsc = "dateTime_ASC",
   DateTimeDesc = "dateTime_DESC",
   NameAsc = "name_ASC",
@@ -1982,7 +1988,9 @@ export type CommunityOfficeHourRecord = {
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
   position?: Maybe<Scalars["IntType"]>
+  slidoLink?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  youtubeLink?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Community Office Hour (community_office_hour) */
