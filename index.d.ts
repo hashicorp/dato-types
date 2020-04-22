@@ -1923,12 +1923,14 @@ export type CommunityOfficeHourModelFilter = {
   createdAt?: Maybe<DateTimeFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<DateTimeFilter>
+  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<DateTimeFilter>
   _publishedAt?: Maybe<DateTimeFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  dateTime?: Maybe<DateTimeFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CommunityOfficeHourModelFilter>>>
 }
@@ -1942,6 +1944,8 @@ export enum CommunityOfficeHourModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -1954,6 +1958,8 @@ export enum CommunityOfficeHourModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DateTimeAsc = "dateTime_ASC",
+  DateTimeDesc = "dateTime_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC"
 }
@@ -1972,8 +1978,10 @@ export type CommunityOfficeHourRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  dateTime?: Maybe<Scalars["DateTime"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  position?: Maybe<Scalars["IntType"]>
   updatedAt: Scalars["DateTime"]
 }
 
