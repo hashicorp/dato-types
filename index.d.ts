@@ -1918,6 +1918,66 @@ export type CommunityLandingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type CommunityOfficeHourModelFilter = {
+  _createdAt?: Maybe<DateTimeFilter>
+  createdAt?: Maybe<DateTimeFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<DateTimeFilter>
+  _publishedAt?: Maybe<DateTimeFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<DateTimeFilter>
+  updatedAt?: Maybe<DateTimeFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<CommunityOfficeHourModelFilter>>>
+}
+
+export enum CommunityOfficeHourModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Community Office Hour (community_office_hour) */
+export type CommunityOfficeHourRecord = {
+  __typename?: "CommunityOfficeHourRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Community Office Hour (community_office_hour) */
+export type CommunityOfficeHourRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type CompanyModelFilter = {
   _createdAt?: Maybe<DateTimeFilter>
   createdAt?: Maybe<DateTimeFilter>
@@ -11911,6 +11971,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allCodeblockLanguagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allCommunityOfficeHoursMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allCompaniesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allConsulGraphicSectionsMeta: CollectionMetadata
@@ -12270,6 +12332,8 @@ export type Query = {
   allCodeSamples: Array<CodeSampleRecord>
   /** Returns a collection of records */
   allCodeblockLanguages: Array<CodeblockLanguageRecord>
+  /** Returns a collection of records */
+  allCommunityOfficeHours: Array<CommunityOfficeHourRecord>
   /** Returns a collection of records */
   allCompanies: Array<CompanyRecord>
   /** Returns a collection of records */
@@ -12632,6 +12696,8 @@ export type Query = {
   codeblockLanguage?: Maybe<CodeblockLanguageRecord>
   /** Returns the single instance record */
   communityLandingPage?: Maybe<CommunityLandingPageRecord>
+  /** Returns a specific record */
+  communityOfficeHour?: Maybe<CommunityOfficeHourRecord>
   /** Returns a specific record */
   company?: Maybe<CompanyRecord>
   /** Returns the single instance record */
@@ -13176,6 +13242,12 @@ export type Query_AllCodeSamplesMetaArgs = {
 export type Query_AllCodeblockLanguagesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<CodeblockLanguageModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllCommunityOfficeHoursMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<CommunityOfficeHourModelFilter>
 }
 
 /** The query root for this schema */
@@ -14313,6 +14385,15 @@ export type QueryAllCodeblockLanguagesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<CodeblockLanguageModelFilter>
   orderBy?: Maybe<Array<Maybe<CodeblockLanguageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllCommunityOfficeHoursArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<CommunityOfficeHourModelFilter>
+  orderBy?: Maybe<Array<Maybe<CommunityOfficeHourModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15870,6 +15951,13 @@ export type QueryCodeblockLanguageArgs = {
 /** The query root for this schema */
 export type QueryCommunityLandingPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryCommunityOfficeHourArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<CommunityOfficeHourModelFilter>
+  orderBy?: Maybe<Array<Maybe<CommunityOfficeHourModelOrderBy>>>
 }
 
 /** The query root for this schema */
