@@ -1,4 +1,4 @@
-const update = require('../update')
+const update = require('./update')
 const signale = require('signale')
 
 module.exports = async app => {
