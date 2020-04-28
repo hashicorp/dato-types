@@ -24462,6 +24462,7 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
   primaryProduct?: Maybe<LinkFilter>
   isAnnouncement?: Maybe<BooleanFilter>
   backgroundImage?: Maybe<FileFilter>
@@ -24473,7 +24474,6 @@ export type WebinarModelFilter = {
   hidden?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
   draft?: Maybe<BooleanFilter>
-  description?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
   people?: Maybe<LinksFilter>
   organizations?: Maybe<LinksFilter>
