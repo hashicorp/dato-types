@@ -10417,21 +10417,21 @@ export type OnDemandResourceModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
-  awsCampaign?: Maybe<BooleanFilter>
-  targetLink?: Maybe<LinkFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
-  sfdcDescription?: Maybe<StringFilter>
-  events?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  people?: Maybe<LinksFilter>
-  product?: Maybe<LinksFilter>
-  bodyContent?: Maybe<LinksFilter>
-  heroContent?: Maybe<LinksFilter>
-  backgroundImage?: Maybe<FileFilter>
-  contentLength?: Maybe<StringFilter>
-  buttonCtaText?: Maybe<StringFilter>
-  formTitle?: Maybe<StringFilter>
   draft?: Maybe<BooleanFilter>
+  formTitle?: Maybe<StringFilter>
+  buttonCtaText?: Maybe<StringFilter>
+  contentLength?: Maybe<StringFilter>
+  backgroundImage?: Maybe<FileFilter>
+  heroContent?: Maybe<LinksFilter>
+  bodyContent?: Maybe<LinksFilter>
+  product?: Maybe<LinksFilter>
+  people?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  events?: Maybe<LinksFilter>
+  sfdcDescription?: Maybe<StringFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  targetLink?: Maybe<LinkFilter>
+  awsCampaign?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
   description?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
@@ -10467,20 +10467,20 @@ export enum OnDemandResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  AwsCampaignAsc = "awsCampaign_ASC",
-  AwsCampaignDesc = "awsCampaign_DESC",
-  ShowDemoRequestAsc = "showDemoRequest_ASC",
-  ShowDemoRequestDesc = "showDemoRequest_DESC",
-  SfdcDescriptionAsc = "sfdcDescription_ASC",
-  SfdcDescriptionDesc = "sfdcDescription_DESC",
-  ContentLengthAsc = "contentLength_ASC",
-  ContentLengthDesc = "contentLength_DESC",
-  ButtonCtaTextAsc = "buttonCtaText_ASC",
-  ButtonCtaTextDesc = "buttonCtaText_DESC",
-  FormTitleAsc = "formTitle_ASC",
-  FormTitleDesc = "formTitle_DESC",
   DraftAsc = "draft_ASC",
   DraftDesc = "draft_DESC",
+  FormTitleAsc = "formTitle_ASC",
+  FormTitleDesc = "formTitle_DESC",
+  ButtonCtaTextAsc = "buttonCtaText_ASC",
+  ButtonCtaTextDesc = "buttonCtaText_DESC",
+  ContentLengthAsc = "contentLength_ASC",
+  ContentLengthDesc = "contentLength_DESC",
+  SfdcDescriptionAsc = "sfdcDescription_ASC",
+  SfdcDescriptionDesc = "sfdcDescription_DESC",
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC",
+  AwsCampaignAsc = "awsCampaign_ASC",
+  AwsCampaignDesc = "awsCampaign_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
