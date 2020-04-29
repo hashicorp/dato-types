@@ -13075,10 +13075,6 @@ export type Query = {
   /** Returns the single instance record */
   tmpmodelConsulOverviewPage?: Maybe<TmpmodelConsulOverviewPageRecord>
   /** Returns the single instance record */
-  tmpmodelConsulServiceOnAzurePage?: Maybe<
-    TmpmodelConsulServiceOnAzurePageRecord
-  >
-  /** Returns the single instance record */
   tmpmodelEcosystemFindAPartnerPage?: Maybe<
     TmpmodelEcosystemFindAPartnerPageRecord
   >
@@ -17152,11 +17148,6 @@ export type QueryTmpmodelConsulEnterprisePageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpmodelConsulOverviewPageArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryTmpmodelConsulServiceOnAzurePageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -22538,35 +22529,6 @@ export type TmpmodelConsulOverviewPageRecord = {
 
 /** Record of type TMP: Consul Overview (tmpmodel_consul_overview_page) */
 export type TmpmodelConsulOverviewPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: Consul Service on Azure (tmpmodel_consul_service_on_azure_page) */
-export type TmpmodelConsulServiceOnAzurePageRecord = {
-  __typename?: "TmpmodelConsulServiceOnAzurePageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  hero?: Maybe<HeroSectionRecord>
-  id: Scalars["ItemId"]
-  readMoreButton?: Maybe<SbcButtonV2Record>
-  readMoreImage?: Maybe<FileField>
-  seo?: Maybe<SeoField>
-  updatedAt: Scalars["DateTime"]
-  useCases?: Maybe<SbcUseCasesSectionRecord>
-  useCasesCallouts?: Maybe<SbcCalloutSectionRecord>
-}
-
-/** Record of type TMP: Consul Service on Azure (tmpmodel_consul_service_on_azure_page) */
-export type TmpmodelConsulServiceOnAzurePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
