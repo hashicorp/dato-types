@@ -949,6 +949,7 @@ export type BrandDownloadFileModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  downloadIcon?: Maybe<StringFilter>
   categories?: Maybe<LinksFilter>
   externalFileUrl?: Maybe<StringFilter>
   downloadFile?: Maybe<FileFilter>
@@ -978,6 +979,8 @@ export enum BrandDownloadFileModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DownloadIconAsc = "downloadIcon_ASC",
+  DownloadIconDesc = "downloadIcon_DESC",
   ExternalFileUrlAsc = "externalFileUrl_ASC",
   ExternalFileUrlDesc = "externalFileUrl_DESC",
   NameAsc = "name_ASC",
@@ -1000,6 +1003,7 @@ export type BrandDownloadFileRecord = {
   categories: Array<BrandDownloadCategoryRecord>
   createdAt: Scalars["DateTime"]
   downloadFile?: Maybe<FileField>
+  downloadIcon?: Maybe<Scalars["String"]>
   externalFileUrl?: Maybe<Scalars["String"]>
   filetype?: Maybe<BrandDownloadFiletypeRecord>
   id: Scalars["ItemId"]
