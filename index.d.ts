@@ -572,13 +572,13 @@ export type BlogPostModelFilter = {
   _updatedAt?: Maybe<DateTimeFilter>
   updatedAt?: Maybe<DateTimeFilter>
   _isValid?: Maybe<BooleanFilter>
+  body?: Maybe<TextFilter>
   showDemoRequest?: Maybe<BooleanFilter>
   previewUrl?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
   slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
   toDoItems?: Maybe<JsonFilter>
-  body?: Maybe<TextFilter>
   guestBlog?: Maybe<BooleanFilter>
   categories?: Maybe<LinksFilter>
   image?: Maybe<FileFilter>
