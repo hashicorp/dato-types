@@ -68,22 +68,22 @@ export type AboutPageRecordNameArgs = {
 }
 
 export type AlertBannerModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  theme?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  text?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
-  tag?: Maybe<StringFilter>
   linkText?: Maybe<StringFilter>
+  tag?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  text?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  theme?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<AlertBannerModelFilter>>>
 }
 
@@ -108,18 +108,18 @@ export enum AlertBannerModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
-  TextAsc = "text_ASC",
-  TextDesc = "text_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
+  LinkTextAsc = "linkText_ASC",
+  LinkTextDesc = "linkText_DESC",
   TagAsc = "tag_ASC",
   TagDesc = "tag_DESC",
-  LinkTextAsc = "linkText_ASC",
-  LinkTextDesc = "linkText_DESC"
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
+  TextAsc = "text_ASC",
+  TextDesc = "text_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC"
 }
 
 /** Record of type Alert Banner (alert_banner) */
@@ -152,21 +152,21 @@ export type AlertBannerRecord_SeoMetaTagsArgs = {
 }
 
 export type AlertModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
-  tag?: Maybe<StringFilter>
-  tagColor?: Maybe<StringFilter>
-  text?: Maybe<StringFilter>
   textColor?: Maybe<StringFilter>
+  text?: Maybe<StringFilter>
+  tagColor?: Maybe<StringFilter>
+  tag?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<AlertModelFilter>>>
 }
 
@@ -191,16 +191,16 @@ export enum AlertModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
-  TagAsc = "tag_ASC",
-  TagDesc = "tag_DESC",
-  TagColorAsc = "tagColor_ASC",
-  TagColorDesc = "tagColor_DESC",
+  TextColorAsc = "textColor_ASC",
+  TextColorDesc = "textColor_DESC",
   TextAsc = "text_ASC",
   TextDesc = "text_DESC",
-  TextColorAsc = "textColor_ASC",
-  TextColorDesc = "textColor_DESC"
+  TagColorAsc = "tagColor_ASC",
+  TagColorDesc = "tagColor_DESC",
+  TagAsc = "tag_ASC",
+  TagDesc = "tag_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type Alert (alert) */
@@ -280,15 +280,15 @@ export type AutomationLogoRecord_SeoMetaTagsArgs = {
 }
 
 export type BasicTableModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   headline?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BasicTableModelFilter>>>
@@ -377,15 +377,15 @@ export type BecomeAPartnerPageRecord_SeoMetaTagsArgs = {
 }
 
 export type BlogCategoryV2ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogCategoryV2ModelFilter>>>
@@ -496,18 +496,18 @@ export type BlogIndexPageRecord_SeoMetaTagsArgs = {
 }
 
 export type BlogPostCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<BlogPostCategoryModelFilter>>>
 }
 
@@ -562,31 +562,31 @@ export type BlogPostCategoryRecord_SeoMetaTagsArgs = {
 }
 
 export type BlogPostModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   body?: Maybe<TextFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
-  previewUrl?: Maybe<StringFilter>
-  date?: Maybe<DateFilter>
-  slug?: Maybe<SlugFilter>
-  title?: Maybe<StringFilter>
-  toDoItems?: Maybe<JsonFilter>
-  guestBlog?: Maybe<BooleanFilter>
-  categories?: Maybe<LinksFilter>
-  image?: Maybe<FileFilter>
-  thumbnail?: Maybe<FileFilter>
-  metadata?: Maybe<SeoFilter>
-  dateTime?: Maybe<DateTimeFilter>
-  author?: Maybe<LinkFilter>
   snippet?: Maybe<TextFilter>
+  author?: Maybe<LinkFilter>
+  dateTime?: Maybe<DateTimeFilter>
+  metadata?: Maybe<SeoFilter>
+  thumbnail?: Maybe<FileFilter>
+  image?: Maybe<FileFilter>
+  categories?: Maybe<LinksFilter>
+  guestBlog?: Maybe<BooleanFilter>
+  toDoItems?: Maybe<JsonFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  date?: Maybe<DateFilter>
+  previewUrl?: Maybe<StringFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<BlogPostModelFilter>>>
 }
 
@@ -611,18 +611,18 @@ export enum BlogPostModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ShowDemoRequestAsc = "showDemoRequest_ASC",
-  ShowDemoRequestDesc = "showDemoRequest_DESC",
-  PreviewUrlAsc = "previewUrl_ASC",
-  PreviewUrlDesc = "previewUrl_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  DateTimeAsc = "dateTime_ASC",
+  DateTimeDesc = "dateTime_DESC",
   GuestBlogAsc = "guestBlog_ASC",
   GuestBlogDesc = "guestBlog_DESC",
-  DateTimeAsc = "dateTime_ASC",
-  DateTimeDesc = "dateTime_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
+  PreviewUrlAsc = "previewUrl_ASC",
+  PreviewUrlDesc = "previewUrl_DESC",
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC"
 }
 
 /** Record of type Blog Post (blog_post) */
@@ -683,25 +683,25 @@ export type BlogPostV2ModelContentField =
   | SalesCtaRecord
 
 export type BlogPostV2ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  mainImage?: Maybe<FileFilter>
+  publishDate?: Maybe<DateTimeFilter>
   slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
-  blogSeoMetaTags?: Maybe<SeoFilter>
-  category?: Maybe<LinkFilter>
-  mainImage?: Maybe<FileFilter>
-  author?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
-  publishDate?: Maybe<DateTimeFilter>
-  title?: Maybe<StringFilter>
+  category?: Maybe<LinkFilter>
+  author?: Maybe<LinksFilter>
+  blogSeoMetaTags?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
 
@@ -726,10 +726,10 @@ export enum BlogPostV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  PublishDateAsc = "publishDate_ASC",
-  PublishDateDesc = "publishDate_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  PublishDateAsc = "publishDate_ASC",
+  PublishDateDesc = "publishDate_DESC"
 }
 
 /** Record of type Blog Post v2 (blog_post_v2) */
@@ -771,15 +771,15 @@ export type BlogPostV2RecordSummaryArgs = {
 }
 
 export type BlogTagsV2ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   tag?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogTagsV2ModelFilter>>>
@@ -871,16 +871,16 @@ export type BooleanFilter = {
 }
 
 export type BrandDownloadCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadCategoryModelFilter>>>
@@ -939,22 +939,22 @@ export type BrandDownloadCategoryRecord_SeoMetaTagsArgs = {
 }
 
 export type BrandDownloadFileModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  downloadIcon?: Maybe<StringFilter>
-  categories?: Maybe<LinksFilter>
-  externalFileUrl?: Maybe<StringFilter>
-  downloadFile?: Maybe<FileFilter>
   filetype?: Maybe<LinkFilter>
+  externalFileUrl?: Maybe<StringFilter>
   name?: Maybe<StringFilter>
+  downloadFile?: Maybe<FileFilter>
+  categories?: Maybe<LinksFilter>
+  downloadIcon?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BrandDownloadFileModelFilter>>>
 }
 
@@ -979,12 +979,12 @@ export enum BrandDownloadFileModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DownloadIconAsc = "downloadIcon_ASC",
-  DownloadIconDesc = "downloadIcon_DESC",
   ExternalFileUrlAsc = "externalFileUrl_ASC",
   ExternalFileUrlDesc = "externalFileUrl_DESC",
   NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  NameDesc = "name_DESC",
+  DownloadIconAsc = "downloadIcon_ASC",
+  DownloadIconDesc = "downloadIcon_DESC"
 }
 
 /** Record of type Brand Download File (brand_download_file) */
@@ -1017,15 +1017,15 @@ export type BrandDownloadFileRecord_SeoMetaTagsArgs = {
 }
 
 export type BrandDownloadFiletypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   icon?: Maybe<FileFilter>
@@ -1107,20 +1107,20 @@ export type BrandPageRecord_SeoMetaTagsArgs = {
 }
 
 export type Button2ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  theme?: Maybe<LinkFilter>
-  external?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  external?: Maybe<BooleanFilter>
+  theme?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<Button2ModelFilter>>>
 }
 
@@ -1145,12 +1145,12 @@ export enum Button2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ExternalAsc = "external_ASC",
-  ExternalDesc = "external_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  ExternalAsc = "external_ASC",
+  ExternalDesc = "external_DESC"
 }
 
 /** Record of type Button 2 (deprecated) (button_2) */
@@ -1208,19 +1208,19 @@ export type ButtonRecord_SeoMetaTagsArgs = {
 }
 
 export type ButtonThemeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<ButtonThemeModelFilter>>>
 }
 
@@ -1278,20 +1278,20 @@ export type ButtonThemeRecord_SeoMetaTagsArgs = {
 }
 
 export type CalloutItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  title?: Maybe<StringFilter>
-  image?: Maybe<FileFilter>
-  link?: Maybe<LinkFilter>
   description?: Maybe<TextFilter>
+  link?: Maybe<LinkFilter>
+  image?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CalloutItemModelFilter>>>
 }
 
@@ -1384,21 +1384,21 @@ export type CalloutRecordContentArgs = {
 }
 
 export type CalloutSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  companies?: Maybe<LinksFilter>
-  items?: Maybe<LinksFilter>
-  calloutImage?: Maybe<FileFilter>
-  description?: Maybe<TextFilter>
   headline?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  calloutImage?: Maybe<FileFilter>
+  items?: Maybe<LinksFilter>
+  companies?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<CalloutSectionModelFilter>>>
 }
 
@@ -1485,18 +1485,18 @@ export type CalloutsSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type CallToActionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  content?: Maybe<TextFilter>
   heading?: Maybe<StringFilter>
+  content?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<CallToActionModelFilter>>>
 }
 
@@ -1600,19 +1600,19 @@ export type CertificationPageRecordSignupFormIntroArgs = {
 }
 
 export type CloudPartnerPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
-  title?: Maybe<StringFilter>
   metadata?: Maybe<SeoFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
 }
 
@@ -1669,19 +1669,19 @@ export type CloudPartnerPageRecord_SeoMetaTagsArgs = {
 }
 
 export type CodeblockLanguageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<CodeblockLanguageModelFilter>>>
 }
 
@@ -1768,18 +1768,18 @@ export type CodeBlockRecordCodeArgs = {
 }
 
 export type CodeSampleModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  codeBlock?: Maybe<TextFilter>
   description?: Maybe<TextFilter>
+  codeBlock?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<CodeSampleModelFilter>>>
 }
 
@@ -1923,20 +1923,20 @@ export type CommunityLandingPageRecord_SeoMetaTagsArgs = {
 }
 
 export type CommunityOfficeHourModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  youtubeLink?: Maybe<StringFilter>
-  slidoLink?: Maybe<StringFilter>
-  dateTime?: Maybe<DateTimeFilter>
   name?: Maybe<StringFilter>
+  dateTime?: Maybe<DateTimeFilter>
+  slidoLink?: Maybe<StringFilter>
+  youtubeLink?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CommunityOfficeHourModelFilter>>>
 }
 
@@ -1961,14 +1961,14 @@ export enum CommunityOfficeHourModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  YoutubeLinkAsc = "youtubeLink_ASC",
-  YoutubeLinkDesc = "youtubeLink_DESC",
-  SlidoLinkAsc = "slidoLink_ASC",
-  SlidoLinkDesc = "slidoLink_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC",
   DateTimeAsc = "dateTime_ASC",
   DateTimeDesc = "dateTime_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  SlidoLinkAsc = "slidoLink_ASC",
+  SlidoLinkDesc = "slidoLink_DESC",
+  YoutubeLinkAsc = "youtubeLink_ASC",
+  YoutubeLinkDesc = "youtubeLink_DESC"
 }
 
 /** Record of type Community Office Hour (community_office_hour) */
@@ -1999,28 +1999,28 @@ export type CommunityOfficeHourRecord_SeoMetaTagsArgs = {
 }
 
 export type CompanyModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  integrationPage?: Maybe<LinkFilter>
-  companyType?: Maybe<StringFilter>
-  blogPostCategorys?: Maybe<LinkFilter>
-  link?: Maybe<StringFilter>
-  logo?: Maybe<FileFilter>
-  name?: Maybe<StringFilter>
-  slug?: Maybe<SlugFilter>
-  enableProductIntegrations?: Maybe<BooleanFilter>
-  description?: Maybe<TextFilter>
-  monochromeLogo?: Maybe<FileFilter>
-  productIntegrations?: Maybe<LinksFilter>
   whiteLogo?: Maybe<FileFilter>
+  productIntegrations?: Maybe<LinksFilter>
+  monochromeLogo?: Maybe<FileFilter>
+  description?: Maybe<TextFilter>
+  enableProductIntegrations?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  name?: Maybe<StringFilter>
+  logo?: Maybe<FileFilter>
+  link?: Maybe<StringFilter>
+  blogPostCategorys?: Maybe<LinkFilter>
+  companyType?: Maybe<StringFilter>
+  integrationPage?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<CompanyModelFilter>>>
 }
 
@@ -2045,14 +2045,14 @@ export enum CompanyModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  CompanyTypeAsc = "companyType_ASC",
-  CompanyTypeDesc = "companyType_DESC",
-  LinkAsc = "link_ASC",
-  LinkDesc = "link_DESC",
+  EnableProductIntegrationsAsc = "enableProductIntegrations_ASC",
+  EnableProductIntegrationsDesc = "enableProductIntegrations_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC",
-  EnableProductIntegrationsAsc = "enableProductIntegrations_ASC",
-  EnableProductIntegrationsDesc = "enableProductIntegrations_DESC"
+  LinkAsc = "link_ASC",
+  LinkDesc = "link_DESC",
+  CompanyTypeAsc = "companyType_ASC",
+  CompanyTypeDesc = "companyType_DESC"
 }
 
 /** Record of type Company (company) */
@@ -2139,19 +2139,19 @@ export type ConsulFieldDayLiveRecordSidebarBodyArgs = {
 }
 
 export type ConsulGraphicSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  mobileImage?: Maybe<FileFilter>
-  desktopImage?: Maybe<FileFilter>
   headline?: Maybe<StringFilter>
+  desktopImage?: Maybe<FileFilter>
+  mobileImage?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<ConsulGraphicSectionModelFilter>>>
 }
 
@@ -2245,21 +2245,21 @@ export type ConsulProductPageRecord_SeoMetaTagsArgs = {
 }
 
 export type ContactCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
-  formPage?: Maybe<LinkFilter>
-  image?: Maybe<FileFilter>
-  description?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  image?: Maybe<FileFilter>
+  formPage?: Maybe<LinkFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ContactCategoryModelFilter>>>
 }
 
@@ -2284,10 +2284,10 @@ export enum ContactCategoryModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type Contact Category (contact_category) */
@@ -2324,20 +2324,20 @@ export type ContactCategoryRecordDescriptionArgs = {
 }
 
 export type ContactFormPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  slug?: Maybe<SlugFilter>
-  description?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  slug?: Maybe<SlugFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<ContactFormPageModelFilter>>>
 }
 
@@ -2475,6 +2475,24 @@ export type ContentSectionRecordTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Specifies how to filter by creation datetime */
+export type CreatedAtFilter = {
+  /** Filter records with a value that's strictly greater than the one specified */
+  gt?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's less than the one specified */
+  lt?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's greater than or equal to than the one specified */
+  gte?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's less or equal than the one specified */
+  lte?: Maybe<Scalars["DateTime"]>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+  /** Search for records with an exact match (seconds are truncated) */
+  eq?: Maybe<Scalars["DateTime"]>
+  /** Exclude records with an exact match */
+  neq?: Maybe<Scalars["DateTime"]>
+}
+
 /** Record of type Customer (customer) */
 export type CustomerRecord = {
   __typename?: "CustomerRecord"
@@ -2537,18 +2555,18 @@ export type DateTimeFilter = {
 }
 
 export type DropdownLinkModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  links?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
+  links?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<DropdownLinkModelFilter>>>
 }
 
@@ -2695,22 +2713,22 @@ export type EcosystemLandingPageRecord_SeoMetaTagsArgs = {
 }
 
 export type EmbeddedPodcastSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  googlePlayMusicUrl?: Maybe<StringFilter>
-  soundcloudMainUrl?: Maybe<StringFilter>
-  itunesPodcastLink?: Maybe<StringFilter>
-  subscribeTitle?: Maybe<StringFilter>
-  soundcloudId?: Maybe<StringFilter>
   spotifyLink?: Maybe<StringFilter>
+  soundcloudId?: Maybe<StringFilter>
+  subscribeTitle?: Maybe<StringFilter>
+  itunesPodcastLink?: Maybe<StringFilter>
+  soundcloudMainUrl?: Maybe<StringFilter>
+  googlePlayMusicUrl?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EmbeddedPodcastSectionModelFilter>>>
 }
 
@@ -2735,18 +2753,18 @@ export enum EmbeddedPodcastSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  GooglePlayMusicUrlAsc = "googlePlayMusicUrl_ASC",
-  GooglePlayMusicUrlDesc = "googlePlayMusicUrl_DESC",
-  SoundcloudMainUrlAsc = "soundcloudMainUrl_ASC",
-  SoundcloudMainUrlDesc = "soundcloudMainUrl_DESC",
-  ItunesPodcastLinkAsc = "itunesPodcastLink_ASC",
-  ItunesPodcastLinkDesc = "itunesPodcastLink_DESC",
-  SubscribeTitleAsc = "subscribeTitle_ASC",
-  SubscribeTitleDesc = "subscribeTitle_DESC",
+  SpotifyLinkAsc = "spotifyLink_ASC",
+  SpotifyLinkDesc = "spotifyLink_DESC",
   SoundcloudIdAsc = "soundcloudId_ASC",
   SoundcloudIdDesc = "soundcloudId_DESC",
-  SpotifyLinkAsc = "spotifyLink_ASC",
-  SpotifyLinkDesc = "spotifyLink_DESC"
+  SubscribeTitleAsc = "subscribeTitle_ASC",
+  SubscribeTitleDesc = "subscribeTitle_DESC",
+  ItunesPodcastLinkAsc = "itunesPodcastLink_ASC",
+  ItunesPodcastLinkDesc = "itunesPodcastLink_DESC",
+  SoundcloudMainUrlAsc = "soundcloudMainUrl_ASC",
+  SoundcloudMainUrlDesc = "soundcloudMainUrl_DESC",
+  GooglePlayMusicUrlAsc = "googlePlayMusicUrl_ASC",
+  GooglePlayMusicUrlDesc = "googlePlayMusicUrl_DESC"
 }
 
 /** Record of type Embedded Audio Section (embedded_podcast_section) */
@@ -2779,15 +2797,15 @@ export type EmbeddedPodcastSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type EmbeddedSlidesSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   slideshareEmbedLink?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EmbeddedSlidesSectionModelFilter>>>
@@ -2870,21 +2888,21 @@ export type EmployeeNavLinkRecord_SeoMetaTagsArgs = {
 }
 
 export type EmployeePageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  content?: Maybe<LinksFilter>
-  miniHeroDescription?: Maybe<TextFilter>
-  miniHeroTitle?: Maybe<StringFilter>
-  hero?: Maybe<LinkFilter>
   internalTitle?: Maybe<StringFilter>
+  hero?: Maybe<LinkFilter>
+  miniHeroTitle?: Maybe<StringFilter>
+  miniHeroDescription?: Maybe<TextFilter>
+  content?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<EmployeePageModelFilter>>>
 }
 
@@ -2909,10 +2927,10 @@ export enum EmployeePageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  MiniHeroTitleAsc = "miniHeroTitle_ASC",
-  MiniHeroTitleDesc = "miniHeroTitle_DESC",
   InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC"
+  InternalTitleDesc = "internalTitle_DESC",
+  MiniHeroTitleAsc = "miniHeroTitle_ASC",
+  MiniHeroTitleDesc = "miniHeroTitle_DESC"
 }
 
 /** Record of type Employee Page (employee_page) */
@@ -2950,15 +2968,15 @@ export type EmployeePageRecordMiniHeroDescriptionArgs = {
 }
 
 export type EnterpriseFeaturesCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EnterpriseFeaturesCategoryModelFilter>>>
@@ -3015,18 +3033,18 @@ export type EnterpriseFeaturesCategoryRecord_SeoMetaTagsArgs = {
 }
 
 export type EnterprisePricingSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  packageOptions?: Maybe<LinksFilter>
   internalName?: Maybe<StringFilter>
+  packageOptions?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<EnterprisePricingSectionModelFilter>>>
 }
 
@@ -3087,29 +3105,29 @@ export type EnterpriseProductModelEnterpriseProductPageField =
   | NomadProductPageRecord
 
 export type EnterpriseProductModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  downloadUrl?: Maybe<StringFilter>
-  enterpriseProductPage?: Maybe<LinkFilter>
-  accentColor?: Maybe<ColorFilter>
-  subtitle?: Maybe<StringFilter>
-  logo?: Maybe<FileFilter>
-  logoDark?: Maybe<FileFilter>
-  slug?: Maybe<SlugFilter>
-  name?: Maybe<StringFilter>
-  siteUrl?: Maybe<StringFilter>
-  colorLogo?: Maybe<FileFilter>
-  description?: Maybe<TextFilter>
   githubUrl?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  colorLogo?: Maybe<FileFilter>
+  siteUrl?: Maybe<StringFilter>
+  name?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  logoDark?: Maybe<FileFilter>
+  logo?: Maybe<FileFilter>
+  subtitle?: Maybe<StringFilter>
+  accentColor?: Maybe<ColorFilter>
+  enterpriseProductPage?: Maybe<LinkFilter>
+  downloadUrl?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EnterpriseProductModelFilter>>>
 }
 
@@ -3136,41 +3154,41 @@ export enum EnterpriseProductModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DownloadUrlAsc = "downloadUrl_ASC",
-  DownloadUrlDesc = "downloadUrl_DESC",
-  SubtitleAsc = "subtitle_ASC",
-  SubtitleDesc = "subtitle_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC",
+  GithubUrlAsc = "githubUrl_ASC",
+  GithubUrlDesc = "githubUrl_DESC",
   SiteUrlAsc = "siteUrl_ASC",
   SiteUrlDesc = "siteUrl_DESC",
-  GithubUrlAsc = "githubUrl_ASC",
-  GithubUrlDesc = "githubUrl_DESC"
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC",
+  SubtitleAsc = "subtitle_ASC",
+  SubtitleDesc = "subtitle_DESC",
+  DownloadUrlAsc = "downloadUrl_ASC",
+  DownloadUrlDesc = "downloadUrl_DESC"
 }
 
 export type EnterpriseProductPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  subnav?: Maybe<LinkFilter>
-  product?: Maybe<LinkFilter>
-  name?: Maybe<StringFilter>
-  draft?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  faqsPreFooterCta?: Maybe<LinkFilter>
-  faqs?: Maybe<LinksFilter>
-  trialForm?: Maybe<LinkFilter>
-  useCasePages?: Maybe<LinksFilter>
-  pageContent?: Maybe<LinksFilter>
   alertBanner?: Maybe<LinkFilter>
+  pageContent?: Maybe<LinksFilter>
+  useCasePages?: Maybe<LinksFilter>
+  trialForm?: Maybe<LinkFilter>
+  faqs?: Maybe<LinksFilter>
+  faqsPreFooterCta?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
+  draft?: Maybe<BooleanFilter>
+  name?: Maybe<StringFilter>
+  product?: Maybe<LinkFilter>
+  subnav?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<EnterpriseProductPageModelFilter>>>
 }
 
@@ -3197,10 +3215,10 @@ export enum EnterpriseProductPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC",
   DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC"
+  DraftDesc = "draft_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 export type EnterpriseProductPageModelPageContentField =
@@ -3302,19 +3320,19 @@ export type EnterpriseProductSubnavModelEnterpriseLinksField =
   | UseCasePageDropdownRecord
 
 export type EnterpriseProductSubnavModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  links?: Maybe<LinksFilter>
-  productLinks?: Maybe<LinksFilter>
   enterpriseLinks?: Maybe<LinksFilter>
+  productLinks?: Maybe<LinksFilter>
+  links?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<EnterpriseProductSubnavModelFilter>>>
 }
 
@@ -3380,20 +3398,20 @@ export type EnterpriseProductUseCasePageModelContentField =
   | SectionBlockRecord
 
 export type EnterpriseProductUseCasePageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  content?: Maybe<LinksFilter>
-  slug?: Maybe<SlugFilter>
-  title?: Maybe<StringFilter>
   metadata?: Maybe<SeoFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  content?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<EnterpriseProductUseCasePageModelFilter>>>
 }
 
@@ -3483,22 +3501,22 @@ export type EventCtasItemRecordDescriptionArgs = {
 }
 
 export type EventModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
-  location?: Maybe<StringFilter>
-  image?: Maybe<FileFilter>
-  eventType?: Maybe<LinksFilter>
-  title?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
+  title?: Maybe<StringFilter>
+  eventType?: Maybe<LinksFilter>
+  image?: Maybe<FileFilter>
+  location?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EventModelFilter>>>
 }
 
@@ -3523,14 +3541,14 @@ export enum EventModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
-  LocationAsc = "location_ASC",
-  LocationDesc = "location_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC"
+  LocationAsc = "location_ASC",
+  LocationDesc = "location_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type Event (event) */
@@ -3599,19 +3617,19 @@ export type EventsPageRecordDescriptionArgs = {
 }
 
 export type EventTypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  plural?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  plural?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EventTypeModelFilter>>>
 }
 
@@ -3638,10 +3656,10 @@ export enum EventTypeModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  PluralAsc = "plural_ASC",
-  PluralDesc = "plural_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  PluralAsc = "plural_ASC",
+  PluralDesc = "plural_DESC"
 }
 
 /** Record of type Event Type (event_type) */
@@ -3735,15 +3753,15 @@ export type ExpandableTextWithPhotoRecordTextArgs = {
 }
 
 export type ExperienceLevelModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ExperienceLevelModelFilter>>>
@@ -3799,31 +3817,31 @@ export type ExperienceLevelRecord_SeoMetaTagsArgs = {
 }
 
 export type ExternalResourceModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  events?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  people?: Maybe<LinksFilter>
-  product?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
-  mediaType?: Maybe<LinkFilter>
-  image?: Maybe<FileFilter>
-  description?: Maybe<TextFilter>
-  draft?: Maybe<BooleanFilter>
-  title?: Maybe<StringFilter>
-  date?: Maybe<DateFilter>
-  industry?: Maybe<LinksFilter>
-  contentType?: Maybe<LinkFilter>
   link?: Maybe<StringFilter>
+  contentType?: Maybe<LinkFilter>
+  industry?: Maybe<LinksFilter>
+  date?: Maybe<DateFilter>
+  title?: Maybe<StringFilter>
+  draft?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
+  image?: Maybe<FileFilter>
+  mediaType?: Maybe<LinkFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  product?: Maybe<LinksFilter>
+  people?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  events?: Maybe<LinksFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<ExternalResourceModelFilter>>>
 }
 
@@ -3848,14 +3866,14 @@ export enum ExternalResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  LinkAsc = "link_ASC",
+  LinkDesc = "link_DESC",
   DateAsc = "date_ASC",
   DateDesc = "date_DESC",
-  LinkAsc = "link_ASC",
-  LinkDesc = "link_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC"
 }
 
 export type ExternalResourceModelProductField =
@@ -3906,15 +3924,15 @@ export type ExternalResourceRecordDescriptionArgs = {
 }
 
 export type FaqCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<FaqCategoryModelFilter>>>
@@ -4106,15 +4124,15 @@ export type FeatureRecordDescriptionArgs = {
 }
 
 export type FeatureTableColumnModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<FeatureTableColumnModelFilter>>>
@@ -4170,19 +4188,19 @@ export type FeatureTableColumnRecord_SeoMetaTagsArgs = {
 }
 
 export type FeatureTableModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  applyLink?: Maybe<LinkFilter>
-  tabs?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
+  tabs?: Maybe<LinksFilter>
+  applyLink?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<FeatureTableModelFilter>>>
 }
 
@@ -4238,19 +4256,19 @@ export type FeatureTableRecord_SeoMetaTagsArgs = {
 }
 
 export type FeatureTableRowModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  columnValues?: Maybe<LinksFilter>
-  tooltip?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
+  tooltip?: Maybe<TextFilter>
+  columnValues?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<FeatureTableRowModelFilter>>>
 }
 
@@ -4311,18 +4329,18 @@ export type FeatureTableRowRecordTooltipArgs = {
 }
 
 export type FeatureTableRowValueModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  description?: Maybe<StringFilter>
   column?: Maybe<LinkFilter>
+  description?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<FeatureTableRowValueModelFilter>>>
 }
 
@@ -4377,19 +4395,19 @@ export type FeatureTableRowValueRecord_SeoMetaTagsArgs = {
 }
 
 export type FeatureTableTabModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  rows?: Maybe<LinksFilter>
-  columns?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
+  columns?: Maybe<LinksFilter>
+  rows?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<FeatureTableTabModelFilter>>>
 }
 
@@ -4560,15 +4578,15 @@ export type FormCheckboxFieldRecord_SeoMetaTagsArgs = {
 }
 
 export type FormContactTypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   contactType?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<FormContactTypeModelFilter>>>
@@ -4709,18 +4727,18 @@ export type FormMultiSelectFieldRecord_SeoMetaTagsArgs = {
 }
 
 export type FormMultiSelectOptionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  name?: Maybe<StringFilter>
   label?: Maybe<StringFilter>
+  name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<FormMultiSelectOptionModelFilter>>>
 }
 
@@ -4745,10 +4763,10 @@ export enum FormMultiSelectOptionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC",
   LabelAsc = "label_ASC",
-  LabelDesc = "label_DESC"
+  LabelDesc = "label_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 /** Record of type Form Multi Select Option (form_multi_select_option) */
@@ -5029,23 +5047,23 @@ export type GuestBlogTextRecordTextArgs = {
 }
 
 export type HashiconfBasicPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  sidebarContent?: Maybe<TextFilter>
-  content?: Maybe<TextFilter>
-  leadInContent?: Maybe<TextFilter>
-  slug?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
   systemTitle?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<StringFilter>
+  leadInContent?: Maybe<TextFilter>
+  content?: Maybe<TextFilter>
+  sidebarContent?: Maybe<TextFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<HashiconfBasicPageModelFilter>>>
 }
 
@@ -5070,12 +5088,12 @@ export enum HashiconfBasicPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SlugAsc = "slug_ASC",
-  SlugDesc = "slug_DESC",
+  SystemTitleAsc = "systemTitle_ASC",
+  SystemTitleDesc = "systemTitle_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  SystemTitleAsc = "systemTitle_ASC",
-  SystemTitleDesc = "systemTitle_DESC"
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC"
 }
 
 /** Record of type HashiConf Basic Page (hashiconf_basic_page) */
@@ -5124,19 +5142,19 @@ export type HashiconfBasicPageRecordSidebarContentArgs = {
 }
 
 export type HashiconfFeaturedSpeakersSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  secondaryText?: Maybe<TextFilter>
-  speakers?: Maybe<LinksFilter>
   text?: Maybe<TextFilter>
+  speakers?: Maybe<LinksFilter>
+  secondaryText?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<HashiconfFeaturedSpeakersSectionModelFilter>>>
 }
 
@@ -5200,31 +5218,31 @@ export type HashiconfFeaturedSpeakersSectionRecordTextArgs = {
 }
 
 export type HashiconfLandingPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  aboutLink?: Maybe<LinkFilter>
-  aboutContent?: Maybe<TextFilter>
-  aboutHeading?: Maybe<StringFilter>
-  heroDescription?: Maybe<TextFilter>
-  nav?: Maybe<LinksFilter>
-  subPages?: Maybe<LinksFilter>
-  title?: Maybe<StringFilter>
-  aboutImage?: Maybe<FileFilter>
-  aboutImage1?: Maybe<FileFilter>
-  aboutImage2?: Maybe<FileFilter>
-  aboutImage3?: Maybe<FileFilter>
-  content?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
-  preFooterNav?: Maybe<LinksFilter>
   heroHelpText?: Maybe<StringFilter>
+  preFooterNav?: Maybe<LinksFilter>
+  metadata?: Maybe<SeoFilter>
+  content?: Maybe<LinksFilter>
+  aboutImage3?: Maybe<FileFilter>
+  aboutImage2?: Maybe<FileFilter>
+  aboutImage1?: Maybe<FileFilter>
+  aboutImage?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  subPages?: Maybe<LinksFilter>
+  nav?: Maybe<LinksFilter>
+  heroDescription?: Maybe<TextFilter>
+  aboutHeading?: Maybe<StringFilter>
+  aboutContent?: Maybe<TextFilter>
+  aboutLink?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<HashiconfLandingPageModelFilter>>>
 }
 
@@ -5249,12 +5267,12 @@ export enum HashiconfLandingPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  AboutHeadingAsc = "aboutHeading_ASC",
-  AboutHeadingDesc = "aboutHeading_DESC",
+  HeroHelpTextAsc = "heroHelpText_ASC",
+  HeroHelpTextDesc = "heroHelpText_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  HeroHelpTextAsc = "heroHelpText_ASC",
-  HeroHelpTextDesc = "heroHelpText_DESC"
+  AboutHeadingAsc = "aboutHeading_ASC",
+  AboutHeadingDesc = "aboutHeading_DESC"
 }
 
 export type HashiconfLandingPageModelSubPagesField =
@@ -5310,19 +5328,19 @@ export type HashiconfLandingPageRecordHeroDescriptionArgs = {
 }
 
 export type HashiconfLiveStreamPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  headlineContent?: Maybe<TextFilter>
-  metadata?: Maybe<SeoFilter>
   internalTitle?: Maybe<StringFilter>
+  metadata?: Maybe<SeoFilter>
+  headlineContent?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<HashiconfLiveStreamPageModelFilter>>>
 }
 
@@ -5383,35 +5401,35 @@ export type HashiconfLiveStreamPageRecordHeadlineContentArgs = {
 }
 
 export type HashiconfModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  trainingCalloutText?: Maybe<TextFilter>
-  trainingCalloutButtons?: Maybe<LinksFilter>
-  landingPage?: Maybe<LinkFilter>
-  title?: Maybe<StringFilter>
-  scheduleItems?: Maybe<LinksFilter>
-  speakersPage?: Maybe<LinkFilter>
-  schedulePage?: Maybe<LinkFilter>
-  employeePage?: Maybe<LinkFilter>
-  twitterHandle?: Maybe<StringFilter>
-  trainingDayPage?: Maybe<LinkFilter>
-  landing2020Page?: Maybe<LinkFilter>
-  location?: Maybe<StringFilter>
-  buyTicketsLink?: Maybe<LinkFilter>
-  liveStreamPage?: Maybe<LinkFilter>
-  dates?: Maybe<StringFilter>
-  logoWhite?: Maybe<FileFilter>
-  logo?: Maybe<FileFilter>
   twitterHashtag?: Maybe<StringFilter>
+  logo?: Maybe<FileFilter>
+  logoWhite?: Maybe<FileFilter>
+  dates?: Maybe<StringFilter>
+  liveStreamPage?: Maybe<LinkFilter>
+  buyTicketsLink?: Maybe<LinkFilter>
+  location?: Maybe<StringFilter>
+  landing2020Page?: Maybe<LinkFilter>
+  trainingDayPage?: Maybe<LinkFilter>
+  twitterHandle?: Maybe<StringFilter>
+  employeePage?: Maybe<LinkFilter>
+  schedulePage?: Maybe<LinkFilter>
+  speakersPage?: Maybe<LinkFilter>
+  scheduleItems?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
+  landingPage?: Maybe<LinkFilter>
+  trainingCalloutButtons?: Maybe<LinksFilter>
+  trainingCalloutText?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<HashiconfModelFilter>>>
 }
 
@@ -5438,16 +5456,16 @@ export enum HashiconfModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
-  TwitterHandleAsc = "twitterHandle_ASC",
-  TwitterHandleDesc = "twitterHandle_DESC",
-  LocationAsc = "location_ASC",
-  LocationDesc = "location_DESC",
+  TwitterHashtagAsc = "twitterHashtag_ASC",
+  TwitterHashtagDesc = "twitterHashtag_DESC",
   DatesAsc = "dates_ASC",
   DatesDesc = "dates_DESC",
-  TwitterHashtagAsc = "twitterHashtag_ASC",
-  TwitterHashtagDesc = "twitterHashtag_DESC"
+  LocationAsc = "location_ASC",
+  LocationDesc = "location_DESC",
+  TwitterHandleAsc = "twitterHandle_ASC",
+  TwitterHandleDesc = "twitterHandle_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 export type HashiconfModelScheduleItemsField =
@@ -5502,18 +5520,18 @@ export type HashiconfRecordTrainingCalloutTextArgs = {
 }
 
 export type HashiconfScheduleDayModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  date?: Maybe<DateFilter>
   internalTitle?: Maybe<StringFilter>
+  date?: Maybe<DateFilter>
   OR?: Maybe<Array<Maybe<HashiconfScheduleDayModelFilter>>>
 }
 
@@ -5538,10 +5556,10 @@ export enum HashiconfScheduleDayModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC",
   InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC"
+  InternalTitleDesc = "internalTitle_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC"
 }
 
 /** Record of type HashiConf Schedule Day (hashiconf_schedule_day) */
@@ -5609,21 +5627,21 @@ export type HashiconfScheduleEventRecordDescriptionArgs = {
 }
 
 export type HashiconfScheduleItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  note?: Maybe<TextFilter>
-  description?: Maybe<TextFilter>
-  location?: Maybe<StringFilter>
-  time?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  time?: Maybe<StringFilter>
+  location?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  note?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<HashiconfScheduleItemModelFilter>>>
 }
 
@@ -5648,12 +5666,12 @@ export enum HashiconfScheduleItemModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  LocationAsc = "location_ASC",
-  LocationDesc = "location_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   TimeAsc = "time_ASC",
   TimeDesc = "time_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  LocationAsc = "location_ASC",
+  LocationDesc = "location_DESC"
 }
 
 /** Record of type HashiConf Schedule Item (hashiconf_schedule_item) */
@@ -5695,15 +5713,15 @@ export type HashiconfScheduleItemRecordNoteArgs = {
 }
 
 export type HashiconfScheduleLiteSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   internalName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HashiconfScheduleLiteSectionModelFilter>>>
@@ -5760,19 +5778,19 @@ export type HashiconfScheduleLiteSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type HashiconfSchedulePageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  days?: Maybe<LinksFilter>
-  header?: Maybe<LinkFilter>
   internalTitle?: Maybe<StringFilter>
+  header?: Maybe<LinkFilter>
+  days?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HashiconfSchedulePageModelFilter>>>
 }
 
@@ -5840,20 +5858,20 @@ export type HashiconfSectionBlockModelContentField =
   | HashiconfScheduleLiteSectionRecord
 
 export type HashiconfSectionBlockModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  content?: Maybe<LinksFilter>
-  sid?: Maybe<StringFilter>
-  name?: Maybe<StringFilter>
   theme?: Maybe<StringFilter>
+  name?: Maybe<StringFilter>
+  sid?: Maybe<StringFilter>
+  content?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HashiconfSectionBlockModelFilter>>>
 }
 
@@ -5878,29 +5896,29 @@ export enum HashiconfSectionBlockModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SidAsc = "sid_ASC",
-  SidDesc = "sid_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC"
+  SidAsc = "sid_ASC",
+  SidDesc = "sid_DESC"
 }
 
 export type HashiconfSectionBlockPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  content?: Maybe<LinksFilter>
-  slug?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  slug?: Maybe<StringFilter>
+  content?: Maybe<LinksFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<HashiconfSectionBlockPageModelFilter>>>
 }
 
@@ -5925,10 +5943,10 @@ export enum HashiconfSectionBlockPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SlugAsc = "slug_ASC",
-  SlugDesc = "slug_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC"
 }
 
 /** Record of type HashiConf Section Block Page (hashiconf_section_block_page) */
@@ -5986,32 +6004,32 @@ export type HashiconfSectionBlockRecord_SeoMetaTagsArgs = {
 }
 
 export type HashiconfSessionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  experienceLevels?: Maybe<LinksFilter>
-  productTypes?: Maybe<LinksFilter>
-  products?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
-  content?: Maybe<TextFilter>
-  trainer?: Maybe<StringFilter>
-  room?: Maybe<LinkFilter>
-  endTime?: Maybe<StringFilter>
-  startTime?: Maybe<StringFilter>
-  date?: Maybe<DateFilter>
-  location?: Maybe<StringFilter>
-  slug?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  internalTitle?: Maybe<StringFilter>
-  venue?: Maybe<LinkFilter>
   speakers?: Maybe<LinksFilter>
+  venue?: Maybe<LinkFilter>
+  internalTitle?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<StringFilter>
+  location?: Maybe<StringFilter>
+  date?: Maybe<DateFilter>
+  startTime?: Maybe<StringFilter>
+  endTime?: Maybe<StringFilter>
+  room?: Maybe<LinkFilter>
+  trainer?: Maybe<StringFilter>
+  content?: Maybe<TextFilter>
+  metadata?: Maybe<SeoFilter>
+  products?: Maybe<LinksFilter>
+  productTypes?: Maybe<LinksFilter>
+  experienceLevels?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HashiconfSessionModelFilter>>>
 }
 
@@ -6036,22 +6054,22 @@ export enum HashiconfSessionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TrainerAsc = "trainer_ASC",
-  TrainerDesc = "trainer_DESC",
-  EndTimeAsc = "endTime_ASC",
-  EndTimeDesc = "endTime_DESC",
-  StartTimeAsc = "startTime_ASC",
-  StartTimeDesc = "startTime_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC",
-  LocationAsc = "location_ASC",
-  LocationDesc = "location_DESC",
-  SlugAsc = "slug_ASC",
-  SlugDesc = "slug_DESC",
+  InternalTitleAsc = "internalTitle_ASC",
+  InternalTitleDesc = "internalTitle_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC"
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC",
+  LocationAsc = "location_ASC",
+  LocationDesc = "location_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
+  StartTimeAsc = "startTime_ASC",
+  StartTimeDesc = "startTime_DESC",
+  EndTimeAsc = "endTime_ASC",
+  EndTimeDesc = "endTime_DESC",
+  TrainerAsc = "trainer_ASC",
+  TrainerDesc = "trainer_DESC"
 }
 
 /** Record of type HashiConf Session (hashiconf_session) */
@@ -6099,28 +6117,28 @@ export type HashiconfSessionRecordContentArgs = {
 }
 
 export type HashiconfSpeakerModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  twitter?: Maybe<StringFilter>
-  linkedin?: Maybe<StringFilter>
-  github?: Maybe<StringFilter>
-  bio?: Maybe<TextFilter>
-  jobTitle?: Maybe<StringFilter>
-  organization?: Maybe<StringFilter>
-  portraitEu?: Maybe<FileFilter>
-  portrait?: Maybe<FileFilter>
-  slug?: Maybe<StringFilter>
-  nameTest?: Maybe<StringFilter>
   name?: Maybe<StringFilter>
+  nameTest?: Maybe<StringFilter>
+  slug?: Maybe<StringFilter>
+  portrait?: Maybe<FileFilter>
+  portraitEu?: Maybe<FileFilter>
+  organization?: Maybe<StringFilter>
+  jobTitle?: Maybe<StringFilter>
+  bio?: Maybe<TextFilter>
+  github?: Maybe<StringFilter>
+  linkedin?: Maybe<StringFilter>
+  twitter?: Maybe<StringFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<HashiconfSpeakerModelFilter>>>
 }
 
@@ -6145,22 +6163,22 @@ export enum HashiconfSpeakerModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TwitterAsc = "twitter_ASC",
-  TwitterDesc = "twitter_DESC",
-  LinkedinAsc = "linkedin_ASC",
-  LinkedinDesc = "linkedin_DESC",
-  GithubAsc = "github_ASC",
-  GithubDesc = "github_DESC",
-  JobTitleAsc = "jobTitle_ASC",
-  JobTitleDesc = "jobTitle_DESC",
-  OrganizationAsc = "organization_ASC",
-  OrganizationDesc = "organization_DESC",
-  SlugAsc = "slug_ASC",
-  SlugDesc = "slug_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC",
   NameTestAsc = "nameTest_ASC",
   NameTestDesc = "nameTest_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC",
+  OrganizationAsc = "organization_ASC",
+  OrganizationDesc = "organization_DESC",
+  JobTitleAsc = "jobTitle_ASC",
+  JobTitleDesc = "jobTitle_DESC",
+  GithubAsc = "github_ASC",
+  GithubDesc = "github_DESC",
+  LinkedinAsc = "linkedin_ASC",
+  LinkedinDesc = "linkedin_DESC",
+  TwitterAsc = "twitter_ASC",
+  TwitterDesc = "twitter_DESC"
 }
 
 /** Record of type HashiConf Speaker (hashiconf_speaker) */
@@ -6204,19 +6222,19 @@ export type HashiconfSpeakerRecordBioArgs = {
 }
 
 export type HashiconfSpeakersPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  speakers?: Maybe<LinkFilter>
   internalTitle?: Maybe<StringFilter>
+  speakers?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<HashiconfSpeakersPageModelFilter>>>
 }
 
@@ -6272,21 +6290,21 @@ export type HashiconfSpeakersPageRecord_SeoMetaTagsArgs = {
 }
 
 export type HashiconfSponsorSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  buttons?: Maybe<LinksFilter>
-  secondaryText?: Maybe<TextFilter>
-  sponsors?: Maybe<LinksFilter>
-  platinumSponsors?: Maybe<LinksFilter>
   text?: Maybe<TextFilter>
+  platinumSponsors?: Maybe<LinksFilter>
+  sponsors?: Maybe<LinksFilter>
+  secondaryText?: Maybe<TextFilter>
+  buttons?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HashiconfSponsorSectionModelFilter>>>
 }
 
@@ -6352,20 +6370,20 @@ export type HashiconfSponsorSectionRecordTextArgs = {
 }
 
 export type HashiconfTextAndFullImageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  image?: Maybe<FileFilter>
-  buttons?: Maybe<LinksFilter>
-  text?: Maybe<TextFilter>
   reverseDirection?: Maybe<BooleanFilter>
+  text?: Maybe<TextFilter>
+  buttons?: Maybe<LinksFilter>
+  image?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<HashiconfTextAndFullImageModelFilter>>>
 }
 
@@ -6427,22 +6445,22 @@ export type HashiconfTextAndFullImageRecordTextArgs = {
 }
 
 export type HashiconfTrainingDayModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  title?: Maybe<StringFilter>
-  trainings?: Maybe<LinksFilter>
-  heroImage?: Maybe<FileFilter>
-  slug?: Maybe<SlugFilter>
-  headline?: Maybe<TextFilter>
   internalTitle?: Maybe<StringFilter>
+  headline?: Maybe<TextFilter>
+  slug?: Maybe<SlugFilter>
+  heroImage?: Maybe<FileFilter>
+  trainings?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HashiconfTrainingDayModelFilter>>>
 }
 
@@ -6467,10 +6485,10 @@ export enum HashiconfTrainingDayModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
   InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC"
+  InternalTitleDesc = "internalTitle_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type HashiConf Training Day Page (hashiconf_training_day) */
@@ -6508,34 +6526,34 @@ export type HashiconfTrainingDayRecordHeadlineArgs = {
 }
 
 export type HashiconfTrainingModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  trainer?: Maybe<StringFilter>
-  endTime?: Maybe<StringFilter>
-  slug?: Maybe<StringFilter>
-  shortDescription?: Maybe<StringFilter>
-  content?: Maybe<TextFilter>
-  startTime?: Maybe<StringFilter>
-  location?: Maybe<StringFilter>
-  internalTitle?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  productLogo?: Maybe<FileFilter>
   metadata?: Maybe<SeoFilter>
-  venue?: Maybe<LinkFilter>
-  room?: Maybe<LinkFilter>
-  speakers?: Maybe<LinksFilter>
-  products?: Maybe<LinksFilter>
-  productTypes?: Maybe<LinksFilter>
-  experienceLevels?: Maybe<LinksFilter>
   date?: Maybe<DateFilter>
+  experienceLevels?: Maybe<LinksFilter>
+  productTypes?: Maybe<LinksFilter>
+  products?: Maybe<LinksFilter>
+  speakers?: Maybe<LinksFilter>
+  room?: Maybe<LinkFilter>
+  venue?: Maybe<LinkFilter>
+  productLogo?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  internalTitle?: Maybe<StringFilter>
+  location?: Maybe<StringFilter>
+  startTime?: Maybe<StringFilter>
+  content?: Maybe<TextFilter>
+  shortDescription?: Maybe<StringFilter>
+  slug?: Maybe<StringFilter>
+  endTime?: Maybe<StringFilter>
+  trainer?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HashiconfTrainingModelFilter>>>
 }
 
@@ -6560,24 +6578,24 @@ export enum HashiconfTrainingModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TrainerAsc = "trainer_ASC",
-  TrainerDesc = "trainer_DESC",
-  EndTimeAsc = "endTime_ASC",
-  EndTimeDesc = "endTime_DESC",
-  SlugAsc = "slug_ASC",
-  SlugDesc = "slug_DESC",
-  ShortDescriptionAsc = "shortDescription_ASC",
-  ShortDescriptionDesc = "shortDescription_DESC",
-  StartTimeAsc = "startTime_ASC",
-  StartTimeDesc = "startTime_DESC",
-  LocationAsc = "location_ASC",
-  LocationDesc = "location_DESC",
-  InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC"
+  InternalTitleAsc = "internalTitle_ASC",
+  InternalTitleDesc = "internalTitle_DESC",
+  LocationAsc = "location_ASC",
+  LocationDesc = "location_DESC",
+  StartTimeAsc = "startTime_ASC",
+  StartTimeDesc = "startTime_DESC",
+  ShortDescriptionAsc = "shortDescription_ASC",
+  ShortDescriptionDesc = "shortDescription_DESC",
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC",
+  EndTimeAsc = "endTime_ASC",
+  EndTimeDesc = "endTime_DESC",
+  TrainerAsc = "trainer_ASC",
+  TrainerDesc = "trainer_DESC"
 }
 
 /** Record of type HashiConf Training (hashiconf_training) */
@@ -6627,15 +6645,15 @@ export type HashiconfTrainingRecordContentArgs = {
 }
 
 export type HashicorpProductModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   product?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HashicorpProductModelFilter>>>
@@ -6691,18 +6709,18 @@ export type HashicorpProductRecord_SeoMetaTagsArgs = {
 }
 
 export type HeroFormLeadModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  buttonText?: Maybe<StringFilter>
   destinationUrl?: Maybe<StringFilter>
+  buttonText?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HeroFormLeadModelFilter>>>
 }
 
@@ -6727,10 +6745,10 @@ export enum HeroFormLeadModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ButtonTextAsc = "buttonText_ASC",
-  ButtonTextDesc = "buttonText_DESC",
   DestinationUrlAsc = "destinationUrl_ASC",
-  DestinationUrlDesc = "destinationUrl_DESC"
+  DestinationUrlDesc = "destinationUrl_DESC",
+  ButtonTextAsc = "buttonText_ASC",
+  ButtonTextDesc = "buttonText_DESC"
 }
 
 /** Record of type Hero Form Lead (hero_form_lead) */
@@ -6798,31 +6816,31 @@ export type HeroRecordHelpTextArgs = {
 }
 
 export type HeroSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  videos?: Maybe<LinksFilter>
-  image?: Maybe<FileFilter>
-  formLeadInput?: Maybe<LinkFilter>
-  buttons?: Maybe<LinksFilter>
-  titleLogo?: Maybe<FileFilter>
-  smallTextTag?: Maybe<StringFilter>
-  alert?: Maybe<LinkFilter>
-  backgroundTheme?: Maybe<StringFilter>
-  theme?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  conditionalTesting?: Maybe<BooleanFilter>
-  helpText?: Maybe<TextFilter>
-  backgroundImage?: Maybe<FileFilter>
-  description?: Maybe<TextFilter>
   centered?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
+  backgroundImage?: Maybe<FileFilter>
+  helpText?: Maybe<TextFilter>
+  conditionalTesting?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  theme?: Maybe<StringFilter>
+  backgroundTheme?: Maybe<StringFilter>
+  alert?: Maybe<LinkFilter>
+  smallTextTag?: Maybe<StringFilter>
+  titleLogo?: Maybe<FileFilter>
+  buttons?: Maybe<LinksFilter>
+  formLeadInput?: Maybe<LinkFilter>
+  image?: Maybe<FileFilter>
+  videos?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HeroSectionModelFilter>>>
 }
 
@@ -6847,18 +6865,18 @@ export enum HeroSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SmallTextTagAsc = "smallTextTag_ASC",
-  SmallTextTagDesc = "smallTextTag_DESC",
-  BackgroundThemeAsc = "backgroundTheme_ASC",
-  BackgroundThemeDesc = "backgroundTheme_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  CenteredAsc = "centered_ASC",
+  CenteredDesc = "centered_DESC",
   ConditionalTestingAsc = "conditionalTesting_ASC",
   ConditionalTestingDesc = "conditionalTesting_DESC",
-  CenteredAsc = "centered_ASC",
-  CenteredDesc = "centered_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
+  BackgroundThemeAsc = "backgroundTheme_ASC",
+  BackgroundThemeDesc = "backgroundTheme_DESC",
+  SmallTextTagAsc = "smallTextTag_ASC",
+  SmallTextTagDesc = "smallTextTag_DESC"
 }
 
 /** Record of type Hero Section (hero_section) */
@@ -6910,19 +6928,19 @@ export type HeroSectionRecordHelpTextArgs = {
 }
 
 export type HeroVideoCarouselItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  src?: Maybe<LinksFilter>
-  playbackRate?: Maybe<FloatFilter>
   name?: Maybe<StringFilter>
+  playbackRate?: Maybe<FloatFilter>
+  src?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HeroVideoCarouselItemModelFilter>>>
 }
 
@@ -6947,10 +6965,10 @@ export enum HeroVideoCarouselItemModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  PlaybackRateAsc = "playbackRate_ASC",
-  PlaybackRateDesc = "playbackRate_DESC",
   NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  NameDesc = "name_DESC",
+  PlaybackRateAsc = "playbackRate_ASC",
+  PlaybackRateDesc = "playbackRate_DESC"
 }
 
 /** Record of type Hero Video Carousel Item (hero_video_carousel_item) */
@@ -6980,22 +6998,22 @@ export type HeroVideoCarouselItemRecord_SeoMetaTagsArgs = {
 }
 
 export type HomepageProductTabModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  features?: Maybe<LinksFilter>
-  buttonText?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
-  badge?: Maybe<FileFilter>
-  product?: Maybe<LinkFilter>
   headline?: Maybe<StringFilter>
+  product?: Maybe<LinkFilter>
+  badge?: Maybe<FileFilter>
+  description?: Maybe<TextFilter>
+  buttonText?: Maybe<StringFilter>
+  features?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<HomepageProductTabModelFilter>>>
 }
 
@@ -7020,10 +7038,10 @@ export enum HomepageProductTabModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ButtonTextAsc = "buttonText_ASC",
-  ButtonTextDesc = "buttonText_DESC",
   HeadlineAsc = "headline_ASC",
-  HeadlineDesc = "headline_DESC"
+  HeadlineDesc = "headline_DESC",
+  ButtonTextAsc = "buttonText_ASC",
+  ButtonTextDesc = "buttonText_DESC"
 }
 
 /** Record of type Homepage Product Tab (homepage_product_tab) */
@@ -7100,15 +7118,15 @@ export type HomePageRecord_SeoMetaTagsArgs = {
 }
 
 export type HtmlSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   html?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<HtmlSectionModelFilter>>>
@@ -7167,21 +7185,21 @@ export type HtmlSectionRecordHtmlArgs = {
 }
 
 export type IconLinkModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  lightIcon?: Maybe<FileFilter>
-  icon?: Maybe<FileFilter>
-  title?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
   external?: Maybe<BooleanFilter>
+  url?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  icon?: Maybe<FileFilter>
+  lightIcon?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<IconLinkModelFilter>>>
 }
 
@@ -7206,12 +7224,12 @@ export enum IconLinkModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  ExternalAsc = "external_ASC",
+  ExternalDesc = "external_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
-  ExternalAsc = "external_ASC",
-  ExternalDesc = "external_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Icon Link (icon_link) */
@@ -7243,20 +7261,20 @@ export type IconLinkRecord_SeoMetaTagsArgs = {
 }
 
 export type ImageLockupModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  cta?: Maybe<LinkFilter>
-  image?: Maybe<FileFilter>
-  title?: Maybe<StringFilter>
   body?: Maybe<TextFilter>
+  title?: Maybe<StringFilter>
+  image?: Maybe<FileFilter>
+  cta?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<ImageLockupModelFilter>>>
 }
 
@@ -7343,20 +7361,20 @@ export type ImageRecord_SeoMetaTagsArgs = {
 }
 
 export type ImageSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  caption?: Maybe<TextFilter>
-  fullPageWidth?: Maybe<BooleanFilter>
-  image?: Maybe<FileFilter>
   alignment?: Maybe<StringFilter>
+  image?: Maybe<FileFilter>
+  fullPageWidth?: Maybe<BooleanFilter>
+  caption?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<ImageSectionModelFilter>>>
 }
 
@@ -7381,10 +7399,10 @@ export enum ImageSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  FullPageWidthAsc = "fullPageWidth_ASC",
-  FullPageWidthDesc = "fullPageWidth_DESC",
   AlignmentAsc = "alignment_ASC",
-  AlignmentDesc = "alignment_DESC"
+  AlignmentDesc = "alignment_DESC",
+  FullPageWidthAsc = "fullPageWidth_ASC",
+  FullPageWidthDesc = "fullPageWidth_DESC"
 }
 
 /** Record of type Image Section (image_section) */
@@ -7453,15 +7471,15 @@ export type ImageTextCarouselItemRecordDescriptionArgs = {
 }
 
 export type ImageTextCarouselModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<ImageTextCarouselModelFilter>>>
 }
@@ -8787,20 +8805,20 @@ export type IntegrationsPageRecordDescriptionArgs = {
 }
 
 export type IntegrationTypeCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  product?: Maybe<LinkFilter>
-  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  product?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<IntegrationTypeCategoryModelFilter>>>
 }
 
@@ -8859,20 +8877,20 @@ export type IntegrationTypeCategoryRecord_SeoMetaTagsArgs = {
 }
 
 export type IntegrationTypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
-  category?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
+  category?: Maybe<LinkFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<IntegrationTypeModelFilter>>>
 }
 
@@ -8987,18 +9005,18 @@ export enum ItemStatus {
 }
 
 export type JobsEmployeeTestimonialModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  person?: Maybe<LinkFilter>
   testimonial?: Maybe<TextFilter>
+  person?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelFilter>>>
 }
 
@@ -9056,23 +9074,23 @@ export type JobsEmployeeTestimonialRecordTestimonialArgs = {
 }
 
 export type JobsPageDepartmentModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  mission?: Maybe<TextFilter>
-  backgroundImage?: Maybe<FileFilter>
-  greenhouseId?: Maybe<IntegerFilter>
-  description?: Maybe<TextFilter>
-  testimonials?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
+  testimonials?: Maybe<LinksFilter>
+  description?: Maybe<TextFilter>
+  greenhouseId?: Maybe<IntegerFilter>
+  backgroundImage?: Maybe<FileFilter>
+  mission?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<JobsPageDepartmentModelFilter>>>
 }
 
@@ -9099,10 +9117,10 @@ export enum JobsPageDepartmentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  GreenhouseIdAsc = "greenhouseId_ASC",
-  GreenhouseIdDesc = "greenhouseId_DESC",
   NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  NameDesc = "name_DESC",
+  GreenhouseIdAsc = "greenhouseId_ASC",
+  GreenhouseIdDesc = "greenhouseId_DESC"
 }
 
 /** Record of type Jobs Page: Department (jobs_page_department) */
@@ -9184,19 +9202,19 @@ export type JsonFilter = {
 }
 
 export type LargeLogoGridSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  companies?: Maybe<LinksFilter>
-  description?: Maybe<TextFilter>
   headline?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  companies?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<LargeLogoGridSectionModelFilter>>>
 }
 
@@ -9329,20 +9347,20 @@ export type LinkFilter = {
 }
 
 export type LinkModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  external?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  external?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<LinkModelFilter>>>
 }
 
@@ -9369,12 +9387,12 @@ export enum LinkModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ExternalAsc = "external_ASC",
-  ExternalDesc = "external_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  ExternalAsc = "external_ASC",
+  ExternalDesc = "external_DESC"
 }
 
 /** Record of type Link (link) */
@@ -9419,15 +9437,15 @@ export type LinksFilter = {
 }
 
 export type ListItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   content?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ListItemModelFilter>>>
@@ -9483,18 +9501,18 @@ export type ListItemRecord_SeoMetaTagsArgs = {
 }
 
 export type LocalPageMetadataSetModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  pageTitle?: Maybe<StringFilter>
   metatags?: Maybe<SeoFilter>
+  pageTitle?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<LocalPageMetadataSetModelFilter>>>
 }
 
@@ -9549,15 +9567,15 @@ export type LocalPageMetadataSetRecord_SeoMetaTagsArgs = {
 }
 
 export type LocationRoomModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<LocationRoomModelFilter>>>
@@ -9613,15 +9631,15 @@ export type LocationRoomRecord_SeoMetaTagsArgs = {
 }
 
 export type LocationVenueModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<LocationVenueModelFilter>>>
@@ -9702,19 +9720,19 @@ export type LogoGridRecord_SeoMetaTagsArgs = {
 }
 
 export type MajorHeadlineSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  displayType?: Maybe<StringFilter>
-  slug?: Maybe<SlugFilter>
   headline?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  displayType?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<MajorHeadlineSectionModelFilter>>>
 }
 
@@ -9739,10 +9757,10 @@ export enum MajorHeadlineSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DisplayTypeAsc = "displayType_ASC",
-  DisplayTypeDesc = "displayType_DESC",
   HeadlineAsc = "headline_ASC",
-  HeadlineDesc = "headline_DESC"
+  HeadlineDesc = "headline_DESC",
+  DisplayTypeAsc = "displayType_ASC",
+  DisplayTypeDesc = "displayType_DESC"
 }
 
 /** Record of type Major Headline Section (major_headline_section) */
@@ -9805,15 +9823,15 @@ export type MegaNavRecord_SeoMetaTagsArgs = {
 }
 
 export type MiniCalloutModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   item?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<MiniCalloutModelFilter>>>
@@ -9897,19 +9915,19 @@ export enum MuxThumbnailFormatType {
 }
 
 export type NavCalloutModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  button?: Maybe<LinkFilter>
-  headline?: Maybe<StringFilter>
   body?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
+  button?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<NavCalloutModelFilter>>>
 }
 
@@ -9970,26 +9988,26 @@ export type NavCalloutRecordBodyArgs = {
 }
 
 export type NavPromoModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  link?: Maybe<LinkFilter>
-  description?: Maybe<TextFilter>
-  showCalloutPlayIcon?: Maybe<BooleanFilter>
-  primaryLink?: Maybe<LinkFilter>
-  theme?: Maybe<StringFilter>
-  secondaryLink?: Maybe<LinkFilter>
-  eyebrow?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  image?: Maybe<FileFilter>
   layout?: Maybe<StringFilter>
+  image?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  eyebrow?: Maybe<StringFilter>
+  secondaryLink?: Maybe<LinkFilter>
+  theme?: Maybe<StringFilter>
+  primaryLink?: Maybe<LinkFilter>
+  showCalloutPlayIcon?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
+  link?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<NavPromoModelFilter>>>
 }
 
@@ -10014,16 +10032,16 @@ export enum NavPromoModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ShowCalloutPlayIconAsc = "showCalloutPlayIcon_ASC",
-  ShowCalloutPlayIconDesc = "showCalloutPlayIcon_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
-  EyebrowAsc = "eyebrow_ASC",
-  EyebrowDesc = "eyebrow_DESC",
+  LayoutAsc = "layout_ASC",
+  LayoutDesc = "layout_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  LayoutAsc = "layout_ASC",
-  LayoutDesc = "layout_DESC"
+  EyebrowAsc = "eyebrow_ASC",
+  EyebrowDesc = "eyebrow_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
+  ShowCalloutPlayIconAsc = "showCalloutPlayIcon_ASC",
+  ShowCalloutPlayIconDesc = "showCalloutPlayIcon_DESC"
 }
 
 /** Record of type Nav Promo (nav_promo) */
@@ -10094,21 +10112,21 @@ export type NavRecord_SeoMetaTagsArgs = {
 }
 
 export type NewsItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  callout?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  external?: Maybe<BooleanFilter>
   eyebrow?: Maybe<StringFilter>
+  external?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  callout?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<NewsItemModelFilter>>>
 }
 
@@ -10133,16 +10151,16 @@ export enum NewsItemModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  CalloutAsc = "callout_ASC",
-  CalloutDesc = "callout_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  EyebrowAsc = "eyebrow_ASC",
+  EyebrowDesc = "eyebrow_DESC",
   ExternalAsc = "external_ASC",
   ExternalDesc = "external_DESC",
-  EyebrowAsc = "eyebrow_ASC",
-  EyebrowDesc = "eyebrow_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
+  CalloutAsc = "callout_ASC",
+  CalloutDesc = "callout_DESC"
 }
 
 /** Record of type News Item (news_item) */
@@ -10240,21 +10258,21 @@ export type NomadProductPageRecord_SeoMetaTagsArgs = {
 }
 
 export type OfficeHoursSessionCopy1ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  description?: Maybe<TextFilter>
-  meetingLink?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  endTime?: Maybe<DateTimeFilter>
   startTime?: Maybe<DateTimeFilter>
+  endTime?: Maybe<DateTimeFilter>
+  title?: Maybe<StringFilter>
+  meetingLink?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<OfficeHoursSessionCopy1ModelFilter>>>
 }
 
@@ -10279,14 +10297,14 @@ export enum OfficeHoursSessionCopy1ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  MeetingLinkAsc = "meetingLink_ASC",
-  MeetingLinkDesc = "meetingLink_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  StartTimeAsc = "startTime_ASC",
+  StartTimeDesc = "startTime_DESC",
   EndTimeAsc = "endTime_ASC",
   EndTimeDesc = "endTime_DESC",
-  StartTimeAsc = "startTime_ASC",
-  StartTimeDesc = "startTime_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  MeetingLinkAsc = "meetingLink_ASC",
+  MeetingLinkDesc = "meetingLink_DESC"
 }
 
 /** Record of type Office Hours (copy #1) (office_hours_session_copy_1) */
@@ -10323,21 +10341,21 @@ export type OfficeHoursSessionCopy1RecordDescriptionArgs = {
 }
 
 export type OfficeHoursSessionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  endTime?: Maybe<DateTimeFilter>
-  description?: Maybe<TextFilter>
-  meetingLink?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
   startTime?: Maybe<DateTimeFilter>
+  title?: Maybe<StringFilter>
+  meetingLink?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  endTime?: Maybe<DateTimeFilter>
   OR?: Maybe<Array<Maybe<OfficeHoursSessionModelFilter>>>
 }
 
@@ -10362,14 +10380,14 @@ export enum OfficeHoursSessionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  EndTimeAsc = "endTime_ASC",
-  EndTimeDesc = "endTime_DESC",
-  MeetingLinkAsc = "meetingLink_ASC",
-  MeetingLinkDesc = "meetingLink_DESC",
+  StartTimeAsc = "startTime_ASC",
+  StartTimeDesc = "startTime_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  StartTimeAsc = "startTime_ASC",
-  StartTimeDesc = "startTime_DESC"
+  MeetingLinkAsc = "meetingLink_ASC",
+  MeetingLinkDesc = "meetingLink_DESC",
+  EndTimeAsc = "endTime_ASC",
+  EndTimeDesc = "endTime_DESC"
 }
 
 /** Record of type Office Hours (office_hours_session) */
@@ -10411,37 +10429,37 @@ export type OnDemandResourceModelBodyContentField =
   | BasicTableRecord
 
 export type OnDemandResourceModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  draft?: Maybe<BooleanFilter>
-  formTitle?: Maybe<StringFilter>
-  buttonCtaText?: Maybe<StringFilter>
-  contentLength?: Maybe<StringFilter>
-  backgroundImage?: Maybe<FileFilter>
-  heroContent?: Maybe<LinksFilter>
-  bodyContent?: Maybe<LinksFilter>
   product?: Maybe<LinksFilter>
-  people?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  events?: Maybe<LinksFilter>
-  sfdcDescription?: Maybe<StringFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
-  targetLink?: Maybe<LinkFilter>
+  bodyContent?: Maybe<LinksFilter>
+  heroContent?: Maybe<LinksFilter>
+  backgroundImage?: Maybe<FileFilter>
+  contentLength?: Maybe<StringFilter>
+  buttonCtaText?: Maybe<StringFilter>
+  formTitle?: Maybe<StringFilter>
+  draft?: Maybe<BooleanFilter>
   awsCampaign?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
-  description?: Maybe<TextFilter>
-  title?: Maybe<StringFilter>
-  industry?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
+  targetLink?: Maybe<LinkFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  sfdcDescription?: Maybe<StringFilter>
+  events?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  people?: Maybe<LinksFilter>
   primaryProduct?: Maybe<LinkFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  industry?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<OnDemandResourceModelFilter>>>
 }
 
@@ -10471,20 +10489,20 @@ export enum OnDemandResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
-  FormTitleAsc = "formTitle_ASC",
-  FormTitleDesc = "formTitle_DESC",
-  ButtonCtaTextAsc = "buttonCtaText_ASC",
-  ButtonCtaTextDesc = "buttonCtaText_DESC",
   ContentLengthAsc = "contentLength_ASC",
   ContentLengthDesc = "contentLength_DESC",
-  SfdcDescriptionAsc = "sfdcDescription_ASC",
-  SfdcDescriptionDesc = "sfdcDescription_DESC",
-  ShowDemoRequestAsc = "showDemoRequest_ASC",
-  ShowDemoRequestDesc = "showDemoRequest_DESC",
+  ButtonCtaTextAsc = "buttonCtaText_ASC",
+  ButtonCtaTextDesc = "buttonCtaText_DESC",
+  FormTitleAsc = "formTitle_ASC",
+  FormTitleDesc = "formTitle_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC",
   AwsCampaignAsc = "awsCampaign_ASC",
   AwsCampaignDesc = "awsCampaign_DESC",
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC",
+  SfdcDescriptionAsc = "sfdcDescription_ASC",
+  SfdcDescriptionDesc = "sfdcDescription_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -10549,15 +10567,15 @@ export type OnDemandResourceRecordDescriptionArgs = {
 }
 
 export type OpenSourceToolCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<OpenSourceToolCategoryModelFilter>>>
@@ -10613,25 +10631,25 @@ export type OpenSourceToolCategoryRecord_SeoMetaTagsArgs = {
 }
 
 export type OpenSourceToolModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  category?: Maybe<LinkFilter>
-  description?: Maybe<TextFilter>
-  logoLight?: Maybe<FileFilter>
-  logo?: Maybe<FileFilter>
-  name?: Maybe<StringFilter>
-  learnUrl?: Maybe<StringFilter>
-  logoColor?: Maybe<FileFilter>
   website?: Maybe<StringFilter>
+  logoColor?: Maybe<FileFilter>
+  learnUrl?: Maybe<StringFilter>
+  name?: Maybe<StringFilter>
+  logo?: Maybe<FileFilter>
+  logoLight?: Maybe<FileFilter>
+  description?: Maybe<TextFilter>
+  category?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<OpenSourceToolModelFilter>>>
 }
 
@@ -10658,12 +10676,12 @@ export enum OpenSourceToolModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC",
+  WebsiteAsc = "website_ASC",
+  WebsiteDesc = "website_DESC",
   LearnUrlAsc = "learnUrl_ASC",
   LearnUrlDesc = "learnUrl_DESC",
-  WebsiteAsc = "website_ASC",
-  WebsiteDesc = "website_DESC"
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 /** Record of type Open Source Tool (open_source_tool) */
@@ -10712,19 +10730,19 @@ export type OrientationFilter = {
 }
 
 export type PackageFeatureModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  tooltip?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
   text?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  tooltip?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<PackageFeatureModelFilter>>>
 }
 
@@ -10749,12 +10767,12 @@ export enum PackageFeatureModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TooltipAsc = "tooltip_ASC",
-  TooltipDesc = "tooltip_DESC",
+  TextAsc = "text_ASC",
+  TextDesc = "text_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
-  TextAsc = "text_ASC",
-  TextDesc = "text_DESC"
+  TooltipAsc = "tooltip_ASC",
+  TooltipDesc = "tooltip_DESC"
 }
 
 /** Record of type Package Feature (package_feature) */
@@ -10784,23 +10802,23 @@ export type PackageFeatureRecord_SeoMetaTagsArgs = {
 }
 
 export type PackageOptionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  packageFeatures?: Maybe<LinksFilter>
-  buttonUrl?: Maybe<StringFilter>
-  subheading?: Maybe<StringFilter>
-  enterprise?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
-  heading?: Maybe<StringFilter>
   product?: Maybe<LinkFilter>
+  heading?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  enterprise?: Maybe<BooleanFilter>
+  subheading?: Maybe<StringFilter>
+  buttonUrl?: Maybe<StringFilter>
+  packageFeatures?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<PackageOptionModelFilter>>>
 }
 
@@ -10825,14 +10843,14 @@ export enum PackageOptionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ButtonUrlAsc = "buttonUrl_ASC",
-  ButtonUrlDesc = "buttonUrl_DESC",
-  SubheadingAsc = "subheading_ASC",
-  SubheadingDesc = "subheading_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC",
   EnterpriseAsc = "enterprise_ASC",
   EnterpriseDesc = "enterprise_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC"
+  SubheadingAsc = "subheading_ASC",
+  SubheadingDesc = "subheading_DESC",
+  ButtonUrlAsc = "buttonUrl_ASC",
+  ButtonUrlDesc = "buttonUrl_DESC"
 }
 
 /** Record of type Package Option (package_option) */
@@ -10970,18 +10988,18 @@ export type PartnersPageRecordTrainingPartnersDescriptionArgs = {
 }
 
 export type PersonListModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  people?: Maybe<LinksFilter>
   headline?: Maybe<StringFilter>
+  people?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<PersonListModelFilter>>>
 }
 
@@ -11036,23 +11054,23 @@ export type PersonListRecord_SeoMetaTagsArgs = {
 }
 
 export type PersonModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  company?: Maybe<LinkFilter>
-  socialProfiles?: Maybe<LinksFilter>
-  bio?: Maybe<TextFilter>
-  photo?: Maybe<FileFilter>
-  jobTitle?: Maybe<StringFilter>
   name?: Maybe<StringFilter>
+  jobTitle?: Maybe<StringFilter>
+  photo?: Maybe<FileFilter>
+  bio?: Maybe<TextFilter>
+  socialProfiles?: Maybe<LinksFilter>
+  company?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<PersonModelFilter>>>
 }
 
@@ -11079,10 +11097,10 @@ export enum PersonModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  JobTitleAsc = "jobTitle_ASC",
-  JobTitleDesc = "jobTitle_DESC",
   NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  NameDesc = "name_DESC",
+  JobTitleAsc = "jobTitle_ASC",
+  JobTitleDesc = "jobTitle_DESC"
 }
 
 /** Record of type Person (person) */
@@ -11137,21 +11155,21 @@ export type PositionFilter = {
 }
 
 export type PressLinkModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  external?: Maybe<BooleanFilter>
-  detail?: Maybe<StringFilter>
-  date?: Maybe<DateFilter>
-  url?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  date?: Maybe<DateFilter>
+  detail?: Maybe<StringFilter>
+  external?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<PressLinkModelFilter>>>
 }
 
@@ -11176,16 +11194,16 @@ export enum PressLinkModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ExternalAsc = "external_ASC",
-  ExternalDesc = "external_DESC",
-  DetailAsc = "detail_ASC",
-  DetailDesc = "detail_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
+  DetailAsc = "detail_ASC",
+  DetailDesc = "detail_DESC",
+  ExternalAsc = "external_ASC",
+  ExternalDesc = "external_DESC"
 }
 
 /** Record of type Press Link (press_link) */
@@ -11246,19 +11264,19 @@ export type PressPageRecord_SeoMetaTagsArgs = {
 }
 
 export type PricingPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  productOfferings?: Maybe<LinksFilter>
-  packages?: Maybe<LinkFilter>
   product?: Maybe<LinkFilter>
+  packages?: Maybe<LinkFilter>
+  productOfferings?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<PricingPageModelFilter>>>
 }
 
@@ -11346,31 +11364,31 @@ export type ProductCertificationPageModelContentField =
   | TextSectionRecord
 
 export type ProductCertificationPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  heroHeading?: Maybe<StringFilter>
-  learnUrl?: Maybe<StringFilter>
-  registerUrl?: Maybe<StringFilter>
-  heroIntro?: Maybe<TextFilter>
-  signupFormIntro?: Maybe<TextFilter>
-  signupFormHeading?: Maybe<StringFilter>
-  slug?: Maybe<SlugFilter>
-  overview?: Maybe<TextFilter>
-  heading?: Maybe<StringFilter>
-  badge?: Maybe<FileFilter>
-  product?: Maybe<LinkFilter>
   seoTags?: Maybe<SeoFilter>
-  content?: Maybe<LinksFilter>
+  product?: Maybe<LinkFilter>
+  badge?: Maybe<FileFilter>
+  heading?: Maybe<StringFilter>
+  overview?: Maybe<TextFilter>
+  slug?: Maybe<SlugFilter>
+  registerUrl?: Maybe<StringFilter>
+  signupFormHeading?: Maybe<StringFilter>
+  signupFormIntro?: Maybe<TextFilter>
+  heroIntro?: Maybe<TextFilter>
+  learnUrl?: Maybe<StringFilter>
+  heroHeading?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  content?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<ProductCertificationPageModelFilter>>>
 }
 
@@ -11397,16 +11415,16 @@ export enum ProductCertificationPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  HeroHeadingAsc = "heroHeading_ASC",
-  HeroHeadingDesc = "heroHeading_DESC",
-  LearnUrlAsc = "learnUrl_ASC",
-  LearnUrlDesc = "learnUrl_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC",
   RegisterUrlAsc = "registerUrl_ASC",
   RegisterUrlDesc = "registerUrl_DESC",
   SignupFormHeadingAsc = "signupFormHeading_ASC",
   SignupFormHeadingDesc = "signupFormHeading_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC",
+  LearnUrlAsc = "learnUrl_ASC",
+  LearnUrlDesc = "learnUrl_DESC",
+  HeroHeadingAsc = "heroHeading_ASC",
+  HeroHeadingDesc = "heroHeading_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -11494,22 +11512,22 @@ export type ProductIntegrationRecord_SeoMetaTagsArgs = {
 }
 
 export type ProductOfferingModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  enterprise?: Maybe<BooleanFilter>
-  workspaces?: Maybe<StringFilter>
-  cost?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  support?: Maybe<StringFilter>
   paymentModel?: Maybe<StringFilter>
+  support?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  cost?: Maybe<StringFilter>
+  workspaces?: Maybe<StringFilter>
+  enterprise?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<ProductOfferingModelFilter>>>
 }
 
@@ -11534,18 +11552,18 @@ export enum ProductOfferingModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  EnterpriseAsc = "enterprise_ASC",
-  EnterpriseDesc = "enterprise_DESC",
-  WorkspacesAsc = "workspaces_ASC",
-  WorkspacesDesc = "workspaces_DESC",
-  CostAsc = "cost_ASC",
-  CostDesc = "cost_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  PaymentModelAsc = "paymentModel_ASC",
+  PaymentModelDesc = "paymentModel_DESC",
   SupportAsc = "support_ASC",
   SupportDesc = "support_DESC",
-  PaymentModelAsc = "paymentModel_ASC",
-  PaymentModelDesc = "paymentModel_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  CostAsc = "cost_ASC",
+  CostDesc = "cost_DESC",
+  WorkspacesAsc = "workspaces_ASC",
+  WorkspacesDesc = "workspaces_DESC",
+  EnterpriseAsc = "enterprise_ASC",
+  EnterpriseDesc = "enterprise_DESC"
 }
 
 /** Record of type Product Offering (product_offering) */
@@ -11578,18 +11596,18 @@ export type ProductOfferingRecord_SeoMetaTagsArgs = {
 }
 
 export type ProductPackageSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  packageOptions?: Maybe<LinksFilter>
   headline?: Maybe<StringFilter>
+  packageOptions?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<ProductPackageSectionModelFilter>>>
 }
 
@@ -11644,25 +11662,25 @@ export type ProductPackageSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type ProductPricingPlanModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
-  featureLink?: Maybe<LinkFilter>
-  isFreeDownload?: Maybe<BooleanFilter>
-  shortDescription?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
-  title?: Maybe<StringFilter>
-  internalDescriptiveTitle?: Maybe<StringFilter>
-  link?: Maybe<LinkFilter>
   target?: Maybe<StringFilter>
+  link?: Maybe<LinkFilter>
+  internalDescriptiveTitle?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  shortDescription?: Maybe<StringFilter>
+  isFreeDownload?: Maybe<BooleanFilter>
+  featureLink?: Maybe<LinkFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ProductPricingPlanModelFilter>>>
 }
 
@@ -11687,18 +11705,18 @@ export enum ProductPricingPlanModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
-  IsFreeDownloadAsc = "isFreeDownload_ASC",
-  IsFreeDownloadDesc = "isFreeDownload_DESC",
-  ShortDescriptionAsc = "shortDescription_ASC",
-  ShortDescriptionDesc = "shortDescription_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  TargetAsc = "target_ASC",
+  TargetDesc = "target_DESC",
   InternalDescriptiveTitleAsc = "internalDescriptiveTitle_ASC",
   InternalDescriptiveTitleDesc = "internalDescriptiveTitle_DESC",
-  TargetAsc = "target_ASC",
-  TargetDesc = "target_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  ShortDescriptionAsc = "shortDescription_ASC",
+  ShortDescriptionDesc = "shortDescription_DESC",
+  IsFreeDownloadAsc = "isFreeDownload_ASC",
+  IsFreeDownloadDesc = "isFreeDownload_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type · Product Pricing Plan (product_pricing_plan) */
@@ -11739,20 +11757,20 @@ export type ProductPricingPlanRecordDescriptionArgs = {
 }
 
 export type ProductSubnavModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  product?: Maybe<LinkFilter>
-  practitionerFocusedLinks?: Maybe<LinksFilter>
-  tdmFocusedLinks?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
+  tdmFocusedLinks?: Maybe<LinksFilter>
+  practitionerFocusedLinks?: Maybe<LinksFilter>
+  product?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<ProductSubnavModelFilter>>>
 }
 
@@ -11819,15 +11837,15 @@ export type ProductSubnavRecord_SeoMetaTagsArgs = {
 }
 
 export type ProductTabFeatureModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   text?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<ProductTabFeatureModelFilter>>>
@@ -11886,15 +11904,15 @@ export type ProductTabFeatureRecordTextArgs = {
 }
 
 export type ProductTypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ProductTypeModelFilter>>>
@@ -11947,6 +11965,24 @@ export type ProductTypeRecord = {
 /** Record of type Product Type (product_type) */
 export type ProductTypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Specifies how to filter by publication datetime */
+export type PublishedAtFilter = {
+  /** Filter records with a value that's strictly greater than the one specified */
+  gt?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's less than the one specified */
+  lt?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's greater than or equal to than the one specified */
+  gte?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's less or equal than the one specified */
+  lte?: Maybe<Scalars["DateTime"]>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+  /** Search for records with an exact match (seconds are truncated) */
+  eq?: Maybe<Scalars["DateTime"]>
+  /** Exclude records with an exact match */
+  neq?: Maybe<Scalars["DateTime"]>
 }
 
 /** The query root for this schema */
@@ -12304,6 +12340,8 @@ export type Query = {
   _allWebinarsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allWhitePapersMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
+  _allWipEventsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allWistiaSectionsMeta: CollectionMetadata
   /** Returns the single instance record */
@@ -12670,6 +12708,8 @@ export type Query = {
   allWebinars: Array<WebinarRecord>
   /** Returns a collection of records */
   allWhitePapers: Array<WhitePaperRecord>
+  /** Returns a collection of records */
+  allWipEvents: Array<WipEventRecord>
   /** Returns a collection of records */
   allWistiaSections: Array<WistiaSectionRecord>
   /** Returns a specific record */
@@ -13142,6 +13182,8 @@ export type Query = {
   webinar?: Maybe<WebinarRecord>
   /** Returns a specific record */
   whitePaper?: Maybe<WhitePaperRecord>
+  /** Returns a specific record */
+  wipEvent?: Maybe<WipEventRecord>
   /** Returns a specific record */
   wistiaSection?: Maybe<WistiaSectionRecord>
 }
@@ -14200,6 +14242,12 @@ export type Query_AllWebinarsMetaArgs = {
 export type Query_AllWhitePapersMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<WhitePaperModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllWipEventsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<WipEventModelFilter>
 }
 
 /** The query root for this schema */
@@ -15817,6 +15865,15 @@ export type QueryAllWhitePapersArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllWipEventsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<WipEventModelFilter>
+  orderBy?: Maybe<Array<Maybe<WipEventModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllWistiaSectionsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -17334,6 +17391,13 @@ export type QueryWhitePaperArgs = {
 }
 
 /** The query root for this schema */
+export type QueryWipEventArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<WipEventModelFilter>
+  orderBy?: Maybe<Array<Maybe<WipEventModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryWistiaSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<WistiaSectionModelFilter>
@@ -17366,19 +17430,19 @@ export type ReasonRecord_SeoMetaTagsArgs = {
 }
 
 export type RelatedItemsSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  transcript?: Maybe<StringFilter>
-  github?: Maybe<StringFilter>
   slides?: Maybe<StringFilter>
+  github?: Maybe<StringFilter>
+  transcript?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<RelatedItemsSectionModelFilter>>>
 }
 
@@ -17403,12 +17467,12 @@ export enum RelatedItemsSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TranscriptAsc = "transcript_ASC",
-  TranscriptDesc = "transcript_DESC",
+  SlidesAsc = "slides_ASC",
+  SlidesDesc = "slides_DESC",
   GithubAsc = "github_ASC",
   GithubDesc = "github_DESC",
-  SlidesAsc = "slides_ASC",
-  SlidesDesc = "slides_DESC"
+  TranscriptAsc = "transcript_ASC",
+  TranscriptDesc = "transcript_DESC"
 }
 
 /** Record of type Related Items Section (related_items_section) */
@@ -17439,13 +17503,13 @@ export type RelatedItemsSectionRecord_SeoMetaTagsArgs = {
 
 /** Specifies how to filter by upload type */
 export type ResolutionFilter = {
-  /** Search uploads with the specified type */
+  /** Search uploads with the specified resolution */
   eq?: Maybe<ResolutionType>
-  /** Exclude uploads with the specified type */
+  /** Exclude uploads with the specified resolution */
   neq?: Maybe<ResolutionType>
-  /** Search uploads with the specified types */
+  /** Search uploads with the specified resolutions */
   in?: Maybe<Array<Maybe<ResolutionType>>>
-  /** Search uploads without the specified types */
+  /** Search uploads without the specified resolutions */
   notIn?: Maybe<Array<Maybe<ResolutionType>>>
 }
 
@@ -17457,15 +17521,15 @@ export enum ResolutionType {
 }
 
 export type ResourceContentTypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ResourceContentTypeModelFilter>>>
@@ -17521,15 +17585,15 @@ export type ResourceContentTypeRecord_SeoMetaTagsArgs = {
 }
 
 export type ResourceIndustryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ResourceIndustryModelFilter>>>
@@ -17585,18 +17649,18 @@ export type ResourceIndustryRecord_SeoMetaTagsArgs = {
 }
 
 export type ResourceInfrastructureProviderModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  company?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
+  company?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<ResourceInfrastructureProviderModelFilter>>>
 }
 
@@ -17651,18 +17715,18 @@ export type ResourceInfrastructureProviderRecord_SeoMetaTagsArgs = {
 }
 
 export type ResourceMediaTypeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  icon?: Maybe<FileFilter>
   name?: Maybe<StringFilter>
+  icon?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<ResourceMediaTypeModelFilter>>>
 }
 
@@ -17729,33 +17793,33 @@ export type ResourceModelContentField =
   | WistiaSectionRecord
 
 export type ResourceModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  draft?: Maybe<BooleanFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
-  content?: Maybe<LinksFilter>
-  events?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  people?: Maybe<LinksFilter>
-  industry?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
-  contentType?: Maybe<LinkFilter>
-  image?: Maybe<FileFilter>
-  date?: Maybe<DateFilter>
-  slug?: Maybe<SlugFilter>
-  title?: Maybe<StringFilter>
-  product?: Maybe<LinksFilter>
-  mediaType?: Maybe<LinkFilter>
   description?: Maybe<TextFilter>
+  mediaType?: Maybe<LinkFilter>
+  product?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  date?: Maybe<DateFilter>
+  image?: Maybe<FileFilter>
+  contentType?: Maybe<LinkFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  industry?: Maybe<LinksFilter>
+  people?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  events?: Maybe<LinksFilter>
+  content?: Maybe<LinksFilter>
+  metadata?: Maybe<SeoFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  draft?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<ResourceModelFilter>>>
 }
 
@@ -17780,14 +17844,14 @@ export enum ResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
-  ShowDemoRequestAsc = "showDemoRequest_ASC",
-  ShowDemoRequestDesc = "showDemoRequest_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   DateAsc = "date_ASC",
   DateDesc = "date_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC"
 }
 
 export type ResourceModelProductField =
@@ -17940,22 +18004,22 @@ export type SalesCtaRecordCtaTextArgs = {
 }
 
 export type SalesFormModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
-  headline?: Maybe<StringFilter>
-  contactType?: Maybe<LinkFilter>
-  product?: Maybe<LinkFilter>
   description?: Maybe<TextFilter>
+  product?: Maybe<LinkFilter>
+  contactType?: Maybe<LinkFilter>
+  headline?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<SalesFormModelFilter>>>
 }
 
@@ -17994,23 +18058,23 @@ export enum SalesFormModelOrderBy {
 }
 
 export type SalesFormPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  thankYouPageText?: Maybe<TextFilter>
-  slug?: Maybe<SlugFilter>
-  headline?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
-  product?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
   contactType?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
+  product?: Maybe<LinkFilter>
+  description?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  thankYouPageText?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SalesFormPageModelFilter>>>
 }
 
@@ -18136,21 +18200,21 @@ export type SalesFormRecordDescriptionArgs = {
 }
 
 export type SbcAlertModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  textColor?: Maybe<StringFilter>
-  tagColor?: Maybe<StringFilter>
-  tag?: Maybe<StringFilter>
-  text?: Maybe<StringFilter>
   url?: Maybe<StringFilter>
+  text?: Maybe<StringFilter>
+  tag?: Maybe<StringFilter>
+  tagColor?: Maybe<StringFilter>
+  textColor?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SbcAlertModelFilter>>>
 }
 
@@ -18175,16 +18239,16 @@ export enum SbcAlertModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TextColorAsc = "textColor_ASC",
-  TextColorDesc = "textColor_DESC",
-  TagColorAsc = "tagColor_ASC",
-  TagColorDesc = "tagColor_DESC",
-  TagAsc = "tag_ASC",
-  TagDesc = "tag_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
   TextAsc = "text_ASC",
   TextDesc = "text_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC"
+  TagAsc = "tag_ASC",
+  TagDesc = "tag_DESC",
+  TagColorAsc = "tagColor_ASC",
+  TagColorDesc = "tagColor_DESC",
+  TextColorAsc = "textColor_ASC",
+  TextColorDesc = "textColor_DESC"
 }
 
 /** Record of type ༶ Alert (deprecated) (sbc_alert) */
@@ -18216,23 +18280,23 @@ export type SbcAlertRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcBeforeAfterDiagramModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  afterContent?: Maybe<TextFilter>
-  beforeHeadline?: Maybe<StringFilter>
-  beforeImage?: Maybe<FileFilter>
-  theme?: Maybe<StringFilter>
-  afterHeadline?: Maybe<StringFilter>
-  afterImage?: Maybe<FileFilter>
   beforeContent?: Maybe<TextFilter>
+  afterImage?: Maybe<FileFilter>
+  afterHeadline?: Maybe<StringFilter>
+  theme?: Maybe<StringFilter>
+  beforeImage?: Maybe<FileFilter>
+  beforeHeadline?: Maybe<StringFilter>
+  afterContent?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SbcBeforeAfterDiagramModelFilter>>>
 }
 
@@ -18257,12 +18321,12 @@ export enum SbcBeforeAfterDiagramModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  BeforeHeadlineAsc = "beforeHeadline_ASC",
-  BeforeHeadlineDesc = "beforeHeadline_DESC",
+  AfterHeadlineAsc = "afterHeadline_ASC",
+  AfterHeadlineDesc = "afterHeadline_DESC",
   ThemeAsc = "theme_ASC",
   ThemeDesc = "theme_DESC",
-  AfterHeadlineAsc = "afterHeadline_ASC",
-  AfterHeadlineDesc = "afterHeadline_DESC"
+  BeforeHeadlineAsc = "beforeHeadline_ASC",
+  BeforeHeadlineDesc = "beforeHeadline_DESC"
 }
 
 /** Record of type ༶ Before-After Diagrams (sbc_before_after_diagram) */
@@ -18306,20 +18370,20 @@ export type SbcBeforeAfterDiagramRecordBeforeContentArgs = {
 }
 
 export type SbcButtonModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  appearance?: Maybe<LinkFilter>
-  external?: Maybe<BooleanFilter>
-  text?: Maybe<StringFilter>
   url?: Maybe<StringFilter>
+  text?: Maybe<StringFilter>
+  external?: Maybe<BooleanFilter>
+  appearance?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<SbcButtonModelFilter>>>
 }
 
@@ -18344,12 +18408,12 @@ export enum SbcButtonModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ExternalAsc = "external_ASC",
-  ExternalDesc = "external_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
   TextAsc = "text_ASC",
   TextDesc = "text_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC"
+  ExternalAsc = "external_ASC",
+  ExternalDesc = "external_DESC"
 }
 
 /** Record of type · Button (deprecated) (sbc_button) */
@@ -18380,20 +18444,20 @@ export type SbcButtonRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcButtonV2ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  brand?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
   external?: Maybe<BooleanFilter>
+  url?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  brand?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SbcButtonV2ModelFilter>>>
 }
 
@@ -18418,14 +18482,14 @@ export enum SbcButtonV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  BrandAsc = "brand_ASC",
-  BrandDesc = "brand_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  ExternalAsc = "external_ASC",
+  ExternalDesc = "external_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
-  ExternalAsc = "external_ASC",
-  ExternalDesc = "external_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  BrandAsc = "brand_ASC",
+  BrandDesc = "brand_DESC"
 }
 
 /** Record of type · Button v2 (sbc_button_v2) */
@@ -18456,20 +18520,20 @@ export type SbcButtonV2Record_SeoMetaTagsArgs = {
 }
 
 export type SbcCalloutModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  link?: Maybe<LinkFilter>
-  description?: Maybe<TextFilter>
-  title?: Maybe<StringFilter>
   image?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  link?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<SbcCalloutModelFilter>>>
 }
 
@@ -18531,19 +18595,19 @@ export type SbcCalloutRecordDescriptionArgs = {
 }
 
 export type SbcCalloutSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  items?: Maybe<LinksFilter>
-  theme?: Maybe<StringFilter>
   columnCount?: Maybe<IntegerFilter>
+  theme?: Maybe<StringFilter>
+  items?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SbcCalloutSectionModelFilter>>>
 }
 
@@ -18568,10 +18632,10 @@ export enum SbcCalloutSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
   ColumnCountAsc = "columnCount_ASC",
-  ColumnCountDesc = "columnCount_DESC"
+  ColumnCountDesc = "columnCount_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC"
 }
 
 /** Record of type ༶ Callouts (sbc_callout_section) */
@@ -18601,23 +18665,23 @@ export type SbcCalloutSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcCaseStudyModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  caseStudyLink?: Maybe<StringFilter>
-  caseStudyResource?: Maybe<LinkFilter>
-  description?: Maybe<TextFilter>
-  headline?: Maybe<StringFilter>
-  company?: Maybe<LinkFilter>
-  caseStudyImage?: Maybe<FileFilter>
   buttonLabel?: Maybe<StringFilter>
+  caseStudyImage?: Maybe<FileFilter>
+  company?: Maybe<LinkFilter>
+  headline?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  caseStudyResource?: Maybe<LinkFilter>
+  caseStudyLink?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SbcCaseStudyModelFilter>>>
 }
 
@@ -18642,12 +18706,12 @@ export enum SbcCaseStudyModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  CaseStudyLinkAsc = "caseStudyLink_ASC",
-  CaseStudyLinkDesc = "caseStudyLink_DESC",
+  ButtonLabelAsc = "buttonLabel_ASC",
+  ButtonLabelDesc = "buttonLabel_DESC",
   HeadlineAsc = "headline_ASC",
   HeadlineDesc = "headline_DESC",
-  ButtonLabelAsc = "buttonLabel_ASC",
-  ButtonLabelDesc = "buttonLabel_DESC"
+  CaseStudyLinkAsc = "caseStudyLink_ASC",
+  CaseStudyLinkDesc = "caseStudyLink_DESC"
 }
 
 /** Record of type · Case Study (sbc_case_study) */
@@ -18686,15 +18750,15 @@ export type SbcCaseStudyRecordDescriptionArgs = {
 }
 
 export type SbcCaseStudySliderModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   caseStudies?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SbcCaseStudySliderModelFilter>>>
@@ -18748,19 +18812,19 @@ export type SbcCaseStudySliderRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcCodeBlockModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  code?: Maybe<TextFilter>
-  language?: Maybe<LinkFilter>
   chrome?: Maybe<BooleanFilter>
+  language?: Maybe<LinkFilter>
+  code?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SbcCodeBlockModelFilter>>>
 }
 
@@ -18821,18 +18885,18 @@ export type SbcCodeBlockRecordCodeArgs = {
 }
 
 export type SbcImageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  mobile?: Maybe<FileFilter>
   image?: Maybe<FileFilter>
+  mobile?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<SbcImageModelFilter>>>
 }
 
@@ -18885,15 +18949,15 @@ export type SbcImageRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcLinkedTextSummaryListModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   internalName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SbcLinkedTextSummaryListModelFilter>>>
@@ -18950,19 +19014,19 @@ export type SbcLinkedTextSummaryListRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcLogoGridModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  removeBorders?: Maybe<BooleanFilter>
-  size?: Maybe<StringFilter>
   companies?: Maybe<LinksFilter>
+  size?: Maybe<StringFilter>
+  removeBorders?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<SbcLogoGridModelFilter>>>
 }
 
@@ -18987,10 +19051,10 @@ export enum SbcLogoGridModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  RemoveBordersAsc = "removeBorders_ASC",
-  RemoveBordersDesc = "removeBorders_DESC",
   SizeAsc = "size_ASC",
-  SizeDesc = "size_DESC"
+  SizeDesc = "size_DESC",
+  RemoveBordersAsc = "removeBorders_ASC",
+  RemoveBordersDesc = "removeBorders_DESC"
 }
 
 /** Record of type ༶ Logo Grid (sbc_logo_grid) */
@@ -19020,18 +19084,18 @@ export type SbcLogoGridRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcMultiButtonModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  buttons?: Maybe<LinksFilter>
   internalName?: Maybe<StringFilter>
+  buttons?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SbcMultiButtonModelFilter>>>
 }
 
@@ -19086,22 +19150,22 @@ export type SbcMultiButtonRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcProductFeatureTableModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  offerings?: Maybe<LinksFilter>
-  productLogo?: Maybe<FileFilter>
-  productName?: Maybe<StringFilter>
-  themeBackground?: Maybe<StringFilter>
-  featureCategories?: Maybe<LinksFilter>
   higherTierPlansIncludeLowerTierFeatures?: Maybe<BooleanFilter>
+  featureCategories?: Maybe<LinksFilter>
+  themeBackground?: Maybe<StringFilter>
+  productName?: Maybe<StringFilter>
+  productLogo?: Maybe<FileFilter>
+  offerings?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SbcProductFeatureTableModelFilter>>>
 }
 
@@ -19126,12 +19190,12 @@ export enum SbcProductFeatureTableModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ProductNameAsc = "productName_ASC",
-  ProductNameDesc = "productName_DESC",
+  HigherTierPlansIncludeLowerTierFeaturesAsc = "higherTierPlansIncludeLowerTierFeatures_ASC",
+  HigherTierPlansIncludeLowerTierFeaturesDesc = "higherTierPlansIncludeLowerTierFeatures_DESC",
   ThemeBackgroundAsc = "themeBackground_ASC",
   ThemeBackgroundDesc = "themeBackground_DESC",
-  HigherTierPlansIncludeLowerTierFeaturesAsc = "higherTierPlansIncludeLowerTierFeatures_ASC",
-  HigherTierPlansIncludeLowerTierFeaturesDesc = "higherTierPlansIncludeLowerTierFeatures_DESC"
+  ProductNameAsc = "productName_ASC",
+  ProductNameDesc = "productName_DESC"
 }
 
 /** Record of type ༶ Product Features Table (sbc_product_feature_table) */
@@ -19164,18 +19228,18 @@ export type SbcProductFeatureTableRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcProductPricingModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  plans?: Maybe<LinksFilter>
   product?: Maybe<StringFilter>
+  plans?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SbcProductPricingModelFilter>>>
 }
 
@@ -19230,15 +19294,15 @@ export type SbcProductPricingRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcResourcesSliderModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   filterBy?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SbcResourcesSliderModelFilter>>>
@@ -19303,19 +19367,19 @@ export type SbcResourcesSliderRecord_SeoMetaTagsArgs = {
 }
 
 export type SbcSectionHeaderModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  useH1?: Maybe<BooleanFilter>
-  headline?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
+  useH1?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<SbcSectionHeaderModelFilter>>>
 }
 
@@ -19340,10 +19404,10 @@ export enum SbcSectionHeaderModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UseH1Asc = "useH1_ASC",
-  UseH1Desc = "useH1_DESC",
   HeadlineAsc = "headline_ASC",
-  HeadlineDesc = "headline_DESC"
+  HeadlineDesc = "headline_DESC",
+  UseH1Asc = "useH1_ASC",
+  UseH1Desc = "useH1_DESC"
 }
 
 /** Record of type ༶ Section Header (sbc_section_header) */
@@ -19383,23 +19447,23 @@ export type SbcTextAndContentModelContentField =
   | SbcCodeBlockRecord
 
 export type SbcTextAndContentModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  hasShadow?: Maybe<BooleanFilter>
-  hasBorder?: Maybe<BooleanFilter>
-  reverseDirection?: Maybe<BooleanFilter>
-  links?: Maybe<LinksFilter>
-  content?: Maybe<LinkFilter>
-  buttons?: Maybe<LinksFilter>
   text?: Maybe<TextFilter>
+  buttons?: Maybe<LinksFilter>
+  content?: Maybe<LinkFilter>
+  links?: Maybe<LinksFilter>
+  reverseDirection?: Maybe<BooleanFilter>
+  hasBorder?: Maybe<BooleanFilter>
+  hasShadow?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<SbcTextAndContentModelFilter>>>
 }
 
@@ -19424,12 +19488,12 @@ export enum SbcTextAndContentModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  HasShadowAsc = "hasShadow_ASC",
-  HasShadowDesc = "hasShadow_DESC",
+  ReverseDirectionAsc = "reverseDirection_ASC",
+  ReverseDirectionDesc = "reverseDirection_DESC",
   HasBorderAsc = "hasBorder_ASC",
   HasBorderDesc = "hasBorder_DESC",
-  ReverseDirectionAsc = "reverseDirection_ASC",
-  ReverseDirectionDesc = "reverseDirection_DESC"
+  HasShadowAsc = "hasShadow_ASC",
+  HasShadowDesc = "hasShadow_DESC"
 }
 
 /** Record of type ༶ Text & Content (sbc_text_and_content) */
@@ -19468,15 +19532,15 @@ export type SbcTextAndContentRecordTextArgs = {
 }
 
 export type SbcTextModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   text?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SbcTextModelFilter>>>
@@ -19535,20 +19599,20 @@ export type SbcTextRecordTextArgs = {
 }
 
 export type SbcUseCaseModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  link?: Maybe<LinkFilter>
-  title?: Maybe<StringFilter>
-  image?: Maybe<FileFilter>
   description?: Maybe<TextFilter>
+  image?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  link?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<SbcUseCaseModelFilter>>>
 }
 
@@ -19610,19 +19674,19 @@ export type SbcUseCaseRecordDescriptionArgs = {
 }
 
 export type SbcUseCasesSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  theme?: Maybe<StringFilter>
-  items?: Maybe<LinksFilter>
   internalTitle?: Maybe<StringFilter>
+  items?: Maybe<LinksFilter>
+  theme?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SbcUseCasesSectionModelFilter>>>
 }
 
@@ -19647,10 +19711,10 @@ export enum SbcUseCasesSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
   InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC"
+  InternalTitleDesc = "internalTitle_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC"
 }
 
 /** Record of type ༶ Use Cases (sbc_use_cases_section) */
@@ -19695,15 +19759,15 @@ export type SblHorizontalModelContentField =
   | SbcAlertRecord
 
 export type SblHorizontalModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   content?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SblHorizontalModelFilter>>>
@@ -19777,15 +19841,15 @@ export type SblVerticalModelContentField =
   | SbcAlertRecord
 
 export type SblVerticalModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   content?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SblVerticalModelFilter>>>
@@ -19881,20 +19945,20 @@ export type SectionBlockModelComponentsField =
   | SmallTextTagRecord
 
 export type SectionBlockModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  sid?: Maybe<StringFilter>
-  divider?: Maybe<LinkFilter>
-  theme?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
+  theme?: Maybe<LinkFilter>
+  divider?: Maybe<LinkFilter>
+  sid?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SectionBlockModelFilter>>>
 }
 
@@ -19919,28 +19983,28 @@ export enum SectionBlockModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SidAsc = "sid_ASC",
-  SidDesc = "sid_DESC",
   NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  NameDesc = "name_DESC",
+  SidAsc = "sid_ASC",
+  SidDesc = "sid_DESC"
 }
 
 export type SectionBlockPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<SlugFilter>
-  title?: Maybe<StringFilter>
   metatag?: Maybe<SeoFilter>
-  content?: Maybe<LinksFilter>
   alertBanner?: Maybe<LinkFilter>
+  content?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
+  url?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<SectionBlockPageModelFilter>>>
 }
 
@@ -20026,21 +20090,21 @@ export type SectionBlockRecord_SeoMetaTagsArgs = {
 }
 
 export type SectionBlockV2ModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  sid?: Maybe<StringFilter>
-  divider?: Maybe<LinkFilter>
-  theme?: Maybe<LinkFilter>
-  layout?: Maybe<LinkFilter>
   name?: Maybe<StringFilter>
+  layout?: Maybe<LinkFilter>
+  theme?: Maybe<LinkFilter>
+  divider?: Maybe<LinkFilter>
+  sid?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SectionBlockV2ModelFilter>>>
 }
 
@@ -20069,10 +20133,10 @@ export enum SectionBlockV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SidAsc = "sid_ASC",
-  SidDesc = "sid_DESC",
   NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  NameDesc = "name_DESC",
+  SidAsc = "sid_ASC",
+  SidDesc = "sid_DESC"
 }
 
 /** Record of type ࿇ Section Block (section_block_v2) */
@@ -20104,18 +20168,18 @@ export type SectionBlockV2Record_SeoMetaTagsArgs = {
 }
 
 export type SectionDividerModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<SectionDividerModelFilter>>>
 }
 
@@ -20200,18 +20264,18 @@ export type SectionHeaderRecordDescriptionArgs = {
 }
 
 export type SectionThemeModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<SectionThemeModelFilter>>>
 }
 
@@ -20302,22 +20366,22 @@ export type SentinelPageRecord_SeoMetaTagsArgs = {
 }
 
 export type SentinelProductTabModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  docsLink?: Maybe<LinkFilter>
-  features?: Maybe<LinksFilter>
-  codeSamples?: Maybe<LinksFilter>
-  colorLogo?: Maybe<FileFilter>
-  enterpriseLogo?: Maybe<FileFilter>
   product?: Maybe<LinkFilter>
+  enterpriseLogo?: Maybe<FileFilter>
+  colorLogo?: Maybe<FileFilter>
+  codeSamples?: Maybe<LinksFilter>
+  features?: Maybe<LinksFilter>
+  docsLink?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<SentinelProductTabModelFilter>>>
 }
 
@@ -20476,19 +20540,19 @@ export type SmallTextTagRecord_SeoMetaTagsArgs = {
 }
 
 export type SocialNetworkIconModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  icon?: Maybe<FileFilter>
-  name?: Maybe<StringFilter>
   iconDark?: Maybe<FileFilter>
+  name?: Maybe<StringFilter>
+  icon?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<SocialNetworkIconModelFilter>>>
 }
 
@@ -20544,18 +20608,18 @@ export type SocialNetworkIconRecord_SeoMetaTagsArgs = {
 }
 
 export type SocialNetworkModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
   network?: Maybe<LinkFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SocialNetworkModelFilter>>>
 }
 
@@ -20869,18 +20933,18 @@ export type SolutionsSecurityPageRecordPullQuoteArgs = {
 }
 
 export type SpeakersSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  speakers?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
+  speakers?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SpeakersSectionModelFilter>>>
 }
 
@@ -20935,21 +20999,21 @@ export type SpeakersSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type SplitCtaItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  backgroundColor?: Maybe<ColorFilter>
-  backgroundImage?: Maybe<FileFilter>
-  description?: Maybe<TextFilter>
-  title?: Maybe<StringFilter>
   titleLogo?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  backgroundImage?: Maybe<FileFilter>
+  backgroundColor?: Maybe<ColorFilter>
   OR?: Maybe<Array<Maybe<SplitCtaItemModelFilter>>>
 }
 
@@ -21013,15 +21077,15 @@ export type SplitCtaItemRecordDescriptionArgs = {
 }
 
 export type SplitCtaSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   items?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<SplitCtaSectionModelFilter>>>
@@ -21075,20 +21139,20 @@ export type SplitCtaSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type StaticDynamicSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  dynamicDescription?: Maybe<TextFilter>
-  dynamicImage?: Maybe<FileFilter>
-  staticDescription?: Maybe<TextFilter>
   staticImage?: Maybe<FileFilter>
+  staticDescription?: Maybe<TextFilter>
+  dynamicImage?: Maybe<FileFilter>
+  dynamicDescription?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<StaticDynamicSectionModelFilter>>>
 }
 
@@ -21305,28 +21369,28 @@ export type TemplatePageModelContentField =
   | HtmlSectionRecord
 
 export type TemplatePageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  darkSubnav?: Maybe<BooleanFilter>
-  draft?: Maybe<BooleanFilter>
-  subnav?: Maybe<StringFilter>
-  metadata?: Maybe<SeoFilter>
-  preFooterCta?: Maybe<LinkFilter>
-  content?: Maybe<LinksFilter>
-  hero?: Maybe<LinkFilter>
-  slug?: Maybe<SlugFilter>
-  hidden?: Maybe<BooleanFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  hidden?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  hero?: Maybe<LinkFilter>
+  content?: Maybe<LinksFilter>
+  preFooterCta?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
+  subnav?: Maybe<StringFilter>
+  draft?: Maybe<BooleanFilter>
+  darkSubnav?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<TemplatePageModelFilter>>>
 }
 
@@ -21353,18 +21417,18 @@ export enum TemplatePageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DarkSubnavAsc = "darkSubnav_ASC",
-  DarkSubnavDesc = "darkSubnav_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
-  SubnavAsc = "subnav_ASC",
-  SubnavDesc = "subnav_DESC",
-  HiddenAsc = "hidden_ASC",
-  HiddenDesc = "hidden_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   ShowDemoRequestAsc = "showDemoRequest_ASC",
   ShowDemoRequestDesc = "showDemoRequest_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  HiddenAsc = "hidden_ASC",
+  HiddenDesc = "hidden_DESC",
+  SubnavAsc = "subnav_ASC",
+  SubnavDesc = "subnav_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC",
+  DarkSubnavAsc = "darkSubnav_ASC",
+  DarkSubnavDesc = "darkSubnav_DESC"
 }
 
 /** Record of type Template Page (template_page) */
@@ -21403,19 +21467,19 @@ export type TemplatePageRecord_SeoMetaTagsArgs = {
 }
 
 export type TerraformGraphSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  serviceImages?: Maybe<GalleryFilter>
-  stackImages?: Maybe<GalleryFilter>
   headline?: Maybe<StringFilter>
+  stackImages?: Maybe<GalleryFilter>
+  serviceImages?: Maybe<GalleryFilter>
   OR?: Maybe<Array<Maybe<TerraformGraphSectionModelFilter>>>
 }
 
@@ -21471,18 +21535,18 @@ export type TerraformGraphSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type TerraformOfferingCategoryModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  tier?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
+  tier?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<TerraformOfferingCategoryModelFilter>>>
 }
 
@@ -21537,20 +21601,20 @@ export type TerraformOfferingCategoryRecord_SeoMetaTagsArgs = {
 }
 
 export type TerraformOfferingModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  description?: Maybe<StringFilter>
-  link?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  link?: Maybe<StringFilter>
+  description?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TerraformOfferingModelFilter>>>
 }
 
@@ -21577,12 +21641,12 @@ export enum TerraformOfferingModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DescriptionAsc = "description_ASC",
-  DescriptionDesc = "description_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   LinkAsc = "link_ASC",
   LinkDesc = "link_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  DescriptionAsc = "description_ASC",
+  DescriptionDesc = "description_DESC"
 }
 
 /** Record of type Terraform Offering (terraform_offering) */
@@ -21613,15 +21677,15 @@ export type TerraformOfferingRecord_SeoMetaTagsArgs = {
 }
 
 export type TerraformOfferingTableModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   categories?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<TerraformOfferingTableModelFilter>>>
@@ -21675,22 +21739,22 @@ export type TerraformOfferingTableRecord_SeoMetaTagsArgs = {
 }
 
 export type TerraformOfferingTierModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  callouts?: Maybe<TextFilter>
-  headline?: Maybe<StringFilter>
-  name?: Maybe<StringFilter>
-  subheading?: Maybe<StringFilter>
-  offerings?: Maybe<LinksFilter>
   ctaLink?: Maybe<LinkFilter>
+  offerings?: Maybe<LinksFilter>
+  subheading?: Maybe<StringFilter>
+  name?: Maybe<StringFilter>
+  headline?: Maybe<StringFilter>
+  callouts?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<TerraformOfferingTierModelFilter>>>
 }
 
@@ -21715,12 +21779,12 @@ export enum TerraformOfferingTierModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  HeadlineAsc = "headline_ASC",
-  HeadlineDesc = "headline_DESC",
+  SubheadingAsc = "subheading_ASC",
+  SubheadingDesc = "subheading_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC",
-  SubheadingAsc = "subheading_ASC",
-  SubheadingDesc = "subheading_DESC"
+  HeadlineAsc = "headline_ASC",
+  HeadlineDesc = "headline_DESC"
 }
 
 /** Record of type Terraform Offering Tier (terraform_offering_tier) */
@@ -21797,20 +21861,20 @@ export type TerraformProductPageRecord_SeoMetaTagsArgs = {
 }
 
 export type TestimonialModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  authorTitle?: Maybe<StringFilter>
-  author?: Maybe<StringFilter>
-  company?: Maybe<LinkFilter>
   text?: Maybe<TextFilter>
+  company?: Maybe<LinkFilter>
+  author?: Maybe<StringFilter>
+  authorTitle?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TestimonialModelFilter>>>
 }
 
@@ -21835,10 +21899,10 @@ export enum TestimonialModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  AuthorTitleAsc = "authorTitle_ASC",
-  AuthorTitleDesc = "authorTitle_DESC",
   AuthorAsc = "author_ASC",
-  AuthorDesc = "author_DESC"
+  AuthorDesc = "author_DESC",
+  AuthorTitleAsc = "authorTitle_ASC",
+  AuthorTitleDesc = "authorTitle_DESC"
 }
 
 /** Record of type Testimonial (testimonial) */
@@ -21908,20 +21972,20 @@ export type TextFilter = {
 }
 
 export type TextHeadlineAndGridSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  includeCompanyPopups?: Maybe<BooleanFilter>
-  companies?: Maybe<LinksFilter>
-  headline?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
+  companies?: Maybe<LinksFilter>
+  includeCompanyPopups?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<TextHeadlineAndGridSectionModelFilter>>>
 }
 
@@ -21946,10 +22010,10 @@ export enum TextHeadlineAndGridSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  IncludeCompanyPopupsAsc = "includeCompanyPopups_ASC",
-  IncludeCompanyPopupsDesc = "includeCompanyPopups_DESC",
   HeadlineAsc = "headline_ASC",
-  HeadlineDesc = "headline_DESC"
+  HeadlineDesc = "headline_DESC",
+  IncludeCompanyPopupsAsc = "includeCompanyPopups_ASC",
+  IncludeCompanyPopupsDesc = "includeCompanyPopups_DESC"
 }
 
 /** Record of type Text, Headline and Grid Section (text_headline_and_grid_section) */
@@ -21985,18 +22049,18 @@ export type TextHeadlineAndGridSectionRecordDescriptionArgs = {
 }
 
 export type TextHeadlineSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  headline?: Maybe<StringFilter>
   text?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TextHeadlineSectionModelFilter>>>
 }
 
@@ -22088,21 +22152,21 @@ export type TextImageRecordTextArgs = {
 }
 
 export type TextImageSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  reverseDirection?: Maybe<BooleanFilter>
-  image?: Maybe<FileFilter>
-  headline?: Maybe<StringFilter>
-  text?: Maybe<TextFilter>
   anchorLink?: Maybe<BooleanFilter>
+  text?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
+  image?: Maybe<FileFilter>
+  reverseDirection?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<TextImageSectionModelFilter>>>
 }
 
@@ -22127,12 +22191,12 @@ export enum TextImageSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ReverseDirectionAsc = "reverseDirection_ASC",
-  ReverseDirectionDesc = "reverseDirection_DESC",
+  AnchorLinkAsc = "anchorLink_ASC",
+  AnchorLinkDesc = "anchorLink_DESC",
   HeadlineAsc = "headline_ASC",
   HeadlineDesc = "headline_DESC",
-  AnchorLinkAsc = "anchorLink_ASC",
-  AnchorLinkDesc = "anchorLink_DESC"
+  ReverseDirectionAsc = "reverseDirection_ASC",
+  ReverseDirectionDesc = "reverseDirection_DESC"
 }
 
 /** Record of type Text & Image Section (text_image_section) */
@@ -22198,15 +22262,15 @@ export type TextRecordTextArgs = {
 }
 
 export type TextSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   content?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<TextSectionModelFilter>>>
@@ -22385,19 +22449,19 @@ export type TmpmodelAboutPageRecordWhoWeAreDescriptionArgs = {
 }
 
 export type TmpmodelButtonModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
-  external?: Maybe<BooleanFilter>
   buttonText?: Maybe<StringFilter>
+  external?: Maybe<BooleanFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelButtonModelFilter>>>
 }
 
@@ -22422,12 +22486,12 @@ export enum TmpmodelButtonModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
+  ButtonTextAsc = "buttonText_ASC",
+  ButtonTextDesc = "buttonText_DESC",
   ExternalAsc = "external_ASC",
   ExternalDesc = "external_DESC",
-  ButtonTextAsc = "buttonText_ASC",
-  ButtonTextDesc = "buttonText_DESC"
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type TMP: Button (tmpmodel_button) */
@@ -22726,29 +22790,29 @@ export type TmpmodelNomadOverviewPageRecord_SeoMetaTagsArgs = {
 }
 
 export type TmpmodelProductUseCasePageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  architectureSection?: Maybe<LinkFilter>
-  featuresSectionHeader?: Maybe<LinkFilter>
-  product?: Maybe<StringFilter>
-  caseStudiesSection?: Maybe<LinksFilter>
-  featuresSection?: Maybe<LinksFilter>
-  challengeSolutionSection?: Maybe<LinkFilter>
-  challengeSolutionSectionHeader?: Maybe<LinkFilter>
-  title?: Maybe<StringFilter>
-  subnav?: Maybe<LinkFilter>
-  alertBanner?: Maybe<LinkFilter>
-  introSectionHeader?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
   ctaSectionHeader?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
+  introSectionHeader?: Maybe<LinkFilter>
+  alertBanner?: Maybe<LinkFilter>
+  subnav?: Maybe<LinkFilter>
+  title?: Maybe<StringFilter>
+  challengeSolutionSectionHeader?: Maybe<LinkFilter>
+  challengeSolutionSection?: Maybe<LinkFilter>
+  featuresSection?: Maybe<LinksFilter>
+  caseStudiesSection?: Maybe<LinksFilter>
+  product?: Maybe<StringFilter>
+  featuresSectionHeader?: Maybe<LinkFilter>
+  architectureSection?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
 
@@ -22773,10 +22837,10 @@ export enum TmpmodelProductUseCasePageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ProductAsc = "product_ASC",
-  ProductDesc = "product_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  ProductAsc = "product_ASC",
+  ProductDesc = "product_DESC"
 }
 
 /** Record of type TMP: Product Use Case Page (tmpmodel_product_use_case_page) */
@@ -23086,20 +23150,20 @@ export type TmpmodelVaultOverviewPageRecord_SeoMetaTagsArgs = {
 }
 
 export type TrainingCourseModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  location?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
-  date?: Maybe<DateFilter>
   title?: Maybe<StringFilter>
+  date?: Maybe<DateFilter>
+  url?: Maybe<StringFilter>
+  location?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TrainingCourseModelFilter>>>
 }
 
@@ -23124,14 +23188,14 @@ export enum TrainingCourseModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  LocationAsc = "location_ASC",
-  LocationDesc = "location_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
   DateAsc = "date_ASC",
   DateDesc = "date_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
+  LocationAsc = "location_ASC",
+  LocationDesc = "location_DESC"
 }
 
 /** Record of type Training Course (training_course) */
@@ -23201,19 +23265,19 @@ export type TrainingPageRecordTrainingDescriptionArgs = {
 }
 
 export type TrainingPartnerSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  contactLink?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
   company?: Maybe<LinkFilter>
+  description?: Maybe<TextFilter>
+  contactLink?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TrainingPartnerSectionModelFilter>>>
 }
 
@@ -23274,24 +23338,24 @@ export type TrainingPartnerSectionRecordDescriptionArgs = {
 }
 
 export type TrialFormPageModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  sidebarCompanyLogos?: Maybe<LinksFilter>
-  sidebarText?: Maybe<TextFilter>
-  sidebarLogo?: Maybe<FileFilter>
-  productVersion?: Maybe<StringFilter>
-  enterpriseFeaturesLink?: Maybe<StringFilter>
-  nextStepLink?: Maybe<StringFilter>
-  title?: Maybe<StringFilter>
   productId?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  nextStepLink?: Maybe<StringFilter>
+  enterpriseFeaturesLink?: Maybe<StringFilter>
+  productVersion?: Maybe<StringFilter>
+  sidebarLogo?: Maybe<FileFilter>
+  sidebarText?: Maybe<TextFilter>
+  sidebarCompanyLogos?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<TrialFormPageModelFilter>>>
 }
 
@@ -23324,16 +23388,16 @@ export enum TrialFormPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ProductVersionAsc = "productVersion_ASC",
-  ProductVersionDesc = "productVersion_DESC",
-  EnterpriseFeaturesLinkAsc = "enterpriseFeaturesLink_ASC",
-  EnterpriseFeaturesLinkDesc = "enterpriseFeaturesLink_DESC",
-  NextStepLinkAsc = "nextStepLink_ASC",
-  NextStepLinkDesc = "nextStepLink_DESC",
+  ProductIdAsc = "productId_ASC",
+  ProductIdDesc = "productId_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  ProductIdAsc = "productId_ASC",
-  ProductIdDesc = "productId_DESC"
+  NextStepLinkAsc = "nextStepLink_ASC",
+  NextStepLinkDesc = "nextStepLink_DESC",
+  EnterpriseFeaturesLinkAsc = "enterpriseFeaturesLink_ASC",
+  EnterpriseFeaturesLinkDesc = "enterpriseFeaturesLink_DESC",
+  ProductVersionAsc = "productVersion_ASC",
+  ProductVersionDesc = "productVersion_DESC"
 }
 
 /** Record of type Trial Form Page (trial_form_page) */
@@ -23444,18 +23508,18 @@ export type TwoColumnTextRecordRightColumnArgs = {
 }
 
 export type TwoColumnTextSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  headline?: Maybe<StringFilter>
   content?: Maybe<TextFilter>
+  headline?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TwoColumnTextSectionModelFilter>>>
 }
 
@@ -23526,20 +23590,40 @@ export type TypeFilter = {
   notIn?: Maybe<Array<Maybe<UploadType>>>
 }
 
+/** Specifies how to filter by update datetime */
+export type UpdatedAtFilter = {
+  /** Filter records with a value that's strictly greater than the one specified */
+  gt?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's less than the one specified */
+  lt?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's greater than or equal to than the one specified */
+  gte?: Maybe<Scalars["DateTime"]>
+  /** Filter records with a value that's less or equal than the one specified */
+  lte?: Maybe<Scalars["DateTime"]>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
+  /** Search for records with an exact match (seconds are truncated) */
+  eq?: Maybe<Scalars["DateTime"]>
+  /** Exclude records with an exact match */
+  neq?: Maybe<Scalars["DateTime"]>
+}
+
 /** Specifies how to filter by default alt */
 export type UploadAltFilter = {
   /** Filter uploads based on a regular expression */
   matches?: Maybe<StringMatchesFilter>
   /** Exclude uploads based on a regular expression */
   notMatches?: Maybe<StringMatchesFilter>
-  /** Search the asset with the specified alt */
+  /** Search the uploads with the specified alt */
   eq?: Maybe<Scalars["String"]>
-  /** Exclude the asset with the specified alt */
+  /** Exclude the uploads with the specified alt */
   neq?: Maybe<Scalars["String"]>
-  /** Search assets with the specified values as default alt */
+  /** Search uploads with the specified values as default alt */
   in?: Maybe<Array<Maybe<Scalars["String"]>>>
-  /** Search assets that do not have the specified values as default alt */
+  /** Search uploads that do not have the specified values as default alt */
   notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Filter uploads with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
 }
 
 /** Specifies how to filter by auhtor */
@@ -23548,7 +23632,7 @@ export type UploadAuthorFilter = {
   matches?: Maybe<StringMatchesFilter>
   /** Exclude uploads based on a regular expression */
   notMatches?: Maybe<StringMatchesFilter>
-  /** Filter records with the specified field defined (i.e. with any value) or not */
+  /** Filter uploads with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
 }
 
@@ -23584,7 +23668,7 @@ export type UploadCopyrightFilter = {
   exists?: Maybe<Scalars["BooleanType"]>
 }
 
-/** Specifies how to filter for date of creation */
+/** Specifies how to filter by creation datetime */
 export type UploadCreatedAtFilter = {
   /** Search for uploads with an exact match */
   eq?: Maybe<Scalars["DateTime"]>
@@ -23653,9 +23737,9 @@ export type UploadHeightFilter = {
   /** Search all assets smaller than the specified height */
   lt?: Maybe<Scalars["IntType"]>
   /** Search all assets larger or equal to the specified height */
-  gte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  gte?: Maybe<Scalars["IntType"]>
   /** Search all assets larger or equal to the specified height */
-  lte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  lte?: Maybe<Scalars["IntType"]>
   /** Search assets with the specified height */
   eq?: Maybe<Scalars["IntType"]>
   /** Search assets that do not have the specified height */
@@ -23734,9 +23818,9 @@ export type UploadSizeFilter = {
   /** Search all assets smaller than the specified size */
   lt?: Maybe<Scalars["IntType"]>
   /** Search all assets larger or equal to the specified size */
-  gte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  gte?: Maybe<Scalars["IntType"]>
   /** Search all assets larger or equal to the specified size */
-  lte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  lte?: Maybe<Scalars["IntType"]>
   /** Search assets with the specified size */
   eq?: Maybe<Scalars["IntType"]>
   /** Search assets that do not have the specified size */
@@ -23771,6 +23855,8 @@ export type UploadTitleFilter = {
   in?: Maybe<Array<Maybe<Scalars["String"]>>>
   /** Search assets that do not have the specified as default title */
   notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Filter assets with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
 }
 
 export enum UploadType {
@@ -23784,7 +23870,7 @@ export enum UploadType {
   Archive = "archive"
 }
 
-/** Specifies how to filter for date of creation */
+/** Specifies how to filter by update datetime */
 export type UploadUpdatedAtFilter = {
   /** Search for uploads with an exact match */
   eq?: Maybe<Scalars["DateTime"]>
@@ -23827,9 +23913,9 @@ export type UploadWidthFilter = {
   /** Search all assets smaller than the specified width */
   lt?: Maybe<Scalars["IntType"]>
   /** Search all assets larger or equal to the specified width */
-  gte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  gte?: Maybe<Scalars["IntType"]>
   /** Search all assets larger or equal to the specified width */
-  lte?: Maybe<Array<Maybe<Scalars["IntType"]>>>
+  lte?: Maybe<Scalars["IntType"]>
   /** Search assets with the specified width */
   eq?: Maybe<Scalars["IntType"]>
   /** Search assets that do not have the specified width */
@@ -23837,15 +23923,15 @@ export type UploadWidthFilter = {
 }
 
 export type UseCasePageDropdownModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<UseCasePageDropdownModelFilter>>>
@@ -23945,21 +24031,21 @@ export type VaultAdvancedDataProtectionPageRecordDiagramTwoTextArgs = {
 }
 
 export type VaultIntegrationSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  authLink?: Maybe<LinkFilter>
-  authBackends?: Maybe<LinkFilter>
-  secretsLink?: Maybe<LinkFilter>
-  secretBackends?: Maybe<LinkFilter>
   headline?: Maybe<StringFilter>
+  secretBackends?: Maybe<LinkFilter>
+  secretsLink?: Maybe<LinkFilter>
+  authBackends?: Maybe<LinkFilter>
+  authLink?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<VaultIntegrationSectionModelFilter>>>
 }
 
@@ -24088,20 +24174,20 @@ export type VaultProductPageRecord_SeoMetaTagsArgs = {
 }
 
 export type VerticalTextBlockListItemModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  body?: Maybe<TextFilter>
-  header?: Maybe<StringFilter>
-  logo?: Maybe<FileFilter>
   linkUrl?: Maybe<StringFilter>
+  logo?: Maybe<FileFilter>
+  header?: Maybe<StringFilter>
+  body?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<VerticalTextBlockListItemModelFilter>>>
 }
 
@@ -24126,10 +24212,10 @@ export enum VerticalTextBlockListItemModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  HeaderAsc = "header_ASC",
-  HeaderDesc = "header_DESC",
   LinkUrlAsc = "linkUrl_ASC",
-  LinkUrlDesc = "linkUrl_DESC"
+  LinkUrlDesc = "linkUrl_DESC",
+  HeaderAsc = "header_ASC",
+  HeaderDesc = "header_DESC"
 }
 
 /** Record of type Vertical Text Block List Item (vertical_text_block_list_item) */
@@ -24165,19 +24251,19 @@ export type VerticalTextBlockListItemRecordBodyArgs = {
 }
 
 export type VerticalTextBlockListSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  items?: Maybe<LinksFilter>
-  title?: Maybe<StringFilter>
   centerText?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  items?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<VerticalTextBlockListSectionModelFilter>>>
 }
 
@@ -24202,10 +24288,10 @@ export enum VerticalTextBlockListSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
   CenterTextAsc = "centerText_ASC",
-  CenterTextDesc = "centerText_DESC"
+  CenterTextDesc = "centerText_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Vertical Text Block List Section (vertical_text_block_list_section) */
@@ -24283,15 +24369,15 @@ export type VideoRecord_SeoMetaTagsArgs = {
 }
 
 export type VideoSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   videoUrl?: Maybe<VideoFilter>
   OR?: Maybe<Array<Maybe<VideoSectionModelFilter>>>
@@ -24345,18 +24431,18 @@ export type VideoSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type VideoSourceModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  url?: Maybe<StringFilter>
   srcType?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<VideoSourceModelFilter>>>
 }
 
@@ -24381,10 +24467,10 @@ export enum VideoSourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
   SrcTypeAsc = "srcType_ASC",
-  SrcTypeDesc = "srcType_DESC"
+  SrcTypeDesc = "srcType_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type Video Source (video_source) */
@@ -24418,38 +24504,38 @@ export type WebinarModelBodyContentField =
   | BasicTableRecord
 
 export type WebinarModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   description?: Maybe<TextFilter>
-  primaryProduct?: Maybe<LinkFilter>
-  isAnnouncement?: Maybe<BooleanFilter>
-  backgroundImage?: Maybe<FileFilter>
-  product?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
-  industry?: Maybe<LinksFilter>
-  webinarId?: Maybe<StringFilter>
-  language?: Maybe<StringFilter>
-  hidden?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
-  draft?: Maybe<BooleanFilter>
-  title?: Maybe<StringFilter>
-  people?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  events?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
-  primaryInfrastructureProvider?: Maybe<LinkFilter>
-  bodyContent?: Maybe<LinksFilter>
-  heroContent?: Maybe<LinksFilter>
   date?: Maybe<DateFilter>
+  heroContent?: Maybe<LinksFilter>
+  bodyContent?: Maybe<LinksFilter>
+  primaryInfrastructureProvider?: Maybe<LinkFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
+  events?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  people?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
+  draft?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  hidden?: Maybe<BooleanFilter>
+  language?: Maybe<StringFilter>
+  webinarId?: Maybe<StringFilter>
+  industry?: Maybe<LinksFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  product?: Maybe<LinksFilter>
+  backgroundImage?: Maybe<FileFilter>
+  isAnnouncement?: Maybe<BooleanFilter>
+  primaryProduct?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<WebinarModelFilter>>>
 }
 
@@ -24478,22 +24564,22 @@ export enum WebinarModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  IsAnnouncementAsc = "isAnnouncement_ASC",
-  IsAnnouncementDesc = "isAnnouncement_DESC",
-  WebinarIdAsc = "webinarId_ASC",
-  WebinarIdDesc = "webinarId_DESC",
-  LanguageAsc = "language_ASC",
-  LanguageDesc = "language_DESC",
-  HiddenAsc = "hidden_ASC",
-  HiddenDesc = "hidden_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
   ShowDemoRequestAsc = "showDemoRequest_ASC",
   ShowDemoRequestDesc = "showDemoRequest_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC",
+  HiddenAsc = "hidden_ASC",
+  HiddenDesc = "hidden_DESC",
+  LanguageAsc = "language_ASC",
+  LanguageDesc = "language_DESC",
+  WebinarIdAsc = "webinarId_ASC",
+  WebinarIdDesc = "webinarId_DESC",
+  IsAnnouncementAsc = "isAnnouncement_ASC",
+  IsAnnouncementDesc = "isAnnouncement_DESC"
 }
 
 export type WebinarModelProductField =
@@ -24551,18 +24637,18 @@ export type WebinarRecordDescriptionArgs = {
 }
 
 export type WhitePaperModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  file?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
+  file?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<WhitePaperModelFilter>>>
 }
 
@@ -24616,19 +24702,79 @@ export type WhitePaperRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type WistiaSectionModelFilter = {
-  _createdAt?: Maybe<DateTimeFilter>
-  createdAt?: Maybe<DateTimeFilter>
+export type WipEventModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<DateTimeFilter>
-  _publicationScheduledAt?: Maybe<DateTimeFilter>
-  _publishedAt?: Maybe<DateTimeFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<DateTimeFilter>
-  updatedAt?: Maybe<DateTimeFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  videoId?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<WipEventModelFilter>>>
+}
+
+export enum WipEventModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type [WIP] Events (wip_event) */
+export type WipEventRecord = {
+  __typename?: "WipEventRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type [WIP] Events (wip_event) */
+export type WipEventRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type WistiaSectionModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
   internalTitle?: Maybe<StringFilter>
+  videoId?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<WistiaSectionModelFilter>>>
 }
 
@@ -24653,10 +24799,10 @@ export enum WistiaSectionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  VideoIdAsc = "videoId_ASC",
-  VideoIdDesc = "videoId_DESC",
   InternalTitleAsc = "internalTitle_ASC",
-  InternalTitleDesc = "internalTitle_DESC"
+  InternalTitleDesc = "internalTitle_DESC",
+  VideoIdAsc = "videoId_ASC",
+  VideoIdDesc = "videoId_DESC"
 }
 
 /** Record of type Wistia Section (wistia_section) */
