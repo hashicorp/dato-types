@@ -24713,6 +24713,7 @@ export type WipEventModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  dateAndTime?: Maybe<DateTimeFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<WipEventModelFilter>>>
 }
@@ -24738,6 +24739,8 @@ export enum WipEventModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DateAndTimeAsc = "dateAndTime_ASC",
+  DateAndTimeDesc = "dateAndTime_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -24756,6 +24759,7 @@ export type WipEventRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  dateAndTime?: Maybe<Scalars["DateTime"]>
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
