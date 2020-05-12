@@ -24714,6 +24714,7 @@ export type WipEventModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   dateAndTime?: Maybe<DateTimeFilter>
+  image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<WipEventModelFilter>>>
 }
@@ -24761,6 +24762,7 @@ export type WipEventRecord = {
   createdAt: Scalars["DateTime"]
   dateAndTime?: Maybe<Scalars["DateTime"]>
   id: Scalars["ItemId"]
+  image?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
