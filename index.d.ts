@@ -3639,6 +3639,29 @@ export type EventsPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Event Training (event_training) */
+export type EventTrainingRecord = {
+  __typename?: "EventTrainingRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Event Training (event_training) */
+export type EventTrainingRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type EventTypeModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -3733,6 +3756,29 @@ export type EventWebinarRecord = {
 
 /** Record of type Event Webinar (event_webinar) */
 export type EventWebinarRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Event Workshop (event_workshop) */
+export type EventWorkshopRecord = {
+  __typename?: "EventWorkshopRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Event Workshop (event_workshop) */
+export type EventWorkshopRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -24750,7 +24796,11 @@ export type WhitePaperRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type WipEventModelEventField = EventWebinarRecord | EventConferenceRecord
+export type WipEventModelEventField =
+  | EventWebinarRecord
+  | EventConferenceRecord
+  | EventTrainingRecord
+  | EventWorkshopRecord
 
 export type WipEventModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
