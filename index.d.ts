@@ -24740,6 +24740,7 @@ export type WipEventModelFilter = {
   dateAndTime?: Maybe<DateTimeFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<WipEventModelFilter>>>
 }
 
@@ -24788,6 +24789,7 @@ export type WipEventRecord = {
   event?: Maybe<Array<Maybe<EventWebinarRecord>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
+  slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
