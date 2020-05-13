@@ -3702,7 +3702,6 @@ export type EventWebinarRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  dateTime?: Maybe<Scalars["DateTime"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
