@@ -24761,6 +24761,7 @@ export type WipEventRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   dateAndTime?: Maybe<Scalars["DateTime"]>
+  event?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
