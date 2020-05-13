@@ -21380,16 +21380,16 @@ export type TemplatePageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  draft?: Maybe<BooleanFilter>
+  subnav?: Maybe<StringFilter>
+  metadata?: Maybe<SeoFilter>
+  preFooterCta?: Maybe<LinkFilter>
+  content?: Maybe<LinksFilter>
+  hero?: Maybe<LinkFilter>
+  hidden?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   showDemoRequest?: Maybe<BooleanFilter>
-  hidden?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
-  hero?: Maybe<LinkFilter>
-  content?: Maybe<LinksFilter>
-  preFooterCta?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
-  subnav?: Maybe<StringFilter>
-  draft?: Maybe<BooleanFilter>
   darkSubnav?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<TemplatePageModelFilter>>>
 }
@@ -21417,16 +21417,16 @@ export enum TemplatePageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC",
+  SubnavAsc = "subnav_ASC",
+  SubnavDesc = "subnav_DESC",
+  HiddenAsc = "hidden_ASC",
+  HiddenDesc = "hidden_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   ShowDemoRequestAsc = "showDemoRequest_ASC",
   ShowDemoRequestDesc = "showDemoRequest_DESC",
-  HiddenAsc = "hidden_ASC",
-  HiddenDesc = "hidden_DESC",
-  SubnavAsc = "subnav_ASC",
-  SubnavDesc = "subnav_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
   DarkSubnavAsc = "darkSubnav_ASC",
   DarkSubnavDesc = "darkSubnav_DESC"
 }
