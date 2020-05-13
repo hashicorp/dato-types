@@ -3704,6 +3704,7 @@ export type EventWebinarRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
+  webinarId?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Event Webinar (event_webinar) */
