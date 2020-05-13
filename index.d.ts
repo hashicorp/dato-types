@@ -24740,6 +24740,7 @@ export type WipEventModelFilter = {
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
+  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<WipEventModelFilter>>>
 }
 
@@ -24785,6 +24786,7 @@ export type WipEventRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   dateAndTime?: Maybe<Scalars["DateTime"]>
+  description?: Maybe<Scalars["String"]>
   event?: Maybe<Array<Maybe<EventWebinarRecord>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
@@ -24796,6 +24798,11 @@ export type WipEventRecord = {
 /** Record of type [WIP] Events (wip_event) */
 export type WipEventRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type [WIP] Events (wip_event) */
+export type WipEventRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type WistiaSectionModelFilter = {
