@@ -3467,6 +3467,29 @@ export type EnterpriseProductUseCasePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Event Conference (event_conference) */
+export type EventConferenceRecord = {
+  __typename?: "EventConferenceRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Event Conference (event_conference) */
+export type EventConferenceRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Event CTA (event_ctas_item) */
 export type EventCtasItemRecord = {
   __typename?: "EventCtasItemRecord"
@@ -24727,6 +24750,8 @@ export type WhitePaperRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type WipEventModelEventField = EventWebinarRecord | EventConferenceRecord
+
 export type WipEventModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -24789,7 +24814,7 @@ export type WipEventRecord = {
   createdAt: Scalars["DateTime"]
   dateAndTime?: Maybe<Scalars["DateTime"]>
   description?: Maybe<Scalars["String"]>
-  event?: Maybe<Array<Maybe<EventWebinarRecord>>>
+  event?: Maybe<Array<Maybe<WipEventModelEventField>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
