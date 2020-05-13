@@ -3688,6 +3688,29 @@ export type EventTypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Event Webinar (event_webinar) */
+export type EventWebinarRecord = {
+  __typename?: "EventWebinarRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Event Webinar (event_webinar) */
+export type EventWebinarRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Example (example) */
 export type ExampleRecord = {
   __typename?: "ExampleRecord"
@@ -24761,7 +24784,7 @@ export type WipEventRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   dateAndTime?: Maybe<Scalars["DateTime"]>
-  event?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
+  event?: Maybe<Array<Maybe<EventWebinarRecord>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
