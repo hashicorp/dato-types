@@ -24820,7 +24820,7 @@ export type WhitePaperRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type WipEventModelEventField =
+export type WipEventModelEventTypeField =
   | EventWebinarRecord
   | EventConferenceRecord
   | EventTrainingRecord
@@ -24889,7 +24889,7 @@ export type WipEventRecord = {
   createdAt: Scalars["DateTime"]
   dateAndTime?: Maybe<Scalars["DateTime"]>
   description?: Maybe<Scalars["String"]>
-  event?: Maybe<Array<Maybe<WipEventModelEventField>>>
+  eventType?: Maybe<Array<Maybe<WipEventModelEventTypeField>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
