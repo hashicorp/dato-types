@@ -24,49 +24,6 @@ export type Scalars = {
   JsonField: any
 }
 
-export type AboutPageModelPageContentField =
-  | CalloutSectionRecord
-  | HeroSectionRecord
-  | PersonListRecord
-  | TwoColumnTextSectionRecord
-
-/** Record of type About Page (DEPRECATED) (about_page) */
-export type AboutPageRecord = {
-  __typename?: "AboutPageRecord"
-  _allNameLocales?: Maybe<Array<Maybe<StringMultiLocaleField>>>
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  name?: Maybe<Scalars["String"]>
-  pageContent: Array<AboutPageModelPageContentField>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type About Page (DEPRECATED) (about_page) */
-export type AboutPageRecord_AllNameLocalesArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type About Page (DEPRECATED) (about_page) */
-export type AboutPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type About Page (DEPRECATED) (about_page) */
-export type AboutPageRecordNameArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type AlertBannerModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -9883,6 +9840,66 @@ export type MegaNavRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type MikeTestModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<MikeTestModelFilter>>>
+}
+
+export enum MikeTestModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Mike Test (mike_test) */
+export type MikeTestRecord = {
+  __typename?: "MikeTestRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Mike Test (mike_test) */
+export type MikeTestRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type MiniCalloutModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -12220,6 +12237,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allMajorHeadlineSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allMikeTestsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allMiniCalloutsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allNavCalloutsMeta: CollectionMetadata
@@ -12407,8 +12426,6 @@ export type Query = {
   _allWistiaSectionsMeta: CollectionMetadata
   /** Returns the single instance record */
   _site: Site
-  /** Returns the single instance record */
-  aboutPage?: Maybe<AboutPageRecord>
   /** Returns a specific record */
   alert?: Maybe<AlertRecord>
   /** Returns a specific record */
@@ -12585,6 +12602,8 @@ export type Query = {
   allLocationVenues: Array<LocationVenueRecord>
   /** Returns a collection of records */
   allMajorHeadlineSections: Array<MajorHeadlineSectionRecord>
+  /** Returns a collection of records */
+  allMikeTests: Array<MikeTestRecord>
   /** Returns a collection of records */
   allMiniCallouts: Array<MiniCalloutRecord>
   /** Returns a collection of records */
@@ -12981,6 +13000,8 @@ export type Query = {
   majorHeadlineSection?: Maybe<MajorHeadlineSectionRecord>
   /** Returns the single instance record */
   megaNav?: Maybe<MegaNavRecord>
+  /** Returns a specific record */
+  mikeTest?: Maybe<MikeTestRecord>
   /** Returns a specific record */
   miniCallout?: Maybe<MiniCalloutRecord>
   /** Returns the single instance record */
@@ -13754,6 +13775,12 @@ export type Query_AllMajorHeadlineSectionsMetaArgs = {
 }
 
 /** The query root for this schema */
+export type Query_AllMikeTestsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<MikeTestModelFilter>
+}
+
+/** The query root for this schema */
 export type Query_AllMiniCalloutsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<MiniCalloutModelFilter>
@@ -14313,11 +14340,6 @@ export type Query_AllWistiaSectionsMetaArgs = {
 
 /** The query root for this schema */
 export type Query_SiteArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryAboutPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -15098,6 +15120,15 @@ export type QueryAllMajorHeadlineSectionsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<MajorHeadlineSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<MajorHeadlineSectionModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllMikeTestsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<MikeTestModelFilter>
+  orderBy?: Maybe<Array<Maybe<MikeTestModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -16616,6 +16647,13 @@ export type QueryMajorHeadlineSectionArgs = {
 /** The query root for this schema */
 export type QueryMegaNavArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryMikeTestArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<MikeTestModelFilter>
+  orderBy?: Maybe<Array<Maybe<MikeTestModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -21290,12 +21328,6 @@ export type StringMatchesFilter = {
   pattern: Scalars["String"]
   caseSensitive?: Maybe<Scalars["BooleanType"]>
   regexp?: Maybe<Scalars["BooleanType"]>
-}
-
-export type StringMultiLocaleField = {
-  __typename?: "StringMultiLocaleField"
-  locale?: Maybe<SiteLocale>
-  value?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Subscription Confirmation Page (subscription_confirmation_page) */
