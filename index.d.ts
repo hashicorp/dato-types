@@ -24395,7 +24395,6 @@ export type WebinarModelFilter = {
   industry?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
   product?: Maybe<LinksFilter>
-  backgroundImage?: Maybe<FileFilter>
   isAnnouncement?: Maybe<BooleanFilter>
   primaryProduct?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<WebinarModelFilter>>>
@@ -24461,7 +24460,6 @@ export type WebinarRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  backgroundImage?: Maybe<FileField>
   bodyContent: Array<WebinarModelBodyContentField>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
