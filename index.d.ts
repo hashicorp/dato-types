@@ -4966,31 +4966,6 @@ export type FormTextFieldRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type 404 Page (fourohfour_page) */
-export type FourohfourPageRecord = {
-  __typename?: "FourohfourPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  hero?: Maybe<HeroSectionRecord>
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type 404 Page (fourohfour_page) */
-export type FourohfourPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Specifies how to filter Multiple files/images field */
 export type GalleryFilter = {
   /** Search for records with an exact match. The specified values must be Upload IDs */
@@ -9281,38 +9256,6 @@ export type JobsPageDepartmentRecordMissionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type JobsPageModelContentField =
-  | CalloutSectionRecord
-  | TextImageSectionRecord
-  | ImageSectionRecord
-  | HeroSectionRecord
-
-/** Record of type Jobs Page (jobs_page) */
-export type JobsPageRecord = {
-  __typename?: "JobsPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  content: Array<JobsPageModelContentField>
-  createdAt: Scalars["DateTime"]
-  headline?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Jobs Page (jobs_page) */
-export type JobsPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Specifies how to filter JSON fields */
 export type JsonFilter = {
   /** Filter records with the specified field defined (i.e. with any value) or not */
@@ -12941,8 +12884,6 @@ export type Query = {
   /** Returns a specific record */
   formMultiSelectOption?: Maybe<FormMultiSelectOptionRecord>
   /** Returns the single instance record */
-  fourohfourPage?: Maybe<FourohfourPageRecord>
-  /** Returns the single instance record */
   globalDemoForm?: Maybe<GlobalDemoFormRecord>
   /** Returns the single instance record */
   globalFooter?: Maybe<GlobalFooterRecord>
@@ -13020,8 +12961,6 @@ export type Query = {
   integrationsPage?: Maybe<IntegrationsPageRecord>
   /** Returns a specific record */
   jobsEmployeeTestimonial?: Maybe<JobsEmployeeTestimonialRecord>
-  /** Returns the single instance record */
-  jobsPage?: Maybe<JobsPageRecord>
   /** Returns a specific record */
   jobsPageDepartment?: Maybe<JobsPageDepartmentRecord>
   /** Returns a specific record */
@@ -16362,11 +16301,6 @@ export type QueryFormMultiSelectOptionArgs = {
 }
 
 /** The query root for this schema */
-export type QueryFourohfourPageArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
 export type QueryGlobalDemoFormArgs = {
   locale?: Maybe<SiteLocale>
 }
@@ -16616,11 +16550,6 @@ export type QueryJobsEmployeeTestimonialArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsEmployeeTestimonialModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsEmployeeTestimonialModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryJobsPageArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
