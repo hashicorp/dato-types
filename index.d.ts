@@ -333,70 +333,6 @@ export type BecomeAPartnerPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type BlogCategoryV2ModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  name?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<BlogCategoryV2ModelFilter>>>
-}
-
-export enum BlogCategoryV2ModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
-}
-
-/** Record of type Blog Category V2 (blog_category_v2) */
-export type BlogCategoryV2Record = {
-  __typename?: "BlogCategoryV2Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  name?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Blog Category V2 (blog_category_v2) */
-export type BlogCategoryV2Record_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type Blog Image (blog_image) */
 export type BlogImageRecord = {
   __typename?: "BlogImageRecord"
@@ -650,7 +586,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  category2?: Maybe<StringFilter>
+  category?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   mainImage?: Maybe<FileFilter>
   publishDate?: Maybe<DateTimeFilter>
@@ -683,8 +619,8 @@ export enum BlogPostV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  Category2Asc = "category2_ASC",
-  Category2Desc = "category2_DESC",
+  CategoryAsc = "category_ASC",
+  CategoryDesc = "category_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   PublishDateAsc = "publishDate_ASC",
@@ -706,7 +642,7 @@ export type BlogPostV2Record = {
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
   blogSeoMetaTags?: Maybe<SeoField>
-  category2?: Maybe<Scalars["String"]>
+  category?: Maybe<Scalars["String"]>
   content?: Maybe<Array<Maybe<BlogPostV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -12015,8 +11951,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allBasicTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allBlogCategoryV2sMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allBlogPostCategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allBlogPostV2sMeta: CollectionMetadata
@@ -12377,8 +12311,6 @@ export type Query = {
   /** Returns a collection of records */
   allBasicTables: Array<BasicTableRecord>
   /** Returns a collection of records */
-  allBlogCategoryV2s: Array<BlogCategoryV2Record>
-  /** Returns a collection of records */
   allBlogPostCategories: Array<BlogPostCategoryRecord>
   /** Returns a collection of records */
   allBlogPostV2s: Array<BlogPostV2Record>
@@ -12734,8 +12666,6 @@ export type Query = {
   basicTable?: Maybe<BasicTableRecord>
   /** Returns the single instance record */
   becomeAPartnerPage?: Maybe<BecomeAPartnerPageRecord>
-  /** Returns a specific record */
-  blogCategoryV2?: Maybe<BlogCategoryV2Record>
   /** Returns the single instance record */
   blogIndexPage?: Maybe<BlogIndexPageRecord>
   /** Returns a specific record */
@@ -13216,12 +13146,6 @@ export type Query_AllAlertsMetaArgs = {
 export type Query_AllBasicTablesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<BasicTableModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllBlogCategoryV2sMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<BlogCategoryV2ModelFilter>
 }
 
 /** The query root for this schema */
@@ -14312,15 +14236,6 @@ export type QueryAllBasicTablesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<BasicTableModelFilter>
   orderBy?: Maybe<Array<Maybe<BasicTableModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryAllBlogCategoryV2sArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<BlogCategoryV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<BlogCategoryV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -15899,13 +15814,6 @@ export type QueryBasicTableArgs = {
 /** The query root for this schema */
 export type QueryBecomeAPartnerPageArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryBlogCategoryV2Args = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<BlogCategoryV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<BlogCategoryV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
