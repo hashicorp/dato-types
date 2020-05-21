@@ -657,7 +657,6 @@ export type BlogPostV2ModelFilter = {
   slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
-  category?: Maybe<LinkFilter>
   author?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
@@ -707,7 +706,6 @@ export type BlogPostV2Record = {
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
   blogSeoMetaTags?: Maybe<SeoField>
-  category?: Maybe<BlogCategoryV2Record>
   category2?: Maybe<Scalars["String"]>
   content?: Maybe<Array<Maybe<BlogPostV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
