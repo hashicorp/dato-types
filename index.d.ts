@@ -13285,8 +13285,6 @@ export type Query = {
   /** Returns a specific record */
   vaultIntegrationSection?: Maybe<VaultIntegrationSectionRecord>
   /** Returns the single instance record */
-  vaultOssPage?: Maybe<VaultOssPageRecord>
-  /** Returns the single instance record */
   vaultProductPage?: Maybe<VaultProductPageRecord>
   /** Returns a specific record */
   verticalTextBlockListItem?: Maybe<VerticalTextBlockListItemRecord>
@@ -17454,11 +17452,6 @@ export type QueryVaultIntegrationSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<VaultIntegrationSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<VaultIntegrationSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryVaultOssPageArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
@@ -24217,38 +24210,6 @@ export type VaultIntegrationSectionRecord = {
 
 /** Record of type Vault Integration Section (deprecated) (vault_integration_section) */
 export type VaultIntegrationSectionRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Vault OSS Page (vault_oss_page) */
-export type VaultOssPageRecord = {
-  __typename?: "VaultOssPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  hero?: Maybe<HeroSectionRecord>
-  id: Scalars["ItemId"]
-  infrastructureDiagram?: Maybe<SbcBeforeAfterDiagramRecord>
-  infrastructureHeadline?: Maybe<SbcSectionHeaderRecord>
-  metadata?: Maybe<SeoField>
-  openSourceCta?: Maybe<TmpmodelButtonRecord>
-  openSourceHeadline?: Maybe<SbcSectionHeaderRecord>
-  principles: Array<SbcTextAndContentRecord>
-  principlesHeadline?: Maybe<SbcSectionHeaderRecord>
-  updatedAt: Scalars["DateTime"]
-  useCases?: Maybe<SbcUseCasesSectionRecord>
-}
-
-/** Record of type Vault OSS Page (vault_oss_page) */
-export type VaultOssPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
