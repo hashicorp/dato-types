@@ -39,6 +39,7 @@ export type AboutPageRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
   people: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
 }
