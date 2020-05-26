@@ -24,6 +24,29 @@ export type Scalars = {
   JsonField: any
 }
 
+/** Record of type about_page (about_page) */
+export type AboutPageRecord = {
+  __typename?: "AboutPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type about_page (about_page) */
+export type AboutPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type AlertBannerModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -12267,6 +12290,8 @@ export type Query = {
   _allWistiaSectionsMeta: CollectionMetadata
   /** Returns the single instance record */
   _site: Site
+  /** Returns the single instance record */
+  aboutPage?: Maybe<AboutPageRecord>
   /** Returns a specific record */
   alert?: Maybe<AlertRecord>
   /** Returns a specific record */
@@ -14159,6 +14184,11 @@ export type Query_AllWistiaSectionsMetaArgs = {
 
 /** The query root for this schema */
 export type Query_SiteArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryAboutPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
