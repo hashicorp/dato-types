@@ -9255,7 +9255,7 @@ export type LearnGuideRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Learn Landing Page (learn_landing_page) */
+/** Record of type [Deprecated] Learn Landing Page (learn_landing_page) */
 export type LearnLandingPageRecord = {
   __typename?: "LearnLandingPageRecord"
   _createdAt: Scalars["DateTime"]
@@ -9278,12 +9278,12 @@ export type LearnLandingPageRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Learn Landing Page (learn_landing_page) */
+/** Record of type [Deprecated] Learn Landing Page (learn_landing_page) */
 export type LearnLandingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Learn Landing Page (learn_landing_page) */
+/** Record of type [Deprecated] Learn Landing Page (learn_landing_page) */
 export type LearnLandingPageRecordBodyArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
