@@ -9255,39 +9255,6 @@ export type LearnGuideRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type [Deprecated] Learn Landing Page (learn_landing_page) */
-export type LearnLandingPageRecord = {
-  __typename?: "LearnLandingPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  alertBanner?: Maybe<AlertBannerRecord>
-  body?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  heading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  items: Array<VerticalTextBlockListItemRecord>
-  metadata?: Maybe<SeoField>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type [Deprecated] Learn Landing Page (learn_landing_page) */
-export type LearnLandingPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type [Deprecated] Learn Landing Page (learn_landing_page) */
-export type LearnLandingPageRecordBodyArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 /** Specifies how to filter Single-link fields */
 export type LinkFilter = {
   /** Search for records with an exact match. The specified value must be a Record ID */
@@ -12852,8 +12819,6 @@ export type Query = {
   jobsPageDepartment?: Maybe<JobsPageDepartmentRecord>
   /** Returns a specific record */
   largeLogoGridSection?: Maybe<LargeLogoGridSectionRecord>
-  /** Returns the single instance record */
-  learnLandingPage?: Maybe<LearnLandingPageRecord>
   /** Returns a specific record */
   link?: Maybe<LinkRecord>
   /** Returns a specific record */
@@ -16424,11 +16389,6 @@ export type QueryLargeLogoGridSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<LargeLogoGridSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<LargeLogoGridSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryLearnLandingPageArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
