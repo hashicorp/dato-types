@@ -9817,6 +9817,7 @@ export type MarkdownRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -9825,6 +9826,11 @@ export type MarkdownRecord = {
 /** Record of type Markdown (markdown) */
 export type MarkdownRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Markdown (markdown) */
+export type MarkdownRecordContentArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Mega Nav (mega_nav) */
