@@ -701,6 +701,7 @@ export type BlogProductsV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  productName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogProductsV2ModelFilter>>>
 }
 
@@ -724,7 +725,9 @@ export enum BlogProductsV2ModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  ProductNameAsc = "productName_ASC",
+  ProductNameDesc = "productName_DESC"
 }
 
 /** Record of type Blog Products V2 (blog_products_v2) */
@@ -742,6 +745,7 @@ export type BlogProductsV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  productName?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
