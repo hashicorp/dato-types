@@ -9338,7 +9338,7 @@ export type LearnGuideRecord = {
   createdAt: Scalars["DateTime"]
   guideUrl?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  product?: Maybe<EnterpriseProductRecord>
+  product?: Maybe<BlogProductsV2Record>
   updatedAt: Scalars["DateTime"]
 }
 
