@@ -620,6 +620,7 @@ export type BlogPostV2ModelFilter = {
   summary?: Maybe<TextFilter>
   author?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
+  product?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
 
@@ -672,6 +673,7 @@ export type BlogPostV2Record = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   mainImage?: Maybe<FileField>
+  product: Array<BlogProductsV2Record>
   publishDate?: Maybe<Scalars["DateTime"]>
   slug?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
