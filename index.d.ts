@@ -599,6 +599,7 @@ export type BlogPostV2ModelContentField =
   | CodeBlockRecord
   | NewsletterSignupCtaRecord
   | SalesCtaRecord
+  | MarkdownRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -9800,6 +9801,29 @@ export type MajorHeadlineSectionRecord = {
 
 /** Record of type Major Headline Section (major_headline_section) */
 export type MajorHeadlineSectionRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Markdown (markdown) */
+export type MarkdownRecord = {
+  __typename?: "MarkdownRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Markdown (markdown) */
+export type MarkdownRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
