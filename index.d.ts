@@ -676,7 +676,6 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  category?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   mainImage?: Maybe<FileFilter>
   orderingDate?: Maybe<DateTimeFilter>
@@ -711,8 +710,6 @@ export enum BlogPostV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  CategoryAsc = "category_ASC",
-  CategoryDesc = "category_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   OrderingDateAsc = "orderingDate_ASC",
@@ -736,7 +733,6 @@ export type BlogPostV2Record = {
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
   blogSeoMetaTags?: Maybe<SeoField>
-  category?: Maybe<Scalars["String"]>
   content?: Maybe<Array<Maybe<BlogPostV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
