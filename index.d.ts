@@ -679,7 +679,7 @@ export type BlogPostV2ModelFilter = {
   category?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   mainImage?: Maybe<FileFilter>
-  publishDate?: Maybe<DateTimeFilter>
+  orderingDate?: Maybe<DateTimeFilter>
   slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
   summary?: Maybe<TextFilter>
@@ -715,8 +715,8 @@ export enum BlogPostV2ModelOrderBy {
   CategoryDesc = "category_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  PublishDateAsc = "publishDate_ASC",
-  PublishDateDesc = "publishDate_DESC",
+  OrderingDateAsc = "orderingDate_ASC",
+  OrderingDateDesc = "orderingDate_DESC",
   ProductDenormalizedAsc = "productDenormalized_ASC",
   ProductDenormalizedDesc = "productDenormalized_DESC"
 }
@@ -741,9 +741,9 @@ export type BlogPostV2Record = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   mainImage?: Maybe<FileField>
+  orderingDate?: Maybe<Scalars["DateTime"]>
   product: Array<BlogProductsV2Record>
   productDenormalized?: Maybe<Scalars["String"]>
-  publishDate?: Maybe<Scalars["DateTime"]>
   slug?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
   tags: Array<BlogTagsV2Record>
