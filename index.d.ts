@@ -686,6 +686,7 @@ export type BlogPostV2ModelFilter = {
   author?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   product?: Maybe<LinksFilter>
+  productDenormalized?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
 
@@ -715,7 +716,9 @@ export enum BlogPostV2ModelOrderBy {
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   PublishDateAsc = "publishDate_ASC",
-  PublishDateDesc = "publishDate_DESC"
+  PublishDateDesc = "publishDate_DESC",
+  ProductDenormalizedAsc = "productDenormalized_ASC",
+  ProductDenormalizedDesc = "productDenormalized_DESC"
 }
 
 /** Record of type Blog Post v2 (blog_post_v2) */
@@ -739,6 +742,7 @@ export type BlogPostV2Record = {
   id: Scalars["ItemId"]
   mainImage?: Maybe<FileField>
   product: Array<BlogProductsV2Record>
+  productDenormalized?: Maybe<Scalars["String"]>
   publishDate?: Maybe<Scalars["DateTime"]>
   slug?: Maybe<Scalars["String"]>
   summary?: Maybe<Scalars["String"]>
