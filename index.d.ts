@@ -371,6 +371,7 @@ export type BlogCategoriesV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
+  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<BlogCategoriesV2ModelFilter>>>
 }
 
@@ -413,6 +414,7 @@ export type BlogCategoriesV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
@@ -422,6 +424,11 @@ export type BlogCategoriesV2Record = {
 /** Record of type Blog Categories V2 (blog_categories_v2) */
 export type BlogCategoriesV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Blog Categories V2 (blog_categories_v2) */
+export type BlogCategoriesV2RecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Blog Image (blog_image) */
