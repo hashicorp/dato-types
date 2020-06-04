@@ -670,6 +670,7 @@ export type BlogPostV2ModelFilter = {
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
+  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
@@ -699,6 +700,8 @@ export enum BlogPostV2ModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -742,6 +745,7 @@ export type BlogPostV2Record = {
   id: Scalars["ItemId"]
   mainImage?: Maybe<FileField>
   orderingDate?: Maybe<Scalars["DateTime"]>
+  position?: Maybe<Scalars["IntType"]>
   product: Array<BlogProductsV2Record>
   productDenormalized?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
