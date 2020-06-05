@@ -372,6 +372,7 @@ export type BlogCategoriesV2ModelFilter = {
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   description?: Maybe<TextFilter>
+  featuredPost?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<BlogCategoriesV2ModelFilter>>>
 }
 
@@ -415,6 +416,7 @@ export type BlogCategoriesV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
+  featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
