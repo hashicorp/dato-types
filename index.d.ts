@@ -373,6 +373,7 @@ export type BlogCategoriesV2ModelFilter = {
   slug?: Maybe<SlugFilter>
   description?: Maybe<TextFilter>
   featuredPost?: Maybe<LinkFilter>
+  subtitle?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogCategoriesV2ModelFilter>>>
 }
 
@@ -398,7 +399,9 @@ export enum BlogCategoriesV2ModelOrderBy {
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  SubtitleAsc = "subtitle_ASC",
+  SubtitleDesc = "subtitle_DESC"
 }
 
 /** Record of type Blog Categories V2 (blog_categories_v2) */
@@ -419,6 +422,7 @@ export type BlogCategoriesV2Record = {
   featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
+  subtitle?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
