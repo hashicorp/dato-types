@@ -371,9 +371,9 @@ export type BlogCategoriesV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
-  description?: Maybe<TextFilter>
   featuredPost?: Maybe<LinkFilter>
   subtitle?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<BlogCategoriesV2ModelFilter>>>
 }
 
@@ -846,6 +846,7 @@ export type BlogTagsV2ModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   tag?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<BlogTagsV2ModelFilter>>>
 }
 
@@ -889,6 +890,7 @@ export type BlogTagsV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  slug?: Maybe<Scalars["String"]>
   tag?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
