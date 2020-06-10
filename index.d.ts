@@ -845,7 +845,7 @@ export type BlogTagsV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  tag?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<BlogTagsV2ModelFilter>>>
 }
@@ -871,8 +871,8 @@ export enum BlogTagsV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TagAsc = "tag_ASC",
-  TagDesc = "tag_DESC"
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Blog Tags V2 (blog_tags_v2) */
@@ -891,7 +891,7 @@ export type BlogTagsV2Record = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
-  tag?: Maybe<Scalars["String"]>
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
