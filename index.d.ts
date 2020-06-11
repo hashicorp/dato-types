@@ -1676,6 +1676,7 @@ export type CloudPartnerPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  pinnedResourceTitle?: Maybe<StringFilter>
   metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
@@ -1703,6 +1704,8 @@ export enum CloudPartnerPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  PinnedResourceTitleAsc = "pinnedResourceTitle_ASC",
+  PinnedResourceTitleDesc = "pinnedResourceTitle_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -1724,6 +1727,7 @@ export type CloudPartnerPageRecord = {
   id: Scalars["ItemId"]
   integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
   metadata?: Maybe<SeoField>
+  pinnedResourceTitle?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
