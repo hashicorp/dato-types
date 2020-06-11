@@ -9912,39 +9912,6 @@ export type MarkdownRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Mega Nav (mega_nav) */
-export type MegaNavRecord = {
-  __typename?: "MegaNavRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  callout?: Maybe<NavCalloutRecord>
-  companyLinks: Array<LinkRecord>
-  createdAt: Scalars["DateTime"]
-  docsLinks: Array<LinkRecord>
-  footerLinks: Array<LinkRecord>
-  id: Scalars["ItemId"]
-  partnersLinks: Array<LinkRecord>
-  primaryLogo?: Maybe<FileField>
-  primaryLogoWhite?: Maybe<FileField>
-  productsLinks: Array<EnterpriseProductRecord>
-  resourcesLinks: Array<LinkRecord>
-  socialLinks: Array<SocialNetworkRecord>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Mega Nav (mega_nav) */
-export type MegaNavRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type MiniCalloutModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -13045,8 +13012,6 @@ export type Query = {
   locationVenue?: Maybe<LocationVenueRecord>
   /** Returns a specific record */
   majorHeadlineSection?: Maybe<MajorHeadlineSectionRecord>
-  /** Returns the single instance record */
-  megaNav?: Maybe<MegaNavRecord>
   /** Returns a specific record */
   miniCallout?: Maybe<MiniCalloutRecord>
   /** Returns the single instance record */
@@ -16694,11 +16659,6 @@ export type QueryMajorHeadlineSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<MajorHeadlineSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<MajorHeadlineSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryMegaNavArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
