@@ -1678,6 +1678,7 @@ export type CloudPartnerPageModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   pinnedResourceTitle?: Maybe<StringFilter>
   metadata?: Maybe<SeoFilter>
+  pinnedResourceUrl?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
@@ -1706,6 +1707,8 @@ export enum CloudPartnerPageModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   PinnedResourceTitleAsc = "pinnedResourceTitle_ASC",
   PinnedResourceTitleDesc = "pinnedResourceTitle_DESC",
+  PinnedResourceUrlAsc = "pinnedResourceUrl_ASC",
+  PinnedResourceUrlDesc = "pinnedResourceUrl_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -1728,6 +1731,7 @@ export type CloudPartnerPageRecord = {
   integrations?: Maybe<Array<Maybe<IntegrationDetailRecord>>>
   metadata?: Maybe<SeoField>
   pinnedResourceTitle?: Maybe<Scalars["String"]>
+  pinnedResourceUrl?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
