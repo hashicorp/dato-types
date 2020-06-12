@@ -507,6 +507,7 @@ export type BlogLandingPageRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   featuredPost?: Maybe<BlogPostV2Record>
+  highlightedPosts: Array<BlogPostV2Record>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
