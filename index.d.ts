@@ -492,6 +492,30 @@ export type BlogIndexPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Blog Landing Page (blog_landing_page) */
+export type BlogLandingPageRecord = {
+  __typename?: "BlogLandingPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  featuredPost?: Maybe<BlogPostV2Record>
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Blog Landing Page (blog_landing_page) */
+export type BlogLandingPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type BlogPostCategoryModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -12827,6 +12851,8 @@ export type Query = {
   blogCategoriesV2?: Maybe<BlogCategoriesV2Record>
   /** Returns the single instance record */
   blogIndexPage?: Maybe<BlogIndexPageRecord>
+  /** Returns the single instance record */
+  blogLandingPage?: Maybe<BlogLandingPageRecord>
   /** Returns a specific record */
   blogPost?: Maybe<BlogPostRecord>
   /** Returns a specific record */
@@ -16017,6 +16043,11 @@ export type QueryBlogCategoriesV2Args = {
 
 /** The query root for this schema */
 export type QueryBlogIndexPageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryBlogLandingPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
