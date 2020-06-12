@@ -503,6 +503,7 @@ export type BlogPostCategoryModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featuredPost?: Maybe<LinkFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<BlogPostCategoryModelFilter>>>
@@ -547,6 +548,7 @@ export type BlogPostCategoryRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
