@@ -781,6 +781,7 @@ export type BlogProductsV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featuredPost?: Maybe<LinkFilter>
   productName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogProductsV2ModelFilter>>>
 }
@@ -824,6 +825,7 @@ export type BlogProductsV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
   productName?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
