@@ -718,7 +718,6 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  title?: Maybe<StringFilter>
   mainImage?: Maybe<FileFilter>
   orderingDate?: Maybe<DateTimeFilter>
   slug?: Maybe<SlugFilter>
@@ -727,6 +726,7 @@ export type BlogPostV2ModelFilter = {
   author?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   product?: Maybe<LinksFilter>
+  title?: Maybe<StringFilter>
   category?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
@@ -752,12 +752,12 @@ export enum BlogPostV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
   OrderingDateAsc = "orderingDate_ASC",
   OrderingDateDesc = "orderingDate_DESC",
   SummaryAsc = "summary_ASC",
-  SummaryDesc = "summary_DESC"
+  SummaryDesc = "summary_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Blog Post v2 (blog_post_v2) */
