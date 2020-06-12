@@ -696,7 +696,7 @@ export type BlogPostV2ModelFilter = {
   orderingDate?: Maybe<DateTimeFilter>
   slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
-  summary?: Maybe<TextFilter>
+  summary?: Maybe<StringFilter>
   author?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   product?: Maybe<LinksFilter>
@@ -728,7 +728,9 @@ export enum BlogPostV2ModelOrderBy {
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   OrderingDateAsc = "orderingDate_ASC",
-  OrderingDateDesc = "orderingDate_DESC"
+  OrderingDateDesc = "orderingDate_DESC",
+  SummaryAsc = "summary_ASC",
+  SummaryDesc = "summary_DESC"
 }
 
 /** Record of type Blog Post v2 (blog_post_v2) */
@@ -763,11 +765,6 @@ export type BlogPostV2Record = {
 /** Record of type Blog Post v2 (blog_post_v2) */
 export type BlogPostV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Blog Post v2 (blog_post_v2) */
-export type BlogPostV2RecordSummaryArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type BlogProductsV2ModelFilter = {
