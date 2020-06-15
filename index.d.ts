@@ -11800,7 +11800,6 @@ export type ProductPricingPlanModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  subtitle?: Maybe<StringFilter>
   displayTitle?: Maybe<StringFilter>
   url?: Maybe<StringFilter>
   featureLink?: Maybe<LinkFilter>
@@ -11835,8 +11834,6 @@ export enum ProductPricingPlanModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SubtitleAsc = "subtitle_ASC",
-  SubtitleDesc = "subtitle_DESC",
   DisplayTitleAsc = "displayTitle_ASC",
   DisplayTitleDesc = "displayTitle_DESC",
   UrlAsc = "url_ASC",
@@ -11875,7 +11872,6 @@ export type ProductPricingPlanRecord = {
   isFreeDownload?: Maybe<Scalars["BooleanType"]>
   link?: Maybe<LinkRecord>
   shortDescription?: Maybe<Scalars["String"]>
-  subtitle?: Maybe<Scalars["String"]>
   target?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
