@@ -11800,16 +11800,17 @@ export type ProductPricingPlanModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  subtitle?: Maybe<StringFilter>
   displayTitle?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
+  featureLink?: Maybe<LinkFilter>
+  isFreeDownload?: Maybe<BooleanFilter>
+  shortDescription?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
   target?: Maybe<StringFilter>
   link?: Maybe<LinkFilter>
   internalDescriptiveTitle?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
-  shortDescription?: Maybe<StringFilter>
-  isFreeDownload?: Maybe<BooleanFilter>
-  featureLink?: Maybe<LinkFilter>
-  url?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ProductPricingPlanModelFilter>>>
 }
 
@@ -11834,20 +11835,22 @@ export enum ProductPricingPlanModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  SubtitleAsc = "subtitle_ASC",
+  SubtitleDesc = "subtitle_DESC",
   DisplayTitleAsc = "displayTitle_ASC",
   DisplayTitleDesc = "displayTitle_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
+  IsFreeDownloadAsc = "isFreeDownload_ASC",
+  IsFreeDownloadDesc = "isFreeDownload_DESC",
+  ShortDescriptionAsc = "shortDescription_ASC",
+  ShortDescriptionDesc = "shortDescription_DESC",
   TargetAsc = "target_ASC",
   TargetDesc = "target_DESC",
   InternalDescriptiveTitleAsc = "internalDescriptiveTitle_ASC",
   InternalDescriptiveTitleDesc = "internalDescriptiveTitle_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
-  ShortDescriptionAsc = "shortDescription_ASC",
-  ShortDescriptionDesc = "shortDescription_DESC",
-  IsFreeDownloadAsc = "isFreeDownload_ASC",
-  IsFreeDownloadDesc = "isFreeDownload_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC"
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type · Product Pricing Plan (product_pricing_plan) */
@@ -11872,6 +11875,7 @@ export type ProductPricingPlanRecord = {
   isFreeDownload?: Maybe<Scalars["BooleanType"]>
   link?: Maybe<LinkRecord>
   shortDescription?: Maybe<Scalars["String"]>
+  subtitle?: Maybe<Scalars["String"]>
   target?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
