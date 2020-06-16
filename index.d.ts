@@ -1659,6 +1659,7 @@ export type CaseStudyLinkModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   industry?: Maybe<StringFilter>
+  date?: Maybe<DateFilter>
   title?: Maybe<StringFilter>
   linkUrl?: Maybe<StringFilter>
   thumbnailImage?: Maybe<FileFilter>
@@ -1690,6 +1691,8 @@ export enum CaseStudyLinkModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   IndustryAsc = "industry_ASC",
   IndustryDesc = "industry_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   LinkUrlAsc = "linkUrl_ASC",
@@ -1715,6 +1718,7 @@ export type CaseStudyLinkRecord = {
   _updatedAt: Scalars["DateTime"]
   caseStudyType?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  date?: Maybe<Scalars["Date"]>
   id: Scalars["ItemId"]
   industry?: Maybe<Scalars["String"]>
   linkUrl?: Maybe<Scalars["String"]>
