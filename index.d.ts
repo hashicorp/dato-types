@@ -1647,6 +1647,29 @@ export type CallToActionRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Case Study Landing Page (case_study_landing_page) */
+export type CaseStudyLandingPageRecord = {
+  __typename?: "CaseStudyLandingPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Case Study Landing Page (case_study_landing_page) */
+export type CaseStudyLandingPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type CaseStudyLinkModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -13050,6 +13073,8 @@ export type Query = {
   calloutItem?: Maybe<CalloutItemRecord>
   /** Returns a specific record */
   calloutSection?: Maybe<CalloutSectionRecord>
+  /** Returns the single instance record */
+  caseStudyLandingPage?: Maybe<CaseStudyLandingPageRecord>
   /** Returns a specific record */
   caseStudyLink?: Maybe<CaseStudyLinkRecord>
   /** Returns a specific record */
@@ -16348,6 +16373,11 @@ export type QueryCalloutSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<CalloutSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<CalloutSectionModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryCaseStudyLandingPageArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
