@@ -1660,6 +1660,7 @@ export type CaseStudyLinkModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   industry?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
+  products?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   linkUrl?: Maybe<StringFilter>
   thumbnailImage?: Maybe<FileFilter>
@@ -1722,6 +1723,7 @@ export type CaseStudyLinkRecord = {
   id: Scalars["ItemId"]
   industry?: Maybe<Scalars["String"]>
   linkUrl?: Maybe<Scalars["String"]>
+  products: Array<CaseStudyProductRecord>
   summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
