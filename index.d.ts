@@ -1687,8 +1687,8 @@ export type CaseStudyLinkModelFilter = {
   products?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   thumbnailImage?: Maybe<FileFilter>
-  caseStudyType?: Maybe<StringFilter>
   url?: Maybe<StringFilter>
+  mediaType?: Maybe<StringFilter>
   summary?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CaseStudyLinkModelFilter>>>
 }
@@ -1720,10 +1720,10 @@ export enum CaseStudyLinkModelOrderBy {
   DateDesc = "date_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  CaseStudyTypeAsc = "caseStudyType_ASC",
-  CaseStudyTypeDesc = "caseStudyType_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
+  MediaTypeAsc = "mediaType_ASC",
+  MediaTypeDesc = "mediaType_DESC",
   SummaryAsc = "summary_ASC",
   SummaryDesc = "summary_DESC"
 }
@@ -1741,11 +1741,11 @@ export type CaseStudyLinkRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  caseStudyType?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   id: Scalars["ItemId"]
   industry?: Maybe<Scalars["String"]>
+  mediaType?: Maybe<Scalars["String"]>
   products: Array<CaseStudyProductRecord>
   summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
