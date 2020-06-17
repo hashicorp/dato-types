@@ -1686,9 +1686,9 @@ export type CaseStudyLinkModelFilter = {
   date?: Maybe<DateFilter>
   products?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
-  linkUrl?: Maybe<StringFilter>
   thumbnailImage?: Maybe<FileFilter>
   caseStudyType?: Maybe<StringFilter>
+  url?: Maybe<StringFilter>
   summary?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CaseStudyLinkModelFilter>>>
 }
@@ -1720,10 +1720,10 @@ export enum CaseStudyLinkModelOrderBy {
   DateDesc = "date_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  LinkUrlAsc = "linkUrl_ASC",
-  LinkUrlDesc = "linkUrl_DESC",
   CaseStudyTypeAsc = "caseStudyType_ASC",
   CaseStudyTypeDesc = "caseStudyType_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
   SummaryAsc = "summary_ASC",
   SummaryDesc = "summary_DESC"
 }
@@ -1746,12 +1746,12 @@ export type CaseStudyLinkRecord = {
   date?: Maybe<Scalars["Date"]>
   id: Scalars["ItemId"]
   industry?: Maybe<Scalars["String"]>
-  linkUrl?: Maybe<Scalars["String"]>
   products: Array<CaseStudyProductRecord>
   summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Case Study Link (case_study_link) */
