@@ -4058,7 +4058,6 @@ export type EventWebinarRecord = {
   speakers: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
   webinarId?: Maybe<Scalars["String"]>
-  webinarStatus?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Event Webinar (event_webinar) */
