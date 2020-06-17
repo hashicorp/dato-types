@@ -1663,6 +1663,7 @@ export type CaseStudyLandingPageRecord = {
   createdAt: Scalars["DateTime"]
   featuredCaseStudy?: Maybe<CaseStudyLinkRecord>
   id: Scalars["ItemId"]
+  seoTags?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
 }
 
