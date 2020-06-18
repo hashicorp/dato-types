@@ -23038,7 +23038,6 @@ export type TmpmodelEcosystemLandingPageRecord = {
   content: Array<SbcTextAndContentRecord>
   createdAt: Scalars["DateTime"]
   ctaSectionButtons: Array<TmpmodelButtonRecord>
-  ctaSectionHeader?: Maybe<SbcSectionHeaderRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
