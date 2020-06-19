@@ -13438,8 +13438,6 @@ export type Query = {
   /** Returns the single instance record */
   tmpConsolHome?: Maybe<TmpConsolHomeRecord>
   /** Returns the single instance record */
-  tmpHomepage?: Maybe<TmpHomepageRecord>
-  /** Returns the single instance record */
   tmpmodelAboutPage?: Maybe<TmpmodelAboutPageRecord>
   /** Returns a specific record */
   tmpmodelButton?: Maybe<TmpmodelButtonRecord>
@@ -17565,11 +17563,6 @@ export type QueryThankYouPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpConsolHomeArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryTmpHomepageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -22755,32 +22748,6 @@ export type TmpConsolHomeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Homepage (tmp_homepage) */
-export type TmpHomepageRecord = {
-  __typename?: "TmpHomepageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  tmpHeadline?: Maybe<Scalars["String"]>
-  tmpHomepageNews: Array<NewsItemRecord>
-  tmpSeo?: Maybe<SeoField>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type TMP: Homepage (tmp_homepage) */
-export type TmpHomepageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type TMP: About Page (tmpmodel_about_page) */
 export type TmpmodelAboutPageRecord = {
   __typename?: "TmpmodelAboutPageRecord"
@@ -23037,7 +23004,6 @@ export type TmpmodelEcosystemLandingPageRecord = {
   _updatedAt: Scalars["DateTime"]
   content: Array<SbcTextAndContentRecord>
   createdAt: Scalars["DateTime"]
-  ctaSectionButtons: Array<TmpmodelButtonRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
