@@ -13437,8 +13437,6 @@ export type Query = {
   thankYouPage?: Maybe<ThankYouPageRecord>
   /** Returns the single instance record */
   tmpConsolHome?: Maybe<TmpConsolHomeRecord>
-  /** Returns the single instance record */
-  tmpmodelAboutPage?: Maybe<TmpmodelAboutPageRecord>
   /** Returns a specific record */
   tmpmodelButton?: Maybe<TmpmodelButtonRecord>
   /** Returns the single instance record */
@@ -17563,11 +17561,6 @@ export type QueryThankYouPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpConsolHomeArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryTmpmodelAboutPageArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -22746,45 +22739,6 @@ export type TmpConsolHomeRecord = {
 /** Record of type TMP: Consol Home (tmp_consol_home) */
 export type TmpConsolHomeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: About Page (tmpmodel_about_page) */
-export type TmpmodelAboutPageRecord = {
-  __typename?: "TmpmodelAboutPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  heroSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  people: Array<PersonRecord>
-  peopleSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  preFooterButton?: Maybe<SbcButtonV2Record>
-  preFooterSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  previewUrl?: Maybe<Scalars["String"]>
-  taoCtaButton?: Maybe<SbcButtonV2Record>
-  taoSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  updatedAt: Scalars["DateTime"]
-  whoWeAreDescription?: Maybe<Scalars["String"]>
-  whoWeAreSectionHeader?: Maybe<SbcSectionHeaderRecord>
-}
-
-/** Record of type TMP: About Page (tmpmodel_about_page) */
-export type TmpmodelAboutPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: About Page (tmpmodel_about_page) */
-export type TmpmodelAboutPageRecordWhoWeAreDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type TmpmodelButtonModelFilter = {
