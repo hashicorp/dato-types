@@ -11375,6 +11375,7 @@ export type PersonModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
   jobTitle?: Maybe<StringFilter>
   photo?: Maybe<FileFilter>
@@ -11431,6 +11432,7 @@ export type PersonRecord = {
   jobTitle?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   photo?: Maybe<FileField>
+  slug?: Maybe<Scalars["String"]>
   socialProfiles: Array<SocialNetworkRecord>
   updatedAt: Scalars["DateTime"]
 }
