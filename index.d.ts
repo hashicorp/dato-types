@@ -11429,7 +11429,6 @@ export type PersonModelFilter = {
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
-  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
@@ -11454,8 +11453,6 @@ export enum PersonModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PositionAsc = "position_ASC",
-  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -11494,7 +11491,6 @@ export type PersonRecord = {
   jobTitle?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   photo?: Maybe<FileField>
-  position?: Maybe<Scalars["IntType"]>
   socialProfiles: Array<SocialNetworkRecord>
   updatedAt: Scalars["DateTime"]
 }
