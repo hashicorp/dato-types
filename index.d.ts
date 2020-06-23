@@ -10144,6 +10144,7 @@ export type MikeTestModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<MikeTestModelFilter>>>
 }
@@ -10189,6 +10190,7 @@ export type MikeTestRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
