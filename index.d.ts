@@ -3949,6 +3949,66 @@ export type EventsPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type EventsProductModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<EventsProductModelFilter>>>
+}
+
+export enum EventsProductModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Events Product (events_product) */
+export type EventsProductRecord = {
+  __typename?: "EventsProductRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Events Product (events_product) */
+export type EventsProductRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Event Training (event_training) */
 export type EventTrainingRecord = {
   __typename?: "EventTrainingRecord"
@@ -12384,6 +12444,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allEventsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allEventsProductsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allExperienceLevelsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allExternalResourcesMeta: CollectionMetadata
@@ -12753,6 +12815,8 @@ export type Query = {
   allEventTypes: Array<EventTypeRecord>
   /** Returns a collection of records */
   allEvents: Array<EventRecord>
+  /** Returns a collection of records */
+  allEventsProducts: Array<EventsProductRecord>
   /** Returns a collection of records */
   allExperienceLevels: Array<ExperienceLevelRecord>
   /** Returns a collection of records */
@@ -13141,6 +13205,8 @@ export type Query = {
   eventType?: Maybe<EventTypeRecord>
   /** Returns the single instance record */
   eventsPage?: Maybe<EventsPageRecord>
+  /** Returns a specific record */
+  eventsProduct?: Maybe<EventsProductRecord>
   /** Returns a specific record */
   experienceLevel?: Maybe<ExperienceLevelRecord>
   /** Returns a specific record */
@@ -13745,6 +13811,12 @@ export type Query_AllEventTypesMetaArgs = {
 export type Query_AllEventsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllEventsProductsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsProductModelFilter>
 }
 
 /** The query root for this schema */
@@ -14972,6 +15044,15 @@ export type QueryAllEventsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<EventModelFilter>
   orderBy?: Maybe<Array<Maybe<EventModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllEventsProductsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<EventsProductModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsProductModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -16574,6 +16655,13 @@ export type QueryEventTypeArgs = {
 /** The query root for this schema */
 export type QueryEventsPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryEventsProductArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsProductModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsProductModelOrderBy>>>
 }
 
 /** The query root for this schema */
