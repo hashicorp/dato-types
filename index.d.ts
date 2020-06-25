@@ -3768,6 +3768,7 @@ export type EventConferenceRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  hashicorpEvent?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
