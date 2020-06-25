@@ -4104,6 +4104,93 @@ export type EventTypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type EventV2ModelEventTypeField =
+  | EventWebinarRecord
+  | EventConferenceRecord
+  | EventTrainingRecord
+  | EventWorkshopRecord
+  | EventSnapshotRecord
+
+export type EventV2ModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  startTime?: Maybe<DateTimeFilter>
+  image?: Maybe<FileFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  description?: Maybe<TextFilter>
+  OR?: Maybe<Array<Maybe<EventV2ModelFilter>>>
+}
+
+export enum EventV2ModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  StartTimeAsc = "startTime_ASC",
+  StartTimeDesc = "startTime_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
+}
+
+/** Record of type [WIP] Events (event_v2) */
+export type EventV2Record = {
+  __typename?: "EventV2Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  eventType?: Maybe<Array<Maybe<EventV2ModelEventTypeField>>>
+  id: Scalars["ItemId"]
+  image?: Maybe<FileField>
+  slug?: Maybe<Scalars["String"]>
+  startTime?: Maybe<Scalars["DateTime"]>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type [WIP] Events (event_v2) */
+export type EventV2Record_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type [WIP] Events (event_v2) */
+export type EventV2RecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 /** Record of type Event Webinar (event_webinar) */
 export type EventWebinarRecord = {
   __typename?: "EventWebinarRecord"
@@ -12442,6 +12529,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allEventTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allEventV2sMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allEventsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allEventsProductsMeta: CollectionMetadata
@@ -12726,8 +12815,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allWhitePapersMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allWipEventsMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allWistiaSectionsMeta: CollectionMetadata
   /** Returns the single instance record */
   _site: Site
@@ -12813,6 +12900,8 @@ export type Query = {
   allEnterpriseProducts: Array<EnterpriseProductRecord>
   /** Returns a collection of records */
   allEventTypes: Array<EventTypeRecord>
+  /** Returns a collection of records */
+  allEventV2s: Array<EventV2Record>
   /** Returns a collection of records */
   allEvents: Array<EventRecord>
   /** Returns a collection of records */
@@ -13102,8 +13191,6 @@ export type Query = {
   /** Returns a collection of records */
   allWhitePapers: Array<WhitePaperRecord>
   /** Returns a collection of records */
-  allWipEvents: Array<WipEventRecord>
-  /** Returns a collection of records */
   allWistiaSections: Array<WistiaSectionRecord>
   /** Returns a specific record */
   basicTable?: Maybe<BasicTableRecord>
@@ -13203,6 +13290,8 @@ export type Query = {
   event?: Maybe<EventRecord>
   /** Returns a specific record */
   eventType?: Maybe<EventTypeRecord>
+  /** Returns a specific record */
+  eventV2?: Maybe<EventV2Record>
   /** Returns the single instance record */
   eventsPage?: Maybe<EventsPageRecord>
   /** Returns a specific record */
@@ -13574,8 +13663,6 @@ export type Query = {
   /** Returns a specific record */
   whitePaper?: Maybe<WhitePaperRecord>
   /** Returns a specific record */
-  wipEvent?: Maybe<WipEventRecord>
-  /** Returns a specific record */
   wistiaSection?: Maybe<WistiaSectionRecord>
 }
 
@@ -13805,6 +13892,12 @@ export type Query_AllEnterpriseProductsMetaArgs = {
 export type Query_AllEventTypesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventTypeModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllEventV2sMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventV2ModelFilter>
 }
 
 /** The query root for this schema */
@@ -14660,12 +14753,6 @@ export type Query_AllWhitePapersMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllWipEventsMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<WipEventModelFilter>
-}
-
-/** The query root for this schema */
 export type Query_AllWistiaSectionsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<WistiaSectionModelFilter>
@@ -15035,6 +15122,15 @@ export type QueryAllEventTypesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<EventTypeModelFilter>
   orderBy?: Maybe<Array<Maybe<EventTypeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllEventV2sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<EventV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -16316,15 +16412,6 @@ export type QueryAllWhitePapersArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllWipEventsArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<WipEventModelFilter>
-  orderBy?: Maybe<Array<Maybe<WipEventModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllWistiaSectionsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -16650,6 +16737,13 @@ export type QueryEventTypeArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventTypeModelFilter>
   orderBy?: Maybe<Array<Maybe<EventTypeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryEventV2Args = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17842,13 +17936,6 @@ export type QueryWhitePaperArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<WhitePaperModelFilter>
   orderBy?: Maybe<Array<Maybe<WhitePaperModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryWipEventArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<WipEventModelFilter>
-  orderBy?: Maybe<Array<Maybe<WipEventModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -25047,93 +25134,6 @@ export type WhitePaperRecord = {
 /** Record of type White Paper (white_paper) */
 export type WhitePaperRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-export type WipEventModelEventTypeField =
-  | EventWebinarRecord
-  | EventConferenceRecord
-  | EventTrainingRecord
-  | EventWorkshopRecord
-  | EventSnapshotRecord
-
-export type WipEventModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  startTime?: Maybe<DateTimeFilter>
-  image?: Maybe<FileFilter>
-  title?: Maybe<StringFilter>
-  slug?: Maybe<SlugFilter>
-  description?: Maybe<TextFilter>
-  OR?: Maybe<Array<Maybe<WipEventModelFilter>>>
-}
-
-export enum WipEventModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  StartTimeAsc = "startTime_ASC",
-  StartTimeDesc = "startTime_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
-}
-
-/** Record of type [WIP] Events (wip_event) */
-export type WipEventRecord = {
-  __typename?: "WipEventRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  description?: Maybe<Scalars["String"]>
-  eventType?: Maybe<Array<Maybe<WipEventModelEventTypeField>>>
-  id: Scalars["ItemId"]
-  image?: Maybe<FileField>
-  slug?: Maybe<Scalars["String"]>
-  startTime?: Maybe<Scalars["DateTime"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type [WIP] Events (wip_event) */
-export type WipEventRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type [WIP] Events (wip_event) */
-export type WipEventRecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type WistiaSectionModelFilter = {
