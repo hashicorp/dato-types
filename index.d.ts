@@ -4105,6 +4105,7 @@ export type EventV2ModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   product?: Maybe<LinksFilter>
+  endTime?: Maybe<DateTimeFilter>
   startTime?: Maybe<DateTimeFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
@@ -4134,6 +4135,8 @@ export enum EventV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  EndTimeAsc = "endTime_ASC",
+  EndTimeDesc = "endTime_DESC",
   StartTimeAsc = "startTime_ASC",
   StartTimeDesc = "startTime_DESC",
   TitleAsc = "title_ASC",
@@ -4155,6 +4158,7 @@ export type EventV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
+  endTime?: Maybe<Scalars["DateTime"]>
   eventType?: Maybe<Array<Maybe<EventV2ModelEventTypeField>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
