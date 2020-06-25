@@ -3771,6 +3771,7 @@ export type EventConferenceRecord = {
   hashicorpEvent?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Event Conference (event_conference) */
