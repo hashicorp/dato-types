@@ -3872,6 +3872,7 @@ export type EventProductV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EventProductV2ModelFilter>>>
 }
 
@@ -3895,7 +3896,9 @@ export enum EventProductV2ModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 /** Record of type [WIP] Events Product (event_product_v2) */
@@ -3913,6 +3916,7 @@ export type EventProductV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
