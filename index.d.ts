@@ -4128,6 +4128,7 @@ export type EventV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  product?: Maybe<LinksFilter>
   startTime?: Maybe<DateTimeFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
@@ -4181,6 +4182,7 @@ export type EventV2Record = {
   eventType?: Maybe<Array<Maybe<EventV2ModelEventTypeField>>>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
+  product: Array<EventProductV2Record>
   slug?: Maybe<Scalars["String"]>
   startTime?: Maybe<Scalars["DateTime"]>
   title?: Maybe<Scalars["String"]>
