@@ -3956,29 +3956,6 @@ export type EventRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Event Snapshot (event_snapshot) */
-export type EventSnapshotRecord = {
-  __typename?: "EventSnapshotRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Event Snapshot (event_snapshot) */
-export type EventSnapshotRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type Events Page (events_page) */
 export type EventsPageRecord = {
   __typename?: "EventsPageRecord"
@@ -4115,7 +4092,6 @@ export type EventV2ModelEventTypeField =
   | EventConferenceRecord
   | EventTrainingRecord
   | EventWorkshopRecord
-  | EventSnapshotRecord
 
 export type EventV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
