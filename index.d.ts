@@ -807,6 +807,7 @@ export type BlogProductsV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   featuredPost?: Maybe<LinkFilter>
   description?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   productName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BlogProductsV2ModelFilter>>>
 }
@@ -856,6 +857,7 @@ export type BlogProductsV2Record = {
   featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
   productName?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
