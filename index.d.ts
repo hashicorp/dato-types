@@ -11692,6 +11692,7 @@ export type PressLocaleModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  languageCode?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<PressLocaleModelFilter>>>
 }
@@ -11717,6 +11718,8 @@ export enum PressLocaleModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  LanguageCodeAsc = "languageCode_ASC",
+  LanguageCodeDesc = "languageCode_DESC",
   LanguageAsc = "language_ASC",
   LanguageDesc = "language_DESC"
 }
@@ -11737,6 +11740,7 @@ export type PressLocaleRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   language?: Maybe<Scalars["String"]>
+  languageCode?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
