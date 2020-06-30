@@ -12042,6 +12042,7 @@ export type PressPageV2Record = {
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  mediaCoverage: Array<PressMediaCoveragePostRecord>
   metadata?: Maybe<SeoField>
   pressReleases: Array<PressReleaseRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
