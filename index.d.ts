@@ -10412,6 +10412,7 @@ export type NavPromoModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
+  linkUrl?: Maybe<StringFilter>
   linkTitle?: Maybe<StringFilter>
   theme?: Maybe<StringFilter>
   link?: Maybe<LinkFilter>
@@ -10441,6 +10442,8 @@ export enum NavPromoModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
+  LinkUrlAsc = "linkUrl_ASC",
+  LinkUrlDesc = "linkUrl_DESC",
   LinkTitleAsc = "linkTitle_ASC",
   LinkTitleDesc = "linkTitle_DESC",
   ThemeAsc = "theme_ASC",
@@ -10465,6 +10468,7 @@ export type NavPromoRecord = {
   image?: Maybe<FileField>
   link?: Maybe<LinkRecord>
   linkTitle?: Maybe<Scalars["String"]>
+  linkUrl?: Maybe<Scalars["String"]>
   theme?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
