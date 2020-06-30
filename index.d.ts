@@ -11601,7 +11601,7 @@ export type PositionFilter = {
   neq?: Maybe<Scalars["IntType"]>
 }
 
-export type PressAnalystReportModelFilter = {
+export type PressAnalystReportPostModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
@@ -11619,10 +11619,10 @@ export type PressAnalystReportModelFilter = {
   url?: Maybe<StringFilter>
   publisherName?: Maybe<StringFilter>
   publisherLogo?: Maybe<FileFilter>
-  OR?: Maybe<Array<Maybe<PressAnalystReportModelFilter>>>
+  OR?: Maybe<Array<Maybe<PressAnalystReportPostModelFilter>>>
 }
 
-export enum PressAnalystReportModelOrderBy {
+export enum PressAnalystReportPostModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -11655,9 +11655,9 @@ export enum PressAnalystReportModelOrderBy {
   PublisherNameDesc = "publisherName_DESC"
 }
 
-/** Record of type Press Analyst Report (press_analyst_report) */
-export type PressAnalystReportRecord = {
-  __typename?: "PressAnalystReportRecord"
+/** Record of type Press Analyst Report Post (press_analyst_report_post) */
+export type PressAnalystReportPostRecord = {
+  __typename?: "PressAnalystReportPostRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -11680,8 +11680,8 @@ export type PressAnalystReportRecord = {
   url?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Press Analyst Report (press_analyst_report) */
-export type PressAnalystReportRecord_SeoMetaTagsArgs = {
+/** Record of type Press Analyst Report Post (press_analyst_report_post) */
+export type PressAnalystReportPostRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -13069,7 +13069,7 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allPersonListsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPressAnalystReportsMeta: CollectionMetadata
+  _allPressAnalystReportPostsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allPressCommunityVoicesPostsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -13453,7 +13453,7 @@ export type Query = {
   /** Returns a collection of records */
   allPersonLists: Array<PersonListRecord>
   /** Returns a collection of records */
-  allPressAnalystReports: Array<PressAnalystReportRecord>
+  allPressAnalystReportPosts: Array<PressAnalystReportPostRecord>
   /** Returns a collection of records */
   allPressCommunityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   /** Returns a collection of records */
@@ -13873,7 +13873,7 @@ export type Query = {
   /** Returns a specific record */
   personList?: Maybe<PersonListRecord>
   /** Returns a specific record */
-  pressAnalystReport?: Maybe<PressAnalystReportRecord>
+  pressAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   /** Returns a specific record */
   pressCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
   /** Returns a specific record */
@@ -14727,9 +14727,9 @@ export type Query_AllPersonListsMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllPressAnalystReportsMetaArgs = {
+export type Query_AllPressAnalystReportPostsMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<PressAnalystReportModelFilter>
+  filter?: Maybe<PressAnalystReportPostModelFilter>
 }
 
 /** The query root for this schema */
@@ -16182,12 +16182,12 @@ export type QueryAllPersonListsArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllPressAnalystReportsArgs = {
+export type QueryAllPressAnalystReportPostsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<PressAnalystReportModelFilter>
-  orderBy?: Maybe<Array<Maybe<PressAnalystReportModelOrderBy>>>
+  filter?: Maybe<PressAnalystReportPostModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressAnalystReportPostModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17760,10 +17760,10 @@ export type QueryPersonListArgs = {
 }
 
 /** The query root for this schema */
-export type QueryPressAnalystReportArgs = {
+export type QueryPressAnalystReportPostArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<PressAnalystReportModelFilter>
-  orderBy?: Maybe<Array<Maybe<PressAnalystReportModelOrderBy>>>
+  filter?: Maybe<PressAnalystReportPostModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressAnalystReportPostModelOrderBy>>>
 }
 
 /** The query root for this schema */
