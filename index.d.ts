@@ -11825,7 +11825,7 @@ export enum PressReleaseModelOrderBy {
   UrlDesc = "url_DESC"
 }
 
-/** Record of type press_release (press_release) */
+/** Record of type Press Release (press_release) */
 export type PressReleaseRecord = {
   __typename?: "PressReleaseRecord"
   _createdAt: Scalars["DateTime"]
@@ -11847,7 +11847,7 @@ export type PressReleaseRecord = {
   url?: Maybe<Scalars["String"]>
 }
 
-/** Record of type press_release (press_release) */
+/** Record of type Press Release (press_release) */
 export type PressReleaseRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
