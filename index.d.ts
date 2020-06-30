@@ -10447,7 +10447,6 @@ export type NavPromoModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  layout?: Maybe<StringFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   eyebrow?: Maybe<StringFilter>
@@ -10481,8 +10480,6 @@ export enum NavPromoModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  LayoutAsc = "layout_ASC",
-  LayoutDesc = "layout_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   EyebrowAsc = "eyebrow_ASC",
@@ -10511,7 +10508,6 @@ export type NavPromoRecord = {
   eyebrow?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  layout?: Maybe<Scalars["String"]>
   link?: Maybe<LinkRecord>
   primaryLink?: Maybe<LinkRecord>
   secondaryLink?: Maybe<LinkRecord>
@@ -12048,6 +12044,7 @@ export type PressPageV2Record = {
   communityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   createdAt: Scalars["DateTime"]
   featuredAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
+  featuredCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
   featuredMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
   featuredPosts: Array<PressPageV2ModelFeaturedPostsField>
   headline?: Maybe<Scalars["String"]>
