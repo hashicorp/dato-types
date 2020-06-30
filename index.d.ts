@@ -11789,6 +11789,8 @@ export type PressReleaseModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  publishDate?: Maybe<DateFilter>
   OR?: Maybe<Array<Maybe<PressReleaseModelFilter>>>
 }
 
@@ -11812,7 +11814,11 @@ export enum PressReleaseModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  PublishDateAsc = "publishDate_ASC",
+  PublishDateDesc = "publishDate_DESC"
 }
 
 /** Record of type press_release (press_release) */
@@ -11830,6 +11836,8 @@ export type PressReleaseRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  publishDate?: Maybe<Scalars["Date"]>
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
