@@ -11613,11 +11613,11 @@ export type PressAnalystReportModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   publicationLogo?: Maybe<FileFilter>
-  publicationName?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   publishDate?: Maybe<DateFilter>
   locale?: Maybe<LinkFilter>
   url?: Maybe<StringFilter>
+  publisherName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<PressAnalystReportModelFilter>>>
 }
 
@@ -11642,14 +11642,14 @@ export enum PressAnalystReportModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  PublicationNameAsc = "publicationName_ASC",
-  PublicationNameDesc = "publicationName_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   PublishDateAsc = "publishDate_ASC",
   PublishDateDesc = "publishDate_DESC",
   UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC"
+  UrlDesc = "url_DESC",
+  PublisherNameAsc = "publisherName_ASC",
+  PublisherNameDesc = "publisherName_DESC"
 }
 
 /** Record of type Press Analyst Report (press_analyst_report) */
@@ -11669,8 +11669,8 @@ export type PressAnalystReportRecord = {
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
   publicationLogo?: Maybe<FileField>
-  publicationName?: Maybe<Scalars["String"]>
   publishDate?: Maybe<Scalars["Date"]>
+  publisherName?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   url?: Maybe<Scalars["String"]>
