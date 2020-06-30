@@ -5453,43 +5453,6 @@ export type GlobalFooterBasicRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Global Footer (global_footer) */
-export type GlobalFooterRecord = {
-  __typename?: "GlobalFooterRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  allProductLinks: Array<LinkRecord>
-  company?: Maybe<Scalars["String"]>
-  companyLinks: Array<LinkRecord>
-  copyrightText?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  disclaimerLinks: Array<LinkRecord>
-  id: Scalars["ItemId"]
-  openSourceLinks: Array<OpenSourceToolRecord>
-  partnerLinks: Array<LinkRecord>
-  partners?: Maybe<Scalars["String"]>
-  primaryLogo?: Maybe<FileField>
-  productLinks: Array<EnterpriseProductRecord>
-  products?: Maybe<Scalars["String"]>
-  resources?: Maybe<Scalars["String"]>
-  resourcesLinks: Array<LinkRecord>
-  socialLinks: Array<SocialNetworkRecord>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Global Footer (global_footer) */
-export type GlobalFooterRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type Global Navigation (global_navigation) */
 export type GlobalNavigationRecord = {
   __typename?: "GlobalNavigationRecord"
@@ -10449,12 +10412,8 @@ export type NavPromoModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
-  eyebrow?: Maybe<StringFilter>
-  secondaryLink?: Maybe<LinkFilter>
+  linkTitle?: Maybe<StringFilter>
   theme?: Maybe<StringFilter>
-  primaryLink?: Maybe<LinkFilter>
-  showCalloutPlayIcon?: Maybe<BooleanFilter>
-  description?: Maybe<TextFilter>
   link?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<NavPromoModelFilter>>>
 }
@@ -10482,12 +10441,10 @@ export enum NavPromoModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  EyebrowAsc = "eyebrow_ASC",
-  EyebrowDesc = "eyebrow_DESC",
+  LinkTitleAsc = "linkTitle_ASC",
+  LinkTitleDesc = "linkTitle_DESC",
   ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
-  ShowCalloutPlayIconAsc = "showCalloutPlayIcon_ASC",
-  ShowCalloutPlayIconDesc = "showCalloutPlayIcon_DESC"
+  ThemeDesc = "theme_DESC"
 }
 
 /** Record of type Nav Promo (nav_promo) */
@@ -10504,14 +10461,10 @@ export type NavPromoRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  description?: Maybe<Scalars["String"]>
-  eyebrow?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
   link?: Maybe<LinkRecord>
-  primaryLink?: Maybe<LinkRecord>
-  secondaryLink?: Maybe<LinkRecord>
-  showCalloutPlayIcon?: Maybe<Scalars["BooleanType"]>
+  linkTitle?: Maybe<Scalars["String"]>
   theme?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
@@ -10520,11 +10473,6 @@ export type NavPromoRecord = {
 /** Record of type Nav Promo (nav_promo) */
 export type NavPromoRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Nav Promo (nav_promo) */
-export type NavPromoRecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Nav (nav) */
@@ -13754,8 +13702,6 @@ export type Query = {
   formMultiSelectOption?: Maybe<FormMultiSelectOptionRecord>
   /** Returns the single instance record */
   globalDemoForm?: Maybe<GlobalDemoFormRecord>
-  /** Returns the single instance record */
-  globalFooter?: Maybe<GlobalFooterRecord>
   /** Returns the single instance record */
   globalFooterBasic?: Maybe<GlobalFooterBasicRecord>
   /** Returns the single instance record */
@@ -17353,11 +17299,6 @@ export type QueryFormMultiSelectOptionArgs = {
 
 /** The query root for this schema */
 export type QueryGlobalDemoFormArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
-export type QueryGlobalFooterArgs = {
   locale?: Maybe<SiteLocale>
 }
 
