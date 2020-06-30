@@ -12047,6 +12047,7 @@ export type PressPageV2Record = {
   analystReportPosts: Array<PressAnalystReportPostRecord>
   communityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   createdAt: Scalars["DateTime"]
+  featuredAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   featuredMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
   featuredPosts: Array<PressPageV2ModelFeaturedPostsField>
   headline?: Maybe<Scalars["String"]>
