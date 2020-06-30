@@ -11696,13 +11696,13 @@ export type PressCommunityVoicesPostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  publisherLogo?: Maybe<FileFilter>
   url?: Maybe<StringFilter>
   locale?: Maybe<LinkFilter>
   publishDate?: Maybe<DateFilter>
   title?: Maybe<StringFilter>
   authorUsername?: Maybe<StringFilter>
   authorLink?: Maybe<StringFilter>
+  authorAvatar?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<PressCommunityVoicesPostModelFilter>>>
 }
 
@@ -11752,13 +11752,13 @@ export type PressCommunityVoicesPostRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  authorAvatar?: Maybe<FileField>
   authorLink?: Maybe<Scalars["String"]>
   authorUsername?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
   publishDate?: Maybe<Scalars["Date"]>
-  publisherLogo?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   url?: Maybe<Scalars["String"]>
@@ -11994,6 +11994,35 @@ export type PressMediaCoverageRecord = {
 
 /** Record of type Press Media Coverage (press_media_coverage) */
 export type PressMediaCoverageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Press Page (copy #1) (press_page_copy1) */
+export type PressPageCopy1Record = {
+  __typename?: "PressPageCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  events: Array<PressLinkRecord>
+  headline?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  mediaAnalystCoverage: Array<PressLinkRecord>
+  metadata?: Maybe<SeoField>
+  pressReleases: Array<PressLinkRecord>
+  showDemoRequest?: Maybe<Scalars["BooleanType"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Press Page (copy #1) (press_page_copy1) */
+export type PressPageCopy1Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -13855,6 +13884,8 @@ export type Query = {
   pressMediaCoverage?: Maybe<PressMediaCoverageRecord>
   /** Returns the single instance record */
   pressPage?: Maybe<PressPageRecord>
+  /** Returns the single instance record */
+  pressPageCopy1?: Maybe<PressPageCopy1Record>
   /** Returns a specific record */
   pressRelease?: Maybe<PressReleaseRecord>
   /** Returns a specific record */
@@ -17765,6 +17796,11 @@ export type QueryPressMediaCoverageArgs = {
 
 /** The query root for this schema */
 export type QueryPressPageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryPressPageCopy1Args = {
   locale?: Maybe<SiteLocale>
 }
 
