@@ -12026,6 +12026,11 @@ export type PressPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type PressPageV2ModelFeaturedPostsField =
+  | PressReleaseRecord
+  | PressMediaCoveragePostRecord
+  | PressAnalystReportPostRecord
+
 /** Record of type Press Page v2 (press_page_v2) */
 export type PressPageV2Record = {
   __typename?: "PressPageV2Record"
@@ -12039,12 +12044,13 @@ export type PressPageV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  analystReports: Array<PressAnalystReportPostRecord>
+  analystReportPosts: Array<PressAnalystReportPostRecord>
   communityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   createdAt: Scalars["DateTime"]
+  featuredPosts: Array<PressPageV2ModelFeaturedPostsField>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  mediaCoverage: Array<PressMediaCoveragePostRecord>
+  mediaCoveragePosts: Array<PressMediaCoveragePostRecord>
   metadata?: Maybe<SeoField>
   pressReleases: Array<PressReleaseRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
