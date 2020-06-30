@@ -12040,11 +12040,10 @@ export type PressPageV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  events: Array<PressLinkRecord>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  pressReleases: Array<PressLinkRecord>
+  pressReleases: Array<PressReleaseRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
