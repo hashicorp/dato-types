@@ -12043,7 +12043,6 @@ export type PressPageV2Record = {
   events: Array<PressLinkRecord>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  mediaAnalystCoverage: Array<PressLinkRecord>
   metadata?: Maybe<SeoField>
   pressReleases: Array<PressLinkRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
