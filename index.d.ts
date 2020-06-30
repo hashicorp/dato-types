@@ -11791,6 +11791,7 @@ export type PressReleaseModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   publishDate?: Maybe<DateFilter>
+  url?: Maybe<StringFilter>
   locale?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<PressReleaseModelFilter>>>
 }
@@ -11819,7 +11820,9 @@ export enum PressReleaseModelOrderBy {
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   PublishDateAsc = "publishDate_ASC",
-  PublishDateDesc = "publishDate_DESC"
+  PublishDateDesc = "publishDate_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type press_release (press_release) */
@@ -11841,6 +11844,7 @@ export type PressReleaseRecord = {
   publishDate?: Maybe<Scalars["Date"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
 }
 
 /** Record of type press_release (press_release) */
