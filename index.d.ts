@@ -11601,6 +11601,86 @@ export type PositionFilter = {
   neq?: Maybe<Scalars["IntType"]>
 }
 
+export type PressAnalystReportModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  publicationLogo?: Maybe<FileFilter>
+  publicationName?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
+  publishDate?: Maybe<DateFilter>
+  locale?: Maybe<LinkFilter>
+  url?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<PressAnalystReportModelFilter>>>
+}
+
+export enum PressAnalystReportModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  PublicationNameAsc = "publicationName_ASC",
+  PublicationNameDesc = "publicationName_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  PublishDateAsc = "publishDate_ASC",
+  PublishDateDesc = "publishDate_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC"
+}
+
+/** Record of type Press Analyst Report (press_analyst_report) */
+export type PressAnalystReportRecord = {
+  __typename?: "PressAnalystReportRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  locale?: Maybe<PressLocaleRecord>
+  publicationLogo?: Maybe<FileField>
+  publicationName?: Maybe<Scalars["String"]>
+  publishDate?: Maybe<Scalars["Date"]>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Press Analyst Report (press_analyst_report) */
+export type PressAnalystReportRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type PressLinkModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -12872,6 +12952,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allPersonListsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allPressAnalystReportsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allPressLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allPressLocalesMeta: CollectionMetadata
@@ -13251,6 +13333,8 @@ export type Query = {
   allPeople: Array<PersonRecord>
   /** Returns a collection of records */
   allPersonLists: Array<PersonListRecord>
+  /** Returns a collection of records */
+  allPressAnalystReports: Array<PressAnalystReportRecord>
   /** Returns a collection of records */
   allPressLinks: Array<PressLinkRecord>
   /** Returns a collection of records */
@@ -13667,6 +13751,8 @@ export type Query = {
   person?: Maybe<PersonRecord>
   /** Returns a specific record */
   personList?: Maybe<PersonListRecord>
+  /** Returns a specific record */
+  pressAnalystReport?: Maybe<PressAnalystReportRecord>
   /** Returns a specific record */
   pressLink?: Maybe<PressLinkRecord>
   /** Returns a specific record */
@@ -14513,6 +14599,12 @@ export type Query_AllPeopleMetaArgs = {
 export type Query_AllPersonListsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PersonListModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllPressAnalystReportsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressAnalystReportModelFilter>
 }
 
 /** The query root for this schema */
@@ -15956,6 +16048,15 @@ export type QueryAllPersonListsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<PersonListModelFilter>
   orderBy?: Maybe<Array<Maybe<PersonListModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllPressAnalystReportsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<PressAnalystReportModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressAnalystReportModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17516,6 +17617,13 @@ export type QueryPersonListArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PersonListModelFilter>
   orderBy?: Maybe<Array<Maybe<PersonListModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryPressAnalystReportArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressAnalystReportModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressAnalystReportModelOrderBy>>>
 }
 
 /** The query root for this schema */
