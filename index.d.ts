@@ -11601,90 +11601,6 @@ export type PositionFilter = {
   neq?: Maybe<Scalars["IntType"]>
 }
 
-export type PressAnalystReportCopy1ModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  analystName?: Maybe<StringFilter>
-  publisherLogo?: Maybe<FileFilter>
-  publisherName?: Maybe<StringFilter>
-  url?: Maybe<StringFilter>
-  locale?: Maybe<LinkFilter>
-  publishDate?: Maybe<DateFilter>
-  title?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<PressAnalystReportCopy1ModelFilter>>>
-}
-
-export enum PressAnalystReportCopy1ModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  AnalystNameAsc = "analystName_ASC",
-  AnalystNameDesc = "analystName_DESC",
-  PublisherNameAsc = "publisherName_ASC",
-  PublisherNameDesc = "publisherName_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
-  PublishDateAsc = "publishDate_ASC",
-  PublishDateDesc = "publishDate_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
-}
-
-/** Record of type Press Analyst Report (copy #1) (press_analyst_report_copy1) */
-export type PressAnalystReportCopy1Record = {
-  __typename?: "PressAnalystReportCopy1Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  analystName?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  locale?: Maybe<PressLocaleRecord>
-  publishDate?: Maybe<Scalars["Date"]>
-  publisherLogo?: Maybe<FileField>
-  publisherName?: Maybe<Scalars["String"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-  url?: Maybe<Scalars["String"]>
-}
-
-/** Record of type Press Analyst Report (copy #1) (press_analyst_report_copy1) */
-export type PressAnalystReportCopy1Record_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type PressAnalystReportModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -11766,6 +11682,90 @@ export type PressAnalystReportRecord = {
 
 /** Record of type Press Analyst Report (press_analyst_report) */
 export type PressAnalystReportRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type PressCommunityVoicesPostModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  analystName?: Maybe<StringFilter>
+  publisherLogo?: Maybe<FileFilter>
+  url?: Maybe<StringFilter>
+  locale?: Maybe<LinkFilter>
+  publishDate?: Maybe<DateFilter>
+  title?: Maybe<StringFilter>
+  username?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<PressCommunityVoicesPostModelFilter>>>
+}
+
+export enum PressCommunityVoicesPostModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  AnalystNameAsc = "analystName_ASC",
+  AnalystNameDesc = "analystName_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
+  PublishDateAsc = "publishDate_ASC",
+  PublishDateDesc = "publishDate_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC",
+  UsernameAsc = "username_ASC",
+  UsernameDesc = "username_DESC"
+}
+
+/** Record of type Press Community Voices Post (press_community_voices_post) */
+export type PressCommunityVoicesPostRecord = {
+  __typename?: "PressCommunityVoicesPostRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  analystName?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  locale?: Maybe<PressLocaleRecord>
+  publishDate?: Maybe<Scalars["Date"]>
+  publisherLogo?: Maybe<FileField>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
+  username?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Press Community Voices Post (press_community_voices_post) */
+export type PressCommunityVoicesPostRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -13040,9 +13040,9 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allPersonListsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allPressAnalystReportCopy1sMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allPressAnalystReportsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
+  _allPressCommunityVoicesPostsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allPressLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -13424,9 +13424,9 @@ export type Query = {
   /** Returns a collection of records */
   allPersonLists: Array<PersonListRecord>
   /** Returns a collection of records */
-  allPressAnalystReportCopy1s: Array<PressAnalystReportCopy1Record>
-  /** Returns a collection of records */
   allPressAnalystReports: Array<PressAnalystReportRecord>
+  /** Returns a collection of records */
+  allPressCommunityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   /** Returns a collection of records */
   allPressLinks: Array<PressLinkRecord>
   /** Returns a collection of records */
@@ -13846,7 +13846,7 @@ export type Query = {
   /** Returns a specific record */
   pressAnalystReport?: Maybe<PressAnalystReportRecord>
   /** Returns a specific record */
-  pressAnalystReportCopy1?: Maybe<PressAnalystReportCopy1Record>
+  pressCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
   /** Returns a specific record */
   pressLink?: Maybe<PressLinkRecord>
   /** Returns a specific record */
@@ -14696,15 +14696,15 @@ export type Query_AllPersonListsMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllPressAnalystReportCopy1sMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<PressAnalystReportCopy1ModelFilter>
-}
-
-/** The query root for this schema */
 export type Query_AllPressAnalystReportsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PressAnalystReportModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllPressCommunityVoicesPostsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressCommunityVoicesPostModelFilter>
 }
 
 /** The query root for this schema */
@@ -16151,21 +16151,21 @@ export type QueryAllPersonListsArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllPressAnalystReportCopy1sArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<PressAnalystReportCopy1ModelFilter>
-  orderBy?: Maybe<Array<Maybe<PressAnalystReportCopy1ModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllPressAnalystReportsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<PressAnalystReportModelFilter>
   orderBy?: Maybe<Array<Maybe<PressAnalystReportModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllPressCommunityVoicesPostsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<PressCommunityVoicesPostModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressCommunityVoicesPostModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17736,10 +17736,10 @@ export type QueryPressAnalystReportArgs = {
 }
 
 /** The query root for this schema */
-export type QueryPressAnalystReportCopy1Args = {
+export type QueryPressCommunityVoicesPostArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<PressAnalystReportCopy1ModelFilter>
-  orderBy?: Maybe<Array<Maybe<PressAnalystReportCopy1ModelOrderBy>>>
+  filter?: Maybe<PressCommunityVoicesPostModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressCommunityVoicesPostModelOrderBy>>>
 }
 
 /** The query root for this schema */
