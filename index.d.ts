@@ -11696,13 +11696,13 @@ export type PressCommunityVoicesPostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  analystName?: Maybe<StringFilter>
   publisherLogo?: Maybe<FileFilter>
   url?: Maybe<StringFilter>
   locale?: Maybe<LinkFilter>
   publishDate?: Maybe<DateFilter>
   title?: Maybe<StringFilter>
-  username?: Maybe<StringFilter>
+  authorUsername?: Maybe<StringFilter>
+  authorLink?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<PressCommunityVoicesPostModelFilter>>>
 }
 
@@ -11727,16 +11727,16 @@ export enum PressCommunityVoicesPostModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  AnalystNameAsc = "analystName_ASC",
-  AnalystNameDesc = "analystName_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
   PublishDateAsc = "publishDate_ASC",
   PublishDateDesc = "publishDate_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  UsernameAsc = "username_ASC",
-  UsernameDesc = "username_DESC"
+  AuthorUsernameAsc = "authorUsername_ASC",
+  AuthorUsernameDesc = "authorUsername_DESC",
+  AuthorLinkAsc = "authorLink_ASC",
+  AuthorLinkDesc = "authorLink_DESC"
 }
 
 /** Record of type Press Community Voices Post (press_community_voices_post) */
@@ -11752,7 +11752,8 @@ export type PressCommunityVoicesPostRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  analystName?: Maybe<Scalars["String"]>
+  authorLink?: Maybe<Scalars["String"]>
+  authorUsername?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
@@ -11761,7 +11762,6 @@ export type PressCommunityVoicesPostRecord = {
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   url?: Maybe<Scalars["String"]>
-  username?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Press Community Voices Post (press_community_voices_post) */
