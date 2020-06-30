@@ -11791,6 +11791,7 @@ export type PressReleaseModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   publishDate?: Maybe<DateFilter>
+  locale?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<PressReleaseModelFilter>>>
 }
 
@@ -11836,6 +11837,7 @@ export type PressReleaseRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  locale?: Maybe<PressLocaleRecord>
   publishDate?: Maybe<Scalars["Date"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
