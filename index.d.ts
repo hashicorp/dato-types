@@ -12039,6 +12039,8 @@ export type PressPageV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  analystReports: Array<PressAnalystReportPostRecord>
+  communityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
