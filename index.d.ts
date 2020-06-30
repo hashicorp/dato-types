@@ -11778,6 +11778,80 @@ export type PressPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type PressReleaseCopy1ModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  url?: Maybe<StringFilter>
+  locale?: Maybe<LinkFilter>
+  publishDate?: Maybe<DateFilter>
+  title?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<PressReleaseCopy1ModelFilter>>>
+}
+
+export enum PressReleaseCopy1ModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  UrlAsc = "url_ASC",
+  UrlDesc = "url_DESC",
+  PublishDateAsc = "publishDate_ASC",
+  PublishDateDesc = "publishDate_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
+}
+
+/** Record of type Press Release (copy #1) (press_release_copy1) */
+export type PressReleaseCopy1Record = {
+  __typename?: "PressReleaseCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  locale?: Maybe<PressLocaleRecord>
+  publishDate?: Maybe<Scalars["Date"]>
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Press Release (copy #1) (press_release_copy1) */
+export type PressReleaseCopy1Record_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type PressReleaseModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -12796,6 +12870,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allPressLocalesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allPressReleaseCopy1sMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allPressReleasesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allPricingPagesMeta: CollectionMetadata
@@ -13173,6 +13249,8 @@ export type Query = {
   allPressLinks: Array<PressLinkRecord>
   /** Returns a collection of records */
   allPressLocales: Array<PressLocaleRecord>
+  /** Returns a collection of records */
+  allPressReleaseCopy1s: Array<PressReleaseCopy1Record>
   /** Returns a collection of records */
   allPressReleases: Array<PressReleaseRecord>
   /** Returns a collection of records */
@@ -13591,6 +13669,8 @@ export type Query = {
   pressPage?: Maybe<PressPageRecord>
   /** Returns a specific record */
   pressRelease?: Maybe<PressReleaseRecord>
+  /** Returns a specific record */
+  pressReleaseCopy1?: Maybe<PressReleaseCopy1Record>
   /** Returns a specific record */
   pricingPage?: Maybe<PricingPageRecord>
   /** Returns the single instance record */
@@ -14439,6 +14519,12 @@ export type Query_AllPressLinksMetaArgs = {
 export type Query_AllPressLocalesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PressLocaleModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllPressReleaseCopy1sMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressReleaseCopy1ModelFilter>
 }
 
 /** The query root for this schema */
@@ -15882,6 +15968,15 @@ export type QueryAllPressLocalesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<PressLocaleModelFilter>
   orderBy?: Maybe<Array<Maybe<PressLocaleModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllPressReleaseCopy1sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<PressReleaseCopy1ModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressReleaseCopy1ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17441,6 +17536,13 @@ export type QueryPressReleaseArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PressReleaseModelFilter>
   orderBy?: Maybe<Array<Maybe<PressReleaseModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryPressReleaseCopy1Args = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressReleaseCopy1ModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressReleaseCopy1ModelOrderBy>>>
 }
 
 /** The query root for this schema */
