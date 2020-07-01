@@ -11984,7 +11984,6 @@ export type PressPageV2Record = {
   featuredAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   featuredCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
   featuredMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
-  headline?: Maybe<Scalars["String"]>
   heroFeaturedPosts: Array<PressPageV2ModelHeroFeaturedPostsField>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
