@@ -11565,7 +11565,6 @@ export type PressAnalystReportPostModelFilter = {
   publishDate?: Maybe<DateFilter>
   locale?: Maybe<LinkFilter>
   url?: Maybe<StringFilter>
-  publisherName?: Maybe<StringFilter>
   publisherLogo?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<PressAnalystReportPostModelFilter>>>
 }
@@ -11598,9 +11597,7 @@ export enum PressAnalystReportPostModelOrderBy {
   PublishDateAsc = "publishDate_ASC",
   PublishDateDesc = "publishDate_DESC",
   UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
-  PublisherNameAsc = "publisherName_ASC",
-  PublisherNameDesc = "publisherName_DESC"
+  UrlDesc = "url_DESC"
 }
 
 /** Record of type Press Analyst Report Post (press_analyst_report_post) */
@@ -11622,7 +11619,6 @@ export type PressAnalystReportPostRecord = {
   locale?: Maybe<PressLocaleRecord>
   publishDate?: Maybe<Scalars["Date"]>
   publisherLogo?: Maybe<FileField>
-  publisherName?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   url?: Maybe<Scalars["String"]>
