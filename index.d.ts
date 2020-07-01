@@ -11986,7 +11986,6 @@ export type PressPageV2Record = {
   featuredMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
   heroFeaturedPosts: Array<PressPageV2ModelHeroFeaturedPostsField>
   id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
