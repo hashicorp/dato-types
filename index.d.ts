@@ -11649,7 +11649,6 @@ export type PressCommunityVoicesPostModelFilter = {
   publishDate?: Maybe<DateFilter>
   title?: Maybe<StringFilter>
   authorUsername?: Maybe<StringFilter>
-  authorLink?: Maybe<StringFilter>
   authorAvatar?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<PressCommunityVoicesPostModelFilter>>>
 }
@@ -11682,9 +11681,7 @@ export enum PressCommunityVoicesPostModelOrderBy {
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   AuthorUsernameAsc = "authorUsername_ASC",
-  AuthorUsernameDesc = "authorUsername_DESC",
-  AuthorLinkAsc = "authorLink_ASC",
-  AuthorLinkDesc = "authorLink_DESC"
+  AuthorUsernameDesc = "authorUsername_DESC"
 }
 
 /** Record of type Press Community Voices Post (press_community_voices_post) */
@@ -11701,7 +11698,6 @@ export type PressCommunityVoicesPostRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   authorAvatar?: Maybe<FileField>
-  authorLink?: Maybe<Scalars["String"]>
   authorUsername?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
