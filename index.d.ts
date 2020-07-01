@@ -11872,8 +11872,6 @@ export type PressMediaCoveragePostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  publicationName?: Maybe<StringFilter>
-  publicationLogo?: Maybe<FileFilter>
   url?: Maybe<StringFilter>
   locale?: Maybe<LinkFilter>
   publishDate?: Maybe<DateFilter>
@@ -11902,8 +11900,6 @@ export enum PressMediaCoveragePostModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  PublicationNameAsc = "publicationName_ASC",
-  PublicationNameDesc = "publicationName_DESC",
   UrlAsc = "url_ASC",
   UrlDesc = "url_DESC",
   PublishDateAsc = "publishDate_ASC",
@@ -11928,8 +11924,6 @@ export type PressMediaCoveragePostRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
-  publicationLogo?: Maybe<FileField>
-  publicationName?: Maybe<Scalars["String"]>
   publishDate?: Maybe<Scalars["Date"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
