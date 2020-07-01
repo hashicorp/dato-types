@@ -11876,6 +11876,7 @@ export type PressMediaCoveragePostModelFilter = {
   locale?: Maybe<LinkFilter>
   publishDate?: Maybe<DateFilter>
   title?: Maybe<StringFilter>
+  publication?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<PressMediaCoveragePostModelFilter>>>
 }
 
@@ -11924,6 +11925,7 @@ export type PressMediaCoveragePostRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
+  publication?: Maybe<PressPublicationRecord>
   publishDate?: Maybe<Scalars["Date"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
