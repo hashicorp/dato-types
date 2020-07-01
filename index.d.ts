@@ -12010,6 +12010,66 @@ export type PressPageV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type PressPublicationModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<PressPublicationModelFilter>>>
+}
+
+export enum PressPublicationModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Press Publication (press_publication) */
+export type PressPublicationRecord = {
+  __typename?: "PressPublicationRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Press Publication (press_publication) */
+export type PressPublicationRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type PressReleaseModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -13034,6 +13094,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allPressMediaCoveragePostsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allPressPublicationsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allPressReleasesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allPricingPagesMeta: CollectionMetadata
@@ -13417,6 +13479,8 @@ export type Query = {
   allPressLocales: Array<PressLocaleRecord>
   /** Returns a collection of records */
   allPressMediaCoveragePosts: Array<PressMediaCoveragePostRecord>
+  /** Returns a collection of records */
+  allPressPublications: Array<PressPublicationRecord>
   /** Returns a collection of records */
   allPressReleases: Array<PressReleaseRecord>
   /** Returns a collection of records */
@@ -13839,6 +13903,8 @@ export type Query = {
   pressPage?: Maybe<PressPageRecord>
   /** Returns the single instance record */
   pressPageV2?: Maybe<PressPageV2Record>
+  /** Returns a specific record */
+  pressPublication?: Maybe<PressPublicationRecord>
   /** Returns a specific record */
   pressRelease?: Maybe<PressReleaseRecord>
   /** Returns a specific record */
@@ -14707,6 +14773,12 @@ export type Query_AllPressLocalesMetaArgs = {
 export type Query_AllPressMediaCoveragePostsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PressMediaCoveragePostModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllPressPublicationsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressPublicationModelFilter>
 }
 
 /** The query root for this schema */
@@ -16177,6 +16249,15 @@ export type QueryAllPressMediaCoveragePostsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<PressMediaCoveragePostModelFilter>
   orderBy?: Maybe<Array<Maybe<PressMediaCoveragePostModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllPressPublicationsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<PressPublicationModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressPublicationModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17750,6 +17831,13 @@ export type QueryPressPageArgs = {
 /** The query root for this schema */
 export type QueryPressPageV2Args = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryPressPublicationArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<PressPublicationModelFilter>
+  orderBy?: Maybe<Array<Maybe<PressPublicationModelOrderBy>>>
 }
 
 /** The query root for this schema */
