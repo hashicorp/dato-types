@@ -11987,7 +11987,6 @@ export type PressPageV2Record = {
   heroFeaturedPosts: Array<PressPageV2ModelHeroFeaturedPostsField>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  pressReleases: Array<PressReleaseRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   updatedAt: Scalars["DateTime"]
 }
