@@ -11974,7 +11974,7 @@ export type PressPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type PressPageV2ModelFeaturedPostsField =
+export type PressPageV2ModelHeroFeaturedPostsField =
   | PressReleaseRecord
   | PressMediaCoveragePostRecord
   | PressAnalystReportPostRecord
@@ -11992,14 +11992,12 @@ export type PressPageV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  analystReportPosts: Array<PressAnalystReportPostRecord>
-  communityVoicesPosts: Array<PressCommunityVoicesPostRecord>
   createdAt: Scalars["DateTime"]
   featuredAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   featuredCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
   featuredMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
-  featuredPosts: Array<PressPageV2ModelFeaturedPostsField>
   headline?: Maybe<Scalars["String"]>
+  heroFeaturedPosts: Array<PressPageV2ModelHeroFeaturedPostsField>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   pressReleases: Array<PressReleaseRecord>
