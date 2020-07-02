@@ -12024,11 +12024,11 @@ export type PressMediaCoveragePostTestModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  publication?: Maybe<LinkFilter>
   title?: Maybe<StringFilter>
   publishDate?: Maybe<DateFilter>
   locale?: Maybe<LinkFilter>
   url?: Maybe<StringFilter>
+  publication?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<PressMediaCoveragePostTestModelFilter>>>
 }
 
