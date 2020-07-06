@@ -12137,8 +12137,8 @@ export type PressPageV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  featuredAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   featuredCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
+  featuredPressAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   featuredPressMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
   heroFeaturedPosts: Array<PressPageV2ModelHeroFeaturedPostsField>
   id: Scalars["ItemId"]
