@@ -12139,7 +12139,7 @@ export type PressPageV2Record = {
   createdAt: Scalars["DateTime"]
   featuredAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
   featuredCommunityVoicesPost?: Maybe<PressCommunityVoicesPostRecord>
-  featuredMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
+  featuredPressMediaCoveragePost?: Maybe<PressMediaCoveragePostRecord>
   heroFeaturedPosts: Array<PressPageV2ModelHeroFeaturedPostsField>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
