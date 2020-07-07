@@ -2043,6 +2043,7 @@ export type CodeBlockRecord = {
   code?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  language?: Maybe<CodeblockLanguageRecord>
   updatedAt: Scalars["DateTime"]
 }
 
