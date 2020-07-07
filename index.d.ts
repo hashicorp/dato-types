@@ -10346,7 +10346,6 @@ export type NavPromoModelFilter = {
   linkUrl?: Maybe<StringFilter>
   linkTitle?: Maybe<StringFilter>
   theme?: Maybe<StringFilter>
-  link?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<NavPromoModelFilter>>>
 }
 
@@ -10397,7 +10396,6 @@ export type NavPromoRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  link?: Maybe<LinkRecord>
   linkTitle?: Maybe<Scalars["String"]>
   linkUrl?: Maybe<Scalars["String"]>
   theme?: Maybe<Scalars["String"]>
