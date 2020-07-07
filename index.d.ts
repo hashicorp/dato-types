@@ -11937,6 +11937,7 @@ export type PressPublicationModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
   logoDarkBg?: Maybe<FileFilter>
+  logoLightBg?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<PressPublicationModelFilter>>>
 }
 
@@ -11981,6 +11982,7 @@ export type PressPublicationRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   logoDarkBg?: Maybe<FileField>
+  logoLightBg?: Maybe<FileField>
   name?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
