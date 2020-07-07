@@ -11895,6 +11895,7 @@ export type PressPageV2ModelHeroFeaturedPostsField =
   | PressReleaseRecord
   | PressMediaCoveragePostRecord
   | PressAnalystReportPostRecord
+  | PressCommunityVoicesPostRecord
 
 /** Record of type Press Page v2 (press_page_v2) */
 export type PressPageV2Record = {
