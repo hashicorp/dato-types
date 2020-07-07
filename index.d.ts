@@ -2728,43 +2728,6 @@ export type ContactPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Content Section (content_section) */
-export type ContentSectionRecord = {
-  __typename?: "ContentSectionRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  imageGrid: Array<FileField>
-  lead?: Maybe<Scalars["String"]>
-  text?: Maybe<Scalars["String"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Content Section (content_section) */
-export type ContentSectionRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Content Section (content_section) */
-export type ContentSectionRecordLeadArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Content Section (content_section) */
-export type ContentSectionRecordTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 /** Specifies how to filter by creation datetime */
 export type CreatedAtFilter = {
   /** Filter records with a value that's strictly greater than the one specified */
@@ -4260,39 +4223,6 @@ export type ExampleRecord_SeoMetaTagsArgs = {
 
 /** Record of type Example (example) */
 export type ExampleRecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Expandable Text with Photo (expandable_text_with_photo) */
-export type ExpandableTextWithPhotoRecord = {
-  __typename?: "ExpandableTextWithPhotoRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  image?: Maybe<FileField>
-  readLessLinkText?: Maybe<Scalars["String"]>
-  readMoreLinkText?: Maybe<Scalars["String"]>
-  text?: Maybe<Scalars["String"]>
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Expandable Text with Photo (expandable_text_with_photo) */
-export type ExpandableTextWithPhotoRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Expandable Text with Photo (expandable_text_with_photo) */
-export type ExpandableTextWithPhotoRecordTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
@@ -12201,36 +12131,6 @@ export type PricingPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Principles Page (principles_page) */
-export type PrinciplesPageRecord = {
-  __typename?: "PrinciplesPageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<ContentSectionRecord>>>
-  createdAt: Scalars["DateTime"]
-  footerHero?: Maybe<HeroSectionRecord>
-  hero?: Maybe<HeroSectionRecord>
-  id: Scalars["ItemId"]
-  mainImageGrid: Array<FileField>
-  metadata?: Maybe<SeoField>
-  name?: Maybe<Scalars["String"]>
-  pageContent?: Maybe<Array<Maybe<ExpandableTextWithPhotoRecord>>>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Principles Page (principles_page) */
-export type PrinciplesPageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type ProductCertificationPageModelContentField =
   | MajorHeadlineSectionRecord
   | TextSectionRecord
@@ -13900,8 +13800,6 @@ export type Query = {
   pressRelease?: Maybe<PressReleaseRecord>
   /** Returns a specific record */
   pricingPage?: Maybe<PricingPageRecord>
-  /** Returns the single instance record */
-  principlesPage?: Maybe<PrinciplesPageRecord>
   /** Returns a specific record */
   productCertificationPage?: Maybe<ProductCertificationPageRecord>
   /** Returns a specific record */
@@ -17843,11 +17741,6 @@ export type QueryPricingPageArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<PricingPageModelFilter>
   orderBy?: Maybe<Array<Maybe<PricingPageModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryPrinciplesPageArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
