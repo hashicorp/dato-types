@@ -723,11 +723,11 @@ export type BlogPostV2ModelFilter = {
   slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
   summary?: Maybe<StringFilter>
-  author?: Maybe<LinksFilter>
   blogSeoMetaTags?: Maybe<SeoFilter>
   product?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   category?: Maybe<LinkFilter>
+  author?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<BlogPostV2ModelFilter>>>
 }
 
