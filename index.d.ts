@@ -4103,7 +4103,6 @@ export type EventV2ModelFilter = {
   startTime?: Maybe<DateTimeFilter>
   image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<EventV2ModelFilter>>>
 }
 
@@ -4150,7 +4149,6 @@ export type EventV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  description?: Maybe<Scalars["String"]>
   endTime?: Maybe<Scalars["DateTime"]>
   eventType?: Maybe<Array<Maybe<EventV2ModelEventTypeField>>>
   id: Scalars["ItemId"]
@@ -4164,11 +4162,6 @@ export type EventV2Record = {
 /** Record of type [WIP] Events (event_v2) */
 export type EventV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type [WIP] Events (event_v2) */
-export type EventV2RecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Webinar (Event) (event_webinar) */
