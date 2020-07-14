@@ -3792,6 +3792,7 @@ export type EventDemoRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   speakers: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
@@ -3801,6 +3802,11 @@ export type EventDemoRecord = {
 /** Record of type Demo (event_demo) */
 export type EventDemoRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Demo (event_demo) */
+export type EventDemoRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type EventModelFilter = {
@@ -4178,6 +4184,7 @@ export type EventWebinarRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   recording?: Maybe<VideoField>
   speakers: Array<PersonRecord>
@@ -4188,6 +4195,11 @@ export type EventWebinarRecord = {
 /** Record of type Webinar (Event) (event_webinar) */
 export type EventWebinarRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Webinar (Event) (event_webinar) */
+export type EventWebinarRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Workshop (event_workshop) */
