@@ -4183,6 +4183,7 @@ export type EventV2ModelFilter = {
   endTime?: Maybe<DateTimeFilter>
   startTime?: Maybe<DateTimeFilter>
   title?: Maybe<StringFilter>
+  region?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EventV2ModelFilter>>>
 }
@@ -4214,6 +4215,8 @@ export enum EventV2ModelOrderBy {
   StartTimeDesc = "startTime_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
+  RegionAsc = "region_ASC",
+  RegionDesc = "region_DESC",
   LanguageAsc = "language_ASC",
   LanguageDesc = "language_DESC"
 }
@@ -4237,6 +4240,7 @@ export type EventV2Record = {
   id: Scalars["ItemId"]
   language?: Maybe<Scalars["String"]>
   product: Array<EventProductV2Record>
+  region?: Maybe<Scalars["String"]>
   startTime?: Maybe<Scalars["DateTime"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
