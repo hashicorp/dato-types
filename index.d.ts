@@ -4003,6 +4003,8 @@ export type EventsV2CategoryModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<EventsV2CategoryModelFilter>>>
 }
 
@@ -4045,14 +4047,21 @@ export type EventsV2CategoryRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Events v2 Category (events_v2_category) */
 export type EventsV2CategoryRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Events v2 Category (events_v2_category) */
+export type EventsV2CategoryRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Training (Event) (event_training) */
