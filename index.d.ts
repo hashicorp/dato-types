@@ -3794,6 +3794,7 @@ export type EventDemoRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  recordingGated?: Maybe<Scalars["BooleanType"]>
   speakers: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
   webinarId?: Maybe<Scalars["String"]>
