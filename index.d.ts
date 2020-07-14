@@ -3793,6 +3793,7 @@ export type EventDemoRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  speakers: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
   webinarId?: Maybe<Scalars["String"]>
 }
