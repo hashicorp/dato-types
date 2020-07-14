@@ -4184,6 +4184,7 @@ export type EventV2ModelFilter = {
   startTime?: Maybe<DateTimeFilter>
   title?: Maybe<StringFilter>
   region?: Maybe<StringFilter>
+  audienceSegment?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EventV2ModelFilter>>>
 }
@@ -4217,6 +4218,8 @@ export enum EventV2ModelOrderBy {
   TitleDesc = "title_DESC",
   RegionAsc = "region_ASC",
   RegionDesc = "region_DESC",
+  AudienceSegmentAsc = "audienceSegment_ASC",
+  AudienceSegmentDesc = "audienceSegment_DESC",
   LanguageAsc = "language_ASC",
   LanguageDesc = "language_DESC"
 }
@@ -4234,6 +4237,7 @@ export type EventV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  audienceSegment?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   endTime?: Maybe<Scalars["DateTime"]>
   eventType?: Maybe<Array<Maybe<EventV2ModelEventTypeField>>>
