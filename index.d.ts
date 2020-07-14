@@ -3983,7 +3983,7 @@ export type EventsPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Event Training (event_training) */
+/** Record of type Training (Event) (event_training) */
 export type EventTrainingRecord = {
   __typename?: "EventTrainingRecord"
   _createdAt: Scalars["DateTime"]
@@ -4001,7 +4001,7 @@ export type EventTrainingRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Event Training (event_training) */
+/** Record of type Training (Event) (event_training) */
 export type EventTrainingRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
