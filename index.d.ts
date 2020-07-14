@@ -3720,7 +3720,7 @@ export type EnterpriseProductUseCasePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Event Conference (event_conference) */
+/** Record of type Conference (event_conference) */
 export type EventConferenceRecord = {
   __typename?: "EventConferenceRecord"
   _createdAt: Scalars["DateTime"]
@@ -3740,7 +3740,7 @@ export type EventConferenceRecord = {
   url?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Event Conference (event_conference) */
+/** Record of type Conference (event_conference) */
 export type EventConferenceRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
@@ -3776,6 +3776,29 @@ export type EventCtasItemRecord_SeoMetaTagsArgs = {
 /** Record of type Event CTA (event_ctas_item) */
 export type EventCtasItemRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Demo (event_demo) */
+export type EventDemoRecord = {
+  __typename?: "EventDemoRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Demo (event_demo) */
+export type EventDemoRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type EventModelFilter = {
@@ -4060,6 +4083,7 @@ export type EventV2ModelEventTypeField =
   | EventConferenceRecord
   | EventTrainingRecord
   | EventWorkshopRecord
+  | EventDemoRecord
 
 export type EventV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
