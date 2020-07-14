@@ -3991,6 +3991,66 @@ export type EventsPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type EventsV2CategoryModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<EventsV2CategoryModelFilter>>>
+}
+
+export enum EventsV2CategoryModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Events v2 Category (events_v2_category) */
+export type EventsV2CategoryRecord = {
+  __typename?: "EventsV2CategoryRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Events v2 Category (events_v2_category) */
+export type EventsV2CategoryRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Training (Event) (event_training) */
 export type EventTrainingRecord = {
   __typename?: "EventTrainingRecord"
@@ -12881,6 +12941,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allEventsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allEventsV2CategoriesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allExperienceLevelsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allExternalResourcesMeta: CollectionMetadata
@@ -13264,6 +13326,8 @@ export type Query = {
   allEventV2s: Array<EventV2Record>
   /** Returns a collection of records */
   allEvents: Array<EventRecord>
+  /** Returns a collection of records */
+  allEventsV2Categories: Array<EventsV2CategoryRecord>
   /** Returns a collection of records */
   allExperienceLevels: Array<ExperienceLevelRecord>
   /** Returns a collection of records */
@@ -13666,6 +13730,8 @@ export type Query = {
   eventV2?: Maybe<EventV2Record>
   /** Returns the single instance record */
   eventsPage?: Maybe<EventsPageRecord>
+  /** Returns a specific record */
+  eventsV2Category?: Maybe<EventsV2CategoryRecord>
   /** Returns a specific record */
   experienceLevel?: Maybe<ExperienceLevelRecord>
   /** Returns a specific record */
@@ -14290,6 +14356,12 @@ export type Query_AllEventV2sMetaArgs = {
 export type Query_AllEventsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllEventsV2CategoriesMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsV2CategoryModelFilter>
 }
 
 /** The query root for this schema */
@@ -15565,6 +15637,15 @@ export type QueryAllEventsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<EventModelFilter>
   orderBy?: Maybe<Array<Maybe<EventModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllEventsV2CategoriesArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<EventsV2CategoryModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsV2CategoryModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17226,6 +17307,13 @@ export type QueryEventV2Args = {
 /** The query root for this schema */
 export type QueryEventsPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryEventsV2CategoryArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsV2CategoryModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsV2CategoryModelOrderBy>>>
 }
 
 /** The query root for this schema */
