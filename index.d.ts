@@ -4003,6 +4003,7 @@ export type EventsV2CategoryModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   name?: Maybe<StringFilter>
+  coverImage?: Maybe<FileFilter>
   description?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<EventsV2CategoryModelFilter>>>
@@ -4046,6 +4047,7 @@ export type EventsV2CategoryRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  coverImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
