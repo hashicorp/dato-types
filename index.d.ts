@@ -25078,7 +25078,7 @@ export type UseCasePageDropdownRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
+/** Record of type [UNUSED] Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
 export type VaultAdvancedDataProtectionPageRecord = {
   __typename?: "VaultAdvancedDataProtectionPageRecord"
   _createdAt: Scalars["DateTime"]
@@ -25107,17 +25107,17 @@ export type VaultAdvancedDataProtectionPageRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
+/** Record of type [UNUSED] Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
 export type VaultAdvancedDataProtectionPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
+/** Record of type [UNUSED] Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
 export type VaultAdvancedDataProtectionPageRecordDiagramOneTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
+/** Record of type [UNUSED] Vault Advanced Data Protection Page (vault_advanced_data_protection_page) */
 export type VaultAdvancedDataProtectionPageRecordDiagramTwoTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
