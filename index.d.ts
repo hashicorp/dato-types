@@ -24116,7 +24116,7 @@ export type TmpmodelUserResearchPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
+/** Record of type Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
 export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   __typename?: "TmpmodelVaultAdvancedDataProtectionPageRecord"
   _createdAt: Scalars["DateTime"]
@@ -24139,23 +24139,24 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   diagramTwoText?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   integrations?: Maybe<SbcTextAndContentRecord>
+  integrations2: Array<SbcTextAndContentRecord>
   introSectionHeader?: Maybe<SbcSectionHeaderRecord>
   metatag?: Maybe<SeoField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
+/** Record of type Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
 export type TmpmodelVaultAdvancedDataProtectionPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type TMP: Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
+/** Record of type Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
 export type TmpmodelVaultAdvancedDataProtectionPageRecordDiagramOneTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type TMP: Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
+/** Record of type Vault Advanced Data Protection Page (tmpmodel_vault_advanced_data_protection_page) */
 export type TmpmodelVaultAdvancedDataProtectionPageRecordDiagramTwoTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
