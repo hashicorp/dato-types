@@ -1667,7 +1667,7 @@ export type CaseStudyLandingPageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  featuredCaseStudy?: Maybe<CaseStudyLinkRecord>
+  featuredCaseStudy: Array<CaseStudyLinkRecord>
   id: Scalars["ItemId"]
   seoTags?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
