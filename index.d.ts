@@ -1698,6 +1698,7 @@ export type CaseStudyLinkModelFilter = {
   mediaType?: Maybe<StringFilter>
   summary?: Maybe<StringFilter>
   featuredImage?: Maybe<FileFilter>
+  company?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<CaseStudyLinkModelFilter>>>
 }
 
@@ -1749,6 +1750,7 @@ export type CaseStudyLinkRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  company?: Maybe<CompanyRecord>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
   featuredImage?: Maybe<FileField>
