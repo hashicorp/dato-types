@@ -5482,6 +5482,7 @@ export type GetStartedCtaItemRecord = {
   description?: Maybe<Scalars["String"]>
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
+  linkUrl?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
