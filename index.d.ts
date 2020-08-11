@@ -5465,6 +5465,37 @@ export type GalleryFilter = {
   exists?: Maybe<Scalars["BooleanType"]>
 }
 
+/** Record of type get_started_cta_item (get_started_cta_item) */
+export type GetStartedCtaItemRecord = {
+  __typename?: "GetStartedCtaItemRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  icon?: Maybe<FileField>
+  id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type get_started_cta_item (get_started_cta_item) */
+export type GetStartedCtaItemRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type get_started_cta_item (get_started_cta_item) */
+export type GetStartedCtaItemRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 /** Record of type Global Demo Form (global_demo_form) */
 export type GlobalDemoFormRecord = {
   __typename?: "GlobalDemoFormRecord"
@@ -22900,7 +22931,7 @@ export type TerraformEditionsGetStartedCtaRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  ctas?: Maybe<Array<Maybe<TerraformGetStartedCtaItemRecord>>>
+  ctas?: Maybe<Array<Maybe<GetStartedCtaItemRecord>>>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
@@ -22931,31 +22962,6 @@ export type TerraformEditionsOpenSourcePageRecord = {
 
 /** Record of type Terraform Editions Open Source Page (terraform_editions_open_source_page) */
 export type TerraformEditionsOpenSourcePageRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type terraform_get_started_cta_item (terraform_get_started_cta_item) */
-export type TerraformGetStartedCtaItemRecord = {
-  __typename?: "TerraformGetStartedCtaItemRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  icon?: Maybe<FileField>
-  id: Scalars["ItemId"]
-  title?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type terraform_get_started_cta_item (terraform_get_started_cta_item) */
-export type TerraformGetStartedCtaItemRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
