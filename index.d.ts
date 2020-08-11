@@ -22895,7 +22895,7 @@ export type TerraformEditionsEnterprisePageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
+  cloudInfrastructureAutomationCta?: Maybe<CallToActionRecord>
   createdAt: Scalars["DateTime"]
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
