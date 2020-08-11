@@ -1653,6 +1653,10 @@ export type CallToActionRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type CaseStudyLandingPageModelAdditionalResourcesField =
+  | ResourceRecord
+  | CaseStudyLinkRecord
+
 /** Record of type Case Study Landing Page (case_study_landing_page) */
 export type CaseStudyLandingPageRecord = {
   __typename?: "CaseStudyLandingPageRecord"
@@ -1666,6 +1670,7 @@ export type CaseStudyLandingPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  additionalResources: Array<CaseStudyLandingPageModelAdditionalResourcesField>
   createdAt: Scalars["DateTime"]
   featuredCaseStudy: Array<CaseStudyLinkRecord>
   id: Scalars["ItemId"]
@@ -24178,7 +24183,9 @@ export type TmpmodelTerraformOfferingTierV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  pricingText?: Maybe<StringFilter>
   description?: Maybe<StringFilter>
+  pricingUrl?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelTerraformOfferingTierV2ModelFilter>>>
 }
@@ -24204,8 +24211,12 @@ export enum TmpmodelTerraformOfferingTierV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  PricingTextAsc = "pricingText_ASC",
+  PricingTextDesc = "pricingText_DESC",
   DescriptionAsc = "description_ASC",
   DescriptionDesc = "description_DESC",
+  PricingUrlAsc = "pricingUrl_ASC",
+  PricingUrlDesc = "pricingUrl_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -24226,6 +24237,8 @@ export type TmpmodelTerraformOfferingTierV2Record = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  pricingText?: Maybe<Scalars["String"]>
+  pricingUrl?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
