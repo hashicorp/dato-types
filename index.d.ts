@@ -22866,6 +22866,7 @@ export type TerraformEditionsCloudPageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  alert?: Maybe<AlertRecord>
   cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
   cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
