@@ -14114,6 +14114,8 @@ export type Query = {
   /** Returns the single instance record */
   terraformEditionsCloudPage?: Maybe<TerraformEditionsCloudPageRecord>
   /** Returns the single instance record */
+  terraformEditionsCloudPageCopy1?: Maybe<TerraformEditionsCloudPageCopy1Record>
+  /** Returns the single instance record */
   terraformEditionsEnterprisePage?: Maybe<TerraformEditionsEnterprisePageRecord>
   /** Returns a specific record */
   terraformEditionsGetStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
@@ -18454,6 +18456,11 @@ export type QueryTemplatePageArgs = {
 
 /** The query root for this schema */
 export type QueryTerraformEditionsCloudPageArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryTerraformEditionsCloudPageCopy1Args = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -22842,6 +22849,36 @@ export type TemplatePageRecord = {
 
 /** Record of type Template Page (template_page) */
 export type TemplatePageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Terraform Editions Cloud Page (copy #1) (terraform_editions_cloud_page_copy1) */
+export type TerraformEditionsCloudPageCopy1Record = {
+  __typename?: "TerraformEditionsCloudPageCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
+  cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  createdAt: Scalars["DateTime"]
+  getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
+  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
+  howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
+  updatedAt: Scalars["DateTime"]
+  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
+}
+
+/** Record of type Terraform Editions Cloud Page (copy #1) (terraform_editions_cloud_page_copy1) */
+export type TerraformEditionsCloudPageCopy1Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
