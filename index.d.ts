@@ -23121,6 +23121,8 @@ export type TerraformOfferingV2ModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
+  description?: Maybe<StringFilter>
+  freeTierAvailability?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TerraformOfferingV2ModelFilter>>>
 }
 
@@ -23146,7 +23148,11 @@ export enum TerraformOfferingV2ModelOrderBy {
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  DescriptionAsc = "description_ASC",
+  DescriptionDesc = "description_DESC",
+  FreeTierAvailabilityAsc = "freeTierAvailability_ASC",
+  FreeTierAvailabilityDesc = "freeTierAvailability_DESC"
 }
 
 /** Record of type Terraform Offering v2 (terraform_offering_v2) */
@@ -23163,6 +23169,8 @@ export type TerraformOfferingV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  freeTierAvailability?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
