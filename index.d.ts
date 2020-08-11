@@ -22809,12 +22809,13 @@ export type TerraformEditionsCloudPageRecord = {
   cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
   cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
+  getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
   howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
-  whyTerraformCloudCallouts: Array<SbcCalloutSectionRecord>
+  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
 }
 
 /** Record of type Terraform Editions Cloud Page (terraform_editions_cloud_page) */
