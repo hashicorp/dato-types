@@ -24178,6 +24178,7 @@ export type TmpmodelTerraformOfferingTierV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelTerraformOfferingTierV2ModelFilter>>>
 }
@@ -24203,6 +24204,8 @@ export enum TmpmodelTerraformOfferingTierV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DescriptionAsc = "description_ASC",
+  DescriptionDesc = "description_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -24221,6 +24224,7 @@ export type TmpmodelTerraformOfferingTierV2Record = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
