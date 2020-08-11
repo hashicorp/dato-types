@@ -22992,11 +22992,10 @@ export type TerraformEditionsOpenSourcePageRecord = {
   deployMultiCloudSectionHeader?: Maybe<SbcSectionHeaderRecord>
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
-  howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
-  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
 }
 
 /** Record of type Terraform Editions Open Source Page (terraform_editions_open_source_page) */
