@@ -22900,6 +22900,7 @@ export type TerraformEditionsGetStartedCtaRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  ctas?: Maybe<Array<Maybe<OpenSourceToolRecord>>>
   headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
