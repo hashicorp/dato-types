@@ -24098,6 +24098,7 @@ export type TmpmodelTerraformOfferingCategoryV2ModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
+  offerings?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<TmpmodelTerraformOfferingCategoryV2ModelFilter>>>
 }
 
@@ -24141,6 +24142,7 @@ export type TmpmodelTerraformOfferingCategoryV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  offerings: Array<TmpmodelTerraformOfferingV2Record>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
