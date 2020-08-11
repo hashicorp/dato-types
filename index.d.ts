@@ -22812,6 +22812,7 @@ export type TerraformEditionsCloudPageRecord = {
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
+  whyTerraformCloudSectionHeader?: Maybe<SbcSectionHeaderRecord>
 }
 
 /** Record of type Terraform Editions Cloud Page (terraform_editions_cloud_page) */
