@@ -22991,7 +22991,7 @@ export type TerraformEditionsOpenSourcePageRecord = {
   deployMultiCloudInfrastructureSection?: Maybe<TextImageSectionRecord>
   deployMultiCloudSectionHeader?: Maybe<SbcSectionHeaderRecord>
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
-  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
+  howTerraformWorksSection?: Maybe<TextImageSectionRecord>
   howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
@@ -24512,8 +24512,8 @@ export type TmpmodelTerraformOfferingTierV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   pricingText?: Maybe<StringFilter>
   description?: Maybe<StringFilter>
-  pricingUrl?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
+  pricingUrl?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpmodelTerraformOfferingTierV2ModelFilter>>>
 }
 
@@ -24542,10 +24542,10 @@ export enum TmpmodelTerraformOfferingTierV2ModelOrderBy {
   PricingTextDesc = "pricingText_DESC",
   DescriptionAsc = "description_ASC",
   DescriptionDesc = "description_DESC",
-  PricingUrlAsc = "pricingUrl_ASC",
-  PricingUrlDesc = "pricingUrl_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  PricingUrlAsc = "pricingUrl_ASC",
+  PricingUrlDesc = "pricingUrl_DESC"
 }
 
 /** Record of type TMP: Terraform Offering Tier v2 (tmpmodel_terraform_offering_tier_v2) */
