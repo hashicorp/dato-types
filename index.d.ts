@@ -22857,6 +22857,7 @@ export type TerraformEditionsGetStartedCtaModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  headline?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TerraformEditionsGetStartedCtaModelFilter>>>
 }
 
@@ -22880,7 +22881,9 @@ export enum TerraformEditionsGetStartedCtaModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  HeadlineAsc = "headline_ASC",
+  HeadlineDesc = "headline_DESC"
 }
 
 /** Record of type Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
@@ -22897,6 +22900,7 @@ export type TerraformEditionsGetStartedCtaRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  headline?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
