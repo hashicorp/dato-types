@@ -4281,6 +4281,7 @@ export type EventWebinarRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  logos: Array<CompanyRecord>
   recording?: Maybe<VideoField>
   recordingGated?: Maybe<Scalars["BooleanType"]>
   speakers: Array<PersonRecord>
