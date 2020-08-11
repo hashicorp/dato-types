@@ -22898,7 +22898,6 @@ export type TerraformEditionsEnterprisePageRecord = {
   cloudInfrastructureAutomationCta?: Maybe<CallToActionRecord>
   createdAt: Scalars["DateTime"]
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
-  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
