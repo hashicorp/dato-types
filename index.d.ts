@@ -13223,6 +13223,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTemplatePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allTerraformEditionsGetStartedCtasMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allTerraformGraphSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTerraformOfferingCategoriesMeta: CollectionMetadata
@@ -13618,6 +13620,10 @@ export type Query = {
   allStaticDynamicSections: Array<StaticDynamicSectionRecord>
   /** Returns a collection of records */
   allTemplatePages: Array<TemplatePageRecord>
+  /** Returns a collection of records */
+  allTerraformEditionsGetStartedCtas: Array<
+    TerraformEditionsGetStartedCtaRecord
+  >
   /** Returns a collection of records */
   allTerraformGraphSections: Array<TerraformGraphSectionRecord>
   /** Returns a collection of records */
@@ -14068,6 +14074,8 @@ export type Query = {
   subscriptionOptOutSuccessPage?: Maybe<SubscriptionOptOutSuccessPageRecord>
   /** Returns a specific record */
   templatePage?: Maybe<TemplatePageRecord>
+  /** Returns a specific record */
+  terraformEditionsGetStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   /** Returns a specific record */
   terraformGraphSection?: Maybe<TerraformGraphSectionRecord>
   /** Returns a specific record */
@@ -15156,6 +15164,12 @@ export type Query_AllStaticDynamicSectionsMetaArgs = {
 export type Query_AllTemplatePagesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TemplatePageModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllTerraformEditionsGetStartedCtasMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TerraformEditionsGetStartedCtaModelFilter>
 }
 
 /** The query root for this schema */
@@ -16824,6 +16838,15 @@ export type QueryAllTemplatePagesArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllTerraformEditionsGetStartedCtasArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<TerraformEditionsGetStartedCtaModelFilter>
+  orderBy?: Maybe<Array<Maybe<TerraformEditionsGetStartedCtaModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllTerraformGraphSectionsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -18369,6 +18392,13 @@ export type QueryTemplatePageArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TemplatePageModelFilter>
   orderBy?: Maybe<Array<Maybe<TemplatePageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryTerraformEditionsGetStartedCtaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TerraformEditionsGetStartedCtaModelFilter>
+  orderBy?: Maybe<Array<Maybe<TerraformEditionsGetStartedCtaModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -22737,6 +22767,66 @@ export type TemplatePageRecord = {
 
 /** Record of type Template Page (template_page) */
 export type TemplatePageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type TerraformEditionsGetStartedCtaModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<TerraformEditionsGetStartedCtaModelFilter>>>
+}
+
+export enum TerraformEditionsGetStartedCtaModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type TMP: Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
+export type TerraformEditionsGetStartedCtaRecord = {
+  __typename?: "TerraformEditionsGetStartedCtaRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
+export type TerraformEditionsGetStartedCtaRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
