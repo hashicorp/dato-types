@@ -5465,7 +5465,7 @@ export type GalleryFilter = {
   exists?: Maybe<Scalars["BooleanType"]>
 }
 
-/** Record of type get_started_cta_item (get_started_cta_item) */
+/** Record of type Get Started CTA Item (get_started_cta_item) */
 export type GetStartedCtaItemRecord = {
   __typename?: "GetStartedCtaItemRecord"
   _createdAt: Scalars["DateTime"]
@@ -5486,12 +5486,12 @@ export type GetStartedCtaItemRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type get_started_cta_item (get_started_cta_item) */
+/** Record of type Get Started CTA Item (get_started_cta_item) */
 export type GetStartedCtaItemRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type get_started_cta_item (get_started_cta_item) */
+/** Record of type Get Started CTA Item (get_started_cta_item) */
 export type GetStartedCtaItemRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
