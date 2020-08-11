@@ -14075,6 +14075,8 @@ export type Query = {
   subscriptionOptOutSuccessPage?: Maybe<SubscriptionOptOutSuccessPageRecord>
   /** Returns a specific record */
   templatePage?: Maybe<TemplatePageRecord>
+  /** Returns the single instance record */
+  terraformEditionsCloudPage?: Maybe<TerraformEditionsCloudPageRecord>
   /** Returns a specific record */
   terraformEditionsGetStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   /** Returns a specific record */
@@ -18393,6 +18395,11 @@ export type QueryTemplatePageArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TemplatePageModelFilter>
   orderBy?: Maybe<Array<Maybe<TemplatePageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryTerraformEditionsCloudPageArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
@@ -22768,6 +22775,29 @@ export type TemplatePageRecord = {
 
 /** Record of type Template Page (template_page) */
 export type TemplatePageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Terraform Editions Cloud Page (terraform_editions_cloud_page) */
+export type TerraformEditionsCloudPageRecord = {
+  __typename?: "TerraformEditionsCloudPageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Terraform Editions Cloud Page (terraform_editions_cloud_page) */
+export type TerraformEditionsCloudPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
