@@ -22896,7 +22896,6 @@ export type TerraformEditionsEnterprisePageRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
-  cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
