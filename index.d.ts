@@ -14114,11 +14114,11 @@ export type Query = {
   /** Returns the single instance record */
   terraformEditionsCloudPage?: Maybe<TerraformEditionsCloudPageRecord>
   /** Returns the single instance record */
-  terraformEditionsCloudPageCopy1?: Maybe<TerraformEditionsCloudPageCopy1Record>
-  /** Returns the single instance record */
   terraformEditionsEnterprisePage?: Maybe<TerraformEditionsEnterprisePageRecord>
   /** Returns a specific record */
   terraformEditionsGetStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
+  /** Returns the single instance record */
+  terraformEditionsOpenSourcePage?: Maybe<TerraformEditionsOpenSourcePageRecord>
   /** Returns a specific record */
   terraformEditionsPageHeader?: Maybe<TerraformEditionsPageHeaderRecord>
   /** Returns a specific record */
@@ -18460,11 +18460,6 @@ export type QueryTerraformEditionsCloudPageArgs = {
 }
 
 /** The query root for this schema */
-export type QueryTerraformEditionsCloudPageCopy1Args = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** The query root for this schema */
 export type QueryTerraformEditionsEnterprisePageArgs = {
   locale?: Maybe<SiteLocale>
 }
@@ -18474,6 +18469,11 @@ export type QueryTerraformEditionsGetStartedCtaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TerraformEditionsGetStartedCtaModelFilter>
   orderBy?: Maybe<Array<Maybe<TerraformEditionsGetStartedCtaModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryTerraformEditionsOpenSourcePageArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
@@ -22852,36 +22852,6 @@ export type TemplatePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Terraform Editions Cloud Page (copy #1) (terraform_editions_cloud_page_copy1) */
-export type TerraformEditionsCloudPageCopy1Record = {
-  __typename?: "TerraformEditionsCloudPageCopy1Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
-  cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  createdAt: Scalars["DateTime"]
-  getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
-  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
-  howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
-  id: Scalars["ItemId"]
-  metadata?: Maybe<SeoField>
-  updatedAt: Scalars["DateTime"]
-  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
-}
-
-/** Record of type Terraform Editions Cloud Page (copy #1) (terraform_editions_cloud_page_copy1) */
-export type TerraformEditionsCloudPageCopy1Record_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type Terraform Editions Cloud Page (terraform_editions_cloud_page) */
 export type TerraformEditionsCloudPageRecord = {
   __typename?: "TerraformEditionsCloudPageRecord"
@@ -23001,6 +22971,36 @@ export type TerraformEditionsGetStartedCtaRecord = {
 
 /** Record of type Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
 export type TerraformEditionsGetStartedCtaRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Terraform Editions Open Source Page (terraform_editions_open_source_page) */
+export type TerraformEditionsOpenSourcePageRecord = {
+  __typename?: "TerraformEditionsOpenSourcePageRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
+  createdAt: Scalars["DateTime"]
+  deployMultiCloudSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
+  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
+  howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
+  id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
+  updatedAt: Scalars["DateTime"]
+  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
+}
+
+/** Record of type Terraform Editions Open Source Page (terraform_editions_open_source_page) */
+export type TerraformEditionsOpenSourcePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
