@@ -22826,7 +22826,7 @@ export enum TerraformEditionsGetStartedCtaModelOrderBy {
   IsValidDesc = "_isValid_DESC"
 }
 
-/** Record of type TMP: Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
+/** Record of type Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
 export type TerraformEditionsGetStartedCtaRecord = {
   __typename?: "TerraformEditionsGetStartedCtaRecord"
   _createdAt: Scalars["DateTime"]
@@ -22844,7 +22844,7 @@ export type TerraformEditionsGetStartedCtaRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
+/** Record of type Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
 export type TerraformEditionsGetStartedCtaRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
