@@ -14117,8 +14117,6 @@ export type Query = {
   terraformEditionsEnterprisePage?: Maybe<TerraformEditionsEnterprisePageRecord>
   /** Returns a specific record */
   terraformEditionsGetStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
-  /** Returns the single instance record */
-  terraformEditionsOpenSourcePage?: Maybe<TerraformEditionsOpenSourcePageRecord>
   /** Returns a specific record */
   terraformEditionsPageHeader?: Maybe<TerraformEditionsPageHeaderRecord>
   /** Returns a specific record */
@@ -18469,11 +18467,6 @@ export type QueryTerraformEditionsGetStartedCtaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TerraformEditionsGetStartedCtaModelFilter>
   orderBy?: Maybe<Array<Maybe<TerraformEditionsGetStartedCtaModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryTerraformEditionsOpenSourcePageArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** The query root for this schema */
@@ -22971,29 +22964,6 @@ export type TerraformEditionsGetStartedCtaRecord = {
 
 /** Record of type Terraform Editions Get Started CTA (terraform_editions_get_started_cta) */
 export type TerraformEditionsGetStartedCtaRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Terraform Editions Open Source Page (terraform_editions_open_source_page) */
-export type TerraformEditionsOpenSourcePageRecord = {
-  __typename?: "TerraformEditionsOpenSourcePageRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Terraform Editions Open Source Page (terraform_editions_open_source_page) */
-export type TerraformEditionsOpenSourcePageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
