@@ -22903,7 +22903,7 @@ export type TerraformEditionsEnterprisePageRecord = {
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
-  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
+  whyTerraformEnterpriseCallouts: Array<SbcCalloutRecord>
 }
 
 /** Record of type Terraform Editions Enterprise Page (terraform_editions_enterprise_page) */
