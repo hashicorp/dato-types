@@ -24370,6 +24370,7 @@ export type TmpmodelTerraformPricingPageV2Record = {
   faqs?: Maybe<FaqCategoryRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
+  offeringTable?: Maybe<TmpmodelTerraformOfferingTableV2Record>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
