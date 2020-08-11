@@ -22809,6 +22809,7 @@ export type TerraformEditionsCloudPageRecord = {
   cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
   cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
+  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
   howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
