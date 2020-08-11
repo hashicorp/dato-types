@@ -1675,6 +1675,7 @@ export type CaseStudyLandingPageRecord = {
   featuredCaseStudy: Array<CaseStudyLinkRecord>
   id: Scalars["ItemId"]
   seoTags?: Maybe<SeoField>
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
