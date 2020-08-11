@@ -1675,6 +1675,7 @@ export type CaseStudyLandingPageRecord = {
   featuredCaseStudy: Array<CaseStudyLinkRecord>
   id: Scalars["ItemId"]
   seoTags?: Maybe<SeoField>
+  summary?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
@@ -24162,9 +24163,9 @@ export type TmpmodelTerraformOfferingTableV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
-  categories: Array<TmpmodelTerraformOfferingCategoryV2Record>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  offeringCategories: Array<TmpmodelTerraformOfferingCategoryV2Record>
   updatedAt: Scalars["DateTime"]
 }
 
