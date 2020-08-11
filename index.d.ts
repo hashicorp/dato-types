@@ -13222,8 +13222,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTerraformOfferingCategoryV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformOfferingTableV2sMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allTerraformOfferingTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTerraformOfferingTiersMeta: CollectionMetadata
@@ -13245,6 +13243,8 @@ export type Query = {
   _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpmodelProductUseCasePagesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
+  _allTmpmodelTerraformOfferingTableV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTrainingCoursesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -13618,8 +13618,6 @@ export type Query = {
   /** Returns a collection of records */
   allTerraformOfferingCategoryV2s: Array<TerraformOfferingCategoryV2Record>
   /** Returns a collection of records */
-  allTerraformOfferingTableV2s: Array<TerraformOfferingTableV2Record>
-  /** Returns a collection of records */
   allTerraformOfferingTables: Array<TerraformOfferingTableRecord>
   /** Returns a collection of records */
   allTerraformOfferingTiers: Array<TerraformOfferingTierRecord>
@@ -13641,6 +13639,10 @@ export type Query = {
   allTmpmodelButtons: Array<TmpmodelButtonRecord>
   /** Returns a collection of records */
   allTmpmodelProductUseCasePages: Array<TmpmodelProductUseCasePageRecord>
+  /** Returns a collection of records */
+  allTmpmodelTerraformOfferingTableV2s: Array<
+    TmpmodelTerraformOfferingTableV2Record
+  >
   /** Returns a collection of records */
   allTrainingCourses: Array<TrainingCourseRecord>
   /** Returns a collection of records */
@@ -14068,8 +14070,6 @@ export type Query = {
   /** Returns a specific record */
   terraformOfferingTable?: Maybe<TerraformOfferingTableRecord>
   /** Returns a specific record */
-  terraformOfferingTableV2?: Maybe<TerraformOfferingTableV2Record>
-  /** Returns a specific record */
   terraformOfferingTier?: Maybe<TerraformOfferingTierRecord>
   /** Returns a specific record */
   terraformOfferingV2?: Maybe<TerraformOfferingV2Record>
@@ -14109,6 +14109,10 @@ export type Query = {
   tmpmodelNomadOverviewPage?: Maybe<TmpmodelNomadOverviewPageRecord>
   /** Returns a specific record */
   tmpmodelProductUseCasePage?: Maybe<TmpmodelProductUseCasePageRecord>
+  /** Returns a specific record */
+  tmpmodelTerraformOfferingTableV2?: Maybe<
+    TmpmodelTerraformOfferingTableV2Record
+  >
   /** Returns the single instance record */
   tmpmodelTerraformOverviewPage?: Maybe<TmpmodelTerraformOverviewPageRecord>
   /** Returns the single instance record */
@@ -15160,12 +15164,6 @@ export type Query_AllTerraformOfferingCategoryV2sMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllTerraformOfferingTableV2sMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<TerraformOfferingTableV2ModelFilter>
-}
-
-/** The query root for this schema */
 export type Query_AllTerraformOfferingTablesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TerraformOfferingTableModelFilter>
@@ -15229,6 +15227,12 @@ export type Query_AllTmpmodelButtonsMetaArgs = {
 export type Query_AllTmpmodelProductUseCasePagesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpmodelProductUseCasePageModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllTmpmodelTerraformOfferingTableV2sMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpmodelTerraformOfferingTableV2ModelFilter>
 }
 
 /** The query root for this schema */
@@ -16834,15 +16838,6 @@ export type QueryAllTerraformOfferingCategoryV2sArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllTerraformOfferingTableV2sArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<TerraformOfferingTableV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TerraformOfferingTableV2ModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllTerraformOfferingTablesArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -16939,6 +16934,15 @@ export type QueryAllTmpmodelProductUseCasePagesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<TmpmodelProductUseCasePageModelFilter>
   orderBy?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllTmpmodelTerraformOfferingTableV2sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<TmpmodelTerraformOfferingTableV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpmodelTerraformOfferingTableV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -18390,13 +18394,6 @@ export type QueryTerraformOfferingTableArgs = {
 }
 
 /** The query root for this schema */
-export type QueryTerraformOfferingTableV2Args = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<TerraformOfferingTableV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TerraformOfferingTableV2ModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryTerraformOfferingTierArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TerraformOfferingTierModelFilter>
@@ -18507,6 +18504,13 @@ export type QueryTmpmodelProductUseCasePageArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpmodelProductUseCasePageModelFilter>
   orderBy?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryTmpmodelTerraformOfferingTableV2Args = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpmodelTerraformOfferingTableV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpmodelTerraformOfferingTableV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -23054,66 +23058,6 @@ export type TerraformOfferingTableRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type TerraformOfferingTableV2ModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  OR?: Maybe<Array<Maybe<TerraformOfferingTableV2ModelFilter>>>
-}
-
-export enum TerraformOfferingTableV2ModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
-}
-
-/** Record of type Terraform Offering Table v2 (terraform_offering_table_v2) */
-export type TerraformOfferingTableV2Record = {
-  __typename?: "TerraformOfferingTableV2Record"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Terraform Offering Table v2 (terraform_offering_table_v2) */
-export type TerraformOfferingTableV2Record_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type TerraformOfferingTierModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -24265,6 +24209,68 @@ export type TmpmodelProductUseCasePageRecord = {
 
 /** Record of type TMP: Product Use Case Page (tmpmodel_product_use_case_page) */
 export type TmpmodelProductUseCasePageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type TmpmodelTerraformOfferingTableV2ModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  categories?: Maybe<LinksFilter>
+  OR?: Maybe<Array<Maybe<TmpmodelTerraformOfferingTableV2ModelFilter>>>
+}
+
+export enum TmpmodelTerraformOfferingTableV2ModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type TMP: Terraform Offering Table v2 (tmpmodel_terraform_offering_table_v2) */
+export type TmpmodelTerraformOfferingTableV2Record = {
+  __typename?: "TmpmodelTerraformOfferingTableV2Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  categories: Array<TerraformOfferingCategoryV2Record>
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Terraform Offering Table v2 (tmpmodel_terraform_offering_table_v2) */
+export type TmpmodelTerraformOfferingTableV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
