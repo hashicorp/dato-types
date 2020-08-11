@@ -13224,9 +13224,9 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTerraformOfferingTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTerraformOfferingTierV2sMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allTerraformOfferingTiersMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
+  _allTerraformOfferingV2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTerraformOfferingsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -13618,9 +13618,9 @@ export type Query = {
   /** Returns a collection of records */
   allTerraformOfferingTables: Array<TerraformOfferingTableRecord>
   /** Returns a collection of records */
-  allTerraformOfferingTierV2s: Array<TerraformOfferingTierV2Record>
-  /** Returns a collection of records */
   allTerraformOfferingTiers: Array<TerraformOfferingTierRecord>
+  /** Returns a collection of records */
+  allTerraformOfferingV2s: Array<TerraformOfferingV2Record>
   /** Returns a collection of records */
   allTerraformOfferings: Array<TerraformOfferingRecord>
   /** Returns a collection of records */
@@ -14066,7 +14066,7 @@ export type Query = {
   /** Returns a specific record */
   terraformOfferingTier?: Maybe<TerraformOfferingTierRecord>
   /** Returns a specific record */
-  terraformOfferingTierV2?: Maybe<TerraformOfferingTierV2Record>
+  terraformOfferingV2?: Maybe<TerraformOfferingV2Record>
   /** Returns the single instance record */
   terraformProductPage?: Maybe<TerraformProductPageRecord>
   /** Returns a specific record */
@@ -15160,15 +15160,15 @@ export type Query_AllTerraformOfferingTablesMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllTerraformOfferingTierV2sMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<TerraformOfferingTierV2ModelFilter>
-}
-
-/** The query root for this schema */
 export type Query_AllTerraformOfferingTiersMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TerraformOfferingTierModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllTerraformOfferingV2sMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TerraformOfferingV2ModelFilter>
 }
 
 /** The query root for this schema */
@@ -16831,21 +16831,21 @@ export type QueryAllTerraformOfferingTablesArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllTerraformOfferingTierV2sArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<TerraformOfferingTierV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TerraformOfferingTierV2ModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QueryAllTerraformOfferingTiersArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<TerraformOfferingTierModelFilter>
   orderBy?: Maybe<Array<Maybe<TerraformOfferingTierModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllTerraformOfferingV2sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<TerraformOfferingV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<TerraformOfferingV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -18376,10 +18376,10 @@ export type QueryTerraformOfferingTierArgs = {
 }
 
 /** The query root for this schema */
-export type QueryTerraformOfferingTierV2Args = {
+export type QueryTerraformOfferingV2Args = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<TerraformOfferingTierV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<TerraformOfferingTierV2ModelOrderBy>>>
+  filter?: Maybe<TerraformOfferingV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<TerraformOfferingV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -23109,7 +23109,7 @@ export type TerraformOfferingTierRecordCalloutsArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type TerraformOfferingTierV2ModelFilter = {
+export type TerraformOfferingV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
@@ -23120,10 +23120,10 @@ export type TerraformOfferingTierV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  OR?: Maybe<Array<Maybe<TerraformOfferingTierV2ModelFilter>>>
+  OR?: Maybe<Array<Maybe<TerraformOfferingV2ModelFilter>>>
 }
 
-export enum TerraformOfferingTierV2ModelOrderBy {
+export enum TerraformOfferingV2ModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -23146,9 +23146,9 @@ export enum TerraformOfferingTierV2ModelOrderBy {
   IsValidDesc = "_isValid_DESC"
 }
 
-/** Record of type Terraform Offering Tier v2 (terraform_offering_tier_v2) */
-export type TerraformOfferingTierV2Record = {
-  __typename?: "TerraformOfferingTierV2Record"
+/** Record of type Terraform Offering v2 (terraform_offering_v2) */
+export type TerraformOfferingV2Record = {
+  __typename?: "TerraformOfferingV2Record"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -23164,8 +23164,8 @@ export type TerraformOfferingTierV2Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Terraform Offering Tier v2 (terraform_offering_tier_v2) */
-export type TerraformOfferingTierV2Record_SeoMetaTagsArgs = {
+/** Record of type Terraform Offering v2 (terraform_offering_v2) */
+export type TerraformOfferingV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
