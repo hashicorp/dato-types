@@ -22895,9 +22895,16 @@ export type TerraformEditionsEnterprisePageRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
+  cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
+  getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
+  howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
+  howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
+  metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
+  whyTerraformCloudCallouts: Array<SbcCalloutRecord>
 }
 
 /** Record of type Terraform Editions Enterprise Page (terraform_editions_enterprise_page) */
