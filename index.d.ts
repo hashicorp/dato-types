@@ -24746,7 +24746,7 @@ export type TmpmodelTerraformPricingPageV2Record = {
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
-  faqs?: Maybe<FaqCategoryRecord>
+  faqs: Array<FaqCategoryRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   offeringTable?: Maybe<TmpmodelTerraformOfferingTableV2Record>
