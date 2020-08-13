@@ -1699,7 +1699,6 @@ export type CaseStudyLinkModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   industry?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
-  products?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   thumbnailImage?: Maybe<FileFilter>
   url?: Maybe<StringFilter>
@@ -1707,7 +1706,7 @@ export type CaseStudyLinkModelFilter = {
   summary?: Maybe<StringFilter>
   featuredImage?: Maybe<FileFilter>
   company?: Maybe<LinkFilter>
-  productsNew?: Maybe<LinksFilter>
+  products?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<CaseStudyLinkModelFilter>>>
 }
 
@@ -1746,7 +1745,7 @@ export enum CaseStudyLinkModelOrderBy {
   SummaryDesc = "summary_DESC"
 }
 
-export type CaseStudyLinkModelProductsNewField =
+export type CaseStudyLinkModelProductsField =
   | OpenSourceToolRecord
   | EnterpriseProductRecord
 
@@ -1770,8 +1769,7 @@ export type CaseStudyLinkRecord = {
   id: Scalars["ItemId"]
   industry?: Maybe<Scalars["String"]>
   mediaType?: Maybe<Scalars["String"]>
-  products: Array<CaseStudyProductRecord>
-  productsNew: Array<CaseStudyLinkModelProductsNewField>
+  products: Array<CaseStudyLinkModelProductsField>
   summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
