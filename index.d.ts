@@ -1707,6 +1707,7 @@ export type CaseStudyLinkModelFilter = {
   summary?: Maybe<StringFilter>
   featuredImage?: Maybe<FileFilter>
   company?: Maybe<LinkFilter>
+  productsNew?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<CaseStudyLinkModelFilter>>>
 }
 
@@ -1745,6 +1746,10 @@ export enum CaseStudyLinkModelOrderBy {
   SummaryDesc = "summary_DESC"
 }
 
+export type CaseStudyLinkModelProductsNewField =
+  | OpenSourceToolRecord
+  | EnterpriseProductRecord
+
 /** Record of type Case Study (case_study_link) */
 export type CaseStudyLinkRecord = {
   __typename?: "CaseStudyLinkRecord"
@@ -1766,6 +1771,7 @@ export type CaseStudyLinkRecord = {
   industry?: Maybe<Scalars["String"]>
   mediaType?: Maybe<Scalars["String"]>
   products: Array<CaseStudyProductRecord>
+  productsNew: Array<CaseStudyLinkModelProductsNewField>
   summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
