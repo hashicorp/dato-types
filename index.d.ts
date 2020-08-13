@@ -1673,6 +1673,7 @@ export type CaseStudyLandingPageRecord = {
   additionalResources: Array<CaseStudyLandingPageModelAdditionalResourcesField>
   additionalResourcesTitle?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  customers: Array<CompanyRecord>
   featuredCaseStudy: Array<CaseStudyLinkRecord>
   id: Scalars["ItemId"]
   seoTags?: Maybe<SeoField>
