@@ -4294,6 +4294,7 @@ export type EventWebinarRecord = {
   speakers: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
   webinarId?: Maybe<Scalars["String"]>
+  whatWillILearn?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Webinar (Event) (event_webinar) */
@@ -4303,6 +4304,11 @@ export type EventWebinarRecord_SeoMetaTagsArgs = {
 
 /** Record of type Webinar (Event) (event_webinar) */
 export type EventWebinarRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Webinar (Event) (event_webinar) */
+export type EventWebinarRecordWhatWillILearnArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
