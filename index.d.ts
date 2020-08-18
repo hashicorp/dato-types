@@ -4203,6 +4203,7 @@ export type EventV2ModelFilter = {
   region?: Maybe<StringFilter>
   audienceSegment?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
+  tags?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<EventV2ModelFilter>>>
 }
 
@@ -4263,6 +4264,7 @@ export type EventV2Record = {
   product: Array<EventProductV2Record>
   region?: Maybe<Scalars["String"]>
   startTime?: Maybe<Scalars["DateTime"]>
+  tags: Array<EventsV2CategoryRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
