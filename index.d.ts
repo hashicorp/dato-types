@@ -6,6 +6,7 @@ export type Scalars = {
   Boolean: boolean
   Int: number
   Float: number
+  /** A ISO 8601 compliant datetime value */
   DateTime: any
   /** Represents `true` or `false` values. */
   BooleanType: any
@@ -13,6 +14,7 @@ export type Scalars = {
   /** Represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. */
   IntType: any
   UploadId: any
+  /** A ISO 8601 compliant date value */
   Date: any
   /**
    * Represents signed double-precision fractional values as specified by [IEEE
@@ -3749,7 +3751,6 @@ export type EventConferenceRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
-  hashicorpEvent?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
   url?: Maybe<Scalars["String"]>
