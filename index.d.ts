@@ -4099,6 +4099,7 @@ export type EventTrainingRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Training (Event) (event_training) */
