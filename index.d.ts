@@ -4298,6 +4298,7 @@ export type EventWebinarRecord = {
   name?: Maybe<Scalars["String"]>
   recording?: Maybe<VideoField>
   recordingGated?: Maybe<Scalars["BooleanType"]>
+  slug?: Maybe<Scalars["String"]>
   speakers: Array<PersonRecord>
   updatedAt: Scalars["DateTime"]
   webinarId?: Maybe<Scalars["String"]>
