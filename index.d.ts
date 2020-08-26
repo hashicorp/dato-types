@@ -4333,8 +4333,8 @@ export type EventWorkshopRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  linkUrl?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Workshop (event_workshop) */
