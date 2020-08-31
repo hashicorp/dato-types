@@ -11750,6 +11750,7 @@ export type PressCommunityVoicesPostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featureBg?: Maybe<FileFilter>
   authorAvatar?: Maybe<FileFilter>
   authorUsername?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
@@ -11806,6 +11807,7 @@ export type PressCommunityVoicesPostRecord = {
   authorAvatar?: Maybe<FileField>
   authorUsername?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  featureBg?: Maybe<FileField>
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
   publishDate?: Maybe<Scalars["Date"]>
