@@ -11980,6 +11980,7 @@ export type PressMediaCoveragePostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featureBg?: Maybe<FileFilter>
   publication?: Maybe<LinkFilter>
   title?: Maybe<StringFilter>
   publishDate?: Maybe<DateFilter>
@@ -12031,6 +12032,7 @@ export type PressMediaCoveragePostRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  featureBg?: Maybe<FileField>
   id: Scalars["ItemId"]
   locale?: Maybe<PressLocaleRecord>
   publication?: Maybe<PressPublicationRecord>
