@@ -372,7 +372,6 @@ export type BlogCategoriesV2ModelFilter = {
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
   description?: Maybe<TextFilter>
-  subtitle?: Maybe<StringFilter>
   featuredPost?: Maybe<LinkFilter>
   slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
@@ -400,8 +399,6 @@ export enum BlogCategoriesV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  SubtitleAsc = "subtitle_ASC",
-  SubtitleDesc = "subtitle_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -424,7 +421,6 @@ export type BlogCategoriesV2Record = {
   featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
-  subtitle?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
