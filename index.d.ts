@@ -274,6 +274,7 @@ export type BackendTagModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BackendTagModelFilter>>>
 }
 
@@ -297,10 +298,12 @@ export enum BackendTagModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
-/** Record of type backend_tags (backend_tag) */
+/** Record of type Backend Tag (backend_tag) */
 export type BackendTagRecord = {
   __typename?: "BackendTagRecord"
   _createdAt: Scalars["DateTime"]
@@ -315,10 +318,11 @@ export type BackendTagRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type backend_tags (backend_tag) */
+/** Record of type Backend Tag (backend_tag) */
 export type BackendTagRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
