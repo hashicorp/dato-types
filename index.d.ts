@@ -274,6 +274,7 @@ export type BackendTagModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<StringFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<BackendTagModelFilter>>>
 }
@@ -299,6 +300,8 @@ export enum BackendTagModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC"
 }
@@ -319,6 +322,7 @@ export type BackendTagRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
