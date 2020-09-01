@@ -372,7 +372,7 @@ export type BlogCategoriesV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  description?: Maybe<TextFilter>
+  description?: Maybe<StringFilter>
   featuredPost?: Maybe<LinkFilter>
   slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
@@ -402,6 +402,8 @@ export enum BlogCategoriesV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DescriptionAsc = "description_ASC",
+  DescriptionDesc = "description_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
@@ -432,11 +434,6 @@ export type BlogCategoriesV2Record = {
 /** Record of type Blog Categories V2 (blog_categories_v2) */
 export type BlogCategoriesV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Blog Categories V2 (blog_categories_v2) */
-export type BlogCategoriesV2RecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Blog Image (blog_image) */
