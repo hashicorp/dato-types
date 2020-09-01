@@ -365,6 +365,7 @@ export type BlogCategoriesV2ModelFilter = {
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
+  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
@@ -387,6 +388,8 @@ export enum BlogCategoriesV2ModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -420,6 +423,7 @@ export type BlogCategoriesV2Record = {
   description?: Maybe<Scalars["String"]>
   featuredPost?: Maybe<BlogPostV2Record>
   id: Scalars["ItemId"]
+  position?: Maybe<Scalars["IntType"]>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
