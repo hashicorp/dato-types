@@ -263,6 +263,66 @@ export type AutomationLogoRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type BackendTagModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<BackendTagModelFilter>>>
+}
+
+export enum BackendTagModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type backend_tags (backend_tag) */
+export type BackendTagRecord = {
+  __typename?: "BackendTagRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type backend_tags (backend_tag) */
+export type BackendTagRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type BasicTableModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -13029,6 +13089,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allAlertsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allBackendTagsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allBasicTablesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allBlogCategoriesV2sMeta: CollectionMetadata
@@ -13425,6 +13487,8 @@ export type Query = {
   /** Returns a collection of records */
   allAlerts: Array<AlertRecord>
   /** Returns a collection of records */
+  allBackendTags: Array<BackendTagRecord>
+  /** Returns a collection of records */
   allBasicTables: Array<BasicTableRecord>
   /** Returns a collection of records */
   allBlogCategoriesV2s: Array<BlogCategoriesV2Record>
@@ -13818,6 +13882,8 @@ export type Query = {
   allWhitePapers: Array<WhitePaperRecord>
   /** Returns a collection of records */
   allWistiaSections: Array<WistiaSectionRecord>
+  /** Returns a specific record */
+  backendTag?: Maybe<BackendTagRecord>
   /** Returns a specific record */
   basicTable?: Maybe<BasicTableRecord>
   /** Returns the single instance record */
@@ -14338,6 +14404,12 @@ export type Query_AllAlertBannersMetaArgs = {
 export type Query_AllAlertsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<AlertModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllBackendTagsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<BackendTagModelFilter>
 }
 
 /** The query root for this schema */
@@ -15532,6 +15604,15 @@ export type QueryAllAlertsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<AlertModelFilter>
   orderBy?: Maybe<Array<Maybe<AlertModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllBackendTagsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<BackendTagModelFilter>
+  orderBy?: Maybe<Array<Maybe<BackendTagModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17260,6 +17341,13 @@ export type QueryAllWistiaSectionsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<WistiaSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<WistiaSectionModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryBackendTagArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<BackendTagModelFilter>
+  orderBy?: Maybe<Array<Maybe<BackendTagModelOrderBy>>>
 }
 
 /** The query root for this schema */
