@@ -4003,6 +4003,81 @@ export type EventsPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type EventsV2CategoryCopy1ModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  name?: Maybe<StringFilter>
+  description?: Maybe<TextFilter>
+  coverImage?: Maybe<FileFilter>
+  OR?: Maybe<Array<Maybe<EventsV2CategoryCopy1ModelFilter>>>
+}
+
+export enum EventsV2CategoryCopy1ModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
+}
+
+/** Record of type Events v2 Category (copy #1) (events_v2_category_copy1) */
+export type EventsV2CategoryCopy1Record = {
+  __typename?: "EventsV2CategoryCopy1Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  coverImage?: Maybe<FileField>
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Events v2 Category (copy #1) (events_v2_category_copy1) */
+export type EventsV2CategoryCopy1Record_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Events v2 Category (copy #1) (events_v2_category_copy1) */
+export type EventsV2CategoryCopy1RecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 export type EventsV2CategoryModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -13034,6 +13109,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allEventsV2CategoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allEventsV2CategoryCopy1sMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allExperienceLevelsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allExternalResourcesMeta: CollectionMetadata
@@ -13427,6 +13504,8 @@ export type Query = {
   allEvents: Array<EventRecord>
   /** Returns a collection of records */
   allEventsV2Categories: Array<EventsV2CategoryRecord>
+  /** Returns a collection of records */
+  allEventsV2CategoryCopy1s: Array<EventsV2CategoryCopy1Record>
   /** Returns a collection of records */
   allExperienceLevels: Array<ExperienceLevelRecord>
   /** Returns a collection of records */
@@ -13845,6 +13924,8 @@ export type Query = {
   eventsPage?: Maybe<EventsPageRecord>
   /** Returns a specific record */
   eventsV2Category?: Maybe<EventsV2CategoryRecord>
+  /** Returns a specific record */
+  eventsV2CategoryCopy1?: Maybe<EventsV2CategoryCopy1Record>
   /** Returns a specific record */
   experienceLevel?: Maybe<ExperienceLevelRecord>
   /** Returns a specific record */
@@ -14497,6 +14578,12 @@ export type Query_AllEventsMetaArgs = {
 export type Query_AllEventsV2CategoriesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventsV2CategoryModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllEventsV2CategoryCopy1sMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsV2CategoryCopy1ModelFilter>
 }
 
 /** The query root for this schema */
@@ -15805,6 +15892,15 @@ export type QueryAllEventsV2CategoriesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<EventsV2CategoryModelFilter>
   orderBy?: Maybe<Array<Maybe<EventsV2CategoryModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllEventsV2CategoryCopy1sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<EventsV2CategoryCopy1ModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsV2CategoryCopy1ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17509,6 +17605,13 @@ export type QueryEventsV2CategoryArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventsV2CategoryModelFilter>
   orderBy?: Maybe<Array<Maybe<EventsV2CategoryModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryEventsV2CategoryCopy1Args = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsV2CategoryCopy1ModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsV2CategoryCopy1ModelOrderBy>>>
 }
 
 /** The query root for this schema */
