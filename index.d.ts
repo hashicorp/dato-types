@@ -11808,6 +11808,7 @@ export type PressAnalystReportPostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  standardBg?: Maybe<FileFilter>
   featureBg?: Maybe<FileFilter>
   publication?: Maybe<LinkFilter>
   analystName?: Maybe<StringFilter>
@@ -11869,6 +11870,7 @@ export type PressAnalystReportPostRecord = {
   locale?: Maybe<PressLocaleRecord>
   publication?: Maybe<PressPublicationRecord>
   publishDate?: Maybe<Scalars["Date"]>
+  standardBg?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   url?: Maybe<Scalars["String"]>
