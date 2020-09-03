@@ -23189,7 +23189,6 @@ export type TerraformEditionsOpenSourcePageRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   deployMultiCloudInfrastructureSection?: Maybe<TextImageSectionRecord>
-  deployMultiCloudSectionHeader?: Maybe<SbcSectionHeaderRecord>
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformWorksSection?: Maybe<TextImageSectionRecord>
   howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
