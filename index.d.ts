@@ -23066,11 +23066,9 @@ export type TerraformEditionsCloudPageRecord = {
   _updatedAt: Scalars["DateTime"]
   alert?: Maybe<AlertRecord>
   cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
-  cloudInfrastructureSectionHeader?: Maybe<SbcSectionHeaderRecord>
   createdAt: Scalars["DateTime"]
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformCloudWorksSection?: Maybe<TextImageSectionRecord>
-  howTerraformCloudWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
@@ -23191,7 +23189,6 @@ export type TerraformEditionsOpenSourcePageRecord = {
   deployMultiCloudInfrastructureSection?: Maybe<TextImageSectionRecord>
   getStartedCta?: Maybe<TerraformEditionsGetStartedCtaRecord>
   howTerraformWorksSection?: Maybe<TextImageSectionRecord>
-  howTerraformWorksSectionHeader?: Maybe<SbcSectionHeaderRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
   updatedAt: Scalars["DateTime"]
