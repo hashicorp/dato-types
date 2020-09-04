@@ -3981,7 +3981,7 @@ export enum EventProductV2ModelOrderBy {
   NameDesc = "name_DESC"
 }
 
-/** Record of type [WIP] Events Product (event_product_v2) */
+/** Record of type Events Product (event_product_v2) */
 export type EventProductV2Record = {
   __typename?: "EventProductV2Record"
   _createdAt: Scalars["DateTime"]
@@ -4001,7 +4001,7 @@ export type EventProductV2Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type [WIP] Events Product (event_product_v2) */
+/** Record of type Events Product (event_product_v2) */
 export type EventProductV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
