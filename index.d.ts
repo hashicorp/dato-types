@@ -26423,6 +26423,7 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  deprecated?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   primaryProduct?: Maybe<LinkFilter>
   isAnnouncement?: Maybe<BooleanFilter>
@@ -26472,6 +26473,8 @@ export enum WebinarModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  DeprecatedAsc = "deprecated_ASC",
+  DeprecatedDesc = "deprecated_DESC",
   IsAnnouncementAsc = "isAnnouncement_ASC",
   IsAnnouncementDesc = "isAnnouncement_DESC",
   WebinarIdAsc = "webinarId_ASC",
@@ -26510,6 +26513,7 @@ export type WebinarRecord = {
   bodyContent: Array<WebinarModelBodyContentField>
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
+  deprecated?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
   draft?: Maybe<Scalars["BooleanType"]>
   events: Array<EventRecord>
