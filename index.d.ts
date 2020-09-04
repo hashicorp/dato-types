@@ -26494,7 +26494,7 @@ export type WebinarModelProductField =
   | OpenSourceToolRecord
   | EnterpriseProductRecord
 
-/** Record of type Webinar (webinar) */
+/** Record of type [DEPRECATED] Webinar (webinar) */
 export type WebinarRecord = {
   __typename?: "WebinarRecord"
   _createdAt: Scalars["DateTime"]
@@ -26533,12 +26533,12 @@ export type WebinarRecord = {
   webinarId?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Webinar (webinar) */
+/** Record of type [DEPRECATED] Webinar (webinar) */
 export type WebinarRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Webinar (webinar) */
+/** Record of type [DEPRECATED] Webinar (webinar) */
 export type WebinarRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
