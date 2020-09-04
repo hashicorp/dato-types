@@ -26423,6 +26423,12 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  showDemoRequest?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
+  events?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  draft?: Maybe<BooleanFilter>
+  webinarId?: Maybe<StringFilter>
   deprecated?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   primaryProduct?: Maybe<LinkFilter>
@@ -26430,17 +26436,11 @@ export type WebinarModelFilter = {
   product?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
   industry?: Maybe<LinksFilter>
-  webinarId?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
   hidden?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
-  draft?: Maybe<BooleanFilter>
   title?: Maybe<StringFilter>
   people?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  events?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
-  showDemoRequest?: Maybe<BooleanFilter>
   primaryInfrastructureProvider?: Maybe<LinkFilter>
   bodyContent?: Maybe<LinksFilter>
   heroContent?: Maybe<LinksFilter>
@@ -26473,22 +26473,22 @@ export enum WebinarModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ShowDemoRequestAsc = "showDemoRequest_ASC",
+  ShowDemoRequestDesc = "showDemoRequest_DESC",
+  DraftAsc = "draft_ASC",
+  DraftDesc = "draft_DESC",
+  WebinarIdAsc = "webinarId_ASC",
+  WebinarIdDesc = "webinarId_DESC",
   DeprecatedAsc = "deprecated_ASC",
   DeprecatedDesc = "deprecated_DESC",
   IsAnnouncementAsc = "isAnnouncement_ASC",
   IsAnnouncementDesc = "isAnnouncement_DESC",
-  WebinarIdAsc = "webinarId_ASC",
-  WebinarIdDesc = "webinarId_DESC",
   LanguageAsc = "language_ASC",
   LanguageDesc = "language_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
-  DraftAsc = "draft_ASC",
-  DraftDesc = "draft_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  ShowDemoRequestAsc = "showDemoRequest_ASC",
-  ShowDemoRequestDesc = "showDemoRequest_DESC",
   DateAsc = "date_ASC",
   DateDesc = "date_DESC"
 }
