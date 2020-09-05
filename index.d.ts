@@ -4335,8 +4335,8 @@ export type EventV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  series?: Maybe<LinkFilter>
   slug?: Maybe<SlugFilter>
+  series?: Maybe<LinkFilter>
   tags?: Maybe<LinksFilter>
   audienceSegment?: Maybe<StringFilter>
   region?: Maybe<StringFilter>
@@ -4383,7 +4383,7 @@ export enum EventV2ModelOrderBy {
   TitleDesc = "title_DESC"
 }
 
-/** Record of type [WIP] Events (event_v2) */
+/** Record of type Events (event_v2) */
 export type EventV2Record = {
   __typename?: "EventV2Record"
   _createdAt: Scalars["DateTime"]
@@ -4412,7 +4412,7 @@ export type EventV2Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type [WIP] Events (event_v2) */
+/** Record of type Events (event_v2) */
 export type EventV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
