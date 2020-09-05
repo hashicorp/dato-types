@@ -4417,7 +4417,7 @@ export type EventV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Webinar (Event) (event_webinar) */
+/** Record of type Webinar (event_webinar) */
 export type EventWebinarRecord = {
   __typename?: "EventWebinarRecord"
   _createdAt: Scalars["DateTime"]
@@ -4443,17 +4443,17 @@ export type EventWebinarRecord = {
   whatWillILearn?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Webinar (Event) (event_webinar) */
+/** Record of type Webinar (event_webinar) */
 export type EventWebinarRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Webinar (Event) (event_webinar) */
+/** Record of type Webinar (event_webinar) */
 export type EventWebinarRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Webinar (Event) (event_webinar) */
+/** Record of type Webinar (event_webinar) */
 export type EventWebinarRecordWhatWillILearnArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
