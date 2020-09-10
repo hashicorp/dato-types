@@ -760,7 +760,6 @@ export type BlogPostV2ModelContentField =
   | TextRecord
   | BlogImageRecord
   | BlogVideoRecord
-  | LearnGuideRecord
   | CodeBlockRecord
   | NewsletterSignupCtaRecord
   | SalesCtaRecord
@@ -9926,31 +9925,6 @@ export type LargeLogoGridSectionRecord_SeoMetaTagsArgs = {
 /** Record of type Large Logo Grid Section (large_logo_grid_section) */
 export type LargeLogoGridSectionRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Learn Guide (learn_guide) */
-export type LearnGuideRecord = {
-  __typename?: "LearnGuideRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  guideUrl?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  product?: Maybe<BlogProductsV2Record>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Learn Guide (learn_guide) */
-export type LearnGuideRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** Specifies how to filter Single-link fields */
