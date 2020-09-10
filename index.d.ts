@@ -4410,6 +4410,7 @@ export type EventWebinarRecord = {
   agenda?: Maybe<BasicTableRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
+  hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   logos: Array<CompanyRecord>
   recording?: Maybe<VideoField>
