@@ -518,18 +518,12 @@ export type BlogImageRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   image?: Maybe<FileField>
-  imageCaption?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Blog Image (blog_image) */
 export type BlogImageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Blog Image (blog_image) */
-export type BlogImageRecordImageCaptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type Blog Index Page (blog_index_page) */
