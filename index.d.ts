@@ -3842,6 +3842,30 @@ export type EventCtasItemRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type External Webinar (event_external_webinar) */
+export type EventExternalWebinarRecord = {
+  __typename?: "EventExternalWebinarRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
+}
+
+/** Record of type External Webinar (event_external_webinar) */
+export type EventExternalWebinarRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type EventModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -4275,6 +4299,7 @@ export type EventV2ModelEventTypeField =
   | EventConferenceRecord
   | EventTrainingRecord
   | EventWorkshopRecord
+  | EventExternalWebinarRecord
 
 export type EventV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
