@@ -761,8 +761,6 @@ export type BlogPostV2ModelContentField =
   | BlogImageRecord
   | BlogVideoRecord
   | CodeBlockRecord
-  | NewsletterSignupCtaRecord
-  | SalesCtaRecord
   | MarkdownRecord
 
 export type BlogPostV2ModelFilter = {
@@ -10765,30 +10763,6 @@ export type NewsItemRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Newsletter Signup CTA (newsletter_signup_cta) */
-export type NewsletterSignupCtaRecord = {
-  __typename?: "NewsletterSignupCtaRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  ctaText?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Newsletter Signup CTA (newsletter_signup_cta) */
-export type NewsletterSignupCtaRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 /** Record of type Nomad Product Page (nomad_product_page) */
 export type NomadProductPageRecord = {
   __typename?: "NomadProductPageRecord"
@@ -19492,35 +19466,6 @@ export type RowRecord = {
 /** Record of type Row (row) */
 export type RowRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Sales CTA (sales_cta) */
-export type SalesCtaRecord = {
-  __typename?: "SalesCtaRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  ctaText?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Sales CTA (sales_cta) */
-export type SalesCtaRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Sales CTA (sales_cta) */
-export type SalesCtaRecordCtaTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type SalesFormModelFilter = {
