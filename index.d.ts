@@ -564,8 +564,11 @@ export type BlogInlineRelatedArticleRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  articleUrl?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  postDate?: Maybe<Scalars["Date"]>
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
