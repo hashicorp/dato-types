@@ -568,6 +568,7 @@ export type BlogInlineRelatedArticleRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["Date"]>
+  publication?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
