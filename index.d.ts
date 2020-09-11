@@ -551,6 +551,29 @@ export type BlogIndexPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Blog Inline Related Article (blog_inline_related_article) */
+export type BlogInlineRelatedArticleRecord = {
+  __typename?: "BlogInlineRelatedArticleRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Blog Inline Related Article (blog_inline_related_article) */
+export type BlogInlineRelatedArticleRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Blog Landing Page (blog_landing_page) */
 export type BlogLandingPageRecord = {
   __typename?: "BlogLandingPageRecord"
@@ -762,6 +785,7 @@ export type BlogPostV2ModelContentField =
   | BlogVideoRecord
   | CodeBlockRecord
   | MarkdownRecord
+  | BlogInlineRelatedArticleRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
