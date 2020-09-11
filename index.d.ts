@@ -551,7 +551,7 @@ export type BlogIndexPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Blog Inline Related Article (blog_inline_related_article) */
+/** Record of type Related Article (blog_inline_related_article) */
 export type BlogInlineRelatedArticleRecord = {
   __typename?: "BlogInlineRelatedArticleRecord"
   _createdAt: Scalars["DateTime"]
@@ -569,7 +569,7 @@ export type BlogInlineRelatedArticleRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Blog Inline Related Article (blog_inline_related_article) */
+/** Record of type Related Article (blog_inline_related_article) */
 export type BlogInlineRelatedArticleRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
