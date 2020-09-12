@@ -802,6 +802,7 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  socialShareImage?: Maybe<FileFilter>
   backendTags?: Maybe<LinksFilter>
   author?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
@@ -867,6 +868,7 @@ export type BlogPostV2Record = {
   orderingDate?: Maybe<Scalars["DateTime"]>
   product: Array<BlogProductsV2Record>
   slug?: Maybe<Scalars["String"]>
+  socialShareImage?: Maybe<FileField>
   summary?: Maybe<Scalars["String"]>
   tags: Array<BlogTagsV2Record>
   title?: Maybe<Scalars["String"]>
