@@ -4342,15 +4342,15 @@ export type EventV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  endTime?: Maybe<DateTimeFilter>
-  startTime?: Maybe<DateTimeFilter>
-  audienceSegment?: Maybe<StringFilter>
-  series?: Maybe<LinkFilter>
   slug?: Maybe<SlugFilter>
+  series?: Maybe<LinkFilter>
   tags?: Maybe<LinksFilter>
   region?: Maybe<StringFilter>
   language?: Maybe<StringFilter>
   product?: Maybe<LinksFilter>
+  endTime?: Maybe<DateTimeFilter>
+  startTime?: Maybe<DateTimeFilter>
+  audienceSegment?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<EventV2ModelFilter>>>
 }
@@ -4376,16 +4376,16 @@ export enum EventV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  RegionAsc = "region_ASC",
+  RegionDesc = "region_DESC",
+  LanguageAsc = "language_ASC",
+  LanguageDesc = "language_DESC",
   EndTimeAsc = "endTime_ASC",
   EndTimeDesc = "endTime_DESC",
   StartTimeAsc = "startTime_ASC",
   StartTimeDesc = "startTime_DESC",
   AudienceSegmentAsc = "audienceSegment_ASC",
   AudienceSegmentDesc = "audienceSegment_DESC",
-  RegionAsc = "region_ASC",
-  RegionDesc = "region_DESC",
-  LanguageAsc = "language_ASC",
-  LanguageDesc = "language_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC"
 }
