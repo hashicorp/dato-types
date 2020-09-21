@@ -4342,8 +4342,8 @@ export type EventV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  audienceSegment?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
+  audienceSegment?: Maybe<StringFilter>
   series?: Maybe<LinkFilter>
   tags?: Maybe<LinksFilter>
   region?: Maybe<StringFilter>
@@ -8316,6 +8316,14 @@ export type ImgixParams = {
    **/
   blendAlpha?: Maybe<Scalars["IntType"]>
   /**
+   * Blend Color
+   *
+   * Specifies a color to use when applying the blend.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-color)
+   **/
+  blendColor?: Maybe<Scalars["String"]>
+  /**
    * Blend Crop
    *
    * Specifies the type of crop for blend images.
@@ -8422,6 +8430,22 @@ export type ImgixParams = {
    **/
   blur?: Maybe<Scalars["IntType"]>
   /**
+   * Border Bottom
+   *
+   * Sets bottom border of an image.
+   *
+   * Depends on: `border`
+   **/
+  borderBottom?: Maybe<Scalars["IntType"]>
+  /**
+   * Border Left
+   *
+   * Sets left border of an image.
+   *
+   * Depends on: `border`
+   **/
+  borderLeft?: Maybe<Scalars["IntType"]>
+  /**
    * Inner Border Radius
    *
    * Sets the inner radius of the image's border in pixels.
@@ -8441,6 +8465,22 @@ export type ImgixParams = {
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius)
    **/
   borderRadius?: Maybe<Scalars["String"]>
+  /**
+   * Border Right
+   *
+   * Sets right border of an image.
+   *
+   * Depends on: `border`
+   **/
+  borderRight?: Maybe<Scalars["IntType"]>
+  /**
+   * Border Top
+   *
+   * Sets top border of an image.
+   *
+   * Depends on: `border`
+   **/
+  borderTop?: Maybe<Scalars["IntType"]>
   /**
    * Border Size & Color
    *
@@ -8708,6 +8748,22 @@ export type ImgixParams = {
    **/
   gam?: Maybe<Scalars["IntType"]>
   /**
+   * Grid Colors
+   *
+   * Sets grid colors for the transparency checkerboard grid.
+   *
+   * Depends on: `transparency`
+   **/
+  gridColors?: Maybe<Scalars["String"]>
+  /**
+   * Grid Size
+   *
+   * Sets grid size for the transparency checkerboard grid.
+   *
+   * Depends on: `transparency`
+   **/
+  gridSize?: Maybe<Scalars["IntType"]>
+  /**
    * Image Height
    *
    * Adjusts the height of the output image.
@@ -8866,14 +8922,6 @@ export type ImgixParams = {
    **/
   mark?: Maybe<Scalars["String"]>
   /**
-   * Mask Type
-   *
-   * Defines the type of mask and specifies the URL if that type is selected.
-   *
-   * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask)
-   **/
-  mask?: Maybe<Scalars["String"]>
-  /**
    * Mask Background Color
    *
    * Colors the background of the transparent mask area of images
@@ -8882,7 +8930,15 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask/mask-bg)
    **/
-  maskbg?: Maybe<Scalars["String"]>
+  maskBg?: Maybe<Scalars["String"]>
+  /**
+   * Mask Type
+   *
+   * Defines the type of mask and specifies the URL if that type is selected.
+   *
+   * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask)
+   **/
+  mask?: Maybe<Scalars["String"]>
   /**
    * Maximum Height
    *
@@ -8955,6 +9011,30 @@ export type ImgixParams = {
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/orient)
    **/
   orient?: Maybe<Scalars["IntType"]>
+  /**
+   * Padding Bottom
+   *
+   * Sets bottom padding of an image.
+   **/
+  padBottom?: Maybe<Scalars["IntType"]>
+  /**
+   * Padding Left
+   *
+   * Sets left padding of an image.
+   **/
+  padLeft?: Maybe<Scalars["IntType"]>
+  /**
+   * Padding Right
+   *
+   * Sets right padding of an image.
+   **/
+  padRight?: Maybe<Scalars["IntType"]>
+  /**
+   * Padding Top
+   *
+   * Sets top padding of an image.
+   **/
+  padTop?: Maybe<Scalars["IntType"]>
   /**
    * Padding
    *
@@ -9055,6 +9135,12 @@ export type ImgixParams = {
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sharp)
    **/
   sharp?: Maybe<Scalars["FloatType"]>
+  /**
+   * Transparency
+   *
+   * Adds checkerboard behind images which support transparency.
+   **/
+  transparency?: Maybe<ImgixParamsTransparency>
   /**
    * Trim Color
    *
@@ -9434,6 +9520,10 @@ export enum ImgixParamsMarkFit {
 export enum ImgixParamsPalette {
   Css = "css",
   Json = "json"
+}
+
+export enum ImgixParamsTransparency {
+  Grid = "grid"
 }
 
 export enum ImgixParamsTrim {
