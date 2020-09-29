@@ -5245,6 +5245,7 @@ export type FileField = {
   customData?: Maybe<Scalars["CustomData"]>
   exifInfo?: Maybe<Scalars["CustomData"]>
   filename: Scalars["String"]
+  focalPoint?: Maybe<FocalPoint>
   format: Scalars["String"]
   height?: Maybe<Scalars["IntType"]>
   id: Scalars["UploadId"]
@@ -5272,6 +5273,10 @@ export type FileFieldBlurUpThumbArgs = {
 }
 
 export type FileFieldCustomDataArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type FileFieldFocalPointArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -5318,6 +5323,12 @@ export type FloatFilter = {
   eq?: Maybe<Scalars["FloatType"]>
   /** Exclude records with an exact match */
   neq?: Maybe<Scalars["FloatType"]>
+}
+
+export type FocalPoint = {
+  __typename?: "focalPoint"
+  x?: Maybe<Scalars["FloatType"]>
+  y?: Maybe<Scalars["FloatType"]>
 }
 
 /** Record of type Form Checkbox Field (form_checkbox_field) */
