@@ -2842,7 +2842,7 @@ export type CreatedAtFilter = {
   neq?: Maybe<Scalars["DateTime"]>
 }
 
-/** Record of type CTA Button (cta_button) */
+/** Record of type [WIP] CTA Button (cta_button) */
 export type CtaButtonRecord = {
   __typename?: "CtaButtonRecord"
   _createdAt: Scalars["DateTime"]
@@ -2856,12 +2856,13 @@ export type CtaButtonRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   buttonText?: Maybe<Scalars["String"]>
+  buttonUrl?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type CTA Button (cta_button) */
+/** Record of type [WIP] CTA Button (cta_button) */
 export type CtaButtonRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
