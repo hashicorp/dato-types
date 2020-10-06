@@ -790,6 +790,7 @@ export type BlogPostV2ModelContentField =
   | CodeBlockRecord
   | MarkdownRecord
   | BlogInlineRelatedArticleRecord
+  | CtaButtonRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -2839,6 +2840,29 @@ export type CreatedAtFilter = {
   eq?: Maybe<Scalars["DateTime"]>
   /** Exclude records with an exact match */
   neq?: Maybe<Scalars["DateTime"]>
+}
+
+/** Record of type CTA Button (cta_button) */
+export type CtaButtonRecord = {
+  __typename?: "CtaButtonRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type CTA Button (cta_button) */
+export type CtaButtonRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** Record of type Customer (customer) */
