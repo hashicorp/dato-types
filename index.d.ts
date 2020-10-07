@@ -502,6 +502,31 @@ export type BlogCategoriesV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type [WIP] CTA Button (blog_cta_button) */
+export type BlogCtaButtonRecord = {
+  __typename?: "BlogCtaButtonRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  buttonText?: Maybe<Scalars["String"]>
+  buttonUrl?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type [WIP] CTA Button (blog_cta_button) */
+export type BlogCtaButtonRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Blog Image (blog_image) */
 export type BlogImageRecord = {
   __typename?: "BlogImageRecord"
@@ -790,7 +815,7 @@ export type BlogPostV2ModelContentField =
   | CodeBlockRecord
   | MarkdownRecord
   | BlogInlineRelatedArticleRecord
-  | CtaButtonRecord
+  | BlogCtaButtonRecord
 
 export type BlogPostV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -2840,31 +2865,6 @@ export type CreatedAtFilter = {
   eq?: Maybe<Scalars["DateTime"]>
   /** Exclude records with an exact match */
   neq?: Maybe<Scalars["DateTime"]>
-}
-
-/** Record of type [WIP] CTA Button (cta_button) */
-export type CtaButtonRecord = {
-  __typename?: "CtaButtonRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  buttonText?: Maybe<Scalars["String"]>
-  buttonUrl?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type [WIP] CTA Button (cta_button) */
-export type CtaButtonRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
 }
 
 /** Record of type Customer (customer) */
