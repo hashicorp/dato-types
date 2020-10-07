@@ -502,7 +502,7 @@ export type BlogCategoriesV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type [WIP] CTA Button (blog_cta_button) */
+/** Record of type CTA Button (blog_cta_button) */
 export type BlogCtaButtonRecord = {
   __typename?: "BlogCtaButtonRecord"
   _createdAt: Scalars["DateTime"]
@@ -522,7 +522,7 @@ export type BlogCtaButtonRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type [WIP] CTA Button (blog_cta_button) */
+/** Record of type CTA Button (blog_cta_button) */
 export type BlogCtaButtonRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
