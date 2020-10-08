@@ -23015,7 +23015,6 @@ export type TemplatePageModelFilter = {
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
-  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
@@ -23045,8 +23044,6 @@ export enum TemplatePageModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PositionAsc = "position_ASC",
-  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -23094,7 +23091,6 @@ export type TemplatePageRecord = {
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  position?: Maybe<Scalars["IntType"]>
   preFooterCta?: Maybe<HeroSectionRecord>
   showDemoRequest?: Maybe<Scalars["BooleanType"]>
   slug?: Maybe<Scalars["String"]>
