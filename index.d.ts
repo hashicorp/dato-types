@@ -10605,6 +10605,7 @@ export type MerchandisingSlotModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  subheading?: Maybe<StringFilter>
   eyebrow?: Maybe<StringFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<MerchandisingSlotModelFilter>>>
@@ -10631,6 +10632,8 @@ export enum MerchandisingSlotModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  SubheadingAsc = "subheading_ASC",
+  SubheadingDesc = "subheading_DESC",
   EyebrowAsc = "eyebrow_ASC",
   EyebrowDesc = "eyebrow_DESC",
   HeadingAsc = "heading_ASC",
@@ -10654,6 +10657,7 @@ export type MerchandisingSlotRecord = {
   eyebrow?: Maybe<Scalars["String"]>
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  subheading?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
