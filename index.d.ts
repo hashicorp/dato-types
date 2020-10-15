@@ -10605,6 +10605,7 @@ export type MerchandisingSlotModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<MerchandisingSlotModelFilter>>>
 }
 
@@ -10628,7 +10629,9 @@ export enum MerchandisingSlotModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
 }
 
 /** Record of type Merchandising Slot (TEST) (merchandising_slot) */
@@ -10645,6 +10648,7 @@ export type MerchandisingSlotRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
