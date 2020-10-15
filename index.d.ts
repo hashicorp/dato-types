@@ -10599,6 +10599,7 @@ export type MerchandisingSlotModelFilter = {
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
+  position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
@@ -10623,6 +10624,8 @@ export enum MerchandisingSlotModelOrderBy {
   IdDesc = "id_DESC",
   FirstPublishedAtAsc = "_firstPublishedAt_ASC",
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
@@ -10667,6 +10670,7 @@ export type MerchandisingSlotRecord = {
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   linkUrl?: Maybe<Scalars["String"]>
+  position?: Maybe<Scalars["IntType"]>
   subheading?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
