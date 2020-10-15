@@ -10605,6 +10605,7 @@ export type MerchandisingSlotModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  background?: Maybe<FileFilter>
   subheading?: Maybe<StringFilter>
   eyebrow?: Maybe<StringFilter>
   heading?: Maybe<StringFilter>
@@ -10653,6 +10654,7 @@ export type MerchandisingSlotRecord = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  background?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   eyebrow?: Maybe<Scalars["String"]>
   heading?: Maybe<Scalars["String"]>
