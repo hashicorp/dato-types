@@ -4068,6 +4068,92 @@ export type EventRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type EventsPageMerchandisingSlotModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  position?: Maybe<PositionFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  buttonText?: Maybe<StringFilter>
+  linkUrl?: Maybe<StringFilter>
+  background?: Maybe<FileFilter>
+  subheading?: Maybe<StringFilter>
+  eyebrow?: Maybe<StringFilter>
+  heading?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<EventsPageMerchandisingSlotModelFilter>>>
+}
+
+export enum EventsPageMerchandisingSlotModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PositionAsc = "position_ASC",
+  PositionDesc = "position_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  ButtonTextAsc = "buttonText_ASC",
+  ButtonTextDesc = "buttonText_DESC",
+  LinkUrlAsc = "linkUrl_ASC",
+  LinkUrlDesc = "linkUrl_DESC",
+  SubheadingAsc = "subheading_ASC",
+  SubheadingDesc = "subheading_DESC",
+  EyebrowAsc = "eyebrow_ASC",
+  EyebrowDesc = "eyebrow_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
+}
+
+/** Record of type Events Page Merchandising Slot (TEST) (events_page_merchandising_slot) */
+export type EventsPageMerchandisingSlotRecord = {
+  __typename?: "EventsPageMerchandisingSlotRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  background?: Maybe<FileField>
+  buttonText?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  eyebrow?: Maybe<Scalars["String"]>
+  heading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  linkUrl?: Maybe<Scalars["String"]>
+  position?: Maybe<Scalars["IntType"]>
+  subheading?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Events Page Merchandising Slot (TEST) (events_page_merchandising_slot) */
+export type EventsPageMerchandisingSlotRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Events Page (events_page) */
 export type EventsPageRecord = {
   __typename?: "EventsPageRecord"
@@ -10594,92 +10680,6 @@ export type MarkdownRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type MerchandisingSlotModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  position?: Maybe<PositionFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  buttonText?: Maybe<StringFilter>
-  linkUrl?: Maybe<StringFilter>
-  background?: Maybe<FileFilter>
-  subheading?: Maybe<StringFilter>
-  eyebrow?: Maybe<StringFilter>
-  heading?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<MerchandisingSlotModelFilter>>>
-}
-
-export enum MerchandisingSlotModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PositionAsc = "position_ASC",
-  PositionDesc = "position_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  ButtonTextAsc = "buttonText_ASC",
-  ButtonTextDesc = "buttonText_DESC",
-  LinkUrlAsc = "linkUrl_ASC",
-  LinkUrlDesc = "linkUrl_DESC",
-  SubheadingAsc = "subheading_ASC",
-  SubheadingDesc = "subheading_DESC",
-  EyebrowAsc = "eyebrow_ASC",
-  EyebrowDesc = "eyebrow_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC"
-}
-
-/** Record of type Merchandising Slot (TEST) (merchandising_slot) */
-export type MerchandisingSlotRecord = {
-  __typename?: "MerchandisingSlotRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _updatedAt: Scalars["DateTime"]
-  background?: Maybe<FileField>
-  buttonText?: Maybe<Scalars["String"]>
-  createdAt: Scalars["DateTime"]
-  eyebrow?: Maybe<Scalars["String"]>
-  heading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  linkUrl?: Maybe<Scalars["String"]>
-  position?: Maybe<Scalars["IntType"]>
-  subheading?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Merchandising Slot (TEST) (merchandising_slot) */
-export type MerchandisingSlotRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type MiniCalloutModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -13358,6 +13358,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allEventsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allEventsPageMerchandisingSlotsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allEventsV2SeriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allEventsV2TagsMeta: CollectionMetadata
@@ -13459,8 +13461,6 @@ export type Query = {
   _allLocationVenuesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allMajorHeadlineSectionsMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
-  _allMerchandisingSlotsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allMiniCalloutsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -13758,6 +13758,8 @@ export type Query = {
   /** Returns a collection of records */
   allEvents: Array<EventRecord>
   /** Returns a collection of records */
+  allEventsPageMerchandisingSlots: Array<EventsPageMerchandisingSlotRecord>
+  /** Returns a collection of records */
   allEventsV2Series: Array<EventsV2SeriesRecord>
   /** Returns a collection of records */
   allEventsV2Tags: Array<EventsV2TagRecord>
@@ -13861,8 +13863,6 @@ export type Query = {
   allLocationVenues: Array<LocationVenueRecord>
   /** Returns a collection of records */
   allMajorHeadlineSections: Array<MajorHeadlineSectionRecord>
-  /** Returns a collection of records */
-  allMerchandisingSlots: Array<MerchandisingSlotRecord>
   /** Returns a collection of records */
   allMiniCallouts: Array<MiniCalloutRecord>
   /** Returns a collection of records */
@@ -14182,6 +14182,8 @@ export type Query = {
   /** Returns the single instance record */
   eventsPage?: Maybe<EventsPageRecord>
   /** Returns a specific record */
+  eventsPageMerchandisingSlot?: Maybe<EventsPageMerchandisingSlotRecord>
+  /** Returns a specific record */
   eventsV2Series?: Maybe<EventsV2SeriesRecord>
   /** Returns a specific record */
   eventsV2Tag?: Maybe<EventsV2TagRecord>
@@ -14297,8 +14299,6 @@ export type Query = {
   locationVenue?: Maybe<LocationVenueRecord>
   /** Returns a specific record */
   majorHeadlineSection?: Maybe<MajorHeadlineSectionRecord>
-  /** Returns a specific record */
-  merchandisingSlot?: Maybe<MerchandisingSlotRecord>
   /** Returns a specific record */
   miniCallout?: Maybe<MiniCalloutRecord>
   /** Returns the single instance record */
@@ -14842,6 +14842,12 @@ export type Query_AllEventsMetaArgs = {
 }
 
 /** The query root for this schema */
+export type Query_AllEventsPageMerchandisingSlotsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsPageMerchandisingSlotModelFilter>
+}
+
+/** The query root for this schema */
 export type Query_AllEventsV2SeriesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventsV2SeriesModelFilter>
@@ -15145,12 +15151,6 @@ export type Query_AllLocationVenuesMetaArgs = {
 export type Query_AllMajorHeadlineSectionsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<MajorHeadlineSectionModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllMerchandisingSlotsMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<MerchandisingSlotModelFilter>
 }
 
 /** The query root for this schema */
@@ -16168,6 +16168,15 @@ export type QueryAllEventsArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllEventsPageMerchandisingSlotsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<EventsPageMerchandisingSlotModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsPageMerchandisingSlotModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllEventsV2SeriesArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -16624,15 +16633,6 @@ export type QueryAllMajorHeadlineSectionsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<MajorHeadlineSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<MajorHeadlineSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryAllMerchandisingSlotsArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<MerchandisingSlotModelFilter>
-  orderBy?: Maybe<Array<Maybe<MerchandisingSlotModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -17899,6 +17899,13 @@ export type QueryEventsPageArgs = {
 }
 
 /** The query root for this schema */
+export type QueryEventsPageMerchandisingSlotArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<EventsPageMerchandisingSlotModelFilter>
+  orderBy?: Maybe<Array<Maybe<EventsPageMerchandisingSlotModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryEventsV2SeriesArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<EventsV2SeriesModelFilter>
@@ -18283,13 +18290,6 @@ export type QueryMajorHeadlineSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<MajorHeadlineSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<MajorHeadlineSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryMerchandisingSlotArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<MerchandisingSlotModelFilter>
-  orderBy?: Maybe<Array<Maybe<MerchandisingSlotModelOrderBy>>>
 }
 
 /** The query root for this schema */
