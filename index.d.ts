@@ -4124,7 +4124,7 @@ export enum EventsPageMerchandisingSlotModelOrderBy {
   HeadingDesc = "heading_DESC"
 }
 
-/** Record of type Events Page Merchandising Slot (TEST) (events_page_merchandising_slot) */
+/** Record of type Events Page Merchandising Slot (events_page_merchandising_slot) */
 export type EventsPageMerchandisingSlotRecord = {
   __typename?: "EventsPageMerchandisingSlotRecord"
   _createdAt: Scalars["DateTime"]
@@ -4149,7 +4149,7 @@ export type EventsPageMerchandisingSlotRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Events Page Merchandising Slot (TEST) (events_page_merchandising_slot) */
+/** Record of type Events Page Merchandising Slot (events_page_merchandising_slot) */
 export type EventsPageMerchandisingSlotRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
