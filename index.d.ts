@@ -62,6 +62,7 @@ export type AlertBannerModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  expirationDate?: Maybe<DateTimeFilter>
   theme?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   text?: Maybe<StringFilter>
@@ -92,6 +93,8 @@ export enum AlertBannerModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ExpirationDateAsc = "expirationDate_ASC",
+  ExpirationDateDesc = "expirationDate_DESC",
   ThemeAsc = "theme_ASC",
   ThemeDesc = "theme_DESC",
   TitleAsc = "title_ASC",
@@ -120,6 +123,7 @@ export type AlertBannerRecord = {
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  expirationDate?: Maybe<Scalars["DateTime"]>
   id: Scalars["ItemId"]
   linkText?: Maybe<Scalars["String"]>
   tag?: Maybe<Scalars["String"]>
