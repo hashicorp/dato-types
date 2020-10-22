@@ -832,12 +832,12 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  category?: Maybe<LinkFilter>
+  author?: Maybe<LinksFilter>
   socialShareImage?: Maybe<FileFilter>
   backendTags?: Maybe<LinksFilter>
-  author?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   orderingDate?: Maybe<DateTimeFilter>
-  category?: Maybe<LinkFilter>
   product?: Maybe<LinksFilter>
   slug?: Maybe<SlugFilter>
   tags?: Maybe<LinksFilter>
