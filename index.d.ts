@@ -25458,7 +25458,7 @@ export type TmpmodelVaultOverviewPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type tmp_preview_test (tmp_preview_test) */
+/** Record of type Temporary Preview Test (tmp_preview_test) */
 export type TmpPreviewTestRecord = {
   __typename?: "TmpPreviewTestRecord"
   _createdAt: Scalars["DateTime"]
@@ -25477,7 +25477,7 @@ export type TmpPreviewTestRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type tmp_preview_test (tmp_preview_test) */
+/** Record of type Temporary Preview Test (tmp_preview_test) */
 export type TmpPreviewTestRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
