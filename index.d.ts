@@ -14521,6 +14521,8 @@ export type Query = {
   thankYouPage?: Maybe<ThankYouPageRecord>
   /** Returns the single instance record */
   tmpConsolHome?: Maybe<TmpConsolHomeRecord>
+  /** Returns the single instance record */
+  tmpPreviewTest?: Maybe<TmpPreviewTestRecord>
   /** Returns a specific record */
   tmpmodelButton?: Maybe<TmpmodelButtonRecord>
   /** Returns the single instance record */
@@ -19027,6 +19029,11 @@ export type QueryThankYouPageArgs = {
 
 /** The query root for this schema */
 export type QueryTmpConsolHomeArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryTmpPreviewTestArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -25448,6 +25455,29 @@ export type TmpmodelVaultOverviewPageRecord = {
 
 /** Record of type TMP: Vault Overview Page (tmpmodel_vault_overview_page) */
 export type TmpmodelVaultOverviewPageRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type tmp_preview_test (tmp_preview_test) */
+export type TmpPreviewTestRecord = {
+  __typename?: "TmpPreviewTestRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type tmp_preview_test (tmp_preview_test) */
+export type TmpPreviewTestRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
