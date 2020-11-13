@@ -19928,6 +19928,7 @@ export type ResourcesProductsV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   productName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ResourcesProductsV2ModelFilter>>>
 }
@@ -19973,6 +19974,7 @@ export type ResourcesProductsV2Record = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   productName?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
