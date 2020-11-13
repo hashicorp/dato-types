@@ -13534,6 +13534,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allResourceMediaTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allResourceV2sMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allResourcesLanguagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allResourcesMeta: CollectionMetadata
@@ -13941,6 +13943,8 @@ export type Query = {
   >
   /** Returns a collection of records */
   allResourceMediaTypes: Array<ResourceMediaTypeRecord>
+  /** Returns a collection of records */
+  allResourceV2s: Array<ResourceV2Record>
   /** Returns a collection of records */
   allResources: Array<ResourceRecord>
   /** Returns a collection of records */
@@ -14391,6 +14395,8 @@ export type Query = {
   resourceInfrastructureProvider?: Maybe<ResourceInfrastructureProviderRecord>
   /** Returns a specific record */
   resourceMediaType?: Maybe<ResourceMediaTypeRecord>
+  /** Returns a specific record */
+  resourceV2?: Maybe<ResourceV2Record>
   /** Returns a specific record */
   resourcesLanguage?: Maybe<ResourcesLanguageRecord>
   /** Returns the single instance record */
@@ -15369,6 +15375,12 @@ export type Query_AllResourceInfrastructureProvidersMetaArgs = {
 export type Query_AllResourceMediaTypesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ResourceMediaTypeModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllResourceV2sMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<ResourceV2ModelFilter>
 }
 
 /** The query root for this schema */
@@ -16962,6 +16974,15 @@ export type QueryAllResourceMediaTypesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<ResourceMediaTypeModelFilter>
   orderBy?: Maybe<Array<Maybe<ResourceMediaTypeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllResourceV2sArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<ResourceV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<ResourceV2ModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -18606,6 +18627,13 @@ export type QueryResourceMediaTypeArgs = {
 }
 
 /** The query root for this schema */
+export type QueryResourceV2Args = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<ResourceV2ModelFilter>
+  orderBy?: Maybe<Array<Maybe<ResourceV2ModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryResourcesLanguageArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ResourcesLanguageModelFilter>
@@ -19859,6 +19887,66 @@ export type ResourcesPageRecord_SeoMetaTagsArgs = {
 /** Record of type Resources Page (resources_page) */
 export type ResourcesPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+export type ResourceV2ModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
+}
+
+export enum ResourceV2ModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Resource V2 (resource_v2) */
+export type ResourceV2Record = {
+  __typename?: "ResourceV2Record"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Resource V2 (resource_v2) */
+export type ResourceV2Record_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type ResponsiveImage = {
