@@ -19994,6 +19994,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  summary?: Maybe<StringFilter>
   gated?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   enterprise?: Maybe<BooleanFilter>
@@ -20027,6 +20028,8 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  SummaryAsc = "summary_ASC",
+  SummaryDesc = "summary_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
   HiddenAsc = "hidden_ASC",
@@ -20061,6 +20064,7 @@ export type ResourceV2Record = {
   postDate?: Maybe<Scalars["DateTime"]>
   product: Array<ResourcesProductsV2Record>
   slug?: Maybe<Scalars["String"]>
+  summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
