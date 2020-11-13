@@ -19994,6 +19994,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  product?: Maybe<LinksFilter>
   thumbnailImage?: Maybe<FileFilter>
   author?: Maybe<LinksFilter>
   postDate?: Maybe<DateTimeFilter>
@@ -20046,6 +20047,7 @@ export type ResourceV2Record = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
+  product: Array<ResourcesProductsV2Record>
   slug?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
