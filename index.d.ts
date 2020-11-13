@@ -19900,6 +19900,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  author?: Maybe<LinksFilter>
   postDate?: Maybe<DateTimeFilter>
   slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
@@ -19946,6 +19947,7 @@ export type ResourceV2Record = {
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
   _updatedAt: Scalars["DateTime"]
+  author: Array<PersonRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
