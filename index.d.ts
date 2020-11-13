@@ -19900,6 +19900,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -19923,7 +19924,9 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Resource V2 (resource_v2) */
@@ -19941,6 +19944,7 @@ export type ResourceV2Record = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
