@@ -20583,9 +20583,6 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  externalLink?: Maybe<BooleanFilter>
-  externalLinkUrl?: Maybe<StringFilter>
-  summary?: Maybe<StringFilter>
   gated?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   enterprise?: Maybe<BooleanFilter>
@@ -20621,12 +20618,6 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ExternalLinkAsc = "externalLink_ASC",
-  ExternalLinkDesc = "externalLink_DESC",
-  ExternalLinkUrlAsc = "externalLinkUrl_ASC",
-  ExternalLinkUrlDesc = "externalLinkUrl_DESC",
-  SummaryAsc = "summary_ASC",
-  SummaryDesc = "summary_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
   HiddenAsc = "hidden_ASC",
@@ -20657,15 +20648,12 @@ export type ResourceV2Record = {
   content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
-  externalLink?: Maybe<Scalars["BooleanType"]>
-  externalLinkUrl?: Maybe<Scalars["String"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
   product: Array<ResourcesProductsV2Record>
   slug?: Maybe<Scalars["String"]>
-  summary?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
