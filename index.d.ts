@@ -20583,6 +20583,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  internalResource?: Maybe<BooleanFilter>
   externalResource?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
@@ -20619,6 +20620,8 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  InternalResourceAsc = "internalResource_ASC",
+  InternalResourceDesc = "internalResource_DESC",
   ExternalResourceAsc = "externalResource_ASC",
   ExternalResourceDesc = "externalResource_DESC",
   GatedAsc = "gated_ASC",
@@ -20654,6 +20657,7 @@ export type ResourceV2Record = {
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
+  internalResource?: Maybe<Scalars["BooleanType"]>
   postDate?: Maybe<Scalars["DateTime"]>
   product: Array<ResourcesProductsV2Record>
   slug?: Maybe<Scalars["String"]>
