@@ -20654,6 +20654,7 @@ export type ResourceV2Record = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
+  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
   externalLink?: Maybe<Scalars["BooleanType"]>
