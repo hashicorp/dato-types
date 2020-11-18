@@ -20583,6 +20583,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  externalLink?: Maybe<BooleanFilter>
   externalLinkUrl?: Maybe<StringFilter>
   summary?: Maybe<StringFilter>
   gated?: Maybe<BooleanFilter>
@@ -20620,6 +20621,8 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ExternalLinkAsc = "externalLink_ASC",
+  ExternalLinkDesc = "externalLink_DESC",
   ExternalLinkUrlAsc = "externalLinkUrl_ASC",
   ExternalLinkUrlDesc = "externalLinkUrl_DESC",
   SummaryAsc = "summary_ASC",
@@ -20653,6 +20656,7 @@ export type ResourceV2Record = {
   author: Array<PersonRecord>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
+  externalLink?: Maybe<Scalars["BooleanType"]>
   externalLinkUrl?: Maybe<Scalars["String"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
