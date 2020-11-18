@@ -20651,7 +20651,7 @@ export type ResourceV2Record = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
-  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  content?: Maybe<Array<Maybe<TextBlockRecord>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
   externalResource?: Maybe<Scalars["BooleanType"]>
@@ -25072,6 +25072,36 @@ export type TestimonialSliderRecord = {
 /** Record of type Testimonial Slider (testimonial_slider) */
 export type TestimonialSliderRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Text Block (text_block) */
+export type TextBlockRecord = {
+  __typename?: "TextBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  text?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Text Block (text_block) */
+export type TextBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Text Block (text_block) */
+export type TextBlockRecordTextArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Specifies how to filter text fields */
