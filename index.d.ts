@@ -745,13 +745,13 @@ export type BlogPostModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
   showDemoRequest?: Maybe<BooleanFilter>
   previewUrl?: Maybe<StringFilter>
   dateTime?: Maybe<DateTimeFilter>
   toDoItems?: Maybe<JsonFilter>
   guestBlog?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
   date?: Maybe<DateFilter>
   thumbnail?: Maybe<FileFilter>
   image?: Maybe<FileFilter>
@@ -2109,11 +2109,11 @@ export type CloudPartnerPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
   pinnedResourceButtonText?: Maybe<StringFilter>
   pinnedResourceUrl?: Maybe<StringFilter>
   pinnedResourceTitle?: Maybe<StringFilter>
-  metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
 }
@@ -3721,6 +3721,7 @@ export type EnterpriseProductPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   alertBanner?: Maybe<LinkFilter>
   trialForm?: Maybe<LinkFilter>
   faqsPreFooterCta?: Maybe<LinkFilter>
@@ -3728,7 +3729,6 @@ export type EnterpriseProductPageModelFilter = {
   subnav?: Maybe<LinkFilter>
   useCasePages?: Maybe<LinksFilter>
   draft?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
   name?: Maybe<StringFilter>
   pageContent?: Maybe<LinksFilter>
   product?: Maybe<LinkFilter>
@@ -4930,21 +4930,21 @@ export type ExternalResourceModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  language?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
-  events?: Maybe<LinksFilter>
-  organizations?: Maybe<LinksFilter>
-  people?: Maybe<LinksFilter>
-  date?: Maybe<DateFilter>
   draft?: Maybe<BooleanFilter>
+  image?: Maybe<FileFilter>
+  description?: Maybe<TextFilter>
+  contentType?: Maybe<LinkFilter>
   mediaType?: Maybe<LinkFilter>
+  date?: Maybe<DateFilter>
+  people?: Maybe<LinksFilter>
+  organizations?: Maybe<LinksFilter>
+  metadata?: Maybe<SeoFilter>
+  language?: Maybe<LinkFilter>
+  events?: Maybe<LinksFilter>
   product?: Maybe<LinksFilter>
   link?: Maybe<StringFilter>
   infrastructureProvider?: Maybe<LinksFilter>
   industry?: Maybe<LinksFilter>
-  contentType?: Maybe<LinkFilter>
-  description?: Maybe<TextFilter>
-  image?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ExternalResourceModelFilter>>>
 }
@@ -4972,10 +4972,10 @@ export enum ExternalResourceModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  DateAsc = "date_ASC",
-  DateDesc = "date_DESC",
   DraftAsc = "draft_ASC",
   DraftDesc = "draft_DESC",
+  DateAsc = "date_ASC",
+  DateDesc = "date_DESC",
   LinkAsc = "link_ASC",
   LinkDesc = "link_DESC",
   TitleAsc = "title_ASC",
@@ -6194,11 +6194,11 @@ export type HashiconfBasicPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   systemTitle?: Maybe<StringFilter>
   slug?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   content?: Maybe<TextFilter>
-  metadata?: Maybe<SeoFilter>
   sidebarContent?: Maybe<TextFilter>
   leadInContent?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<HashiconfBasicPageModelFilter>>>
@@ -6487,8 +6487,8 @@ export type HashiconfLiveStreamPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  headlineContent?: Maybe<TextFilter>
   metadata?: Maybe<SeoFilter>
+  headlineContent?: Maybe<TextFilter>
   internalTitle?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HashiconfLiveStreamPageModelFilter>>>
 }
@@ -7092,8 +7092,8 @@ export type HashiconfSectionBlockPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  slug?: Maybe<StringFilter>
   metadata?: Maybe<SeoFilter>
+  slug?: Maybe<StringFilter>
   content?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<HashiconfSectionBlockPageModelFilter>>>
@@ -7196,6 +7196,7 @@ export type HashiconfSessionModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   endTime?: Maybe<StringFilter>
   startTime?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
@@ -7205,7 +7206,6 @@ export type HashiconfSessionModelFilter = {
   experienceLevels?: Maybe<LinksFilter>
   productTypes?: Maybe<LinksFilter>
   speakers?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
   slug?: Maybe<StringFilter>
   internalTitle?: Maybe<StringFilter>
   location?: Maybe<StringFilter>
@@ -7742,6 +7742,7 @@ export type HashiconfTrainingModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   productLogo?: Maybe<FileFilter>
   experienceLevels?: Maybe<LinksFilter>
   productTypes?: Maybe<LinksFilter>
@@ -7749,7 +7750,6 @@ export type HashiconfTrainingModelFilter = {
   speakers?: Maybe<LinksFilter>
   room?: Maybe<LinkFilter>
   venue?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
   content?: Maybe<TextFilter>
   startTime?: Maybe<StringFilter>
   date?: Maybe<DateFilter>
@@ -20296,8 +20296,9 @@ export type ResourceModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  language?: Maybe<LinkFilter>
+  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
+  language?: Maybe<LinkFilter>
   showDemoRequest?: Maybe<BooleanFilter>
   events?: Maybe<LinksFilter>
   organizations?: Maybe<LinksFilter>
@@ -20306,7 +20307,6 @@ export type ResourceModelFilter = {
   draft?: Maybe<BooleanFilter>
   mediaType?: Maybe<LinkFilter>
   industry?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
   content?: Maybe<LinksFilter>
   description?: Maybe<TextFilter>
   infrastructureProvider?: Maybe<LinksFilter>
@@ -20777,12 +20777,12 @@ export type SalesFormPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
   thankYouPageText?: Maybe<TextFilter>
   product?: Maybe<LinkFilter>
   contactType?: Maybe<LinkFilter>
   description?: Maybe<TextFilter>
-  metadata?: Maybe<SeoFilter>
   headline?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SalesFormPageModelFilter>>>
 }
@@ -24307,6 +24307,7 @@ export type TemplatePageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
   hidden?: Maybe<BooleanFilter>
   showDemoRequest?: Maybe<BooleanFilter>
@@ -24315,7 +24316,6 @@ export type TemplatePageModelFilter = {
   subnav?: Maybe<StringFilter>
   preFooterCta?: Maybe<LinkFilter>
   hero?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
   content?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TemplatePageModelFilter>>>
@@ -25874,6 +25874,7 @@ export type TmpmodelProductUseCasePageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   architectureSection?: Maybe<LinkFilter>
   product?: Maybe<StringFilter>
   caseStudiesSection?: Maybe<LinksFilter>
@@ -25886,7 +25887,6 @@ export type TmpmodelProductUseCasePageModelFilter = {
   subnav?: Maybe<LinkFilter>
   title?: Maybe<StringFilter>
   ctaSectionHeader?: Maybe<LinkFilter>
-  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<TmpmodelProductUseCasePageModelFilter>>>
 }
 
@@ -27927,6 +27927,7 @@ export type WebinarModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
   deprecated?: Maybe<StringFilter>
   isAnnouncement?: Maybe<BooleanFilter>
@@ -27934,7 +27935,6 @@ export type WebinarModelFilter = {
   hidden?: Maybe<BooleanFilter>
   primaryInfrastructureProvider?: Maybe<LinkFilter>
   showDemoRequest?: Maybe<BooleanFilter>
-  metadata?: Maybe<SeoFilter>
   primaryProduct?: Maybe<LinkFilter>
   events?: Maybe<LinksFilter>
   organizations?: Maybe<LinksFilter>
