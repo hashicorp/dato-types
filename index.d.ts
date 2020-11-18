@@ -20202,6 +20202,36 @@ export type ResourceInfrastructureProviderRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Resource Item (resource_item) */
+export type ResourceItemRecord = {
+  __typename?: "ResourceItemRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  summary?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Resource Item (resource_item) */
+export type ResourceItemRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Resource Item (resource_item) */
+export type ResourceItemRecordSummaryArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
 export type ResourceMediaTypeModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -20645,7 +20675,7 @@ export type ResourceV2Record = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
-  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  content?: Maybe<Array<Maybe<ResourceItemRecord>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
   gated?: Maybe<Scalars["BooleanType"]>
