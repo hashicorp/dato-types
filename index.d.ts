@@ -8499,6 +8499,31 @@ export type IconLinkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Image Block (image_block) */
+export type ImageBlockRecord = {
+  __typename?: "ImageBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  image?: Maybe<FileField>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Image Block (image_block) */
+export type ImageBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type ImageLockupModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -20571,6 +20596,8 @@ export type ResourcesProductsV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type ResourceV2ModelContentField = TextBlockRecord | ImageBlockRecord
+
 export type ResourceV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -20583,6 +20610,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  externalResourceUrl?: Maybe<StringFilter>
   internalResource?: Maybe<BooleanFilter>
   externalResource?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
@@ -20620,6 +20648,8 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ExternalResourceUrlAsc = "externalResourceUrl_ASC",
+  ExternalResourceUrlDesc = "externalResourceUrl_DESC",
   InternalResourceAsc = "internalResource_ASC",
   InternalResourceDesc = "internalResource_DESC",
   ExternalResourceAsc = "externalResource_ASC",
@@ -20651,10 +20681,11 @@ export type ResourceV2Record = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
-  content?: Maybe<Array<Maybe<TextBlockRecord>>>
+  content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
   externalResource?: Maybe<Scalars["BooleanType"]>
+  externalResourceUrl?: Maybe<Scalars["String"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
