@@ -20202,36 +20202,6 @@ export type ResourceInfrastructureProviderRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Resource Item (resource_item) */
-export type ResourceItemRecord = {
-  __typename?: "ResourceItemRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  summary?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Resource Item (resource_item) */
-export type ResourceItemRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Resource Item (resource_item) */
-export type ResourceItemRecordSummaryArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
 export type ResourceMediaTypeModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -20613,6 +20583,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  externalResource?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   enterprise?: Maybe<BooleanFilter>
@@ -20648,6 +20619,8 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ExternalResourceAsc = "externalResource_ASC",
+  ExternalResourceDesc = "externalResource_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
   HiddenAsc = "hidden_ASC",
@@ -20675,9 +20648,9 @@ export type ResourceV2Record = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
-  content?: Maybe<Array<Maybe<ResourceItemRecord>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
+  externalResource?: Maybe<Scalars["BooleanType"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
