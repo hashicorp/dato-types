@@ -38,6 +38,7 @@ export type AboutPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -57,6 +58,7 @@ export type AlertBannerModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -83,6 +85,8 @@ export enum AlertBannerModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -121,6 +125,7 @@ export type AlertBannerRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   expirationDate?: Maybe<Scalars["DateTime"]>
@@ -145,6 +150,7 @@ export type AlertModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -169,6 +175,8 @@ export enum AlertModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -203,6 +211,7 @@ export type AlertRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -231,6 +240,7 @@ export type AutomationBulletRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   bullet?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -255,6 +265,7 @@ export type AutomationLogoRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -273,6 +284,7 @@ export type BackendTagModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -294,6 +306,8 @@ export enum BackendTagModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -320,6 +334,7 @@ export type BackendTagRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -339,6 +354,7 @@ export type BasicTableModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -359,6 +375,8 @@ export enum BasicTableModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -385,6 +403,7 @@ export type BasicTableRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -415,6 +434,7 @@ export type BecomeAPartnerPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<BecomeAPartnerPageModelContentField>
   createdAt: Scalars["DateTime"]
@@ -437,6 +457,7 @@ export type BlogCategoriesV2ModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -462,6 +483,8 @@ export enum BlogCategoriesV2ModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -490,6 +513,7 @@ export type BlogCategoriesV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -518,6 +542,7 @@ export type BlogCtaButtonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttonText?: Maybe<Scalars["String"]>
   buttonUrl?: Maybe<Scalars["String"]>
@@ -543,6 +568,7 @@ export type BlogImageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -567,6 +593,7 @@ export type BlogIndexPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
@@ -592,6 +619,7 @@ export type BlogInlineRelatedArticleRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   articleUrl?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -619,6 +647,7 @@ export type BlogLandingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   featuredPost?: Maybe<BlogPostV2Record>
@@ -638,6 +667,7 @@ export type BlogPostCategoryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -660,6 +690,8 @@ export enum BlogPostCategoryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -686,6 +718,7 @@ export type BlogPostCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   featuredPost?: Maybe<BlogPostV2Record>
@@ -706,6 +739,7 @@ export type BlogPostModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -740,6 +774,8 @@ export enum BlogPostModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -776,6 +812,7 @@ export type BlogPostRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author?: Maybe<PersonRecord>
   body?: Maybe<Scalars["String"]>
@@ -827,6 +864,7 @@ export type BlogPostV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -857,6 +895,8 @@ export enum BlogPostV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -887,6 +927,7 @@ export type BlogPostV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
   backendTags: Array<BackendTagRecord>
@@ -916,6 +957,7 @@ export type BlogProductsV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -939,6 +981,8 @@ export enum BlogProductsV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -967,6 +1011,7 @@ export type BlogProductsV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -988,6 +1033,7 @@ export type BlogTagsV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1009,6 +1055,8 @@ export enum BlogTagsV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1035,6 +1083,7 @@ export type BlogTagsV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -1060,6 +1109,7 @@ export type BlogVideoRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -1085,6 +1135,7 @@ export type BrandDownloadCategoryModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1107,6 +1158,8 @@ export enum BrandDownloadCategoryModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1133,6 +1186,7 @@ export type BrandDownloadCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -1152,6 +1206,7 @@ export type BrandDownloadFileModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1177,6 +1232,8 @@ export enum BrandDownloadFileModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1207,6 +1264,7 @@ export type BrandDownloadFileRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   categories: Array<BrandDownloadCategoryRecord>
   createdAt: Scalars["DateTime"]
@@ -1230,6 +1288,7 @@ export type BrandDownloadFiletypeModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1251,6 +1310,8 @@ export enum BrandDownloadFiletypeModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1277,6 +1338,7 @@ export type BrandDownloadFiletypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   icon?: Maybe<FileField>
@@ -1302,6 +1364,7 @@ export type BrandPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
@@ -1320,6 +1383,7 @@ export type Button2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1343,6 +1407,8 @@ export enum Button2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1373,6 +1439,7 @@ export type Button2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   external?: Maybe<Scalars["BooleanType"]>
@@ -1400,6 +1467,7 @@ export type ButtonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   external?: Maybe<Scalars["BooleanType"]>
@@ -1422,6 +1490,7 @@ export type ButtonThemeModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1445,6 +1514,8 @@ export enum ButtonThemeModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1471,6 +1542,7 @@ export type ButtonThemeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -1491,6 +1563,7 @@ export type CalloutItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1514,6 +1587,8 @@ export enum CalloutItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1540,6 +1615,7 @@ export type CalloutItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -1572,6 +1648,7 @@ export type CalloutRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -1597,6 +1674,7 @@ export type CalloutSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1621,6 +1699,8 @@ export enum CalloutSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1647,6 +1727,7 @@ export type CalloutSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   calloutImage?: Maybe<FileField>
   companies: Array<CompanyRecord>
@@ -1680,6 +1761,7 @@ export type CalloutsSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -1698,6 +1780,7 @@ export type CallToActionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1719,6 +1802,8 @@ export enum CallToActionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1745,6 +1830,7 @@ export type CallToActionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -1779,6 +1865,7 @@ export type CaseStudyLandingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   additionalResources: Array<CaseStudyLandingPageModelAdditionalResourcesField>
   additionalResourcesTitle?: Maybe<Scalars["String"]>
@@ -1803,6 +1890,7 @@ export type CaseStudyLinkModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1832,6 +1920,8 @@ export enum CaseStudyLinkModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1872,6 +1962,7 @@ export type CaseStudyLinkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   company?: Maybe<CompanyRecord>
   createdAt: Scalars["DateTime"]
@@ -1899,6 +1990,7 @@ export type CaseStudyProductModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -1919,6 +2011,8 @@ export enum CaseStudyProductModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -1945,6 +2039,7 @@ export type CaseStudyProductRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -1973,6 +2068,7 @@ export type CertificationPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<CertificationPageModelContentField>
   createdAt: Scalars["DateTime"]
@@ -2007,6 +2103,7 @@ export type CloudPartnerPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2032,6 +2129,8 @@ export enum CloudPartnerPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2064,6 +2163,7 @@ export type CloudPartnerPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -2089,6 +2189,7 @@ export type CodeblockLanguageModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2112,6 +2213,8 @@ export enum CodeblockLanguageModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2138,6 +2241,7 @@ export type CodeblockLanguageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -2164,6 +2268,7 @@ export type CodeBlockRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   code?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -2188,6 +2293,7 @@ export type CodeSampleModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2209,6 +2315,8 @@ export enum CodeSampleModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2233,6 +2341,7 @@ export type CodeSampleRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   codeBlock?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -2303,6 +2412,7 @@ export type CommunityLandingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   conversationSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -2343,6 +2453,7 @@ export type CommunityOfficeHourModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2366,6 +2477,8 @@ export enum CommunityOfficeHourModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2398,6 +2511,7 @@ export type CommunityOfficeHourRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   dateTime?: Maybe<Scalars["DateTime"]>
@@ -2419,6 +2533,7 @@ export type CompanyModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2450,6 +2565,8 @@ export enum CompanyModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2482,6 +2599,7 @@ export type CompanyRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   blogPostCategorys?: Maybe<BlogPostCategoryRecord>
   companyType?: Maybe<Scalars["String"]>
@@ -2523,6 +2641,7 @@ export type ConsulFieldDayLiveRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   ctaTagText?: Maybe<Scalars["String"]>
@@ -2559,6 +2678,7 @@ export type ConsulGraphicSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2581,6 +2701,8 @@ export enum ConsulGraphicSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2607,6 +2729,7 @@ export type ConsulGraphicSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   desktopImage?: Maybe<FileField>
@@ -2633,6 +2756,7 @@ export type ConsulProductPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection?: Maybe<SectionBlockV2Record>
@@ -2665,6 +2789,7 @@ export type ContactCategoryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2689,6 +2814,8 @@ export enum ContactCategoryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2717,6 +2844,7 @@ export type ContactCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -2744,6 +2872,7 @@ export type ContactFormPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2774,6 +2903,8 @@ export enum ContactFormPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2800,6 +2931,7 @@ export type ContactFormPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -2833,6 +2965,7 @@ export type ContactPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   categories: Array<ContactCategoryRecord>
   createdAt: Scalars["DateTime"]
@@ -2883,6 +3016,7 @@ export type CustomerRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -2938,6 +3072,7 @@ export type DropdownLinkModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -2959,6 +3094,8 @@ export enum DropdownLinkModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -2985,6 +3122,7 @@ export type DropdownLinkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -3010,6 +3148,7 @@ export type EcosystemFindAPartnerPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<SectionBlockV2Record>
   createdAt: Scalars["DateTime"]
@@ -3070,6 +3209,7 @@ export type EcosystemLandingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<SectionBlockV2Record>
   createdAt: Scalars["DateTime"]
@@ -3096,6 +3236,7 @@ export type EmbeddedPodcastSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3121,6 +3262,8 @@ export enum EmbeddedPodcastSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3157,6 +3300,7 @@ export type EmbeddedPodcastSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   googlePlayMusicUrl?: Maybe<Scalars["String"]>
@@ -3180,6 +3324,7 @@ export type EmbeddedSlidesSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3200,6 +3345,8 @@ export enum EmbeddedSlidesSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3226,6 +3373,7 @@ export type EmbeddedSlidesSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -3250,6 +3398,7 @@ export type EmployeeNavLinkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   external?: Maybe<Scalars["BooleanType"]>
@@ -3271,6 +3420,7 @@ export type EmployeePageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3295,6 +3445,8 @@ export enum EmployeePageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3323,6 +3475,7 @@ export type EmployeePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<HashiconfSectionBlockRecord>
   createdAt: Scalars["DateTime"]
@@ -3351,6 +3504,7 @@ export type EnterpriseFeaturesCategoryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3371,6 +3525,8 @@ export enum EnterpriseFeaturesCategoryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3397,6 +3553,7 @@ export type EnterpriseFeaturesCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   features?: Maybe<Array<Maybe<FeatureRecord>>>
@@ -3416,6 +3573,7 @@ export type EnterprisePricingSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3437,6 +3595,8 @@ export enum EnterprisePricingSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3463,6 +3623,7 @@ export type EnterprisePricingSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -3489,6 +3650,7 @@ export type EnterpriseProductModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3522,6 +3684,8 @@ export enum EnterpriseProductModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3551,6 +3715,7 @@ export type EnterpriseProductPageModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3583,6 +3748,8 @@ export enum EnterpriseProductPageModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3627,6 +3794,7 @@ export type EnterpriseProductPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
@@ -3662,6 +3830,7 @@ export type EnterpriseProductRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   accentColor?: Maybe<ColorField>
   colorLogo?: Maybe<FileField>
@@ -3703,6 +3872,7 @@ export type EnterpriseProductSubnavModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3729,6 +3899,8 @@ export enum EnterpriseProductSubnavModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3757,6 +3929,7 @@ export type EnterpriseProductSubnavRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   enterpriseLinks: Array<EnterpriseProductSubnavModelEnterpriseLinksField>
@@ -3781,6 +3954,7 @@ export type EnterpriseProductUseCasePageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3804,6 +3978,8 @@ export enum EnterpriseProductUseCasePageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3830,6 +4006,7 @@ export type EnterpriseProductUseCasePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<EnterpriseProductUseCasePageModelContentField>
   createdAt: Scalars["DateTime"]
@@ -3857,6 +4034,7 @@ export type EventConferenceRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -3881,6 +4059,7 @@ export type EventCtasItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -3914,6 +4093,7 @@ export type EventExternalWebinarRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -3932,6 +4112,7 @@ export type EventModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -3957,6 +4138,8 @@ export enum EventModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -3983,6 +4166,7 @@ export type EventProductV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4004,6 +4188,8 @@ export enum EventProductV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4030,6 +4216,7 @@ export type EventProductV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -4055,6 +4242,7 @@ export type EventRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
@@ -4079,6 +4267,7 @@ export type EventsPageMerchandisingSlotModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4106,6 +4295,8 @@ export enum EventsPageMerchandisingSlotModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4140,6 +4331,7 @@ export type EventsPageMerchandisingSlotRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   background?: Maybe<FileField>
   buttonText?: Maybe<Scalars["String"]>
@@ -4170,6 +4362,7 @@ export type EventsPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -4200,6 +4393,7 @@ export type EventsV2SeriesModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4223,6 +4417,8 @@ export enum EventsV2SeriesModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4249,6 +4445,7 @@ export type EventsV2SeriesRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   coverImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
@@ -4275,6 +4472,7 @@ export type EventsV2TagModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4298,6 +4496,8 @@ export enum EventsV2TagModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4324,6 +4524,7 @@ export type EventsV2TagRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   coverImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
@@ -4356,6 +4557,7 @@ export type EventTrainingRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -4375,6 +4577,7 @@ export type EventTypeModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4398,6 +4601,8 @@ export enum EventTypeModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4426,6 +4631,7 @@ export type EventTypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -4453,6 +4659,7 @@ export type EventV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4482,6 +4689,8 @@ export enum EventV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4518,6 +4727,7 @@ export type EventV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   audienceSegment?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -4552,6 +4762,7 @@ export type EventWebinarRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   agenda?: Maybe<BasicTableRecord>
   createdAt: Scalars["DateTime"]
@@ -4594,6 +4805,7 @@ export type EventWorkshopRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -4618,6 +4830,7 @@ export type ExampleRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -4643,6 +4856,7 @@ export type ExperienceLevelModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4663,6 +4877,8 @@ export enum ExperienceLevelModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4689,6 +4905,7 @@ export type ExperienceLevelRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -4707,6 +4924,7 @@ export type ExternalResourceModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4742,6 +4960,8 @@ export enum ExternalResourceModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4778,6 +4998,7 @@ export type ExternalResourceRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   contentType?: Maybe<ResourceContentTypeRecord>
   createdAt: Scalars["DateTime"]
@@ -4816,6 +5037,7 @@ export type FaqCategoryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -4836,6 +5058,8 @@ export enum FaqCategoryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -4862,6 +5086,7 @@ export type FaqCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   faqs?: Maybe<Array<Maybe<FaqItemRecord>>>
@@ -4887,6 +5112,7 @@ export type FaqItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   answer?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -4919,6 +5145,7 @@ export type FaqRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   answer?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -4955,6 +5182,7 @@ export type FeaturedEventRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttonLabel?: Maybe<Scalars["String"]>
   buttonUrl?: Maybe<Scalars["String"]>
@@ -4990,6 +5218,7 @@ export type FeatureRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -5016,6 +5245,7 @@ export type FeatureTableColumnModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5036,6 +5266,8 @@ export enum FeatureTableColumnModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5062,6 +5294,7 @@ export type FeatureTableColumnRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5080,6 +5313,7 @@ export type FeatureTableModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5102,6 +5336,8 @@ export enum FeatureTableModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5128,6 +5364,7 @@ export type FeatureTableRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   applyLink?: Maybe<LinkRecord>
   createdAt: Scalars["DateTime"]
@@ -5148,6 +5385,7 @@ export type FeatureTableRowModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5170,6 +5408,8 @@ export enum FeatureTableRowModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5196,6 +5436,7 @@ export type FeatureTableRowRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   columnValues: Array<FeatureTableRowValueRecord>
   createdAt: Scalars["DateTime"]
@@ -5221,6 +5462,7 @@ export type FeatureTableRowValueModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5242,6 +5484,8 @@ export enum FeatureTableRowValueModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5268,6 +5512,7 @@ export type FeatureTableRowValueRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   column?: Maybe<FeatureTableColumnRecord>
   createdAt: Scalars["DateTime"]
@@ -5287,6 +5532,7 @@ export type FeatureTableTabModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5309,6 +5555,8 @@ export enum FeatureTableTabModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5335,6 +5583,7 @@ export type FeatureTableTabRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   columns: Array<FeatureTableColumnRecord>
   createdAt: Scalars["DateTime"]
@@ -5461,6 +5710,7 @@ export type FormCheckboxFieldRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5481,6 +5731,7 @@ export type FormContactTypeModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5501,6 +5752,8 @@ export enum FormContactTypeModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5527,6 +5780,7 @@ export type FormContactTypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   contactType?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -5557,6 +5811,7 @@ export type FormEmailFieldRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5584,6 +5839,7 @@ export type FormHiddenFieldRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5609,6 +5865,7 @@ export type FormMultiSelectFieldRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5630,6 +5887,7 @@ export type FormMultiSelectOptionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5651,6 +5909,8 @@ export enum FormMultiSelectOptionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5679,6 +5939,7 @@ export type FormMultiSelectOptionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5704,6 +5965,7 @@ export type FormTextAreaFieldRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5731,6 +5993,7 @@ export type FormTextFieldRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5772,6 +6035,7 @@ export type GetStartedCtaItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -5804,6 +6068,7 @@ export type GlobalDemoFormRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   form?: Maybe<SalesFormRecord>
@@ -5828,6 +6093,7 @@ export type GlobalFooterBasicRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5852,6 +6118,7 @@ export type GlobalNavigationRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companyImageLockup?: Maybe<ImageLockupRecord>
   companyLinks: Array<IconLinkRecord>
@@ -5897,6 +6164,7 @@ export type GuestBlogTextRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -5920,6 +6188,7 @@ export type HashiconfBasicPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -5946,6 +6215,8 @@ export enum HashiconfBasicPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -5976,6 +6247,7 @@ export type HashiconfBasicPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -6015,6 +6287,7 @@ export type HashiconfFeaturedSpeakersSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6037,6 +6310,8 @@ export enum HashiconfFeaturedSpeakersSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6061,6 +6336,7 @@ export type HashiconfFeaturedSpeakersSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -6091,6 +6367,7 @@ export type HashiconfLandingPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6125,6 +6402,8 @@ export enum HashiconfLandingPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6159,6 +6438,7 @@ export type HashiconfLandingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   aboutContent?: Maybe<Scalars["String"]>
   aboutHeading?: Maybe<Scalars["String"]>
@@ -6201,6 +6481,7 @@ export type HashiconfLiveStreamPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6223,6 +6504,8 @@ export enum HashiconfLiveStreamPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6249,6 +6532,7 @@ export type HashiconfLiveStreamPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headlineContent?: Maybe<Scalars["String"]>
@@ -6275,6 +6559,7 @@ export type HashiconfModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6314,6 +6599,8 @@ export enum HashiconfModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6352,6 +6639,7 @@ export type HashiconfRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buyTicketsLink?: Maybe<LinkRecord>
   createdAt: Scalars["DateTime"]
@@ -6393,6 +6681,7 @@ export type HashiconfScheduleDayModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6414,6 +6703,8 @@ export enum HashiconfScheduleDayModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6442,6 +6733,7 @@ export type HashiconfScheduleDayRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
@@ -6472,6 +6764,7 @@ export type HashiconfScheduleEventRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -6500,6 +6793,7 @@ export type HashiconfScheduleItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6524,6 +6818,8 @@ export enum HashiconfScheduleItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6554,6 +6850,7 @@ export type HashiconfScheduleItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -6586,6 +6883,7 @@ export type HashiconfScheduleLiteSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6606,6 +6904,8 @@ export enum HashiconfScheduleLiteSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6632,6 +6932,7 @@ export type HashiconfScheduleLiteSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -6651,6 +6952,7 @@ export type HashiconfSchedulePageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6673,6 +6975,8 @@ export enum HashiconfSchedulePageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6699,6 +7003,7 @@ export type HashiconfSchedulePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   days: Array<HashiconfScheduleDayRecord>
@@ -6731,6 +7036,7 @@ export type HashiconfSectionBlockModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6754,6 +7060,8 @@ export enum HashiconfSectionBlockModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6778,6 +7086,7 @@ export type HashiconfSectionBlockPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6801,6 +7110,8 @@ export enum HashiconfSectionBlockPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6829,6 +7140,7 @@ export type HashiconfSectionBlockPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<HashiconfSectionBlockRecord>
   createdAt: Scalars["DateTime"]
@@ -6856,6 +7168,7 @@ export type HashiconfSectionBlockRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<HashiconfSectionBlockModelContentField>
   createdAt: Scalars["DateTime"]
@@ -6877,6 +7190,7 @@ export type HashiconfSessionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -6912,6 +7226,8 @@ export enum HashiconfSessionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -6952,6 +7268,7 @@ export type HashiconfSessionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -6990,6 +7307,7 @@ export type HashiconfSpeakerModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7021,6 +7339,8 @@ export enum HashiconfSpeakerModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7061,6 +7381,7 @@ export type HashiconfSpeakerRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   bio?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -7095,6 +7416,7 @@ export type HashiconfSpeakersPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7117,6 +7439,8 @@ export enum HashiconfSpeakersPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7143,6 +7467,7 @@ export type HashiconfSpeakersPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -7163,6 +7488,7 @@ export type HashiconfSponsorSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7187,6 +7513,8 @@ export enum HashiconfSponsorSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7211,6 +7539,7 @@ export type HashiconfSponsorSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
   createdAt: Scalars["DateTime"]
@@ -7243,6 +7572,7 @@ export type HashiconfTextAndFullImageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7266,6 +7596,8 @@ export enum HashiconfTextAndFullImageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7292,6 +7624,7 @@ export type HashiconfTextAndFullImageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
   createdAt: Scalars["DateTime"]
@@ -7318,6 +7651,7 @@ export type HashiconfTrainingDayModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7343,6 +7677,8 @@ export enum HashiconfTrainingDayModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7371,6 +7707,7 @@ export type HashiconfTrainingDayRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -7399,6 +7736,7 @@ export type HashiconfTrainingModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7436,6 +7774,8 @@ export enum HashiconfTrainingModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7478,6 +7818,7 @@ export type HashiconfTrainingRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -7518,6 +7859,7 @@ export type HashicorpProductModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7538,6 +7880,8 @@ export enum HashicorpProductModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7564,6 +7908,7 @@ export type HashicorpProductRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -7582,6 +7927,7 @@ export type HeroFormLeadModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7603,6 +7949,8 @@ export enum HeroFormLeadModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7631,6 +7979,7 @@ export type HeroFormLeadRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttonText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -7656,6 +8005,7 @@ export type HeroRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
   buttons: Array<LinkRecord>
@@ -7689,6 +8039,7 @@ export type HeroSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7723,6 +8074,8 @@ export enum HeroSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7759,6 +8112,7 @@ export type HeroSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alert?: Maybe<AlertRecord>
   backgroundImage?: Maybe<FileField>
@@ -7801,6 +8155,7 @@ export type HeroVideoCarouselItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7823,6 +8178,8 @@ export enum HeroVideoCarouselItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7851,6 +8208,7 @@ export type HeroVideoCarouselItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -7871,6 +8229,7 @@ export type HomepageProductTabModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -7896,6 +8255,8 @@ export enum HomepageProductTabModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -7924,6 +8285,7 @@ export type HomepageProductTabRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   badge?: Maybe<FileField>
   buttonText?: Maybe<Scalars["String"]>
@@ -7958,6 +8320,7 @@ export type HomePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   blueprintHeader?: Maybe<TextHeadlineSectionRecord>
@@ -7991,6 +8354,7 @@ export type HtmlSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -8011,6 +8375,8 @@ export enum HtmlSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -8035,6 +8401,7 @@ export type HtmlSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   html?: Maybe<Scalars["String"]>
@@ -8058,6 +8425,7 @@ export type IconLinkModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -8082,6 +8450,8 @@ export enum IconLinkModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -8112,6 +8482,7 @@ export type IconLinkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   external?: Maybe<Scalars["BooleanType"]>
@@ -8134,6 +8505,7 @@ export type ImageLockupModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -8157,6 +8529,8 @@ export enum ImageLockupModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -8183,6 +8557,7 @@ export type ImageLockupRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -8215,6 +8590,7 @@ export type ImageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -8234,6 +8610,7 @@ export type ImageSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -8257,6 +8634,8 @@ export enum ImageSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -8285,6 +8664,7 @@ export type ImageSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alignment?: Maybe<Scalars["String"]>
   caption?: Maybe<Scalars["String"]>
@@ -8317,6 +8697,7 @@ export type ImageTextCarouselItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -8344,6 +8725,7 @@ export type ImageTextCarouselModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -8363,6 +8745,8 @@ export enum ImageTextCarouselModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -8387,6 +8771,7 @@ export type ImageTextCarouselRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -9710,6 +10095,7 @@ export type IntegrationDetailRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -9742,6 +10128,7 @@ export type IntegrationsPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -9769,6 +10156,7 @@ export type IntegrationTypeCategoryModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -9793,6 +10181,8 @@ export enum IntegrationTypeCategoryModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -9819,6 +10209,7 @@ export type IntegrationTypeCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -9841,6 +10232,7 @@ export type IntegrationTypeModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -9865,6 +10257,8 @@ export enum IntegrationTypeModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -9891,6 +10285,7 @@ export type IntegrationTypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   category?: Maybe<IntegrationTypeCategoryRecord>
   createdAt: Scalars["DateTime"]
@@ -9936,6 +10331,7 @@ export type ItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -9968,6 +10364,7 @@ export type JobsEmployeeTestimonialModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -9989,6 +10386,8 @@ export enum JobsEmployeeTestimonialModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10013,6 +10412,7 @@ export type JobsEmployeeTestimonialRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -10038,6 +10438,7 @@ export type JobsPageDepartmentModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10065,6 +10466,8 @@ export enum JobsPageDepartmentModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10093,6 +10496,7 @@ export type JobsPageDepartmentRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   backgroundImage?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
@@ -10133,6 +10537,7 @@ export type LargeLogoGridSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10155,6 +10560,8 @@ export enum LargeLogoGridSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10181,6 +10588,7 @@ export type LargeLogoGridSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
@@ -10221,6 +10629,7 @@ export type LinkModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10245,6 +10654,8 @@ export enum LinkModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10275,6 +10686,7 @@ export type LinkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   external?: Maybe<Scalars["BooleanType"]>
@@ -10310,6 +10722,7 @@ export type ListItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10330,6 +10743,8 @@ export enum ListItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10356,6 +10771,7 @@ export type ListItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -10374,6 +10790,7 @@ export type LocalPageMetadataSetModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10395,6 +10812,8 @@ export enum LocalPageMetadataSetModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10421,6 +10840,7 @@ export type LocalPageMetadataSetRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -10440,6 +10860,7 @@ export type LocationRoomModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10460,6 +10881,8 @@ export enum LocationRoomModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10486,6 +10909,7 @@ export type LocationRoomRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -10504,6 +10928,7 @@ export type LocationVenueModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10524,6 +10949,8 @@ export enum LocationVenueModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10550,6 +10977,7 @@ export type LocationVenueRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -10574,6 +11002,7 @@ export type LogoGridRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
@@ -10593,6 +11022,7 @@ export type MajorHeadlineSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10615,6 +11045,8 @@ export enum MajorHeadlineSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10643,6 +11075,7 @@ export type MajorHeadlineSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   displayType?: Maybe<Scalars["String"]>
@@ -10669,6 +11102,7 @@ export type MarkdownRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -10692,6 +11126,7 @@ export type MiniCalloutModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10712,6 +11147,8 @@ export enum MiniCalloutModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10736,6 +11173,7 @@ export type MiniCalloutRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -10760,6 +11198,7 @@ export type MultiButtonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttons: Array<Button2Record>
   createdAt: Scalars["DateTime"]
@@ -10784,6 +11223,7 @@ export type NavCalloutModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10806,6 +11246,8 @@ export enum NavCalloutModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10832,6 +11274,7 @@ export type NavCalloutRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Scalars["String"]>
   button?: Maybe<LinkRecord>
@@ -10857,6 +11300,7 @@ export type NavPromoModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10881,6 +11325,8 @@ export enum NavPromoModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -10913,6 +11359,7 @@ export type NavPromoRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -10941,6 +11388,7 @@ export type NavRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companyPromos: Array<NavPromoRecord>
   createdAt: Scalars["DateTime"]
@@ -10964,6 +11412,7 @@ export type NewsItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -10988,6 +11437,8 @@ export enum NewsItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11022,6 +11473,7 @@ export type NewsItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   callout?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -11050,6 +11502,7 @@ export type NomadProductPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection?: Maybe<SectionBlockV2Record>
@@ -11086,6 +11539,7 @@ export type OfficeHoursSessionCopy1ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11110,6 +11564,8 @@ export enum OfficeHoursSessionCopy1ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11142,6 +11598,7 @@ export type OfficeHoursSessionCopy1Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -11169,6 +11626,7 @@ export type OfficeHoursSessionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11193,6 +11651,8 @@ export enum OfficeHoursSessionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11225,6 +11685,7 @@ export type OfficeHoursSessionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -11257,6 +11718,7 @@ export type OnDemandResourceModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11302,6 +11764,8 @@ export enum OnDemandResourceModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11352,6 +11816,7 @@ export type OnDemandResourceRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   awsCampaign?: Maybe<Scalars["BooleanType"]>
   backgroundImage?: Maybe<FileField>
@@ -11395,6 +11860,7 @@ export type OpenSourceToolCategoryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11415,6 +11881,8 @@ export enum OpenSourceToolCategoryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11441,6 +11909,7 @@ export type OpenSourceToolCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -11460,6 +11929,7 @@ export type OpenSourceToolModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11489,6 +11959,8 @@ export enum OpenSourceToolModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11519,6 +11991,7 @@ export type OpenSourceToolRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   category?: Maybe<OpenSourceToolCategoryRecord>
   createdAt: Scalars["DateTime"]
@@ -11558,6 +12031,7 @@ export type PackageFeatureModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11580,6 +12054,8 @@ export enum PackageFeatureModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11610,6 +12086,7 @@ export type PackageFeatureRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -11630,6 +12107,7 @@ export type PackageOptionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11656,6 +12134,8 @@ export enum PackageOptionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11688,6 +12168,7 @@ export type PackageOptionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttonUrl?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -11718,6 +12199,7 @@ export type PackageSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -11746,6 +12228,7 @@ export type PartnersPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   cloudPartners: Array<CompanyRecord>
   cloudPartnersDescription?: Maybe<Scalars["String"]>
@@ -11816,6 +12299,7 @@ export type PersonListModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11837,6 +12321,8 @@ export enum PersonListModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11863,6 +12349,7 @@ export type PersonListRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -11882,6 +12369,7 @@ export type PersonModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -11908,6 +12396,8 @@ export enum PersonModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -11936,6 +12426,7 @@ export type PersonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   bio?: Maybe<Scalars["String"]>
   company?: Maybe<CompanyRecord>
@@ -11981,6 +12472,7 @@ export type PressAnalystReportPostModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12008,6 +12500,8 @@ export enum PressAnalystReportPostModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12040,6 +12534,7 @@ export type PressAnalystReportPostRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   analystName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -12065,6 +12560,7 @@ export type PressCommunityVoicesPostModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12092,6 +12588,8 @@ export enum PressCommunityVoicesPostModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12124,6 +12622,7 @@ export type PressCommunityVoicesPostRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   authorAvatar?: Maybe<FileField>
   authorUsername?: Maybe<Scalars["String"]>
@@ -12149,6 +12648,7 @@ export type PressLinkModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12173,6 +12673,8 @@ export enum PressLinkModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12207,6 +12709,7 @@ export type PressLinkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
@@ -12229,6 +12732,7 @@ export type PressLocaleModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12250,6 +12754,8 @@ export enum PressLocaleModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12278,6 +12784,7 @@ export type PressLocaleRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -12297,6 +12804,7 @@ export type PressMediaCoveragePostModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12323,6 +12831,8 @@ export enum PressMediaCoveragePostModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12353,6 +12863,7 @@ export type PressMediaCoveragePostRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   featureBg?: Maybe<FileField>
@@ -12383,6 +12894,7 @@ export type PressPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   events: Array<PressLinkRecord>
@@ -12418,6 +12930,7 @@ export type PressPageV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   featuredPressAnalystReportPost?: Maybe<PressAnalystReportPostRecord>
@@ -12440,6 +12953,7 @@ export type PressPublicationModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12462,6 +12976,8 @@ export enum PressPublicationModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12488,6 +13004,7 @@ export type PressPublicationRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -12508,6 +13025,7 @@ export type PressReleaseModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12531,6 +13049,8 @@ export enum PressReleaseModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12561,6 +13081,7 @@ export type PressReleaseRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -12582,6 +13103,7 @@ export type PricingPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12604,6 +13126,8 @@ export enum PricingPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12628,6 +13152,7 @@ export type PricingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -12653,6 +13178,7 @@ export type ProductCertificationPageModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12688,6 +13214,8 @@ export enum ProductCertificationPageModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12724,6 +13252,7 @@ export type ProductCertificationPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   badge?: Maybe<FileField>
   content: Array<ProductCertificationPageModelContentField>
@@ -12777,6 +13306,7 @@ export type ProductIntegrationRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   diagramLogoPlacement?: Maybe<Scalars["String"]>
@@ -12800,6 +13330,7 @@ export type ProductOfferingModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12825,6 +13356,8 @@ export enum ProductOfferingModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12861,6 +13394,7 @@ export type ProductOfferingRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   cost?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -12884,6 +13418,7 @@ export type ProductPackageSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12905,6 +13440,8 @@ export enum ProductPackageSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -12931,6 +13468,7 @@ export type ProductPackageSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -12950,6 +13488,7 @@ export type ProductPricingPlanModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -12980,6 +13519,8 @@ export enum ProductPricingPlanModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -13020,6 +13561,7 @@ export type ProductPricingPlanRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -13053,6 +13595,7 @@ export type ProductSubnavModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -13076,6 +13619,8 @@ export enum ProductSubnavModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -13110,6 +13655,7 @@ export type ProductSubnavRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -13133,6 +13679,7 @@ export type ProductTabFeatureModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -13153,6 +13700,8 @@ export enum ProductTabFeatureModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -13177,6 +13726,7 @@ export type ProductTabFeatureRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -13200,6 +13750,7 @@ export type ProductTypeModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -13220,6 +13771,8 @@ export enum ProductTypeModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -13246,6 +13799,7 @@ export type ProductTypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -19333,6 +19887,7 @@ export type ReasonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   icon?: Maybe<FileField>
@@ -19352,6 +19907,7 @@ export type RelatedItemsSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19374,6 +19930,8 @@ export enum RelatedItemsSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19404,6 +19962,7 @@ export type RelatedItemsSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   github?: Maybe<Scalars["String"]>
@@ -19443,6 +20002,7 @@ export type ResourceContentTypeModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19463,6 +20023,8 @@ export enum ResourceContentTypeModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19489,6 +20051,7 @@ export type ResourceContentTypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -19507,6 +20070,7 @@ export type ResourceIndustryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19527,6 +20091,8 @@ export enum ResourceIndustryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19553,6 +20119,7 @@ export type ResourceIndustryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -19571,6 +20138,7 @@ export type ResourceInfrastructureProviderModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19592,6 +20160,8 @@ export enum ResourceInfrastructureProviderModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19618,6 +20188,7 @@ export type ResourceInfrastructureProviderRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   company?: Maybe<CompanyRecord>
   createdAt: Scalars["DateTime"]
@@ -19637,6 +20208,7 @@ export type ResourceMediaTypeModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19658,6 +20230,8 @@ export enum ResourceMediaTypeModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19684,6 +20258,7 @@ export type ResourceMediaTypeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   icon?: Maybe<FileField>
@@ -19715,6 +20290,7 @@ export type ResourceModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19752,6 +20328,8 @@ export enum ResourceModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19788,6 +20366,7 @@ export type ResourceRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<ResourceModelContentField>
   contentType?: Maybe<ResourceContentTypeRecord>
@@ -19828,6 +20407,7 @@ export type ResourcesLanguageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19848,6 +20428,8 @@ export enum ResourcesLanguageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19874,6 +20456,7 @@ export type ResourcesLanguageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -19898,6 +20481,7 @@ export type ResourcesPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -19923,6 +20507,7 @@ export type ResourcesProductsV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -19944,6 +20529,8 @@ export enum ResourcesProductsV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -19970,6 +20557,7 @@ export type ResourcesProductsV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -19989,6 +20577,7 @@ export type ResourceV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20018,6 +20607,8 @@ export enum ResourceV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20054,6 +20645,7 @@ export type ResourceV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
   createdAt: Scalars["DateTime"]
@@ -20102,6 +20694,7 @@ export type RowRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -20122,6 +20715,7 @@ export type SalesFormModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20155,6 +20749,8 @@ export enum SalesFormModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20175,6 +20771,7 @@ export type SalesFormPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20208,6 +20805,8 @@ export enum SalesFormPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20234,6 +20833,7 @@ export type SalesFormPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   contactType?: Maybe<FormContactTypeRecord>
   createdAt: Scalars["DateTime"]
@@ -20278,6 +20878,7 @@ export type SalesFormRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   contactType?: Maybe<FormContactTypeRecord>
   createdAt: Scalars["DateTime"]
@@ -20317,6 +20918,7 @@ export type SbcAlertModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20341,6 +20943,8 @@ export enum SbcAlertModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20375,6 +20979,7 @@ export type SbcAlertRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -20397,6 +21002,7 @@ export type SbcBeforeAfterDiagramModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20423,6 +21029,8 @@ export enum SbcBeforeAfterDiagramModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20453,6 +21061,7 @@ export type SbcBeforeAfterDiagramRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   afterContent?: Maybe<Scalars["String"]>
   afterHeadline?: Maybe<Scalars["String"]>
@@ -20487,6 +21096,7 @@ export type SbcButtonModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20510,6 +21120,8 @@ export enum SbcButtonModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20540,6 +21152,7 @@ export type SbcButtonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   appearance?: Maybe<ButtonThemeRecord>
   createdAt: Scalars["DateTime"]
@@ -20561,6 +21174,7 @@ export type SbcButtonV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20584,6 +21198,8 @@ export enum SbcButtonV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20616,6 +21232,7 @@ export type SbcButtonV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   brand?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -20637,6 +21254,7 @@ export type SbcCalloutModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20660,6 +21278,8 @@ export enum SbcCalloutModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20686,6 +21306,7 @@ export type SbcCalloutRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -20712,6 +21333,7 @@ export type SbcCalloutSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20734,6 +21356,8 @@ export enum SbcCalloutSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20762,6 +21386,7 @@ export type SbcCalloutSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   columnCount?: Maybe<Scalars["IntType"]>
   createdAt: Scalars["DateTime"]
@@ -20782,6 +21407,7 @@ export type SbcCaseStudyModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20808,6 +21434,8 @@ export enum SbcCaseStudyModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20838,6 +21466,7 @@ export type SbcCaseStudyRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttonLabel?: Maybe<Scalars["String"]>
   caseStudyImage?: Maybe<FileField>
@@ -20867,6 +21496,7 @@ export type SbcCaseStudySliderModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20887,6 +21517,8 @@ export enum SbcCaseStudySliderModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20911,6 +21543,7 @@ export type SbcCaseStudySliderRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   caseStudies: Array<SbcCaseStudyRecord>
   createdAt: Scalars["DateTime"]
@@ -20929,6 +21562,7 @@ export type SbcCodeBlockModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -20951,6 +21585,8 @@ export enum SbcCodeBlockModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -20977,6 +21613,7 @@ export type SbcCodeBlockRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   chrome?: Maybe<Scalars["BooleanType"]>
   code?: Maybe<Scalars["String"]>
@@ -21002,6 +21639,7 @@ export type SbcImageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21023,6 +21661,8 @@ export enum SbcImageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21047,6 +21687,7 @@ export type SbcImageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -21066,6 +21707,7 @@ export type SbcLinkedTextSummaryListModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21086,6 +21728,8 @@ export enum SbcLinkedTextSummaryListModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21112,6 +21756,7 @@ export type SbcLinkedTextSummaryListRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -21131,6 +21776,7 @@ export type SbcLogoGridModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21153,6 +21799,8 @@ export enum SbcLogoGridModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21181,6 +21829,7 @@ export type SbcLogoGridRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
@@ -21201,6 +21850,7 @@ export type SbcMultiButtonModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21222,6 +21872,8 @@ export enum SbcMultiButtonModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21248,6 +21900,7 @@ export type SbcMultiButtonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
   createdAt: Scalars["DateTime"]
@@ -21267,6 +21920,7 @@ export type SbcProductFeatureTableModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21292,6 +21946,8 @@ export enum SbcProductFeatureTableModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21322,6 +21978,7 @@ export type SbcProductFeatureTableRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   featureCategories: Array<EnterpriseFeaturesCategoryRecord>
@@ -21345,6 +22002,7 @@ export type SbcProductPricingModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21366,6 +22024,8 @@ export enum SbcProductPricingModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21392,6 +22052,7 @@ export type SbcProductPricingRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -21411,6 +22072,7 @@ export type SbcResourcesSliderModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21442,6 +22104,8 @@ export enum SbcResourcesSliderModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21466,6 +22130,7 @@ export type SbcResourcesSliderRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   filterBy: Array<SbcResourcesSliderModelFilterByField>
@@ -21484,6 +22149,7 @@ export type SbcSectionHeaderModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21506,6 +22172,8 @@ export enum SbcSectionHeaderModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21534,6 +22202,7 @@ export type SbcSectionHeaderRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -21564,6 +22233,7 @@ export type SbcTextAndContentModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21590,6 +22260,8 @@ export enum SbcTextAndContentModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21620,6 +22292,7 @@ export type SbcTextAndContentRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttons: Array<SbcButtonRecord>
   content?: Maybe<SbcTextAndContentModelContentField>
@@ -21649,6 +22322,7 @@ export type SbcTextModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21669,6 +22343,8 @@ export enum SbcTextModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21693,6 +22369,7 @@ export type SbcTextRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -21716,6 +22393,7 @@ export type SbcUseCaseModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21739,6 +22417,8 @@ export enum SbcUseCaseModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21765,6 +22445,7 @@ export type SbcUseCaseRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -21791,6 +22472,7 @@ export type SbcUseCasesSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21813,6 +22495,8 @@ export enum SbcUseCasesSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21841,6 +22525,7 @@ export type SbcUseCasesSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -21876,6 +22561,7 @@ export type SblHorizontalModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21896,6 +22582,8 @@ export enum SblHorizontalModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -21920,6 +22608,7 @@ export type SblHorizontalRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<SblHorizontalModelContentField>
   createdAt: Scalars["DateTime"]
@@ -21958,6 +22647,7 @@ export type SblVerticalModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -21978,6 +22668,8 @@ export enum SblVerticalModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22002,6 +22694,7 @@ export type SblVerticalRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<SblVerticalModelContentField>
   createdAt: Scalars["DateTime"]
@@ -22026,6 +22719,7 @@ export type ScheduleLiteItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -22045,6 +22739,7 @@ export type SchemaMigrationModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22065,6 +22760,8 @@ export enum SchemaMigrationModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22091,6 +22788,7 @@ export type SchemaMigrationRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -22126,6 +22824,7 @@ export type SectionBlockModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22149,6 +22848,8 @@ export enum SectionBlockModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22171,6 +22872,7 @@ export type SectionBlockPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22195,6 +22897,8 @@ export enum SectionBlockPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22221,6 +22925,7 @@ export type SectionBlockPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   content: Array<SectionBlockV2Record>
@@ -22249,6 +22954,7 @@ export type SectionBlockRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   components?: Maybe<Array<Maybe<SectionBlockModelComponentsField>>>
   createdAt: Scalars["DateTime"]
@@ -22271,6 +22977,7 @@ export type SectionBlockV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22299,6 +23006,8 @@ export enum SectionBlockV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22327,6 +23036,7 @@ export type SectionBlockV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   divider?: Maybe<SectionDividerRecord>
@@ -22349,6 +23059,7 @@ export type SectionDividerModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22370,6 +23081,8 @@ export enum SectionDividerModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22396,6 +23109,7 @@ export type SectionDividerRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -22421,6 +23135,7 @@ export type SectionHeaderRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -22445,6 +23160,7 @@ export type SectionThemeModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22466,6 +23182,8 @@ export enum SectionThemeModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22492,6 +23210,7 @@ export type SectionThemeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -22521,6 +23240,7 @@ export type SentinelPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   calloutsSection?: Maybe<SbcCalloutSectionRecord>
   calloutsSectionHeader?: Maybe<SbcSectionHeaderRecord>
@@ -22547,6 +23267,7 @@ export type SentinelProductTabModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22572,6 +23293,8 @@ export enum SentinelProductTabModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22596,6 +23319,7 @@ export type SentinelProductTabRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   codeSamples: Array<CodeSampleRecord>
   colorLogo?: Maybe<FileField>
@@ -22639,6 +23363,7 @@ export type ShopPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   confirmation?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -22703,6 +23428,7 @@ export type SmallTextTagRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -22721,6 +23447,7 @@ export type SocialNetworkIconModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22743,6 +23470,8 @@ export enum SocialNetworkIconModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22769,6 +23498,7 @@ export type SocialNetworkIconRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   icon?: Maybe<FileField>
@@ -22789,6 +23519,7 @@ export type SocialNetworkModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -22810,6 +23541,8 @@ export enum SocialNetworkModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -22836,6 +23569,7 @@ export type SocialNetworkRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -22861,6 +23595,7 @@ export type SolutionsContentGroupRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -22894,6 +23629,7 @@ export type SolutionsInfrastructurePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
@@ -22966,6 +23702,7 @@ export type SolutionsNetworkingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   automationBullets?: Maybe<Array<Maybe<AutomationBulletRecord>>>
   automationContent?: Maybe<Scalars["String"]>
@@ -23048,6 +23785,7 @@ export type SolutionsSecurityPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   challengesByline?: Maybe<Scalars["String"]>
   challengesContentGroups?: Maybe<Array<Maybe<SolutionsContentGroupRecord>>>
@@ -23114,6 +23852,7 @@ export type SpeakersSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23135,6 +23874,8 @@ export enum SpeakersSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23161,6 +23902,7 @@ export type SpeakersSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -23180,6 +23922,7 @@ export type SplitCtaItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23204,6 +23947,8 @@ export enum SplitCtaItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23230,6 +23975,7 @@ export type SplitCtaItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   backgroundColor?: Maybe<ColorField>
   backgroundImage?: Maybe<FileField>
@@ -23258,6 +24004,7 @@ export type SplitCtaSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23278,6 +24025,8 @@ export enum SplitCtaSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23302,6 +24051,7 @@ export type SplitCtaSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -23320,6 +24070,7 @@ export type StaticDynamicSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23343,6 +24094,8 @@ export enum StaticDynamicSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23367,6 +24120,7 @@ export type StaticDynamicSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   dynamicDescription?: Maybe<Scalars["String"]>
@@ -23440,6 +24194,7 @@ export type SubscriptionConfirmationPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -23471,6 +24226,7 @@ export type SubscriptionOptOutSuccessPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -23516,6 +24272,7 @@ export type TaggedResourceRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -23544,6 +24301,7 @@ export type TemplatePageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23574,6 +24332,8 @@ export enum TemplatePageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23610,6 +24370,7 @@ export type TemplatePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<TemplatePageModelContentField>
   createdAt: Scalars["DateTime"]
@@ -23644,6 +24405,7 @@ export type TerraformEditionsCloudPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alert?: Maybe<AlertRecord>
   cloudInfrastructureSection?: Maybe<TextImageSectionRecord>
@@ -23673,6 +24435,7 @@ export type TerraformEditionsEnterprisePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   cloudInfrastructureAutomationCta?: Maybe<CallToActionRecord>
   createdAt: Scalars["DateTime"]
@@ -23694,6 +24457,7 @@ export type TerraformEditionsGetStartedCtaModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23714,6 +24478,8 @@ export enum TerraformEditionsGetStartedCtaModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23740,6 +24506,7 @@ export type TerraformEditionsGetStartedCtaRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   ctas?: Maybe<Array<Maybe<GetStartedCtaItemRecord>>>
@@ -23765,6 +24532,7 @@ export type TerraformEditionsOpenSourcePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   deployMultiCloudInfrastructureSection?: Maybe<TextImageSectionRecord>
@@ -23786,6 +24554,7 @@ export type TerraformGraphSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23808,6 +24577,8 @@ export enum TerraformGraphSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23834,6 +24605,7 @@ export type TerraformGraphSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -23854,6 +24626,7 @@ export type TerraformOfferingCategoryModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23875,6 +24648,8 @@ export enum TerraformOfferingCategoryModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23901,6 +24676,7 @@ export type TerraformOfferingCategoryRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -23921,6 +24697,7 @@ export type TerraformOfferingModelFilter = {
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   position?: Maybe<PositionFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -23945,6 +24722,8 @@ export enum TerraformOfferingModelOrderBy {
   PositionDesc = "position_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -23975,6 +24754,7 @@ export type TerraformOfferingRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -23996,6 +24776,7 @@ export type TerraformOfferingTableModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24016,6 +24797,8 @@ export enum TerraformOfferingTableModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24040,6 +24823,7 @@ export type TerraformOfferingTableRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   categories: Array<TerraformOfferingCategoryRecord>
   createdAt: Scalars["DateTime"]
@@ -24058,6 +24842,7 @@ export type TerraformOfferingTierModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24083,6 +24868,8 @@ export enum TerraformOfferingTierModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24113,6 +24900,7 @@ export type TerraformOfferingTierRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   callouts?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -24147,6 +24935,7 @@ export type TerraformProductPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection?: Maybe<SectionBlockV2Record>
@@ -24180,6 +24969,7 @@ export type TestimonialModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24203,6 +24993,8 @@ export enum TestimonialModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24231,6 +25023,7 @@ export type TestimonialRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   author?: Maybe<Scalars["String"]>
   authorTitle?: Maybe<Scalars["String"]>
@@ -24263,6 +25056,7 @@ export type TestimonialSliderRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -24291,6 +25085,7 @@ export type TextHeadlineAndGridSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24314,6 +25109,8 @@ export enum TextHeadlineAndGridSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24342,6 +25139,7 @@ export type TextHeadlineAndGridSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companies: Array<CompanyRecord>
   createdAt: Scalars["DateTime"]
@@ -24368,6 +25166,7 @@ export type TextHeadlineSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24389,6 +25188,8 @@ export enum TextHeadlineSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24415,6 +25216,7 @@ export type TextHeadlineSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -24445,6 +25247,7 @@ export type TextImageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   headline?: Maybe<Scalars["String"]>
@@ -24471,6 +25274,7 @@ export type TextImageSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24495,6 +25299,8 @@ export enum TextImageSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24525,6 +25331,7 @@ export type TextImageSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   anchorLink?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
@@ -24558,6 +25365,7 @@ export type TextRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -24581,6 +25389,7 @@ export type TextSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24601,6 +25410,8 @@ export enum TextSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24625,6 +25436,7 @@ export type TextSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -24654,6 +25466,7 @@ export type ThankYouPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -24685,6 +25498,7 @@ export type TmpConsolHomeRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -24703,6 +25517,7 @@ export type TmpmodelButtonModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -24725,6 +25540,8 @@ export enum TmpmodelButtonModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -24755,6 +25572,7 @@ export type TmpmodelButtonRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   buttonText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -24781,6 +25599,7 @@ export type TmpmodelConsulEnterprisePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
@@ -24819,6 +25638,7 @@ export type TmpmodelConsulOverviewPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection: Array<SbcCaseStudyRecord>
@@ -24861,6 +25681,7 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   ctaSectionButtons: Array<TmpmodelButtonRecord>
@@ -24911,6 +25732,7 @@ export type TmpmodelEcosystemLandingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content: Array<SbcTextAndContentRecord>
   createdAt: Scalars["DateTime"]
@@ -24938,6 +25760,7 @@ export type TmpmodelJobsPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   benefitsCallouts?: Maybe<Array<Maybe<CalloutRecord>>>
@@ -24974,6 +25797,7 @@ export type TmpmodelNomadEnterprisePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
@@ -25007,6 +25831,7 @@ export type TmpmodelNomadOverviewPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection: Array<SbcCaseStudyRecord>
@@ -25043,6 +25868,7 @@ export type TmpmodelProductUseCasePageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25075,6 +25901,8 @@ export enum TmpmodelProductUseCasePageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25103,6 +25931,7 @@ export type TmpmodelProductUseCasePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   architectureSection?: Maybe<SbcTextAndContentRecord>
@@ -25133,6 +25962,7 @@ export type TmpmodelTerraformOfferingCategoryV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25154,6 +25984,8 @@ export enum TmpmodelTerraformOfferingCategoryV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25180,6 +26012,7 @@ export type TmpmodelTerraformOfferingCategoryV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -25205,6 +26038,7 @@ export type TmpmodelTerraformOfferingTableV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -25223,6 +26057,7 @@ export type TmpmodelTerraformOfferingTierV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25246,6 +26081,8 @@ export enum TmpmodelTerraformOfferingTierV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25278,6 +26115,7 @@ export type TmpmodelTerraformOfferingTierV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -25299,6 +26137,7 @@ export type TmpmodelTerraformOfferingV2ModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25323,6 +26162,8 @@ export enum TmpmodelTerraformOfferingV2ModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25357,6 +26198,7 @@ export type TmpmodelTerraformOfferingV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   businessTierAvailability?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -25385,6 +26227,7 @@ export type TmpmodelTerraformOverviewPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection: Array<SbcCaseStudyRecord>
@@ -25427,6 +26270,7 @@ export type TmpmodelTerraformPricingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
@@ -25459,6 +26303,7 @@ export type TmpmodelTerraformPricingPageV2Record = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
@@ -25488,6 +26333,7 @@ export type TmpmodelTrainingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   heroSection?: Maybe<SbcSectionHeaderRecord>
@@ -25529,6 +26375,7 @@ export type TmpmodelUserResearchPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   ctaHero?: Maybe<HeroSectionRecord>
@@ -25559,6 +26406,7 @@ export type TmpmodelVaultAdvancedDataProtectionPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   architectureDescription?: Maybe<SbcSectionHeaderRecord>
@@ -25603,6 +26451,7 @@ export type TmpmodelVaultEnterprisePageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   createdAt: Scalars["DateTime"]
@@ -25640,6 +26489,7 @@ export type TmpmodelVaultOverviewPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection: Array<SbcCaseStudyRecord>
@@ -25684,6 +26534,7 @@ export type TmpPreviewTestRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -25702,6 +26553,7 @@ export type TrainingCourseModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25725,6 +26577,8 @@ export enum TrainingCourseModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25757,6 +26611,7 @@ export type TrainingCourseRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   date?: Maybe<Scalars["Date"]>
@@ -25788,6 +26643,7 @@ export type TrainingPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   extraContent: Array<TrainingPageModelExtraContentField>
@@ -25817,6 +26673,7 @@ export type TrainingPartnerSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25839,6 +26696,8 @@ export enum TrainingPartnerSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25865,6 +26724,7 @@ export type TrainingPartnerSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   company?: Maybe<CompanyRecord>
   contactLink?: Maybe<Scalars["String"]>
@@ -25890,6 +26750,7 @@ export type TrialFormPageModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -25925,6 +26786,8 @@ export enum TrialFormPageModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -25959,6 +26822,7 @@ export type TrialFormPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   enterpriseFeaturesLink?: Maybe<Scalars["String"]>
@@ -25996,6 +26860,7 @@ export type TwoColumnTextBlockRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -26031,6 +26896,7 @@ export type TwoColumnTextRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -26060,6 +26926,7 @@ export type TwoColumnTextSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26081,6 +26948,8 @@ export enum TwoColumnTextSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -26107,6 +26976,7 @@ export type TwoColumnTextSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -26475,6 +27345,7 @@ export type UseCasePageDropdownModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26495,6 +27366,8 @@ export enum UseCasePageDropdownModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -26521,6 +27394,7 @@ export type UseCasePageDropdownRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -26545,6 +27419,7 @@ export type VaultAdvancedDataProtectionPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   architectureDescription?: Maybe<SectionBlockV2Record>
@@ -26583,6 +27458,7 @@ export type VaultIntegrationSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26607,6 +27483,8 @@ export enum VaultIntegrationSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -26633,6 +27511,7 @@ export type VaultIntegrationSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   authBackends?: Maybe<LargeLogoGridSectionRecord>
   authLink?: Maybe<LinkRecord>
@@ -26661,6 +27540,7 @@ export type VaultProductPageRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   alertBanner?: Maybe<AlertBannerRecord>
   caseStudiesSection?: Maybe<SectionBlockV2Record>
@@ -26694,6 +27574,7 @@ export type VerticalTextBlockListItemModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26717,6 +27598,8 @@ export enum VerticalTextBlockListItemModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -26745,6 +27628,7 @@ export type VerticalTextBlockListItemRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
@@ -26771,6 +27655,7 @@ export type VerticalTextBlockListSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26793,6 +27678,8 @@ export enum VerticalTextBlockListSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -26821,6 +27708,7 @@ export type VerticalTextBlockListSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   centerText?: Maybe<Scalars["BooleanType"]>
   createdAt: Scalars["DateTime"]
@@ -26870,6 +27758,7 @@ export type VideoRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -26889,6 +27778,7 @@ export type VideoSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26909,6 +27799,8 @@ export enum VideoSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -26933,6 +27825,7 @@ export type VideoSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -26951,6 +27844,7 @@ export type VideoSourceModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -26972,6 +27866,8 @@ export enum VideoSourceModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -27000,6 +27896,7 @@ export type VideoSourceRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
@@ -27024,6 +27921,7 @@ export type WebinarModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -27069,6 +27967,8 @@ export enum WebinarModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -27115,6 +28015,7 @@ export type WebinarRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   bodyContent: Array<WebinarModelBodyContentField>
   createdAt: Scalars["DateTime"]
@@ -27159,6 +28060,7 @@ export type WhitePaperModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -27180,6 +28082,8 @@ export enum WhitePaperModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -27206,6 +28110,7 @@ export type WhitePaperRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   file?: Maybe<FileField>
@@ -27225,6 +28130,7 @@ export type WistiaSectionModelFilter = {
   id?: Maybe<ItemIdFilter>
   _firstPublishedAt?: Maybe<PublishedAtFilter>
   _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
   _publishedAt?: Maybe<PublishedAtFilter>
   _status?: Maybe<StatusFilter>
   _updatedAt?: Maybe<UpdatedAtFilter>
@@ -27246,6 +28152,8 @@ export enum WistiaSectionModelOrderBy {
   FirstPublishedAtDesc = "_firstPublishedAt_DESC",
   PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
   PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
   PublishedAtAsc = "_publishedAt_ASC",
   PublishedAtDesc = "_publishedAt_DESC",
   StatusAsc = "_status_ASC",
@@ -27274,6 +28182,7 @@ export type WistiaSectionRecord = {
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>
   _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
