@@ -20610,6 +20610,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   externalResourceUrl?: Maybe<StringFilter>
   internalResource?: Maybe<BooleanFilter>
   externalResource?: Maybe<BooleanFilter>
@@ -20620,7 +20621,6 @@ export type ResourceV2ModelFilter = {
   thumbnailImage?: Maybe<FileFilter>
   author?: Maybe<LinksFilter>
   postDate?: Maybe<DateTimeFilter>
-  slug?: Maybe<SlugFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
