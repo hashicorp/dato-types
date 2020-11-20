@@ -20610,10 +20610,9 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  internalResource?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
   externalResourceUrl?: Maybe<StringFilter>
-  internalResource?: Maybe<BooleanFilter>
-  externalResource?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   enterprise?: Maybe<BooleanFilter>
@@ -20648,12 +20647,10 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ExternalResourceUrlAsc = "externalResourceUrl_ASC",
-  ExternalResourceUrlDesc = "externalResourceUrl_DESC",
   InternalResourceAsc = "internalResource_ASC",
   InternalResourceDesc = "internalResource_DESC",
-  ExternalResourceAsc = "externalResource_ASC",
-  ExternalResourceDesc = "externalResource_DESC",
+  ExternalResourceUrlAsc = "externalResourceUrl_ASC",
+  ExternalResourceUrlDesc = "externalResourceUrl_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
   HiddenAsc = "hidden_ASC",
@@ -20684,7 +20681,6 @@ export type ResourceV2Record = {
   content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
-  externalResource?: Maybe<Scalars["BooleanType"]>
   externalResourceUrl?: Maybe<Scalars["String"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
