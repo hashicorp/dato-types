@@ -5031,6 +5031,30 @@ export type ExternalResourceRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type External URL (external_url) */
+export type ExternalUrlRecord = {
+  __typename?: "ExternalUrlRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type External URL (external_url) */
+export type ExternalUrlRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type FaqCategoryModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -20596,7 +20620,10 @@ export type ResourcesProductsV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type ResourceV2ModelContentField = TextBlockRecord | ImageBlockRecord
+export type ResourceV2ModelContentField =
+  | TextBlockRecord
+  | ImageBlockRecord
+  | ExternalUrlRecord
 
 export type ResourceV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -20610,9 +20637,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  internalResource?: Maybe<BooleanFilter>
   slug?: Maybe<SlugFilter>
-  externalResourceUrl?: Maybe<StringFilter>
   gated?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   enterprise?: Maybe<BooleanFilter>
@@ -20647,10 +20672,6 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  InternalResourceAsc = "internalResource_ASC",
-  InternalResourceDesc = "internalResource_DESC",
-  ExternalResourceUrlAsc = "externalResourceUrl_ASC",
-  ExternalResourceUrlDesc = "externalResourceUrl_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
   HiddenAsc = "hidden_ASC",
@@ -20681,11 +20702,9 @@ export type ResourceV2Record = {
   content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
-  externalResourceUrl?: Maybe<Scalars["String"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
-  internalResource?: Maybe<Scalars["BooleanType"]>
   postDate?: Maybe<Scalars["DateTime"]>
   product: Array<ResourcesProductsV2Record>
   slug?: Maybe<Scalars["String"]>
