@@ -10676,6 +10676,7 @@ export type LinkedContentRecord = {
   id: Scalars["ItemId"]
   linkText?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Linked Content (linked_content) */
