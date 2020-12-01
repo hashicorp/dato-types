@@ -14222,6 +14222,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allStaticDynamicSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allSystemIntegratorsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allTemplatePagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTerraformEditionsGetStartedCtasMeta: CollectionMetadata
@@ -14633,6 +14635,8 @@ export type Query = {
   allSplitCtaSections: Array<SplitCtaSectionRecord>
   /** Returns a collection of records */
   allStaticDynamicSections: Array<StaticDynamicSectionRecord>
+  /** Returns a collection of records */
+  allSystemIntegrators: Array<SystemIntegratorRecord>
   /** Returns a collection of records */
   allTemplatePages: Array<TemplatePageRecord>
   /** Returns a collection of records */
@@ -15101,6 +15105,8 @@ export type Query = {
   subscriptionConfirmationPage?: Maybe<SubscriptionConfirmationPageRecord>
   /** Returns the single instance record */
   subscriptionOptOutSuccessPage?: Maybe<SubscriptionOptOutSuccessPageRecord>
+  /** Returns a specific record */
+  systemIntegrator?: Maybe<SystemIntegratorRecord>
   /** Returns a specific record */
   templatePage?: Maybe<TemplatePageRecord>
   /** Returns the single instance record */
@@ -16235,6 +16241,12 @@ export type Query_AllSplitCtaSectionsMetaArgs = {
 export type Query_AllStaticDynamicSectionsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<StaticDynamicSectionModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllSystemIntegratorsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<SystemIntegratorModelFilter>
 }
 
 /** The query root for this schema */
@@ -17969,6 +17981,15 @@ export type QueryAllStaticDynamicSectionsArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllSystemIntegratorsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<SystemIntegratorModelFilter>
+  orderBy?: Maybe<Array<Maybe<SystemIntegratorModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllTemplatePagesArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -19574,6 +19595,13 @@ export type QuerySubscriptionConfirmationPageArgs = {
 /** The query root for this schema */
 export type QuerySubscriptionOptOutSuccessPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QuerySystemIntegratorArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<SystemIntegratorModelFilter>
+  orderBy?: Maybe<Array<Maybe<SystemIntegratorModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -24288,6 +24316,70 @@ export type SubscriptionOptOutSuccessPageRecord_SeoMetaTagsArgs = {
 /** Record of type Subscription Opt-out Success Page (subscription_opt_out_success_page) */
 export type SubscriptionOptOutSuccessPageRecordMessageArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+export type SystemIntegratorModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
+}
+
+export enum SystemIntegratorModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type System Integrator (system_integrator) */
+export type SystemIntegratorRecord = {
+  __typename?: "SystemIntegratorRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type System Integrator (system_integrator) */
+export type SystemIntegratorRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type Tag = {
