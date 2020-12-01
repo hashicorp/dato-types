@@ -24330,6 +24330,7 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
 }
 
@@ -24373,6 +24374,7 @@ export type SystemIntegratorRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
@@ -24380,6 +24382,11 @@ export type SystemIntegratorRecord = {
 /** Record of type System Integrator (system_integrator) */
 export type SystemIntegratorRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type System Integrator (system_integrator) */
+export type SystemIntegratorRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type Tag = {
