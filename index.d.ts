@@ -24376,6 +24376,7 @@ export type SystemIntegratorRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  relatedResources?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   updatedAt: Scalars["DateTime"]
 }
 
