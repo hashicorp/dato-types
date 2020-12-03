@@ -24384,10 +24384,11 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  productCertifications?: Maybe<LinksFilter>
+  tier?: Maybe<StringFilter>
   websiteUrl?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
-  tier?: Maybe<StringFilter>
   regionsServed?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
@@ -24416,10 +24417,10 @@ export enum SystemIntegratorModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  WebsiteUrlAsc = "websiteUrl_ASC",
-  WebsiteUrlDesc = "websiteUrl_DESC",
   TierAsc = "tier_ASC",
   TierDesc = "tier_DESC",
+  WebsiteUrlAsc = "websiteUrl_ASC",
+  WebsiteUrlDesc = "websiteUrl_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC"
 }
@@ -24442,6 +24443,7 @@ export type SystemIntegratorRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  productCertifications: Array<HashicorpProductRecord>
   regionsServed: Array<SystemIntegratorRegionRecord>
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
   slug?: Maybe<Scalars["String"]>
