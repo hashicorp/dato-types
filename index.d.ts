@@ -24410,6 +24410,7 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  logo?: Maybe<FileFilter>
   productCertifications?: Maybe<LinksFilter>
   tier?: Maybe<StringFilter>
   websiteUrl?: Maybe<StringFilter>
@@ -24468,6 +24469,7 @@ export type SystemIntegratorRecord = {
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  logo?: Maybe<FileField>
   name?: Maybe<Scalars["String"]>
   productCertifications: Array<HashicorpProductRecord>
   regionsServed: Array<SystemIntegratorRegionRecord>
