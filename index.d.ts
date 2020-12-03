@@ -24384,6 +24384,7 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  websiteUrl?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
   tier?: Maybe<StringFilter>
@@ -24415,6 +24416,8 @@ export enum SystemIntegratorModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  WebsiteUrlAsc = "websiteUrl_ASC",
+  WebsiteUrlDesc = "websiteUrl_DESC",
   TierAsc = "tier_ASC",
   TierDesc = "tier_DESC",
   NameAsc = "name_ASC",
@@ -24444,6 +24447,7 @@ export type SystemIntegratorRecord = {
   slug?: Maybe<Scalars["String"]>
   tier?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  websiteUrl?: Maybe<Scalars["String"]>
 }
 
 /** Record of type System Integrator (system_integrator) */
@@ -24468,8 +24472,8 @@ export type SystemIntegratorRegionModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  localRegion?: Maybe<StringFilter>
   globalRegion?: Maybe<StringFilter>
-  label?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorRegionModelFilter>>>
 }
 
@@ -24496,10 +24500,10 @@ export enum SystemIntegratorRegionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  LocalRegionAsc = "localRegion_ASC",
+  LocalRegionDesc = "localRegion_DESC",
   GlobalRegionAsc = "globalRegion_ASC",
-  GlobalRegionDesc = "globalRegion_DESC",
-  LabelAsc = "label_ASC",
-  LabelDesc = "label_DESC"
+  GlobalRegionDesc = "globalRegion_DESC"
 }
 
 /** Record of type System Integrator Region (system_integrator_region) */
@@ -24519,7 +24523,7 @@ export type SystemIntegratorRegionRecord = {
   createdAt: Scalars["DateTime"]
   globalRegion?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  label?: Maybe<Scalars["String"]>
+  localRegion?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
