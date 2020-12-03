@@ -24384,11 +24384,11 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
   tier?: Maybe<StringFilter>
   regionsServed?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
 }
 
@@ -24468,7 +24468,7 @@ export type SystemIntegratorRegionModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  name?: Maybe<StringFilter>
+  label?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorRegionModelFilter>>>
 }
 
@@ -24495,8 +24495,8 @@ export enum SystemIntegratorRegionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
+  LabelAsc = "label_ASC",
+  LabelDesc = "label_DESC"
 }
 
 /** Record of type System Integrator Region (system_integrator_region) */
@@ -24515,7 +24515,7 @@ export type SystemIntegratorRegionRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  name?: Maybe<Scalars["String"]>
+  label?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
