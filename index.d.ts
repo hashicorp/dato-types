@@ -24384,6 +24384,7 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  regionsServed?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
@@ -24434,6 +24435,7 @@ export type SystemIntegratorRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  regionsServed: Array<SystemIntegratorRegionRecord>
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
   updatedAt: Scalars["DateTime"]
 }
