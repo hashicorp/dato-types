@@ -12288,30 +12288,6 @@ export type PackageSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Partner Highlight (partner_highlight) */
-export type PartnerHighlightRecord = {
-  __typename?: "PartnerHighlightRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Partner Highlight (partner_highlight) */
-export type PartnerHighlightRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type PartnersPageModelContentField =
   | HeroSectionRecord
   | LargeLogoGridSectionRecord
@@ -24396,6 +24372,30 @@ export type SubscriptionOptOutSuccessPageRecordMessageArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Highlight (system_integrator_highlight) */
+export type SystemIntegratorHighlightRecord = {
+  __typename?: "SystemIntegratorHighlightRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Highlight (system_integrator_highlight) */
+export type SystemIntegratorHighlightRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type SystemIntegratorModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -24471,7 +24471,9 @@ export type SystemIntegratorRecord = {
   regionsServed: Array<SystemIntegratorRegionRecord>
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
   slug?: Maybe<Scalars["String"]>
-  systemIntegratorHighlights?: Maybe<Array<Maybe<PartnerHighlightRecord>>>
+  systemIntegratorHighlights?: Maybe<
+    Array<Maybe<SystemIntegratorHighlightRecord>>
+  >
   tier?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   websiteUrl?: Maybe<Scalars["String"]>
