@@ -12288,6 +12288,30 @@ export type PackageSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Partner Highlight (partner_highlight) */
+export type PartnerHighlightRecord = {
+  __typename?: "PartnerHighlightRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Partner Highlight (partner_highlight) */
+export type PartnerHighlightRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type PartnersPageModelContentField =
   | HeroSectionRecord
   | LargeLogoGridSectionRecord
@@ -24443,7 +24467,7 @@ export type SystemIntegratorRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
-  partnerHighlights?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  partnerHighlights?: Maybe<Array<Maybe<PartnerHighlightRecord>>>
   productCertifications: Array<HashicorpProductRecord>
   regionsServed: Array<SystemIntegratorRegionRecord>
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
