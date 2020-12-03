@@ -24388,6 +24388,8 @@ export type SystemIntegratorHighlightRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  label?: Maybe<Scalars["String"]>
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
