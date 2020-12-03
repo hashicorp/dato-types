@@ -24410,11 +24410,11 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
   logo?: Maybe<FileFilter>
+  websiteUrl?: Maybe<StringFilter>
   productCertifications?: Maybe<LinksFilter>
   tier?: Maybe<StringFilter>
-  websiteUrl?: Maybe<StringFilter>
-  description?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
   regionsServed?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
@@ -24444,10 +24444,10 @@ export enum SystemIntegratorModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TierAsc = "tier_ASC",
-  TierDesc = "tier_DESC",
   WebsiteUrlAsc = "websiteUrl_ASC",
   WebsiteUrlDesc = "websiteUrl_DESC",
+  TierAsc = "tier_ASC",
+  TierDesc = "tier_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC"
 }
