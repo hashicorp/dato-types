@@ -24468,6 +24468,7 @@ export type SystemIntegratorRegionModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  globalRegion?: Maybe<StringFilter>
   label?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorRegionModelFilter>>>
 }
@@ -24495,6 +24496,8 @@ export enum SystemIntegratorRegionModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  GlobalRegionAsc = "globalRegion_ASC",
+  GlobalRegionDesc = "globalRegion_DESC",
   LabelAsc = "label_ASC",
   LabelDesc = "label_DESC"
 }
@@ -24514,6 +24517,7 @@ export type SystemIntegratorRegionRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  globalRegion?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   label?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
