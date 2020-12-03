@@ -24443,6 +24443,7 @@ export type SystemIntegratorRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   name?: Maybe<Scalars["String"]>
+  partnerHighlights?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   productCertifications: Array<HashicorpProductRecord>
   regionsServed: Array<SystemIntegratorRegionRecord>
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
