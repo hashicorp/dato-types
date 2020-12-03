@@ -24356,6 +24356,7 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
 }
@@ -24382,7 +24383,9 @@ export enum SystemIntegratorModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  SlugAsc = "slug_ASC",
+  SlugDesc = "slug_DESC"
 }
 
 /** Record of type System Integrator (system_integrator) */
@@ -24403,6 +24406,7 @@ export type SystemIntegratorRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
