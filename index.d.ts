@@ -1393,6 +1393,7 @@ export type BulletRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -14356,7 +14357,7 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTmpCaseStudiesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allTmpCaseStudyListItemsMeta: CollectionMetadata
+  _allTmpCaseStudyIconListItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -14778,7 +14779,7 @@ export type Query = {
   /** Returns a collection of records */
   allTmpCaseStudies: Array<TmpCaseStudyRecord>
   /** Returns a collection of records */
-  allTmpCaseStudyListItems: Array<TmpCaseStudyListItemRecord>
+  allTmpCaseStudyIconListItems: Array<TmpCaseStudyIconListItemRecord>
   /** Returns a collection of records */
   allTmpmodelButtons: Array<TmpmodelButtonRecord>
   /** Returns a collection of records */
@@ -15262,7 +15263,7 @@ export type Query = {
   /** Returns a specific record */
   tmpCaseStudy?: Maybe<TmpCaseStudyRecord>
   /** Returns a specific record */
-  tmpCaseStudyListItem?: Maybe<TmpCaseStudyListItemRecord>
+  tmpCaseStudyIconListItem?: Maybe<TmpCaseStudyIconListItemRecord>
   /** Returns the single instance record */
   tmpConsolHome?: Maybe<TmpConsolHomeRecord>
   /** Returns a specific record */
@@ -16456,9 +16457,9 @@ export type Query_AllTmpCaseStudiesMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllTmpCaseStudyListItemsMetaArgs = {
+export type Query_AllTmpCaseStudyIconListItemsMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpCaseStudyListItemModelFilter>
+  filter?: Maybe<TmpCaseStudyIconListItemModelFilter>
 }
 
 /** The query root for this schema */
@@ -18256,12 +18257,12 @@ export type QueryAllTmpCaseStudiesArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllTmpCaseStudyListItemsArgs = {
+export type QueryAllTmpCaseStudyIconListItemsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<TmpCaseStudyListItemModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpCaseStudyListItemModelOrderBy>>>
+  filter?: Maybe<TmpCaseStudyIconListItemModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpCaseStudyIconListItemModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -19895,10 +19896,10 @@ export type QueryTmpCaseStudyArgs = {
 }
 
 /** The query root for this schema */
-export type QueryTmpCaseStudyListItemArgs = {
+export type QueryTmpCaseStudyIconListItemArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<TmpCaseStudyListItemModelFilter>
-  orderBy?: Maybe<Array<Maybe<TmpCaseStudyListItemModelOrderBy>>>
+  filter?: Maybe<TmpCaseStudyIconListItemModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpCaseStudyIconListItemModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -25970,7 +25971,7 @@ export type ThankYouPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type TmpCaseStudyListItemModelFilter = {
+export type TmpCaseStudyIconListItemModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
@@ -25984,10 +25985,10 @@ export type TmpCaseStudyListItemModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   icon?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<TmpCaseStudyListItemModelFilter>>>
+  OR?: Maybe<Array<Maybe<TmpCaseStudyIconListItemModelFilter>>>
 }
 
-export enum TmpCaseStudyListItemModelOrderBy {
+export enum TmpCaseStudyIconListItemModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -26014,9 +26015,9 @@ export enum TmpCaseStudyListItemModelOrderBy {
   TitleDesc = "title_DESC"
 }
 
-/** Record of type TMP: Case Study List Item (tmp_case_study_list_item) */
-export type TmpCaseStudyListItemRecord = {
-  __typename?: "TmpCaseStudyListItemRecord"
+/** Record of type TMP: Case Study Icon List Item (tmp_case_study_icon_list_item) */
+export type TmpCaseStudyIconListItemRecord = {
+  __typename?: "TmpCaseStudyIconListItemRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -26036,8 +26037,8 @@ export type TmpCaseStudyListItemRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type TMP: Case Study List Item (tmp_case_study_list_item) */
-export type TmpCaseStudyListItemRecord_SeoMetaTagsArgs = {
+/** Record of type TMP: Case Study Icon List Item (tmp_case_study_icon_list_item) */
+export type TmpCaseStudyIconListItemRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -26055,6 +26056,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  solutions?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
   companyName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyModelFilter>>>
@@ -26106,12 +26108,18 @@ export type TmpCaseStudyRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
+  solutions?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type TMP: Case Study (tmp_case_study) */
 export type TmpCaseStudyRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type TMP: Case Study (tmp_case_study) */
+export type TmpCaseStudyRecordSolutionsArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Consol Home (tmp_consol_home) */
