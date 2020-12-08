@@ -25923,6 +25923,7 @@ export type TmpCaseStudyRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   companyName?: Maybe<Scalars["String"]>
+  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   slug?: Maybe<Scalars["String"]>
