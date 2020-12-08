@@ -26141,6 +26141,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  caseStudyPdf?: Maybe<FileFilter>
   slug?: Maybe<SlugFilter>
   heroImage?: Maybe<FileFilter>
   heading?: Maybe<StringFilter>
@@ -26259,6 +26260,7 @@ export type TmpCaseStudyRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   body?: Maybe<Array<Maybe<TmpCaseStudyModelBodyField>>>
+  caseStudyPdf?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
@@ -26293,7 +26295,7 @@ export type TmpCaseStudyStatModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  text?: Maybe<StringFilter>
+  content?: Maybe<StringFilter>
   icon?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyStatModelFilter>>>
 }
@@ -26321,8 +26323,8 @@ export enum TmpCaseStudyStatModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  TextAsc = "text_ASC",
-  TextDesc = "text_DESC"
+  ContentAsc = "content_ASC",
+  ContentDesc = "content_DESC"
 }
 
 /** Record of type TMP: Case Study Stat (tmp_case_study_stat) */
@@ -26339,10 +26341,10 @@ export type TmpCaseStudyStatRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
-  text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
