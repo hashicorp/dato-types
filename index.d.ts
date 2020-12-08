@@ -3002,12 +3002,18 @@ export type ContentRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Content (content) */
 export type ContentRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Content (content) */
+export type ContentRecordTextArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Specifies how to filter by creation datetime */
