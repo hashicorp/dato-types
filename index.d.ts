@@ -26141,10 +26141,11 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  conclusionText?: Maybe<TextFilter>
   stats?: Maybe<LinksFilter>
+  caseStudyPdf?: Maybe<FileFilter>
   description?: Maybe<TextFilter>
   companyDescription?: Maybe<TextFilter>
-  caseStudyPdf?: Maybe<FileFilter>
   companyLogo?: Maybe<FileFilter>
   companyName?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
@@ -26152,7 +26153,6 @@ export type TmpCaseStudyModelFilter = {
   heading?: Maybe<StringFilter>
   partnerList?: Maybe<LinksFilter>
   technologyStack?: Maybe<LinksFilter>
-  solutions?: Maybe<TextFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyModelFilter>>>
 }
 
@@ -26268,6 +26268,7 @@ export type TmpCaseStudyRecord = {
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
+  conclusionText?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   heading?: Maybe<Scalars["String"]>
@@ -26275,7 +26276,6 @@ export type TmpCaseStudyRecord = {
   id: Scalars["ItemId"]
   partnerList: Array<TmpCaseStudyPartnerRecord>
   slug?: Maybe<Scalars["String"]>
-  solutions?: Maybe<Scalars["String"]>
   stats: Array<TmpCaseStudyStatRecord>
   technologyStack: Array<TmpCaseStudyTechnologyRecord>
   updatedAt: Scalars["DateTime"]
@@ -26292,12 +26292,12 @@ export type TmpCaseStudyRecordCompanyDescriptionArgs = {
 }
 
 /** Record of type TMP: Case Study (tmp_case_study) */
-export type TmpCaseStudyRecordDescriptionArgs = {
+export type TmpCaseStudyRecordConclusionTextArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Case Study (tmp_case_study) */
-export type TmpCaseStudyRecordSolutionsArgs = {
+export type TmpCaseStudyRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
