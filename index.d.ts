@@ -26317,6 +26317,7 @@ export type TmpCaseStudyPartnerModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  photo?: Maybe<FileFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyPartnerModelFilter>>>
 }
 
@@ -26361,6 +26362,7 @@ export type TmpCaseStudyPartnerRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  photo?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
 }
 
