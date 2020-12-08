@@ -26141,7 +26141,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  heroDescription?: Maybe<TextFilter>
+  description?: Maybe<TextFilter>
   stats?: Maybe<LinksFilter>
   companyDescription?: Maybe<TextFilter>
   caseStudyPdf?: Maybe<FileFilter>
@@ -26269,8 +26269,8 @@ export type TmpCaseStudyRecord = {
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   heading?: Maybe<Scalars["String"]>
-  heroDescription?: Maybe<Scalars["String"]>
   heroImage?: Maybe<FileField>
   id: Scalars["ItemId"]
   partnerList: Array<TmpCaseStudyPartnerRecord>
@@ -26292,7 +26292,7 @@ export type TmpCaseStudyRecordCompanyDescriptionArgs = {
 }
 
 /** Record of type TMP: Case Study (tmp_case_study) */
-export type TmpCaseStudyRecordHeroDescriptionArgs = {
+export type TmpCaseStudyRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
