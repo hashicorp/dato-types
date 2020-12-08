@@ -26113,9 +26113,10 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  heroImage?: Maybe<FileFilter>
   partnerList?: Maybe<LinksFilter>
-  solutions?: Maybe<TextFilter>
   technologyStack?: Maybe<LinksFilter>
+  solutions?: Maybe<TextFilter>
   slug?: Maybe<SlugFilter>
   companyName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyModelFilter>>>
@@ -26229,6 +26230,7 @@ export type TmpCaseStudyRecord = {
   body?: Maybe<Array<Maybe<TmpCaseStudyModelBodyField>>>
   companyName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  heroImage?: Maybe<FileField>
   id: Scalars["ItemId"]
   partnerList: Array<TmpCaseStudyPartnerRecord>
   slug?: Maybe<Scalars["String"]>
