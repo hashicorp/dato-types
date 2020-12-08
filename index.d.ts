@@ -26100,6 +26100,7 @@ export type TmpCaseStudyContentBlockModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  blockquoteAttribution?: Maybe<StringFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelFilter>>>
 }
@@ -26127,6 +26128,8 @@ export enum TmpCaseStudyContentBlockModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  BlockquoteAttributionAsc = "blockquoteAttribution_ASC",
+  BlockquoteAttributionDesc = "blockquoteAttribution_DESC",
   HeadingAsc = "heading_ASC",
   HeadingDesc = "heading_DESC"
 }
@@ -26145,6 +26148,7 @@ export type TmpCaseStudyContentBlockRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  blockquoteAttribution?: Maybe<Scalars["String"]>
   content?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelContentField>>>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
