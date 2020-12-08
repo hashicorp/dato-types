@@ -25958,6 +25958,7 @@ export type TmpCaseStudyListItemModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyListItemModelFilter>>>
 }
 
@@ -25983,7 +25984,9 @@ export enum TmpCaseStudyListItemModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type TMP: Case Study List Item (tmp_case_study_list_item) */
@@ -26002,6 +26005,7 @@ export type TmpCaseStudyListItemRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
