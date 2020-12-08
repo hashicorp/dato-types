@@ -2986,6 +2986,30 @@ export type ContactPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type Content (content) */
+export type ContentRecord = {
+  __typename?: "ContentRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Content (content) */
+export type ContentRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Specifies how to filter by creation datetime */
 export type CreatedAtFilter = {
   /** Filter records with a value that's strictly greater than the one specified */
@@ -25922,7 +25946,7 @@ export type TmpCaseStudyRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
-  bodyContent?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  body?: Maybe<Array<Maybe<ContentRecord>>>
   companyName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
