@@ -14332,6 +14332,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTmpCaseStudiesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allTmpCaseStudyListItemsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allTmpmodelButtonsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpmodelProductUseCasePagesMeta: CollectionMetadata
@@ -14751,6 +14753,8 @@ export type Query = {
   allTextSections: Array<TextSectionRecord>
   /** Returns a collection of records */
   allTmpCaseStudies: Array<TmpCaseStudyRecord>
+  /** Returns a collection of records */
+  allTmpCaseStudyListItems: Array<TmpCaseStudyListItemRecord>
   /** Returns a collection of records */
   allTmpmodelButtons: Array<TmpmodelButtonRecord>
   /** Returns a collection of records */
@@ -15233,6 +15237,8 @@ export type Query = {
   thankYouPage?: Maybe<ThankYouPageRecord>
   /** Returns a specific record */
   tmpCaseStudy?: Maybe<TmpCaseStudyRecord>
+  /** Returns a specific record */
+  tmpCaseStudyListItem?: Maybe<TmpCaseStudyListItemRecord>
   /** Returns the single instance record */
   tmpConsolHome?: Maybe<TmpConsolHomeRecord>
   /** Returns a specific record */
@@ -16423,6 +16429,12 @@ export type Query_AllTextSectionsMetaArgs = {
 export type Query_AllTmpCaseStudiesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpCaseStudyModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllTmpCaseStudyListItemsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpCaseStudyListItemModelFilter>
 }
 
 /** The query root for this schema */
@@ -18220,6 +18232,15 @@ export type QueryAllTmpCaseStudiesArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllTmpCaseStudyListItemsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<TmpCaseStudyListItemModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpCaseStudyListItemModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllTmpmodelButtonsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -19847,6 +19868,13 @@ export type QueryTmpCaseStudyArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpCaseStudyModelFilter>
   orderBy?: Maybe<Array<Maybe<TmpCaseStudyModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryTmpCaseStudyListItemArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpCaseStudyListItemModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpCaseStudyListItemModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -25916,6 +25944,70 @@ export type ThankYouPageRecord_SeoMetaTagsArgs = {
 /** Record of type Thank You Page (thank_you_page) */
 export type ThankYouPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+export type TmpCaseStudyListItemModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<TmpCaseStudyListItemModelFilter>>>
+}
+
+export enum TmpCaseStudyListItemModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type TMP: Case Study List Item (tmp_case_study_list_item) */
+export type TmpCaseStudyListItemRecord = {
+  __typename?: "TmpCaseStudyListItemRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Case Study List Item (tmp_case_study_list_item) */
+export type TmpCaseStudyListItemRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type TmpCaseStudyModelBodyField = ContentRecord | IconListRecord
