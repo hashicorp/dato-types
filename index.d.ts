@@ -26256,6 +26256,8 @@ export type TmpCaseStudyTechnologyStackModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  content?: Maybe<StringFilter>
+  category?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyTechnologyStackModelFilter>>>
 }
 
@@ -26281,7 +26283,11 @@ export enum TmpCaseStudyTechnologyStackModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  ContentAsc = "content_ASC",
+  ContentDesc = "content_DESC",
+  CategoryAsc = "category_ASC",
+  CategoryDesc = "category_DESC"
 }
 
 /** Record of type TMP: Case Study Technology Stack (tmp_case_study_technology_stack) */
@@ -26298,6 +26304,8 @@ export type TmpCaseStudyTechnologyStackRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  category?: Maybe<Scalars["String"]>
+  content?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
