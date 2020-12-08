@@ -25876,6 +25876,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
   companyName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyModelFilter>>>
 }
@@ -25924,6 +25925,7 @@ export type TmpCaseStudyRecord = {
   companyName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
