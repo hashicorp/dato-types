@@ -8595,6 +8595,7 @@ export type IconListRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  item: Array<TmpCaseStudyIconListItemRecord>
   updatedAt: Scalars["DateTime"]
 }
 
