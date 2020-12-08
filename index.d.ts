@@ -26100,7 +26100,8 @@ export type TmpCaseStudyContentBlockModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  blockquote?: Maybe<StringFilter>
+  theme?: Maybe<StringFilter>
+  blockquote?: Maybe<TextFilter>
   blockquoteAttribution?: Maybe<StringFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelFilter>>>
@@ -26129,8 +26130,8 @@ export enum TmpCaseStudyContentBlockModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  BlockquoteAsc = "blockquote_ASC",
-  BlockquoteDesc = "blockquote_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
   BlockquoteAttributionAsc = "blockquoteAttribution_ASC",
   BlockquoteAttributionDesc = "blockquoteAttribution_DESC",
   HeadingAsc = "heading_ASC",
@@ -26157,12 +26158,18 @@ export type TmpCaseStudyContentBlockRecord = {
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  theme?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type TMP: Case Study Content Block (tmp_case_study_content_block) */
 export type TmpCaseStudyContentBlockRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type TMP: Case Study Content Block (tmp_case_study_content_block) */
+export type TmpCaseStudyContentBlockRecordBlockquoteArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type TmpCaseStudyIconListItemModelFilter = {
