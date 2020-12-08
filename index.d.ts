@@ -26084,7 +26084,7 @@ export type ThankYouPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type TmpCaseStudyContentBlockModelContentField =
+export type TmpCaseStudyContentBlockModelBlockContentField =
   | ContentRecord
   | IconListRecord
 
@@ -26152,9 +26152,11 @@ export type TmpCaseStudyContentBlockRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  blockContent?: Maybe<
+    Array<Maybe<TmpCaseStudyContentBlockModelBlockContentField>>
+  >
   blockquote?: Maybe<Scalars["String"]>
   blockquoteAttribution?: Maybe<Scalars["String"]>
-  content?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelContentField>>>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
