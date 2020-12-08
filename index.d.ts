@@ -1874,75 +1874,6 @@ export type CallToActionRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type CaseStudyContentBlockModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  heading?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<CaseStudyContentBlockModelFilter>>>
-}
-
-export enum CaseStudyContentBlockModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
-  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC"
-}
-
-/** Record of type Case Study Content Block (case_study_content_block) */
-export type CaseStudyContentBlockRecord = {
-  __typename?: "CaseStudyContentBlockRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
-  createdAt: Scalars["DateTime"]
-  heading?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Case Study Content Block (case_study_content_block) */
-export type CaseStudyContentBlockRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type CaseStudyLandingPageModelAdditionalResourcesField =
   | CaseStudyLinkRecord
   | ResourceRecord
@@ -14040,8 +13971,6 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allCalloutSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allCaseStudyContentBlocksMeta: CollectionMetadata
-  /** Returns meta information regarding a record collection */
   _allCaseStudyLinksMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allCaseStudyProductsMeta: CollectionMetadata
@@ -14374,6 +14303,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allTmpCaseStudiesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allTmpCaseStudyContentBlocksMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allTmpCaseStudyIconListItemsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allTmpCaseStudyPartnersMeta: CollectionMetadata
@@ -14463,8 +14394,6 @@ export type Query = {
   allCalloutItems: Array<CalloutItemRecord>
   /** Returns a collection of records */
   allCalloutSections: Array<CalloutSectionRecord>
-  /** Returns a collection of records */
-  allCaseStudyContentBlocks: Array<CaseStudyContentBlockRecord>
   /** Returns a collection of records */
   allCaseStudyLinks: Array<CaseStudyLinkRecord>
   /** Returns a collection of records */
@@ -14804,6 +14733,8 @@ export type Query = {
   /** Returns a collection of records */
   allTmpCaseStudies: Array<TmpCaseStudyRecord>
   /** Returns a collection of records */
+  allTmpCaseStudyContentBlocks: Array<TmpCaseStudyContentBlockRecord>
+  /** Returns a collection of records */
   allTmpCaseStudyIconListItems: Array<TmpCaseStudyIconListItemRecord>
   /** Returns a collection of records */
   allTmpCaseStudyPartners: Array<TmpCaseStudyPartnerRecord>
@@ -14893,8 +14824,6 @@ export type Query = {
   calloutItem?: Maybe<CalloutItemRecord>
   /** Returns a specific record */
   calloutSection?: Maybe<CalloutSectionRecord>
-  /** Returns a specific record */
-  caseStudyContentBlock?: Maybe<CaseStudyContentBlockRecord>
   /** Returns the single instance record */
   caseStudyLandingPage?: Maybe<CaseStudyLandingPageRecord>
   /** Returns a specific record */
@@ -15296,6 +15225,8 @@ export type Query = {
   /** Returns a specific record */
   tmpCaseStudy?: Maybe<TmpCaseStudyRecord>
   /** Returns a specific record */
+  tmpCaseStudyContentBlock?: Maybe<TmpCaseStudyContentBlockRecord>
+  /** Returns a specific record */
   tmpCaseStudyIconListItem?: Maybe<TmpCaseStudyIconListItemRecord>
   /** Returns a specific record */
   tmpCaseStudyPartner?: Maybe<TmpCaseStudyPartnerRecord>
@@ -15497,12 +15428,6 @@ export type Query_AllCalloutItemsMetaArgs = {
 export type Query_AllCalloutSectionsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<CalloutSectionModelFilter>
-}
-
-/** The query root for this schema */
-export type Query_AllCaseStudyContentBlocksMetaArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<CaseStudyContentBlockModelFilter>
 }
 
 /** The query root for this schema */
@@ -16502,6 +16427,12 @@ export type Query_AllTmpCaseStudiesMetaArgs = {
 }
 
 /** The query root for this schema */
+export type Query_AllTmpCaseStudyContentBlocksMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpCaseStudyContentBlockModelFilter>
+}
+
+/** The query root for this schema */
 export type Query_AllTmpCaseStudyIconListItemsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpCaseStudyIconListItemModelFilter>
@@ -16823,15 +16754,6 @@ export type QueryAllCalloutSectionsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<CalloutSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<CalloutSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryAllCaseStudyContentBlocksArgs = {
-  locale?: Maybe<SiteLocale>
-  skip?: Maybe<Scalars["IntType"]>
-  first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<CaseStudyContentBlockModelFilter>
-  orderBy?: Maybe<Array<Maybe<CaseStudyContentBlockModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -18329,6 +18251,15 @@ export type QueryAllTmpCaseStudiesArgs = {
 }
 
 /** The query root for this schema */
+export type QueryAllTmpCaseStudyContentBlocksArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<TmpCaseStudyContentBlockModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QueryAllTmpCaseStudyIconListItemsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
@@ -18665,13 +18596,6 @@ export type QueryCalloutSectionArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<CalloutSectionModelFilter>
   orderBy?: Maybe<Array<Maybe<CalloutSectionModelOrderBy>>>
-}
-
-/** The query root for this schema */
-export type QueryCaseStudyContentBlockArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<CaseStudyContentBlockModelFilter>
-  orderBy?: Maybe<Array<Maybe<CaseStudyContentBlockModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -19999,6 +19923,13 @@ export type QueryTmpCaseStudyArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<TmpCaseStudyModelFilter>
   orderBy?: Maybe<Array<Maybe<TmpCaseStudyModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryTmpCaseStudyContentBlockArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<TmpCaseStudyContentBlockModelFilter>
+  orderBy?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -26096,6 +26027,75 @@ export type ThankYouPageRecord_SeoMetaTagsArgs = {
 /** Record of type Thank You Page (thank_you_page) */
 export type ThankYouPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+export type TmpCaseStudyContentBlockModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  heading?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelFilter>>>
+}
+
+export enum TmpCaseStudyContentBlockModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
+}
+
+/** Record of type TMP: Case Study Content Block (tmp_case_study_content_block) */
+export type TmpCaseStudyContentBlockRecord = {
+  __typename?: "TmpCaseStudyContentBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type TMP: Case Study Content Block (tmp_case_study_content_block) */
+export type TmpCaseStudyContentBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type TmpCaseStudyIconListItemModelFilter = {
