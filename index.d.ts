@@ -8579,6 +8579,31 @@ export type IconLinkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Icon List (icon_list) */
+export type IconListRecord = {
+  __typename?: "IconListRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  items: Array<TmpCaseStudyIconListItemRecord>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Icon List (icon_list) */
+export type IconListRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Image Block (image_block) */
 export type ImageBlockRecord = {
   __typename?: "ImageBlockRecord"
@@ -26059,6 +26084,10 @@ export type ThankYouPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+export type TmpCaseStudyContentBlockModelContentField =
+  | ContentRecord
+  | IconListRecord
+
 export type TmpCaseStudyContentBlockModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -26116,7 +26145,7 @@ export type TmpCaseStudyContentBlockRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<ContentRecord>>>
+  content?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelContentField>>>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
