@@ -26113,6 +26113,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  heading?: Maybe<StringFilter>
   heroImage?: Maybe<FileFilter>
   partnerList?: Maybe<LinksFilter>
   technologyStack?: Maybe<LinksFilter>
@@ -26145,6 +26146,8 @@ export enum TmpCaseStudyModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC",
   CompanyNameAsc = "companyName_ASC",
   CompanyNameDesc = "companyName_DESC"
 }
@@ -26230,6 +26233,7 @@ export type TmpCaseStudyRecord = {
   body?: Maybe<Array<Maybe<TmpCaseStudyModelBodyField>>>
   companyName?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   heroImage?: Maybe<FileField>
   id: Scalars["ItemId"]
   partnerList: Array<TmpCaseStudyPartnerRecord>
