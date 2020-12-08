@@ -1377,6 +1377,30 @@ export type BrandPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Bullet (bullet) */
+export type BulletRecord = {
+  __typename?: "BulletRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Bullet (bullet) */
+export type BulletRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type Button2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -26004,6 +26028,7 @@ export type TmpCaseStudyListItemRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  bullets?: Maybe<Array<Maybe<BulletRecord>>>
   createdAt: Scalars["DateTime"]
   icon?: Maybe<FileField>
   id: Scalars["ItemId"]
