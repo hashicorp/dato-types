@@ -26141,6 +26141,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  companyName?: Maybe<StringFilter>
   customerLogo?: Maybe<FileFilter>
   caseStudyPdf?: Maybe<FileFilter>
   slug?: Maybe<SlugFilter>
@@ -26149,7 +26150,6 @@ export type TmpCaseStudyModelFilter = {
   partnerList?: Maybe<LinksFilter>
   technologyStack?: Maybe<LinksFilter>
   solutions?: Maybe<TextFilter>
-  companyName?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyModelFilter>>>
 }
 
@@ -26176,10 +26176,10 @@ export enum TmpCaseStudyModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  HeadingAsc = "heading_ASC",
-  HeadingDesc = "heading_DESC",
   CompanyNameAsc = "companyName_ASC",
-  CompanyNameDesc = "companyName_DESC"
+  CompanyNameDesc = "companyName_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
 }
 
 export type TmpCaseStudyPartnerModelFilter = {
