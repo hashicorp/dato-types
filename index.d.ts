@@ -1886,6 +1886,7 @@ export type CaseStudyContentBlockModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<CaseStudyContentBlockModelFilter>>>
 }
 
@@ -1911,7 +1912,9 @@ export enum CaseStudyContentBlockModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  HeadingAsc = "heading_ASC",
+  HeadingDesc = "heading_DESC"
 }
 
 /** Record of type Case Study Content Block (case_study_content_block) */
@@ -1928,7 +1931,9 @@ export type CaseStudyContentBlockRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  content?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
