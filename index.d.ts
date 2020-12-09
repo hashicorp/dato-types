@@ -26285,6 +26285,7 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  productsUsed?: Maybe<LinksFilter>
   caseStudyPdf?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionTitle?: Maybe<StringFilter>
@@ -26517,6 +26518,7 @@ export type TmpCaseStudyRecord = {
   heroImage?: Maybe<FileField>
   id: Scalars["ItemId"]
   partnerList: Array<TmpCaseStudyPartnerRecord>
+  productsUsed: Array<TmpCaseStudyProductRecord>
   slug?: Maybe<Scalars["String"]>
   stats: Array<TmpCaseStudyStatRecord>
   technologyStack: Array<TmpCaseStudyTechnologyRecord>
