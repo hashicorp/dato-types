@@ -26128,9 +26128,9 @@ export type TmpCaseStudyContentBlockModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  theme?: Maybe<StringFilter>
-  blockquote?: Maybe<TextFilter>
   blockquoteAttribution?: Maybe<StringFilter>
+  blockquote?: Maybe<TextFilter>
+  theme?: Maybe<StringFilter>
   heading?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyContentBlockModelFilter>>>
 }
@@ -26158,10 +26158,10 @@ export enum TmpCaseStudyContentBlockModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  ThemeAsc = "theme_ASC",
-  ThemeDesc = "theme_DESC",
   BlockquoteAttributionAsc = "blockquoteAttribution_ASC",
   BlockquoteAttributionDesc = "blockquoteAttribution_DESC",
+  ThemeAsc = "theme_ASC",
+  ThemeDesc = "theme_DESC",
   HeadingAsc = "heading_ASC",
   HeadingDesc = "heading_DESC"
 }
