@@ -26263,7 +26263,7 @@ export type TmpCaseStudyModelFilter = {
   conclusionText?: Maybe<TextFilter>
   stats?: Maybe<LinksFilter>
   description?: Maybe<TextFilter>
-  companyDescription?: Maybe<TextFilter>
+  companyDescription?: Maybe<StringFilter>
   companyLogo?: Maybe<FileFilter>
   companyName?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
@@ -26299,6 +26299,8 @@ export enum TmpCaseStudyModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   ConclusionTitleAsc = "conclusionTitle_ASC",
   ConclusionTitleDesc = "conclusionTitle_DESC",
+  CompanyDescriptionAsc = "companyDescription_ASC",
+  CompanyDescriptionDesc = "companyDescription_DESC",
   CompanyNameAsc = "companyName_ASC",
   CompanyNameDesc = "companyName_DESC",
   HeadingAsc = "heading_ASC",
@@ -26426,11 +26428,6 @@ export type TmpCaseStudyRecord = {
 /** Record of type TMP: Case Study (tmp_case_study) */
 export type TmpCaseStudyRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: Case Study (tmp_case_study) */
-export type TmpCaseStudyRecordCompanyDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Case Study (tmp_case_study) */
