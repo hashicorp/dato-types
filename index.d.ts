@@ -26348,7 +26348,7 @@ export type TmpCaseStudyPartnerModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  bio?: Maybe<TextFilter>
+  bio?: Maybe<StringFilter>
   organization?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   name?: Maybe<StringFilter>
@@ -26379,6 +26379,8 @@ export enum TmpCaseStudyPartnerModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  BioAsc = "bio_ASC",
+  BioDesc = "bio_DESC",
   OrganizationAsc = "organization_ASC",
   OrganizationDesc = "organization_DESC",
   TitleAsc = "title_ASC",
@@ -26414,11 +26416,6 @@ export type TmpCaseStudyPartnerRecord = {
 /** Record of type TMP: Case Study Partner (tmp_case_study_partner) */
 export type TmpCaseStudyPartnerRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: Case Study Partner (tmp_case_study_partner) */
-export type TmpCaseStudyPartnerRecordBioArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type TmpCaseStudyProductModelFilter = {
