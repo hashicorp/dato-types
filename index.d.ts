@@ -26626,7 +26626,7 @@ export type TmpCaseStudyTechnologyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  content?: Maybe<TextFilter>
+  content?: Maybe<StringFilter>
   category?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyTechnologyModelFilter>>>
 }
@@ -26654,6 +26654,8 @@ export enum TmpCaseStudyTechnologyModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ContentAsc = "content_ASC",
+  ContentDesc = "content_DESC",
   CategoryAsc = "category_ASC",
   CategoryDesc = "category_DESC"
 }
@@ -26682,11 +26684,6 @@ export type TmpCaseStudyTechnologyRecord = {
 /** Record of type TMP: Case Study Technology (tmp_case_study_technology) */
 export type TmpCaseStudyTechnologyRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type TMP: Case Study Technology (tmp_case_study_technology) */
-export type TmpCaseStudyTechnologyRecordContentArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Record of type TMP: Consol Home (tmp_consol_home) */
