@@ -26432,6 +26432,8 @@ export type TmpCaseStudyProductModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<TmpCaseStudyProductModelFilter>>>
 }
 
@@ -26457,7 +26459,9 @@ export enum TmpCaseStudyProductModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
 }
 
 /** Record of type TMP: Case Study Product (tmp_case_study_product) */
@@ -26476,6 +26480,8 @@ export type TmpCaseStudyProductRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
