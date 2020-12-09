@@ -26257,11 +26257,11 @@ export type TmpCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  caseStudyPdf?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionTitle?: Maybe<StringFilter>
   conclusionText?: Maybe<TextFilter>
   stats?: Maybe<LinksFilter>
-  caseStudyPdf?: Maybe<FileFilter>
   description?: Maybe<TextFilter>
   companyDescription?: Maybe<TextFilter>
   companyLogo?: Maybe<FileFilter>
