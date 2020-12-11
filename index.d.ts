@@ -1874,7 +1874,7 @@ export type CallToActionRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type CaseStudyContentBlockModelBlockContentField =
+export type CaseStudyContentBlockModelBlockField =
   | ContentRecord
   | IconListRecord
 
@@ -1944,9 +1944,7 @@ export type CaseStudyContentBlockRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
-  blockContent?: Maybe<
-    Array<Maybe<CaseStudyContentBlockModelBlockContentField>>
-  >
+  block?: Maybe<Array<Maybe<CaseStudyContentBlockModelBlockField>>>
   createdAt: Scalars["DateTime"]
   heading?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
