@@ -25257,13 +25257,13 @@ export type SystemIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  regionsServed?: Maybe<LinksFilter>
   description?: Maybe<TextFilter>
   logo?: Maybe<FileFilter>
   websiteUrl?: Maybe<StringFilter>
   productCertifications?: Maybe<LinksFilter>
   tier?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
-  regionsServed?: Maybe<LinksFilter>
   name?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemIntegratorModelFilter>>>
 }
