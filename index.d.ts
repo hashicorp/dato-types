@@ -2179,6 +2179,7 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  shareImage?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionText?: Maybe<TextFilter>
   conclusionTitle?: Maybe<StringFilter>
@@ -2261,6 +2262,7 @@ export type CaseStudyPageRecord = {
   id: Scalars["ItemId"]
   partnerList: Array<CaseStudyPartnerRecord>
   productsUsed: Array<CaseStudyProductV2Record>
+  shareImage?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
   stats: Array<CaseStudyStatRecord>
   technologyStack: Array<CaseStudyTechnologyRecord>
