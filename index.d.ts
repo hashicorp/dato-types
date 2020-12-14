@@ -11232,6 +11232,70 @@ export type JsonFilter = {
   exists?: Maybe<Scalars["BooleanType"]>
 }
 
+export type LanguageTestModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<LanguageTestModelFilter>>>
+}
+
+export enum LanguageTestModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Language Test (language_test) */
+export type LanguageTestRecord = {
+  __typename?: "LanguageTestRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Language Test (language_test) */
+export type LanguageTestRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type LargeLogoGridSectionModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -14749,6 +14813,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allJobsPageDepartmentsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allLanguageTestsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allLargeLogoGridSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allLinksMeta: CollectionMetadata
@@ -15176,6 +15242,8 @@ export type Query = {
   allJobsEmployeeTestimonials: Array<JobsEmployeeTestimonialRecord>
   /** Returns a collection of records */
   allJobsPageDepartments: Array<JobsPageDepartmentRecord>
+  /** Returns a collection of records */
+  allLanguageTests: Array<LanguageTestRecord>
   /** Returns a collection of records */
   allLargeLogoGridSections: Array<LargeLogoGridSectionRecord>
   /** Returns a collection of records */
@@ -15638,6 +15706,8 @@ export type Query = {
   jobsEmployeeTestimonial?: Maybe<JobsEmployeeTestimonialRecord>
   /** Returns a specific record */
   jobsPageDepartment?: Maybe<JobsPageDepartmentRecord>
+  /** Returns a specific record */
+  languageTest?: Maybe<LanguageTestRecord>
   /** Returns a specific record */
   largeLogoGridSection?: Maybe<LargeLogoGridSectionRecord>
   /** Returns a specific record */
@@ -16516,6 +16586,12 @@ export type Query_AllJobsEmployeeTestimonialsMetaArgs = {
 export type Query_AllJobsPageDepartmentsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsPageDepartmentModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllLanguageTestsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<LanguageTestModelFilter>
 }
 
 /** The query root for this schema */
@@ -18076,6 +18152,15 @@ export type QueryAllJobsPageDepartmentsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<JobsPageDepartmentModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsPageDepartmentModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllLanguageTestsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<LanguageTestModelFilter>
+  orderBy?: Maybe<Array<Maybe<LanguageTestModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -19850,6 +19935,13 @@ export type QueryJobsPageDepartmentArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<JobsPageDepartmentModelFilter>
   orderBy?: Maybe<Array<Maybe<JobsPageDepartmentModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryLanguageTestArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<LanguageTestModelFilter>
+  orderBy?: Maybe<Array<Maybe<LanguageTestModelOrderBy>>>
 }
 
 /** The query root for this schema */
