@@ -11244,6 +11244,7 @@ export type LanguageTestModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<LanguageTestModelFilter>>>
 }
 
@@ -11269,12 +11270,15 @@ export enum LanguageTestModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Language Test (language_test) */
 export type LanguageTestRecord = {
   __typename?: "LanguageTestRecord"
+  _allTitleLocales?: Maybe<Array<Maybe<StringMultiLocaleField>>>
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -11288,11 +11292,22 @@ export type LanguageTestRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
 /** Record of type Language Test (language_test) */
+export type LanguageTestRecord_AllTitleLocalesArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Language Test (language_test) */
 export type LanguageTestRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Language Test (language_test) */
+export type LanguageTestRecordTitleArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -25246,6 +25261,12 @@ export type StringMatchesFilter = {
   pattern: Scalars["String"]
   caseSensitive?: Maybe<Scalars["BooleanType"]>
   regexp?: Maybe<Scalars["BooleanType"]>
+}
+
+export type StringMultiLocaleField = {
+  __typename?: "StringMultiLocaleField"
+  locale?: Maybe<SiteLocale>
+  value?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Subscription Confirmation Page (subscription_confirmation_page) */
