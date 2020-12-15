@@ -2177,9 +2177,9 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  companyLogoLightBackground?: Maybe<FileFilter>
-  companyLogoLight?: Maybe<FileFilter>
+  companyLogoDarkBackground?: Maybe<FileFilter>
   shareImage?: Maybe<FileFilter>
+  companyLogoLightBackground?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionText?: Maybe<TextFilter>
   conclusionTitle?: Maybe<StringFilter>
@@ -2252,7 +2252,7 @@ export type CaseStudyPageRecord = {
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
   companyDescription?: Maybe<Scalars["String"]>
-  companyLogoLight?: Maybe<FileField>
+  companyLogoDarkBackground?: Maybe<FileField>
   companyLogoLightBackground?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   conclusionText?: Maybe<Scalars["String"]>
