@@ -2185,7 +2185,7 @@ export type CaseStudyPageModelFilter = {
   productsUsed?: Maybe<LinksFilter>
   caseStudyPdf?: Maybe<FileFilter>
   stats?: Maybe<LinksFilter>
-  description?: Maybe<TextFilter>
+  description?: Maybe<StringFilter>
   companyDescription?: Maybe<StringFilter>
   companyLogo?: Maybe<FileFilter>
   companyName?: Maybe<StringFilter>
@@ -2224,6 +2224,8 @@ export enum CaseStudyPageModelOrderBy {
   ConclusionTitleDesc = "conclusionTitle_DESC",
   ThemeAsc = "theme_ASC",
   ThemeDesc = "theme_DESC",
+  DescriptionAsc = "description_ASC",
+  DescriptionDesc = "description_DESC",
   CompanyDescriptionAsc = "companyDescription_ASC",
   CompanyDescriptionDesc = "companyDescription_DESC",
   CompanyNameAsc = "companyName_ASC",
@@ -2275,11 +2277,6 @@ export type CaseStudyPageRecord_SeoMetaTagsArgs = {
 
 /** Record of type Case Study Page (case_study_page) */
 export type CaseStudyPageRecordConclusionTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
-}
-
-/** Record of type Case Study Page (case_study_page) */
-export type CaseStudyPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
@@ -11244,6 +11241,7 @@ export type LanguageTestModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  description?: Maybe<TextFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<LanguageTestModelFilter>>>
 }
@@ -11278,6 +11276,7 @@ export enum LanguageTestModelOrderBy {
 /** Record of type Language Test (language_test) */
 export type LanguageTestRecord = {
   __typename?: "LanguageTestRecord"
+  _allDescriptionLocales?: Maybe<Array<Maybe<StringMultiLocaleField>>>
   _allTitleLocales?: Maybe<Array<Maybe<StringMultiLocaleField>>>
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
@@ -11291,9 +11290,16 @@ export type LanguageTestRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Language Test (language_test) */
+export type LanguageTestRecord_AllDescriptionLocalesArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+  locale?: Maybe<SiteLocale>
 }
 
 /** Record of type Language Test (language_test) */
@@ -11303,6 +11309,12 @@ export type LanguageTestRecord_AllTitleLocalesArgs = {
 
 /** Record of type Language Test (language_test) */
 export type LanguageTestRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Language Test (language_test) */
+export type LanguageTestRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
   locale?: Maybe<SiteLocale>
 }
 
