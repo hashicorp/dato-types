@@ -2177,6 +2177,7 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  companyLogoLight?: Maybe<FileFilter>
   shareImage?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionText?: Maybe<TextFilter>
@@ -2187,7 +2188,6 @@ export type CaseStudyPageModelFilter = {
   stats?: Maybe<LinksFilter>
   description?: Maybe<StringFilter>
   companyDescription?: Maybe<StringFilter>
-  companyLogo?: Maybe<FileFilter>
   companyName?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   heroImage?: Maybe<FileFilter>
@@ -2251,7 +2251,7 @@ export type CaseStudyPageRecord = {
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
   companyDescription?: Maybe<Scalars["String"]>
-  companyLogo?: Maybe<FileField>
+  companyLogoLight?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   conclusionText?: Maybe<Scalars["String"]>
   conclusionTitle?: Maybe<Scalars["String"]>
@@ -15006,7 +15006,7 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allStaticDynamicSectionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allSystemIntegratorRegionsMeta: CollectionMetadata
+  _allSystemsIntegratorRegionsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allSystemsIntegratorsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -15438,7 +15438,7 @@ export type Query = {
   /** Returns a collection of records */
   allStaticDynamicSections: Array<StaticDynamicSectionRecord>
   /** Returns a collection of records */
-  allSystemIntegratorRegions: Array<SystemIntegratorRegionRecord>
+  allSystemsIntegratorRegions: Array<SystemsIntegratorRegionRecord>
   /** Returns a collection of records */
   allSystemsIntegrators: Array<SystemsIntegratorRecord>
   /** Returns a collection of records */
@@ -15926,9 +15926,9 @@ export type Query = {
   /** Returns the single instance record */
   subscriptionOptOutSuccessPage?: Maybe<SubscriptionOptOutSuccessPageRecord>
   /** Returns a specific record */
-  systemIntegratorRegion?: Maybe<SystemIntegratorRegionRecord>
-  /** Returns a specific record */
   systemsIntegrator?: Maybe<SystemsIntegratorRecord>
+  /** Returns a specific record */
+  systemsIntegratorRegion?: Maybe<SystemsIntegratorRegionRecord>
   /** Returns a specific record */
   templatePage?: Maybe<TemplatePageRecord>
   /** Returns the single instance record */
@@ -17114,9 +17114,9 @@ export type Query_AllStaticDynamicSectionsMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllSystemIntegratorRegionsMetaArgs = {
+export type Query_AllSystemsIntegratorRegionsMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<SystemIntegratorRegionModelFilter>
+  filter?: Maybe<SystemsIntegratorRegionModelFilter>
 }
 
 /** The query root for this schema */
@@ -18929,12 +18929,12 @@ export type QueryAllStaticDynamicSectionsArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllSystemIntegratorRegionsArgs = {
+export type QueryAllSystemsIntegratorRegionsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<SystemIntegratorRegionModelFilter>
-  orderBy?: Maybe<Array<Maybe<SystemIntegratorRegionModelOrderBy>>>
+  filter?: Maybe<SystemsIntegratorRegionModelFilter>
+  orderBy?: Maybe<Array<Maybe<SystemsIntegratorRegionModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -20611,17 +20611,17 @@ export type QuerySubscriptionOptOutSuccessPageArgs = {
 }
 
 /** The query root for this schema */
-export type QuerySystemIntegratorRegionArgs = {
-  locale?: Maybe<SiteLocale>
-  filter?: Maybe<SystemIntegratorRegionModelFilter>
-  orderBy?: Maybe<Array<Maybe<SystemIntegratorRegionModelOrderBy>>>
-}
-
-/** The query root for this schema */
 export type QuerySystemsIntegratorArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<SystemsIntegratorModelFilter>
   orderBy?: Maybe<Array<Maybe<SystemsIntegratorModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QuerySystemsIntegratorRegionArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<SystemsIntegratorRegionModelFilter>
+  orderBy?: Maybe<Array<Maybe<SystemsIntegratorRegionModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -25344,9 +25344,9 @@ export type SubscriptionOptOutSuccessPageRecordMessageArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type Highlight (system_integrator_highlight) */
-export type SystemIntegratorHighlightRecord = {
-  __typename?: "SystemIntegratorHighlightRecord"
+/** Record of type Highlight (systems_integrator_highlight) */
+export type SystemsIntegratorHighlightRecord = {
+  __typename?: "SystemsIntegratorHighlightRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -25365,12 +25365,107 @@ export type SystemIntegratorHighlightRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Highlight (system_integrator_highlight) */
-export type SystemIntegratorHighlightRecord_SeoMetaTagsArgs = {
+/** Record of type Highlight (systems_integrator_highlight) */
+export type SystemsIntegratorHighlightRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type SystemIntegratorRegionModelFilter = {
+export type SystemsIntegratorModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  name?: Maybe<StringFilter>
+  regionsServed?: Maybe<LinksFilter>
+  description?: Maybe<TextFilter>
+  logo?: Maybe<FileFilter>
+  websiteUrl?: Maybe<StringFilter>
+  productCertifications?: Maybe<LinksFilter>
+  tier?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
+  OR?: Maybe<Array<Maybe<SystemsIntegratorModelFilter>>>
+}
+
+export enum SystemsIntegratorModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC",
+  WebsiteUrlAsc = "websiteUrl_ASC",
+  WebsiteUrlDesc = "websiteUrl_DESC",
+  TierAsc = "tier_ASC",
+  TierDesc = "tier_DESC"
+}
+
+/** Record of type Systems Integrator (systems_integrator) */
+export type SystemsIntegratorRecord = {
+  __typename?: "SystemsIntegratorRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  logo?: Maybe<FileField>
+  name?: Maybe<Scalars["String"]>
+  productCertifications: Array<HashicorpProductRecord>
+  regionsServed: Array<SystemsIntegratorRegionRecord>
+  relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
+  slug?: Maybe<Scalars["String"]>
+  systemsIntegratorHighlights?: Maybe<
+    Array<Maybe<SystemsIntegratorHighlightRecord>>
+  >
+  tier?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  websiteUrl?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Systems Integrator (systems_integrator) */
+export type SystemsIntegratorRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Systems Integrator (systems_integrator) */
+export type SystemsIntegratorRecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
+}
+
+export type SystemsIntegratorRegionModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
@@ -25384,10 +25479,10 @@ export type SystemIntegratorRegionModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   localRegion?: Maybe<StringFilter>
   globalRegion?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<SystemIntegratorRegionModelFilter>>>
+  OR?: Maybe<Array<Maybe<SystemsIntegratorRegionModelFilter>>>
 }
 
-export enum SystemIntegratorRegionModelOrderBy {
+export enum SystemsIntegratorRegionModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -25416,9 +25511,9 @@ export enum SystemIntegratorRegionModelOrderBy {
   GlobalRegionDesc = "globalRegion_DESC"
 }
 
-/** Record of type System Integrator Region (system_integrator_region) */
-export type SystemIntegratorRegionRecord = {
-  __typename?: "SystemIntegratorRegionRecord"
+/** Record of type Systems Integrator Region (systems_integrator_region) */
+export type SystemsIntegratorRegionRecord = {
+  __typename?: "SystemsIntegratorRegionRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -25437,104 +25532,9 @@ export type SystemIntegratorRegionRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type System Integrator Region (system_integrator_region) */
-export type SystemIntegratorRegionRecord_SeoMetaTagsArgs = {
+/** Record of type Systems Integrator Region (systems_integrator_region) */
+export type SystemsIntegratorRegionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-export type SystemsIntegratorModelFilter = {
-  _createdAt?: Maybe<CreatedAtFilter>
-  createdAt?: Maybe<CreatedAtFilter>
-  id?: Maybe<ItemIdFilter>
-  _firstPublishedAt?: Maybe<PublishedAtFilter>
-  _publicationScheduledAt?: Maybe<PublishedAtFilter>
-  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
-  _publishedAt?: Maybe<PublishedAtFilter>
-  _status?: Maybe<StatusFilter>
-  _updatedAt?: Maybe<UpdatedAtFilter>
-  updatedAt?: Maybe<UpdatedAtFilter>
-  _isValid?: Maybe<BooleanFilter>
-  regionsServed?: Maybe<LinksFilter>
-  description?: Maybe<TextFilter>
-  logo?: Maybe<FileFilter>
-  websiteUrl?: Maybe<StringFilter>
-  productCertifications?: Maybe<LinksFilter>
-  tier?: Maybe<StringFilter>
-  slug?: Maybe<SlugFilter>
-  name?: Maybe<StringFilter>
-  OR?: Maybe<Array<Maybe<SystemsIntegratorModelFilter>>>
-}
-
-export enum SystemsIntegratorModelOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
-  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  WebsiteUrlAsc = "websiteUrl_ASC",
-  WebsiteUrlDesc = "websiteUrl_DESC",
-  TierAsc = "tier_ASC",
-  TierDesc = "tier_DESC",
-  NameAsc = "name_ASC",
-  NameDesc = "name_DESC"
-}
-
-/** Record of type System Integrator (systems_integrator) */
-export type SystemsIntegratorRecord = {
-  __typename?: "SystemsIntegratorRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  description?: Maybe<Scalars["String"]>
-  id: Scalars["ItemId"]
-  logo?: Maybe<FileField>
-  name?: Maybe<Scalars["String"]>
-  productCertifications: Array<HashicorpProductRecord>
-  regionsServed: Array<SystemIntegratorRegionRecord>
-  relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
-  slug?: Maybe<Scalars["String"]>
-  systemIntegratorHighlights?: Maybe<
-    Array<Maybe<SystemIntegratorHighlightRecord>>
-  >
-  tier?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-  websiteUrl?: Maybe<Scalars["String"]>
-}
-
-/** Record of type System Integrator (systems_integrator) */
-export type SystemsIntegratorRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type System Integrator (systems_integrator) */
-export type SystemsIntegratorRecordDescriptionArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type Tag = {
