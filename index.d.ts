@@ -2177,6 +2177,7 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  conclusionTheme?: Maybe<StringFilter>
   companyLogoDarkBackground?: Maybe<FileFilter>
   shareImage?: Maybe<FileFilter>
   companyLogoLightBackground?: Maybe<FileFilter>
@@ -2221,6 +2222,8 @@ export enum CaseStudyPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ConclusionThemeAsc = "conclusionTheme_ASC",
+  ConclusionThemeDesc = "conclusionTheme_DESC",
   ConclusionTitleAsc = "conclusionTitle_ASC",
   ConclusionTitleDesc = "conclusionTitle_DESC",
   ThemeAsc = "theme_ASC",
@@ -2256,6 +2259,7 @@ export type CaseStudyPageRecord = {
   companyLogoLightBackground?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   conclusionText?: Maybe<Scalars["String"]>
+  conclusionTheme?: Maybe<Scalars["String"]>
   conclusionTitle?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
