@@ -2254,7 +2254,7 @@ export type CaseStudyPageRecord = {
   _updatedAt: Scalars["DateTime"]
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
-  citation?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  citations?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
