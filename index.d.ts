@@ -2177,10 +2177,10 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  heroLogo?: Maybe<FileFilter>
   companyLogo?: Maybe<FileFilter>
   conclusionTheme?: Maybe<StringFilter>
   shareImage?: Maybe<FileFilter>
-  companyLogoLightBackground?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionText?: Maybe<TextFilter>
   conclusionTitle?: Maybe<StringFilter>
@@ -2254,9 +2254,9 @@ export type CaseStudyPageRecord = {
   _updatedAt: Scalars["DateTime"]
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
+  citation?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
-  companyLogoLightBackground?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   conclusionText?: Maybe<Scalars["String"]>
   conclusionTheme?: Maybe<Scalars["String"]>
@@ -2265,6 +2265,7 @@ export type CaseStudyPageRecord = {
   description?: Maybe<Scalars["String"]>
   heading?: Maybe<Scalars["String"]>
   heroImage?: Maybe<FileField>
+  heroLogo?: Maybe<FileField>
   id: Scalars["ItemId"]
   partnerList: Array<CaseStudyPartnerRecord>
   productsUsed: Array<CaseStudyProductV2Record>
