@@ -2180,7 +2180,6 @@ export type CaseStudyPageModelFilter = {
   citation?: Maybe<StringFilter>
   heroLogo?: Maybe<FileFilter>
   companyLogo?: Maybe<FileFilter>
-  conclusionTheme?: Maybe<StringFilter>
   shareImage?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   conclusionText?: Maybe<TextFilter>
@@ -2225,8 +2224,6 @@ export enum CaseStudyPageModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   CitationAsc = "citation_ASC",
   CitationDesc = "citation_DESC",
-  ConclusionThemeAsc = "conclusionTheme_ASC",
-  ConclusionThemeDesc = "conclusionTheme_DESC",
   ConclusionTitleAsc = "conclusionTitle_ASC",
   ConclusionTitleDesc = "conclusionTitle_DESC",
   ThemeAsc = "theme_ASC",
@@ -2262,7 +2259,6 @@ export type CaseStudyPageRecord = {
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
   conclusionText?: Maybe<Scalars["String"]>
-  conclusionTheme?: Maybe<Scalars["String"]>
   conclusionTitle?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
