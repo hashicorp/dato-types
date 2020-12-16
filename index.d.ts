@@ -2177,6 +2177,7 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  citation?: Maybe<StringFilter>
   heroLogo?: Maybe<FileFilter>
   companyLogo?: Maybe<FileFilter>
   conclusionTheme?: Maybe<StringFilter>
@@ -2222,6 +2223,8 @@ export enum CaseStudyPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  CitationAsc = "citation_ASC",
+  CitationDesc = "citation_DESC",
   ConclusionThemeAsc = "conclusionTheme_ASC",
   ConclusionThemeDesc = "conclusionTheme_DESC",
   ConclusionTitleAsc = "conclusionTitle_ASC",
@@ -2254,7 +2257,7 @@ export type CaseStudyPageRecord = {
   _updatedAt: Scalars["DateTime"]
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
-  citations?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  citation?: Maybe<Scalars["String"]>
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
