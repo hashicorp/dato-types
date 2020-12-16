@@ -2254,7 +2254,7 @@ export type CaseStudyPageRecord = {
   _updatedAt: Scalars["DateTime"]
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
-  citations?: Maybe<Array<Maybe<EventsPageMerchandisingSlotRecord>>>
+  citations?: Maybe<Array<Maybe<CitationRecord>>>
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
@@ -2695,6 +2695,31 @@ export type CertificationPageRecordIntroArgs = {
 /** Record of type Certification Page (certification_page) */
 export type CertificationPageRecordSignupFormIntroArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
+}
+
+/** Record of type Citation (citation) */
+export type CitationRecord = {
+  __typename?: "CitationRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+  url?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Citation (citation) */
+export type CitationRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type CloudPartnerPageModelFilter = {
