@@ -2177,13 +2177,11 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  citation?: Maybe<StringFilter>
-  heroLogo?: Maybe<FileFilter>
   companyLogo?: Maybe<FileFilter>
+  heroLogo?: Maybe<FileFilter>
+  citation?: Maybe<StringFilter>
   shareImage?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
-  conclusionText?: Maybe<TextFilter>
-  conclusionTitle?: Maybe<StringFilter>
   theme?: Maybe<StringFilter>
   productsUsed?: Maybe<LinksFilter>
   caseStudyPdf?: Maybe<FileFilter>
@@ -2224,8 +2222,6 @@ export enum CaseStudyPageModelOrderBy {
   IsValidDesc = "_isValid_DESC",
   CitationAsc = "citation_ASC",
   CitationDesc = "citation_DESC",
-  ConclusionTitleAsc = "conclusionTitle_ASC",
-  ConclusionTitleDesc = "conclusionTitle_DESC",
   ThemeAsc = "theme_ASC",
   ThemeDesc = "theme_DESC",
   DescriptionAsc = "description_ASC",
@@ -2258,8 +2254,6 @@ export type CaseStudyPageRecord = {
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
-  conclusionText?: Maybe<Scalars["String"]>
-  conclusionTitle?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   heading?: Maybe<Scalars["String"]>
@@ -2279,11 +2273,6 @@ export type CaseStudyPageRecord = {
 /** Record of type Case Study Page (case_study_page) */
 export type CaseStudyPageRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Case Study Page (case_study_page) */
-export type CaseStudyPageRecordConclusionTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CaseStudyPartnerModelFilter = {
