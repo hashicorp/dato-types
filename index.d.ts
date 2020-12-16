@@ -2177,9 +2177,9 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  statCitation?: Maybe<StringFilter>
   companyLogo?: Maybe<FileFilter>
   heroLogo?: Maybe<FileFilter>
-  citation?: Maybe<StringFilter>
   shareImage?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   theme?: Maybe<StringFilter>
@@ -2220,8 +2220,8 @@ export enum CaseStudyPageModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  CitationAsc = "citation_ASC",
-  CitationDesc = "citation_DESC",
+  StatCitationAsc = "statCitation_ASC",
+  StatCitationDesc = "statCitation_DESC",
   ThemeAsc = "theme_ASC",
   ThemeDesc = "theme_DESC",
   DescriptionAsc = "description_ASC",
@@ -2250,7 +2250,6 @@ export type CaseStudyPageRecord = {
   _updatedAt: Scalars["DateTime"]
   body: Array<CaseStudyContentBlockRecord>
   caseStudyPdf?: Maybe<FileField>
-  citation?: Maybe<Scalars["String"]>
   companyDescription?: Maybe<Scalars["String"]>
   companyLogo?: Maybe<FileField>
   companyName?: Maybe<Scalars["String"]>
@@ -2264,6 +2263,7 @@ export type CaseStudyPageRecord = {
   productsUsed: Array<CaseStudyProductV2Record>
   shareImage?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
+  statCitation?: Maybe<Scalars["String"]>
   stats: Array<CaseStudyStatRecord>
   technologyStack: Array<CaseStudyTechnologyRecord>
   theme?: Maybe<Scalars["String"]>
