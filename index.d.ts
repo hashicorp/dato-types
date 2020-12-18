@@ -25377,13 +25377,13 @@ export type SystemsIntegratorModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  tier?: Maybe<StringFilter>
   name?: Maybe<StringFilter>
   regionsServed?: Maybe<LinksFilter>
   description?: Maybe<TextFilter>
   logo?: Maybe<FileFilter>
   websiteUrl?: Maybe<StringFilter>
   productCertifications?: Maybe<LinksFilter>
-  tier?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<SystemsIntegratorModelFilter>>>
 }
@@ -25411,12 +25411,12 @@ export enum SystemsIntegratorModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  TierAsc = "tier_ASC",
+  TierDesc = "tier_DESC",
   NameAsc = "name_ASC",
   NameDesc = "name_DESC",
   WebsiteUrlAsc = "websiteUrl_ASC",
-  WebsiteUrlDesc = "websiteUrl_DESC",
-  TierAsc = "tier_ASC",
-  TierDesc = "tier_DESC"
+  WebsiteUrlDesc = "websiteUrl_DESC"
 }
 
 /** Record of type Systems Integrator (systems_integrator) */
