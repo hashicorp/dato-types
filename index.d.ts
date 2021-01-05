@@ -11078,9 +11078,8 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  comWhitepaper?: Maybe<FileFilter>
   ctas?: Maybe<LinksFilter>
-  heroCtaLink?: Maybe<StringFilter>
-  heroCtaText?: Maybe<StringFilter>
   languageCode?: Maybe<StringFilter>
   heroDescription?: Maybe<StringFilter>
   heroTitle?: Maybe<StringFilter>
@@ -11110,10 +11109,6 @@ export enum InternationalizedMicrositeModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  HeroCtaLinkAsc = "heroCtaLink_ASC",
-  HeroCtaLinkDesc = "heroCtaLink_DESC",
-  HeroCtaTextAsc = "heroCtaText_ASC",
-  HeroCtaTextDesc = "heroCtaText_DESC",
   LanguageCodeAsc = "languageCode_ASC",
   LanguageCodeDesc = "languageCode_DESC",
   HeroDescriptionAsc = "heroDescription_ASC",
@@ -11136,10 +11131,9 @@ export type InternationalizedMicrositeRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  comWhitepaper?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   ctas: Array<InternationalizedMicrositeCtaRecord>
-  heroCtaLink?: Maybe<Scalars["String"]>
-  heroCtaText?: Maybe<Scalars["String"]>
   heroDescription?: Maybe<Scalars["String"]>
   heroTitle?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
