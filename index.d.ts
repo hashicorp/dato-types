@@ -11158,6 +11158,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featuredPartners?: Maybe<LinksFilter>
   webinars?: Maybe<LinksFilter>
   productDemos?: Maybe<LinksFilter>
   featuredCustomerStory?: Maybe<LinkFilter>
@@ -11225,6 +11226,7 @@ export type InternationalizedMicrositeRecord = {
   ctas: Array<InternationalizedMicrositeCtaRecord>
   customerStories: Array<InternationalizedMicrositeCustomerStoryRecord>
   featuredCustomerStory?: Maybe<InternationalizedMicrositeCustomerStoryRecord>
+  featuredPartners: Array<CompanyRecord>
   heroDescription?: Maybe<Scalars["String"]>
   heroTitle?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
