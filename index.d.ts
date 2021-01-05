@@ -11078,6 +11078,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  nomadProductBrief?: Maybe<FileFilter>
   consulProductBrief?: Maybe<FileFilter>
   vaultProductBrief?: Maybe<FileFilter>
   terraformProductBrief?: Maybe<FileFilter>
@@ -11142,6 +11143,7 @@ export type InternationalizedMicrositeRecord = {
   heroTitle?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   languageCode?: Maybe<Scalars["String"]>
+  nomadProductBrief?: Maybe<FileField>
   terraformProductBrief?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
   vaultProductBrief?: Maybe<FileField>
