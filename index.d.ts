@@ -2131,7 +2131,7 @@ export type CaseStudyLinkModelProductsField =
   | EnterpriseProductRecord
   | OpenSourceToolRecord
 
-/** Record of type Case Study (case_study_link) */
+/** Record of type Case Study Link (case_study_link) */
 export type CaseStudyLinkRecord = {
   __typename?: "CaseStudyLinkRecord"
   _createdAt: Scalars["DateTime"]
@@ -2160,7 +2160,7 @@ export type CaseStudyLinkRecord = {
   url?: Maybe<Scalars["String"]>
 }
 
-/** Record of type Case Study (case_study_link) */
+/** Record of type Case Study Link (case_study_link) */
 export type CaseStudyLinkRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
