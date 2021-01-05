@@ -10994,6 +10994,70 @@ export type IntegrationTypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type InternationalizedMicrositeModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<InternationalizedMicrositeModelFilter>>>
+}
+
+export enum InternationalizedMicrositeModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Internationalized Microsite (internationalized_microsite) */
+export type InternationalizedMicrositeRecord = {
+  __typename?: "InternationalizedMicrositeRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Internationalized Microsite (internationalized_microsite) */
+export type InternationalizedMicrositeRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Specifies how to filter by usage */
 export type InUseFilter = {
   /** Search uploads that are currently used by some record or not */
@@ -14831,6 +14895,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allIntegrationTypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allInternationalizedMicrositesMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allJobsEmployeeTestimonialsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allJobsPageDepartmentsMeta: CollectionMetadata
@@ -15260,6 +15326,8 @@ export type Query = {
   allIntegrationTypeCategories: Array<IntegrationTypeCategoryRecord>
   /** Returns a collection of records */
   allIntegrationTypes: Array<IntegrationTypeRecord>
+  /** Returns a collection of records */
+  allInternationalizedMicrosites: Array<InternationalizedMicrositeRecord>
   /** Returns a collection of records */
   allJobsEmployeeTestimonials: Array<JobsEmployeeTestimonialRecord>
   /** Returns a collection of records */
@@ -15724,6 +15792,8 @@ export type Query = {
   integrationTypeCategory?: Maybe<IntegrationTypeCategoryRecord>
   /** Returns the single instance record */
   integrationsPage?: Maybe<IntegrationsPageRecord>
+  /** Returns a specific record */
+  internationalizedMicrosite?: Maybe<InternationalizedMicrositeRecord>
   /** Returns a specific record */
   jobsEmployeeTestimonial?: Maybe<JobsEmployeeTestimonialRecord>
   /** Returns a specific record */
@@ -16596,6 +16666,12 @@ export type Query_AllIntegrationTypeCategoriesMetaArgs = {
 export type Query_AllIntegrationTypesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<IntegrationTypeModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllInternationalizedMicrositesMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<InternationalizedMicrositeModelFilter>
 }
 
 /** The query root for this schema */
@@ -18156,6 +18232,15 @@ export type QueryAllIntegrationTypesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<IntegrationTypeModelFilter>
   orderBy?: Maybe<Array<Maybe<IntegrationTypeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllInternationalizedMicrositesArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<InternationalizedMicrositeModelFilter>
+  orderBy?: Maybe<Array<Maybe<InternationalizedMicrositeModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -19943,6 +20028,13 @@ export type QueryIntegrationTypeCategoryArgs = {
 /** The query root for this schema */
 export type QueryIntegrationsPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryInternationalizedMicrositeArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<InternationalizedMicrositeModelFilter>
+  orderBy?: Maybe<Array<Maybe<InternationalizedMicrositeModelOrderBy>>>
 }
 
 /** The query root for this schema */
