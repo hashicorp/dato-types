@@ -11158,6 +11158,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  webinars?: Maybe<LinksFilter>
   productDemos?: Maybe<LinksFilter>
   featuredCustomerStory?: Maybe<LinkFilter>
   customerStories?: Maybe<LinksFilter>
@@ -11233,6 +11234,7 @@ export type InternationalizedMicrositeRecord = {
   terraformProductBrief?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
   vaultProductBrief?: Maybe<FileField>
+  webinars: Array<EventV2Record>
 }
 
 /** Record of type Internationalized Microsite (internationalized_microsite) */
