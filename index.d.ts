@@ -11006,6 +11006,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  navCtaLink?: Maybe<StringFilter>
   navCtaText?: Maybe<StringFilter>
   heroCtaLink?: Maybe<StringFilter>
   heroCtaText?: Maybe<StringFilter>
@@ -11038,6 +11039,8 @@ export enum InternationalizedMicrositeModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  NavCtaLinkAsc = "navCtaLink_ASC",
+  NavCtaLinkDesc = "navCtaLink_DESC",
   NavCtaTextAsc = "navCtaText_ASC",
   NavCtaTextDesc = "navCtaText_DESC",
   HeroCtaLinkAsc = "heroCtaLink_ASC",
@@ -11073,6 +11076,7 @@ export type InternationalizedMicrositeRecord = {
   heroTitle?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   languageCode?: Maybe<Scalars["String"]>
+  navCtaLink?: Maybe<Scalars["String"]>
   navCtaText?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
