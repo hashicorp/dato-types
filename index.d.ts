@@ -11078,6 +11078,8 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  consulProductBrief?: Maybe<FileFilter>
+  vaultProductBrief?: Maybe<FileFilter>
   terraformProductBrief?: Maybe<FileFilter>
   comWhitepaper?: Maybe<FileFilter>
   ctas?: Maybe<LinksFilter>
@@ -11133,6 +11135,7 @@ export type InternationalizedMicrositeRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   comWhitepaper?: Maybe<FileField>
+  consulProductBrief?: Maybe<FileField>
   createdAt: Scalars["DateTime"]
   ctas: Array<InternationalizedMicrositeCtaRecord>
   heroDescription?: Maybe<Scalars["String"]>
@@ -11141,6 +11144,7 @@ export type InternationalizedMicrositeRecord = {
   languageCode?: Maybe<Scalars["String"]>
   terraformProductBrief?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
+  vaultProductBrief?: Maybe<FileField>
 }
 
 /** Record of type Internationalized Microsite (internationalized_microsite) */
