@@ -11006,6 +11006,8 @@ export type InternationalizedMicrositeCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  products?: Maybe<LinksFilter>
+  company?: Maybe<LinkFilter>
   description?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeCaseStudyModelFilter>>>
@@ -11054,9 +11056,11 @@ export type InternationalizedMicrositeCaseStudyRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  company?: Maybe<CompanyRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
+  products: Array<OpenSourceToolRecord>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
