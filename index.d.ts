@@ -11078,6 +11078,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  comWhitepaperTitle?: Maybe<StringFilter>
   comWhitepaper?: Maybe<FileFilter>
   ctas?: Maybe<LinksFilter>
   languageCode?: Maybe<StringFilter>
@@ -11109,6 +11110,8 @@ export enum InternationalizedMicrositeModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  ComWhitepaperTitleAsc = "comWhitepaperTitle_ASC",
+  ComWhitepaperTitleDesc = "comWhitepaperTitle_DESC",
   LanguageCodeAsc = "languageCode_ASC",
   LanguageCodeDesc = "languageCode_DESC",
   HeroDescriptionAsc = "heroDescription_ASC",
@@ -11132,6 +11135,7 @@ export type InternationalizedMicrositeRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   comWhitepaper?: Maybe<FileField>
+  comWhitepaperTitle?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
   ctas: Array<InternationalizedMicrositeCtaRecord>
   heroDescription?: Maybe<Scalars["String"]>
