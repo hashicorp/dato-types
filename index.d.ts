@@ -11006,6 +11006,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  heroTitle?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeModelFilter>>>
 }
 
@@ -11031,7 +11032,9 @@ export enum InternationalizedMicrositeModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  HeroTitleAsc = "heroTitle_ASC",
+  HeroTitleDesc = "heroTitle_DESC"
 }
 
 /** Record of type Internationalized Microsite (internationalized_microsite) */
@@ -11049,6 +11052,7 @@ export type InternationalizedMicrositeRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  heroTitle?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
 }
