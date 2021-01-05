@@ -11078,6 +11078,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  ctas?: Maybe<LinksFilter>
   navCtaLink?: Maybe<StringFilter>
   navCtaText?: Maybe<StringFilter>
   heroCtaLink?: Maybe<StringFilter>
@@ -11142,6 +11143,7 @@ export type InternationalizedMicrositeRecord = {
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
+  ctas: Array<InternationalizedMicrositeCtaRecord>
   heroCtaLink?: Maybe<Scalars["String"]>
   heroCtaText?: Maybe<Scalars["String"]>
   heroDescription?: Maybe<Scalars["String"]>
