@@ -11006,6 +11006,8 @@ export type InternationalizedMicrositeCtaModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  link?: Maybe<StringFilter>
+  text?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeCtaModelFilter>>>
 }
 
@@ -11031,7 +11033,11 @@ export enum InternationalizedMicrositeCtaModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  LinkAsc = "link_ASC",
+  LinkDesc = "link_DESC",
+  TextAsc = "text_ASC",
+  TextDesc = "text_DESC"
 }
 
 /** Record of type Internationalized Microsite CTA (internationalized_microsite_cta) */
@@ -11050,6 +11056,8 @@ export type InternationalizedMicrositeCtaRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  link?: Maybe<Scalars["String"]>
+  text?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
