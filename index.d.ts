@@ -11006,6 +11006,7 @@ export type InternationalizedMicrositeCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  thumbnailImage?: Maybe<FileFilter>
   caseStudyPdf?: Maybe<FileFilter>
   products?: Maybe<LinksFilter>
   company?: Maybe<LinkFilter>
@@ -11063,6 +11064,7 @@ export type InternationalizedMicrositeCaseStudyRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   products: Array<OpenSourceToolRecord>
+  thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
