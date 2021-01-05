@@ -11078,8 +11078,8 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  comWhitepaperTitle?: Maybe<StringFilter>
   comWhitepaper?: Maybe<FileFilter>
+  comWhitepaperTitle?: Maybe<StringFilter>
   ctas?: Maybe<LinksFilter>
   languageCode?: Maybe<StringFilter>
   heroDescription?: Maybe<StringFilter>
