@@ -11006,6 +11006,8 @@ export type InternationalizedMicrositeCaseStudyModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  caseStudy?: Maybe<LinkFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeCaseStudyModelFilter>>>
 }
 
@@ -11031,7 +11033,9 @@ export enum InternationalizedMicrositeCaseStudyModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Internationalized Microsite Case Study (internationalized_microsite_case_study) */
@@ -11048,8 +11052,10 @@ export type InternationalizedMicrositeCaseStudyRecord = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
+  caseStudy?: Maybe<CaseStudyLinkRecord>
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
