@@ -11158,6 +11158,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  languageCode?: Maybe<StringFilter>
   featuredPartners?: Maybe<LinksFilter>
   webinars?: Maybe<LinksFilter>
   productDemos?: Maybe<LinksFilter>
@@ -11169,7 +11170,6 @@ export type InternationalizedMicrositeModelFilter = {
   terraformProductBrief?: Maybe<FileFilter>
   comWhitepaper?: Maybe<FileFilter>
   ctas?: Maybe<LinksFilter>
-  languageCode?: Maybe<StringFilter>
   heroDescription?: Maybe<StringFilter>
   heroTitle?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeModelFilter>>>
