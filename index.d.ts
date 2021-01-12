@@ -11254,6 +11254,8 @@ export type InternationalizedMicrositeVideoModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  videoUrl?: Maybe<StringFilter>
+  title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeVideoModelFilter>>>
 }
 
@@ -11279,7 +11281,11 @@ export enum InternationalizedMicrositeVideoModelOrderBy {
   UpdatedAtAsc = "updatedAt_ASC",
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC"
+  IsValidDesc = "_isValid_DESC",
+  VideoUrlAsc = "videoUrl_ASC",
+  VideoUrlDesc = "videoUrl_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Internationalized Microsite Video (internationalized_microsite_video) */
@@ -11298,7 +11304,9 @@ export type InternationalizedMicrositeVideoRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
+  videoUrl?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Internationalized Microsite Video (internationalized_microsite_video) */
