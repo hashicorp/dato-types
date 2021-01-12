@@ -11163,7 +11163,6 @@ export type InternationalizedMicrositeModelFilter = {
   languageCode?: Maybe<StringFilter>
   featuredPartners?: Maybe<LinksFilter>
   webinars?: Maybe<LinksFilter>
-  productDemos?: Maybe<LinksFilter>
   featuredCustomerStory?: Maybe<LinkFilter>
   customerStories?: Maybe<LinksFilter>
   nomadProductBrief?: Maybe<FileFilter>
@@ -11234,7 +11233,6 @@ export type InternationalizedMicrositeRecord = {
   id: Scalars["ItemId"]
   languageCode?: Maybe<Scalars["String"]>
   nomadProductBrief?: Maybe<FileField>
-  productDemos: Array<EventV2Record>
   terraformProductBrief?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
   vaultProductBrief?: Maybe<FileField>
