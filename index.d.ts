@@ -11162,7 +11162,6 @@ export type InternationalizedMicrositeModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   languageCode?: Maybe<StringFilter>
   featuredPartners?: Maybe<LinksFilter>
-  webinars?: Maybe<LinksFilter>
   featuredCustomerStory?: Maybe<LinkFilter>
   customerStories?: Maybe<LinksFilter>
   nomadProductBrief?: Maybe<FileFilter>
@@ -11236,11 +11235,74 @@ export type InternationalizedMicrositeRecord = {
   terraformProductBrief?: Maybe<FileField>
   updatedAt: Scalars["DateTime"]
   vaultProductBrief?: Maybe<FileField>
-  webinars: Array<EventV2Record>
 }
 
 /** Record of type Internationalized Microsite (internationalized_microsite) */
 export type InternationalizedMicrositeRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+export type InternationalizedMicrositeVideoModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<InternationalizedMicrositeVideoModelFilter>>>
+}
+
+export enum InternationalizedMicrositeVideoModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Internationalized Microsite Video (internationalized_microsite_video) */
+export type InternationalizedMicrositeVideoRecord = {
+  __typename?: "InternationalizedMicrositeVideoRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Internationalized Microsite Video (internationalized_microsite_video) */
+export type InternationalizedMicrositeVideoRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -15085,6 +15147,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allInternationalizedMicrositeCustomerStoriesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allInternationalizedMicrositeVideosMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allInternationalizedMicrositesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allJobsEmployeeTestimonialsMeta: CollectionMetadata
@@ -15521,6 +15585,10 @@ export type Query = {
   /** Returns a collection of records */
   allInternationalizedMicrositeCustomerStories: Array<
     InternationalizedMicrositeCustomerStoryRecord
+  >
+  /** Returns a collection of records */
+  allInternationalizedMicrositeVideos: Array<
+    InternationalizedMicrositeVideoRecord
   >
   /** Returns a collection of records */
   allInternationalizedMicrosites: Array<InternationalizedMicrositeRecord>
@@ -15996,6 +16064,8 @@ export type Query = {
   internationalizedMicrositeCustomerStory?: Maybe<
     InternationalizedMicrositeCustomerStoryRecord
   >
+  /** Returns a specific record */
+  internationalizedMicrositeVideo?: Maybe<InternationalizedMicrositeVideoRecord>
   /** Returns a specific record */
   jobsEmployeeTestimonial?: Maybe<JobsEmployeeTestimonialRecord>
   /** Returns a specific record */
@@ -16880,6 +16950,12 @@ export type Query_AllInternationalizedMicrositeCtasMetaArgs = {
 export type Query_AllInternationalizedMicrositeCustomerStoriesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<InternationalizedMicrositeCustomerStoryModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllInternationalizedMicrositeVideosMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<InternationalizedMicrositeVideoModelFilter>
 }
 
 /** The query root for this schema */
@@ -18466,6 +18542,15 @@ export type QueryAllInternationalizedMicrositeCustomerStoriesArgs = {
   orderBy?: Maybe<
     Array<Maybe<InternationalizedMicrositeCustomerStoryModelOrderBy>>
   >
+}
+
+/** The query root for this schema */
+export type QueryAllInternationalizedMicrositeVideosArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<InternationalizedMicrositeVideoModelFilter>
+  orderBy?: Maybe<Array<Maybe<InternationalizedMicrositeVideoModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -20285,6 +20370,13 @@ export type QueryInternationalizedMicrositeCustomerStoryArgs = {
   orderBy?: Maybe<
     Array<Maybe<InternationalizedMicrositeCustomerStoryModelOrderBy>>
   >
+}
+
+/** The query root for this schema */
+export type QueryInternationalizedMicrositeVideoArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<InternationalizedMicrositeVideoModelFilter>
+  orderBy?: Maybe<Array<Maybe<InternationalizedMicrositeVideoModelOrderBy>>>
 }
 
 /** The query root for this schema */
