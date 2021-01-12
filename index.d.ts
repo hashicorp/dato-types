@@ -12227,7 +12227,7 @@ export type MajorHeadlineSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Markdown (Legacy) (markdown) */
+/** Record of type Markdown (markdown) */
 export type MarkdownRecord = {
   __typename?: "MarkdownRecord"
   _createdAt: Scalars["DateTime"]
@@ -12247,12 +12247,12 @@ export type MarkdownRecord = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Markdown (Legacy) (markdown) */
+/** Record of type Markdown (markdown) */
 export type MarkdownRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-/** Record of type Markdown (Legacy) (markdown) */
+/** Record of type Markdown (markdown) */
 export type MarkdownRecordContentArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
