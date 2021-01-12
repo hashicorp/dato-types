@@ -11160,6 +11160,7 @@ export type InternationalizedMicrositeModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featuredVideos?: Maybe<LinksFilter>
   languageCode?: Maybe<StringFilter>
   featuredPartners?: Maybe<LinksFilter>
   featuredCustomerStory?: Maybe<LinkFilter>
@@ -11227,6 +11228,7 @@ export type InternationalizedMicrositeRecord = {
   customerStories: Array<InternationalizedMicrositeCustomerStoryRecord>
   featuredCustomerStory?: Maybe<InternationalizedMicrositeCustomerStoryRecord>
   featuredPartners: Array<CompanyRecord>
+  featuredVideos: Array<InternationalizedMicrositeVideoRecord>
   heroDescription?: Maybe<Scalars["String"]>
   heroTitle?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
@@ -11254,6 +11256,7 @@ export type InternationalizedMicrositeVideoModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  thumbnailImage?: Maybe<FileFilter>
   videoUrl?: Maybe<StringFilter>
   title?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<InternationalizedMicrositeVideoModelFilter>>>
@@ -11304,6 +11307,7 @@ export type InternationalizedMicrositeVideoRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
+  thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   videoUrl?: Maybe<Scalars["String"]>
