@@ -11080,6 +11080,7 @@ export type InternationalizedMicrositeCustomerStoryModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  featuredImage?: Maybe<FileFilter>
   thumbnailImage?: Maybe<FileFilter>
   caseStudyPdf?: Maybe<FileFilter>
   products?: Maybe<LinksFilter>
@@ -11136,6 +11137,7 @@ export type InternationalizedMicrositeCustomerStoryRecord = {
   company?: Maybe<CompanyRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
+  featuredImage?: Maybe<FileField>
   id: Scalars["ItemId"]
   products: Array<OpenSourceToolRecord>
   thumbnailImage?: Maybe<FileField>
