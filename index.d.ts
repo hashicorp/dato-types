@@ -8971,7 +8971,7 @@ export type HomePageRecord = {
   blueprintHeader?: Maybe<TextHeadlineSectionRecord>
   challengesCallouts?: Maybe<CalloutSectionRecord>
   createdAt: Scalars["DateTime"]
-  featuredCaseStudies: Array<EventsPageMerchandisingSlotRecord>
+  featuredCaseStudies: Array<CaseStudyPageRecord>
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
