@@ -2179,9 +2179,9 @@ export type CaseStudyPageModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   homepageLogo?: Maybe<FileFilter>
   homepageImage?: Maybe<FileFilter>
+  heroLogo?: Maybe<FileFilter>
   statCitation?: Maybe<StringFilter>
   companyLogo?: Maybe<FileFilter>
-  heroLogo?: Maybe<FileFilter>
   shareImage?: Maybe<FileFilter>
   body?: Maybe<LinksFilter>
   theme?: Maybe<StringFilter>
