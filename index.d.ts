@@ -2177,6 +2177,7 @@ export type CaseStudyPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  homepageLogo?: Maybe<FileFilter>
   homepageImage?: Maybe<FileFilter>
   statCitation?: Maybe<StringFilter>
   companyLogo?: Maybe<FileFilter>
@@ -2260,6 +2261,7 @@ export type CaseStudyPageRecord = {
   heroImage?: Maybe<FileField>
   heroLogo?: Maybe<FileField>
   homepageImage?: Maybe<FileField>
+  homepageLogo?: Maybe<FileField>
   id: Scalars["ItemId"]
   partnerList: Array<CaseStudyPartnerRecord>
   productsUsed: Array<CaseStudyProductV2Record>
