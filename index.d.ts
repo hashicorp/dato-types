@@ -22113,6 +22113,13 @@ export type ResourceV2ModelContentField =
   | ImageBlockRecord
   | ExternalUrlRecord
 
+export type ResourceV2ModelContentStField = {
+  __typename?: "ResourceV2ModelContentStField"
+  blocks: Array<EventsPageMerchandisingSlotRecord>
+  links: Array<EventsPageMerchandisingSlotRecord>
+  value: Scalars["JsonField"]
+}
+
 export type ResourceV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -22134,6 +22141,7 @@ export type ResourceV2ModelFilter = {
   product?: Maybe<LinksFilter>
   enterprise?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
+  contentSt?: Maybe<StructuredTextFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -22188,6 +22196,7 @@ export type ResourceV2Record = {
   _updatedAt: Scalars["DateTime"]
   author: Array<PersonRecord>
   content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
+  contentSt?: Maybe<ResourceV2ModelContentStField>
   createdAt: Scalars["DateTime"]
   enterprise?: Maybe<Scalars["BooleanType"]>
   gated?: Maybe<Scalars["BooleanType"]>
@@ -25725,6 +25734,16 @@ export type StringMultiLocaleField = {
   __typename?: "StringMultiLocaleField"
   locale?: Maybe<SiteLocale>
   value?: Maybe<Scalars["String"]>
+}
+
+/** Specifies how to filter Structured Text fields */
+export type StructuredTextFilter = {
+  /** Filter records based on a regular expression */
+  matches?: Maybe<StringMatchesFilter>
+  /** Exclude records based on a regular expression */
+  notMatches?: Maybe<StringMatchesFilter>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
 }
 
 /** Record of type Subscription Confirmation Page (subscription_confirmation_page) */
