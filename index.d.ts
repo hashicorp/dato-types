@@ -29502,6 +29502,7 @@ export type VideoBlockRecord = {
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
   updatedAt: Scalars["DateTime"]
+  url?: Maybe<VideoField>
 }
 
 /** Record of type Video Block (video_block) */
