@@ -25855,6 +25855,7 @@ export type SystemsIntegratorModelFilter = {
   description?: Maybe<TextFilter>
   regionsServed?: Maybe<LinksFilter>
   tier?: Maybe<StringFilter>
+  tierCopy1?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemsIntegratorModelFilter>>>
 }
 
@@ -25886,7 +25887,9 @@ export enum SystemsIntegratorModelOrderBy {
   WebsiteUrlAsc = "websiteUrl_ASC",
   WebsiteUrlDesc = "websiteUrl_DESC",
   TierAsc = "tier_ASC",
-  TierDesc = "tier_DESC"
+  TierDesc = "tier_DESC",
+  TierCopy1Asc = "tierCopy1_ASC",
+  TierCopy1Desc = "tierCopy1_DESC"
 }
 
 /** Record of type Systems Integrator (systems_integrator) */
@@ -25916,6 +25919,7 @@ export type SystemsIntegratorRecord = {
     Array<Maybe<SystemsIntegratorHighlightRecord>>
   >
   tier?: Maybe<Scalars["String"]>
+  tierCopy1?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   websiteUrl?: Maybe<Scalars["String"]>
 }
