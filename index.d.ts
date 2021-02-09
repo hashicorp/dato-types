@@ -25855,7 +25855,7 @@ export type SystemsIntegratorModelFilter = {
   description?: Maybe<TextFilter>
   regionsServed?: Maybe<LinksFilter>
   tier?: Maybe<StringFilter>
-  tierCopy1?: Maybe<StringFilter>
+  partnerType?: Maybe<StringFilter>
   OR?: Maybe<Array<Maybe<SystemsIntegratorModelFilter>>>
 }
 
@@ -25888,8 +25888,8 @@ export enum SystemsIntegratorModelOrderBy {
   WebsiteUrlDesc = "websiteUrl_DESC",
   TierAsc = "tier_ASC",
   TierDesc = "tier_DESC",
-  TierCopy1Asc = "tierCopy1_ASC",
-  TierCopy1Desc = "tierCopy1_DESC"
+  PartnerTypeAsc = "partnerType_ASC",
+  PartnerTypeDesc = "partnerType_DESC"
 }
 
 /** Record of type Systems Integrator (systems_integrator) */
@@ -25911,6 +25911,7 @@ export type SystemsIntegratorRecord = {
   id: Scalars["ItemId"]
   logo?: Maybe<FileField>
   name?: Maybe<Scalars["String"]>
+  partnerType?: Maybe<Scalars["String"]>
   productCertifications: Array<HashicorpProductRecord>
   regionsServed: Array<SystemsIntegratorRegionRecord>
   relatedResources?: Maybe<Array<Maybe<LinkedContentRecord>>>
@@ -25919,7 +25920,6 @@ export type SystemsIntegratorRecord = {
     Array<Maybe<SystemsIntegratorHighlightRecord>>
   >
   tier?: Maybe<Scalars["String"]>
-  tierCopy1?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
   websiteUrl?: Maybe<Scalars["String"]>
 }
