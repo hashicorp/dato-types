@@ -15260,7 +15260,7 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allResourcesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
-  _allResourcesProductsV2sMeta: CollectionMetadata
+  _allResourcesV2ProductsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allSalesFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
@@ -15704,7 +15704,7 @@ export type Query = {
   /** Returns a collection of records */
   allResourcesLanguages: Array<ResourcesLanguageRecord>
   /** Returns a collection of records */
-  allResourcesProductsV2s: Array<ResourcesProductsV2Record>
+  allResourcesV2Products: Array<ResourcesV2ProductRecord>
   /** Returns a collection of records */
   allSalesFormPages: Array<SalesFormPageRecord>
   /** Returns a collection of records */
@@ -16188,7 +16188,7 @@ export type Query = {
   /** Returns the single instance record */
   resourcesPage?: Maybe<ResourcesPageRecord>
   /** Returns a specific record */
-  resourcesProductsV2?: Maybe<ResourcesProductsV2Record>
+  resourcesV2Product?: Maybe<ResourcesV2ProductRecord>
   /** Returns a specific record */
   salesForm?: Maybe<SalesFormRecord>
   /** Returns a specific record */
@@ -17258,9 +17258,9 @@ export type Query_AllResourcesMetaArgs = {
 }
 
 /** The query root for this schema */
-export type Query_AllResourcesProductsV2sMetaArgs = {
+export type Query_AllResourcesV2ProductsMetaArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<ResourcesProductsV2ModelFilter>
+  filter?: Maybe<ResourcesV2ProductModelFilter>
 }
 
 /** The query root for this schema */
@@ -18994,12 +18994,12 @@ export type QueryAllResourcesLanguagesArgs = {
 }
 
 /** The query root for this schema */
-export type QueryAllResourcesProductsV2sArgs = {
+export type QueryAllResourcesV2ProductsArgs = {
   locale?: Maybe<SiteLocale>
   skip?: Maybe<Scalars["IntType"]>
   first?: Maybe<Scalars["IntType"]>
-  filter?: Maybe<ResourcesProductsV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<ResourcesProductsV2ModelOrderBy>>>
+  filter?: Maybe<ResourcesV2ProductModelFilter>
+  orderBy?: Maybe<Array<Maybe<ResourcesV2ProductModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -20749,10 +20749,10 @@ export type QueryResourcesPageArgs = {
 }
 
 /** The query root for this schema */
-export type QueryResourcesProductsV2Args = {
+export type QueryResourcesV2ProductArgs = {
   locale?: Maybe<SiteLocale>
-  filter?: Maybe<ResourcesProductsV2ModelFilter>
-  orderBy?: Maybe<Array<Maybe<ResourcesProductsV2ModelOrderBy>>>
+  filter?: Maybe<ResourcesV2ProductModelFilter>
+  orderBy?: Maybe<Array<Maybe<ResourcesV2ProductModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -22038,7 +22038,7 @@ export type ResourcesPageRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-export type ResourcesProductsV2ModelFilter = {
+export type ResourcesV2ProductModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
   id?: Maybe<ItemIdFilter>
@@ -22052,10 +22052,10 @@ export type ResourcesProductsV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   productName?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
-  OR?: Maybe<Array<Maybe<ResourcesProductsV2ModelFilter>>>
+  OR?: Maybe<Array<Maybe<ResourcesV2ProductModelFilter>>>
 }
 
-export enum ResourcesProductsV2ModelOrderBy {
+export enum ResourcesV2ProductModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
   CreatedAtDesc = "_createdAt_DESC",
   CreatedAtAsc = "createdAt_ASC",
@@ -22082,9 +22082,9 @@ export enum ResourcesProductsV2ModelOrderBy {
   ProductNameDesc = "productName_DESC"
 }
 
-/** Record of type Resources Products V2 (resources_products_v2) */
-export type ResourcesProductsV2Record = {
-  __typename?: "ResourcesProductsV2Record"
+/** Record of type Resources V2 Product (resources_v2_product) */
+export type ResourcesV2ProductRecord = {
+  __typename?: "ResourcesV2ProductRecord"
   _createdAt: Scalars["DateTime"]
   _firstPublishedAt?: Maybe<Scalars["DateTime"]>
   _isValid: Scalars["BooleanType"]
@@ -22103,8 +22103,8 @@ export type ResourcesProductsV2Record = {
   updatedAt: Scalars["DateTime"]
 }
 
-/** Record of type Resources Products V2 (resources_products_v2) */
-export type ResourcesProductsV2Record_SeoMetaTagsArgs = {
+/** Record of type Resources V2 Product (resources_v2_product) */
+export type ResourcesV2ProductRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -22203,7 +22203,7 @@ export type ResourceV2Record = {
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
-  product: Array<ResourcesProductsV2Record>
+  product: Array<ResourcesV2ProductRecord>
   slug?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
