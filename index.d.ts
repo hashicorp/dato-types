@@ -22134,13 +22134,13 @@ export type ResourceV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   postDate?: Maybe<DateTimeFilter>
   hidden?: Maybe<BooleanFilter>
-  slug?: Maybe<SlugFilter>
   thumbnailImage?: Maybe<FileFilter>
   author?: Maybe<LinksFilter>
-  title?: Maybe<StringFilter>
   product?: Maybe<LinksFilter>
   enterprise?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
+  title?: Maybe<StringFilter>
+  slug?: Maybe<SlugFilter>
   contentSt?: Maybe<StructuredTextFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
@@ -22172,12 +22172,12 @@ export enum ResourceV2ModelOrderBy {
   PostDateDesc = "postDate_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
-  TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
   EnterpriseAsc = "enterprise_ASC",
   EnterpriseDesc = "enterprise_DESC",
   GatedAsc = "gated_ASC",
-  GatedDesc = "gated_DESC"
+  GatedDesc = "gated_DESC",
+  TitleAsc = "title_ASC",
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Resource V2 (resource_v2) */
