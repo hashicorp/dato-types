@@ -22235,6 +22235,7 @@ export type ResourceV2ModelFilter = {
   thumbnailImage?: Maybe<FileFilter>
   gated?: Maybe<BooleanFilter>
   externalLink?: Maybe<StringFilter>
+  language?: Maybe<LinkFilter>
   tags?: Maybe<LinksFilter>
   shareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
@@ -22242,9 +22243,23 @@ export type ResourceV2ModelFilter = {
   description?: Maybe<TextFilter>
   products?: Maybe<LinksFilter>
   enterprise?: Maybe<BooleanFilter>
+  legacyContent?: Maybe<LinksFilter>
+  contentType?: Maybe<LinkFilter>
   contentSt?: Maybe<StructuredTextFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
+
+export type ResourceV2ModelLegacyContentField =
+  | VideoSectionRecord
+  | TextSectionRecord
+  | CalloutSectionRecord
+  | MajorHeadlineSectionRecord
+  | TextImageSectionRecord
+  | EmbeddedSlidesSectionRecord
+  | SpeakersSectionRecord
+  | EmbeddedPodcastSectionRecord
+  | WistiaSectionRecord
+  | ImageSectionRecord
 
 export enum ResourceV2ModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -22299,6 +22314,7 @@ export type ResourceV2Record = {
   _updatedAt: Scalars["DateTime"]
   content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
   contentSt?: Maybe<ResourceV2ModelContentStField>
+  contentType?: Maybe<ResourceContentTypeRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
   enterprise?: Maybe<Scalars["BooleanType"]>
@@ -22306,6 +22322,8 @@ export type ResourceV2Record = {
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
+  language?: Maybe<ResourcesLanguageRecord>
+  legacyContent: Array<ResourceV2ModelLegacyContentField>
   postDate?: Maybe<Scalars["DateTime"]>
   products: Array<ResourcesV2ProductRecord>
   shareImage?: Maybe<FileField>
