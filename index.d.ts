@@ -22135,12 +22135,12 @@ export type ResourceV2ModelFilter = {
   postDate?: Maybe<DateTimeFilter>
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
-  author?: Maybe<LinksFilter>
-  product?: Maybe<LinksFilter>
-  enterprise?: Maybe<BooleanFilter>
   gated?: Maybe<BooleanFilter>
+  productCopy1?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
+  products?: Maybe<LinksFilter>
+  enterprise?: Maybe<BooleanFilter>
   contentSt?: Maybe<StructuredTextFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
@@ -22172,12 +22172,12 @@ export enum ResourceV2ModelOrderBy {
   PostDateDesc = "postDate_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
-  EnterpriseAsc = "enterprise_ASC",
-  EnterpriseDesc = "enterprise_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC"
+  TitleDesc = "title_DESC",
+  EnterpriseAsc = "enterprise_ASC",
+  EnterpriseDesc = "enterprise_DESC"
 }
 
 /** Record of type Resource V2 (resource_v2) */
@@ -22194,7 +22194,6 @@ export type ResourceV2Record = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
-  author: Array<PersonRecord>
   content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
   contentSt?: Maybe<ResourceV2ModelContentStField>
   createdAt: Scalars["DateTime"]
@@ -22203,7 +22202,8 @@ export type ResourceV2Record = {
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
-  product: Array<ResourcesV2ProductRecord>
+  productCopy1: Array<ResourcesV2ProductRecord>
+  products: Array<ResourcesV2ProductRecord>
   slug?: Maybe<Scalars["String"]>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
