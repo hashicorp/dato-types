@@ -22235,6 +22235,7 @@ export type ResourceV2ModelFilter = {
   thumbnailImage?: Maybe<FileFilter>
   gated?: Maybe<BooleanFilter>
   tags?: Maybe<LinksFilter>
+  shareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   products?: Maybe<LinksFilter>
@@ -22301,6 +22302,7 @@ export type ResourceV2Record = {
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
   products: Array<ResourcesV2ProductRecord>
+  shareImage?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
   tags: Array<ResourcesV2TagRecord>
   thumbnailImage?: Maybe<FileField>
