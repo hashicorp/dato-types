@@ -5653,31 +5653,6 @@ export type ExternalResourceRecordDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
-/** Record of type External URL (external_url) */
-export type ExternalUrlRecord = {
-  __typename?: "ExternalUrlRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-  url?: Maybe<Scalars["String"]>
-}
-
-/** Record of type External URL (external_url) */
-export type ExternalUrlRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
 export type FaqCategoryModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -9169,31 +9144,6 @@ export type IconListRecord = {
 
 /** Record of type Icon List (icon_list) */
 export type IconListRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Image Block (image_block) */
-export type ImageBlockRecord = {
-  __typename?: "ImageBlockRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  image?: Maybe<FileField>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Image Block (image_block) */
-export type ImageBlockRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
@@ -22206,13 +22156,8 @@ export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
-export type ResourceV2ModelContentField =
-  | TextBlockRecord
-  | ImageBlockRecord
-  | ExternalUrlRecord
-
-export type ResourceV2ModelContentStField = {
-  __typename?: "ResourceV2ModelContentStField"
+export type ResourceV2ModelContentField = {
+  __typename?: "ResourceV2ModelContentField"
   blocks?: Maybe<Array<Maybe<VideoBlockRecord>>>
   links: Array<EventsPageMerchandisingSlotRecord>
   value: Scalars["JsonField"]
@@ -22245,7 +22190,7 @@ export type ResourceV2ModelFilter = {
   enterprise?: Maybe<BooleanFilter>
   legacyContent?: Maybe<LinksFilter>
   contentType?: Maybe<LinkFilter>
-  contentSt?: Maybe<StructuredTextFilter>
+  content?: Maybe<StructuredTextFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -22312,8 +22257,7 @@ export type ResourceV2Record = {
   _status: ItemStatus
   _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
   _updatedAt: Scalars["DateTime"]
-  content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
-  contentSt?: Maybe<ResourceV2ModelContentStField>
+  content?: Maybe<ResourceV2ModelContentField>
   contentType?: Maybe<ResourceContentTypeRecord>
   createdAt: Scalars["DateTime"]
   description?: Maybe<Scalars["String"]>
@@ -26957,36 +26901,6 @@ export type TestimonialSliderRecord = {
 /** Record of type Testimonial Slider (testimonial_slider) */
 export type TestimonialSliderRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Text Block (text_block) */
-export type TextBlockRecord = {
-  __typename?: "TextBlockRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  text?: Maybe<Scalars["String"]>
-  updatedAt: Scalars["DateTime"]
-}
-
-/** Record of type Text Block (text_block) */
-export type TextBlockRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Text Block (text_block) */
-export type TextBlockRecordTextArgs = {
-  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 /** Specifies how to filter text fields */
