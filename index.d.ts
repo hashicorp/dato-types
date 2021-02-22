@@ -22302,7 +22302,7 @@ export type ResourceV2Record = {
   postDate?: Maybe<Scalars["DateTime"]>
   products: Array<ResourcesV2ProductRecord>
   slug?: Maybe<Scalars["String"]>
-  tags: Array<ResourcesV2ProductRecord>
+  tags: Array<ResourcesV2TagRecord>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
