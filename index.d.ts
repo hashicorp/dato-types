@@ -15262,6 +15262,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allResourcesV2ProductsMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allResourcesV2TagsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allSalesFormPagesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allSalesFormsMeta: CollectionMetadata
@@ -15705,6 +15707,8 @@ export type Query = {
   allResourcesLanguages: Array<ResourcesLanguageRecord>
   /** Returns a collection of records */
   allResourcesV2Products: Array<ResourcesV2ProductRecord>
+  /** Returns a collection of records */
+  allResourcesV2Tags: Array<ResourcesV2TagRecord>
   /** Returns a collection of records */
   allSalesFormPages: Array<SalesFormPageRecord>
   /** Returns a collection of records */
@@ -16189,6 +16193,8 @@ export type Query = {
   resourcesPage?: Maybe<ResourcesPageRecord>
   /** Returns a specific record */
   resourcesV2Product?: Maybe<ResourcesV2ProductRecord>
+  /** Returns a specific record */
+  resourcesV2Tag?: Maybe<ResourcesV2TagRecord>
   /** Returns a specific record */
   salesForm?: Maybe<SalesFormRecord>
   /** Returns a specific record */
@@ -17261,6 +17267,12 @@ export type Query_AllResourcesMetaArgs = {
 export type Query_AllResourcesV2ProductsMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<ResourcesV2ProductModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllResourcesV2TagsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<ResourcesV2TagModelFilter>
 }
 
 /** The query root for this schema */
@@ -19000,6 +19012,15 @@ export type QueryAllResourcesV2ProductsArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<ResourcesV2ProductModelFilter>
   orderBy?: Maybe<Array<Maybe<ResourcesV2ProductModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllResourcesV2TagsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<ResourcesV2TagModelFilter>
+  orderBy?: Maybe<Array<Maybe<ResourcesV2TagModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -20756,6 +20777,13 @@ export type QueryResourcesV2ProductArgs = {
 }
 
 /** The query root for this schema */
+export type QueryResourcesV2TagArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<ResourcesV2TagModelFilter>
+  orderBy?: Maybe<Array<Maybe<ResourcesV2TagModelOrderBy>>>
+}
+
+/** The query root for this schema */
 export type QuerySalesFormArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<SalesFormModelFilter>
@@ -22108,6 +22136,76 @@ export type ResourcesV2ProductRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type ResourcesV2TagModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  slug?: Maybe<SlugFilter>
+  name?: Maybe<StringFilter>
+  OR?: Maybe<Array<Maybe<ResourcesV2TagModelFilter>>>
+}
+
+export enum ResourcesV2TagModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC",
+  NameAsc = "name_ASC",
+  NameDesc = "name_DESC"
+}
+
+/** Record of type Resources V2 Tag (resources_v2_tag) */
+export type ResourcesV2TagRecord = {
+  __typename?: "ResourcesV2TagRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  name?: Maybe<Scalars["String"]>
+  slug?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Resources V2 Tag (resources_v2_tag) */
+export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type ResourceV2ModelContentField =
   | TextBlockRecord
   | ImageBlockRecord
@@ -22136,7 +22234,7 @@ export type ResourceV2ModelFilter = {
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
   gated?: Maybe<BooleanFilter>
-  productCopy1?: Maybe<LinksFilter>
+  tags?: Maybe<LinksFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   products?: Maybe<LinksFilter>
@@ -22202,9 +22300,9 @@ export type ResourceV2Record = {
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   postDate?: Maybe<Scalars["DateTime"]>
-  productCopy1: Array<ResourcesV2ProductRecord>
   products: Array<ResourcesV2ProductRecord>
   slug?: Maybe<Scalars["String"]>
+  tags: Array<ResourcesV2ProductRecord>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
