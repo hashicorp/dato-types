@@ -22234,10 +22234,12 @@ export type ResourceV2ModelFilter = {
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
   gated?: Maybe<BooleanFilter>
+  externalLink?: Maybe<StringFilter>
   tags?: Maybe<LinksFilter>
   shareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
+  description?: Maybe<TextFilter>
   products?: Maybe<LinksFilter>
   enterprise?: Maybe<BooleanFilter>
   contentSt?: Maybe<StructuredTextFilter>
@@ -22273,6 +22275,8 @@ export enum ResourceV2ModelOrderBy {
   HiddenDesc = "hidden_DESC",
   GatedAsc = "gated_ASC",
   GatedDesc = "gated_DESC",
+  ExternalLinkAsc = "externalLink_ASC",
+  ExternalLinkDesc = "externalLink_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   EnterpriseAsc = "enterprise_ASC",
@@ -22296,7 +22300,9 @@ export type ResourceV2Record = {
   content?: Maybe<Array<Maybe<ResourceV2ModelContentField>>>
   contentSt?: Maybe<ResourceV2ModelContentStField>
   createdAt: Scalars["DateTime"]
+  description?: Maybe<Scalars["String"]>
   enterprise?: Maybe<Scalars["BooleanType"]>
+  externalLink?: Maybe<Scalars["String"]>
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
@@ -22313,6 +22319,11 @@ export type ResourceV2Record = {
 /** Record of type Resource V2 (resource_v2) */
 export type ResourceV2Record_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Resource V2 (resource_v2) */
+export type ResourceV2RecordDescriptionArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type ResponsiveImage = {
