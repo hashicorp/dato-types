@@ -22183,10 +22183,7 @@ export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
 }
 
 export type ResourceV2ModelContentBlocksField =
-  | BlogCtaButtonRecord
   | CodeBlockRecord
-  | MarkdownRecord
-  | TextRecord
   | ImageBlockRecord
 
 export type ResourceV2ModelContentField = {
