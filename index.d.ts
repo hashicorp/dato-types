@@ -228,6 +228,36 @@ export type AlertRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Audio Block (audio_block) */
+export type AudioBlockRecord = {
+  __typename?: "AudioBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  applePodcastsUrl?: Maybe<Scalars["String"]>
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  souncloudUrl?: Maybe<Scalars["String"]>
+  soundcloudEpisodeId?: Maybe<Scalars["String"]>
+  spotifyUrl?: Maybe<Scalars["String"]>
+  subscribeCtaText?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+  youtubeMusicUrl?: Maybe<Scalars["String"]>
+}
+
+/** Record of type Audio Block (audio_block) */
+export type AudioBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Automation Bullet (automation_bullet) */
 export type AutomationBulletRecord = {
   __typename?: "AutomationBulletRecord"
@@ -1797,6 +1827,38 @@ export type CalloutsSectionRecord = {
 /** Record of type Callouts Section (callouts_section) */
 export type CalloutsSectionRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Call To Action Block (call_to_action_block) */
+export type CallToActionBlockRecord = {
+  __typename?: "CallToActionBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  heading?: Maybe<Scalars["String"]>
+  id: Scalars["ItemId"]
+  links: Array<LinkRecord>
+  subheading?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Call To Action Block (call_to_action_block) */
+export type CallToActionBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Call To Action Block (call_to_action_block) */
+export type CallToActionBlockRecordSubheadingArgs = {
+  markdown?: Maybe<Scalars["Boolean"]>
 }
 
 export type CallToActionModelFilter = {
@@ -22185,6 +22247,9 @@ export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
 export type ResourceV2ModelContentBlocksField =
   | CodeBlockRecord
   | ImageBlockRecord
+  | CallToActionBlockRecord
+  | AudioBlockRecord
+  | SlidesBlockRecord
 
 export type ResourceV2ModelContentField = {
   __typename?: "ResourceV2ModelContentField"
@@ -25053,6 +25118,31 @@ export type SiteGlobalSeoArgs = {
 export enum SiteLocale {
   En = "en",
   Ja = "ja"
+}
+
+/** Record of type Slides Block (slides_block) */
+export type SlidesBlockRecord = {
+  __typename?: "SlidesBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  slideshareUrl?: Maybe<Scalars["String"]>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Slides Block (slides_block) */
+export type SlidesBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 /** Specifies how to filter Slug fields */
