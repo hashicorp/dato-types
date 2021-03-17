@@ -22187,7 +22187,6 @@ export type ResourceV2ModelContentBlocksField =
   | MarkdownRecord
   | TextRecord
   | ImageBlockRecord
-  | VideoBlockRecord
 
 export type ResourceV2ModelContentField = {
   __typename?: "ResourceV2ModelContentField"
@@ -29562,31 +29561,6 @@ export type VerticalTextBlockListSectionRecord = {
 
 /** Record of type Vertical Text Block List Section (vertical_text_block_list_section) */
 export type VerticalTextBlockListSectionRecord_SeoMetaTagsArgs = {
-  locale?: Maybe<SiteLocale>
-}
-
-/** Record of type Video Block (video_block) */
-export type VideoBlockRecord = {
-  __typename?: "VideoBlockRecord"
-  _createdAt: Scalars["DateTime"]
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
-  _isValid: Scalars["BooleanType"]
-  _modelApiKey: Scalars["String"]
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
-  _publishedAt?: Maybe<Scalars["DateTime"]>
-  /** SEO meta tags */
-  _seoMetaTags: Array<Tag>
-  _status: ItemStatus
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
-  _updatedAt: Scalars["DateTime"]
-  createdAt: Scalars["DateTime"]
-  id: Scalars["ItemId"]
-  updatedAt: Scalars["DateTime"]
-  url?: Maybe<VideoField>
-}
-
-/** Record of type Video Block (video_block) */
-export type VideoBlockRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
