@@ -9147,6 +9147,31 @@ export type IconListRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+/** Record of type Image Block (image_block) */
+export type ImageBlockRecord = {
+  __typename?: "ImageBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  image?: Maybe<FileField>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Image Block (image_block) */
+export type ImageBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type ImageLockupModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -22156,9 +22181,17 @@ export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type ResourceV2ModelContentBlocksField =
+  | BlogCtaButtonRecord
+  | CodeBlockRecord
+  | MarkdownRecord
+  | TextRecord
+  | ImageBlockRecord
+  | VideoBlockRecord
+
 export type ResourceV2ModelContentField = {
   __typename?: "ResourceV2ModelContentField"
-  blocks?: Maybe<Array<Maybe<VideoBlockRecord>>>
+  blocks: Array<ResourceV2ModelContentBlocksField>
   links: Array<EventsPageMerchandisingSlotRecord>
   value: Scalars["JsonField"]
 }
