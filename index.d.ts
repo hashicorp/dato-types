@@ -244,13 +244,13 @@ export type AudioBlockRecord = {
   _updatedAt: Scalars["DateTime"]
   applePodcastsUrl?: Maybe<Scalars["String"]>
   createdAt: Scalars["DateTime"]
+  googlePodcastsUrl?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   souncloudUrl?: Maybe<Scalars["String"]>
   soundcloudEpisodeId?: Maybe<Scalars["String"]>
   spotifyUrl?: Maybe<Scalars["String"]>
   subscribeCtaText?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
-  youtubeMusicUrl?: Maybe<Scalars["String"]>
 }
 
 /** Record of type Audio Block (audio_block) */
@@ -22272,6 +22272,7 @@ export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
 export type ResourceV2ModelContentBlocksField =
   | CodeBlockRecord
   | ImageBlockRecord
+  | VideoBlockRecord
   | CallToActionBlockRecord
   | AudioBlockRecord
   | SlidesBlockRecord
@@ -29675,6 +29676,31 @@ export type VerticalTextBlockListSectionRecord = {
 
 /** Record of type Vertical Text Block List Section (vertical_text_block_list_section) */
 export type VerticalTextBlockListSectionRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
+/** Record of type Video Block (video_block) */
+export type VideoBlockRecord = {
+  __typename?: "VideoBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+  video?: Maybe<VideoField>
+}
+
+/** Record of type Video Block (video_block) */
+export type VideoBlockRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
