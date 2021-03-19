@@ -13473,6 +13473,31 @@ export type PartnersPageRecordTrainingPartnersDescriptionArgs = {
   markdown?: Maybe<Scalars["Boolean"]>
 }
 
+/** Record of type People Block (people_block) */
+export type PeopleBlockRecord = {
+  __typename?: "PeopleBlockRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  people: Array<PersonRecord>
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type People Block (people_block) */
+export type PeopleBlockRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 export type PersonListModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
   createdAt?: Maybe<CreatedAtFilter>
@@ -22250,6 +22275,7 @@ export type ResourceV2ModelContentBlocksField =
   | CallToActionBlockRecord
   | AudioBlockRecord
   | SlidesBlockRecord
+  | PeopleBlockRecord
 
 export type ResourceV2ModelContentField = {
   __typename?: "ResourceV2ModelContentField"
