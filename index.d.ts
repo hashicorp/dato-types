@@ -246,8 +246,8 @@ export type AudioBlockRecord = {
   createdAt: Scalars["DateTime"]
   googlePodcastsUrl?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
-  souncloudUrl?: Maybe<Scalars["String"]>
   soundcloudEpisodeId?: Maybe<Scalars["String"]>
+  soundcloudUrl?: Maybe<Scalars["String"]>
   spotifyUrl?: Maybe<Scalars["String"]>
   subscribeCtaText?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
