@@ -448,9 +448,9 @@ export type BasicTableRecord_SeoMetaTagsArgs = {
 }
 
 export type BecomeAPartnerPageModelContentField =
-  | TextSectionRecord
-  | MajorHeadlineSectionRecord
   | FeatureTableRecord
+  | MajorHeadlineSectionRecord
+  | TextSectionRecord
 
 /** Record of type Become A Partner Page (become_a_partner_page) */
 export type BecomeAPartnerPageRecord = {
@@ -881,11 +881,11 @@ export type BlogPostRecordSnippetArgs = {
 
 export type BlogPostV2ModelContentField =
   | BlogCtaButtonRecord
+  | BlogImageRecord
   | BlogInlineRelatedArticleRecord
+  | BlogVideoRecord
   | CodeBlockRecord
   | MarkdownRecord
-  | BlogVideoRecord
-  | BlogImageRecord
   | TextRecord
 
 export type BlogPostV2ModelFilter = {
@@ -2707,8 +2707,8 @@ export type CaseStudyTechnologyRecord_SeoMetaTagsArgs = {
 }
 
 export type CertificationPageModelContentField =
-  | TextSectionRecord
   | MajorHeadlineSectionRecord
+  | TextSectionRecord
 
 /** Record of type Certification Page (certification_page) */
 export type CertificationPageRecord = {
@@ -3540,11 +3540,11 @@ export type ContactFormPageModelFilter = {
 }
 
 export type ContactFormPageModelFormFieldsField =
-  | FormTextFieldRecord
-  | FormTextAreaFieldRecord
-  | FormMultiSelectFieldRecord
-  | FormHiddenFieldRecord
   | FormEmailFieldRecord
+  | FormHiddenFieldRecord
+  | FormMultiSelectFieldRecord
+  | FormTextAreaFieldRecord
+  | FormTextFieldRecord
 
 export enum ContactFormPageModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -4322,10 +4322,10 @@ export type EnterprisePricingSectionRecord_SeoMetaTagsArgs = {
 }
 
 export type EnterpriseProductModelEnterpriseProductPageField =
-  | TerraformProductPageRecord
-  | NomadProductPageRecord
-  | VaultProductPageRecord
   | ConsulProductPageRecord
+  | NomadProductPageRecord
+  | TerraformProductPageRecord
+  | VaultProductPageRecord
 
 export type EnterpriseProductModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -4451,20 +4451,20 @@ export enum EnterpriseProductPageModelOrderBy {
 }
 
 export type EnterpriseProductPageModelPageContentField =
-  | VideoSectionRecord
-  | HtmlSectionRecord
-  | MiniCalloutRecord
-  | HeroSectionRecord
-  | ImageTextCarouselRecord
   | CalloutSectionRecord
-  | TextImageSectionRecord
   | ConsulGraphicSectionRecord
-  | ProductPackageSectionRecord
+  | HeroSectionRecord
+  | HtmlSectionRecord
+  | ImageTextCarouselRecord
   | LargeLogoGridSectionRecord
-  | TextHeadlineAndGridSectionRecord
-  | VaultIntegrationSectionRecord
-  | TerraformGraphSectionRecord
+  | MiniCalloutRecord
+  | ProductPackageSectionRecord
   | SectionBlockRecord
+  | TerraformGraphSectionRecord
+  | TextHeadlineAndGridSectionRecord
+  | TextImageSectionRecord
+  | VaultIntegrationSectionRecord
+  | VideoSectionRecord
 
 /** Record of type Enterprise Product Page (deprecated) (enterprise_product_page) */
 export type EnterpriseProductPageRecord = {
@@ -5331,11 +5331,11 @@ export type EventTypeRecord_SeoMetaTagsArgs = {
 }
 
 export type EventV2ModelEventTypeField =
+  | EventConferenceRecord
   | EventExternalWebinarRecord
   | EventTrainingRecord
   | EventWebinarRecord
   | EventWorkshopRecord
-  | EventConferenceRecord
 
 export type EventV2ModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -7107,8 +7107,8 @@ export enum HashiconfLandingPageModelOrderBy {
 }
 
 export type HashiconfLandingPageModelSubPagesField =
-  | HashiconfSectionBlockPageRecord
   | HashiconfBasicPageRecord
+  | HashiconfSectionBlockPageRecord
 
 /** Record of type HashiConf Landing Page (hashiconf_landing_page) */
 export type HashiconfLandingPageRecord = {
@@ -7703,16 +7703,16 @@ export type HashiconfSchedulePageRecord_SeoMetaTagsArgs = {
 }
 
 export type HashiconfSectionBlockModelContentField =
-  | HashiconfTextAndFullImageRecord
-  | HashiconfSponsorSectionRecord
   | FaqCategoryRecord
-  | SbcTextAndContentRecord
-  | SbcTextRecord
+  | HashiconfFeaturedSpeakersSectionRecord
+  | HashiconfScheduleLiteSectionRecord
+  | HashiconfSponsorSectionRecord
+  | HashiconfTextAndFullImageRecord
+  | SbcLinkedTextSummaryListRecord
   | SbcMultiButtonRecord
   | SbcSectionHeaderRecord
-  | HashiconfFeaturedSpeakersSectionRecord
-  | SbcLinkedTextSummaryListRecord
-  | HashiconfScheduleLiteSectionRecord
+  | SbcTextAndContentRecord
+  | SbcTextRecord
 
 export type HashiconfSectionBlockModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -12888,9 +12888,9 @@ export type OfficeHoursSessionRecordDescriptionArgs = {
 }
 
 export type OnDemandResourceModelBodyContentField =
-  | TextSectionRecord
-  | TextHeadlineSectionRecord
   | BasicTableRecord
+  | TextHeadlineSectionRecord
+  | TextSectionRecord
 
 export type OnDemandResourceModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -12929,9 +12929,9 @@ export type OnDemandResourceModelFilter = {
 }
 
 export type OnDemandResourceModelHeroContentField =
-  | TextSectionRecord
-  | TextHeadlineSectionRecord
   | SpeakersSectionRecord
+  | TextHeadlineSectionRecord
+  | TextSectionRecord
 
 export enum OnDemandResourceModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -12979,10 +12979,10 @@ export type OnDemandResourceModelProductField =
   | OpenSourceToolRecord
 
 export type OnDemandResourceModelTargetLinkField =
-  | TemplatePageRecord
-  | ResourceRecord
-  | WhitePaperRecord
   | BlogPostRecord
+  | ResourceRecord
+  | TemplatePageRecord
+  | WhitePaperRecord
 
 /** Record of type On Demand Resource (on_demand_resource) */
 export type OnDemandResourceRecord = {
@@ -14118,9 +14118,9 @@ export type PressPageRecord_SeoMetaTagsArgs = {
 }
 
 export type PressPageV2ModelHeroFeaturedPostsField =
-  | PressMediaCoveragePostRecord
-  | PressCommunityVoicesPostRecord
   | PressAnalystReportPostRecord
+  | PressCommunityVoicesPostRecord
+  | PressMediaCoveragePostRecord
   | PressReleaseRecord
 
 /** Record of type Press Page v2 (press_page_v2) */
@@ -14373,8 +14373,8 @@ export type PricingPageRecord_SeoMetaTagsArgs = {
 }
 
 export type ProductCertificationPageModelContentField =
-  | TextSectionRecord
   | MajorHeadlineSectionRecord
+  | TextSectionRecord
 
 export type ProductCertificationPageModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -21901,16 +21901,16 @@ export type ResourceMediaTypeRecord_SeoMetaTagsArgs = {
 }
 
 export type ResourceModelContentField =
-  | VideoSectionRecord
-  | TextSectionRecord
   | CalloutSectionRecord
-  | MajorHeadlineSectionRecord
-  | TextImageSectionRecord
-  | EmbeddedSlidesSectionRecord
-  | SpeakersSectionRecord
   | EmbeddedPodcastSectionRecord
-  | WistiaSectionRecord
+  | EmbeddedSlidesSectionRecord
   | ImageSectionRecord
+  | MajorHeadlineSectionRecord
+  | SpeakersSectionRecord
+  | TextImageSectionRecord
+  | TextSectionRecord
+  | VideoSectionRecord
+  | WistiaSectionRecord
 
 export type ResourceModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -22270,13 +22270,13 @@ export type ResourcesV2TagRecord_SeoMetaTagsArgs = {
 }
 
 export type ResourceV2ModelContentBlocksField =
+  | AudioBlockRecord
+  | CallToActionBlockRecord
   | CodeBlockRecord
   | ImageBlockRecord
-  | VideoBlockRecord
-  | CallToActionBlockRecord
-  | AudioBlockRecord
-  | SlidesBlockRecord
   | PeopleBlockRecord
+  | SlidesBlockRecord
+  | VideoBlockRecord
 
 export type ResourceV2ModelContentField = {
   __typename?: "ResourceV2ModelContentField"
@@ -22317,16 +22317,16 @@ export type ResourceV2ModelFilter = {
 }
 
 export type ResourceV2ModelLegacyContentField =
-  | VideoSectionRecord
-  | TextSectionRecord
   | CalloutSectionRecord
-  | MajorHeadlineSectionRecord
-  | TextImageSectionRecord
-  | EmbeddedSlidesSectionRecord
-  | SpeakersSectionRecord
   | EmbeddedPodcastSectionRecord
-  | WistiaSectionRecord
+  | EmbeddedSlidesSectionRecord
   | ImageSectionRecord
+  | MajorHeadlineSectionRecord
+  | SpeakersSectionRecord
+  | TextImageSectionRecord
+  | TextSectionRecord
+  | VideoSectionRecord
+  | WistiaSectionRecord
 
 export enum ResourceV2ModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -22473,11 +22473,11 @@ export type SalesFormModelFilter = {
 }
 
 export type SalesFormModelFormFieldsField =
-  | FormTextFieldRecord
-  | FormTextAreaFieldRecord
-  | FormMultiSelectFieldRecord
-  | FormHiddenFieldRecord
   | FormEmailFieldRecord
+  | FormHiddenFieldRecord
+  | FormMultiSelectFieldRecord
+  | FormTextAreaFieldRecord
+  | FormTextFieldRecord
 
 export enum SalesFormModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -22531,11 +22531,11 @@ export type SalesFormPageModelFilter = {
 }
 
 export type SalesFormPageModelFormFieldsField =
-  | FormTextFieldRecord
-  | FormTextAreaFieldRecord
-  | FormMultiSelectFieldRecord
-  | FormHiddenFieldRecord
   | FormEmailFieldRecord
+  | FormHiddenFieldRecord
+  | FormMultiSelectFieldRecord
+  | FormTextAreaFieldRecord
+  | FormTextFieldRecord
 
 export enum SalesFormPageModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -23826,15 +23826,15 @@ export type SbcResourcesSliderModelFilter = {
 }
 
 export type SbcResourcesSliderModelFilterByField =
+  | CompanyRecord
+  | EnterpriseProductRecord
+  | EventRecord
+  | OpenSourceToolRecord
   | PersonRecord
   | ResourceContentTypeRecord
   | ResourceIndustryRecord
   | ResourceInfrastructureProviderRecord
   | ResourceMediaTypeRecord
-  | EnterpriseProductRecord
-  | OpenSourceToolRecord
-  | EventRecord
-  | CompanyRecord
 
 export enum SbcResourcesSliderModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -24285,18 +24285,18 @@ export type SbcUseCasesSectionRecord_SeoMetaTagsArgs = {
 
 export type SblHorizontalModelContentField =
   | SbcAlertRecord
-  | SblHorizontalRecord
-  | SbcTextAndContentRecord
-  | SbcResourcesSliderRecord
-  | SbcImageRecord
-  | SbcTextRecord
-  | SbcMultiButtonRecord
-  | SbcCalloutSectionRecord
-  | SbcLogoGridRecord
-  | SbcSectionHeaderRecord
-  | SbcCaseStudySliderRecord
-  | SblVerticalRecord
   | SbcBeforeAfterDiagramRecord
+  | SbcCalloutSectionRecord
+  | SbcCaseStudySliderRecord
+  | SbcImageRecord
+  | SbcLogoGridRecord
+  | SbcMultiButtonRecord
+  | SbcResourcesSliderRecord
+  | SbcSectionHeaderRecord
+  | SbcTextAndContentRecord
+  | SbcTextRecord
+  | SblHorizontalRecord
+  | SblVerticalRecord
 
 export type SblHorizontalModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -24365,24 +24365,24 @@ export type SblHorizontalRecord_SeoMetaTagsArgs = {
 }
 
 export type SblVerticalModelContentField =
-  | TerraformOfferingTableRecord
-  | SbcAlertRecord
-  | SblHorizontalRecord
   | FaqCategoryRecord
-  | SbcTextAndContentRecord
-  | SbcResourcesSliderRecord
-  | SbcImageRecord
-  | SbcTextRecord
-  | SbcMultiButtonRecord
-  | SbcProductPricingRecord
-  | SbcCalloutSectionRecord
-  | SbcLogoGridRecord
-  | SbcSectionHeaderRecord
-  | SbcCaseStudySliderRecord
-  | SbcProductFeatureTableRecord
-  | SblVerticalRecord
-  | SbcUseCasesSectionRecord
+  | SbcAlertRecord
   | SbcBeforeAfterDiagramRecord
+  | SbcCalloutSectionRecord
+  | SbcCaseStudySliderRecord
+  | SbcImageRecord
+  | SbcLogoGridRecord
+  | SbcMultiButtonRecord
+  | SbcProductFeatureTableRecord
+  | SbcProductPricingRecord
+  | SbcResourcesSliderRecord
+  | SbcSectionHeaderRecord
+  | SbcTextAndContentRecord
+  | SbcTextRecord
+  | SbcUseCasesSectionRecord
+  | SblHorizontalRecord
+  | SblVerticalRecord
+  | TerraformOfferingTableRecord
 
 export type SblVerticalModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -24545,21 +24545,21 @@ export type SchemaMigrationRecord_SeoMetaTagsArgs = {
 }
 
 export type SectionBlockModelComponentsField =
-  | PackageSectionRecord
-  | TestimonialSliderRecord
-  | MultiButtonRecord
-  | ImageRecord
-  | VideoRecord
-  | TwoColumnTextRecord
-  | TaggedResourceRecord
-  | CalloutsSectionRecord
-  | TwoColumnTextBlockRecord
-  | SectionHeaderRecord
-  | TextImageRecord
   | ButtonRecord
-  | LogoGridRecord
+  | CalloutsSectionRecord
   | HeroRecord
+  | ImageRecord
+  | LogoGridRecord
+  | MultiButtonRecord
+  | PackageSectionRecord
+  | SectionHeaderRecord
   | SmallTextTagRecord
+  | TaggedResourceRecord
+  | TestimonialSliderRecord
+  | TextImageRecord
+  | TwoColumnTextBlockRecord
+  | TwoColumnTextRecord
+  | VideoRecord
 
 export type SectionBlockModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -24968,8 +24968,8 @@ export type SectionThemeRecord_SeoMetaTagsArgs = {
 }
 
 export type SentinelPageModelPageContentField =
-  | HeroSectionRecord
   | CalloutSectionRecord
+  | HeroSectionRecord
 
 /** Record of type Sentinel Page (sentinel_page) */
 export type SentinelPageRecord = {
@@ -25163,7 +25163,7 @@ export type SlidesBlockRecord = {
   _updatedAt: Scalars["DateTime"]
   createdAt: Scalars["DateTime"]
   id: Scalars["ItemId"]
-  slideshareUrl?: Maybe<Scalars["String"]>
+  slideshareEmbedKey?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
@@ -26234,12 +26234,12 @@ export type Tag = {
 }
 
 export type TaggedResourceModelResourceFiltersField =
+  | EnterpriseProductRecord
+  | OpenSourceToolRecord
   | ResourceContentTypeRecord
   | ResourceIndustryRecord
   | ResourceInfrastructureProviderRecord
   | ResourceMediaTypeRecord
-  | EnterpriseProductRecord
-  | OpenSourceToolRecord
 
 /** Record of type Tagged Resources (tagged_resource) */
 export type TaggedResourceRecord = {
@@ -26267,14 +26267,14 @@ export type TaggedResourceRecord_SeoMetaTagsArgs = {
 }
 
 export type TemplatePageModelContentField =
-  | VideoSectionRecord
-  | TextSectionRecord
-  | HtmlSectionRecord
-  | HeroSectionRecord
   | CalloutSectionRecord
+  | HeroSectionRecord
+  | HtmlSectionRecord
+  | ImageSectionRecord
   | MajorHeadlineSectionRecord
   | TextImageSectionRecord
-  | ImageSectionRecord
+  | TextSectionRecord
+  | VideoSectionRecord
 
 export type TemplatePageModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -28724,12 +28724,12 @@ export type TrialFormPageModelFilter = {
 }
 
 export type TrialFormPageModelFormFieldsField =
-  | FormTextFieldRecord
-  | FormTextAreaFieldRecord
-  | FormMultiSelectFieldRecord
-  | FormHiddenFieldRecord
-  | FormEmailFieldRecord
   | FormCheckboxFieldRecord
+  | FormEmailFieldRecord
+  | FormHiddenFieldRecord
+  | FormMultiSelectFieldRecord
+  | FormTextAreaFieldRecord
+  | FormTextFieldRecord
 
 export enum TrialFormPageModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
@@ -29892,9 +29892,9 @@ export type VideoSourceRecord_SeoMetaTagsArgs = {
 }
 
 export type WebinarModelBodyContentField =
-  | TextSectionRecord
-  | TextHeadlineSectionRecord
   | BasicTableRecord
+  | TextHeadlineSectionRecord
+  | TextSectionRecord
 
 export type WebinarModelFilter = {
   _createdAt?: Maybe<CreatedAtFilter>
@@ -29934,8 +29934,8 @@ export type WebinarModelFilter = {
 }
 
 export type WebinarModelHeroContentField =
-  | TextHeadlineSectionRecord
   | SpeakersSectionRecord
+  | TextHeadlineSectionRecord
 
 export enum WebinarModelOrderBy {
   CreatedAtAsc = "_createdAt_ASC",
