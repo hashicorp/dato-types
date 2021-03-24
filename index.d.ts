@@ -22297,7 +22297,7 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  resourceIndustry?: Maybe<LinkFilter>
+  industry?: Maybe<LinksFilter>
   postDate?: Maybe<DateTimeFilter>
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
@@ -22390,12 +22390,12 @@ export type ResourceV2Record = {
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
+  industry: Array<ResourceIndustryRecord>
   infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   language?: Maybe<ResourcesLanguageRecord>
   legacyContent: Array<ResourceV2ModelLegacyContentField>
   postDate?: Maybe<Scalars["DateTime"]>
   products: Array<ResourcesV2ProductRecord>
-  resourceIndustry?: Maybe<ResourceIndustryRecord>
   shareImage?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
   tags: Array<ResourcesV2TagRecord>
