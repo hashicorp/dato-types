@@ -22314,7 +22314,7 @@ export type ResourceV2ModelFilter = {
   legacyContent?: Maybe<LinksFilter>
   contentType?: Maybe<LinkFilter>
   content?: Maybe<StructuredTextFilter>
-  resourceInfrastructureProvider?: Maybe<LinksFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -22390,12 +22390,12 @@ export type ResourceV2Record = {
   gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
+  infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   language?: Maybe<ResourcesLanguageRecord>
   legacyContent: Array<ResourceV2ModelLegacyContentField>
   postDate?: Maybe<Scalars["DateTime"]>
   products: Array<ResourcesV2ProductRecord>
   resourceIndustry?: Maybe<ResourceIndustryRecord>
-  resourceInfrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   shareImage?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
   tags: Array<ResourcesV2TagRecord>
