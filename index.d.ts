@@ -12981,6 +12981,7 @@ export type OnDemandResourceModelProductField =
 export type OnDemandResourceModelTargetLinkField =
   | BlogPostRecord
   | ResourceRecord
+  | ResourceV2Record
   | TemplatePageRecord
   | WhitePaperRecord
 
