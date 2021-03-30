@@ -22302,7 +22302,6 @@ export type ResourceV2ModelFilter = {
   postDate?: Maybe<DateTimeFilter>
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
-  gated?: Maybe<BooleanFilter>
   externalLink?: Maybe<StringFilter>
   language?: Maybe<LinkFilter>
   tags?: Maybe<LinksFilter>
@@ -22358,8 +22357,6 @@ export enum ResourceV2ModelOrderBy {
   PostDateDesc = "postDate_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
-  GatedAsc = "gated_ASC",
-  GatedDesc = "gated_DESC",
   ExternalLinkAsc = "externalLink_ASC",
   ExternalLinkDesc = "externalLink_DESC",
   TitleAsc = "title_ASC",
@@ -22388,7 +22385,6 @@ export type ResourceV2Record = {
   description?: Maybe<Scalars["String"]>
   enterprise?: Maybe<Scalars["BooleanType"]>
   externalLink?: Maybe<Scalars["String"]>
-  gated?: Maybe<Scalars["BooleanType"]>
   hidden?: Maybe<Scalars["BooleanType"]>
   id: Scalars["ItemId"]
   industry: Array<ResourceIndustryRecord>
