@@ -25933,8 +25933,8 @@ export type StringFilter = {
   matches?: Maybe<StringMatchesFilter>
   /** Exclude records based on a regular expression */
   notMatches?: Maybe<StringMatchesFilter>
-  /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: Maybe<Scalars["BooleanType"]>
+  /** Filter records with the specified field set as blank (null or empty string) */
+  isBlank?: Maybe<Scalars["BooleanType"]>
   /** Search for records with an exact match */
   eq?: Maybe<Scalars["String"]>
   /** Exclude records with an exact match */
@@ -25943,6 +25943,8 @@ export type StringFilter = {
   in?: Maybe<Array<Maybe<Scalars["String"]>>>
   /** Filter records that do not equal one of the specified values */
   notIn?: Maybe<Array<Maybe<Scalars["String"]>>>
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: Maybe<Scalars["BooleanType"]>
 }
 
 export type StringMatchesFilter = {
@@ -25963,6 +25965,8 @@ export type StructuredTextFilter = {
   matches?: Maybe<StringMatchesFilter>
   /** Exclude records based on a regular expression */
   notMatches?: Maybe<StringMatchesFilter>
+  /** Filter records with the specified field set as blank (null or single empty paragraph) */
+  isBlank?: Maybe<Scalars["BooleanType"]>
   /** Filter records with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
 }
@@ -27057,6 +27061,8 @@ export type TextFilter = {
   matches?: Maybe<StringMatchesFilter>
   /** Exclude records based on a regular expression */
   notMatches?: Maybe<StringMatchesFilter>
+  /** Filter records with the specified field set as blank (null or empty string) */
+  isBlank?: Maybe<Scalars["BooleanType"]>
   /** Filter records with the specified field defined (i.e. with any value) or not */
   exists?: Maybe<Scalars["BooleanType"]>
 }
