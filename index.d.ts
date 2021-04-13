@@ -22298,8 +22298,6 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  industry?: Maybe<LinksFilter>
-  postDate?: Maybe<DateTimeFilter>
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
   externalLink?: Maybe<StringFilter>
@@ -22314,7 +22312,9 @@ export type ResourceV2ModelFilter = {
   legacyContent?: Maybe<LinksFilter>
   contentType?: Maybe<LinkFilter>
   content?: Maybe<StructuredTextFilter>
+  industry?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
+  postDate?: Maybe<DateTimeFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -22353,8 +22353,6 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  PostDateAsc = "postDate_ASC",
-  PostDateDesc = "postDate_DESC",
   HiddenAsc = "hidden_ASC",
   HiddenDesc = "hidden_DESC",
   ExternalLinkAsc = "externalLink_ASC",
@@ -22362,7 +22360,9 @@ export enum ResourceV2ModelOrderBy {
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   EnterpriseAsc = "enterprise_ASC",
-  EnterpriseDesc = "enterprise_DESC"
+  EnterpriseDesc = "enterprise_DESC",
+  PostDateAsc = "postDate_ASC",
+  PostDateDesc = "postDate_DESC"
 }
 
 /** Record of type Resource V2 (resource_v2) */
