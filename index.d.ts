@@ -22300,8 +22300,8 @@ export type ResourceV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   thumbnailImage?: Maybe<FileFilter>
-  externalLink?: Maybe<StringFilter>
   language?: Maybe<LinkFilter>
+  externalLink?: Maybe<StringFilter>
   tags?: Maybe<LinksFilter>
   shareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
@@ -22310,11 +22310,11 @@ export type ResourceV2ModelFilter = {
   products?: Maybe<LinksFilter>
   enterprise?: Maybe<BooleanFilter>
   legacyContent?: Maybe<LinksFilter>
-  contentType?: Maybe<LinkFilter>
   content?: Maybe<StructuredTextFilter>
-  industry?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
+  contentType?: Maybe<LinkFilter>
   postDate?: Maybe<DateTimeFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  industry?: Maybe<LinksFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
