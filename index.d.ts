@@ -22308,13 +22308,13 @@ export type ResourceV2ModelFilter = {
   slug?: Maybe<SlugFilter>
   description?: Maybe<TextFilter>
   products?: Maybe<LinksFilter>
-  enterprise?: Maybe<BooleanFilter>
   legacyContent?: Maybe<LinksFilter>
   content?: Maybe<StructuredTextFilter>
   contentType?: Maybe<LinkFilter>
   postDate?: Maybe<DateTimeFilter>
   infrastructureProvider?: Maybe<LinksFilter>
   industry?: Maybe<LinksFilter>
+  enterprise?: Maybe<BooleanFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -22359,10 +22359,10 @@ export enum ResourceV2ModelOrderBy {
   ExternalLinkDesc = "externalLink_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
-  EnterpriseAsc = "enterprise_ASC",
-  EnterpriseDesc = "enterprise_DESC",
   PostDateAsc = "postDate_ASC",
-  PostDateDesc = "postDate_DESC"
+  PostDateDesc = "postDate_DESC",
+  EnterpriseAsc = "enterprise_ASC",
+  EnterpriseDesc = "enterprise_DESC"
 }
 
 /** Record of type Resource V2 (resource_v2) */
