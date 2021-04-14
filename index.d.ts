@@ -22315,6 +22315,7 @@ export type ResourceV2ModelFilter = {
   infrastructureProvider?: Maybe<LinksFilter>
   industry?: Maybe<LinksFilter>
   enterprise?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
 
@@ -22391,6 +22392,7 @@ export type ResourceV2Record = {
   infrastructureProvider: Array<ResourceInfrastructureProviderRecord>
   language?: Maybe<ResourcesLanguageRecord>
   legacyContent: Array<ResourceV2ModelLegacyContentField>
+  metadata?: Maybe<SeoField>
   postDate?: Maybe<Scalars["DateTime"]>
   products: Array<ResourcesV2ProductRecord>
   shareImage?: Maybe<FileField>
