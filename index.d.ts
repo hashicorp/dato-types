@@ -5349,9 +5349,9 @@ export type EventV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  language?: Maybe<StringFilter>
   product?: Maybe<LinksFilter>
   endTime?: Maybe<DateTimeFilter>
-  language?: Maybe<StringFilter>
   region?: Maybe<StringFilter>
   series?: Maybe<LinkFilter>
   title?: Maybe<StringFilter>
@@ -5385,10 +5385,10 @@ export enum EventV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
-  EndTimeAsc = "endTime_ASC",
-  EndTimeDesc = "endTime_DESC",
   LanguageAsc = "language_ASC",
   LanguageDesc = "language_DESC",
+  EndTimeAsc = "endTime_ASC",
+  EndTimeDesc = "endTime_DESC",
   RegionAsc = "region_ASC",
   RegionDesc = "region_DESC",
   TitleAsc = "title_ASC",
@@ -22300,21 +22300,20 @@ export type ResourceV2ModelFilter = {
   _isValid?: Maybe<BooleanFilter>
   content?: Maybe<StructuredTextFilter>
   postDate?: Maybe<DateTimeFilter>
+  metadata?: Maybe<SeoFilter>
+  industry?: Maybe<LinksFilter>
+  infrastructureProvider?: Maybe<LinksFilter>
+  contentType?: Maybe<LinkFilter>
   enterprise?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   externalLink?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   language?: Maybe<LinkFilter>
-  contentType?: Maybe<LinkFilter>
   products?: Maybe<LinksFilter>
-  tags?: Maybe<LinksFilter>
   shareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   thumbnailImage?: Maybe<FileFilter>
   legacyContent?: Maybe<LinksFilter>
-  infrastructureProvider?: Maybe<LinksFilter>
-  industry?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<ResourceV2ModelFilter>>>
 }
@@ -22397,7 +22396,6 @@ export type ResourceV2Record = {
   products: Array<ResourcesV2ProductRecord>
   shareImage?: Maybe<FileField>
   slug?: Maybe<Scalars["String"]>
-  tags: Array<ResourcesV2TagRecord>
   thumbnailImage?: Maybe<FileField>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
