@@ -22298,6 +22298,8 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  content?: Maybe<StructuredTextFilter>
+  postDate?: Maybe<DateTimeFilter>
   enterprise?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
   externalLink?: Maybe<StringFilter>
@@ -22305,11 +22307,9 @@ export type ResourceV2ModelFilter = {
   language?: Maybe<LinkFilter>
   contentType?: Maybe<LinkFilter>
   products?: Maybe<LinksFilter>
-  content?: Maybe<StructuredTextFilter>
   tags?: Maybe<LinksFilter>
   shareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
-  postDate?: Maybe<DateTimeFilter>
   thumbnailImage?: Maybe<FileFilter>
   legacyContent?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
@@ -22354,6 +22354,8 @@ export enum ResourceV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  PostDateAsc = "postDate_ASC",
+  PostDateDesc = "postDate_DESC",
   EnterpriseAsc = "enterprise_ASC",
   EnterpriseDesc = "enterprise_DESC",
   HiddenAsc = "hidden_ASC",
@@ -22361,9 +22363,7 @@ export enum ResourceV2ModelOrderBy {
   ExternalLinkAsc = "externalLink_ASC",
   ExternalLinkDesc = "externalLink_DESC",
   TitleAsc = "title_ASC",
-  TitleDesc = "title_DESC",
-  PostDateAsc = "postDate_ASC",
-  PostDateDesc = "postDate_DESC"
+  TitleDesc = "title_DESC"
 }
 
 /** Record of type Resource V2 (resource_v2) */
