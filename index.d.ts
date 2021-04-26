@@ -2766,6 +2766,7 @@ export type CloudPartnerPageModelFilter = {
   pinnedResourceTitle?: Maybe<StringFilter>
   pinnedResourceUrl?: Maybe<StringFilter>
   pinnedResourceButtonText?: Maybe<StringFilter>
+  relatedResources?: Maybe<LinksFilter>
   metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
@@ -2826,6 +2827,7 @@ export type CloudPartnerPageRecord = {
   pinnedResourceButtonText?: Maybe<Scalars["String"]>
   pinnedResourceTitle?: Maybe<Scalars["String"]>
   pinnedResourceUrl?: Maybe<Scalars["String"]>
+  relatedResources: Array<ResourceV2Record>
   slug?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
