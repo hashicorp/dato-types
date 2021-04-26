@@ -2763,11 +2763,11 @@ export type CloudPartnerPageModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  metadata?: Maybe<SeoFilter>
+  relatedResources?: Maybe<LinksFilter>
   pinnedResourceTitle?: Maybe<StringFilter>
   pinnedResourceUrl?: Maybe<StringFilter>
   pinnedResourceButtonText?: Maybe<StringFilter>
-  relatedResources?: Maybe<LinksFilter>
-  metadata?: Maybe<SeoFilter>
   title?: Maybe<StringFilter>
   slug?: Maybe<SlugFilter>
   OR?: Maybe<Array<Maybe<CloudPartnerPageModelFilter>>>
