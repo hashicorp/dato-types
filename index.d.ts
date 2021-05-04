@@ -1382,6 +1382,70 @@ export type BrandDownloadFiletypeRecord_SeoMetaTagsArgs = {
   locale?: Maybe<SiteLocale>
 }
 
+export type BrandPageProductModelFilter = {
+  _createdAt?: Maybe<CreatedAtFilter>
+  createdAt?: Maybe<CreatedAtFilter>
+  id?: Maybe<ItemIdFilter>
+  _firstPublishedAt?: Maybe<PublishedAtFilter>
+  _publicationScheduledAt?: Maybe<PublishedAtFilter>
+  _unpublishingScheduledAt?: Maybe<PublishedAtFilter>
+  _publishedAt?: Maybe<PublishedAtFilter>
+  _status?: Maybe<StatusFilter>
+  _updatedAt?: Maybe<UpdatedAtFilter>
+  updatedAt?: Maybe<UpdatedAtFilter>
+  _isValid?: Maybe<BooleanFilter>
+  OR?: Maybe<Array<Maybe<BrandPageProductModelFilter>>>
+}
+
+export enum BrandPageProductModelOrderBy {
+  CreatedAtAsc = "_createdAt_ASC",
+  CreatedAtDesc = "_createdAt_DESC",
+  CreatedAtAsc = "createdAt_ASC",
+  CreatedAtDesc = "createdAt_DESC",
+  IdAsc = "id_ASC",
+  IdDesc = "id_DESC",
+  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
+  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
+  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
+  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
+  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
+  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
+  PublishedAtAsc = "_publishedAt_ASC",
+  PublishedAtDesc = "_publishedAt_DESC",
+  StatusAsc = "_status_ASC",
+  StatusDesc = "_status_DESC",
+  UpdatedAtAsc = "_updatedAt_ASC",
+  UpdatedAtDesc = "_updatedAt_DESC",
+  UpdatedAtAsc = "updatedAt_ASC",
+  UpdatedAtDesc = "updatedAt_DESC",
+  IsValidAsc = "_isValid_ASC",
+  IsValidDesc = "_isValid_DESC"
+}
+
+/** Record of type Brand Page Product (brand_page_product) */
+export type BrandPageProductRecord = {
+  __typename?: "BrandPageProductRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+}
+
+/** Record of type Brand Page Product (brand_page_product) */
+export type BrandPageProductRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
+}
+
 /** Record of type Brand Page (brand_page) */
 export type BrandPageRecord = {
   __typename?: "BrandPageRecord"
@@ -15069,6 +15133,8 @@ export type Query = {
   /** Returns meta information regarding a record collection */
   _allBrandDownloadFiletypesMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
+  _allBrandPageProductsMeta: CollectionMetadata
+  /** Returns meta information regarding a record collection */
   _allButton2sMeta: CollectionMetadata
   /** Returns meta information regarding a record collection */
   _allButtonThemesMeta: CollectionMetadata
@@ -15506,6 +15572,8 @@ export type Query = {
   allBrandDownloadFiles: Array<BrandDownloadFileRecord>
   /** Returns a collection of records */
   allBrandDownloadFiletypes: Array<BrandDownloadFiletypeRecord>
+  /** Returns a collection of records */
+  allBrandPageProducts: Array<BrandPageProductRecord>
   /** Returns a collection of records */
   allButton2s: Array<Button2Record>
   /** Returns a collection of records */
@@ -15954,6 +16022,8 @@ export type Query = {
   brandDownloadFiletype?: Maybe<BrandDownloadFiletypeRecord>
   /** Returns the single instance record */
   brandPage?: Maybe<BrandPageRecord>
+  /** Returns a specific record */
+  brandPageProduct?: Maybe<BrandPageProductRecord>
   /** Returns a specific record */
   button2?: Maybe<Button2Record>
   /** Returns a specific record */
@@ -16554,6 +16624,12 @@ export type Query_AllBrandDownloadFilesMetaArgs = {
 export type Query_AllBrandDownloadFiletypesMetaArgs = {
   locale?: Maybe<SiteLocale>
   filter?: Maybe<BrandDownloadFiletypeModelFilter>
+}
+
+/** The query root for this schema */
+export type Query_AllBrandPageProductsMetaArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<BrandPageProductModelFilter>
 }
 
 /** The query root for this schema */
@@ -17907,6 +17983,15 @@ export type QueryAllBrandDownloadFiletypesArgs = {
   first?: Maybe<Scalars["IntType"]>
   filter?: Maybe<BrandDownloadFiletypeModelFilter>
   orderBy?: Maybe<Array<Maybe<BrandDownloadFiletypeModelOrderBy>>>
+}
+
+/** The query root for this schema */
+export type QueryAllBrandPageProductsArgs = {
+  locale?: Maybe<SiteLocale>
+  skip?: Maybe<Scalars["IntType"]>
+  first?: Maybe<Scalars["IntType"]>
+  filter?: Maybe<BrandPageProductModelFilter>
+  orderBy?: Maybe<Array<Maybe<BrandPageProductModelOrderBy>>>
 }
 
 /** The query root for this schema */
@@ -19824,6 +19909,13 @@ export type QueryBrandDownloadFiletypeArgs = {
 /** The query root for this schema */
 export type QueryBrandPageArgs = {
   locale?: Maybe<SiteLocale>
+}
+
+/** The query root for this schema */
+export type QueryBrandPageProductArgs = {
+  locale?: Maybe<SiteLocale>
+  filter?: Maybe<BrandPageProductModelFilter>
+  orderBy?: Maybe<Array<Maybe<BrandPageProductModelOrderBy>>>
 }
 
 /** The query root for this schema */
