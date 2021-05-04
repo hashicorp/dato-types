@@ -1399,6 +1399,7 @@ export type BrandPageRecord = {
   createdAt: Scalars["DateTime"]
   hero?: Maybe<HeroSectionRecord>
   id: Scalars["ItemId"]
+  productName?: Maybe<Scalars["String"]>
   updatedAt: Scalars["DateTime"]
 }
 
