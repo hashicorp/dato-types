@@ -885,6 +885,7 @@ export type BlogPostV2ModelContentField =
   | BlogInlineRelatedArticleRecord
   | BlogVideoRecord
   | CodeBlockRecord
+  | DatoVideoRecord
   | MarkdownRecord
   | TextRecord
 
@@ -3815,6 +3816,31 @@ export type DateTimeFilter = {
   eq?: Maybe<Scalars["DateTime"]>
   /** Exclude records with an exact match */
   neq?: Maybe<Scalars["DateTime"]>
+}
+
+/** Record of type Dato Video (dato_video) */
+export type DatoVideoRecord = {
+  __typename?: "DatoVideoRecord"
+  _createdAt: Scalars["DateTime"]
+  _firstPublishedAt?: Maybe<Scalars["DateTime"]>
+  _isValid: Scalars["BooleanType"]
+  _modelApiKey: Scalars["String"]
+  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>
+  _publishedAt?: Maybe<Scalars["DateTime"]>
+  /** SEO meta tags */
+  _seoMetaTags: Array<Tag>
+  _status: ItemStatus
+  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>
+  _updatedAt: Scalars["DateTime"]
+  createdAt: Scalars["DateTime"]
+  id: Scalars["ItemId"]
+  updatedAt: Scalars["DateTime"]
+  video?: Maybe<FileField>
+}
+
+/** Record of type Dato Video (dato_video) */
+export type DatoVideoRecord_SeoMetaTagsArgs = {
+  locale?: Maybe<SiteLocale>
 }
 
 export type DropdownLinkModelFilter = {
