@@ -22393,14 +22393,14 @@ export type ResourceV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
-  content?: Maybe<StructuredTextFilter>
   postDate?: Maybe<DateTimeFilter>
-  metadata?: Maybe<SeoFilter>
   industry?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
   contentType?: Maybe<LinkFilter>
   enterprise?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
+  content?: Maybe<StructuredTextFilter>
+  metadata?: Maybe<SeoFilter>
   externalLink?: Maybe<StringFilter>
   description?: Maybe<TextFilter>
   language?: Maybe<LinkFilter>
@@ -27772,7 +27772,6 @@ export type TmpmodelEcosystemFindAPartnerPageRecord = {
   description?: Maybe<Scalars["String"]>
   id: Scalars["ItemId"]
   metadata?: Maybe<SeoField>
-  resellersIntegratorsCompaniesSpecialized: Array<CompanyRecord>
   resellersIntegratorsLabel?: Maybe<Scalars["String"]>
   resellersIntegratorsTooltip?: Maybe<Scalars["String"]>
   title?: Maybe<Scalars["String"]>
