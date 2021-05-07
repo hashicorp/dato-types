@@ -900,11 +900,11 @@ export type BlogPostV2ModelFilter = {
   _updatedAt?: Maybe<UpdatedAtFilter>
   updatedAt?: Maybe<UpdatedAtFilter>
   _isValid?: Maybe<BooleanFilter>
+  summary?: Maybe<StringFilter>
   backendTags?: Maybe<LinksFilter>
   socialShareImage?: Maybe<FileFilter>
   title?: Maybe<StringFilter>
   orderingDate?: Maybe<DateTimeFilter>
-  summary?: Maybe<StringFilter>
   author?: Maybe<LinksFilter>
   mainImage?: Maybe<FileFilter>
   tags?: Maybe<LinksFilter>
@@ -937,12 +937,12 @@ export enum BlogPostV2ModelOrderBy {
   UpdatedAtDesc = "updatedAt_DESC",
   IsValidAsc = "_isValid_ASC",
   IsValidDesc = "_isValid_DESC",
+  SummaryAsc = "summary_ASC",
+  SummaryDesc = "summary_DESC",
   TitleAsc = "title_ASC",
   TitleDesc = "title_DESC",
   OrderingDateAsc = "orderingDate_ASC",
-  OrderingDateDesc = "orderingDate_DESC",
-  SummaryAsc = "summary_ASC",
-  SummaryDesc = "summary_DESC"
+  OrderingDateDesc = "orderingDate_DESC"
 }
 
 /** Record of type Blog Post v2 (blog_post_v2) */
@@ -22396,9 +22396,9 @@ export type ResourceV2ModelFilter = {
   postDate?: Maybe<DateTimeFilter>
   industry?: Maybe<LinksFilter>
   infrastructureProvider?: Maybe<LinksFilter>
-  contentType?: Maybe<LinkFilter>
   enterprise?: Maybe<BooleanFilter>
   hidden?: Maybe<BooleanFilter>
+  contentType?: Maybe<LinkFilter>
   content?: Maybe<StructuredTextFilter>
   metadata?: Maybe<SeoFilter>
   externalLink?: Maybe<StringFilter>
